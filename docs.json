@@ -54,8 +54,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "overview/getting-started/create-your-account",
-              "overview/getting-started/create-organization-and-project"
+              "overview/getting-started/create-your-account"
             ]
           },
         
@@ -102,11 +101,11 @@
           {
             "group": "User Analytics",
             "pages": [
-              "analytics/user-analytics/page-insights",
-              "analytics/user-analytics/users-overview",
-              "analytics/user-analytics/user-engagement",
-              "analytics/user-analytics/user-retention",
-              "analytics/user-analytics/user-growth"
+              "analytics/user-analytic/page-insights",
+              "analytics/user-analytic/users-overview",
+              "analytics/user-analytic/user-engagement",
+              "analytics/user-analytic/user-retention",
+              "analytics/user-analytic/user-growth"
             ]
           },
           {
