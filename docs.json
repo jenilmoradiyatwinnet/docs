@@ -1,0 +1,385 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+
+  "name": "Twinalyze Docs",
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#1D4ED8"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "FAQ",
+        "href": "/faq"
+      },
+      {
+        "label": "Help / Support",
+        "href": "/support"
+      },
+      {
+        "label": "Visit Us",
+        "href": "https://twinalyze.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Start now / Sign up",
+      "href": "https://app.twinalyze.com"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Overview",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "overview/introduction/welcome-to-twinalyze",
+              "overview/introduction/what-is-twinalyze",
+              "overview/introduction/how-twinalyze-works"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "overview/core-concepts/organization-and-project",
+              "overview/core-concepts/users-and-events",
+              "overview/core-concepts/sessions-sources-and-campaigns",
+              "overview/core-concepts/properties"
+            ]
+          },
+          {
+            "group": "Getting Started",
+            "pages": [
+              "overview/getting-started/create-your-account"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "overview/use-cases/product-analytics",
+              "overview/use-cases/user-behavior-tracking",
+              "overview/use-cases/retention-analysis",
+              "overview/use-cases/notification-performance",
+              "overview/use-cases/ad-revenue-analytics",
+              "overview/use-cases/market-research"
+            ]
+          },
+          {
+            "group": "Product Tour",
+            "pages": [
+              "overview/product-tour/dashboard-tour",
+              "overview/product-tour/analytics-tour",
+              "overview/product-tour/engagement-tour",
+              "overview/product-tour/data-tour",
+              "overview/product-tour/developer-tour",
+              "overview/product-tour/admin-tour"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Analytics",
+        "groups": [
+          {
+            "group": "Dashboard",
+            "pages": [
+              "analytics/dashboard/dashboard-overview",
+              "analytics/dashboard/home-page",
+              "analytics/dashboard/no-data-empty-state"
+            ]
+          },
+          {
+            "group": "Realtime Analytics",
+            "pages": [
+              "analytics/realtime-analytics/realtime-users-overview",
+              "analytics/realtime-analytics/live-user-map",
+              "analytics/realtime-analytics/user-activity-overview"
+            ]
+          },
+          {
+            "group": "Product Overview",
+            "pages": [
+              "analytics/product-overview/product-overview",
+              "analytics/product-overview/system-insights",
+              "analytics/product-overview/reports-and-advanced-reports"
+            ]
+          },
+          {
+            "group": "User Analytics",
+            "pages": [
+              "analytics/user-analytics/page-insights",
+              "analytics/user-analytics/users-overview",
+              "analytics/user-analytics/user-engagement",
+              "analytics/user-analytics/user-retention",
+              "analytics/user-analytics/user-growth"
+            ]
+          },
+          {
+            "group": "Reports & Metrics",
+            "pages": [
+              "analytics/reports-and-metrics/core-metrics",
+              "analytics/reports-and-metrics/acquisition-and-segments",
+              "analytics/reports-and-metrics/retention-reports"
+            ]
+          },
+          {
+            "group": "Filters & Drilldown",
+            "pages": [
+              "analytics/filters-and-drilldown/filters-and-drilldown"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Engagement",
+        "groups": [
+          {
+            "group": "Notifications",
+            "pages": [
+              "engagement/notifications/notification-overview",
+              "engagement/notifications/create-and-configure-notification",
+              "engagement/notifications/notification-campaigns-and-reports"
+            ]
+          },
+          {
+            "group": "Campaign Performance",
+            "pages": [
+              "engagement/campaign-performance/campaign-overview",
+              "engagement/campaign-performance/campaign-summary-and-conversion",
+              "engagement/campaign-performance/campaign-report-filters"
+            ]
+          },
+          {
+            "group": "Ad Analytics",
+            "pages": [
+              "engagement/ad-analytics/ad-analytics-overview",
+              "engagement/ad-analytics/ad-reports-and-metrics",
+              "engagement/ad-analytics/ad-failure-insights"
+            ]
+          },
+          {
+            "group": "Research",
+            "pages": [
+              "engagement/research/research-overview",
+              "engagement/research/market-trends",
+              "engagement/research/country-store",
+              "engagement/research/country-details",
+              "engagement/research/custom-store-listing",
+              "engagement/research/category-research"
+            ]
+          },
+          {
+            "group": "Ask AI",
+            "pages": [
+              "engagement/ask-ai/ask-ai-overview",
+              "engagement/ask-ai/example-prompts",
+              "engagement/ask-ai/conversation-history-and-export",
+              "engagement/ask-ai/ask-ai-troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Data & Events",
+        "groups": [
+          {
+            "group": "Data Model",
+            "pages": [
+              "data-and-events/data-model/how-twinalyze-stores-data",
+              "data-and-events/data-model/event-user-and-device-data",
+              "data-and-events/data-model/session-and-property-data"
+            ]
+          },
+          {
+            "group": "Events",
+            "pages": [
+              "data-and-events/events/events-overview",
+              "data-and-events/events/event-naming-and-sources",
+              "data-and-events/events/auto-vs-manual-events"
+            ]
+          },
+          {
+            "group": "Properties",
+            "pages": [
+              "data-and-events/properties/properties-overview",
+              "data-and-events/properties/user-device-and-session-properties",
+              "data-and-events/properties/event-and-custom-properties"
+            ]
+          },
+          {
+            "group": "Sources",
+            "pages": [
+              "data-and-events/sources/source-overview",
+              "data-and-events/sources/app-web-and-api-sources",
+              "data-and-events/sources/integration-sources"
+            ]
+          },
+          {
+            "group": "Data Controls",
+            "pages": [
+              "data-and-events/data-controls/status-and-visibility-controls",
+              "data-and-events/data-controls/edit-and-manage-events"
+            ]
+          },
+          {
+            "group": "Data Quality",
+            "pages": [
+              "data-and-events/data-quality/duplicate-and-missing-events",
+              "data-and-events/data-quality/wrong-event-names-and-invalid-properties"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developers",
+        "groups": [
+          {
+            "group": "Quickstart",
+            "pages": [
+              "developers/quickstart/developer-overview",
+              "developers/quickstart/install-and-initialize-sdk",
+              "developers/quickstart/send-first-event",
+              "developers/quickstart/debug-mode"
+            ]
+          },
+          {
+            "group": "SDKs",
+            "pages": [
+              "developers/sdks/sdk-overview",
+              {
+                "group": "Android",
+                "pages": [
+                  "developers/sdks/android/analytics",
+                  "developers/sdks/flutter/Ad analytics"
+                ]
+              },
+              {
+                "group": "Web",
+                "pages": [
+                  "developers/sdks/android/analytics",
+                  "developers/sdks/flutter/Ad analytics"
+                ]
+              },
+              "developers/sdks/sdk-versioning"
+            ]
+          },
+          {
+            "group": "Tracking",
+            "pages": [
+              "developers/tracking/auto-and-manual-tracking",
+              "developers/tracking/custom-events",
+              "developers/tracking/user-identification-and-properties",
+              "developers/tracking/session-and-screen-tracking",
+              "developers/tracking/advanced-screen-tracking",
+              "developers/tracking/notification-tracking"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "developers/integrations/integration-overview",
+              "developers/integrations/google-analytics-4",
+              "developers/integrations/google-tag-manager",
+              "developers/integrations/firebase",
+              {
+                "group": "CMS / Website Integrations",
+                "pages": [
+                  "developers/integrations/cms/shopify",
+                  "developers/integrations/cms/wordpress",
+                  "developers/integrations/cms/webflow",
+                  "developers/integrations/cms/wix"
+                ]
+              },
+              "developers/integrations/onesignal",
+              "developers/integrations/ads-integration-facebook-google"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "developers/authentication/api-key-and-secret-key",
+              "developers/authentication/request-headers",
+              "developers/authentication/hmac-signature",
+              "developers/authentication/rate-limits-and-error-format"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "developers/troubleshooting/sdk-and-event-issues",
+              "developers/troubleshooting/data-accuracy-issues",
+              "developers/troubleshooting/api-authentication-issues",
+              "developers/troubleshooting/sdk-version-issues"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Admin",
+        "groups": [
+          {
+            "group": "Project Settings",
+            "pages": [
+              "admin/project-settings/project-overview",
+              "admin/project-settings/api-keys-and-firebase-sdk-keys"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "admin/configuration/integration-settings",
+              "admin/configuration/version-settings",
+              "admin/configuration/device-settings",
+              "admin/configuration/screen-activity-settings"
+            ]
+          },
+          {
+            "group": "Team & Access",
+            "pages": [
+              "admin/team-and-access/team-members-and-invite-member",
+              "admin/team-and-access/roles-and-permissions",
+              "admin/team-and-access/organization-and-project-access"
+            ]
+          },
+          {
+            "group": "Billing",
+            "pages": [
+              "admin/billing/plans-overview",
+              "admin/billing/credit-system",
+              "admin/billing/payment-issues",
+              "admin/billing/cancel-and-refund-policy"
+            ]
+          },
+          {
+            "group": "Security & Privacy",
+            "pages": [
+              "admin/security-and-privacy/api-and-secret-key-security",
+              "admin/security-and-privacy/privacy-and-compliance",
+              "admin/security-and-privacy/data-retention-and-deletion",
+              "admin/security-and-privacy/pii-handling-and-encryption"
+            ]
+          },
+          {
+            "group": "White Label",
+            "pages": [
+              "admin/white-label/white-label-overview",
+              "admin/white-label/custom-domain-and-dns-setup",
+              "admin/white-label/branding-and-tenant-mapping"
+            ]
+          },
+          {
+            "group": "Account Settings",
+            "pages": [
+              "admin/account-settings/profile-and-notification-preferences"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
+}

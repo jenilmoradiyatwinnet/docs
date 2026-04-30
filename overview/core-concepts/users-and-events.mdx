@@ -1,0 +1,75 @@
+---
+title: "Users and Events"
+description: "Understand how Twinalyze connects users with their actions."
+---
+
+Twinalyze is built on two core concepts:
+
+> **Users = who is using your product**  
+> **Events = what they are doing**
+
+Together, they help you understand complete user behavior.
+
+## Users
+
+A **user** is anyone interacting with your app or website.
+
+- Known user → logged in (user ID, email)
+- Anonymous user → not logged in (tracked via device)
+
+<CardGroup cols={2}>
+  <Card title="Known user" icon="user-check">
+    Identified with user ID, email, or account details.
+  </Card>
+  <Card title="Anonymous user" icon="user">
+    Tracked using device or browser before login.
+  </Card>
+</CardGroup>
+
+## Events
+
+An **event** is any action performed by a user.
+
+Examples:
+- `app_open`
+- `page_view`
+- `button_click`
+- `add_to_cart`
+- `purchase_completed`
+
+## How they work together
+
+<Steps>
+  <Step title="User visits">
+    Twinalyze identifies the user (known or anonymous).
+  </Step>
+  <Step title="User performs action">
+    Every action is captured as an event.
+  </Step>
+  <Step title="Properties added">
+    Extra details like product, price, or screen are attached.
+  </Step>
+  <Step title="Reports updated">
+    Data appears in dashboards and analytics.
+  </Step>
+</Steps>
+## Example
+
+```json
+{
+  "event": "add_to_cart",
+  "userId": "user_1024",
+  "properties": {
+    "product": "Hair Clip",
+    "price": 499
+  }
+}
+```
+ <Card
+  title="Session, Sources and campaign"
+  icon="freebsd"
+  href="/overview/core-concepts/sessions-sources-and-campaigns"
+>
+  Learn how Twinalyze connects users with their actions.
+</Card> 
+
