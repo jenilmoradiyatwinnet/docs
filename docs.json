@@ -7,9 +7,7 @@
     "light": "#3B82F6",
     "dark": "#1D4ED8"
   },
-  "custom": {
-    "css": "custom.css"
-  },
+
   "navbar": {
     "links": [
       {
