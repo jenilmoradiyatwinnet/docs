@@ -5,46 +5,43 @@ description: "Understand Twinalyze, what it tracks, and how teams use it to impr
 
 Twinalyze is an analytics and engagement platform that helps you understand how users interact with your app or website.
 
-It collects product activity like users, events, sessions, screens, sources, campaigns, notifications, and device data, then turns it into clear reports for product, marketing, and development teams.
+It tracks users, events, sessions, screens, sources, campaigns, notifications, and device data, and turns it into clear reports for product, marketing, and development teams.
 
 <CardGroup cols={3}>
   <Card title="Track" icon="chart-line">
-    Capture user actions, screen views, sessions, clicks, purchases, and custom events.
+    Capture user actions, sessions, clicks, purchases, and custom events.
   </Card>
 
   <Card title="Understand" icon="users">
-    See who your users are, where they come from, and how they move through your product.
+    See who your users are, where they come from, and how they behave.
   </Card>
 
   <Card title="Improve" icon="lightbulb">
-    Use insights to improve product experience, campaigns, retention, and growth.
+    Use insights to improve product experience, retention, and growth.
   </Card>
 </CardGroup>
 
 ## Why Twinalyze is useful
 
-Twinalyze helps teams answer important questions without checking multiple tools.
+Twinalyze helps you answer key product questions in one place.
 
-| Question | Twinalyze helps you see |
+| Question | Insight |
 | --- | --- |
-| Who is using my product? | Users, devices, country, language, app version |
-| What are users doing? | Events, clicks, screens, pages, sessions |
-| Where do users come from? | Sources, campaigns, referrals, UTM data |
-| Are users staying active? | Retention, engagement, session activity |
-| Are campaigns working? | Notifications, conversions, campaign reports |
-| Is tracking correct? | Missing events, duplicate events, invalid properties |
+| Who is using my product? | Users, devices, country, app version |
+| What are users doing? | Events, clicks, screens, sessions |
+| Where do users come from? | Sources, campaigns, UTM |
+| Are users active? | Retention and engagement |
+| Are campaigns working? | Notifications and conversions |
 
 ## What Twinalyze tracks
 
-Twinalyze can track both automatic and custom activity.
-
 <CardGroup cols={2}>
   <Card title="Automatic tracking" icon="wand-magic-sparkles">
-    Track app opens, sessions, screen views, page views, device details, app foreground, and app background automatically.
+    App opens, sessions, screens, page views, and device details.
   </Card>
 
   <Card title="Custom events" icon="cursor">
-    Track business actions like signup, login, add to cart, purchase, payment failed, plan upgraded, or feature used.
+    Actions like signup, login, add to cart, purchase, and feature usage.
   </Card>
 </CardGroup>
 
@@ -52,46 +49,39 @@ Twinalyze can track both automatic and custom activity.
 
 | Data type | Meaning | Example |
 | --- | --- | --- |
-| **User** | Person using your product | `user_1024`, email, name |
-| **Event** | Action done by user | `add_to_cart`, `purchase_completed` |
-| **Session** | One usage period | User opened app and used it for 5 minutes |
-| **Screen / Page** | Place user visited | Home page, product screen, checkout page |
-| **Property** | Extra detail | price, category, country, plan |
-| **Source** | Where user came from | Google Ads, organic, referral, UTM |
+| **User** | Person using your product | `user_1024` |
+| **Event** | Action performed | `add_to_cart` |
+| **Session** | One usage period | App used for 5 minutes |
+| **Screen / Page** | User location | Home, product page |
+| **Property** | Extra detail | price, country |
+| **Source** | Traffic origin | Google Ads, organic |
 
 ## How teams use Twinalyze
 
 <AccordionGroup>
   <Accordion title="Product teams">
-    Understand feature usage, user behavior, drop-offs, retention, and product growth.
+    Track usage, behavior, retention, and growth.
   </Accordion>
 
   <Accordion title="Developers">
-    Integrate SDKs, send events, debug tracking issues, manage API keys, and improve data accuracy.
+    Integrate SDKs, track events, and debug issues.
   </Accordion>
 
   <Accordion title="Marketing teams">
-    Measure campaigns, notification performance, traffic sources, conversions, and ad-related insights.
+    Measure campaigns, sources, and conversions.
   </Accordion>
 
   <Accordion title="Admins">
-    Manage projects, team members, billing, privacy, security, and white-label settings.
+    Manage projects, team access, billing, and settings.
   </Accordion>
 </AccordionGroup>
 
 ## Simple example
 
-A user visits your website, views a product, adds it to cart, but does not complete payment.
-
-Twinalyze can track:
+A user visits → views product → adds to cart → payment fails  
 
 ```json
 {
   "userId": "user_1024",
-  "events": [
-    "page_view",
-    "product_viewed",
-    "add_to_cart",
-    "payment_failed"
-  ]
+  "events": ["page_view", "product_viewed", "add_to_cart", "payment_failed"]
 }
