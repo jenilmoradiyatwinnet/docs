@@ -98,24 +98,14 @@
           },
           {
             "group": "User Analytics",
-            "pages": [
-              "analytics/user-analytics/page-insights",
-              "analytics/user-analytics/users-overview",
-              "analytics/user-analytics/user-engagement",
-              "analytics/user-analytics/user-retention",
-              "analytics/user-analytics/user-growth"
-            ]
+            "pages": []
           },
           {
-            "group": "Reports & Metrics",
-            "pages": [
-              "analytics/reports-and-metrics/core-metrics",
-              "analytics/reports-and-metrics/acquisition-and-segments",
-              "analytics/reports-and-metrics/retention-reports"
-            ]
+            "group": "Reports and Metrics",
+            "pages": []
           },
           {
-            "group": "Filters & Drilldown",
+            "group": "Filters and Drilldown",
             "pages": [
               "analytics/filters-and-drilldown/filters-and-drilldown"
             ]
@@ -172,7 +162,7 @@
         ]
       },
       {
-        "tab": "Data & Events",
+        "tab": "Data and Events",
         "groups": [
           {
             "group": "Data Model",
@@ -228,10 +218,7 @@
           {
             "group": "Quickstart",
             "pages": [
-              "developers/quickstart/developer-overview",
-              "developers/quickstart/install-and-initialize-sdk",
-              "developers/quickstart/send-first-event",
-              "developers/quickstart/debug-mode"
+              "developers/quickstart/developer-overview"
             ]
           },
           {
@@ -312,8 +299,7 @@
           {
             "group": "Project Settings",
             "pages": [
-              "admin/project-settings/project-overview",
-              "admin/project-settings/api-keys-and-firebase-sdk-keys"
+              "admin/project-settings/project-overview"
             ]
           },
           {
@@ -326,12 +312,8 @@
             ]
           },
           {
-            "group": "Team & Access",
-            "pages": [
-              "admin/team-and-access/team-members-and-invite-member",
-              "admin/team-and-access/roles-and-permissions",
-              "admin/team-and-access/organization-and-project-access"
-            ]
+            "group": "Team and Access",
+            "pages": []
           },
           {
             "group": "Billing",
@@ -343,27 +325,16 @@
             ]
           },
           {
-            "group": "Security & Privacy",
-            "pages": [
-              "admin/security-and-privacy/api-and-secret-key-security",
-              "admin/security-and-privacy/privacy-and-compliance",
-              "admin/security-and-privacy/data-retention-and-deletion",
-              "admin/security-and-privacy/pii-handling-and-encryption"
-            ]
+            "group": "Security and Privacy",
+            "pages": []
           },
           {
             "group": "White Label",
-            "pages": [
-              "admin/white-label/white-label-overview",
-              "admin/white-label/custom-domain-and-dns-setup",
-              "admin/white-label/branding-and-tenant-mapping"
-            ]
+            "pages": []
           },
           {
             "group": "Account Settings",
-            "pages": [
-              "admin/account-settings/profile-and-notification-preferences"
-            ]
+            "pages": []
           }
         ]
       }
