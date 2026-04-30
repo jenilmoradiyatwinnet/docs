@@ -112,9 +112,9 @@
           {
             "group": "Reports & Metrics",
             "pages": [
-              "analytics/reports-and-metrics/core-metrics",
-              "analytics/reports-and-metrics/acquisition-and-segments",
-              "analytics/reports-and-metrics/retention-reports"
+              "analytics/report-and-metric/core-metrics",
+              "analytics/report-and-metric/acquisition-and-segments",
+              "analytics/report-and-metric/retention-reports"
             ]
           },
           {
