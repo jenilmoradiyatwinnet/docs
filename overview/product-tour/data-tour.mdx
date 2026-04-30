@@ -1,4 +1,169 @@
 ---
-title: 'Data Tour'
+title: "Data Tour"
+description: "Explore how Twinalyze manages events, properties, sources, controls, and data quality."
 ---
 
+Data Tour helps you understand how Twinalyze organizes and controls the data coming from your SDKs, APIs, and integrations.
+
+> Use this section to manage **events, properties, sources, visibility, and data quality**.
+
+## What you can manage
+
+<CardGroup cols={3}>
+  <Card title="Events" icon="bolt">
+    Create, review, and manage tracked events.
+  </Card>
+
+  <Card title="Properties" icon="sliders">
+    Manage user, event, session, and device properties.
+  </Card>
+
+  <Card title="Data quality" icon="shield-check">
+    Detect duplicate, missing, or invalid data.
+  </Card>
+</CardGroup>
+
+## Data screens
+
+<Steps>
+  <Step title="Events">
+    Events represent actions performed by users, such as page views, clicks, purchases, or custom actions.
+
+    <div className="not-prose my-4 rounded-xl border border-gray-200 bg-gray-50 p-3">
+      <img src="/images/events.png" alt="Events page in Twinalyze" className="rounded-lg" />
+    </div>
+  </Step>
+
+  <Step title="Properties">
+    Properties add extra details to users, events, sessions, and devices. They help you filter, segment, and analyze data more deeply.
+
+    <div className="not-prose my-4 rounded-xl border border-gray-200 bg-gray-50 p-3">
+      <img src="/images/properties.png" alt="Properties page in Twinalyze" className="rounded-lg" />
+    </div>
+  </Step>
+
+  <Step title="Sources">
+    Sources show where data or users come from, such as app, web, API, ads, integrations, or campaigns.
+
+    <div className="not-prose my-4 rounded-xl border border-gray-200 bg-gray-50 p-3">
+      <img src="/images/sources.png" alt="Sources page in Twinalyze" className="rounded-lg" />
+    </div>
+  </Step>
+</Steps>
+
+## Main data areas
+
+<Tabs>
+  <Tab title="Events">
+    Events are the foundation of product analytics.
+
+    | Field | Meaning |
+    | --- | --- |
+    | **Event Name** | Original event received from SDK or API |
+    | **Custom Event Name** | User-friendly name shown in reports |
+    | **Source** | Where the event came from |
+    | **Auto Status** | Whether event is tracked automatically |
+    | **Manual Status** | Whether event is manually configured |
+    | **Visible** | Whether event appears in reports |
+
+    <Tip>
+      Keep event names clear and consistent so reports remain easy to understand.
+    </Tip>
+  </Tab>
+
+  <Tab title="Properties">
+    Properties describe extra information attached to data.
+
+    <CardGroup cols={2}>
+      <Card title="User properties" icon="user">
+        Name, email, country, plan, signup date.
+      </Card>
+
+      <Card title="Event properties" icon="bolt">
+        Product, price, category, screen name.
+      </Card>
+
+      <Card title="Session properties" icon="clock">
+        Duration, source, campaign, entry screen.
+      </Card>
+
+      <Card title="Device properties" icon="mobile">
+        OS, app version, browser, brand, network.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Sources">
+    Sources help identify where activity came from.
+
+    <AccordionGroup>
+      <Accordion title="App source">
+        Events sent from Android, iOS, Flutter, or mobile SDKs.
+      </Accordion>
+
+      <Accordion title="Web source">
+        Events sent from website or web SDK.
+      </Accordion>
+
+      <Accordion title="API source">
+        Events sent from backend or server-side integrations.
+      </Accordion>
+
+      <Accordion title="Integration source">
+        Events or data connected from tools such as Firebase, Shopify, or OneSignal.
+      </Accordion>
+    </AccordionGroup>
+  </Tab>
+
+  <Tab title="Data quality">
+    Data quality helps keep analytics reliable.
+
+    <Check>Find duplicate events.</Check>
+    <Check>Review missing events.</Check>
+    <Check>Detect invalid event names.</Check>
+    <Check>Fix wrong or inconsistent properties.</Check>
+
+    <Warning>
+      Poor naming and duplicate events can make reports confusing. Review data quality regularly.
+    </Warning>
+  </Tab>
+</Tabs>
+
+## Common workflow
+
+<Steps>
+  <Step title="Review incoming events">
+    Check which events are being received from SDKs, APIs, or integrations.
+  </Step>
+
+  <Step title="Clean names">
+    Add custom event names so teams can read reports easily.
+  </Step>
+
+  <Step title="Manage visibility">
+    Hide noisy or unwanted events from reports when needed.
+  </Step>
+
+  <Step title="Validate quality">
+    Check duplicate, missing, or invalid events before using reports for decisions.
+  </Step>
+</Steps>
+
+## Best practices
+
+<Check>Use clear names like <code>signup_completed</code> or <code>purchase_completed</code>.</Check>
+<Check>Keep property names consistent across platforms.</Check>
+<Check>Hide test events from reports.</Check>
+<Check>Review new SDK events after every release.</Check>
+
+## Summary
+
+> Data Tour helps you keep analytics clean, structured, and reliable.
+
+<Card
+  title="Developer Tour"
+  icon="code"
+  href="/overview/product-tour/developer-tour"
+>
+  Learn how developers integrate SDKs, APIs, tracking, authentication, and troubleshooting.
+</Card>
