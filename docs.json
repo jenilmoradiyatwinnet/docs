@@ -1,12 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-
   "name": "Twinalyze Docs",
   "colors": {
     "primary": "#2563EB",
     "light": "#3B82F6",
     "dark": "#1D4ED8"
+  },
+  "custom": {
+    "css": "custom.css"
   },
   "navbar": {
     "links": [
@@ -37,6 +39,7 @@
           {
             "group": "Introduction",
             "pages": [
+              "overview/introduction/welcome-to-twinalyze",
               "overview/introduction/what-is-twinalyze",
               "overview/introduction/how-twinalyze-works"
             ]
@@ -53,7 +56,19 @@
           {
             "group": "Getting Started",
             "pages": [
-              "overview/getting-started/create-your-account"
+              "overview/getting-started/create-your-account",
+              "overview/getting-started/create-organization-and-project"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "overview/use-cases/product-analytics",
+              "overview/use-cases/user-behavior-tracking",
+              "overview/use-cases/retention-analysis",
+              "overview/use-cases/notification-performance",
+              "overview/use-cases/ad-revenue-analytics",
+              "overview/use-cases/market-research"
             ]
           },
           {
@@ -98,14 +113,24 @@
           },
           {
             "group": "User Analytics",
-            "pages": []
+            "pages": [
+              "analytics/user-analytics/page-insights",
+              "analytics/user-analytics/users-overview",
+              "analytics/user-analytics/user-engagement",
+              "analytics/user-analytics/user-retention",
+              "analytics/user-analytics/user-growth"
+            ]
           },
           {
-            "group": "Reports and Metrics",
-            "pages": []
+            "group": "Reports & Metrics",
+            "pages": [
+              "analytics/reports-and-metrics/core-metrics",
+              "analytics/reports-and-metrics/acquisition-and-segments",
+              "analytics/reports-and-metrics/retention-reports"
+            ]
           },
           {
-            "group": "Filters and Drilldown",
+            "group": "Filters & Drilldown",
             "pages": [
               "analytics/filters-and-drilldown/filters-and-drilldown"
             ]
@@ -162,7 +187,7 @@
         ]
       },
       {
-        "tab": "Data and Events",
+        "tab": "Data & Events",
         "groups": [
           {
             "group": "Data Model",
@@ -207,7 +232,8 @@
             "group": "Data Quality",
             "pages": [
               "data-and-events/data-quality/duplicate-and-missing-events",
-              "data-and-events/data-quality/wrong-event-names-and-invalid-properties"
+              "data-and-events/data-quality/wrong-event-names-and-invalid-properties",
+              "data-and-events/data-quality/block-bot-events"
             ]
           }
         ]
@@ -218,27 +244,18 @@
           {
             "group": "Quickstart",
             "pages": [
-              "developers/quickstart/developer-overview"
+              "developers/quickstart/developer-overview",
+              "developers/quickstart/install-and-initialize-sdk",
+              "developers/quickstart/send-first-event",
+              "developers/quickstart/debug-mode"
             ]
           },
           {
             "group": "SDKs",
             "pages": [
               "developers/sdks/sdk-overview",
-              {
-                "group": "Android",
-                "pages": [
-                  "developers/sdks/android/analytics",
-                  "developers/sdks/flutter/Ad analytics"
-                ]
-              },
-              {
-                "group": "Web",
-                "pages": [
-                  "developers/sdks/android/analytics",
-                  "developers/sdks/flutter/Ad analytics"
-                ]
-              },
+              "developers/sdks/android-sdk",
+              "developers/sdks/web-sdk",
               "developers/sdks/sdk-versioning"
             ]
           },
@@ -260,15 +277,10 @@
               "developers/integrations/google-analytics-4",
               "developers/integrations/google-tag-manager",
               "developers/integrations/firebase",
-              {
-                "group": "CMS / Website Integrations",
-                "pages": [
-                  "developers/integrations/cms/shopify",
-                  "developers/integrations/cms/wordpress",
-                  "developers/integrations/cms/webflow",
-                  "developers/integrations/cms/wix"
-                ]
-              },
+              "developers/integrations/shopify",
+              "developers/integrations/wordpress",
+              "developers/integrations/webflow",
+              "developers/integrations/wix",
               "developers/integrations/onesignal",
               "developers/integrations/ads-integration-facebook-google"
             ]
@@ -299,7 +311,8 @@
           {
             "group": "Project Settings",
             "pages": [
-              "admin/project-settings/project-overview"
+              "admin/project-settings/project-overview",
+              "admin/project-settings/api-keys-and-firebase-sdk-keys"
             ]
           },
           {
@@ -312,8 +325,12 @@
             ]
           },
           {
-            "group": "Team and Access",
-            "pages": []
+            "group": "Team & Access",
+            "pages": [
+              "admin/team-and-access/team-members-and-invite-member",
+              "admin/team-and-access/roles-and-permissions",
+              "admin/team-and-access/organization-and-project-access"
+            ]
           },
           {
             "group": "Billing",
@@ -325,20 +342,32 @@
             ]
           },
           {
-            "group": "Security and Privacy",
-            "pages": []
+            "group": "Security & Privacy",
+            "pages": [
+              "admin/security-and-privacy/api-and-secret-key-security",
+              "admin/security-and-privacy/privacy-and-compliance",
+              "admin/security-and-privacy/data-retention-and-deletion",
+              "admin/security-and-privacy/pii-handling-and-encryption",
+              "admin/security-and-privacy/gdpr",
+              "admin/security-and-privacy/cookie-consent"
+            ]
           },
           {
             "group": "White Label",
-            "pages": []
+            "pages": [
+              "admin/white-label/white-label-overview",
+              "admin/white-label/custom-domain-and-dns-setup",
+              "admin/white-label/branding-and-tenant-mapping"
+            ]
           },
           {
             "group": "Account Settings",
-            "pages": []
+            "pages": [
+              "admin/account-settings/profile-and-notification-preferences"
+            ]
           }
         ]
       }
     ]
   }
-  
 }
