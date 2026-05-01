@@ -7,7 +7,6 @@
     "light": "#3B82F6",
     "dark": "#1D4ED8"
   },
-
   "navbar": {
     "links": [
       {
@@ -37,7 +36,7 @@
           {
             "group": "Introduction",
             "pages": [
-            
+          
               "overview/introduction/what-is-twinalyze",
               "overview/introduction/how-twinalyze-works"
             ]
@@ -54,10 +53,10 @@
           {
             "group": "Getting Started",
             "pages": [
-              "overview/getting-started/create-your-account"
+              "overview/getting-started/create-your-account",
+              "overview/getting-started/create-organization-and-project"
             ]
           },
-        
           {
             "group": "Product Tour",
             "pages": [
@@ -67,6 +66,38 @@
               "overview/product-tour/data-tour",
               "overview/product-tour/developer-tour",
               "overview/product-tour/admin-tour"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "SDKs",
+        "groups": [
+          {
+            "group": "Firebase",
+            "pages": [
+              "sdks/firebase/firebase-overview",
+              "sdks/firebase/analytics",
+              "sdks/firebase/ad-analytics",
+              "sdks/firebase/session"
+            ]
+          },
+          {
+            "group": "Android",
+            "pages": [
+              "sdks/android/android-overview",
+              "sdks/android/analytics",
+              "sdks/android/ad-analytics",
+              "sdks/android/session"
+            ]
+          },
+          {
+            "group": "Flutter",
+            "pages": [
+              "sdks/flutter/flutter-overview",
+              "sdks/flutter/analytics",
+              "sdks/flutter/ad-analytics",
+              "sdks/flutter/session"
             ]
           }
         ]
