@@ -36,7 +36,7 @@
           {
             "group": "Introduction",
             "pages": [
-              "overview/introduction/welcome-to-twinalyze",
+              
               "overview/introduction/what-is-twinalyze",
               "overview/introduction/how-twinalyze-works"
             ]
@@ -57,17 +57,7 @@
               "overview/getting-started/create-organization-and-project"
             ]
           },
-          {
-            "group": "Use Cases",
-            "pages": [
-              "overview/use-cases/product-analytics",
-              "overview/use-cases/user-behavior-tracking",
-              "overview/use-cases/retention-analysis",
-              "overview/use-cases/notification-performance",
-              "overview/use-cases/ad-revenue-analytics",
-              "overview/use-cases/market-research"
-            ]
-          },
+          
           {
             "group": "Product Tour",
             "pages": [
