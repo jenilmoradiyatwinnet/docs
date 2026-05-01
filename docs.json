@@ -77,26 +77,26 @@
     {
       "item": "SDK",
       "pages": [
-        "sdks/sdk/sdk-overview",
-        "sdks/sdk/java/java-overview",
-        "sdks/sdk/java/analytics",
-        "sdks/sdk/java/ad-analytics",
-        "sdks/sdk/flutter/flutter-overview",
-        "sdks/sdk/flutter/analytics",
-        "sdks/sdk/flutter/ad-analytics",
-        "sdks/sdk/android/android-overview",
-        "sdks/sdk/android/analytics",
-        "sdks/sdk/android/ad-analytics"
+        "sdks2/sdk/sdk-overview",
+        "sdks2/sdk/java/java-overview",
+        "sdks2/sdk/java/analytics",
+        "sdks2/sdk/java/ad-analytics",
+        "sdks2/sdk/flutter/flutter-overview",
+        "sdks2/sdk/flutter/analytics",
+        "sdks2/sdk/flutter/ad-analytics",
+        "sdks2/sdk/android/android-overview",
+        "sdks2/sdk/android/analytics",
+        "sdks2/sdk/android/ad-analytics"
       ]
     },
     {
       "item": "3rd Party Integration",
       "pages": [
-        "sdks/third-party/third-party-overview",
-        "sdks/third-party/google-analytics",
-        "sdks/third-party/google-tag-manager",
-        "sdks/third-party/firebase",
-        "sdks/third-party/onesignal"
+        "sdks2/third-party/third-party-overview",
+        "sdks2/third-party/google-analytics",
+        "sdks2/third-party/google-tag-manager",
+        "sdks2/third-party/firebase",
+        "sdks2/third-party/onesignal"
       ]
     }
   ]
