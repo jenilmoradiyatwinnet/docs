@@ -71,57 +71,87 @@
           }
         ]
       },
-     
-      {
+     {
   "tab": "SDKs",
   "menu": [
     {
-      "item": "Firebase",
+      "item": "SDK",
       "pages": [
-        "sdks/firebase/firebase-overview",
-        "sdks/firebase/analytics",
-        "sdks/firebase/ad-analytics",
-        "sdks/firebase/session"
+        "sdks/sdk/sdk-overview",
+        "sdks/sdk/java/java-overview",
+        "sdks/sdk/java/analytics",
+        "sdks/sdk/java/ad-analytics",
+        "sdks/sdk/flutter/flutter-overview",
+        "sdks/sdk/flutter/analytics",
+        "sdks/sdk/flutter/ad-analytics",
+        "sdks/sdk/android/android-overview",
+        "sdks/sdk/android/analytics",
+        "sdks/sdk/android/ad-analytics"
       ]
     },
     {
-      "item": "Android",
+      "item": "3rd Party Integration",
       "pages": [
-        "sdks/android/android-overview",
-        "sdks/android/analytics",
-        "sdks/android/ad-analytics",
-        "sdks/android/session"
-      ]
-    },
-    {
-      "item": "Flutter",
-      "pages": [
-        "sdks/flutter/flutter-overview",
-        "sdks/flutter/analytics",
-        "sdks/flutter/ad-analytics",
-        "sdks/flutter/session"
-      ]
-    },
-    {
-      "item": "iPhone",
-      "pages": [
-        "sdks/iphone/iphone-overview",
-        "sdks/iphone/analytics",
-        "sdks/iphone/ad-analytics",
-        "sdks/iphone/session"
-      ]
-    },
-    {
-      "item": "iPhone 2",
-      "pages": [
-        "sdks/iphone-2/iphone-2-overview",
-        "sdks/iphone-2/analytics",
-        "sdks/iphone-2/ad-analytics",
-        "sdks/iphone-2/session"
+        "sdks/third-party/third-party-overview",
+        "sdks/third-party/google-analytics",
+        "sdks/third-party/google-tag-manager",
+        "sdks/third-party/firebase",
+        "sdks/third-party/onesignal"
       ]
     }
   ]
-},
+}
+//       {
+//   "tab": "SDKs",
+//   "menu": [
+//     {
+//       "item": "Firebase",
+//       "pages": [
+//         "sdks/firebase/firebase-overview",
+//         "sdks/firebase/analytics",
+//         "sdks/firebase/ad-analytics",
+//         "sdks/firebase/session"
+//       ]
+//     },
+//     {
+//       "item": "Android",
+//       "pages": [
+//         "sdks/android/android-overview",
+//         "sdks/android/analytics",
+//         "sdks/android/ad-analytics",
+//         "sdks/android/session"
+//       ]
+//     },
+//     {
+//       "item": "Flutter",
+//       "pages": [
+//         "sdks/flutter/flutter-overview",
+//         "sdks/flutter/analytics",
+//         "sdks/flutter/ad-analytics",
+//         "sdks/flutter/session"
+//       ]
+//     },
+//     {
+//       "item": "iPhone",
+//       "pages": [
+//         "sdks/iphone/iphone-overview",
+//         "sdks/iphone/analytics",
+//         "sdks/iphone/ad-analytics",
+//         "sdks/iphone/session"
+//       ]
+//     },
+//     {
+//       "item": "iPhone 2",
+//       "pages": [
+//         "sdks/iphone-2/iphone-2-overview",
+//         "sdks/iphone-2/analytics",
+//         "sdks/iphone-2/ad-analytics",
+//         "sdks/iphone-2/session"
+//       ]
+//     }
+//   ]
+// }
+,
       {
         "tab": "Analytics",
         "groups": [
