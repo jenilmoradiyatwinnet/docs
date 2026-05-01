@@ -72,53 +72,78 @@
         ]
       },
      
-     {
+       {
   "tab": "SDKs",
+  "menu": [
+    {
+      "item": "Firebase",
+      "href": "/sdks/firebase/firebase-overview"
+    },
+    {
+      "item": "Android",
+      "href": "/sdks/android/android-overview"
+    },
+    {
+      "item": "Flutter",
+      "href": "/sdks/flutter/flutter-overview"
+    },
+    {
+      "item": "iPhone",
+      "href": "/sdks/iphone/iphone-overview"
+    },
+    {
+      "item": "iPhone 2",
+      "href": "/sdks/iphone-2/iphone-2-overview"
+    }
+  ],
   "groups": [
     {
       "group": "Firebase",
       "pages": [
         "sdks/firebase/firebase-overview",
-        {
-          "group": "Firebase Features",
-          "pages": [
-            "sdks/firebase/analytics",
-            "sdks/firebase/ad-analytics",
-            "sdks/firebase/session"
-          ]
-        }
+        "sdks/firebase/analytics",
+        "sdks/firebase/ad-analytics",
+        "sdks/firebase/session"
       ]
     },
     {
       "group": "Android",
       "pages": [
         "sdks/android/android-overview",
-        {
-          "group": "Android Features",
-          "pages": [
-            "sdks/android/analytics",
-            "sdks/android/ad-analytics",
-            "sdks/android/session"
-          ]
-        }
+        "sdks/android/analytics",
+        "sdks/android/ad-analytics",
+        "sdks/android/session"
       ]
     },
     {
       "group": "Flutter",
       "pages": [
         "sdks/flutter/flutter-overview",
-        {
-          "group": "Flutter Features",
-          "pages": [
-            "sdks/flutter/analytics",
-            "sdks/flutter/ad-analytics",
-            "sdks/flutter/session"
-          ]
-        }
+        "sdks/flutter/analytics",
+        "sdks/flutter/ad-analytics",
+        "sdks/flutter/session"
+      ]
+    },
+    {
+      "group": "iPhone",
+      "pages": [
+        "sdks/iphone/iphone-overview",
+        "sdks/iphone/analytics",
+        "sdks/iphone/ad-analytics",
+        "sdks/iphone/session"
+      ]
+    },
+    {
+      "group": "iPhone 2",
+      "pages": [
+        "sdks/iphone-2/iphone-2-overview",
+        "sdks/iphone-2/analytics",
+        "sdks/iphone-2/ad-analytics",
+        "sdks/iphone-2/session"
       ]
     }
   ]
-},
+}
       {
         "tab": "Analytics",
         "groups": [
