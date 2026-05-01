@@ -110,7 +110,10 @@
         "sdks2/third-party/third-party-overview",
         "sdks2/third-party/google-analytics",
         "sdks2/third-party/google-tag-manager",
-        "sdks2/third-party/onesignal"
+        "sdks2/third-party/onesignal",
+        "sdks2/third-party/shopify",
+        "sdks2/third-party/wix",
+        "sdks2/third-party/wordpress"
       ]
     }
   ]
