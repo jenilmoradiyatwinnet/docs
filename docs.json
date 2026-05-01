@@ -71,7 +71,7 @@
           }
         ]
       },
-    {
+{
   "tab": "SDKs",
   "menu": [
     {
@@ -108,20 +108,9 @@
       "item": "3rd Party Integration",
       "pages": [
         "sdks2/third-party/third-party-overview",
-        {
-          "group": "Google",
-          "pages": [
-            "sdks2/third-party/google-analytics",
-            "sdks2/third-party/google-tag-manager"
-          ]
-        },
-        {
-          "group": "Other Integrations",
-          "pages": [
-            "sdks2/third-party/firebase",
-            "sdks2/third-party/onesignal"
-          ]
-        }
+        "sdks2/third-party/google-analytics",
+        "sdks2/third-party/google-tag-manager",
+        "sdks2/third-party/onesignal"
       ]
     }
   ]
