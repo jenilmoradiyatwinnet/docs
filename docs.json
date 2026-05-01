@@ -72,28 +72,53 @@
         ]
       },
      
-       {
+      {
   "tab": "SDKs",
   "menu": [
     {
       "item": "Firebase",
-      "href": "/sdks/firebase/firebase-overview"
+      "pages": [
+        "sdks/firebase/firebase-overview",
+        "sdks/firebase/analytics",
+        "sdks/firebase/ad-analytics",
+        "sdks/firebase/session"
+      ]
     },
     {
       "item": "Android",
-      "href": "/sdks/android/android-overview"
+      "pages": [
+        "sdks/android/android-overview",
+        "sdks/android/analytics",
+        "sdks/android/ad-analytics",
+        "sdks/android/session"
+      ]
     },
     {
       "item": "Flutter",
-      "href": "/sdks/flutter/flutter-overview"
+      "pages": [
+        "sdks/flutter/flutter-overview",
+        "sdks/flutter/analytics",
+        "sdks/flutter/ad-analytics",
+        "sdks/flutter/session"
+      ]
     },
     {
       "item": "iPhone",
-      "href": "/sdks/iphone/iphone-overview"
+      "pages": [
+        "sdks/iphone/iphone-overview",
+        "sdks/iphone/analytics",
+        "sdks/iphone/ad-analytics",
+        "sdks/iphone/session"
+      ]
     },
     {
       "item": "iPhone 2",
-      "href": "/sdks/iphone-2/iphone-2-overview"
+      "pages": [
+        "sdks/iphone-2/iphone-2-overview",
+        "sdks/iphone-2/analytics",
+        "sdks/iphone-2/ad-analytics",
+        "sdks/iphone-2/session"
+      ]
     }
   ]
 },
