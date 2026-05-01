@@ -36,7 +36,7 @@
           {
             "group": "Introduction",
             "pages": [
-          
+              "overview/introduction/welcome-to-twinalyze",
               "overview/introduction/what-is-twinalyze",
               "overview/introduction/how-twinalyze-works"
             ]
@@ -58,6 +58,17 @@
             ]
           },
           {
+            "group": "Use Cases",
+            "pages": [
+              "overview/use-cases/product-analytics",
+              "overview/use-cases/user-behavior-tracking",
+              "overview/use-cases/retention-analysis",
+              "overview/use-cases/notification-performance",
+              "overview/use-cases/ad-revenue-analytics",
+              "overview/use-cases/market-research"
+            ]
+          },
+          {
             "group": "Product Tour",
             "pages": [
               "overview/product-tour/dashboard-tour",
@@ -72,9 +83,11 @@
       },
       {
         "tab": "SDKs",
-        "groups": [
+        "menu": [
           {
-            "group": "Firebase",
+            "item": "Firebase",
+            "icon": "flame",
+            "description": "Firebase SDK setup and tracking guides",
             "pages": [
               "sdks/firebase/firebase-overview",
               "sdks/firebase/analytics",
@@ -83,7 +96,9 @@
             ]
           },
           {
-            "group": "Android",
+            "item": "Android",
+            "icon": "smartphone",
+            "description": "Android SDK setup and tracking guides",
             "pages": [
               "sdks/android/android-overview",
               "sdks/android/analytics",
@@ -92,7 +107,9 @@
             ]
           },
           {
-            "group": "Flutter",
+            "item": "Flutter",
+            "icon": "blocks",
+            "description": "Flutter SDK setup and tracking guides",
             "pages": [
               "sdks/flutter/flutter-overview",
               "sdks/flutter/analytics",
