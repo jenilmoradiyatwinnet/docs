@@ -72,31 +72,57 @@
         ]
       },
      {
+  {
   "tab": "SDKs",
   "menu": [
     {
       "item": "SDK",
       "pages": [
         "sdks2/sdk/sdk-overview",
-        "sdks2/sdk/java/java-overview",
-        "sdks2/sdk/java/analytics",
-        "sdks2/sdk/java/ad-analytics",
-        "sdks2/sdk/flutter/flutter-overview",
-        "sdks2/sdk/flutter/analytics",
-        "sdks2/sdk/flutter/ad-analytics",
-        "sdks2/sdk/android/android-overview",
-        "sdks2/sdk/android/analytics",
-        "sdks2/sdk/android/ad-analytics"
+        {
+          "group": "Java",
+          "pages": [
+            "sdks2/sdk/java/java-overview",
+            "sdks2/sdk/java/analytics",
+            "sdks2/sdk/java/ad-analytics"
+          ]
+        },
+        {
+          "group": "Flutter",
+          "pages": [
+            "sdks2/sdk/flutter/flutter-overview",
+            "sdks2/sdk/flutter/analytics",
+            "sdks2/sdk/flutter/ad-analytics"
+          ]
+        },
+        {
+          "group": "Android",
+          "pages": [
+            "sdks2/sdk/android/android-overview",
+            "sdks2/sdk/android/analytics",
+            "sdks2/sdk/android/ad-analytics"
+          ]
+        }
       ]
     },
     {
       "item": "3rd Party Integration",
       "pages": [
         "sdks2/third-party/third-party-overview",
-        "sdks2/third-party/google-analytics",
-        "sdks2/third-party/google-tag-manager",
-        "sdks2/third-party/firebase",
-        "sdks2/third-party/onesignal"
+        {
+          "group": "Google",
+          "pages": [
+            "sdks2/third-party/google-analytics",
+            "sdks2/third-party/google-tag-manager"
+          ]
+        },
+        {
+          "group": "Other Integrations",
+          "pages": [
+            "sdks2/third-party/firebase",
+            "sdks2/third-party/onesignal"
+          ]
+        }
       ]
     }
   ]
@@ -269,14 +295,28 @@
             ]
           },
           {
-            "group": "SDKs",
-            "pages": [
-              "developers/sdks/sdk-overview",
-              "developers/sdks/android-sdk",
-              "developers/sdks/web-sdk",
-              "developers/sdks/sdk-versioning"
-            ]
-          },
+  "group": "SDKs",
+  "pages": [
+    "developers/sdks/sdk-overview",
+    {
+      "group": "Android SDK",
+      "pages": [
+        "developers/sdks/android-sdk",
+        "developers/sdks/android/analytics",
+        "developers/sdks/android/ad-analytics"
+      ]
+    },
+    {
+      "group": "Web SDK",
+      "pages": [
+        "developers/sdks/web-sdk",
+        "developers/sdks/web/analytics",
+        "developers/sdks/web/ad-analytics"
+      ]
+    },
+    "developers/sdks/sdk-versioning"
+  ]
+},
           {
             "group": "Tracking",
             "pages": [
