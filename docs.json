@@ -76,6 +76,7 @@
   "menu": [
     {
       "item": "SDK",
+      "icon": "code",
       "pages": [
         "sdks2/sdk/sdk-overview",
         {
@@ -106,6 +107,7 @@
     },
     {
       "item": "3rd Party Integration",
+       "icon": "plug",
       "pages": [
         "sdks2/third-party/third-party-overview",
         "sdks2/third-party/google-analytics",
