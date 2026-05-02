@@ -418,7 +418,51 @@
             ]
           }
         ]
-      }
+      },{
+  "tab": "Test Admin",
+  "groups": [
+    {
+      "group": "Android",
+      "pages": [
+        "test-admin/android/android-overview",
+        {
+          "group": "Realme",
+          "pages": [
+            "test-admin/android/realme/notification",
+            "test-admin/android/realme/analytics"
+          ]
+        },
+        {
+          "group": "Mi",
+          "pages": [
+            "test-admin/android/mi/notification",
+            "test-admin/android/mi/analytics"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "iPhone",
+      "pages": [
+        "test-admin/iphone/iphone-overview",
+        {
+          "group": "iPhone 1",
+          "pages": [
+            "test-admin/iphone/iphone-1/notification",
+            "test-admin/iphone/iphone-1/analytics"
+          ]
+        },
+        {
+          "group": "iPhone 2",
+          "pages": [
+            "test-admin/iphone/iphone-2/notification",
+            "test-admin/iphone/iphone-2/analytics"
+          ]
+        }
+      ]
+    }
+  ]
+}
     ]
   }
 }
