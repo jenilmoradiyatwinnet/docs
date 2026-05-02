@@ -468,7 +468,7 @@
   "tab": "Test Admin",
   "groups": [
     {
-      "group": "Android",
+      "group": "Platforms",
       "pages": [
         {
           "group": "Android",
@@ -489,12 +489,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "group": "iPhone",
-      "pages": [
+        },
         {
           "group": "iPhone",
           "pages": [
