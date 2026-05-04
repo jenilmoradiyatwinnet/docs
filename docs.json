@@ -1,178 +1,66 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Twinalyze",
+  "name": "Twinalyze Demo",
   "colors": {
     "primary": "#16A34A",
     "light": "#346DDB",
     "dark": "#15803D"
   },
   "favicon": "favicon.png",
-  "navbar": {
-    "links": [
-      {
-        "label": "System Status",
-        "href": "https://stats.uptimerobot.com/CtHHsPhHgi"
-      },
-      {
-        "label": "Visit website",
-        "href": "https://Google.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://Google.com"
-    }
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "interaction": {
+    "drilldown": true
   },
   "navigation": {
     "tabs": [
       {
-        "tab": "Overview",
+        "tab": "Introduction",
         "icon": "house",
+        "directory": "accordion",
         "groups": [
           {
             "group": "Introduction",
+            "root": "introduction/overview",
             "pages": [
-              "overview/introduction",
-              "overview/what-is-twinalyze"
-            ]
-          }
-        ]
-      },
-      {
-  "tab": "SDKs",
-  "icon": "code",
-  "dropdowns": [
-    {
-      "dropdown": "SDK",
-      "icon": "code",
-      "groups": [
-        {
-          "group": "Android",
-          "expanded": true,
-          "pages": [
-            {
-              "group": "Kotlin",
-              "expanded": true,
-              "pages": [
-                "sdks/android/kotlin/analytics",
-                "sdks/android/kotlin/ad-analytics"
-              ]
-            },
-            {
-              "group": "Swift",
-              "expanded": true,
-              "pages": [
-                "sdks/android/swift/analytics",
-                "sdks/android/swift/ad-analytics"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "Web",
-          "expanded": true,
-          "pages": [
-            {
-              "group": "React",
-              "expanded": true,
-              "pages": [
-                "sdks/web/react/analytics",
-                "sdks/web/react/ad-analytics"
-              ]
-            },
-            {
-              "group": "JavaScript",
-              "expanded": true,
-              "pages": [
-                "sdks/web/javascript/analytics",
-                "sdks/web/javascript/ad-analytics"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dropdown": "Integration",
-      "icon": "plug",
-      "groups": [
-        {
-          "group": "3rd Party Integrations",
-          "expanded": true,
-          "pages": [
-            "integrations/google-analytics-4",
-            "integrations/google-tag-manager",
-            "integrations/firebase",
-            "integrations/onesignal"
-          ]
-        }
-      ]
-    }
-  ]
-},
-      {
-        "tab": "Analytics",
-        "icon": "chart-line",
-        "groups": [
-          {
-            "group": "Dashboard",
-            "pages": [
-              "analytics/dashboard-overview",
-              "analytics/product-overview/product-overview"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Engagement",
-        "icon": "bell",
-        "groups": [
-          {
-            "group": "Notifications",
-            "pages": [
-              "engagement/notification-overview",
-              "engagement/create-notification"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Data & Events",
-        "icon": "database",
-        "groups": [
-          {
-            "group": "Data Model",
-            "pages": [
-              "data-events/data-model",
-              "data-events/events-overview"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Developers",
-        "icon": "terminal",
-        "groups": [
-          {
-            "group": "Quickstart",
-            "pages": [
-              "developers/developer-overview",
-              "developers/api-keys"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Admin",
-        "icon": "settings",
-        "groups": [
-          {
-            "group": "Project Settings",
-            "pages": [
-              "admin/project-overview",
-              "admin/configuration"
+              {
+                "group": "Android SDK",
+                "root": "introduction/android/overview",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Java",
+                    "root": "introduction/android/java/overview2",
+                    "expanded": true,
+                    "pages": [
+                      "introduction/android/java/page-1",
+                      "introduction/android/java/page-2",
+                      "introduction/android/java/page-3",
+                      "introduction/android/java/page-4"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Web SDK",
+                "root": "introduction/web/overview",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "React",
+                    "root": "introduction/web/react/overview",
+                    "expanded": true,
+                    "pages": [
+                      "introduction/web/react/page-1",
+                      "introduction/web/react/page-2",
+                      "introduction/web/react/page-3",
+                      "introduction/web/react/page-4"
+                    ]
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -183,12 +71,7 @@
     "socials": {
       "x": "https://x.com",
       "github": "https://github.com",
-      "linkedin": "https://www.linkedin.com",
-      "youtube": "https://www.youtube.com",
-      "instagram": "https://www.instagram.com"
+      "linkedin": "https://www.linkedin.com"
     }
-  },
-  "custom": {
-    "css": "custom.css"
   }
 }
