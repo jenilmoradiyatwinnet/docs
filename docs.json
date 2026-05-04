@@ -37,6 +37,18 @@
               "overview/introduction",
               "overview/what-is-twinalyze"
             ]
+          },{
+            "group": "Introduction",
+            "pages": [
+              "overview/introduction",
+              "overview/what-is-twinalyze"
+            ]
+          },{
+            "group": "Introduction",
+            "pages": [
+              "overview/introduction",
+              "overview/what-is-twinalyze"
+            ]
           }
         ]
       },
@@ -67,7 +79,7 @@
               },
               {
                 "group": "Web SDK",
-                "expanded": false,
+                "expanded": true,
                 "pages": [
                   "sdks/web/overview",
                   "sdks/web/install",
@@ -76,7 +88,7 @@
               },
               {
                 "group": "Flutter SDK",
-                "expanded": false,
+                "expanded": true,
                 "pages": [
                   "sdks/flutter/overview",
                   "sdks/flutter/install"
