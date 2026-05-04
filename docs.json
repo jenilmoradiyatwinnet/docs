@@ -34,103 +34,101 @@
           {
             "group": "Getting Started",
             "pages": [
-              "overview/introduction"
+              "overview/introduction",
+              "overview/create-an-account",
+              "overview/create-an-organization"
             ]
           }
         ]
       },
       {
-  "tab": "SDKs",
-  "icon": "code",
-  "dropdowns": [
-    {
-      "dropdown": "SDK",
-      "icon": "code",
-      "pages": [
-        "sdks/overview"
-      ],
-      "groups": [
-        {
-          "group": "Common",
-          "pages": [
-            "common/one",
-            "common/two"
-          ]
-        },
-        {
-          "group": "Android",
-          "expanded": true,
-          "pages": [
-            {
-              "group": "Kotlin",
-              "expanded": true,
-              "pages": [
-                "sdks/android/kotlin/analytics",
-                "sdks/android/kotlin/ad-analytics"
-              ]
-            },
-            {
-              "group": "Swift",
-              "expanded": true,
-              "pages": [
-                "sdks/android/swift/analytics",
-                "sdks/android/swift/ad-analytics"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "Web",
-          "expanded": true,
-          "pages": [
-            {
-              "group": "React",
-              "expanded": true,
-              "pages": [
-                "sdks/web/react/analytics",
-                "sdks/web/react/ad-analytics"
-              ]
-            },
-            {
-              "group": "JavaScript",
-              "expanded": true,
-              "pages": [
-                "sdks/web/javascript/analytics",
-                "sdks/web/javascript/ad-analytics"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dropdown": "Integration",
-      "icon": "plug",
-      "pages": [
-        "integrations/overview"
-      ],
-      "groups": [
-        {
-          "group": "Common",
-          "pages": [
-            "common/one",
-            "common/two"
-          ]
-        },
-        {
-          "group": "3rd Party Integrations",
-          "expanded": true,
-          "pages": [
-            "integrations/google-analytics-4",
-            "integrations/google-tag-manager",
-            "integrations/firebase",
-            "integrations/onesignal"
-          ]
-        }
-      ]
-    }
-  ]
-},
+        "tab": "SDKs",
+        "icon": "code",
+        "dropdowns": [
+          {
+            "dropdown": "SDK",
+            "icon": "code",
+            "pages": [
+              "sdks/overview",
+              {
+                "group": "Common",
+                "pages": [
+                  "common/one",
+                  "common/two"
+                ]
+              },
+              {
+                "group": "Android",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Kotlin",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/kotlin/analytics",
+                      "sdks/android/kotlin/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "Swift",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/swift/analytics",
+                      "sdks/android/swift/ad-analytics"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Web",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "React",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/react/analytics",
+                      "sdks/web/react/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "JavaScript",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/javascript/analytics",
+                      "sdks/web/javascript/ad-analytics"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "dropdown": "Integration",
+            "icon": "plug",
+            "pages": [
+              "integrations/overview",
+              {
+                "group": "Common",
+                "pages": [
+                  "common/one",
+                  "common/two"
+                ]
+              },
+              {
+                "group": "3rd Party Integrations",
+                "expanded": true,
+                "pages": [
+                  "integrations/google-analytics-4",
+                  "integrations/google-tag-manager",
+                  "integrations/firebase",
+                  "integrations/onesignal"
+                ]
+              }
+            ]
+          }
+        ]
+      },
       {
         "tab": "Analytics",
         "icon": "chart-line",
