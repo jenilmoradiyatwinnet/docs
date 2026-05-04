@@ -25,7 +25,7 @@
       "href": "https://Google.com"
     }
   },
-   "navigation": {
+  "navigation": {
     "tabs": [
       {
         "tab": "Overview",
@@ -37,67 +37,59 @@
               "overview/introduction",
               "overview/what-is-twinalyze"
             ]
-          },
-          {
-            "group": "Introduction",
-            "pages": [
-              "overview/introduction",
-              "overview/what-is-twinalyze"
-            ]
-          },
-          {
-            "group": "Introduction",
-            "pages": [
-              "overview/introduction",
-              "overview/what-is-twinalyze"
-            ]
           }
         ]
       },
       {
-  "tab": "SDKs",
-  "icon": "code",
-  "dropdowns": [
-    {
-      "dropdown": "SDK",
-      "icon": "code",
-      "groups": [
-        {
-          "group": "Android SDK - Swift",
-          "expanded": true,
-          "pages": [
-            "sdks/android/swift/analytics",
-            "sdks/android/swift/ad-analytics"
-          ]
-        },
-        {
-          "group": "Android SDK - Kotlin",
-          "expanded": true,
-          "pages": [
-            "sdks/android/kotlin/analytics",
-            "sdks/android/kotlin/ad-analytics"
-          ]
-        }
-      ]
-    },
-    {
-      "dropdown": "Integration",
-      "icon": "plug",
-      "groups": [
-        {
-          "group": "3rd Party Integrations",
-          "expanded": true,
-          "pages": [
-            "integrations/google-analytics-4",
-            "integrations/google-tag-manager",
-            "integrations/firebase",
-            "integrations/onesignal"
-          ]
-        }
-      ]
-    }
-  ]
-},
+        "tab": "SDKs",
+        "icon": "code",
+        "dropdowns": [
+          {
+            "dropdown": "SDK",
+            "icon": "code",
+            "groups": [
+              {
+                "group": "Android",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Kotlin",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/kotlin/analytics",
+                      "sdks/android/kotlin/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "Swift",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/swift/analytics",
+                      "sdks/android/swift/ad-analytics"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "dropdown": "Integration",
+            "icon": "plug",
+            "groups": [
+              {
+                "group": "3rd Party Integrations",
+                "expanded": true,
+                "pages": [
+                  "integrations/google-analytics-4",
+                  "integrations/google-tag-manager",
+                  "integrations/firebase",
+                  "integrations/onesignal"
+                ]
+              }
+            ]
+          }
+        ]
+      },
       {
         "tab": "Analytics",
         "icon": "chart-line",
