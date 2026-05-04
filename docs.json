@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Twinalyze",
   "colors": {
     "primary": "#16A34A",
     "light": "#346DDB",
@@ -55,83 +55,49 @@
         ]
       },
       {
-        "tab": "SDKs",
-        "icon": "code",
-        "dropdowns": [
-         {
-  "dropdown": "SDKs",
+  "tab": "SDKs",
   "icon": "code",
-  "groups": [
+  "dropdowns": [
     {
-      "group": "SDK",
+      "dropdown": "SDK",
       "icon": "code",
-      "pages": [
+      "groups": [
         {
-          "group": "SDK Overview",
+          "group": "Android SDK - Swift",
+          "expanded": true,
           "pages": [
-            "analytics/add-event-tracking"
+            "sdks/android/swift/analytics",
+            "sdks/android/swift/ad-analytics"
           ]
         },
         {
-          "group": "Android SDK",
+          "group": "Android SDK - Kotlin",
           "expanded": true,
           "pages": [
-            "analytics/get-started",
-            "ad-analytics/ad-analytics-sdk",
-            "ad-analytics/ad-sdk-Initialization",
-            "sdks/android/send-event",
-            {
-              "group": "iPhone11",
-              "pages": [
-                "sdks/android/iphone11/overview",
-                "sdks/android/iphone11/analytics",
-                "sdks/android/iphone11/notification"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "Web SDK",
-          "expanded": true,
-          "pages": [
-            "sdks/web/overview",
-            "sdks/web/install",
-            "sdks/web/send-event",
-            {
-              "group": "Google",
-              "pages": [
-                "sdks/web/google/overview",
-                "sdks/web/google/analytics",
-                "sdks/web/google/events"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "Flutter SDK",
-          "expanded": true,
-          "pages": [
-            "sdks/flutter/overview",
-            "sdks/flutter/install"
+            "sdks/android/kotlin/analytics",
+            "sdks/android/kotlin/ad-analytics"
           ]
         }
       ]
     },
-          {
-            "dropdown": "Integration",
-            "icon": "plug",
-            "groups": [
-              {
-                "group": "3rd Party Integration",
-                "pages": [
-                  "3rdparty/what-is-analytics",
-                  "3rdparty/what-is-analytics2"
-                ]
-              }
-            ]
-          }
-        ]
-      },
+    {
+      "dropdown": "Integration",
+      "icon": "plug",
+      "groups": [
+        {
+          "group": "3rd Party Integrations",
+          "expanded": true,
+          "pages": [
+            "integrations/google-analytics-4",
+            "integrations/google-tag-manager",
+            "integrations/firebase",
+            "integrations/onesignal"
+          ]
+        }
+      ]
+    }
+  ]
+},
       {
         "tab": "Analytics",
         "icon": "chart-line",
