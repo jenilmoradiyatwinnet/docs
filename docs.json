@@ -64,61 +64,6 @@
               "integrations/onesignal"
             ]
           }
-        ],
-        "dropdowns": [
-          {
-            "dropdown": "SDK",
-            "icon": "code",
-            "groups": [
-              {
-                "group": "SDK Overview",
-                "pages": [
-                  "analytics/add-event-tracking"
-                ]
-              },
-              {
-                "group": "Android SDK",
-                "expanded": true,
-                "pages": [
-                  "analytics/get-started",
-                  "ad-analytics/ad-analytics-sdk",
-                  "ad-analytics/ad-sdk-Initialization",
-                  "sdks/android/send-event"
-                ]
-              },
-              {
-                "group": "Web SDK",
-                "expanded": false,
-                "pages": [
-                  "sdks/web/overview",
-                  "sdks/web/install",
-                  "sdks/web/send-event"
-                ]
-              },
-              {
-                "group": "Flutter SDK",
-                "expanded": false,
-                "pages": [
-                  "sdks/flutter/overview",
-                  "sdks/flutter/install"
-                ]
-              }
-            ]
-          },
-          {
-            "dropdown": "Integration",
-            "icon": "plug",
-            "groups": [
-              {
-                "group": "3rd Party Integration",
-                "pages": [
-                  "3rdparty/what-is-analytics",
-                  "3rdparty/custom-event-tracking",
-                  "3rdparty/onesignal"
-                ]
-              }
-            ]
-          }
         ]
       },
       {
@@ -129,7 +74,7 @@
             "group": "Dashboard",
             "pages": [
               "analytics/dashboard-overview",
-              "analytics/test/realtime-users"
+              "analytics/product-overview/product-overview"
             ]
           }
         ]
@@ -187,7 +132,7 @@
         ]
       }
     ]
-   },
+  },
   "footer": {
     "socials": {
       "x": "https://x.com",
