@@ -65,7 +65,7 @@
             ]
           }
         ],
-        "dropdowns": [
+        "tabs": [
           {
             "dropdown": "SDK",
             "icon": "code",
