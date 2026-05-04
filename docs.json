@@ -129,7 +129,7 @@
             "group": "Dashboard",
             "pages": [
               "analytics/dashboard-overview",
-              "analytics/realtime-users"
+              "analytics/test/realtime-users"
             ]
           }
         ]
