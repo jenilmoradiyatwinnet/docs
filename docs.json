@@ -32,9 +32,9 @@
         "icon": "house",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "Getting Started",
             "pages": [
-              "overview/Twinalyze-introduction"
+              "overview/introduction"
             ]
           }
         ]
