@@ -41,89 +41,91 @@
         ]
       },
       {
-  "tab": "SDKs",
-  "icon": "code",
-  "anchors": [
-    {
-      "anchor": "One",
-      "icon": "circle-1",
-      "href": "/common/one"
-    },
-    {
-      "anchor": "Two",
-      "icon": "circle-2",
-      "href": "/common/two"
-    }
-  ],
-  "dropdowns": [
-    {
-      "dropdown": "SDK",
-      "icon": "code",
-      "groups": [
-        {
-          "group": "Android",
-          "expanded": true,
-          "pages": [
-            {
-              "group": "Kotlin",
-              "expanded": true,
-              "pages": [
-                "sdks/android/kotlin/analytics",
-                "sdks/android/kotlin/ad-analytics"
-              ]
-            },
-            {
-              "group": "Swift",
-              "expanded": true,
-              "pages": [
-                "sdks/android/swift/analytics",
-                "sdks/android/swift/ad-analytics"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "Web",
-          "expanded": true,
-          "pages": [
-            {
-              "group": "React",
-              "expanded": true,
-              "pages": [
-                "sdks/web/react/analytics",
-                "sdks/web/react/ad-analytics"
-              ]
-            },
-            {
-              "group": "JavaScript",
-              "expanded": true,
-              "pages": [
-                "sdks/web/javascript/analytics",
-                "sdks/web/javascript/ad-analytics"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dropdown": "Integration",
-      "icon": "plug",
-      "groups": [
-        {
-          "group": "3rd Party Integrations",
-          "expanded": true,
-          "pages": [
-            "integrations/google-analytics-4",
-            "integrations/google-tag-manager",
-            "integrations/firebase",
-            "integrations/onesignal"
-          ]
-        }
-      ]
-    }
-  ]
-},
+        "tab": "SDKs",
+        "icon": "code",
+        "dropdowns": [
+          {
+            "dropdown": "SDK",
+            "icon": "code",
+            "groups": [
+              {
+                "group": "Common",
+                "pages": [
+                  "common/one",
+                  "common/two"
+                ]
+              },
+              {
+                "group": "Android",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Kotlin",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/kotlin/analytics",
+                      "sdks/android/kotlin/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "Swift",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/swift/analytics",
+                      "sdks/android/swift/ad-analytics"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Web",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "React",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/react/analytics",
+                      "sdks/web/react/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "JavaScript",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/javascript/analytics",
+                      "sdks/web/javascript/ad-analytics"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "dropdown": "Integration",
+            "icon": "plug",
+            "groups": [
+              {
+                "group": "Common",
+                "pages": [
+                  "common/one",
+                  "common/two"
+                ]
+              },
+              {
+                "group": "3rd Party Integrations",
+                "expanded": true,
+                "pages": [
+                  "integrations/google-analytics-4",
+                  "integrations/google-tag-manager",
+                  "integrations/firebase",
+                  "integrations/onesignal"
+                ]
+              }
+            ]
+          }
+        ]
+      },
       {
         "tab": "Analytics",
         "icon": "chart-line",
