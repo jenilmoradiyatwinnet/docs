@@ -54,8 +54,8 @@
         {
           "group": "Common",
           "pages": [
-            "sdks/common/one",
-            "sdks/common/two"
+            "common/one",
+            "common/two"
           ]
         },
         {
@@ -114,8 +114,8 @@
         {
           "group": "Common",
           "pages": [
-            "integrations/common/one",
-            "integrations/common/two"
+            "common/one",
+            "common/two"
           ]
         },
         {
