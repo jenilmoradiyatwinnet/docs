@@ -513,6 +513,32 @@
       ]
     }
   ]
+},{
+  "tab": "Admin3",
+  "groups": [
+    {
+      "group": "Select Section",
+      "pages": [
+        {
+          "group": "SDK",
+          "pages": [
+            "admin3/sdk/overview",
+            "admin3/sdk/android",
+            "admin3/sdk/web"
+          ]
+        },
+        {
+          "group": "Integration",
+          "pages": [
+            "admin3/integration/overview",
+            "admin3/integration/google-analytics-4",
+            "admin3/integration/firebase",
+            "admin3/integration/onesignal"
+          ]
+        }
+      ]
+    }
+  ]
 }
     ]
   }
