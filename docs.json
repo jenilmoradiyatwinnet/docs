@@ -35,8 +35,8 @@
             "group": "Getting Started",
             "pages": [
               "overview/introduction",
-              "overview/create-an-account",
-              "overview/create-an-organization"
+              "overview/create-an-account-an-orgaization",
+              "overview/create-an-project"
             ]
           }
         ]
