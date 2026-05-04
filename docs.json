@@ -29,14 +29,14 @@
     }
   },
   "navigation": {
-    "tabs": [
+    "dropdowns": [
       {
-        "tab": "Overview",
+        "dropdown": "Overview",
+        "icon": "book-open",
         "groups": [
           {
             "group": "Introduction",
             "pages": [
-              
               "overview/introduction/what-is-twinalyze",
               "overview/introduction/how-twinalyze-works"
             ]
@@ -57,7 +57,6 @@
               "overview/getting-started/create-organization-and-project"
             ]
           },
-          
           {
             "group": "Product Tour",
             "pages": [
@@ -71,58 +70,49 @@
           }
         ]
       },
-{
-  "tab": "SDKs",
-  "menu": [
-    {
-      "item": "SDK",
-      "icon": "code",
-      "pages": [
-        "sdks2/sdk/sdk-overview",
-        {
-          "group": "Java",
-          "pages": [
-            "sdks2/sdk/java/java-overview",
-            "sdks2/sdk/java/analytics",
-            "sdks2/sdk/java/ad-analytics"
-          ]
-        },
-        {
-          "group": "Flutter",
-          "pages": [
-            "sdks2/sdk/flutter/flutter-overview",
-            "sdks2/sdk/flutter/analytics",
-            "sdks2/sdk/flutter/ad-analytics"
-          ]
-        },
-        {
-          "group": "Android",
-          "pages": [
-            "sdks2/sdk/android/android-overview",
-            "sdks2/sdk/android/analytics",
-            "sdks2/sdk/android/ad-analytics"
-          ]
-        }
-      ]
-    },
-    {
-      "item": "3rd Party Integration",
-       "icon": "plug",
-      "pages": [
-        "sdks2/third-party/third-party-overview",
-        "sdks2/third-party/google-analytics",
-        "sdks2/third-party/google-tag-manager",
-        "sdks2/third-party/onesignal",
-        "sdks2/third-party/shopify",
-        "sdks2/third-party/wix",
-        "sdks2/third-party/wordpress"
-      ]
-    }
-  ]
-}
-,
       {
-        "tab": "Analytics",
+        "dropdown": "Admin3",
+        "icon": "gear",
+        "groups": [
+          {
+            "group": "SDK",
+            "icon": "code",
+            "pages": [
+              "admin3/sdk/overview",
+              {
+                "group": "Android",
+                "pages": [
+                  "admin3/sdk/android/overview",
+                  "admin3/sdk/android/install",
+                  "admin3/sdk/android/analytics"
+                ]
+              },
+              {
+                "group": "Web",
+                "pages": [
+                  "admin3/sdk/web/overview",
+                  "admin3/sdk/web/install",
+                  "admin3/sdk/web/events"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Integration",
+            "icon": "plug",
+            "pages": [
+              "admin3/integration/overview",
+              "admin3/integration/google-analytics-4",
+              "admin3/integration/google-tag-manager",
+              "admin3/integration/firebase",
+              "admin3/integration/onesignal"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "Analytics",
+        "icon": "chart-line",
         "groups": [
           {
             "group": "Dashboard",
@@ -147,35 +137,12 @@
               "analytics/product-overview/system-insights",
               "analytics/product-overview/reports-and-advanced-reports"
             ]
-          },
-          {
-            "group": "User Analytics",
-            "pages": [
-              "analytics/user-analytic/page-insights",
-              "analytics/user-analytic/users-overview",
-              "analytics/user-analytic/user-engagement",
-              "analytics/user-analytic/user-retention",
-              "analytics/user-analytic/user-growth"
-            ]
-          },
-          {
-            "group": "Reports & Metrics",
-            "pages": [
-              "analytics/report-and-metric/core-metrics",
-              "analytics/report-and-metric/acquisition-and-segments",
-              "analytics/report-and-metric/retention-reports"
-            ]
-          },
-          {
-            "group": "Filters & Drilldown",
-            "pages": [
-              "analytics/filters-and-drilldown/filters-and-drilldown"
-            ]
           }
         ]
       },
       {
-        "tab": "Engagement",
+        "dropdown": "Engagement",
+        "icon": "bell",
         "groups": [
           {
             "group": "Notifications",
@@ -200,31 +167,12 @@
               "engagement/ad-analytics/ad-reports-and-metrics",
               "engagement/ad-analytics/ad-failure-insights"
             ]
-          },
-          {
-            "group": "Research",
-            "pages": [
-              "engagement/research/research-overview",
-              "engagement/research/market-trends",
-              "engagement/research/country-store",
-              "engagement/research/country-details",
-              "engagement/research/custom-store-listing",
-              "engagement/research/category-research"
-            ]
-          },
-          {
-            "group": "Ask AI",
-            "pages": [
-              "engagement/ask-ai/ask-ai-overview",
-              "engagement/ask-ai/example-prompts",
-              "engagement/ask-ai/conversation-history-and-export",
-              "engagement/ask-ai/ask-ai-troubleshooting"
-            ]
           }
         ]
       },
       {
-        "tab": "Data & Events",
+        "dropdown": "Data & Events",
+        "icon": "database",
         "groups": [
           {
             "group": "Data Model",
@@ -249,34 +197,12 @@
               "data-and-events/properties/user-device-and-session-properties",
               "data-and-events/properties/event-and-custom-properties"
             ]
-          },
-          {
-            "group": "Sources",
-            "pages": [
-              "data-and-events/sources/source-overview",
-              "data-and-events/sources/app-web-and-api-sources",
-              "data-and-events/sources/integration-sources"
-            ]
-          },
-          {
-            "group": "Data Controls",
-            "pages": [
-              "data-and-events/data-controls/status-and-visibility-controls",
-              "data-and-events/data-controls/edit-and-manage-events"
-            ]
-          },
-          {
-            "group": "Data Quality",
-            "pages": [
-              "data-and-events/data-quality/duplicate-and-missing-events",
-              "data-and-events/data-quality/wrong-event-names-and-invalid-properties",
-              "data-and-events/data-quality/block-bot-events"
-            ]
           }
         ]
       },
       {
-        "tab": "Developers",
+        "dropdown": "Developers",
+        "icon": "code",
         "groups": [
           {
             "group": "Quickstart",
@@ -288,37 +214,12 @@
             ]
           },
           {
-  "group": "SDKs",
-  "pages": [
-    "developers/sdks/sdk-overview",
-    {
-      "group": "Android SDK",
-      "pages": [
-        "developers/sdks/android-sdk",
-        "developers/sdks/android/analytics",
-        "developers/sdks/android/ad-analytics"
-      ]
-    },
-    {
-      "group": "Web SDK",
-      "pages": [
-        "developers/sdks/web-sdk",
-        "developers/sdks/web/analytics",
-        "developers/sdks/web/ad-analytics"
-      ]
-    },
-    "developers/sdks/sdk-versioning"
-  ]
-},
-          {
-            "group": "Tracking",
+            "group": "SDKs",
             "pages": [
-              "developers/tracking/auto-and-manual-tracking",
-              "developers/tracking/custom-events",
-              "developers/tracking/user-identification-and-properties",
-              "developers/tracking/session-and-screen-tracking",
-              "developers/tracking/advanced-screen-tracking",
-              "developers/tracking/notification-tracking"
+              "developers/sdks/sdk-overview",
+              "developers/sdks/android-sdk",
+              "developers/sdks/web-sdk",
+              "developers/sdks/sdk-versioning"
             ]
           },
           {
@@ -328,51 +229,20 @@
               "developers/integrations/google-analytics-4",
               "developers/integrations/google-tag-manager",
               "developers/integrations/firebase",
-              "developers/integrations/shopify",
-              "developers/integrations/wordpress",
-              "developers/integrations/webflow",
-              "developers/integrations/wix",
-              "developers/integrations/onesignal",
-              "developers/integrations/ads-integration-facebook-google"
-            ]
-          },
-          {
-            "group": "Authentication",
-            "pages": [
-              "developers/authentication/api-key-and-secret-key",
-              "developers/authentication/request-headers",
-              "developers/authentication/hmac-signature",
-              "developers/authentication/rate-limits-and-error-format"
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "pages": [
-              "developers/troubleshooting/sdk-and-event-issues",
-              "developers/troubleshooting/data-accuracy-issues",
-              "developers/troubleshooting/api-authentication-issues",
-              "developers/troubleshooting/sdk-version-issues"
+              "developers/integrations/onesignal"
             ]
           }
         ]
       },
       {
-        "tab": "Admin",
+        "dropdown": "Admin",
+        "icon": "shield",
         "groups": [
           {
             "group": "Project Settings",
             "pages": [
               "admin/project-settings/project-overview",
               "admin/project-settings/api-keys-and-firebase-sdk-keys"
-            ]
-          },
-          {
-            "group": "Configuration",
-            "pages": [
-              "admin/configuration/integration-settings",
-              "admin/configuration/version-settings",
-              "admin/configuration/device-settings",
-              "admin/configuration/screen-activity-settings"
             ]
           },
           {
@@ -391,155 +261,9 @@
               "admin/billing/payment-issues",
               "admin/billing/cancel-and-refund-policy"
             ]
-          },
-          {
-            "group": "Security & Privacy",
-            "pages": [
-              "admin/security-and-privacy/api-and-secret-key-security",
-              "admin/security-and-privacy/privacy-and-compliance",
-              "admin/security-and-privacy/data-retention-and-deletion",
-              "admin/security-and-privacy/pii-handling-and-encryption",
-              "admin/security-and-privacy/gdpr",
-              "admin/security-and-privacy/cookie-consent"
-            ]
-          },
-          {
-            "group": "White Label",
-            "pages": [
-              "admin/white-label/white-label-overview",
-              "admin/white-label/custom-domain-and-dns-setup",
-              "admin/white-label/branding-and-tenant-mapping"
-            ]
-          },
-          {
-            "group": "Account Settings",
-            "pages": [
-              "admin/account-settings/profile-and-notification-preferences"
-            ]
           }
         ]
-       },
-{
-  "tab": "Test Admin",
-  "groups": [
-    {
-      "group": "Android",
-      "pages": [
-        "test-admin/android/android-overview",
-        {
-          "group": "Realme",
-          "pages": [
-            "test-admin/android/realme/notification",
-            "test-admin/android/realme/analytics"
-          ]
-        },
-        {
-          "group": "Mi",
-          "pages": [
-            "test-admin/android/mi/notification",
-            "test-admin/android/mi/analytics"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "iPhone",
-      "pages": [
-        "test-admin/iphone/iphone-overview",
-        {
-          "group": "iPhone 1",
-          "pages": [
-            "test-admin/iphone/iphone-1/notification",
-            "test-admin/iphone/iphone-1/analytics"
-          ]
-        },
-        {
-          "group": "iPhone 2",
-          "pages": [
-            "test-admin/iphone/iphone-2/notification",
-            "test-admin/iphone/iphone-2/analytics"
-          ]
-        }
-      ]
-    }
-  ]
-},
-{
-  "tab": "Test Admin",
-  "groups": [
-    {
-      "group": "Platforms",
-      "pages": [
-        {
-          "group": "Android",
-          "pages": [
-            "test-admin2/android/android-overview",
-            {
-              "group": "Realme",
-              "pages": [
-                "test-admin2/android/realme/notification",
-                "test-admin2/android/realme/analytics"
-              ]
-            },
-            {
-              "group": "Mi",
-              "pages": [
-                "test-admin2/android/mi/notification",
-                "test-admin2/android/mi/analytics"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "iPhone",
-          "pages": [
-            "test-admin2/iphone/iphone-overview",
-            {
-              "group": "iPhone 1",
-              "pages": [
-                "test-admin2/iphone/iphone-1/notification",
-                "test-admin2/iphone/iphone-1/analytics"
-              ]
-            },
-            {
-              "group": "iPhone 2",
-              "pages": [
-                "test-admin2/iphone/iphone-2/notification",
-                "test-admin2/iphone/iphone-2/analytics"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-},{
-  "tab": "Admin3",
-  "groups": [
-    {
-      "group": "Select Section",
-      "pages": [
-        {
-          "group": "SDK",
-          "pages": [
-            "admin3/sdk/overview",
-            "admin3/sdk/android",
-            "admin3/sdk/web"
-          ]
-        },
-        {
-          "group": "Integration",
-          "pages": [
-            "admin3/integration/overview",
-            "admin3/integration/google-analytics-4",
-            "admin3/integration/firebase",
-            "admin3/integration/onesignal"
-          ]
-        }
-      ]
-    }
-  ]
-}
+      }
     ]
   }
 }
