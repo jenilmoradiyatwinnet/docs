@@ -43,6 +43,18 @@
       {
   "tab": "SDKs",
   "icon": "code",
+  "anchors": [
+    {
+      "anchor": "One",
+      "icon": "circle-1",
+      "href": "/common/one"
+    },
+    {
+      "anchor": "Two",
+      "icon": "circle-2",
+      "href": "/common/two"
+    }
+  ],
   "dropdowns": [
     {
       "dropdown": "SDK",
