@@ -3,7 +3,7 @@
   "theme": "mint",
   "name": "Twinalyze",
   "colors": {
-    "primary": "#2563EB",
+  "primary": "#2563EB",
     "light": "#3B82F6",
     "dark": "#1D4ED8"
   },
@@ -35,8 +35,8 @@
             "group": "Getting Started",
             "pages": [
               "overview/introduction",
-              "developers/create-account",
-              "developers/create-organization"
+              "overview/create-an-account-an-orgaization",
+              "overview/create-an-project"
             ]
           }
         ]
@@ -44,24 +44,17 @@
       {
         "tab": "SDKs",
         "icon": "code",
-        "groups": [
-          {
-            "group": "Common",
-            "pages": [
-              "common/one",
-              "common/two"
-            ]
-          }
-        ],
         "dropdowns": [
           {
             "dropdown": "SDK",
             "icon": "code",
-            "groups": [
+            "pages": [
+              "sdks/overview",
               {
-                "group": "Overview",
+                "group": "Common",
                 "pages": [
-                  "sdks/overview"
+                  "common/one",
+                  "common/two"
                 ]
               },
               {
@@ -113,26 +106,22 @@
           {
             "dropdown": "Integration",
             "icon": "plug",
-            "groups": [
+            "pages": [
+              "integrations/overview",
               {
-                "group": "Overview",
+                "group": "Common",
                 "pages": [
-                  "integrations/overview"
+                  "common/one",
+                  "common/two"
                 ]
               },
               {
                 "group": "3rd Party Integrations",
                 "expanded": true,
                 "pages": [
-                  "integrations/google-ads",
+                  "integrations/google-analytics-4",
                   "integrations/google-tag-manager",
-                  "integrations/facebook-ads",
-                  "integrations/admob",
-                  "integrations/facebook-monetization-monitor",
-                  "integrations/slack",
-                  "integrations/microsoft-teams",
                   "integrations/firebase",
-                  "integrations/applovin",
                   "integrations/onesignal"
                 ]
               }
@@ -186,8 +175,7 @@
           {
             "group": "Quickstart",
             "pages": [
-              "developers/create-account",
-              "developers/create-organization",
+              "developers/developer-overview",
               "developers/api-keys"
             ]
           }
