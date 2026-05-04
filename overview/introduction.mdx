@@ -3,21 +3,22 @@ title: "Twinalyze Introduction"
 description: "Learn what Twinalyze is, supported SDK sources, third-party integrations, and core features."
 hideFooterPagination: true
 ---
-Twinalyze is an analytics and engagement platform built to help businesses understand how users interact with their apps, websites, ads, and notifications.
 
-It helps teams track user behavior, events, sessions, traffic sources, ad performance, notification engagement, and product usage from one place. With Twinalyze, businesses can understand where users come from, what they do, where they drop off, and how to improve conversion and ROI.
+Twinalyze is an analytics and engagement platform that helps businesses understand how users interact with their apps, websites, ads, and notifications.
+
+It gives product, marketing, and development teams one place to track user behavior, events, sessions, traffic sources, ads performance, notification engagement, and product usage.
 
 <CardGroup cols={3}>
-  <Card title="Understand Users" icon="users">
-    Track user journeys, sessions, screens, pages, clicks, and event activity across platforms.
+  <Card title="Understand user behavior" icon="users">
+    Track user journeys, sessions, screens, pages, clicks, and custom events.
   </Card>
 
-  <Card title="Improve ROI" icon="trending-up">
-    Analyze campaigns, ads, traffic sources, and conversion behavior to improve business results.
+  <Card title="Improve business ROI" icon="trending-up">
+    Analyze campaigns, traffic sources, ads performance, and conversion behavior.
   </Card>
 
-  <Card title="Engage Better" icon="bell">
-    Create and analyze notifications to improve user retention and engagement.
+  <Card title="Increase engagement" icon="bell">
+    Create and analyze notifications to improve retention and user activity.
   </Card>
 </CardGroup>
 
@@ -25,165 +26,167 @@ It helps teams track user behavior, events, sessions, traffic sources, ad perfor
 
 ## What is Twinalyze?
 
-Twinalyze gives product, marketing, and development teams a clear view of how users behave inside digital products.
+Twinalyze helps you answer important product and business questions:
 
-Instead of only showing numbers, Twinalyze helps teams understand:
-
-- Which users are active
-- Which events are being performed
-- Which screens or pages are important
-- Which campaigns bring valuable users
-- Where users leave before conversion
-- How ads and notifications perform
-- How to improve product experience and ROI
+- Where are users coming from?
+- Which pages or screens are users visiting?
+- Which events are users performing?
+- Where are users dropping off?
+- Which campaigns are bringing valuable users?
+- How are ads and notifications performing?
+- How can we improve conversion, retention, and ROI?
 
 <Info>
-  Twinalyze is designed for businesses that want simple, clear, and actionable analytics across apps, websites, ads, and engagement channels.
+  Twinalyze is built for teams that want clear, simple, and actionable analytics across apps, websites, ads, and engagement channels.
 </Info>
 
 ---
 
-## SDK Source
+## Sources & Integrations
 
-Twinalyze supports multiple SDK sources so businesses can collect data from mobile apps, websites, cross-platform apps, backend systems, and commerce platforms.
+Use the switch below to view supported **SDK Sources** and **Third-Party Integrations**.
 
-<CardGroup cols={3}>
-  <Card title="App" icon="app-window">
-    Track app-level analytics, sessions, user activity, and engagement events.
-  </Card>
+<Tabs>
+  <Tab title="SDK Sources">
+    Twinalyze supports multiple SDK sources so you can collect data from mobile apps, websites, backend systems, and commerce platforms.
 
-  <Card title="Android" icon="smartphone">
-    Track Android app screens, sessions, user properties, events, and ad analytics.
-  </Card>
+    <CardGroup cols={3}>
+      <Card title="App" icon="app-window" href="/sdks/app/overview">
+        Track app-level analytics, sessions, users, and engagement activity.
+      </Card>
 
-  <Card title="iOS" icon="apple">
-    Track iOS app events, sessions, users, and engagement behavior.
-  </Card>
+      <Card title="Android" icon="smartphone" href="/sdks/android/kotlin/analytics">
+        Track Android screens, sessions, events, user properties, and ad analytics.
+      </Card>
 
-  <Card title="React Native" icon="boxes">
-    Track cross-platform mobile app behavior from React Native apps.
-  </Card>
+      <Card title="iOS" icon="apple" href="/sdks/ios/overview">
+        Track iOS app events, users, sessions, and engagement behavior.
+      </Card>
 
-  <Card title="Flutter" icon="layers">
-    Track analytics from Flutter apps across Android and iOS.
-  </Card>
+      <Card title="React Native" icon="boxes" href="/sdks/react-native/overview">
+        Track cross-platform mobile app behavior from React Native apps.
+      </Card>
 
-  <Card title="Web" icon="globe">
-    Track website page views, clicks, forms, sessions, and traffic sources.
-  </Card>
+      <Card title="Flutter" icon="layers" href="/sdks/flutter/overview">
+        Track analytics events from Flutter apps across Android and iOS.
+      </Card>
 
-  <Card title="JavaScript" icon="code">
-    Add Twinalyze tracking directly using JavaScript SDK.
-  </Card>
+      <Card title="Web" icon="globe" href="/sdks/web/javascript/analytics">
+        Track website page views, clicks, forms, sessions, and traffic sources.
+      </Card>
 
-  <Card title="NPM" icon="package">
-    Install Twinalyze SDK using package-based integration.
-  </Card>
+      <Card title="JavaScript" icon="code" href="/sdks/web/javascript/analytics">
+        Add Twinalyze tracking directly using JavaScript SDK.
+      </Card>
 
-  <Card title="Python" icon="terminal">
-    Send server-side events and backend analytics using Python.
-  </Card>
+      <Card title="NPM" icon="package" href="/sdks/npm/overview">
+        Install Twinalyze using package-based integration.
+      </Card>
 
-  <Card title="Dart" icon="braces">
-    Use Dart-based integration for supported applications.
-  </Card>
+      <Card title="Python" icon="terminal" href="/sdks/python/overview">
+        Send server-side events and backend analytics from Python.
+      </Card>
 
-  <Card title="Shopify" icon="shopping-bag">
-    Track ecommerce activity, product views, carts, checkout, and purchase behavior.
-  </Card>
+      <Card title="Dart" icon="braces" href="/sdks/dart/overview">
+        Use Dart-based tracking for supported applications.
+      </Card>
 
-  <Card title="WordPress" icon="file-text">
-    Track website and content activity from WordPress websites.
-  </Card>
+      <Card title="Shopify" icon="shopping-bag" href="/sdks/shopify/overview">
+        Track ecommerce activity like product views, carts, checkout, and purchases.
+      </Card>
 
-  <Card title="Webflow" icon="layout">
-    Track Webflow website users, pages, clicks, and conversions.
-  </Card>
-</CardGroup>
+      <Card title="WordPress" icon="file-text" href="/sdks/wordpress/overview">
+        Track website activity, content behavior, and conversions from WordPress.
+      </Card>
 
----
+      <Card title="Webflow" icon="layout" href="/sdks/webflow/overview">
+        Track Webflow website users, pages, clicks, forms, and conversions.
+      </Card>
+    </CardGroup>
+  </Tab>
 
-## Third-Party Integrations
+  <Tab title="Third-Party Integrations">
+    Twinalyze connects with ad platforms, messaging tools, analytics tools, and notification platforms.
 
-Twinalyze connects with advertising, messaging, analytics, and communication platforms to give a complete view of user acquisition and engagement.
+    <CardGroup cols={3}>
+      <Card title="Google Ads" icon="megaphone" href="/integrations/google-ads">
+        Understand campaign traffic, conversions, and user actions after ad clicks.
+      </Card>
 
-<CardGroup cols={3}>
-  <Card title="Google Ads" icon="megaphone">
-    Understand campaign traffic, ad-driven users, conversions, and user actions after ad clicks.
-  </Card>
+      <Card title="Google Tag Manager" icon="tag" href="/integrations/google-tag-manager">
+        Manage website tracking setup and event forwarding using GTM.
+      </Card>
 
-  <Card title="Google Tag Manager" icon="tag">
-    Manage website tracking setup and event forwarding using GTM.
-  </Card>
+      <Card title="Facebook Ads" icon="chart-column" href="/integrations/facebook-ads">
+        Analyze users coming from Meta or Facebook ad campaigns.
+      </Card>
 
-  <Card title="Facebook Ads" icon="badge-ad">
-    Analyze users coming from Meta/Facebook campaigns and compare performance.
-  </Card>
+      <Card title="AdMob" icon="rectangle-dollar-sign" href="/integrations/admob">
+        Track ad impressions, clicks, revenue, and mobile ad performance.
+      </Card>
 
-  <Card title="AdMob" icon="rectangle-ad">
-    Track ad impressions, clicks, revenue, and mobile ad performance.
-  </Card>
+      <Card title="Facebook Monetization Monitor" icon="bar-chart-3" href="/integrations/facebook-monetization-monitor">
+        Monitor monetization performance and ad-related activity.
+      </Card>
 
-  <Card title="Facebook Monetization Monitor" icon="chart-column">
-    Monitor monetization performance and ad-related activity from Facebook.
-  </Card>
+      <Card title="Slack" icon="message-square" href="/integrations/slack">
+        Send analytics alerts, reports, and important updates to Slack.
+      </Card>
 
-  <Card title="Slack" icon="message-square">
-    Send important analytics alerts, reports, or notifications to Slack channels.
-  </Card>
+      <Card title="Microsoft Teams" icon="messages-square" href="/integrations/microsoft-teams">
+        Share reports, alerts, and business updates with your team.
+      </Card>
 
-  <Card title="Microsoft Teams" icon="messages-square">
-    Share reports, alerts, and business updates with your team.
-  </Card>
+      <Card title="Firebase" icon="flame" href="/integrations/firebase">
+        Connect Firebase-based app data and improve mobile analytics visibility.
+      </Card>
 
-  <Card title="Firebase" icon="flame">
-    Connect Firebase-based app data and improve mobile analytics visibility.
-  </Card>
+      <Card title="AppLovin" icon="line-chart" href="/integrations/applovin">
+        Track ad network performance, revenue, and campaign behavior.
+      </Card>
 
-  <Card title="AppLovin" icon="chart-no-axes-combined">
-    Track ad network performance, revenue, and campaign behavior.
-  </Card>
-
-  <Card title="OneSignal" icon="send">
-    Track notification delivery, opens, clicks, and user engagement.
-  </Card>
-</CardGroup>
+      <Card title="OneSignal" icon="send" href="/integrations/onesignal">
+        Track notification delivery, opens, clicks, and user engagement.
+      </Card>
+    </CardGroup>
+  </Tab>
+</Tabs>
 
 ---
 
 ## Main Features
 
-Twinalyze is built around three major feature areas: **Analytics**, **Ads**, and **Notifications**.
+Twinalyze is focused on three main product areas: **Analytics**, **Ads**, and **Notifications**.
 
 <Tabs>
   <Tab title="Analytics">
     ## Analytics
 
-    Twinalyze helps you understand user behavior across your product.
+    Understand how users interact with your product.
 
     <CardGroup cols={2}>
-      <Card title="User Analytics" icon="users">
+      <Card title="User Analytics" icon="users" href="/analytics/dashboard-overview">
         Track active users, new users, returning users, user journeys, and behavior patterns.
       </Card>
 
-      <Card title="Event Tracking" icon="mouse-pointer-click">
-        Track custom events such as clicks, page views, screen views, add to cart, checkout, and more.
+      <Card title="Event Tracking" icon="mouse-pointer-click" href="/data-events/events-overview">
+        Track custom events like clicks, page views, screen views, add to cart, checkout, and more.
       </Card>
 
       <Card title="Session Insights" icon="clock">
-        Understand session duration, user activity, screen visits, and engagement depth.
+        Understand session duration, screen visits, page activity, and engagement depth.
       </Card>
 
       <Card title="Retention & Funnels" icon="filter">
-        Analyze how users come back and where they drop off in important flows.
+        Analyze how users return and where they drop off in important flows.
       </Card>
     </CardGroup>
   </Tab>
 
   <Tab title="Ads">
-    ## Ads Analytics
+    ## Ads
 
-    Twinalyze helps businesses understand ad performance and user behavior after ad interaction.
+    Measure ad performance and understand what happens after users interact with ads.
 
     <CardGroup cols={2}>
       <Card title="Campaign Performance" icon="megaphone">
@@ -207,10 +210,10 @@ Twinalyze is built around three major feature areas: **Analytics**, **Ads**, and
   <Tab title="Notifications">
     ## Notifications
 
-    Twinalyze helps teams create, manage, and analyze notification campaigns.
+    Create, manage, and analyze notification campaigns.
 
     <CardGroup cols={2}>
-      <Card title="Create Notifications" icon="bell-plus">
+      <Card title="Create Notifications" icon="bell-plus" href="/engagement/create-notification">
         Create user engagement campaigns for app or web users.
       </Card>
 
@@ -218,8 +221,8 @@ Twinalyze is built around three major feature areas: **Analytics**, **Ads**, and
         Send notifications based on users, events, behavior, or segments.
       </Card>
 
-      <Card title="Campaign Reports" icon="bar-chart-3">
-        Measure delivery, opens, clicks, and engagement performance.
+      <Card title="Campaign Reports" icon="bar-chart-3" href="/engagement/notification-overview">
+        Measure delivery, opens, clicks, and campaign performance.
       </Card>
 
       <Card title="Improve Retention" icon="repeat">
@@ -239,11 +242,11 @@ Twinalyze is built around three major feature areas: **Analytics**, **Ads**, and
   </Step>
 
   <Step title="Track users and events">
-    Twinalyze starts collecting events, sessions, user properties, device details, and source data.
+    Twinalyze collects events, sessions, user properties, device details, and source data.
   </Step>
 
   <Step title="Analyze behavior">
-    Use dashboards and reports to understand user activity, product usage, ads, and notifications.
+    Use dashboards and reports to understand product usage, ads, and notifications.
   </Step>
 
   <Step title="Improve decisions">
@@ -272,7 +275,7 @@ Twinalyze is built around three major feature areas: **Analytics**, **Ads**, and
     Collect data from apps, websites, SDKs, ads, notifications, and third-party tools in one place.
   </Card>
 
-  <Card title="Built for business clarity" icon="sparkles">
+  <Card title="Simple and clear analytics" icon="sparkles">
     Twinalyze makes analytics easier to understand for product, marketing, and business teams.
   </Card>
 
@@ -286,10 +289,6 @@ Twinalyze is built around three major feature areas: **Analytics**, **Ads**, and
 </CardGroup>
 
 ---
-
-<Card title="Goal of Twinalyze" icon="target">
-  Twinalyze helps businesses understand users, improve product experience, measure ads performance, and increase ROI using clear analytics and engagement insights.
-</Card>
 
 
 <div className="twinalyze-bottom-nav-no-prev">
