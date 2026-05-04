@@ -43,28 +43,7 @@
       {
         "tab": "SDKs",
         "icon": "code",
-        // "menu": [
-        //   {
-        //     "item": "SDK",
-        //     "icon": "code",
-        //     "pages": [
-        //       "analytics/get-started",
-        //       "analytics/add-event-tracking",
-        //       "analytics/custom-event-tracking",
-        //       "analytics/sdk-initialization"
-        //     ]
-        //   },
-        //   {
-        //     "item": "3rd Party Integration",
-        //     "icon": "plug",
-        //     "pages": [
-        //       "integrations/google-analytics-4",
-        //       "integrations/google-tag-manager",
-        //       "integrations/firebase",
-        //       "integrations/onesignal"
-        //     ]
-        //   }
-        // ],
+     
         "dropdowns": [
           {
             "dropdown": "SDK",
