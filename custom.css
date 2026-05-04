@@ -1,103 +1,66 @@
-.tw-page-end {
-  margin-top: 80px;
-  padding-bottom: 48px;
-}
-
-.tw-helpful-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 64px;
-}
-
-.tw-helpful-row p {
-  margin: 0;
-  color: #525252;
-  font-size: 15px;
-}
-
-.tw-helpful-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.tw-helpful-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-width: 72px;
-  height: 36px;
-  padding: 0 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  background: #ffffff;
-  color: #525252;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.tw-helpful-btn:hover {
-  background: #fafafa;
-  border-color: #d4d4d4;
-}
-
-.tw-bottom-nav {
+.twinalyze-bottom-nav {
   display: grid;
-  grid-template-columns: 150px 1fr 110px;
-  align-items: stretch;
+  grid-template-columns: 120px 1fr 100px;
+  align-items: center;
   width: 100%;
-  min-height: 68px;
-  border-radius: 14px;
+  min-height: 70px;
+  margin-top: 80px;
+  margin-bottom: 70px;
+  border-radius: 16px;
   background: #f7f7f7;
   overflow: hidden;
 }
 
-.tw-bottom-nav a {
+.twinalyze-bottom-nav a {
   text-decoration: none !important;
 }
 
-.tw-bottom-side {
+.twinalyze-nav-side {
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  color: #737373;
+  color: #777;
   font-size: 14px;
   font-weight: 500;
 }
 
-.tw-bottom-side:hover {
+.twinalyze-nav-side:hover {
   color: #16a34a;
 }
 
-.tw-bottom-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.twinalyze-nav-arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.twinalyze-nav-center {
+  height: 64px;
+  margin: 3px 0;
+  padding: 10px 22px;
   border: 1px solid #eeeeee;
   border-radius: 14px;
   background: #ffffff;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.015);
-  color: #262626;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 12px 20px;
+  color: #222;
 }
 
-.tw-bottom-center strong {
+.twinalyze-nav-center strong {
   font-size: 15px;
   font-weight: 700;
   line-height: 1.3;
 }
 
-.tw-bottom-center span {
+.twinalyze-nav-center span {
   margin-top: 4px;
   max-width: 430px;
-  color: #737373;
+  color: #777;
   font-size: 14px;
   line-height: 1.4;
   white-space: nowrap;
@@ -105,35 +68,21 @@
   text-overflow: ellipsis;
 }
 
-.tw-bottom-center:hover strong {
+.twinalyze-nav-center:hover strong {
   color: #16a34a;
 }
 
-.tw-bottom-next {
-  border-left: 1px solid #eeeeee;
-}
-
 @media (max-width: 640px) {
-  .tw-helpful-row {
-    align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-
-  .tw-bottom-nav {
+  .twinalyze-bottom-nav {
     grid-template-columns: 1fr;
   }
 
-  .tw-bottom-side {
-    min-height: 48px;
+  .twinalyze-nav-center {
+    margin: 0;
+    border-radius: 0;
   }
 
-  .tw-bottom-center span {
+  .twinalyze-nav-center span {
     white-space: normal;
-  }
-
-  .tw-bottom-next {
-    border-left: 0;
-    border-top: 1px solid #eeeeee;
   }
 }
