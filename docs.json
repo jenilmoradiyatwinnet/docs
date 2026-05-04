@@ -1,269 +1,204 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Twinalyze Docs",
+  "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#2563EB",
-    "light": "#3B82F6",
-    "dark": "#1D4ED8"
+    "primary": "#16A34A",
+    "light": "#346DDB",
+    "dark": "#15803D"
   },
+  "favicon": "favicon.png",
   "navbar": {
     "links": [
       {
-        "label": "FAQ",
-        "href": "/faq"
+        "label": "System Status",
+        "href": "https://stats.uptimerobot.com/CtHHsPhHgi"
       },
       {
-        "label": "Help / Support",
-        "href": "/support"
-      },
-      {
-        "label": "Visit Us",
-        "href": "https://twinalyze.com"
+        "label": "Visit website",
+        "href": "https://Google.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Start now / Sign up",
-      "href": "https://app.twinalyze.com"
+      "label": "Dashboard",
+      "href": "https://Google.com"
     }
   },
-  "navigation": {
-    "dropdowns": [
+   "navigation": {
+    "tabs": [
       {
-        "dropdown": "Overview",
-        "icon": "book-open",
+        "tab": "Overview",
+        "icon": "house",
         "groups": [
           {
             "group": "Introduction",
             "pages": [
-              "overview/introduction/what-is-twinalyze",
-              "overview/introduction/how-twinalyze-works"
-            ]
-          },
-          {
-            "group": "Core Concepts",
-            "pages": [
-              "overview/core-concepts/organization-and-project",
-              "overview/core-concepts/users-and-events",
-              "overview/core-concepts/sessions-sources-and-campaigns",
-              "overview/core-concepts/properties"
-            ]
-          },
-          {
-            "group": "Getting Started",
-            "pages": [
-              "overview/getting-started/create-your-account",
-              "overview/getting-started/create-organization-and-project"
-            ]
-          },
-          {
-            "group": "Product Tour",
-            "pages": [
-              "overview/product-tour/dashboard-tour",
-              "overview/product-tour/analytics-tour",
-              "overview/product-tour/engagement-tour",
-              "overview/product-tour/data-tour",
-              "overview/product-tour/developer-tour",
-              "overview/product-tour/admin-tour"
+              "overview/introduction",
+              "overview/what-is-twinalyze"
             ]
           }
         ]
       },
       {
-        "dropdown": "Admin3",
-        "icon": "gear",
-        "groups": [
+        "tab": "SDKs",
+        "icon": "code",
+        "menu": [
           {
-            "group": "SDK",
+            "item": "SDK",
             "icon": "code",
             "pages": [
-              "admin3/sdk/overview",
+              "analytics/get-started",
+              "analytics/add-event-tracking",
+              "analytics/custom-event-tracking",
+              "analytics/sdk-initialization"
+            ]
+          },
+          {
+            "item": "3rd Party Integration",
+            "icon": "plug",
+            "pages": [
+              "integrations/google-analytics-4",
+              "integrations/google-tag-manager",
+              "integrations/firebase",
+              "integrations/onesignal"
+            ]
+          }
+        ],
+        "dropdowns": [
+          {
+            "dropdown": "SDK",
+            "icon": "code",
+            "groups": [
               {
-                "group": "Android",
+                "group": "SDK Overview",
                 "pages": [
-                  "admin3/sdk/android/overview",
-                  "admin3/sdk/android/install",
-                  "admin3/sdk/android/analytics"
+                  "analytics/add-event-tracking"
                 ]
               },
               {
-                "group": "Web",
+                "group": "Android SDK",
+                "expanded": true,
                 "pages": [
-                  "admin3/sdk/web/overview",
-                  "admin3/sdk/web/install",
-                  "admin3/sdk/web/events"
+                  "analytics/get-started",
+                  "ad-analytics/ad-analytics-sdk",
+                  "ad-analytics/ad-sdk-Initialization",
+                  "sdks/android/send-event"
+                ]
+              },
+              {
+                "group": "Web SDK",
+                "expanded": false,
+                "pages": [
+                  "sdks/web/overview",
+                  "sdks/web/install",
+                  "sdks/web/send-event"
+                ]
+              },
+              {
+                "group": "Flutter SDK",
+                "expanded": false,
+                "pages": [
+                  "sdks/flutter/overview",
+                  "sdks/flutter/install"
                 ]
               }
             ]
           },
           {
-            "group": "Integration",
+            "dropdown": "Integration",
             "icon": "plug",
-            "pages": [
-              "admin3/integration/overview",
-              "admin3/integration/google-analytics-4",
-              "admin3/integration/google-tag-manager",
-              "admin3/integration/firebase",
-              "admin3/integration/onesignal"
+            "groups": [
+              {
+                "group": "3rd Party Integration",
+                "pages": [
+                  "Changelog/changelog",
+                  "what-is-analytics",
+                  "analytics/custom-event-tracking",
+                  "integrations/onesignal"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "dropdown": "Analytics",
+        "tab": "Analytics",
         "icon": "chart-line",
         "groups": [
           {
             "group": "Dashboard",
             "pages": [
-              "analytics/dashboard/dashboard-overview",
-              "analytics/dashboard/home-page",
-              "analytics/dashboard/no-data-empty-state"
-            ]
-          },
-          {
-            "group": "Realtime Analytics",
-            "pages": [
-              "analytics/realtime-analytics/realtime-users-overview",
-              "analytics/realtime-analytics/live-user-map",
-              "analytics/realtime-analytics/user-activity-overview"
-            ]
-          },
-          {
-            "group": "Product Overview",
-            "pages": [
-              "analytics/product-overview/product-overview",
-              "analytics/product-overview/system-insights",
-              "analytics/product-overview/reports-and-advanced-reports"
+              "analytics/dashboard-overview",
+              "analytics/realtime-users"
             ]
           }
         ]
       },
       {
-        "dropdown": "Engagement",
+        "tab": "Engagement",
         "icon": "bell",
         "groups": [
           {
             "group": "Notifications",
             "pages": [
-              "engagement/notifications/notification-overview",
-              "engagement/notifications/create-and-configure-notification",
-              "engagement/notifications/notification-campaigns-and-reports"
-            ]
-          },
-          {
-            "group": "Campaign Performance",
-            "pages": [
-              "engagement/campaign-performance/campaign-overview",
-              "engagement/campaign-performance/campaign-summary-and-conversion",
-              "engagement/campaign-performance/campaign-report-filters"
-            ]
-          },
-          {
-            "group": "Ad Analytics",
-            "pages": [
-              "engagement/ad-analytics/ad-analytics-overview",
-              "engagement/ad-analytics/ad-reports-and-metrics",
-              "engagement/ad-analytics/ad-failure-insights"
+              "engagement/notification-overview",
+              "engagement/create-notification"
             ]
           }
         ]
       },
       {
-        "dropdown": "Data & Events",
+        "tab": "Data & Events",
         "icon": "database",
         "groups": [
           {
             "group": "Data Model",
             "pages": [
-              "data-and-events/data-model/how-twinalyze-stores-data",
-              "data-and-events/data-model/event-user-and-device-data",
-              "data-and-events/data-model/session-and-property-data"
-            ]
-          },
-          {
-            "group": "Events",
-            "pages": [
-              "data-and-events/events/events-overview",
-              "data-and-events/events/event-naming-and-sources",
-              "data-and-events/events/auto-vs-manual-events"
-            ]
-          },
-          {
-            "group": "Properties",
-            "pages": [
-              "data-and-events/properties/properties-overview",
-              "data-and-events/properties/user-device-and-session-properties",
-              "data-and-events/properties/event-and-custom-properties"
+              "data-events/data-model",
+              "data-events/events-overview"
             ]
           }
         ]
       },
       {
-        "dropdown": "Developers",
-        "icon": "code",
+        "tab": "Developers",
+        "icon": "terminal",
         "groups": [
           {
             "group": "Quickstart",
             "pages": [
-              "developers/quickstart/developer-overview",
-              "developers/quickstart/install-and-initialize-sdk",
-              "developers/quickstart/send-first-event",
-              "developers/quickstart/debug-mode"
-            ]
-          },
-          {
-            "group": "SDKs",
-            "pages": [
-              "developers/sdks/sdk-overview",
-              "developers/sdks/android-sdk",
-              "developers/sdks/web-sdk",
-              "developers/sdks/sdk-versioning"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "developers/integrations/integration-overview",
-              "developers/integrations/google-analytics-4",
-              "developers/integrations/google-tag-manager",
-              "developers/integrations/firebase",
-              "developers/integrations/onesignal"
+              "developers/developer-overview",
+              "developers/api-keys"
             ]
           }
         ]
       },
       {
-        "dropdown": "Admin",
-        "icon": "shield",
+        "tab": "Admin",
+        "icon": "settings",
         "groups": [
           {
             "group": "Project Settings",
             "pages": [
-              "admin/project-settings/project-overview",
-              "admin/project-settings/api-keys-and-firebase-sdk-keys"
-            ]
-          },
-          {
-            "group": "Team & Access",
-            "pages": [
-              "admin/team-and-access/team-members-and-invite-member",
-              "admin/team-and-access/roles-and-permissions",
-              "admin/team-and-access/organization-and-project-access"
-            ]
-          },
-          {
-            "group": "Billing",
-            "pages": [
-              "admin/billing/plans-overview",
-              "admin/billing/credit-system",
-              "admin/billing/payment-issues",
-              "admin/billing/cancel-and-refund-policy"
+              "admin/project-overview",
+              "admin/configuration"
             ]
           }
         ]
       }
     ]
+   },
+  "footer": {
+    "socials": {
+      "x": "https://x.com",
+      "github": "https://github.com",
+      "linkedin": "https://www.linkedin.com",
+      "youtube": "https://www.youtube.com",
+      "instagram": "https://www.instagram.com"
+    }
+  },
+  "custom": {
+    "css": "custom.css"
   }
 }
