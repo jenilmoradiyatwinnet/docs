@@ -112,10 +112,9 @@
               {
                 "group": "3rd Party Integration",
                 "pages": [
-                  "Changelog/changelog",
-                  "what-is-analytics",
-                  "analytics/custom-event-tracking",
-                  "integrations/onesignal"
+                  "3rdparty/what-is-analytics",
+                  "3rdparty/custom-event-tracking",
+                  "3rdparty/onesignal"
                 ]
               }
             ]
