@@ -1,4 +1,14 @@
 /* ================================
+   Twinalyze Theme Blue Override
+================================ */
+
+:root {
+  --twinalyze-primary: #2563eb;
+  --twinalyze-primary-light: #3b82f6;
+  --twinalyze-primary-dark: #1d4ed8;
+}
+
+/* ================================
    Twinalyze Bottom Navigation
    Previous + Center + Next
 ================================ */
@@ -32,7 +42,7 @@
 }
 
 .twinalyze-nav-side:hover {
-  color: #16a34a;
+  color: var(--twinalyze-primary);
 }
 
 .twinalyze-nav-arrow {
@@ -74,9 +84,8 @@
 }
 
 .twinalyze-nav-center:hover strong {
-  color: #16a34a;
+  color: var(--twinalyze-primary);
 }
-
 
 /* ================================
    Twinalyze Bottom Navigation
@@ -129,9 +138,8 @@
 }
 
 .twinalyze-nav-side-next:hover {
-  color: #16a34a;
+  color: var(--twinalyze-primary);
 }
-
 
 /* ================================
    Reduce Mintlify Footer Gap
@@ -153,12 +161,23 @@ footer [role="separator"] {
   margin-bottom: 8px !important;
 }
 
-/* If Mintlify wrapper adds extra gap after our custom nav */
 .twinalyze-bottom-nav + *,
 .twinalyze-bottom-nav-no-prev + * {
   margin-top: 10px !important;
 }
 
+/* ================================
+   Optional Mintlify Blue Force
+   Use only if some active links still stay green
+================================ */
+
+a:hover {
+  color: var(--twinalyze-primary);
+}
+
+button:hover {
+  border-color: var(--twinalyze-primary-light);
+}
 
 /* ================================
    Mobile Responsive
