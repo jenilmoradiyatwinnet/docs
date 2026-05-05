@@ -1,4 +1,131 @@
 ---
-title: 'Manage Project'
+title: "Manage Project"
+description: "Learn how to edit and delete projects in Twinalyze."
+hideFooterPagination: true
+---
+After creating a project, you can manage it from **Project Setting**.
+
+You can update project details, view credentials, manage project configuration, and delete a project when it is not live.
+
+<Info>
+  A project can only be deleted if it is <strong>not live</strong>.
+</Info>
+
 ---
 
+## Edit Project
+
+Use **Edit Project** when you want to update project details such as logo, name, description, SDK keys, and project configuration.
+
+
+### Step 1: Open Project Setting
+
+Click **Project Setting** from the left sidebar.
+
+<Frame>
+  ![Open Project Setting from sidebar](/images/Project_setting_1.PNG)
+</Frame>
+
+---
+
+### Step 2: Edit project details
+
+In the **Overview** tab, update the project details.
+
+<Frame>
+  ![Edit project details in Project Setting](/images/Project_settings_edit_2.PNG)
+</Frame>
+
+---
+
+### Details you can edit
+
+| Field | Description |
+| --- | --- |
+| Project Logo | Upload or update the project logo |
+| Project Name | Change the project name |
+| Firebase SDK Key | Upload or update Firebase SDK key |
+| Description | Add or update project description |
+| Version / Device / Screen Activity | Manage project-related configuration |
+
+<Tip>
+  Keep the project name clear so your team can easily identify the correct project.
+</Tip>
+
+---
+
+## Delete Project
+
+<Warning>
+  You can delete a project only if the project is <strong>not live</strong>. If the project is live, deletion will not be allowed.
+</Warning>
+
+### Step 1: Click Delete Project
+
+Click the **Delete Project** button from project settings.
+
+<Frame>
+  ![Delete Project button](/images/manage-project-delete-button.PNG)
+</Frame>
+
+---
+
+### Step 2: Confirm Delete
+
+Confirm the delete action from the confirmation popup.
+
+<Frame>
+  ![Confirm Delete Project popup](/images/manage-project-confirm-delete.PNG)
+</Frame>
+
+---
+
+### Delete rule
+
+| Project Status | Can Delete? |
+| --- | --- |
+| Project is live | No |
+| Project is not live | Yes |
+
+<Info>
+  If the project is live, first stop using it in your website or app, then try deleting it again.
+</Info>
+
+---
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Edit project details carefully">
+    Project name, logo, and description should match the actual website or app.
+  </Accordion>
+
+  <Accordion title="Do not share secret keys publicly">
+    API keys and secret keys should be used only inside secure setup areas.
+  </Accordion>
+
+  <Accordion title="Delete only unused projects">
+    Delete a project only when it is no longer required and not connected to a live website or app.
+  </Accordion>
+
+  <Accordion title="Check live status before deleting">
+    A live project cannot be deleted. Make sure the project is inactive before deleting it.
+  </Accordion>
+</AccordionGroup>
+
+<div className="twinalyze-bottom-nav">
+  <a href="/overview/create-your-first-project" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/overview/" className="twinalyze-nav-center">
+    <strong>API Keys</strong>
+    <span>Find your project credentials and continue SDK integration.</span>
+  </a>
+
+  <a href="/overview/" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
