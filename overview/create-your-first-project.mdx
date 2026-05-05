@@ -1,242 +1,96 @@
 ---
 title: "Create your first Project"
-description: "Create a Twinalyze project for Web, Android, or iOS."
+description: "Create a Twinalyze project for your website, Android app, or iOS app."
 hideFooterPagination: true
 ---
 
-# Create Project
+A project is where Twinalyze collects data for your website or mobile app.
 
-A project is where Twinalyze collects analytics data for your app or website.
+You can create a project for:
 
-Create a separate project for each platform such as **Web**, **Android**, and **iOS**. This keeps your analytics clean and makes SDK setup easier.
+- **Website**
+- **Android App**
+- **iOS App**
 
-<CardGroup cols={3}>
-  <Card title="Web" icon="globe">
-    Use this for websites, React apps, Shopify, WordPress, Webflow, and JavaScript SDK.
-  </Card>
-
-  <Card title="Android" icon="smartphone">
-    Use this for Android apps with Kotlin or Java SDK integration.
-  </Card>
-
-  <Card title="iOS" icon="apple">
-    Use this for iPhone or iPad apps with iOS SDK integration.
-  </Card>
-</CardGroup>
+The first step is simple: create a project name. After that, choose the right setup based on your platform.
 
 ---
 
-## Create project flow
+## Step 1: Create a project
 
-<Steps>
-  <Step title="Open project dropdown">
-    Click the project selector from the left sidebar.
-  </Step>
-  <Step title="Click Create Project">
-    Select the **Create Project** option from the dropdown.
-  </Step>
-  <Step title="Enter project name">
-    Add your project name, for example `Twinsho Web`, `Twinsho Android`, or `Twinsho iOS`.
-  </Step>
-  <Step title="Save project">
-    Click **Save** to create your project.
-  </Step>
-  <Step title="Continue setup">
-    After creating the project, configure platform details and start SDK integration.
-  </Step>
-</Steps>
-
----
-
-## Step 1: Open project dropdown
-
-Click the project dropdown from the left sidebar.\
-Here you can see existing projects and the **Create Project** option.
+Enter your project name and click **Save**.
 
 <Frame>
-  ![Twinalyze project dropdown with create project option](/images/create-project-step-2.png)
+  ![Create project form in Twinalyze](/images/create-project-1st-step.PNG)
 </Frame>
 
 <Tip>
-  If you manage multiple apps or websites, use the project dropdown to switch between them quickly.
+  Use a clear project name so your team can easily identify it later.
 </Tip>
 
 ---
 
-## Step 2: Create project
+## Step 2: Create more projects anytime
 
-Click **Create Project**, enter your project name, and save it.
+After your first project is created, you can use the project dropdown from the left sidebar to switch projects or create more projects.
 
 <Frame>
-  ![Create project form in Twinalyze](/images/create-project-step-1.png)
+  ![Twinalyze project dropdown with create project option](/images/create-project.png)
 </Frame>
 
 <Info>
-  Use a clear project name so your team can easily identify the platform later.
+  This is useful when you want to manage separate projects for your website, Android app, and iOS app.
 </Info>
 
-Good project name examples:
+---
 
-| Platform | Recommended Project Name |
+
+## Recommended setup
+
+For clean analytics, create separate projects for each platform.
+
+| Product | Recommended Project |
 | --- | --- |
-| Web | `Twinsho Web` |
-| Android | `Twinsho Android` |
-| iOS | `Twinsho iOS` |
+| Website | One Web project |
+| Android App | One Android project |
+| iOS App | One iOS project |
+
+<Info>
+  Separate projects help you keep website, Android, and iOS data clean and easy to compare.
+</Info>
 
 ---
 
-## Choose project type
+## After creating a project
 
-<Tabs>
-  <Tab title="Web">
-    ## Web Project
-
-    Create a **Web** project when you want to track a website, web app, React app, Shopify store, WordPress website, or Webflow site.
-
-    <CardGroup cols={2}>
-      <Card title="Required details" icon="list-checks">
-        Project name, website URL, platform type, and timezone.
-      </Card>
-
-      <Card title="Next setup" icon="code">
-        Install JavaScript SDK, React SDK, or connect your website platform.
-      </Card>
-    </CardGroup>
-
-    Example:
-
-    ```json
-    {
-      "projectName": "Twinsho Web",
-      "platform": "Web",
-      "websiteUrl": "https://twinsho.com"
-    }
-    ```
-
-    <Card title="Continue with Web SDK" icon="globe" href="/sdks/web/javascript/analytics">
-      Start Web SDK integration after creating your Web project.
-    </Card>
-  </Tab>
-  <Tab title="Android">
-    ## Android Project
-
-    Create an **Android** project when you want to track an Android app using Kotlin or Java SDK.
-
-    <CardGroup cols={2}>
-      <Card title="Required details" icon="list-checks">
-        Project name, app name, package name, platform type, and timezone.
-      </Card>
-
-      <Card title="Next setup" icon="smartphone">
-        Install Android SDK and start tracking screens, sessions, events, and ads.
-      </Card>
-    </CardGroup>
-
-    Example:
-
-    ```json
-    {
-      "projectName": "Twinsho Android",
-      "platform": "Android",
-      "appName": "Twinsho",
-      "packageName": "com.twinsho.app"
-    }
-    ```
-
-    <Warning>
-      Make sure your package name is correct. It should match your real Android app package name.
-    </Warning>
-
-    <Card title="Continue with Android SDK" icon="smartphone" href="/sdks/android/kotlin/analytics">
-      Start Android SDK integration after creating your Android project.
-    </Card>
-  </Tab>
-  <Tab title="iOS">
-    ## iOS Project
-
-    Create an **iOS** project when you want to track an iPhone or iPad app.
-
-    <CardGroup cols={2}>
-      <Card title="Required details" icon="list-checks">
-        Project name, app name, bundle ID, platform type, and timezone.
-      </Card>
-
-      <Card title="Next setup" icon="apple">
-        Install iOS SDK and start tracking users, sessions, events, and ads.
-      </Card>
-    </CardGroup>
-
-    Example:
-
-    ```json
-    {
-      "projectName": "Twinsho iOS",
-      "platform": "iOS",
-      "appName": "Twinsho",
-      "bundleId": "com.twinsho.ios"
-    }
-    ```
-
-    <Warning>
-      Make sure your Bundle ID is correct. It should match your real iOS app Bundle Identifier.
-    </Warning>
-
-    <Card title="Continue with iOS SDK" icon="apple" href="/sdks/ios/analytics">
-      Start iOS SDK integration after creating your iOS project.
-    </Card>
-  </Tab>
-</Tabs>
-
----
-
-## Best practices
-
-<AccordionGroup>
-  <Accordion title="Create separate projects for each platform">
-    Keep Web, Android, and iOS projects separate. This makes reports cleaner and SDK management easier.
-  </Accordion>
-
-  <Accordion title="Use clear project names">
-    Use names like `Brand Web`, `Brand Android`, and `Brand iOS` instead of generic names like `Test` or `Project 1`.
-  </Accordion>
-
-  <Accordion title="Use correct platform details">
-    For Web, add the correct website URL. For Android, use the correct package name. For iOS, use the correct Bundle ID.
-  </Accordion>
-</AccordionGroup>
-
----
-
-## After creating project
-
-Once your project is created, you can:
+Once the project is created and configured, continue with SDK setup.
 
 <CardGroup cols={3}>
-  <Card title="Open project settings" icon="settings">
-    Review platform details and project configuration.
-  </Card>
-
-  <Card title="Get SDK keys" icon="key">
-    Copy your project credentials for SDK setup.
+  <Card title="Get SDK Keys" icon="key">
+    Copy your project credentials from project settings.
   </Card>
 
   <Card title="Install SDK" icon="code">
-    Add Twinalyze SDK to your app or website.
+    Add the correct SDK to your website or app.
+  </Card>
+
+  <Card title="Send First Event" icon="send">
+    Verify that events are coming into Twinalyze.
   </Card>
 </CardGroup>
 
 <div className="twinalyze-bottom-nav">
-  <a href="/developers/create-organization" className="twinalyze-nav-side">
+  <a href="/overview/create-an-account" className="twinalyze-nav-side">
     <span className="twinalyze-nav-arrow">‹</span>
     <span>Previous</span>
   </a>
 
-  <a href="/developers/api-keys" className="twinalyze-nav-center">
+  <a href="/overview/" className="twinalyze-nav-center">
     <strong>API Keys</strong>
-    <span>Find your project credentials and prepare SDK integration.</span>
+    <span>Find your project credentials and continue SDK integration.</span>
   </a>
 
-  <a href="/developers/api-keys" className="twinalyze-nav-side">
+  <a href="/overview/" className="twinalyze-nav-side">
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
