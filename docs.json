@@ -155,59 +155,9 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "Engagement",
-        "icon": "bell",
-        "groups": [
-          {
-            "group": "Notifications",
-            "pages": [
-              "engagement/notification-overview",
-              "engagement/create-notification"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Data & Events",
-        "icon": "database",
-        "groups": [
-          {
-            "group": "Data Model",
-            "pages": [
-              "data-events/data-model",
-              "data-events/events-overview"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Developers",
-        "icon": "terminal",
-        "groups": [
-          {
-            "group": "Quickstart",
-            "pages": [
-              "developers/developer-overview",
-              "developers/api-keys"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Admin",
-        "icon": "settings",
-        "groups": [
-          {
-            "group": "Project Settings",
-            "pages": [
-              "admin/project-overview",
-              "admin/configuration"
-            ]
-          }
-        ]
       }
+     
+  
     ]
   },
   "footer": {
