@@ -1,0 +1,441 @@
+---
+title: "Create Project"
+description: "Create a Twinalyze project for Web, Android, or iOS and prepare it for SDK integration."
+hideFooterPagination: true
+---
+
+# Create Project
+
+A project is the main workspace where Twinalyze collects analytics data for your app or website.
+
+You can create separate projects for **Web**, **Android**, and **iOS** so each platform has clean data, separate SDK credentials, and accurate reporting.
+
+<CardGroup cols={3}>
+  <Card title="Web Project" icon="globe">
+    Create a project for websites, web apps, JavaScript SDK, React, Shopify, WordPress, or Webflow.
+  </Card>
+
+  <Card title="Android Project" icon="smartphone">
+    Create a project for Android apps using package name, app name, and platform details.
+  </Card>
+
+  <Card title="iOS Project" icon="apple">
+    Create a project for iOS apps using bundle ID, app name, and platform details.
+  </Card>
+</CardGroup>
+
+---
+
+## What you will create
+
+By the end of this guide, you will have:
+
+<Check>
+  A new Twinalyze project created inside your organization.
+</Check>
+
+<Check>
+  Correct platform selected: Web, Android, or iOS.
+</Check>
+
+<Check>
+  Project details added properly.
+</Check>
+
+<Check>
+  Project ready for SDK setup and event tracking.
+</Check>
+
+---
+
+## Before you begin
+
+Make sure you have already completed these steps:
+
+- Created your Twinalyze account
+- Created your organization
+- Logged in to the Twinalyze dashboard
+- Selected the organization where you want to create the project
+
+<Info>
+  Create a separate project for every platform. For example, if you have one website and one Android app, create two different projects: one for Web and one for Android.
+</Info>
+
+---
+
+## Project creation flow
+
+<Steps>
+  <Step title="Open your Twinalyze dashboard">
+    Log in to your Twinalyze account and open the dashboard.
+  </Step>
+
+  <Step title="Select your organization">
+    Choose the organization where you want to create the project.
+  </Step>
+
+  <Step title="Click create project">
+    Open the project creation screen from your dashboard or organization area.
+  </Step>
+
+  <Step title="Choose project platform">
+    Select Web, Android, or iOS based on your product.
+  </Step>
+
+  <Step title="Add project details">
+    Fill in platform-specific details like website URL, package name, or bundle ID.
+  </Step>
+
+  <Step title="Save project">
+    Create the project and continue to API keys or SDK setup.
+  </Step>
+</Steps>
+
+---
+
+## Open create project screen
+
+From your dashboard, click **Create Project** or **Add Project**.
+
+<Frame>
+  <img src="/images/create-project.png" alt="Create project screen in Twinalyze" />
+</Frame>
+
+<Tip>
+  Use clear project names like `Twinsho Web`, `Twinsho Android`, or `Twinsho iOS`. This helps your team identify projects easily later.
+</Tip>
+
+---
+
+## Choose your platform
+
+Use the platform tabs below to understand which details you should enter for each project type.
+
+<Tabs>
+  <Tab title="Web">
+    ## Create Web Project
+
+    Choose **Web** if you want to track a website, web app, React app, Shopify store, WordPress site, or Webflow site.
+
+    <CardGroup cols={2}>
+      <Card title="Best for" icon="globe">
+        Websites, landing pages, ecommerce stores, web apps, and browser-based products.
+      </Card>
+
+      <Card title="SDK type" icon="code">
+        JavaScript SDK, React SDK, NPM package, Shopify, WordPress, or Webflow integration.
+      </Card>
+    </CardGroup>
+
+    ### Required details
+
+    | Field | Example | Description |
+    | --- | --- | --- |
+    | Project Name | `Twinsho Web` | Name of your website or web app project. |
+    | Platform | `Web` | Select Web as the project platform. |
+    | Website URL | `https://twinsho.com` | Main domain where SDK will be installed. |
+    | Time Zone | `Asia/Kolkata` | Used for reports and date-based analytics. |
+    | Environment | `Production` | Use production for live website tracking. |
+
+    ### Recommended Web setup
+
+    ```json
+    {
+      "projectName": "Twinsho Web",
+      "platform": "Web",
+      "websiteUrl": "https://twinsho.com",
+      "timezone": "Asia/Kolkata",
+      "environment": "Production"
+    }
+    ```
+
+    <Warning>
+      Make sure the website URL is correct. If your website has both `www` and non-`www` versions, use the main version that your users visit.
+    </Warning>
+
+    ### After creating Web project
+
+    Once your Web project is created, continue with one of these setup options:
+
+    <CardGroup cols={2}>
+      <Card title="JavaScript SDK" href="/sdks/web/javascript/analytics" icon="code">
+        Add Twinalyze tracking directly using JavaScript.
+      </Card>
+
+      <Card title="React SDK" href="/sdks/web/react/analytics" icon="atom">
+        Add Twinalyze tracking inside your React website or web app.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Android">
+    ## Create Android Project
+
+    Choose **Android** if you want to track an Android mobile app.
+
+    <CardGroup cols={2}>
+      <Card title="Best for" icon="smartphone">
+        Native Android apps, Kotlin apps, Java apps, and Android SDK integrations.
+      </Card>
+
+      <Card title="SDK type" icon="braces">
+        Android SDK, Kotlin SDK, Java SDK, analytics SDK, and ad analytics SDK.
+      </Card>
+    </CardGroup>
+
+    ### Required details
+
+    | Field | Example | Description |
+    | --- | --- | --- |
+    | Project Name | `Twinsho Android` | Name of your Android app project. |
+    | Platform | `Android` | Select Android as the project platform. |
+    | App Name | `Twinsho` | Your app display name. |
+    | Package Name | `com.twinsho.app` | Unique Android app package name. |
+    | Time Zone | `Asia/Kolkata` | Used for analytics reports. |
+    | Environment | `Production` | Use production for live app tracking. |
+
+    ### Recommended Android setup
+
+    ```json
+    {
+      "projectName": "Twinsho Android",
+      "platform": "Android",
+      "appName": "Twinsho",
+      "packageName": "com.twinsho.app",
+      "timezone": "Asia/Kolkata",
+      "environment": "Production"
+    }
+    ```
+
+    <Tip>
+      You can find your Android package name inside your app-level Gradle file or AndroidManifest configuration.
+    </Tip>
+
+    ### Package name example
+
+    ```kotlin
+    namespace = "com.twinsho.app"
+    ```
+
+    <Warning>
+      Do not use a wrong package name. Package name helps Twinalyze identify your Android app correctly during SDK initialization.
+    </Warning>
+
+    ### After creating Android project
+
+    Once your Android project is created, continue with Android SDK setup:
+
+    <CardGroup cols={2}>
+      <Card title="Android Analytics SDK" href="/sdks/android/kotlin/analytics" icon="smartphone">
+        Start tracking screens, events, sessions, and user behavior.
+      </Card>
+
+      <Card title="Android Ad Analytics" href="/sdks/android/kotlin/ad-analytics" icon="badge-ad">
+        Track ad impressions, clicks, failures, and ad performance.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="iOS">
+    ## Create iOS Project
+
+    Choose **iOS** if you want to track an iPhone or iPad app.
+
+    <CardGroup cols={2}>
+      <Card title="Best for" icon="apple">
+        Native iOS apps, Swift apps, iPhone apps, and iPad apps.
+      </Card>
+
+      <Card title="SDK type" icon="code">
+        iOS SDK, Swift SDK, analytics SDK, and ad analytics SDK.
+      </Card>
+    </CardGroup>
+
+    ### Required details
+
+    | Field | Example | Description |
+    | --- | --- | --- |
+    | Project Name | `Twinsho iOS` | Name of your iOS app project. |
+    | Platform | `iOS` | Select iOS as the project platform. |
+    | App Name | `Twinsho` | Your iOS app display name. |
+    | Bundle ID | `com.twinsho.ios` | Unique iOS app bundle identifier. |
+    | Time Zone | `Asia/Kolkata` | Used for analytics reports. |
+    | Environment | `Production` | Use production for live app tracking. |
+
+    ### Recommended iOS setup
+
+    ```json
+    {
+      "projectName": "Twinsho iOS",
+      "platform": "iOS",
+      "appName": "Twinsho",
+      "bundleId": "com.twinsho.ios",
+      "timezone": "Asia/Kolkata",
+      "environment": "Production"
+    }
+    ```
+
+    <Tip>
+      You can find your Bundle ID in Xcode under your app target settings.
+    </Tip>
+
+    ### Bundle ID example
+
+    ```txt
+    com.twinsho.ios
+    ```
+
+    <Warning>
+      Bundle ID should match your actual iOS app bundle identifier. Wrong bundle ID can cause SDK validation or tracking issues.
+    </Warning>
+
+    ### After creating iOS project
+
+    Once your iOS project is created, continue with iOS SDK setup:
+
+    <CardGroup cols={2}>
+      <Card title="iOS Analytics SDK" href="/sdks/ios/analytics" icon="apple">
+        Start tracking iOS users, sessions, screens, and events.
+      </Card>
+
+      <Card title="iOS Ad Analytics" href="/sdks/ios/ad-analytics" icon="badge-ad">
+        Track iOS ad impressions, clicks, failures, and ad performance.
+      </Card>
+    </CardGroup>
+  </Tab>
+</Tabs>
+
+---
+
+## Project fields explained
+
+| Field | Required | Used For |
+| --- | --- | --- |
+| Project Name | Yes | Displaying project in dashboard and reports. |
+| Platform | Yes | Selecting SDK type and data structure. |
+| Website URL | Web only | Identifying website traffic and allowed domain. |
+| Package Name | Android only | Identifying Android app during SDK initialization. |
+| Bundle ID | iOS only | Identifying iOS app during SDK initialization. |
+| Time Zone | Recommended | Correct date and time in analytics reports. |
+| Environment | Recommended | Separating production, staging, or testing data. |
+
+---
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Create separate projects for Web, Android, and iOS">
+    Separate projects keep your analytics clean. It becomes easier to compare platform performance, debug SDK issues, and manage credentials.
+  </Accordion>
+
+  <Accordion title="Use clear project names">
+    Use names like `Brand Web`, `Brand Android`, and `Brand iOS` instead of generic names like `Test` or `Project 1`.
+  </Accordion>
+
+  <Accordion title="Use correct platform identifiers">
+    For Web, use the correct website URL. For Android, use the package name. For iOS, use the bundle ID.
+  </Accordion>
+
+  <Accordion title="Use production only for live data">
+    If you are testing SDK setup, use a separate staging or testing project to avoid mixing test events with real users.
+  </Accordion>
+
+  <Accordion title="Check details before SDK integration">
+    Make sure project details are correct before copying API keys or installing SDK.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Common mistakes to avoid
+
+<CardGroup cols={2}>
+  <Card title="Wrong platform selected" icon="triangle-alert">
+    Do not create a Web project for Android or an Android project for iOS.
+  </Card>
+
+  <Card title="Wrong domain or identifier" icon="circle-alert">
+    Website URL, package name, and bundle ID should match your real product.
+  </Card>
+
+  <Card title="Using one project for all platforms" icon="combine">
+    Avoid mixing Web, Android, and iOS data in one project unless your setup specifically requires it.
+  </Card>
+
+  <Card title="Using test project for production" icon="bug">
+    Do not send live user data to a temporary testing project.
+  </Card>
+</CardGroup>
+
+---
+
+## What happens after project creation?
+
+After your project is created, Twinalyze will generate project-level credentials and configuration details.
+
+<Steps>
+  <Step title="Open project settings">
+    Go to the newly created project and open project settings.
+  </Step>
+
+  <Step title="Copy project credentials">
+    Copy the required project ID, API key, or SDK key based on your integration.
+  </Step>
+
+  <Step title="Install SDK">
+    Add the Web, Android, or iOS SDK to your application.
+  </Step>
+
+  <Step title="Send your first event">
+    Trigger an event from your app or website and check if it appears in Twinalyze.
+  </Step>
+</Steps>
+
+---
+
+## Project setup checklist
+
+<Check>
+  Project name is clear and easy to identify.
+</Check>
+
+<Check>
+  Correct platform is selected.
+</Check>
+
+<Check>
+  Website URL, package name, or bundle ID is correct.
+</Check>
+
+<Check>
+  Time zone is selected correctly.
+</Check>
+
+<Check>
+  Project is ready for SDK integration.
+</Check>
+
+---
+
+## Need help?
+
+<Card title="Need help creating a project?" icon="circle-help">
+  If you are not sure which platform to choose, create separate projects for Web, Android, and iOS. This gives cleaner reports and easier SDK management.
+</Card>
+
+<div className="twinalyze-bottom-nav">
+  <a href="/developers/create-organization" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/developers/api-keys" className="twinalyze-nav-center">
+    <strong>API Keys</strong>
+    <span>Find your project credentials and prepare SDK integration.</span>
+  </a>
+
+  <a href="/developers/api-keys" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
