@@ -28,19 +28,26 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Overview",
-        "icon": "house",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "overview/introduction",
-              "overview/create-an-account",
-              "overview/create-your-first-project"
-            ]
-          }
-        ]
-      },
+  "tab": "Overview",
+  "icon": "house",
+  "groups": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "overview/introduction",
+        "overview/create-an-account",
+        {
+          "group": "Create your first Project",
+          "root": "overview/create-your-first-project",
+          "expanded": true,
+          "pages": [
+            "overview/manage-project"
+          ]
+        }
+      ]
+    }
+  ]
+},
       {
         "tab": "SDKs",
         "icon": "code",
