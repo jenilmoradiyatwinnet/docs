@@ -214,3 +214,25 @@ button:hover {
     border-top: 1px solid #eeeeee;
   }
 }
+/* Dashboard Tour visual spacing */
+[data-radix-collection-item] {
+  scroll-margin-top: 100px;
+}
+
+/* Make dashboard tour images cleaner */
+img[src*="/images/dashboard-tour/"] {
+  border-radius: 12px;
+}
+
+/* Optional: dashboard tour content image width control */
+.dashboard-tour-image img,
+img[src*="Data_events"],
+img[src*="properties"],
+img[src*="Project_settings"] {
+  width: 100%;
+  height: auto;
+}
+
+
+
+

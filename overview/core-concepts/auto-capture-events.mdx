@@ -1,0 +1,289 @@
+---
+title: "Auto Capture Events"
+description: "Understand how Twinalyze automatically captures events from Web, Android, and iOS."
+hideFooterPagination: true
+---
+Auto Capture Events are events that Twinalyze tracks automatically from your website or app.
+
+This helps you start analytics faster without manually writing tracking code for every basic user action.
+
+<Info>
+  Auto capture is useful for common actions like page views, screen views, clicks, sessions, app foreground/background, and basic navigation events.
+</Info>
+
+---
+
+## How auto capture works
+
+<Steps>
+  <Step title="Install SDK">
+    Add the Twinalyze SDK to your website or app.
+  </Step>
+
+  <Step title="SDK detects user actions">
+    Twinalyze automatically detects supported actions based on the platform.
+  </Step>
+
+  <Step title="Events are sent to Twinalyze">
+    Auto captured events are sent with event name, source, timestamp, and properties.
+  </Step>
+
+  <Step title="Manage events in dashboard">
+    You can view, search, enable, disable, or hide events from the dashboard.
+  </Step>
+</Steps>
+
+---
+
+## Auto captured events by platform
+
+<Tabs>
+  <Tab title="Web">
+    ## Web auto capture
+
+    Web auto capture helps track common website activity.
+
+    | Event | What it tracks |
+    | --- | --- |
+    | `page_view` | When a user visits a page |
+    | `click` | When a user clicks a button, link, or element |
+    | `scroll` | When a user scrolls a page |
+    | `form_start` | When a user starts filling a form |
+    | `form_submit` | When a user submits a form |
+    | `session_start` | When a website session starts |
+    | `session_end` | When a website session ends |
+
+    ### Common Web properties
+
+    | Property | Example |
+    | --- | --- |
+    | `page_url` | `/pricing` |
+    | `page_title` | `Pricing` |
+    | `element_text` | `Start Free` |
+    | `element_tag` | `button` |
+    | `referrer` | `google.com` |
+    | `utm_source` | `google` |
+
+    <Card title="Continue with Web SDK" icon="globe" href="/sdks/web/javascript/analytics">
+      Learn how to install Web SDK and start collecting website events.
+    </Card>
+  </Tab>
+
+  <Tab title="Android">
+    ## Android auto capture
+
+    Android auto capture helps track app screens, lifecycle, navigation, and notification activity.
+
+    | Event | What it tracks |
+    | --- | --- |
+    | `screenInfo` | When a screen or activity is viewed |
+    | `fragmentInfo` | When a fragment is viewed |
+    | `tabInfo` | When a tab is selected or viewed |
+    | `drawer` | When drawer menu is opened or viewed |
+    | `appForeground` | When app comes to foreground |
+    | `appBackground` | When app goes to background |
+    | `backScreen` | When user navigates back |
+    | `splashTime` | Time spent on splash screen |
+    | `notificationSeen` | When notification is shown or seen |
+    | `notificationDismissed` | When notification is dismissed |
+
+    ### Common Android properties
+
+    | Property | Example |
+    | --- | --- |
+    | `screenName` | `HomeActivity` |
+    | `screenClass` | `HomeActivity` |
+    | `fragmentName` | `ProductFragment` |
+    | `tabName` | `Reports` |
+    | `appVersion` | `1.0.8` |
+    | `deviceModel` | `Samsung SM-A525F` |
+
+    <Card title="Continue with Android SDK" icon="smartphone" href="/sdks/android/kotlin/analytics">
+      Learn how Android SDK captures screens, sessions, and app events.
+    </Card>
+  </Tab>
+
+  <Tab title="iOS">
+    ## iOS auto capture
+
+    iOS auto capture helps track app screens, sessions, lifecycle, and basic user activity.
+
+    | Event | What it tracks |
+    | --- | --- |
+    | `screen_view` | When a screen is viewed |
+    | `session_start` | When app session starts |
+    | `session_end` | When app session ends |
+    | `app_foreground` | When app comes to foreground |
+    | `app_background` | When app goes to background |
+    | `notification_opened` | When a notification is opened |
+    | `notification_dismissed` | When a notification is dismissed |
+
+    ### Common iOS properties
+
+    | Property | Example |
+    | --- | --- |
+    | `screenName` | `HomeViewController` |
+    | `appVersion` | `1.0.0` |
+    | `deviceModel` | `iPhone 14` |
+    | `osVersion` | `iOS 17` |
+    | `notificationId` | `campaign_102` |
+
+    <Card title="Continue with iOS SDK" icon="apple" href="/sdks/ios/analytics">
+      Learn how iOS SDK captures app activity and user behavior.
+    </Card>
+  </Tab>
+</Tabs>
+
+---
+
+## Where to manage auto capture events
+
+Auto captured events are managed from:
+
+```txt
+Dashboard → Data → Events
+```
+
+In the Events screen, you can manage event status, source, visibility, and search.
+
+<Frame>
+  <img src="/images/Data_events.PNG" alt="Twinalyze Data Events screen showing auto capture events" />
+</Frame>
+
+---
+
+## Event controls in dashboard
+
+| Control | Meaning |
+| --- | --- |
+| **Event Name** | System event name tracked by Twinalyze |
+| **Custom Event Name** | Display name used in dashboard |
+| **Source** | Platform where event comes from, such as Android, Web, or iOS |
+| **Auto Status** | Controls auto capture for that event |
+| **Manual Status** | Controls manual tracking for that event |
+| **Status** | Enables or disables the event |
+| **Visible** | Shows or hides the event in dashboard views |
+| **Search** | Helps find events quickly |
+
+<Warning>
+  If you disable an important event, related reports may stop showing complete data. Change event status only when you are sure.
+</Warning>
+
+---
+
+## Auto capture vs custom event
+
+| Type | Use when | Example |
+| --- | --- | --- |
+| **Auto Capture** | Twinalyze can track the action automatically | `page_view`, `screenInfo`, `appForeground` |
+| **Custom Event** | You want to track business-specific actions | `purchase_completed`, `trial_started`, `payment_failed` |
+
+<Info>
+  Auto capture tracks common behavior. Custom events track actions that are unique to your business.
+</Info>
+
+---
+
+## Example auto captured event
+
+Example of an auto captured screen event:
+
+```json
+{
+  "eventName": "screenInfo",
+  "source": "android",
+  "properties": {
+    "screenName": "HomeActivity",
+    "screenClass": "HomeActivity",
+    "appVersion": "1.0.8",
+    "deviceModel": "Samsung SM-A525F"
+  }
+}
+```
+
+Example of an auto captured web event:
+
+```json
+{
+  "eventName": "page_view",
+  "source": "web",
+  "properties": {
+    "page_url": "/pricing",
+    "page_title": "Pricing",
+    "referrer": "google.com"
+  }
+}
+```
+
+---
+
+## When to use custom events
+
+Use custom events when the action is important for your business and cannot be fully understood through auto capture.
+
+Common custom event examples:
+
+| Custom event | Meaning |
+| --- | --- |
+| `signup_completed` | User completed signup |
+| `add_to_cart` | User added product to cart |
+| `checkout_started` | User started checkout |
+| `purchase_completed` | User completed purchase |
+| `payment_failed` | Payment failed |
+| `subscription_started` | User started subscription |
+
+<Tip>
+  Start with auto capture first. Then add custom events for your most important business flows.
+</Tip>
+
+---
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Keep important auto events active">
+    Events like page views, screen views, app foreground, app background, and sessions are important for basic analytics.
+  </Accordion>
+
+  <Accordion title="Use clear custom event names">
+    Use readable names like `purchase_completed`, `payment_failed`, or `signup_completed`.
+  </Accordion>
+
+  <Accordion title="Do not track every small action manually">
+    Let auto capture handle common actions. Use custom events only for important business actions.
+  </Accordion>
+
+  <Accordion title="Check event visibility">
+    Keep important events visible so your team can use them in reports and dashboards.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Quick summary
+
+| Question | Answer |
+| --- | --- |
+| What is auto capture? | Events tracked automatically by Twinalyze SDK |
+| Where to manage events? | Data → Events |
+| Which platforms support it? | Web, Android, and iOS |
+| When to use manual events? | For business-specific actions |
+| Can events be hidden? | Yes, using the Visible control |
+| Can auto capture be disabled? | Yes, using Auto Status |
+
+<div className="twinalyze-bottom-nav">
+  <a href="/overview/core-concepts/users-events-properties" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/overview/dashboard-tour" className="twinalyze-nav-center">
+    <strong>Dashboard Tour</strong>
+    <span>Learn where each feature is located in the Twinalyze dashboard.</span>
+  </a>
+
+  <a href="/overview/dashboard-tour" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>

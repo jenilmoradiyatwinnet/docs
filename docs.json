@@ -1,6 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
+    "css": "custom.css",
   "name": "Twinalyze",
   "colors": {
   "primary": "#2563EB",
@@ -51,6 +52,12 @@
               "overview/core-concepts/core-features",
               "overview/core-concepts/users-events-properties",
               "overview/core-concepts/auto-capture-events"
+            ]
+          },
+          {
+            "group": "DashBoard Tour",
+            "pages": [
+              "overview/dashboard/dashboard-tour"
             ]
           }
         ]
