@@ -45,6 +45,20 @@
           ]
         }
       ]
+    } {
+      "group": "Getting Started",
+      "pages": [
+        "overview/introduction",
+        "overview/create-an-account",
+        {
+          "group": "Create your first Project",
+          "root": "overview/create-your-first-project",
+          "expanded": true,
+          "pages": [
+            "overview/manage-project"
+          ]
+        }
+      ]
     }
   ]
 },
