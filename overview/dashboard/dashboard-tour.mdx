@@ -3,809 +3,237 @@ title: "Dashboard Tour"
 description: "Explore Twinalyze dashboard sections with a visual tour."
 hideFooterPagination: true
 ---
-
-<style>{`
-/* ================================
-   Dashboard Tour - Self Contained CSS
-================================ */
-
-.twinalyze-dashboard-tour {
-  margin-top: 20px;
-}
-
-/* Hide radio dots strongly */
-.twinalyze-dashboard-tour input[name="twinalyzeTour"],
-.twinalyze-dashboard-tour > input[type="radio"] {
-  display: none !important;
-  position: absolute !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-}
-
-/* Layout */
-.twinalyze-tour-layout {
-  display: grid;
-  grid-template-columns: 265px minmax(0, 1fr);
-  gap: 18px;
-  align-items: start;
-}
-
-/* Sidebar */
-.twinalyze-tour-sidebar {
-  position: sticky;
-  top: 92px;
-  max-height: calc(100vh - 110px);
-  overflow-y: auto;
-  padding: 14px;
-  border: 1px solid #e5e7eb;
-  border-radius: 20px;
-  background: #f8fafc;
-}
-
-.twinalyze-tour-brand {
-  padding: 10px 12px 14px;
-  border-bottom: 1px solid #e5e7eb;
-  margin-bottom: 10px;
-}
-
-.twinalyze-tour-brand strong {
-  display: block;
-  color: #111827;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.twinalyze-tour-brand span {
-  display: block;
-  margin-top: 4px;
-  color: #64748b;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-/* Main menu item */
-.twinalyze-tour-main-item,
-.twinalyze-tour-menu-group > summary {
-  min-height: 40px;
-  padding: 0 12px;
-  border-radius: 10px;
-  color: #374151 !important;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none !important;
-  cursor: pointer;
-  transition: all 0.16s ease;
-}
-
-.twinalyze-tour-main-item:hover,
-.twinalyze-tour-menu-group > summary:hover {
-  background: #eef4ff;
-  color: #2563eb !important;
-}
-
-.twinalyze-tour-main-item span,
-.twinalyze-tour-menu-group > summary span {
-  width: 18px;
-  color: #6b7280;
-  text-align: center;
-}
-
-.twinalyze-tour-menu-group {
-  margin-top: 4px;
-}
-
-.twinalyze-tour-menu-group > summary {
-  list-style: none;
-  justify-content: flex-start;
-}
-
-.twinalyze-tour-menu-group > summary::-webkit-details-marker {
-  display: none;
-}
-
-.twinalyze-tour-menu-group > summary::after {
-  content: "›";
-  margin-left: auto;
-  color: #94a3b8;
-  font-size: 18px;
-  transition: transform 0.2s ease;
-}
-
-.twinalyze-tour-menu-group[open] > summary::after {
-  transform: rotate(90deg);
-}
-
-.twinalyze-tour-menu-group label {
-  display: flex;
-  align-items: center;
-  min-height: 34px;
-  margin: 2px 0 2px 34px;
-  padding: 0 10px;
-  border-radius: 9px;
-  color: #4b5563;
-  font-size: 13.5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.16s ease;
-}
-
-.twinalyze-tour-menu-group label:hover {
-  background: #eef4ff;
-  color: #2563eb;
-}
-
-.twinalyze-tour-ask {
-  margin-top: 18px;
-  padding: 10px 12px;
-  border: 1px solid #bfdbfe;
-  border-radius: 12px;
-  background: #eef4ff;
-  color: #111827;
-  font-size: 14px;
-  font-weight: 800;
-}
-
-/* Preview */
-.twinalyze-tour-preview {
-  min-width: 0;
-  border: 1px solid #e5e7eb;
-  border-radius: 22px;
-  background: #ffffff;
-  padding: 18px;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-}
-
-.twinalyze-tour-panel {
-  display: none;
-}
-
-.twinalyze-tour-panel-header {
-  margin-bottom: 16px;
-  padding: 2px 2px 14px;
-  border-bottom: 1px solid #eef2f7;
-}
-
-.twinalyze-tour-panel-header span {
-  display: inline-flex;
-  margin-bottom: 8px;
-  padding: 5px 10px;
-  border-radius: 999px;
-  background: #eff6ff;
-  color: #2563eb;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.twinalyze-tour-panel-header h2 {
-  margin: 0;
-  color: #111827;
-  font-size: 26px;
-  font-weight: 850;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-.twinalyze-tour-panel-header p {
-  margin: 8px 0 0;
-  max-width: 760px;
-  color: #4b5563;
-  font-size: 14.5px;
-  line-height: 1.65;
-}
-
-.twinalyze-tour-panel img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Click selected panel */
-#tour-home:checked ~ .twinalyze-tour-layout .panel-home,
-#tour-realtime:checked ~ .twinalyze-tour-layout .panel-realtime,
-#tour-system-insights:checked ~ .twinalyze-tour-layout .panel-system-insights,
-#tour-reports:checked ~ .twinalyze-tour-layout .panel-reports,
-#tour-advanced-report:checked ~ .twinalyze-tour-layout .panel-advanced-report,
-#tour-page-insights:checked ~ .twinalyze-tour-layout .panel-page-insights,
-#tour-user-engagement:checked ~ .twinalyze-tour-layout .panel-user-engagement,
-#tour-user-retention:checked ~ .twinalyze-tour-layout .panel-user-retention,
-#tour-user-growth:checked ~ .twinalyze-tour-layout .panel-user-growth,
-#tour-ad-report:checked ~ .twinalyze-tour-layout .panel-ad-report,
-#tour-ad-failure:checked ~ .twinalyze-tour-layout .panel-ad-failure,
-#tour-create-notification:checked ~ .twinalyze-tour-layout .panel-create-notification,
-#tour-notification-engagement:checked ~ .twinalyze-tour-layout .panel-notification-engagement,
-#tour-notification-campaign:checked ~ .twinalyze-tour-layout .panel-notification-campaign,
-#tour-market-trends:checked ~ .twinalyze-tour-layout .panel-market-trends,
-#tour-country-data:checked ~ .twinalyze-tour-layout .panel-country-data,
-#tour-events:checked ~ .twinalyze-tour-layout .panel-events,
-#tour-properties:checked ~ .twinalyze-tour-layout .panel-properties,
-#tour-project-overview:checked ~ .twinalyze-tour-layout .panel-project-overview,
-#tour-project-version:checked ~ .twinalyze-tour-layout .panel-project-version,
-#tour-project-device:checked ~ .twinalyze-tour-layout .panel-project-device,
-#tour-project-screen-activity:checked ~ .twinalyze-tour-layout .panel-project-screen-activity {
-  display: block;
-}
-
-/* Active menu */
-#tour-home:checked ~ .twinalyze-tour-layout label[for="tour-home"],
-#tour-realtime:checked ~ .twinalyze-tour-layout label[for="tour-realtime"],
-#tour-system-insights:checked ~ .twinalyze-tour-layout label[for="tour-system-insights"],
-#tour-reports:checked ~ .twinalyze-tour-layout label[for="tour-reports"],
-#tour-advanced-report:checked ~ .twinalyze-tour-layout label[for="tour-advanced-report"],
-#tour-page-insights:checked ~ .twinalyze-tour-layout label[for="tour-page-insights"],
-#tour-user-engagement:checked ~ .twinalyze-tour-layout label[for="tour-user-engagement"],
-#tour-user-retention:checked ~ .twinalyze-tour-layout label[for="tour-user-retention"],
-#tour-user-growth:checked ~ .twinalyze-tour-layout label[for="tour-user-growth"],
-#tour-ad-report:checked ~ .twinalyze-tour-layout label[for="tour-ad-report"],
-#tour-ad-failure:checked ~ .twinalyze-tour-layout label[for="tour-ad-failure"],
-#tour-create-notification:checked ~ .twinalyze-tour-layout label[for="tour-create-notification"],
-#tour-notification-engagement:checked ~ .twinalyze-tour-layout label[for="tour-notification-engagement"],
-#tour-notification-campaign:checked ~ .twinalyze-tour-layout label[for="tour-notification-campaign"],
-#tour-market-trends:checked ~ .twinalyze-tour-layout label[for="tour-market-trends"],
-#tour-country-data:checked ~ .twinalyze-tour-layout label[for="tour-country-data"],
-#tour-events:checked ~ .twinalyze-tour-layout label[for="tour-events"],
-#tour-properties:checked ~ .twinalyze-tour-layout label[for="tour-properties"],
-#tour-project-overview:checked ~ .twinalyze-tour-layout label[for="tour-project-overview"],
-#tour-project-version:checked ~ .twinalyze-tour-layout label[for="tour-project-version"],
-#tour-project-device:checked ~ .twinalyze-tour-layout label[for="tour-project-device"],
-#tour-project-screen-activity:checked ~ .twinalyze-tour-layout label[for="tour-project-screen-activity"] {
-  background: #2563eb;
-  color: #ffffff !important;
-}
-
-/* Hover preview */
-.twinalyze-dashboard-tour:has(label[for="tour-home"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-realtime"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-system-insights"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-reports"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-advanced-report"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-page-insights"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-user-engagement"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-user-retention"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-user-growth"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-ad-report"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-ad-failure"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-create-notification"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-notification-engagement"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-notification-campaign"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-market-trends"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-country-data"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-events"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-properties"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-project-overview"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-project-version"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-project-device"]:hover) .twinalyze-tour-panel,
-.twinalyze-dashboard-tour:has(label[for="tour-project-screen-activity"]:hover) .twinalyze-tour-panel {
-  display: none;
-}
-
-.twinalyze-dashboard-tour:has(label[for="tour-home"]:hover) .panel-home,
-.twinalyze-dashboard-tour:has(label[for="tour-realtime"]:hover) .panel-realtime,
-.twinalyze-dashboard-tour:has(label[for="tour-system-insights"]:hover) .panel-system-insights,
-.twinalyze-dashboard-tour:has(label[for="tour-reports"]:hover) .panel-reports,
-.twinalyze-dashboard-tour:has(label[for="tour-advanced-report"]:hover) .panel-advanced-report,
-.twinalyze-dashboard-tour:has(label[for="tour-page-insights"]:hover) .panel-page-insights,
-.twinalyze-dashboard-tour:has(label[for="tour-user-engagement"]:hover) .panel-user-engagement,
-.twinalyze-dashboard-tour:has(label[for="tour-user-retention"]:hover) .panel-user-retention,
-.twinalyze-dashboard-tour:has(label[for="tour-user-growth"]:hover) .panel-user-growth,
-.twinalyze-dashboard-tour:has(label[for="tour-ad-report"]:hover) .panel-ad-report,
-.twinalyze-dashboard-tour:has(label[for="tour-ad-failure"]:hover) .panel-ad-failure,
-.twinalyze-dashboard-tour:has(label[for="tour-create-notification"]:hover) .panel-create-notification,
-.twinalyze-dashboard-tour:has(label[for="tour-notification-engagement"]:hover) .panel-notification-engagement,
-.twinalyze-dashboard-tour:has(label[for="tour-notification-campaign"]:hover) .panel-notification-campaign,
-.twinalyze-dashboard-tour:has(label[for="tour-market-trends"]:hover) .panel-market-trends,
-.twinalyze-dashboard-tour:has(label[for="tour-country-data"]:hover) .panel-country-data,
-.twinalyze-dashboard-tour:has(label[for="tour-events"]:hover) .panel-events,
-.twinalyze-dashboard-tour:has(label[for="tour-properties"]:hover) .panel-properties,
-.twinalyze-dashboard-tour:has(label[for="tour-project-overview"]:hover) .panel-project-overview,
-.twinalyze-dashboard-tour:has(label[for="tour-project-version"]:hover) .panel-project-version,
-.twinalyze-dashboard-tour:has(label[for="tour-project-device"]:hover) .panel-project-device,
-.twinalyze-dashboard-tour:has(label[for="tour-project-screen-activity"]:hover) .panel-project-screen-activity {
-  display: block;
-}
-
-/* Bottom nav included in this file */
-.twinalyze-bottom-nav {
-  display: grid;
-  grid-template-columns: 120px 1fr 100px;
-  align-items: center;
-  width: 100%;
-  min-height: 60px;
-  margin-top: 24px !important;
-  margin-bottom: 6px !important;
-  border-radius: 16px;
-  background: #f7f7f7;
-  overflow: hidden;
-}
-
-.twinalyze-bottom-nav a {
-  text-decoration: none !important;
-}
-
-.twinalyze-nav-side {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: #777;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.twinalyze-nav-side:hover {
-  color: #2563eb;
-}
-
-.twinalyze-nav-center {
-  height: 54px;
-  margin: 3px 0;
-  padding: 6px 18px;
-  border: 1px solid #eeeeee;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.015);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #222;
-}
-
-.twinalyze-nav-center strong {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-.twinalyze-nav-center span {
-  margin-top: 3px;
-  max-width: 430px;
-  color: #777;
-  font-size: 13px;
-  line-height: 1.3;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.twinalyze-nav-center:hover strong {
-  color: #2563eb;
-}
-
-.twinalyze-nav-arrow {
-  font-size: 18px;
-  line-height: 1;
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  .twinalyze-tour-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .twinalyze-tour-sidebar {
-    position: relative;
-    top: auto;
-    max-height: none;
-  }
-
-  .twinalyze-tour-preview {
-    padding: 14px;
-  }
-
-  .twinalyze-tour-panel-header h2 {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 640px) {
-  .twinalyze-bottom-nav {
-    grid-template-columns: 1fr;
-    margin-top: 20px !important;
-    margin-bottom: 6px !important;
-  }
-
-  .twinalyze-nav-center {
-    height: auto;
-    min-height: 54px;
-    margin: 0;
-    border-radius: 0;
-  }
-
-  .twinalyze-nav-center span {
-    white-space: normal;
-  }
-
-  .twinalyze-nav-side {
-    height: 52px;
-  }
-}
-`}</style>
-
-# Dashboard Tour
-
 The Dashboard Tour gives you a quick visual view of the main sections inside Twinalyze.
 
-Hover or click any item from the menu to view its screenshot and a short explanation.
+Open any section below to view a short explanation and screenshot.
 
 <Info>
-  On desktop, hover or click any option. On mobile, tap an option to view the screenshot.
+  This tour helps users quickly understand where each feature is available inside the Twinalyze dashboard.
 </Info>
 
 ---
 
-<div className="twinalyze-dashboard-tour">
+## Dashboard structure
 
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-home" defaultChecked />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-realtime" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-system-insights" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-reports" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-advanced-report" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-page-insights" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-user-engagement" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-user-retention" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-user-growth" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-ad-report" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-ad-failure" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-create-notification" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-notification-engagement" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-notification-campaign" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-market-trends" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-country-data" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-events" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-properties" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-project-overview" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-project-version" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-project-device" />
-  <input style={{ display: "none" }} type="radio" name="twinalyzeTour" id="tour-project-screen-activity" />
+<AccordionGroup>
+  <Accordion title="Home">
+    Home is the first screen after login. It gives quick access to project setup, documentation, and main dashboard navigation.
 
-  <div className="twinalyze-tour-layout">
+    <Frame>
+      <img src="/images/Dashboard/Dashboard.PNG" alt="Twinalyze Home dashboard" />
+    </Frame>
+  </Accordion>
 
-    <aside className="twinalyze-tour-sidebar">
-      <div className="twinalyze-tour-brand">
-        <strong>Twinalyze</strong>
-        <span>Dashboard menu</span>
-      </div>
+  <Accordion title="Realtime Users">
+    Realtime Users shows users who are currently active on your website or app.
 
-      <label htmlFor="tour-home" className="twinalyze-tour-main-item">
-        <span>⌂</span>
-        Home
-      </label>
+    <Frame>
+      <img src="/images/Dashboard/Dashboard_realtime_2.PNG" alt="Twinalyze Realtime Users dashboard" />
+    </Frame>
+  </Accordion>
 
-      <label htmlFor="tour-realtime" className="twinalyze-tour-main-item">
-        <span>◉</span>
-        Realtime Users
-      </label>
+  <Accordion title="Product Overview">
+    Product Overview helps you understand overall product performance, system insights, reports, and advanced reports.
 
-      <details open className="twinalyze-tour-menu-group">
-        <summary>
-          <span>▥</span>
-          Product Overview
-        </summary>
-        <label htmlFor="tour-system-insights">System Insights</label>
-        <label htmlFor="tour-reports">Reports</label>
-        <label htmlFor="tour-advanced-report">Advanced Report</label>
-      </details>
+    <AccordionGroup>
+      <Accordion title="System Insights">
+        System Insights shows product health, device and app language usage, and system-level activity.
 
-      <details open className="twinalyze-tour-menu-group">
-        <summary>
-          <span>●</span>
-          Users
-        </summary>
-        <label htmlFor="tour-page-insights">Page Insights</label>
-        <label htmlFor="tour-user-engagement">User Engagement</label>
-        <label htmlFor="tour-user-retention">User Retention</label>
-        <label htmlFor="tour-user-growth">User Growth</label>
-      </details>
-
-      <details className="twinalyze-tour-menu-group">
-        <summary>
-          <span>◀</span>
-          Ad
-        </summary>
-        <label htmlFor="tour-ad-report">Ad Report</label>
-        <label htmlFor="tour-ad-failure">Ad Failure Insights</label>
-      </details>
-
-      <details className="twinalyze-tour-menu-group">
-        <summary>
-          <span>◆</span>
-          Notification
-        </summary>
-        <label htmlFor="tour-create-notification">Create Notification</label>
-        <label htmlFor="tour-notification-engagement">Notification Engagement</label>
-        <label htmlFor="tour-notification-campaign">Notification Campaign</label>
-      </details>
-
-      <details className="twinalyze-tour-menu-group">
-        <summary>
-          <span>●</span>
-          Research
-        </summary>
-        <label htmlFor="tour-market-trends">Market Trends</label>
-        <label htmlFor="tour-country-data">Country Data</label>
-      </details>
-
-      <details className="twinalyze-tour-menu-group">
-        <summary>
-          <span>▰</span>
-          Data
-        </summary>
-        <label htmlFor="tour-events">Events</label>
-        <label htmlFor="tour-properties">Properties</label>
-      </details>
-
-      <details className="twinalyze-tour-menu-group">
-        <summary>
-          <span>◧</span>
-          Project Setting
-        </summary>
-        <label htmlFor="tour-project-overview">Overview</label>
-        <label htmlFor="tour-project-version">Version</label>
-        <label htmlFor="tour-project-device">Device</label>
-        <label htmlFor="tour-project-screen-activity">Screen Activity</label>
-      </details>
-
-      <div className="twinalyze-tour-ask">
-        ✦ Ask Twinalyze
-      </div>
-    </aside>
-
-    <main className="twinalyze-tour-preview">
-
-      <section className="twinalyze-tour-panel panel-home">
-        <div className="twinalyze-tour-panel-header">
-          <span>Home</span>
-          <h2>Start from the main dashboard</h2>
-          <p>Home is the first screen after login. It gives quick access to project setup, documentation, and main navigation.</p>
-        </div>
-        <Frame>
-          <img src="/images/logged_in.PNG" alt="Twinalyze Home dashboard" />
-        </Frame>
-      </section>
-
-      <section className="twinalyze-tour-panel panel-realtime">
-        <div className="twinalyze-tour-panel-header">
-          <span>Realtime Users</span>
-          <h2>View active users in real time</h2>
-          <p>Realtime Users shows users who are currently active on your website or app.</p>
-        </div>
-        <Frame>
-          <img src="/images/dashboard-tour/realtime-users.png" alt="Twinalyze Realtime Users dashboard" />
-        </Frame>
-      </section>
-
-      <section className="twinalyze-tour-panel panel-system-insights">
-        <div className="twinalyze-tour-panel-header">
-          <span>Product Overview</span>
-          <h2>System Insights</h2>
-          <p>System Insights shows product health, device and app language usage, and system-level activity.</p>
-        </div>
         <Frame>
           <img src="/images/dashboard-tour/system-insights.png" alt="Twinalyze System Insights dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-reports">
-        <div className="twinalyze-tour-panel-header">
-          <span>Product Overview</span>
-          <h2>Reports</h2>
-          <p>Reports help you view saved analytics reports and product performance summaries.</p>
-        </div>
+      <Accordion title="Reports">
+        Reports help you view saved analytics reports and product performance summaries.
+
         <Frame>
-          <img src="/images/dashboard-tour/reports.png" alt="Twinalyze Reports dashboard" />
+          <img src="/images/Dashboard/Dashboard_3_Reports_3.PNG" alt="Twinalyze Reports dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-advanced-report">
-        <div className="twinalyze-tour-panel-header">
-          <span>Product Overview</span>
-          <h2>Advanced Report</h2>
-          <p>Advanced Report helps you create deeper custom reports using selected events, metrics, and filters.</p>
-        </div>
+      <Accordion title="Advanced Report">
+        Advanced Report helps you create deeper custom reports using selected events, metrics, and filters.
+
         <Frame>
-          <img src="/images/dashboard-tour/advanced-report.png" alt="Twinalyze Advanced Report dashboard" />
+          <img src="/images/Dashboard/Dashboard_3_advanceReport_Segmentation_4.PNG" alt="Twinalyze Advanced Report dashboard" />
         </Frame>
-      </section>
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
 
-      <section className="twinalyze-tour-panel panel-page-insights">
-        <div className="twinalyze-tour-panel-header">
-          <span>Users</span>
-          <h2>Page Insights</h2>
-          <p>Page Insights helps you understand page-level or screen-level user behavior.</p>
-        </div>
+  <Accordion title="Users">
+    Users section helps you understand how users interact with your product over time.
+
+    <AccordionGroup>
+      <Accordion title="Page Insights">
+        Page Insights helps you understand page-level or screen-level user behavior.
+
         <Frame>
           <img src="/images/dashboard-tour/page-insights.png" alt="Twinalyze Page Insights dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-user-engagement">
-        <div className="twinalyze-tour-panel-header">
-          <span>Users</span>
-          <h2>User Engagement</h2>
-          <p>User Engagement shows how often users open your app and how many sessions they create.</p>
-        </div>
+      <Accordion title="User Engagement">
+        User Engagement shows how often users open your app and how many sessions they create.
+
         <Frame>
           <img src="/images/dashboard-tour/user-engagement.png" alt="Twinalyze User Engagement dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-user-retention">
-        <div className="twinalyze-tour-panel-header">
-          <span>Users</span>
-          <h2>User Retention</h2>
-          <p>User Retention shows how many users return after their first visit or app open.</p>
-        </div>
+      <Accordion title="User Retention">
+        User Retention shows how many users return after their first visit or app open.
+
         <Frame>
           <img src="/images/dashboard-tour/user-retention.png" alt="Twinalyze User Retention dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-user-growth">
-        <div className="twinalyze-tour-panel-header">
-          <span>Users</span>
-          <h2>User Growth</h2>
-          <p>User Growth helps you understand how your user base increases over time.</p>
-        </div>
+      <Accordion title="User Growth">
+        User Growth helps you understand how your user base increases over time.
+
         <Frame>
           <img src="/images/dashboard-tour/user-growth.png" alt="Twinalyze User Growth dashboard" />
         </Frame>
-      </section>
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
 
-      <section className="twinalyze-tour-panel panel-ad-report">
-        <div className="twinalyze-tour-panel-header">
-          <span>Ad</span>
-          <h2>Ad Report</h2>
-          <p>Ad Report helps you track ad performance, impressions, clicks, revenue, and monetization results.</p>
-        </div>
+  <Accordion title="Ad">
+    Ad section helps you measure ad performance, campaign impact, revenue, and ad-related issues.
+
+    <AccordionGroup>
+      <Accordion title="Ad Report">
+        Ad Report helps you track ad performance, impressions, clicks, revenue, and monetization results.
+
         <Frame>
           <img src="/images/dashboard-tour/ad-report.png" alt="Twinalyze Ad Report dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-ad-failure">
-        <div className="twinalyze-tour-panel-header">
-          <span>Ad</span>
-          <h2>Ad Failure Insights</h2>
-          <p>Ad Failure Insights helps you find ad loading issues, failed impressions, error trends, and screen-level ad problems.</p>
-        </div>
+      <Accordion title="Ad Failure Insights">
+        Ad Failure Insights helps you find ad loading issues, failed impressions, error trends, and screen-level ad problems.
+
         <Frame>
           <img src="/images/dashboard-tour/ad-failure-insights.png" alt="Twinalyze Ad Failure Insights dashboard" />
         </Frame>
-      </section>
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
 
-      <section className="twinalyze-tour-panel panel-create-notification">
-        <div className="twinalyze-tour-panel-header">
-          <span>Notification</span>
-          <h2>Create Notification</h2>
-          <p>Create Notification lets you add title, description, image, schedule, and target users.</p>
-        </div>
+  <Accordion title="Notification">
+    Notification section helps you create campaigns, target users, schedule messages, and analyze notification engagement.
+
+    <AccordionGroup>
+      <Accordion title="Create Notification">
+        Create Notification lets you add title, description, image, schedule, and target users.
+
         <Frame>
           <img src="/images/dashboard-tour/create-notification.png" alt="Twinalyze Create Notification screen" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-notification-engagement">
-        <div className="twinalyze-tour-panel-header">
-          <span>Notification</span>
-          <h2>Notification Engagement</h2>
-          <p>Notification Engagement shows how users interact with notifications and how latency performs.</p>
-        </div>
+      <Accordion title="Notification Engagement">
+        Notification Engagement shows how users interact with notifications and how notification latency performs.
+
         <Frame>
           <img src="/images/dashboard-tour/notification-engagement.png" alt="Twinalyze Notification Engagement dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-notification-campaign">
-        <div className="twinalyze-tour-panel-header">
-          <span>Notification</span>
-          <h2>Notification Campaign</h2>
-          <p>Notification Campaign shows users, opened count, failed count, click rate, status, and schedule details.</p>
-        </div>
+      <Accordion title="Notification Campaign">
+        Notification Campaign shows users, opened count, failed count, click rate, status, and schedule details.
+
         <Frame>
           <img src="/images/dashboard-tour/notification-campaign.png" alt="Twinalyze Notification Campaign list" />
         </Frame>
-      </section>
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
 
-      <section className="twinalyze-tour-panel panel-market-trends">
-        <div className="twinalyze-tour-panel-header">
-          <span>Research</span>
-          <h2>Market Trends</h2>
-          <p>Market Trends shows top apps, grossing apps, country filters, app categories, and ranking data.</p>
-        </div>
+  <Accordion title="Research">
+    Research helps you explore market trends, app ranking, country filters, categories, and competitive insights.
+
+    <AccordionGroup>
+      <Accordion title="Market Trends">
+        Market Trends shows top apps, grossing apps, country filters, app categories, and ranking data.
+
         <Frame>
           <img src="/images/dashboard-tour/market-trends.png" alt="Twinalyze Market Trends dashboard" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-country-data">
-        <div className="twinalyze-tour-panel-header">
-          <span>Research</span>
-          <h2>Country Data</h2>
-          <p>Country Data helps you understand app and market data by selected country.</p>
-        </div>
+      <Accordion title="Country Data">
+        Country Data helps you understand app and market data by selected country.
+
         <Frame>
           <img src="/images/dashboard-tour/country-data.png" alt="Twinalyze Country Data dashboard" />
         </Frame>
-      </section>
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
 
-      <section className="twinalyze-tour-panel panel-events">
-        <div className="twinalyze-tour-panel-header">
-          <span>Data</span>
-          <h2>Events</h2>
-          <p>Events screen shows tracked events, source, auto status, manual status, visibility, and search.</p>
-        </div>
+  <Accordion title="Data">
+    Data section helps you view and manage tracked events and event properties.
+
+    <AccordionGroup>
+      <Accordion title="Events">
+        Events screen shows tracked events, source, auto status, manual status, visibility, and search.
+
         <Frame>
           <img src="/images/Data_events.PNG" alt="Twinalyze Data Events screen" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-properties">
-        <div className="twinalyze-tour-panel-header">
-          <span>Data</span>
-          <h2>Properties</h2>
-          <p>Properties screen shows event properties, descriptions, status, visibility, and search.</p>
-        </div>
+      <Accordion title="Properties">
+        Properties screen shows event properties, descriptions, status, visibility, and search.
+
         <Frame>
           <img src="/images/properties.PNG" alt="Twinalyze Data Properties screen" />
         </Frame>
-      </section>
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
 
-      <section className="twinalyze-tour-panel panel-project-overview">
-        <div className="twinalyze-tour-panel-header">
-          <span>Project Setting</span>
-          <h2>Project Overview</h2>
-          <p>Project Overview shows project logo, name, API key, secret key, organization ID, Firebase key, and description.</p>
-        </div>
+  <Accordion title="Project Setting">
+    Project Setting helps you manage project information, SDK credentials, versions, devices, and screen-level activity.
+
+    <AccordionGroup>
+      <Accordion title="Project Overview">
+        Project Overview shows project logo, name, API key, secret key, organization ID, Firebase key, and description.
+
         <Frame>
           <img src="/images/Project_settings_edit_2.PNG" alt="Twinalyze Project Setting overview screen" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-project-version">
-        <div className="twinalyze-tour-panel-header">
-          <span>Project Setting</span>
-          <h2>Version</h2>
-          <p>Version shows platform, app version mode, app version, and created date.</p>
-        </div>
+      <Accordion title="Version">
+        Version shows platform, app version mode, app version, and created date.
+
         <Frame>
           <img src="/images/dashboard-tour/project-version.png" alt="Twinalyze Project Setting Version screen" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-project-device">
-        <div className="twinalyze-tour-panel-header">
-          <span>Project Setting</span>
-          <h2>Device</h2>
-          <p>Device helps you view device-related project information.</p>
-        </div>
+      <Accordion title="Device">
+        Device helps you view device-related project information.
+
         <Frame>
           <img src="/images/dashboard-tour/project-device.png" alt="Twinalyze Project Setting Device screen" />
         </Frame>
-      </section>
+      </Accordion>
 
-      <section className="twinalyze-tour-panel panel-project-screen-activity">
-        <div className="twinalyze-tour-panel-header">
-          <span>Project Setting</span>
-          <h2>Screen Activity</h2>
-          <p>Screen Activity helps you understand screen-level activity connected with your project.</p>
-        </div>
+      <Accordion title="Screen Activity">
+        Screen Activity helps you understand screen-level activity connected with your project.
+
         <Frame>
           <img src="/images/dashboard-tour/project-screen-activity.png" alt="Twinalyze Project Setting Screen Activity screen" />
         </Frame>
-      </section>
-
-    </main>
-  </div>
-</div>
+      </Accordion>
+    </AccordionGroup>
+  </Accordion>
+</AccordionGroup>
 
 ---
 
