@@ -17,13 +17,13 @@
       },
       {
         "label": "Visit website",
-        "href": "https://Google.com"
+        "href": "https://www.twinalyze.com/"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://Google.com"
+      "label": "Get started",
+      "href": "https://www.twinalyze.com/"
     }
   },
   "navigation": {
@@ -234,8 +234,8 @@
           {
             "group": "Dashboard",
             "pages": [
-              "analytics/dashboard-overview",
-              "analytics/product-overview/product-overview"
+              "analytics/report",
+              "analytics/ask-ai"
             ]
           }
         ]
