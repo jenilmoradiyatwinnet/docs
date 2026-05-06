@@ -56,6 +56,15 @@
               "overview/Data/users-events-properties",
               "overview/Data/auto-capture-events"
             ]
+          },
+           {
+            "group": "Adminstration",
+            "pages": [
+              "overview/Adminstration/billing",
+              "overview/Adminstration/privacy-policy",
+              "overview/Adminstration/faq",
+              "overview/Adminstration/community"
+            ]
           }
           
         ]
