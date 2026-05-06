@@ -36,30 +36,28 @@
       "group": "Getting Started",
       "pages": [
         "overview/introduction",
-        "overview/create-an-account",
-        {
-          "group": "Create your first Project",
-          "root": "overview/create-your-first-project",
-          "expanded": true,
-          "pages": [
-            "overview/manage-project"
-          ]
-        }
+        "overview/pricing",
+        "overview/subscription",
+        "overview/dashboard-tour"
       ]
-    },  {
-            "group": "Core Concepts",
+    },  
+          {
+            "group": "Project And Organization",
             "pages": [
-              "overview/core-concepts/core-features",
-              "overview/core-concepts/users-events-properties",
-              "overview/core-concepts/auto-capture-events"
+              "overview/Project-and-Organization/create-an-account",
+              "overview/Project-and-Organization/create-your-first-project",
+              "overview/Project-and-Organization/core-features",
+              "overview/Project-and-Organization/role-based-authentication"
             ]
           },
           {
-            "group": "DashBoard Tour",
+            "group": "Data",
             "pages": [
-              "overview/dashboard/dashboard-tour"
+              "overview/Data/users-events-properties",
+              "overview/Data/auto-capture-events"
             ]
           }
+          
         ]
       },
       {

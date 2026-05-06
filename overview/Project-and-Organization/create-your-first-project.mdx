@@ -1,14 +1,69 @@
 ---
-title: "Manage Project"
-description: "Learn how to edit and delete projects in Twinalyze."
+title: "Create and Manage Project"
+description: "Create, edit, and delete a Twinalyze project for your website, Android app, or iOS app."
 hideFooterPagination: true
 ---
-After creating a project, you can manage it from **Project Setting**.
 
-You can update project details, view credentials, manage project configuration, and delete a project when it is not live.
+A project is where Twinalyze collects data for your website or mobile app.
+
+You can create separate projects for:
+
+- **Website**
+- **Android App**
+- **iOS App**
+
+After creating a project, you can manage it from **Project Setting**. You can update project details, view credentials, manage configuration, and delete a project when it is not live.
 
 <Info>
-  A project can only be deleted if it is <strong>not live</strong>.
+  For clean analytics, we recommend creating separate projects for website, Android, and iOS.
+</Info>
+
+---
+
+## Create a Project
+
+The first step is simple: create a project name. After that, choose the right setup based on your platform.
+
+### Step 1: Enter project name
+
+Enter your project name and click **Save**.
+
+<Frame>
+  ![Create project form in Twinalyze](/images/create-project-1st-step.PNG)
+</Frame>
+
+<Tip>
+  Use a clear project name so your team can easily identify it later.
+</Tip>
+
+---
+
+### Step 2: Create more projects anytime
+
+After your first project is created, you can use the project dropdown from the left sidebar to switch projects or create more projects.
+
+<Frame>
+  ![Twinalyze project dropdown with create project option](/images/create-project.png)
+</Frame>
+
+<Info>
+  This is useful when you want to manage separate projects for your website, Android app, and iOS app.
+</Info>
+
+---
+
+## Recommended Setup
+
+For clean analytics, create separate projects for each platform.
+
+| Product | Recommended Project |
+| --- | --- |
+| Website | One Web project |
+| Android App | One Android project |
+| iOS App | One iOS project |
+
+<Info>
+  Separate projects help you keep website, Android, and iOS data clean and easy to compare.
 </Info>
 
 ---
@@ -16,7 +71,6 @@ You can update project details, view credentials, manage project configuration, 
 ## Edit Project
 
 Use **Edit Project** when you want to update project details such as logo, name, description, SDK keys, and project configuration.
-
 
 ### Step 1: Open Project Setting
 
@@ -80,7 +134,7 @@ Confirm the delete action from the confirmation popup.
 
 ---
 
-### Delete rule
+### Delete Rule
 
 | Project Status | Can Delete? |
 | --- | --- |
@@ -93,7 +147,7 @@ Confirm the delete action from the confirmation popup.
 
 ---
 
-## Best practices
+## Best Practices
 
 <AccordionGroup>
   <Accordion title="Edit project details carefully">
@@ -114,17 +168,17 @@ Confirm the delete action from the confirmation popup.
 </AccordionGroup>
 
 <div className="twinalyze-bottom-nav">
-  <a href="/overview/create-your-first-project" className="twinalyze-nav-side">
+  <a href="/overview/create-an-account" className="twinalyze-nav-side">
     <span className="twinalyze-nav-arrow">‹</span>
     <span>Previous</span>
   </a>
 
-  <a href="/overview/" className="twinalyze-nav-center">
+  <a href="/overview/api-keys" className="twinalyze-nav-center">
     <strong>API Keys</strong>
     <span>Find your project credentials and continue SDK integration.</span>
   </a>
 
-  <a href="/overview/" className="twinalyze-nav-side">
+  <a href="/overview/api-keys" className="twinalyze-nav-side">
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
