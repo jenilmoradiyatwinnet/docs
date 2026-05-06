@@ -98,11 +98,27 @@
                     ]
                   },
                   {
-                    "group": "Swift",
+                    "group": "ios",
                     "expanded": true,
                     "pages": [
-                      "sdks/android/swift/analytics",
-                      "sdks/android/swift/ad-analytics"
+                      "sdks/android/ios/analytics",
+                      "sdks/android/ios/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "React Native",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/react-native/analytics",
+                      "sdks/android/react-native/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "Flutter",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/android/flutter/analytics",
+                      "sdks/android/flutter/ad-analytics"
                     ]
                   }
                 ]
@@ -125,6 +141,54 @@
                     "pages": [
                       "sdks/web/javascript/analytics",
                       "sdks/web/javascript/ad-analytics"
+                    ]
+                  },
+                   {
+                    "group": "React",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/react/analytics",
+                      "sdks/web/react/ad-analytics"
+                    ]
+                  }, 
+                  {
+                    "group": "Npm",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/npm/analytics",
+                      "sdks/web/npm/ad-analytics"
+                    ]
+                  },
+                   {
+                    "group": "Dart",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/dart/analytics",
+                      "sdks/web/dart/ad-analytics"
+                    ]
+                  },
+                   {
+                    "group": "Shopify",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/shopify/analytics",
+                      "sdks/web/shopify/ad-analytics"
+                    ]
+                  },
+                   {
+                    "group": "Wordpress",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/wordpress/analytics",
+                      "sdks/web/wordpress/ad-analytics"
+                    ]
+                  },
+                   {
+                    "group": "Webflow",
+                    "expanded": true,
+                    "pages": [
+                      "sdks/web/webflow/analytics",
+                      "sdks/web/webflow/ad-analytics"
                     ]
                   }
                 ]
@@ -149,8 +213,13 @@
                 "pages": [
                   "integrations/google-analytics-4",
                   "integrations/google-tag-manager",
+                  "integrations/admob",
+                  "integrations/onesignal",
+                  "integrations/facebook-monetization-and-manager",
+                  "integrations/slack",
+                  "integrations/microsoft-teams",
                   "integrations/firebase",
-                  "integrations/onesignal"
+                  "integrations/Applovin"
                 ]
               }
             ]
