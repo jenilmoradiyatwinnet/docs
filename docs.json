@@ -86,7 +86,7 @@
               },
               {
                 "group": "Android",
-                "expanded": true,
+                
                 "pages": [
                   {
                     "group": "Kotlin",
