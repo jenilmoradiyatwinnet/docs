@@ -202,8 +202,8 @@
               {
                 "group": "Common",
                 "pages": [
-                  "common/one",
-                  "common/two"
+                  "common/integration/one",
+                  "common/integration/two"
                 ]
               },
               {
@@ -212,7 +212,15 @@
                 "pages": [
                   "integrations/google-analytics-4",
                   "integrations/google-tag-manager",
-                  "integrations/firebase"
+                  "integrations/firebase",
+                  "integrations/admob",
+                  "integrations/facebook-ad",
+                  "integrations/facebook-monetization-manager",
+                  "integrations/slack",
+                  "integrations/microsoft-teams",
+                  "integrations/applovin",
+                  "integrations/onesignal"
+
                 ]
               }
             ]
