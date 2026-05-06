@@ -76,7 +76,7 @@
             "dropdown": "SDK",
             "icon": "code",
             "pages": [
-              "sdks/overview",
+       
               {
                 "group": "Common",
                 "pages": [
@@ -198,7 +198,7 @@
             "dropdown": "Integration",
             "icon": "plug",
             "pages": [
-              "integrations/overview",
+            
               {
                 "group": "Common",
                 "pages": [
