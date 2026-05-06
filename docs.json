@@ -114,7 +114,7 @@
                   },
                   {
                     "group": "Flutter",
-                    "expanded": true,
+                
                     "pages": [
                       "sdks/android/flutter/analytics",
                       "sdks/android/flutter/ad-analytics"
@@ -124,11 +124,11 @@
               },
               {
                 "group": "Web",
-                "expanded": true,
+               
                 "pages": [
                   {
                     "group": "React",
-                    "expanded": true,
+                  
                     "pages": [
                       "sdks/web/react/analytics",
                       "sdks/web/react/ad-analytics"
@@ -136,7 +136,7 @@
                   },
                   {
                     "group": "JavaScript",
-                    "expanded": true,
+                   
                     "pages": [
                       "sdks/web/javascript/analytics",
                       "sdks/web/javascript/ad-analytics"
@@ -144,7 +144,7 @@
                   },
                   {
                     "group": "React",
-                    "expanded": true,
+                   
                     "pages": [
                       "sdks/web/react/analytics",
                       "sdks/web/react/ad-analytics"
@@ -152,7 +152,7 @@
                   },
                   {
                     "group": "Npm",
-                    "expanded": true,
+                   
                     "pages": [
                       "sdks/web/npm/analytics",
                       "sdks/web/npm/ad-analytics"
@@ -160,7 +160,7 @@
                   },
                   {
                     "group": "Dart",
-                    "expanded": true,
+                   
                     "pages": [
                       "sdks/web/dart/analytics",
                       "sdks/web/dart/ad-analytics"
@@ -168,7 +168,7 @@
                   },
                   {
                     "group": "Shopify",
-                    "expanded": true,
+                 
                     "pages": [
                       "sdks/web/shopify/analytics",
                       "sdks/web/shopify/ad-analytics"
@@ -176,7 +176,7 @@
                   },
                   {
                     "group": "Wordpress",
-                    "expanded": true,
+                    
                     "pages": [
                       "sdks/web/wordpress/analytics",
                       "sdks/web/wordpress/ad-analytics"
@@ -184,7 +184,7 @@
                   },
                   {
                     "group": "Webflow",
-                    "expanded": true,
+                   
                     "pages": [
                       "sdks/web/webflow/analytics",
                       "sdks/web/webflow/ad-analytics"
