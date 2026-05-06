@@ -29,18 +29,18 @@
   "navigation": {
     "tabs": [
       {
-  "tab": "Overview",
-  "icon": "house",
-  "groups": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "overview/introduction",
-        "overview/pricing",
-        "overview/subscription",
-        "overview/dashboard-tour"
-      ]
-    },  
+        "tab": "Overview",
+        "icon": "house",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "overview/introduction",
+              "overview/pricing",
+              "overview/subscription",
+              "overview/dashboard-tour"
+            ]
+          },
           {
             "group": "Project And Organization",
             "pages": [
@@ -57,7 +57,7 @@
               "overview/Data/auto-capture-events"
             ]
           },
-           {
+          {
             "group": "Adminstration",
             "pages": [
               "overview/Adminstration/billing",
@@ -66,7 +66,6 @@
               "overview/Adminstration/community"
             ]
           }
-          
         ]
       },
       {
@@ -91,7 +90,7 @@
                 "pages": [
                   {
                     "group": "Kotlin",
-                    "expanded": true,
+                    
                     "pages": [
                       "sdks/android/kotlin/analytics",
                       "sdks/android/kotlin/ad-analytics"
@@ -99,7 +98,7 @@
                   },
                   {
                     "group": "ios",
-                    "expanded": true,
+                   
                     "pages": [
                       "sdks/android/ios/analytics",
                       "sdks/android/ios/ad-analytics"
@@ -107,7 +106,7 @@
                   },
                   {
                     "group": "React Native",
-                    "expanded": true,
+                   
                     "pages": [
                       "sdks/android/react-native/analytics",
                       "sdks/android/react-native/ad-analytics"
@@ -143,14 +142,14 @@
                       "sdks/web/javascript/ad-analytics"
                     ]
                   },
-                   {
+                  {
                     "group": "React",
                     "expanded": true,
                     "pages": [
                       "sdks/web/react/analytics",
                       "sdks/web/react/ad-analytics"
                     ]
-                  }, 
+                  },
                   {
                     "group": "Npm",
                     "expanded": true,
@@ -159,7 +158,7 @@
                       "sdks/web/npm/ad-analytics"
                     ]
                   },
-                   {
+                  {
                     "group": "Dart",
                     "expanded": true,
                     "pages": [
@@ -167,7 +166,7 @@
                       "sdks/web/dart/ad-analytics"
                     ]
                   },
-                   {
+                  {
                     "group": "Shopify",
                     "expanded": true,
                     "pages": [
@@ -175,7 +174,7 @@
                       "sdks/web/shopify/ad-analytics"
                     ]
                   },
-                   {
+                  {
                     "group": "Wordpress",
                     "expanded": true,
                     "pages": [
@@ -183,7 +182,7 @@
                       "sdks/web/wordpress/ad-analytics"
                     ]
                   },
-                   {
+                  {
                     "group": "Webflow",
                     "expanded": true,
                     "pages": [
@@ -213,13 +212,7 @@
                 "pages": [
                   "integrations/google-analytics-4",
                   "integrations/google-tag-manager",
-                  "integrations/admob",
-                  "integrations/onesignal",
-                  "integrations/facebook-monetization-and-manager",
-                  "integrations/slack",
-                  "integrations/microsoft-teams",
-                  "integrations/firebase",
-                  "integrations/Applovin"
+                  "integrations/firebase"
                 ]
               }
             ]
@@ -239,8 +232,6 @@
           }
         ]
       }
-     
-  
     ]
   },
   "footer": {
