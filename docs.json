@@ -3,6 +3,9 @@
   "theme": "mint",
     "css": "custom.css",
   "name": "Twinalyze",
+  "icons": {
+  "library": "fontawesome"
+},
   "colors": {
   "primary": "#2563EB",
     "light": "#3B82F6",
@@ -41,12 +44,12 @@
             ]
           },
           {
-            "group": "Project And Organization",
+            "group": "Organization and Project",
             "pages": [
-              "overview/Project-and-Organization/create-an-account",
-              "overview/Project-and-Organization/create-your-first-project",
-              "overview/Project-and-Organization/core-features",
-              "overview/Project-and-Organization/role-based-authentication"
+              "overview/organization-and-project/create-an-account",
+              "overview/organization-and-project/create-an-project",
+              "overview/organization-and-project/core-features",
+              "overview/organization-and-project/role-based-authentication"
             ]
           },
           {
