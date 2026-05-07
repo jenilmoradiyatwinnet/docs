@@ -324,69 +324,232 @@ It connects data from SDKs, ads, notifications, and third-party tools into one c
     </div>
   </Tab>
 </Tabs>
+<Tabs>
+  <Tab title="Analytics">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold text-blue-700">Analytics Matrix</p>
+            <h3 className="mt-1 text-xl font-bold text-gray-950">
+              Understand Product and User Behavior
+            </h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Track users, events, sessions, engagement, retention, and product growth.
+            </p>
+          </div>
+
+          <a
+            href="/analytics/dashboard-overview"
+            className="inline-flex w-fit items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-100"
+          >
+            Open Analytics <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100">
+        <a href="/analytics/autocapture" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Autocapture</div>
+          <div className="text-sm text-gray-600">Automatically track key user actions and events.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/realtime-users" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Real Time</div>
+          <div className="text-sm text-gray-600">Monitor live users, sessions, and activity instantly.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/product-overview" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Product Overview</div>
+          <div className="text-sm text-gray-600">View product performance and usage summary.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/report" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Reports</div>
+          <div className="text-sm text-gray-600">Build custom reports for deeper analytics.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/system-insights" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">System Insights</div>
+          <div className="text-sm text-gray-600">Analyze device, OS, and system performance.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/users-behaviour" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Users Behaviour</div>
+          <div className="text-sm text-gray-600">Understand how users move through product.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/engagement" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Engagement</div>
+          <div className="text-sm text-gray-600">Measure interactions, activity depth, and usage.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/cohort" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Cohort</div>
+          <div className="text-sm text-gray-600">Track retention across selected user groups.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/analytics/user-growth" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">User Growth</div>
+          <div className="text-sm text-gray-600">Monitor new, active, and returning users.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Ads Analytics">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold text-blue-700">Ads Analytics Matrix</p>
+            <h3 className="mt-1 text-xl font-bold text-gray-950">
+              Measure Campaign and Ad Performance
+            </h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Analyze traffic, impressions, clicks, revenue, failures, and attribution.
+            </p>
+          </div>
+
+          <a
+            href="/ads/ad-overview"
+            className="inline-flex w-fit items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-100"
+          >
+            Open Ads <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100">
+        <a href="/ads/campaign-performance" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Campaign Performance</div>
+          <div className="text-sm text-gray-600">Track campaign traffic, conversions, and outcomes.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/ads/ad-revenue" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Ad Revenue</div>
+          <div className="text-sm text-gray-600">Measure ad earnings and monetization trends.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/ads/ad-impressions" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Ad Impressions</div>
+          <div className="text-sm text-gray-600">Track total impressions across placements.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/ads/ad-clicks" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Ad Clicks</div>
+          <div className="text-sm text-gray-600">Measure ad clicks and user interest.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/ads/ad-failures" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Ad Failures</div>
+          <div className="text-sm text-gray-600">Detect failed ads and loading issues.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/ads/ad-placement" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Ad Placement</div>
+          <div className="text-sm text-gray-600">Compare performance by ad placement.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/ads/attribution-insights" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Attribution Insights</div>
+          <div className="text-sm text-gray-600">Identify channels driving high-value users.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Messaging">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold text-blue-700">Messaging Matrix</p>
+            <h3 className="mt-1 text-xl font-bold text-gray-950">
+              Create and Measure Engagement Campaigns
+            </h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Send targeted messages and analyze delivery, opens, clicks, and retention.
+            </p>
+          </div>
+
+          <a
+            href="/engagement/notification-overview"
+            className="inline-flex w-fit items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-100"
+          >
+            Open Messaging <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100">
+        <a href="/engagement/create-notification" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Create Notifications</div>
+          <div className="text-sm text-gray-600">Create targeted campaigns for engagement.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/engagement/target-users" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Target Users</div>
+          <div className="text-sm text-gray-600">Send messages to selected segments.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/engagement/user-segments" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">User Segments</div>
+          <div className="text-sm text-gray-600">Group users by behavior and properties.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/engagement/schedule-campaigns" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Schedule Campaigns</div>
+          <div className="text-sm text-gray-600">Plan messages for future delivery.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/engagement/delivery-status" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Delivery Status</div>
+          <div className="text-sm text-gray-600">Track sent, delivered, and failed messages.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/engagement/campaign-reports" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Campaign Reports</div>
+          <div className="text-sm text-gray-600">Analyze delivery, opens, clicks, and results.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+
+        <a href="/engagement/improve-retention" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+          <div className="font-semibold text-gray-950">Improve Retention</div>
+          <div className="text-sm text-gray-600">Bring users back with timely messages.</div>
+          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
+        </a>
+      </div>
+    </div>
+  </Tab>
+</Tabs>
 ---
----
-
-## Industries That Can Use Twinalyze
-
-Twinalyze can be used by businesses that want to understand users, improve engagement, track campaigns, and make better product decisions.
-
-<div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white">
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-900">
-    <div>Industry</div>
-    <div>How Twinalyze Helps</div>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-100 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">E-commerce</span>
-    <span>Track carts, checkout drop-offs, purchases, and campaigns.</span>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-100 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">Mobile Apps</span>
-    <span>Analyze app users, sessions, screens, and retention.</span>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-100 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">SaaS Products</span>
-    <span>Improve onboarding, feature usage, activation, and churn.</span>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-100 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">Games</span>
-    <span>Track levels, ad revenue, engagement, and retention.</span>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-100 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">EdTech</span>
-    <span>Understand learner activity, course progress, and completion.</span>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-100 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">Media & Content</span>
-    <span>Measure content views, clicks, sessions, and engagement.</span>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] border-b border-gray-100 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">Marketing Agencies</span>
-    <span>Monitor campaign results, traffic quality, and client reports.</span>
-  </div>
-
-  <div className="grid grid-cols-[1fr_2fr] px-4 py-3 text-sm text-gray-700 hover:bg-blue-50">
-    <span className="font-medium text-gray-900">Travel & Booking</span>
-    <span>Analyze searches, bookings, cancellations, and user journeys.</span>
-  </div>
-</div>
-
-<Info>
-  Twinalyze is useful for teams that want one platform for analytics, ads, notifications, user behavior, and growth insights.
-</Info>
----
 
 
 ---
 
-## Industries That Can Use Twinalyze
+## Twinalyze helps this Industries
 
 Twinalyze helps different industries understand users, improve product journeys, track campaigns, and increase retention from one analytics platform.
 
