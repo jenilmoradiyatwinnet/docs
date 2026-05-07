@@ -1,0 +1,365 @@
+---
+title: "Data Control and Quality"
+description: "Keep your Twinalyze data clean by detecting duplicate events, missing events, wrong event names, invalid properties, bots, and unwanted traffic."
+hideFooterPagination: true
+---
+
+Clean data is the foundation of accurate analytics.
+
+Twinalyze helps you control event quality, identify tracking issues, and keep your reports, funnels, retention, user profiles, campaigns, and Ask AI insights reliable.
+
+This page covers:
+
+- Duplicate and missing events
+- Wrong event names
+- Invalid event properties
+- Bot and unwanted traffic
+- Test, internal, and spam traffic
+- Best practices before going live
+
+
+
+## Data quality overview
+
+| Area | What can go wrong | Impact |
+| --- | --- | --- |
+| Duplicate Events | Same event is sent more than once | Inflated reports and wrong counts |
+| Missing Events | Expected event is not received | Broken funnels and incomplete journeys |
+| Wrong Event Names | Same action has multiple names | Split reports and confusing analysis |
+| Invalid Properties | Missing or wrong property values | Filters, segments, and cohorts become unreliable |
+| Bot Traffic | Non-human activity is tracked | Fake sessions, users, and page views |
+| Internal/Test Traffic | QA or developer data mixes with live data | Production reports become inaccurate |
+
+---
+
+## Data quality checks
+
+<Tabs>
+  <Tab title="Duplicate Events">
+    Duplicate events happen when the same user action is tracked more than once.
+
+    Common examples:
+
+    - `button_clicked` fires two times for one click
+    - `screen_viewed` fires again when the screen is already visible
+    - `purchase_completed` is sent multiple times for one order
+    - SDK auto tracking and manual tracking both send the same event
+
+    <Warning>
+      Duplicate events can increase event counts and create incorrect reports, funnels, campaign results, and revenue metrics.
+    </Warning>
+
+    ### How to prevent duplicate events
+
+    <Steps>
+      <Step title="Use one tracking method">
+        Avoid sending the same event from both auto tracking and manual tracking.
+      </Step>
+
+      <Step title="Use unique identifiers">
+        Use values like `eventId`, `orderId`, `sessionId`, or `screenId` for important events.
+      </Step>
+
+      <Step title="Check sudden spikes">
+        Review events that suddenly increase without a real product or marketing change.
+      </Step>
+
+      <Step title="Test critical events">
+        Events like signup, checkout, payment, and purchase should be tested carefully before release.
+      </Step>
+    </Steps>
+
+    ### Recommended duplicate-safe event
+
+    ```json
+    {
+      "eventName": "purchase_completed",
+      "eventId": "evt_10293",
+      "orderId": "ORD_98765",
+      "userId": "user_123",
+      "sessionId": "session_789",
+      "properties": {
+        "amount": 2499,
+        "currency": "INR",
+        "itemCount": 3
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="Missing Events">
+    Missing events happen when an expected user action is not tracked.
+
+    Common examples:
+
+    - User opens checkout but `checkout_started` is not received
+    - User signs up but `signup_completed` is missing
+    - Screen opens but `screen_viewed` is not tracked
+    - Notification is shown but `notification_received` is missing
+    - Payment fails but `payment_failed` is not received
+
+    <Info>
+      Missing events usually happen because of SDK setup issues, wrong trigger conditions, network failures, or code paths where tracking was not added.
+    </Info>
+
+    ### How to detect missing events
+
+    | Check | What to verify |
+    | --- | --- |
+    | Event flow | Expected events are received in the correct order |
+    | Platform coverage | Web, Android, and iOS send the same important events |
+    | Critical actions | Signup, checkout, payment, and purchase are always tracked |
+    | Session coverage | Events are linked with the correct user and session |
+    | SDK health | SDK is initialized before events are sent |
+
+    <Tip>
+      Create a small test journey and verify every expected event from start to finish.
+    </Tip>
+
+    ### Example expected journey
+
+    ```txt
+    page_view
+    product_viewed
+    add_to_cart
+    checkout_started
+    payment_started
+    purchase_completed
+    ```
+  </Tab>
+
+  <Tab title="Wrong Event Names">
+    Wrong event names make analysis difficult because the same action appears as multiple different events.
+
+    Bad examples:
+
+    ```txt
+    AddToCart
+    add_to_cart
+    add-cart
+    product_added_to_cart
+    addtocart
+    ```
+
+    Recommended format:
+
+    ```txt
+    add_to_cart
+    checkout_started
+    payment_failed
+    purchase_completed
+    screen_viewed
+    notification_clicked
+    ```
+
+    ### Event naming rules
+
+    | Rule | Recommended |
+    | --- | --- |
+    | Case style | Use lowercase |
+    | Word separator | Use underscore |
+    | Event meaning | Use action-based names |
+    | Platform consistency | Use the same name across Web, Android, and iOS |
+    | Avoid | Spaces, random casing, unclear short names |
+
+    <Warning>
+      Do not create multiple names for the same user action. It will split your reports and reduce data accuracy.
+    </Warning>
+  </Tab>
+
+  <Tab title="Invalid Properties">
+    Invalid properties happen when event data is missing, wrongly typed, or inconsistent.
+
+    Common issues:
+
+    - `price` sent as text instead of number
+    - `currency` missing from purchase events
+    - `userId` missing after login
+    - `country` sent as `India`, `IN`, and `india`
+    - `orderId` missing from purchase event
+    - `screenName` sent differently across platforms
+
+    ### Recommended property format
+
+    ```json
+    {
+      "eventName": "add_to_cart",
+      "properties": {
+        "productId": "PRD_1001",
+        "productName": "Gold Hair Pin",
+        "category": "Hair Accessories",
+        "price": 499,
+        "currency": "INR",
+        "quantity": 1
+      }
+    }
+    ```
+
+    ### Property validation checklist
+
+    | Property check | Example |
+    | --- | --- |
+    | Required value exists | `productId` should not be empty |
+    | Correct data type | `price` should be number |
+    | Consistent value | `currency` should be `INR`, not `inr` or `Rs` |
+    | Clear meaning | `screenName` should describe the actual screen |
+    | Platform match | Web and app should send similar property names |
+
+    <Tip>
+      Keep property names stable. Changing property names later can break filters, cohorts, and saved reports.
+    </Tip>
+  </Tab>
+</Tabs>
+
+---
+
+## Bot and unwanted traffic
+
+Bot traffic and unwanted traffic can make your analytics data inaccurate. Twinalyze should help you separate real user behavior from fake, automated, internal, or test activity.
+
+<CardGroup cols={3}>
+  <Card title="Cleaner Reports" icon="shield-check">
+    Remove bot-like activity from reports, funnels, retention, and user insights.
+  </Card>
+
+  <Card title="Better User Accuracy" icon="users">
+    Separate real users from fake, test, crawler, or automated traffic.
+  </Card>
+
+  <Card title="Improved Decisions" icon="chart-no-axes-combined">
+    Avoid making product decisions based on invalid traffic.
+  </Card>
+</CardGroup>
+
+---
+
+## Common unwanted traffic types
+
+<Tabs>
+  <Tab title="Bots">
+    Bots are automated systems that visit your website or app without real user intent.
+
+    Common examples:
+
+    - Search engine crawlers
+    - Scrapers
+    - Automated testing tools
+    - Headless browser traffic
+    - Fake traffic generators
+
+    <Warning>
+      Bot traffic can increase page views, sessions, users, and event counts without real user activity.
+    </Warning>
+
+    ### Bot indicators
+
+    | Signal | Example |
+    | --- | --- |
+    | Very high event frequency | Hundreds of events in a short time |
+    | No real interaction pattern | Page views without clicks or meaningful actions |
+    | Suspicious user agent | Headless browser, crawler, or automation tool |
+    | Repeated IP/device pattern | Same source creating many sessions |
+    | Invalid session behavior | Session duration too short or too repetitive |
+  </Tab>
+
+  <Tab title="Internal Traffic">
+    Internal traffic comes from your own team, developers, QA testers, support team, or admin users.
+
+    This traffic is useful for testing, but it should not affect production analytics.
+
+    Common examples:
+
+    - Developer testing SDK events
+    - QA testing checkout or signup flow
+    - Admin team opening dashboard repeatedly
+    - Internal users using staging or demo builds
+
+    <Tip>
+      Use environment properties like `environment: "development"` or `environment: "staging"` to separate test data from production data.
+    </Tip>
+
+    ```json
+    {
+      "eventName": "checkout_started",
+      "properties": {
+        "environment": "staging",
+        "isInternalUser": true,
+        "testerRole": "qa"
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="Spam Traffic">
+    Spam traffic is fake or low-quality traffic created to pollute analytics.
+
+    Common examples:
+
+    - Repeated fake signups
+    - Fake form submissions
+    - Invalid referral traffic
+    - Suspicious campaign traffic
+    - Repeated events from the same unknown source
+
+    ### How to reduce spam traffic
+
+    <Steps>
+      <Step title="Validate important events">
+        Add validation for signup, form submit, checkout, payment, and purchase events.
+      </Step>
+
+      <Step title="Check suspicious sources">
+        Review traffic sources, referrers, campaigns, IP patterns, and device patterns.
+      </Step>
+
+      <Step title="Block invalid patterns">
+        Filter traffic from known bot sources, invalid user agents, or suspicious repeated sessions.
+      </Step>
+    </Steps>
+  </Tab>
+
+</Tabs>
+
+---
+
+## Recommended bot filtering rules
+
+Use these checks to separate real users from unwanted traffic.
+
+| Check | What to detect | Recommended action |
+| --- | --- | --- |
+| User agent | Headless browsers, crawlers, automation tools | Mark as bot or exclude |
+| Event frequency | Too many events in a short time | Flag as suspicious |
+| Session pattern | Very short or repeated sessions | Review or exclude |
+| IP pattern | Repeated traffic from same source | Add to filter list |
+| Environment | `development`, `staging`, `debug` | Exclude from production reports |
+| Internal users | Team, QA, admin, developer traffic | Mark as internal |
+| Invalid properties | Missing user agent, device, platform, session | Flag for review |
+
+<Warning>
+  Do not rely on only one signal to detect bots. Use multiple signals like user agent, IP pattern, event frequency, session behavior, and environment.
+</Warning>
+
+---
+
+## Suggested event structure for traffic quality
+
+Send traffic-related properties with important events so Twinalyze can detect suspicious activity more accurately.
+
+```json
+{
+  "eventName": "page_view",
+  "userId": "user_123",
+  "deviceId": "device_456",
+  "sessionId": "session_789",
+  "properties": {
+    "environment": "production",
+    "platform": "web",
+    "userAgent": "Mozilla/5.0...",
+    "referrer": "https://google.com",
+    "isInternalUser": false,
+    "isTestUser": false,
+    "source": "organic",
+    "campaign": "summer_sale"
+  }
+}

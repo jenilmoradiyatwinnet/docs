@@ -54,7 +54,9 @@
             "group": "Data",
             "pages": [
               "overview/Data/users-events-properties",
-              "overview/Data/auto-capture-events"
+              "overview/Data/auto-capture-events",
+              "overview/Data/data-control-and-quality",
+              "overview/Data/troubleshooting"
             ]
           },
           {
