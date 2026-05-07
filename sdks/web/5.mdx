@@ -1,0 +1,161 @@
+---
+title: "5"
+---
+
+This page explains how event data flows from your website or app into Twinalyze.
+
+Use the diagram below to understand the complete journey.
+
+---
+
+## Twinalyze event flow
+
+```mermaid placement="bottom-left" actions={true}
+flowchart LR
+    A[User Action] --> B[Twinalyze SDK]
+    B --> C{SDK Initialized?}
+
+    C -->|Yes| D[Create Event Payload]
+    C -->|No| E[Wait for SDK Init]
+
+    E --> B
+
+    D --> F[Add User Properties]
+    F --> G[Add Device Properties]
+    G --> H[Add Session Details]
+
+    H --> I{Network Available?}
+    I -->|Yes| J[Send Event Batch]
+    I -->|No| K[Store in Local Queue]
+
+    K --> L[Retry Later]
+    L --> I
+
+    J --> M[Twinalyze API]
+    M --> N[Validate Event]
+    N --> O{Valid Event?}
+
+    O -->|Yes| P[Store in Analytics Database]
+    O -->|No| Q[Mark as Invalid Event]
+
+    P --> R[Reports]
+    P --> S[Funnels]
+    P --> T[Retention]
+    P --> U[Ask AI]
+
+    Q --> V[Data Quality Issues]
+```
+
+---
+
+## How to read this flow
+
+<Steps>
+  <Step title="User performs an action">
+    A user opens a screen, clicks a button, starts checkout, completes payment, or triggers any important event.
+  </Step>
+  <Step title="SDK prepares event data">
+    Twinalyze SDK adds user, device, session, platform, and event properties.
+  </Step>
+  <Step title="Event is sent to Twinalyze">
+    If network is available, the event is sent to Twinalyze. If not, it can be queued and retried later.
+  </Step>
+  <Step title="Twinalyze validates data">
+    Twinalyze checks event names, required properties, missing values, and duplicate signals.
+  </Step>
+  <Step title="Reports are updated">
+    Clean events are used in reports, funnels, retention, users, and Ask AI.
+  </Step>
+</Steps>
+
+---
+
+## Data quality decision flow
+
+```mermaid placement="top-right" actions={true}
+flowchart TD
+    A[Incoming Event] --> B{Event Name Valid?}
+
+    B -->|No| C[Wrong Event Name]
+    B -->|Yes| D{Required Properties Present?}
+
+    D -->|No| E[Missing Properties]
+    D -->|Yes| F{Duplicate Event?}
+
+    F -->|Yes| G[Duplicate Event]
+    F -->|No| H{Bot or Test Traffic?}
+
+    H -->|Yes| I[Exclude from Production Reports]
+    H -->|No| J[Use in Analytics Reports]
+
+    C --> K[Data Quality Warning]
+    E --> K
+    G --> K
+    I --> L[Traffic Quality Filter]
+    J --> M[Healthy Data]
+```
+
+---
+
+## Event processing sequence
+
+```mermaid actions={true}
+sequenceDiagram
+    participant User
+    participant SDK as Twinalyze SDK
+    participant API as Twinalyze API
+    participant DB as Analytics Database
+    participant Dashboard
+
+    User->>SDK: Performs action
+    SDK->>SDK: Build event payload
+    SDK->>API: Send event batch
+    API->>API: Validate event
+    API->>DB: Store clean event
+    Dashboard->>DB: Query report data
+    DB-->>Dashboard: Return analytics result
+```
+
+---
+
+## Example event payload
+
+```json
+{
+  "eventName": "checkout_started",
+  "userId": "user_123",
+  "deviceId": "device_456",
+  "sessionId": "session_789",
+  "properties": {
+    "cartValue": 2499,
+    "currency": "INR",
+    "itemCount": 3,
+    "platform": "web",
+    "environment": "production"
+  }
+}
+```
+
+<Tip>
+  Mermaid diagrams are useful for SDK setup, event flow, backend architecture, data quality, and onboarding documentation
+</Tip>
+
+<Tree />
+
+<Tabs>
+  <Tab title="Tab 1">
+    <Steps>
+      <Step>
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Tab 2">
+  </Tab>
+</Tabs>
+
+<ResponseExample>
+
+```text filename
+```
+
+</ResponseExample>

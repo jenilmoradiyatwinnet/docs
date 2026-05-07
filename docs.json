@@ -37,7 +37,6 @@
             "pages": [
               "overview/introduction",
               "overview/pricing",
-              "overview/subscription",
               "overview/dashboard-tour"
             ]
           },
@@ -257,3 +256,4 @@
     "css": "custom.css"
   }
 }
+
