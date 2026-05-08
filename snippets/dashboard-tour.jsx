@@ -313,10 +313,20 @@ export const DashboardTour = () => {
 
       {/* Header */}
       <div className="mb-6 sm:mb-7">
+        <div className="mb-2 text-sm font-semibold text-blue-600">
+          Getting Started
+        </div>
+
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
-            Dashboard
-          </h1>
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+              Dashboard
+            </h1>
+
+            <p className="mt-3 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+              Explore the Twinalyze dashboard step by step.
+            </p>
+          </div>
 
           <a
             href="https://sandbox.twinalyze.com/organizations"
@@ -336,10 +346,6 @@ export const DashboardTour = () => {
             </svg>
           </a>
         </div>
-
-        <p className="mt-3 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
-          Explore the Twinalyze dashboard step by step.
-        </p>
       </div>
 
       {/* Desktop / Tablet navbar */}
