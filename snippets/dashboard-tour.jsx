@@ -1,516 +1,490 @@
+import { useEffect, useRef, useState } from "react"
+
 export const DashboardTour = () => {
+  const navbarRef = useRef(null)
+
   const sections = [
     {
       id: "home",
       title: "Home",
-      icon: "⌂",
+      description:
+        "Get a clear starting point for your dashboard with setup shortcuts and quick access to key sections.",
       images: [
         {
           src: "/images/Dashboard/Dashboard.PNG",
           title: "Home",
-          caption: "View the main dashboard overview.",
+          caption:
+            "View your dashboard overview, setup status, project shortcuts, and quick links to continue configuration.",
         },
       ],
     },
     {
-      id: "realtime-users",
-      title: "Realtime Users",
-      icon: "◉",
+      id: "realtime-user",
+      title: "Realtime User",
+      description:
+        "Monitor live users, active sessions, and current activity happening across your app or website.",
       images: [
         {
           src: "/images/Dashboard/Dashboard_realtime_2.PNG",
-          title: "Realtime Users",
-          caption: "Track users who are currently active on your website or app.",
+          title: "Realtime User",
+          caption:
+            "Track users who are active right now, see live activity, and understand current product usage instantly.",
         },
       ],
     },
     {
       id: "product-overview",
       title: "Product Overview",
-      icon: "▥",
+      description:
+        "Understand product health, performance, usage trends, reports, and system-level insights from one place.",
       images: [
+        {
+          src: "/images/Dashboard/Dashboard_3_product_overview_1.PNG",
+          title: "Product Overview",
+          caption:
+            "See product-level performance, active users, retention users, session duration, country data, and usage summaries.",
+        },
         {
           src: "/images/Dashboard/Dashboard_3_System_Insights_2.PNG",
           title: "System Insights",
-          caption: "Understand system insights from your dashboard.",
+          caption:
+            "Analyze device, operating system, app version, browser, and technical performance to understand system behavior.",
         },
         {
           src: "/images/Dashboard/Dashboard_3_Repots_3.PNG",
           title: "Reports",
-          caption: "View product overview reports and summaries.",
-        },
-        {
-          src: "/images/Dashboard/Dashboard_3_advanceReport_funnel_1.PNG",
-          title: "Advance Report",
-          caption: "Explore advanced product overview reporting.",
+          caption:
+            "Create and review reports for product usage, events, behavior trends, and business performance insights.",
         },
       ],
     },
     {
       id: "users",
       title: "Users",
-      icon: "●",
+      description:
+        "Analyze users, page behavior, engagement, retention, and growth across your product lifecycle.",
       images: [
+        {
+          src: "/images/Dashboard/Dashboard_4_users_1.PNG",
+          title: "Users",
+          caption:
+            "View user lists, user details, sessions, devices, activity history, and important user-level analytics.",
+        },
         {
           src: "/images/Dashboard/Dashboard_4_-page_insight_2.PNG",
           title: "Page Insights",
-          caption: "Understand page-level user activity and insights.",
+          caption:
+            "Understand page views, page activity, user movement, popular pages, and page-level performance insights.",
         },
         {
           src: "/images/Dashboard/Dashboard_4_User_userEngagement_3.PNG",
           title: "User Engagement",
-          caption: "Review how users engage with your product.",
+          caption:
+            "Measure how users interact with screens, pages, events, features, and important product actions.",
         },
         {
           src: "/images/Dashboard/Dashboard_4_user_userRetention_4.PNG",
           title: "User Retention",
-          caption: "Analyze user retention over time.",
+          caption:
+            "Track how many users return after first use and compare retention across selected time periods.",
         },
         {
           src: "/images/Dashboard/DashBoard_4_User_User Growth_5.PNG",
           title: "User Growth",
-          caption: "Measure growth and user trends.",
+          caption:
+            "Monitor new users, active users, returning users, and overall user growth trends over time.",
         },
       ],
     },
     {
       id: "ad",
       title: "Ad",
-      icon: "◀",
+      description:
+        "Track advertising performance, revenue, failures, impressions, clicks, and campaign-level results.",
       images: [
         {
           src: "/images/Dashboard/DashBoard_5_Ad_AdReport_1.PNG",
           title: "Ad Report",
-          caption: "View ad reports and performance metrics.",
+          caption:
+            "View ad impressions, clicks, revenue, fill rate, campaign performance, and monetization results.",
         },
         {
           src: "/images/Dashboard/Dashboard_5_a_AdFailureInsight_3.PNG",
           title: "Ad Failure Insights",
-          caption: "Analyze ad failure insights and issues.",
+          caption:
+            "Find ad loading failures, failed impressions, network issues, and problems affecting ad revenue.",
         },
       ],
     },
     {
       id: "notification",
       title: "Notification",
-      icon: "◆",
+      description:
+        "Create, manage, schedule, target, and analyze notification campaigns for user engagement.",
       images: [
         {
           src: "/images/Dashboard/Dashboard_6_notification_1.PNG",
           title: "Notification",
-          caption: "Create and manage notifications.",
+          caption:
+            "Create notifications, configure message content, select users, and prepare engagement campaigns.",
         },
         {
           src: "/images/Dashboard/Dashboard_6_notification_notificationCampaign_2.PNG",
           title: "Notification Campaign",
-          caption: "Manage notification campaigns.",
+          caption:
+            "Manage campaign lists, campaign status, schedule time, audience targeting, and campaign actions.",
         },
         {
           src: "/images/Dashboard/Dashboard_6_notification_notificationReportList_3.PNG",
           title: "Notification Report List",
-          caption: "View notification reports and delivery data.",
+          caption:
+            "Review delivery, opens, clicks, failed notifications, campaign reports, and engagement performance.",
         },
       ],
     },
     {
       id: "research",
       title: "Research",
-      icon: "◒",
+      description:
+        "Explore market trends, country insights, store performance, and custom listing opportunities.",
       images: [
         {
           src: "/images/Dashboard/Dashboard_7_Research_MarketTrends_1.PNG",
           title: "Market Trends",
-          caption: "Explore market trends and top opportunities.",
-        },
-        {
-          src: "/images/Dashboard/Dashboard_7_research_CountryStore.PNG",
-          title: "Country Store",
-          caption: "See country and store related research data.",
+          caption:
+            "Analyze market movement, category trends, top opportunities, and regional demand patterns.",
         },
         {
           src: "/images/Dashboard/Dashboard_7_Research_CountryDetails_2.PNG",
           title: "Country Details",
-          caption: "Review country-level details and metrics.",
+          caption:
+            "Review country-level user behavior, store data, traffic quality, and market performance details.",
         },
         {
           src: "/images/Dashboard/Dashboard_7_Research_CustomStoreListing_3.PNG",
           title: "Custom Store Listing",
-          caption: "View custom store listing research data.",
+          caption:
+            "Track custom store listings, visibility, traffic, ranking opportunities, and listing performance.",
         },
       ],
     },
     {
       id: "data",
       title: "Data",
-      icon: "▤",
+      description:
+        "Manage events, properties, captured data, visibility, and tracking configuration in one place.",
       images: [
         {
           src: "/images/Dashboard/Dashboard_8_Data_Events_1.PNG",
           title: "Events",
-          caption: "View all tracked events and event details.",
+          caption:
+            "View tracked events, event names, sources, auto/manual tracking status, visibility, and event details.",
         },
         {
           src: "/images/Dashboard/Dashboard_8_Data_Properties_2.PNG",
           title: "Properties",
-          caption: "View user, device, and event properties.",
+          caption:
+            "Manage user properties, device properties, event properties, and captured analytics attributes.",
         },
       ],
     },
     {
       id: "setting",
       title: "Setting",
-      icon: "⚙",
+      description:
+        "Manage project settings, profile details, organization details, users, roles, and permissions.",
       images: [
         {
+          src: "/images/Dashboard/Dashboard_9_ProjectSetting_1.PNG",
+          title: "Project Setting",
+          caption:
+            "Update project name, logo, API keys, platform details, Firebase key, and project configuration.",
+        },
+        {
           src: "/images/Dashboard/Dashboard_11_settings_ProfileDetails_1.PNG",
-          title: "Manage Profile",
-          caption: "Manage profile details and account settings.",
+          title: "Profile Details",
+          caption:
+            "Manage profile information, personal details, account settings, and user preferences.",
         },
         {
           src: "/images/Dashboard/Dashboard_11_settings_Organization_2.PNG",
-          title: "Users And Permissions",
-          caption: "Manage users, roles, and permissions.",
+          title: "Organization",
+          caption:
+            "Manage organization information, team members, users, roles, access, and permissions.",
         },
       ],
     },
   ]
 
-  const [current, setCurrent] = useState({
-    sectionIndex: 0,
-    imageIndex: 0,
-  })
+  const [activeSectionIndex, setActiveSectionIndex] = useState(0)
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
 
-  const [expandedSectionIndex, setExpandedSectionIndex] = useState(null)
-
-  const activeSectionIndex = current.sectionIndex
-  const activeImageIndex = current.imageIndex
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(false)
 
   const activeSection = sections[activeSectionIndex]
-  const images = activeSection.images
-  const activeImage = images[activeImageIndex]
+  const activeImage = activeSection.images[activeImageIndex]
 
-  const openSection = (sectionIndex) => {
-    const hasDropdown = sections[sectionIndex].images.length > 1
-    const isSameSection = sectionIndex === activeSectionIndex
+  const updateNavArrows = () => {
+    if (!navbarRef.current) return
 
-    if (!hasDropdown) {
-      setCurrent({
-        sectionIndex,
-        imageIndex: 0,
-      })
-      setExpandedSectionIndex(null)
-      return
-    }
+    const el = navbarRef.current
+    const maxScrollLeft = el.scrollWidth - el.clientWidth
 
-    if (isSameSection) {
-      setExpandedSectionIndex((prev) =>
-        prev === sectionIndex ? null : sectionIndex
-      )
-      return
-    }
-
-    setCurrent({
-      sectionIndex,
-      imageIndex: 0,
-    })
-
-    setExpandedSectionIndex(sectionIndex)
+    setCanScrollLeft(el.scrollLeft > 4)
+    setCanScrollRight(maxScrollLeft > 4 && el.scrollLeft < maxScrollLeft - 4)
   }
 
-  const openImage = (sectionIndex, imageIndex) => {
-    setCurrent({
-      sectionIndex,
-      imageIndex,
-    })
+  useEffect(() => {
+    updateNavArrows()
 
-    setExpandedSectionIndex(sectionIndex)
+    const el = navbarRef.current
+    if (!el) return
+
+    el.addEventListener("scroll", updateNavArrows)
+    window.addEventListener("resize", updateNavArrows)
+
+    const timer = window.setTimeout(updateNavArrows, 150)
+
+    return () => {
+      el.removeEventListener("scroll", updateNavArrows)
+      window.removeEventListener("resize", updateNavArrows)
+      window.clearTimeout(timer)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.setTimeout(updateNavArrows, 80)
+  }, [activeSectionIndex])
+
+  const openSection = (index) => {
+    setActiveSectionIndex(index)
+    setActiveImageIndex(0)
+  }
+
+  const handleMobileSectionChange = (event) => {
+    openSection(Number(event.target.value))
   }
 
   const goNext = () => {
-    const currentImages = sections[activeSectionIndex].images
-
-    if (activeImageIndex < currentImages.length - 1) {
-      setCurrent({
-        sectionIndex: activeSectionIndex,
-        imageIndex: activeImageIndex + 1,
-      })
+    if (activeImageIndex < activeSection.images.length - 1) {
+      setActiveImageIndex((prev) => prev + 1)
       return
     }
 
     const nextSectionIndex =
       activeSectionIndex === sections.length - 1 ? 0 : activeSectionIndex + 1
 
-    setCurrent({
-      sectionIndex: nextSectionIndex,
-      imageIndex: 0,
-    })
-
-    if (sections[nextSectionIndex].images.length > 1) {
-      setExpandedSectionIndex(nextSectionIndex)
-    } else {
-      setExpandedSectionIndex(null)
-    }
+    setActiveSectionIndex(nextSectionIndex)
+    setActiveImageIndex(0)
   }
 
-  const goPrevious = () => {
+  const goPrev = () => {
     if (activeImageIndex > 0) {
-      setCurrent({
-        sectionIndex: activeSectionIndex,
-        imageIndex: activeImageIndex - 1,
-      })
+      setActiveImageIndex((prev) => prev - 1)
       return
     }
 
-    const previousSectionIndex =
+    const prevSectionIndex =
       activeSectionIndex === 0 ? sections.length - 1 : activeSectionIndex - 1
 
-    const previousImages = sections[previousSectionIndex].images
-
-    setCurrent({
-      sectionIndex: previousSectionIndex,
-      imageIndex: previousImages.length - 1,
-    })
-
-    if (sections[previousSectionIndex].images.length > 1) {
-      setExpandedSectionIndex(previousSectionIndex)
-    } else {
-      setExpandedSectionIndex(null)
-    }
+    setActiveSectionIndex(prevSectionIndex)
+    setActiveImageIndex(sections[prevSectionIndex].images.length - 1)
   }
 
-  const renderSectionButton = (section, sectionIndex, isMobile = false) => {
-    const isActive = sectionIndex === activeSectionIndex
-    const hasDropdown = section.images.length > 1
-    const isExpanded = expandedSectionIndex === sectionIndex
+  const scrollNavbar = (direction) => {
+    if (!navbarRef.current) return
 
-    return (
-      <button
-        key={section.id}
-        type="button"
-        onClick={() => openSection(sectionIndex)}
-        className={
-          isMobile
-            ? "flex shrink-0 items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium transition"
-            : "flex w-full items-center justify-between gap-2 rounded-xl px-2.5 py-2.5 text-left text-sm font-medium transition"
-        }
-        style={{
-          backgroundColor: isActive ? "#2563EB" : isMobile ? "#ffffff" : "transparent",
-          color: isActive ? "#ffffff" : "#374151",
-          border: isMobile
-            ? isActive
-              ? "1px solid #2563EB"
-              : "1px solid #E5E7EB"
-            : "none",
-        }}
-      >
-        <span className="flex items-center gap-2">
-          <span
-            className="flex h-7 w-7 items-center justify-center rounded-lg text-xs"
-            style={{
-              backgroundColor: isActive
-                ? "rgba(255,255,255,0.18)"
-                : "rgba(107,114,128,0.12)",
-            }}
-          >
-            {section.icon}
-          </span>
+    navbarRef.current.scrollBy({
+      left: direction === "left" ? -240 : 240,
+      behavior: "smooth",
+    })
 
-          <span className="leading-5">{section.title}</span>
-        </span>
-
-        {hasDropdown && (
-          <span
-            style={{
-              opacity: isActive ? 1 : 0.55,
-              transform: isExpanded ? "rotate(90deg)" : "rotate(0deg)",
-              transition: "0.2s ease",
-            }}
-          >
-            ›
-          </span>
-        )}
-      </button>
-    )
+    window.setTimeout(updateNavArrows, 250)
   }
 
   return (
-    <div
-      className="not-prose w-full rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5 lg:p-6"
-      style={{
-        maxWidth: "960px",
-      }}
-    >
-      <div className="mb-5">
-        <p className="text-xs font-semibold text-gray-500 sm:text-sm">
-          Twinalyze Dashboard Tour
-        </p>
+    <div className="not-prose mx-auto w-full max-w-[920px] px-4 py-6 sm:px-5 sm:py-8">
+      <style>{`
+        .dashboard-tour-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
 
-        <h2 className="mt-1 text-2xl font-bold tracking-tight text-gray-950 sm:text-3xl">
-          Explore the dashboard step by step
-        </h2>
+      {/* Header */}
+      <div className="mb-6 sm:mb-7">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+            Dashboard
+          </h1>
 
-        <p className="mt-2 text-sm text-gray-600 sm:text-base">
-          Select any dashboard section and use Next to view each screenshot.
-        </p>
-      </div>
+          <a
+            href="https://sandbox.twinalyze.com/organizations"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-10 w-fit items-center gap-2 rounded-lg bg-[#2557E8] px-4 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-[#1D4ED8] hover:text-white"
+          >
+            Demo Account
 
-      {/* Mobile Topbar */}
-      <div className="mb-4 block rounded-2xl border border-gray-200 bg-gray-50 p-2 md:hidden">
-        <div className="flex gap-2 overflow-x-auto pb-1">
-          {sections.map((section, sectionIndex) =>
-            renderSectionButton(section, sectionIndex, true)
-          )}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              className="h-3.5 w-3.5 fill-current"
+              aria-hidden="true"
+            >
+              <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z" />
+            </svg>
+          </a>
         </div>
 
-        {expandedSectionIndex !== null &&
-          sections[expandedSectionIndex].images.length > 1 && (
-            <div className="mt-3 flex flex-wrap gap-2 border-t border-gray-200 pt-3">
-              {sections[expandedSectionIndex].images.map((image, imageIndex) => {
-                const isImageActive =
-                  expandedSectionIndex === activeSectionIndex &&
-                  imageIndex === activeImageIndex
-
-                return (
-                  <button
-                    key={sections[expandedSectionIndex].id + "-" + imageIndex}
-                    type="button"
-                    onClick={() => openImage(expandedSectionIndex, imageIndex)}
-                    className="rounded-full px-3 py-1.5 text-sm font-medium transition"
-                    style={{
-                      backgroundColor: isImageActive ? "#2563EB" : "#ffffff",
-                      color: isImageActive ? "#ffffff" : "#374151",
-                      border: isImageActive
-                        ? "1px solid #2563EB"
-                        : "1px solid #E5E7EB",
-                    }}
-                  >
-                    {image.title}
-                  </button>
-                )
-              })}
-            </div>
-          )}
+        <p className="mt-3 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+          Explore the Twinalyze dashboard step by step.
+        </p>
       </div>
 
-      <div className="flex flex-col gap-5 md:flex-row">
-        {/* Tablet + Laptop Sidebar */}
-        <div className="hidden rounded-2xl border border-gray-200 bg-gray-50 p-3 md:block md:w-[190px] lg:w-[205px]">
-          <div className="space-y-1.5">
-            {sections.map((section, sectionIndex) => {
-              const hasDropdown = section.images.length > 1
-              const isExpanded = expandedSectionIndex === sectionIndex
+      {/* Desktop / Tablet navbar */}
+      <div className="mb-5 hidden border-b border-gray-200 md:block">
+        <div className="flex items-center gap-2">
+          {canScrollLeft && (
+            <button
+              type="button"
+              onClick={() => scrollNavbar("left")}
+              className="shrink-0 border-0 bg-transparent px-1 text-[26px] font-medium leading-none text-gray-400 transition hover:text-blue-600"
+              aria-label="Scroll left"
+            >
+              ‹
+            </button>
+          )}
+
+          <div
+            ref={navbarRef}
+            className="dashboard-tour-scrollbar flex flex-1 items-center gap-1 overflow-x-auto whitespace-nowrap"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
+            {sections.map((section, index) => {
+              const isActive = index === activeSectionIndex
 
               return (
-                <div key={section.id}>
-                  {renderSectionButton(section, sectionIndex, false)}
+                <button
+                  key={section.id}
+                  type="button"
+                  onClick={() => openSection(index)}
+                  title={section.title}
+                  className="relative flex h-[48px] shrink-0 items-center justify-center border-0 bg-transparent px-4 text-center font-semibold transition"
+                  style={{
+                    fontSize: "15px",
+                    color: isActive ? "#2563EB" : "#64748B",
+                  }}
+                >
+                  <span className="leading-none">{section.title}</span>
 
-                  {isExpanded && hasDropdown && (
-                    <div className="ml-9 mt-2 space-y-2 pb-2">
-                      {section.images.map((image, imageIndex) => {
-                        const isImageActive =
-                          sectionIndex === activeSectionIndex &&
-                          imageIndex === activeImageIndex
-
-                        return (
-                          <button
-                            key={section.id + "-" + imageIndex}
-                            type="button"
-                            onClick={() => openImage(sectionIndex, imageIndex)}
-                            className="block w-full rounded-md px-1 py-1 text-left text-sm transition"
-                            style={{
-                              color: isImageActive ? "#2563EB" : "#374151",
-                              fontWeight: isImageActive ? "600" : "500",
-                            }}
-                          >
-                            {image.title}
-                          </button>
-                        )
-                      })}
-                    </div>
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 h-[2px] w-full rounded-full bg-blue-600" />
                   )}
-                </div>
+                </button>
               )
             })}
           </div>
+
+          {canScrollRight && (
+            <button
+              type="button"
+              onClick={() => scrollNavbar("right")}
+              className="shrink-0 border-0 bg-transparent px-1 text-[26px] font-medium leading-none text-gray-400 transition hover:text-blue-600"
+              aria-label="Scroll right"
+            >
+              ›
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile dropdown */}
+      <div className="mb-5 block md:hidden">
+        <label className="mb-2 block text-xs font-semibold text-gray-500">
+          Select dashboard section
+        </label>
+
+        <select
+          value={activeSectionIndex}
+          onChange={handleMobileSectionChange}
+          className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-800 outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+        >
+          {sections.map((section, index) => (
+            <option key={section.id} value={index}>
+              {section.title}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Inner tab buttons */}
+      {activeSection.images.length > 1 && (
+        <div className="mb-4 flex flex-wrap gap-2">
+          {activeSection.images.map((image, index) => {
+            const isActive = index === activeImageIndex
+
+            return (
+              <button
+                key={image.title}
+                type="button"
+                onClick={() => setActiveImageIndex(index)}
+                className="inline-flex h-[30px] items-center justify-center rounded-full border px-3 font-semibold leading-none transition"
+                style={{
+                  fontSize: "13px",
+                  borderColor: isActive ? "#2563EB" : "#D1D5DB",
+                  backgroundColor: isActive ? "#EFF6FF" : "#FFFFFF",
+                  color: isActive ? "#2563EB" : "#64748B",
+                }}
+              >
+                {image.title}
+              </button>
+            )
+          })}
+        </div>
+      )}
+
+      {/* Content + screenshot arrows */}
+      <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div className="min-w-0">
+          <p className="text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
+            {activeImage.caption || activeSection.description}
+          </p>
         </div>
 
-        <div className="min-w-0 flex-1">
-          <div className="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
-            <div>
-              <p className="text-sm font-semibold text-blue-600 sm:text-base">
-                {activeSection.title}
-              </p>
+        <div className="flex shrink-0 items-center gap-3">
+          <button
+            type="button"
+            onClick={goPrev}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-lg text-gray-500 transition hover:border-blue-300 hover:text-blue-600"
+            aria-label="Previous screenshot"
+          >
+            ‹
+          </button>
 
-              <h3 className="mt-1 text-xl font-bold text-gray-950 sm:text-2xl">
-                {activeImage.title}
-              </h3>
+          <button
+            type="button"
+            onClick={goNext}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-lg text-gray-500 transition hover:border-blue-300 hover:text-blue-600"
+            aria-label="Next screenshot"
+          >
+            ›
+          </button>
+        </div>
+      </div>
 
-              <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">
-                {activeImage.caption}
-              </p>
-            </div>
-
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-sm font-semibold text-gray-700 sm:h-12 sm:w-12 sm:text-base">
-              {activeImageIndex + 1} / {images.length}
-            </div>
-          </div>
-
-          <div className="relative flex min-h-[240px] items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 sm:min-h-[340px] md:min-h-[390px] lg:min-h-[430px]">
-            <img
-              key={activeSection.id + "-" + activeImageIndex}
-              src={activeImage.src}
-              alt={activeImage.title}
-              className="h-full w-full object-contain"
-              style={{
-                maxHeight: "560px",
-              }}
-            />
-          </div>
-
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-            <button
-              type="button"
-              onClick={goPrevious}
-              className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-md transition hover:scale-105"
-            >
-              ‹ Prev
-            </button>
-
-            {images.length > 1 && (
-              <div className="flex flex-wrap items-center justify-center gap-2">
-                {images.map((image, index) => {
-                  const isActive = index === activeImageIndex
-
-                  return (
-                    <button
-                      key={activeSection.id + "-dot-" + index}
-                      type="button"
-                      onClick={() =>
-                        setCurrent({
-                          sectionIndex: activeSectionIndex,
-                          imageIndex: index,
-                        })
-                      }
-                      className="h-2.5 rounded-full transition sm:h-3"
-                      style={{
-                        width: isActive ? "34px" : "11px",
-                        backgroundColor: isActive ? "#2563EB" : "#D1D5DB",
-                      }}
-                      aria-label={`Open screenshot ${index + 1}`}
-                    />
-                  )
-                })}
-              </div>
-            )}
-
-            <button
-              type="button"
-              onClick={goNext}
-              className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:scale-105"
-            >
-              Next ›
-            </button>
-          </div>
+      {/* Image */}
+      <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm">
+        <div className="flex h-[220px] items-center justify-center bg-white sm:h-[300px] lg:h-[353px]">
+          <img
+            key={`${activeSection.id}-${activeImageIndex}`}
+            src={activeImage.src}
+            alt={activeImage.title}
+            className="h-full w-full object-contain"
+          />
         </div>
       </div>
     </div>
