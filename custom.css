@@ -237,6 +237,31 @@ img[src*="Project_settings"] {
 
 
 
+/* Top navbar tabs */
+header nav a {
+  padding: 8px 14px !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+/* Hover effect */
+header nav a:hover {
+  background: #eff6ff !important;
+  color: #2563EB !important;
+}
+
+/* Active tab */
+header nav a[aria-current="page"] {
+  background: #2563EB !important;
+  color: white !important;
+}
+
+/* Header blur effect */
+header {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.8) !important;
+}
 
 
 
