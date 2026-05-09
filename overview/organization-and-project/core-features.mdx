@@ -34,270 +34,297 @@ Twinalyze gives product, marketing, and growth teams a clear view of user behavi
 ---
 
 
-
 ## Core feature details
 
-<Tabs>
-  <Tab title="Analytics">
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-          Real-time visibility
-        </p>
-
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
-          Real-Time Analytics
-        </h2>
-
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-          See what is happening inside your product right now. Track live activity, sessions, screens, and key metrics in real time.
-        </p>
-      </div>
-
-      <div className="divide-y divide-slate-100">
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Live Users</div>
-          <div className="text-sm leading-6 text-slate-600">
-            See how many users are active at the current moment.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Sessions</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Track active sessions and total user sessions.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Screen Views</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Understand which screens or pages users visit most.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Dashboards</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Monitor important metrics instantly in one dashboard.
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-blue-100 bg-blue-50 px-6 py-4 text-sm leading-6 text-blue-800">
-        Best for live traffic monitoring, campaign impact, app usage, and sudden activity changes.
-      </div>
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 px-6 py-7">
+    <div className="inline-flex rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-200">
+      Interactive feature overview
     </div>
-  </Tab>
 
-  <Tab title="Tracking">
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-purple-50 to-white px-6 py-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-purple-700">
-          Behavior intelligence
-        </p>
+    <h2 className="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-white md:text-4xl">
+      Understand users, track actions, improve engagement, and grow with better insights.
+    </h2>
 
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
-          User &amp; Event Tracking
-        </h2>
+    <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+      Click any feature below to see what it does, what it tracks, and how your team can use it.
+    </p>
+  </div>
 
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-          Understand what users do inside your product. Track actions, journeys, screens, and custom events.
-        </p>
-      </div>
+  <div className="grid border-b border-slate-200 bg-slate-50 px-6 py-4 text-xs font-semibold uppercase tracking-wide text-slate-500 md:grid-cols-[80px_220px_1fr_120px]">
+    <div>No.</div>
+    <div>Feature</div>
+    <div>What it helps with</div>
+    <div className="hidden md:block">Open</div>
+  </div>
 
-      <div className="divide-y divide-slate-100">
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Automatic Event Tracking</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Capture important user actions automatically with the SDK.
-          </div>
+  <div className="divide-y divide-slate-200">
+    <details open className="group">
+      <summary className="grid cursor-pointer list-none items-center gap-3 px-6 py-5 transition hover:bg-blue-50 md:grid-cols-[80px_220px_1fr_120px]">
+        <div className="text-sm font-bold text-blue-700">01</div>
+
+        <div>
+          <div className="text-sm font-semibold text-slate-950">Real-Time Analytics</div>
+          <div className="mt-1 text-xs text-blue-700">Live visibility</div>
         </div>
 
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">User Journeys</div>
-          <div className="text-sm leading-6 text-slate-600">
-            See the path users follow from entry to conversion.
-          </div>
+        <div className="text-sm leading-6 text-slate-600">
+          See live users, sessions, screen views, and real-time dashboard activity.
         </div>
 
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Screen Tracking</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Track app screens, web pages, and navigation flow.
-          </div>
+        <div className="text-sm font-medium text-blue-700">
+          <span className="group-open:hidden">View ↓</span>
+          <span className="hidden group-open:inline">Hide ↑</span>
         </div>
+      </summary>
 
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Custom Events</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Track actions like signup, add to cart, checkout, payment failed, and purchase.
+      <div className="bg-blue-50 px-6 pb-6 pt-1">
+        <div className="grid gap-5 md:grid-cols-[220px_1fr]">
+          <div>
+            <div className="text-sm font-semibold text-blue-900">Best for</div>
+            <p className="mt-2 text-sm leading-6 text-blue-800">
+              Live traffic monitoring, campaign impact, app usage, and sudden activity changes.
+            </p>
           </div>
-        </div>
-      </div>
 
-      <div className="border-t border-purple-100 bg-purple-50 px-6 py-4 text-sm leading-6 text-purple-800">
-        Best for understanding user behavior, engagement, drop-offs, and valuable actions.
-      </div>
-    </div>
-  </Tab>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="border-l-2 border-blue-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Live Users</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">See active users right now.</p>
+            </div>
 
-  <Tab title="Ads">
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-green-50 to-white px-6 py-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-green-700">
-          Revenue performance
-        </p>
+            <div className="border-l-2 border-blue-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Sessions</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Track active and total user sessions.</p>
+            </div>
 
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
-          Ads Analytics
-        </h2>
+            <div className="border-l-2 border-blue-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Screen Views</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Know which screens or pages users visit.</p>
+            </div>
 
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-          Measure ad performance clearly. Track impressions, clicks, revenue, failures, and missed revenue opportunities.
-        </p>
-      </div>
-
-      <div className="divide-y divide-slate-100">
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Impressions</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Track how many times ads are shown to users.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Clicks</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Measure how many users click on ads.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Revenue</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Monitor ad earnings and monetization trends.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[180px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Failures</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Detect failed ad loads and missed revenue.
+            <div className="border-l-2 border-blue-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Real-Time Dashboards</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Monitor key metrics instantly.</p>
+            </div>
           </div>
         </div>
       </div>
+    </details>
 
-      <div className="border-t border-green-100 bg-green-50 px-6 py-4 text-sm leading-6 text-green-800">
-        Best for improving fill rate, reducing failures, and optimizing ad revenue.
-      </div>
-    </div>
-  </Tab>
+    <details className="group">
+      <summary className="grid cursor-pointer list-none items-center gap-3 px-6 py-5 transition hover:bg-purple-50 md:grid-cols-[80px_220px_1fr_120px]">
+        <div className="text-sm font-bold text-purple-700">02</div>
 
-  <Tab title="Automation">
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-orange-50 to-white px-6 py-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-orange-700">
-          Engagement engine
-        </p>
-
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
-          Push Notifications &amp; Automation
-        </h2>
-
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-          Send the right message to the right users. Create scheduled, multilingual, and automated campaigns.
-        </p>
-      </div>
-
-      <div className="divide-y divide-slate-100">
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Scheduled Notifications</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Schedule campaigns for a specific date and time.
-          </div>
+        <div>
+          <div className="text-sm font-semibold text-slate-950">User &amp; Event Tracking</div>
+          <div className="mt-1 text-xs text-purple-700">Behavior intelligence</div>
         </div>
 
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Multilingual Campaigns</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Send campaigns in different languages for different user groups.
-          </div>
+        <div className="text-sm leading-6 text-slate-600">
+          Understand what users do, where they go, and which actions create value.
         </div>
 
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Automated Messaging</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Trigger messages based on user behavior or campaign rules.
-          </div>
+        <div className="text-sm font-medium text-purple-700">
+          <span className="group-open:hidden">View ↓</span>
+          <span className="hidden group-open:inline">Hide ↑</span>
         </div>
+      </summary>
 
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[220px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Engagement Tracking</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Track delivery, opens, clicks, and campaign response.
+      <div className="bg-purple-50 px-6 pb-6 pt-1">
+        <div className="grid gap-5 md:grid-cols-[220px_1fr]">
+          <div>
+            <div className="text-sm font-semibold text-purple-900">Best for</div>
+            <p className="mt-2 text-sm leading-6 text-purple-800">
+              User journeys, screen flow, custom events, engagement insights, and drop-off analysis.
+            </p>
           </div>
-        </div>
-      </div>
 
-      <div className="border-t border-orange-100 bg-orange-50 px-6 py-4 text-sm leading-6 text-orange-800">
-        Best for re-engaging inactive users and improving campaign performance.
-      </div>
-    </div>
-  </Tab>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="border-l-2 border-purple-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Automatic Event Tracking</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Capture important user actions automatically.</p>
+            </div>
 
-  <Tab title="Reports">
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-pink-50 to-white px-6 py-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-pink-700">
-          Growth insights
-        </p>
+            <div className="border-l-2 border-purple-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">User Journeys</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">See the path users follow from entry to conversion.</p>
+            </div>
 
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
-          Funnels, Retention &amp; Reports
-        </h2>
+            <div className="border-l-2 border-purple-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Screen Tracking</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Track app screens, web pages, and navigation flow.</p>
+            </div>
 
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-          Understand conversion, repeat usage, cohorts, custom reports, and user segments.
-        </p>
-      </div>
-
-      <div className="divide-y divide-slate-100">
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[240px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Conversion Funnels</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Find where users convert and where they drop off.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[240px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Retention Analytics</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Measure how often users return after first use or key events.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[240px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Cohort Analysis</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Group users by date, event, behavior, or property.
-          </div>
-        </div>
-
-        <div className="grid gap-3 px-6 py-5 md:grid-cols-[240px_1fr]">
-          <div className="text-sm font-semibold text-slate-950">Reports &amp; Segmentation</div>
-          <div className="text-sm leading-6 text-slate-600">
-            Build reports using users, events, platforms, campaigns, countries, and filters.
+            <div className="border-l-2 border-purple-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Custom Events</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Track signup, add to cart, checkout, payment failed, and purchase.</p>
+            </div>
           </div>
         </div>
       </div>
+    </details>
 
-      <div className="border-t border-pink-100 bg-pink-50 px-6 py-4 text-sm leading-6 text-pink-800">
-        Best for finding drop-offs, measuring retention, comparing cohorts, and making better product decisions.
+    <details className="group">
+      <summary className="grid cursor-pointer list-none items-center gap-3 px-6 py-5 transition hover:bg-green-50 md:grid-cols-[80px_220px_1fr_120px]">
+        <div className="text-sm font-bold text-green-700">03</div>
+
+        <div>
+          <div className="text-sm font-semibold text-slate-950">Ads Analytics</div>
+          <div className="mt-1 text-xs text-green-700">Revenue performance</div>
+        </div>
+
+        <div className="text-sm leading-6 text-slate-600">
+          Measure ad impressions, clicks, revenue, failures, and missed opportunities.
+        </div>
+
+        <div className="text-sm font-medium text-green-700">
+          <span className="group-open:hidden">View ↓</span>
+          <span className="hidden group-open:inline">Hide ↑</span>
+        </div>
+      </summary>
+
+      <div className="bg-green-50 px-6 pb-6 pt-1">
+        <div className="grid gap-5 md:grid-cols-[220px_1fr]">
+          <div>
+            <div className="text-sm font-semibold text-green-900">Best for</div>
+            <p className="mt-2 text-sm leading-6 text-green-800">
+              Improving fill rate, reducing ad failures, and optimizing ad revenue.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="border-l-2 border-green-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Impressions</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Track how many times ads are shown.</p>
+            </div>
+
+            <div className="border-l-2 border-green-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Clicks</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Measure how many users click on ads.</p>
+            </div>
+
+            <div className="border-l-2 border-green-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Revenue</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Monitor ad earnings clearly.</p>
+            </div>
+
+            <div className="border-l-2 border-green-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Failures</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Detect failed ad loads and missed revenue.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </Tab>
-</Tabs>
+    </details>
+
+    <details className="group">
+      <summary className="grid cursor-pointer list-none items-center gap-3 px-6 py-5 transition hover:bg-orange-50 md:grid-cols-[80px_220px_1fr_120px]">
+        <div className="text-sm font-bold text-orange-700">04</div>
+
+        <div>
+          <div className="text-sm font-semibold text-slate-950">Push Notifications &amp; Automation</div>
+          <div className="mt-1 text-xs text-orange-700">Engagement engine</div>
+        </div>
+
+        <div className="text-sm leading-6 text-slate-600">
+          Send scheduled, multilingual, and automated campaigns to the right users.
+        </div>
+
+        <div className="text-sm font-medium text-orange-700">
+          <span className="group-open:hidden">View ↓</span>
+          <span className="hidden group-open:inline">Hide ↑</span>
+        </div>
+      </summary>
+
+      <div className="bg-orange-50 px-6 pb-6 pt-1">
+        <div className="grid gap-5 md:grid-cols-[220px_1fr]">
+          <div>
+            <div className="text-sm font-semibold text-orange-900">Best for</div>
+            <p className="mt-2 text-sm leading-6 text-orange-800">
+              Re-engaging inactive users, improving campaign performance, and increasing retention.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="border-l-2 border-orange-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Scheduled Notifications</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Schedule campaigns for a specific date and time.</p>
+            </div>
+
+            <div className="border-l-2 border-orange-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Multilingual Campaigns</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Send campaigns in different languages.</p>
+            </div>
+
+            <div className="border-l-2 border-orange-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Automated Messaging</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Trigger messages based on behavior or rules.</p>
+            </div>
+
+            <div className="border-l-2 border-orange-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Engagement Tracking</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Track delivery, opens, clicks, and campaign response.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details className="group">
+      <summary className="grid cursor-pointer list-none items-center gap-3 px-6 py-5 transition hover:bg-pink-50 md:grid-cols-[80px_220px_1fr_120px]">
+        <div className="text-sm font-bold text-pink-700">05</div>
+
+        <div>
+          <div className="text-sm font-semibold text-slate-950">Funnels, Retention &amp; Reports</div>
+          <div className="mt-1 text-xs text-pink-700">Growth insights</div>
+        </div>
+
+        <div className="text-sm leading-6 text-slate-600">
+          Analyze conversion, retention, cohorts, reports, and user segments.
+        </div>
+
+        <div className="text-sm font-medium text-pink-700">
+          <span className="group-open:hidden">View ↓</span>
+          <span className="hidden group-open:inline">Hide ↑</span>
+        </div>
+      </summary>
+
+      <div className="bg-pink-50 px-6 pb-6 pt-1">
+        <div className="grid gap-5 md:grid-cols-[220px_1fr]">
+          <div>
+            <div className="text-sm font-semibold text-pink-900">Best for</div>
+            <p className="mt-2 text-sm leading-6 text-pink-800">
+              Finding drop-offs, measuring retention, comparing cohorts, and making better product decisions.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="border-l-2 border-pink-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Conversion Funnels</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Find where users convert and where they drop off.</p>
+            </div>
+
+            <div className="border-l-2 border-pink-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Retention Analytics</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Measure how often users return after first use or key events.</p>
+            </div>
+
+            <div className="border-l-2 border-pink-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Cohort Analysis</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Group users by date, event, behavior, or property.</p>
+            </div>
+
+            <div className="border-l-2 border-pink-500 pl-4">
+              <div className="text-sm font-semibold text-slate-950">Reports &amp; Segmentation</div>
+              <p className="mt-1 text-sm leading-6 text-slate-600">Build reports using users, events, platforms, campaigns, and countries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+</div>
 ---
 
 ## Feature breakdown
