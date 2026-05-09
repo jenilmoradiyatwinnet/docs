@@ -40,6 +40,80 @@ In simple words:
 </Steps>
 
 ---
+## How they work together
+
+<div className="not-prose rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+  <div className="grid gap-4 md:grid-cols-4">
+    <div className="relative rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
+        1
+      </div>
+
+      <h3 className="text-sm font-semibold text-slate-950">
+        User visits your product
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        A user opens your website or app.
+      </p>
+
+      <div className="absolute right-[-18px] top-1/2 hidden -translate-y-1/2 text-slate-300 md:block">
+        →
+      </div>
+    </div>
+
+    <div className="relative rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
+        2
+      </div>
+
+      <h3 className="text-sm font-semibold text-slate-950">
+        User performs an action
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        The action is tracked as an event.
+      </p>
+
+      <div className="absolute right-[-18px] top-1/2 hidden -translate-y-1/2 text-slate-300 md:block">
+        →
+      </div>
+    </div>
+
+    <div className="relative rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
+        3
+      </div>
+
+      <h3 className="text-sm font-semibold text-slate-950">
+        Twinalyze adds properties
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Properties describe the event, user, device, source, or page.
+      </p>
+
+      <div className="absolute right-[-18px] top-1/2 hidden -translate-y-1/2 text-slate-300 md:block">
+        →
+      </div>
+    </div>
+
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
+        4
+      </div>
+
+      <h3 className="text-sm font-semibold text-slate-950">
+        Dashboard shows insights
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Twinalyze uses this data to show users, reports, events, and behavior insights.
+      </p>
+    </div>
+  </div>
+</div>
+---
 
 ## Simple example
 
@@ -151,19 +225,6 @@ Properties help you manage extra details connected to events.
 <Info>
   Event tells the action. Property explains the action in more detail.
 </Info>
-
----
-
-## Common event and property examples
-
-| Event | Useful properties |
-| --- | --- |
-| `page_view` | page URL, page title, referrer |
-| `click` | button text, element ID, page URL |
-| `screen_view` | screen name, screen class, app version |
-| `add_to_cart` | product name, price, quantity |
-| `payment_failed` | amount, payment method, error reason |
-| `notification_opened` | campaign name, notification ID |
 
 ---
 
