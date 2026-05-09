@@ -3,14 +3,11 @@
 ================================ */
 
 :root {
-  --twinalyze-primary: #000000;
-  --twinalyze-primary-light: #000000;
-  --twinalyze-primary-dark: #000000;
-}
-/* 
---twinalyze-primary: #2563eb;
+  --twinalyze-primary: #2563eb;
   --twinalyze-primary-light: #3b82f6;
-  --twinalyze-primary-dark: #1d4ed8; */
+  --twinalyze-primary-dark: #1d4ed8;
+}
+
 
 /* ================================
    Twinalyze Bottom Navigation
