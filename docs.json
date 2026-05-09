@@ -2,6 +2,10 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
     "css": "custom.css",
+
+  "styling": {
+    "css": ["custom.css"]
+  },
   "name": "Twinalyze",
   "icons": {
   "library": "fontawesome"
