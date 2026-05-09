@@ -263,6 +263,10 @@ header {
   background: rgba(255,255,255,0.8) !important;
 }
 
-
+/* Navbar title / brand */
+header a[href="/"] {
+  color: #2563EB !important;
+  font-weight: 700;
+}
 
 
