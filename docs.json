@@ -215,8 +215,7 @@
             "group": "Research",
             "pages": [
               "analytics/research/market-trends",
-              "analytics/research/country-store",
-               "analytics/research/country-details",
+              "analytics/research/country-store-and-details",
                 "analytics/research/custom-store-listing"
             ]
           }
