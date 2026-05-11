@@ -73,7 +73,7 @@
         ]
       },
       {
-        "tab": "SDKs",
+        "tab": "SDKs and Integrations",
         "icon": "code",
         "dropdowns": [
           {
@@ -81,39 +81,39 @@
             "icon": "code",
             "pages": [
               {
-                "group": "Android",
+                "group": "App",
                 
                 "pages": [
                   {
-                    "group": "Kotlin",
+                    "group": "Android",
                     
                     "pages": [
-                      "sdks/android/kotlin/analytics",
-                      "sdks/android/kotlin/ad-analytics"
+                      "sdks/app/android/analytics",
+                      "sdks/app/android/ad-analytics"
                     ]
                   },
                   {
-                    "group": "ios",
+                    "group": "iOS",
                    
                     "pages": [
-                      "sdks/android/ios/analytics",
-                      "sdks/android/ios/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "React Native",
-                   
-                    "pages": [
-                      "sdks/android/react-native/analytics",
-                      "sdks/android/react-native/ad-analytics"
+                      "sdks/app/ios/analytics",
+                      "sdks/app/ios/ad-analytics"
                     ]
                   },
                   {
                     "group": "Flutter",
+                   
+                    "pages": [
+                      "sdks/app/flutter/analytics",
+                      "sdks/app/flutter/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "React Native",
                 
                     "pages": [
-                      "sdks/android/flutter/analytics",
-                      "sdks/android/flutter/ad-analytics"
+                      "sdks/app/react-native/analytics",
+                      "sdks/app/react-native/ad-analytics"
                     ]
                   }
                 ]
@@ -123,69 +123,22 @@
                
                 "pages": [
                   {
-                    "group": "React",
-                  
-                    "pages": [
-                      "sdks/web/react/analytics",
-                      "sdks/web/react/ad-analytics"
-                    ]
-                  },
-                  {
                     "group": "JavaScript",
-                   
+                  
                     "pages": [
                       "sdks/web/javascript/analytics",
                       "sdks/web/javascript/ad-analytics"
                     ]
                   },
                   {
-                    "group": "React",
-                   
-                    "pages": [
-                      "sdks/web/react/analytics",
-                      "sdks/web/react/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "Npm",
-                   
-                    "pages": [
-                      "sdks/web/npm/analytics",
-                      "sdks/web/npm/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "Dart",
-                   
-                    "pages": [
-                      "sdks/web/dart/analytics",
-                      "sdks/web/dart/ad-analytics"
-                    ]
-                  },
-                  {
                     "group": "Shopify",
-                 
-                    "pages": [
-                      "sdks/web/shopify/analytics",
-                      "sdks/web/shopify/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "Wordpress",
-                    
-                    "pages": [
-                      "sdks/web/wordpress/analytics",
-                      "sdks/web/wordpress/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "Webflow",
                    
                     "pages": [
-                      "sdks/web/webflow/analytics",
-                      "sdks/web/webflow/ad-analytics"
+                      "sdks/web/Shopify/analytics",
+                      "sdks/web/Shopify/ad-analytics"
                     ]
                   }
+               
                 ]
               }
             ]
@@ -195,7 +148,7 @@
             "icon": "plug",
             "pages": [
               {
-                "group": "3rd Party Integrations",
+                "group": "Integrations",
                 "expanded": true,
                 "pages": [
                   "integrations/google-analytics-4",
