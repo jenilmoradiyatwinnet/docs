@@ -182,6 +182,24 @@
               "analytics/report",
               "analytics/ask-ai"
             ]
+          }, {
+            "group": "Dashboard",
+            "pages": [
+              "analytics/report",
+              "analytics/ask-ai"
+            ]
+          }, {
+            "group": "Dashboard",
+            "pages": [
+              "analytics/report",
+              "analytics/ask-ai"
+            ]
+          }, {
+            "group": "Dashboard",
+            "pages": [
+              "analytics/report",
+              "analytics/ask-ai"
+            ]
           }
         ]
       }
