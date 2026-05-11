@@ -144,29 +144,59 @@
               }
             ]
           },
-          {
-            "dropdown": "Integrations",
-            "icon": "plug",
-            "pages": [
-              {
-                "group": "Integrations",
-                "expanded": true,
-                "pages": [
-                  "integrations/google-analytics-4",
-                  "integrations/google-tag-manager",
-                  "integrations/firebase",
-                  "integrations/admob",
-                  "integrations/facebook-ad",
-                  "integrations/facebook-monetization-manager",
-                  "integrations/slack",
-                  "integrations/microsoft-teams",
-                  "integrations/applovin",
-                  "integrations/onesignal"
-
-                ]
-              }
-            ]
-          }
+         {
+  "dropdown": "Integrations",
+  "icon": "plug",
+  "pages": [
+    {
+      "group": "Integrations",
+      "icon": "plug",
+      "expanded": true,
+      "pages": [
+        {
+          "page": "integrations/google-analytics-4",
+          "icon": "chart-line"
+        },
+        {
+          "page": "integrations/google-tag-manager",
+          "icon": "tags"
+        },
+        {
+          "page": "integrations/firebase",
+          "icon": "fire"
+        },
+        {
+          "page": "integrations/admob",
+          "icon": "mobile-screen-button"
+        },
+        {
+          "page": "integrations/facebook-ad",
+          "icon": "bullhorn"
+        },
+        {
+          "page": "integrations/facebook-monetization-manager",
+          "icon": "dollar-sign"
+        },
+        {
+          "page": "integrations/slack",
+          "icon": "comments"
+        },
+        {
+          "page": "integrations/microsoft-teams",
+          "icon": "users"
+        },
+        {
+          "page": "integrations/applovin",
+          "icon": "rectangle-ad"
+        },
+        {
+          "page": "integrations/onesignal",
+          "icon": "bell"
+        }
+      ]
+    }
+  ]
+}
         ]
       },
       {
