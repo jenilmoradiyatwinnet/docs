@@ -234,9 +234,6 @@ img[src*="Project_settings"] {
   height: auto;
 }
 
-#table-of-contents hr,
-aside hr {
-  margin-top: 28px !important;
-  margin-bottom: 16px !important;
+#page-context-menu {
+  margin-top: 22px !important;
 }
-
