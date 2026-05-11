@@ -234,6 +234,18 @@ img[src*="Project_settings"] {
   height: auto;
 }
 
+/* Sidebar icons size */
+#sidebar svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* If SVG file icons are rendered as images */
+#sidebar img {
+  width: 18px !important;
+  height: 18px !important;
+}
+
 
 
 
