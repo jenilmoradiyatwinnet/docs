@@ -86,7 +86,7 @@
                 "pages": [
                   {
                     "group": "Android",
-                        "icon": "/sdk-icon/android.svg",
+                        "icon": "mobile-screen-button",
                     
                     "pages": [
                       "sdks/app/android/analytics",
