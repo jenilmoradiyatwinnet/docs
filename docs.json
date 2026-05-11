@@ -80,14 +80,6 @@
             "dropdown": "SDK",
             "icon": "code",
             "pages": [
-       
-              {
-                "group": "Common",
-                "pages": [
-                  "common/one",
-                  "common/two"
-                ]
-              },
               {
                 "group": "Android",
                 
@@ -202,14 +194,6 @@
             "dropdown": "Integration",
             "icon": "plug",
             "pages": [
-            
-              {
-                "group": "Common",
-                "pages": [
-                  "common/integration/one",
-                  "common/integration/two"
-                ]
-              },
               {
                 "group": "3rd Party Integrations",
                 "expanded": true,
