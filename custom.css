@@ -237,3 +237,43 @@ img[src*="Project_settings"] {
 #page-context-menu {
   margin-top: 22px !important;
 }
+
+
+/* previous button in community */
+
+.twinalyze-bottom-nav-only-prev {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 48px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
+}
+
+.twinalyze-bottom-nav-only-prev .twinalyze-nav-side-prev {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 150px;
+  height: 56px;
+  padding: 0 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.twinalyze-bottom-nav-only-prev .twinalyze-nav-side-prev:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #f8fbff;
+}
+
+.twinalyze-bottom-nav-only-prev .twinalyze-nav-arrow {
+  font-size: 22px;
+  line-height: 1;
+}
