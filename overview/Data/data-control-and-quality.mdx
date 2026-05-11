@@ -1,34 +1,191 @@
 ---
 title: "Data Control and Quality"
-description: "Keep your Twinalyze data clean by detecting duplicate events, missing events, wrong event names, invalid properties, bots, and unwanted traffic."
+description: "Keep your Twinalyze data clean by detecting duplicate events, missing events, wrong event names, invalid properties, bots, test traffic, and unwanted traffic."
 hideFooterPagination: true
 ---
 
 Clean data is the foundation of accurate analytics.
 
-Twinalyze helps you control event quality, identify tracking issues, and keep your reports, funnels, retention, user profiles, campaigns, and Ask AI insights reliable.
+Twinalyze helps you find tracking issues early, keep reports reliable, and make sure your users, events, funnels, retention, campaigns, and Ask AI insights are based on trusted data.
 
-This page covers:
+---
 
-- Duplicate and missing events
-- Wrong event names
-- Invalid event properties
-- Bot and unwanted traffic
-- Test, internal, and spam traffic
-- Best practices before going live
+## Quality control map
 
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-slate-50 px-5 py-4">
+    <p className="text-lg font-semibold tracking-wide text-blue-700">
+      Data quality overview
+    </p>
 
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      These are the most common data quality issues that can affect reports, funnels, retention, campaigns, and user insights.
+    </p>
+  </div>
 
-## Data quality overview
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Issue
+        </th>
 
-| Area | What can go wrong | Impact |
-| --- | --- | --- |
-| Duplicate Events | Same event is sent more than once | Inflated reports and wrong counts |
-| Missing Events | Expected event is not received | Broken funnels and incomplete journeys |
-| Wrong Event Names | Same action has multiple names | Split reports and confusing analysis |
-| Invalid Properties | Missing or wrong property values | Filters, segments, and cohorts become unreliable |
-| Bot Traffic | Non-human activity is tracked | Fake sessions, users, and page views |
-| Internal/Test Traffic | QA or developer data mixes with live data | Production reports become inaccurate |
+        <th className="w-[38%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What can go wrong
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Business impact
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Duplicate Events
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Same action tracked twice
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          The same event is sent more than once for one user action.
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Inflated counts</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Wrong funnels</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">False revenue</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Missing Events
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Expected event not received
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Important actions like signup, checkout, purchase, or screen view are not tracked.
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Broken funnels</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Incomplete journeys</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Wrong conversion</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Wrong Event Names
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Same action, different names
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          One action is tracked with multiple names such as `AddToCart`, `add_cart`, or `add_to_cart`.
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Split reports</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Confusing analysis</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Bad filters</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Invalid Properties
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Missing or wrong values
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Required properties are missing, inconsistent, or sent in the wrong data type.
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Bad segments</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Wrong cohorts</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Unreliable reports</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Bot &amp; Unwanted Traffic
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Fake or non-human activity
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Crawlers, scrapers, spam, test users, or internal users are mixed with real users.
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Fake users</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Wrong sessions</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Bad decisions</span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Why data quality matters
+
+<CardGroup cols={3}>
+  <Card title="Accurate Reports" icon="chart-line">
+    Keep dashboards, event counts, funnels, retention, and campaign reports reliable.
+  </Card>
+
+  <Card title="Cleaner User Insights" icon="users">
+    Separate real users from duplicate, test, internal, bot, or spam traffic.
+  </Card>
+
+  <Card title="Better Decisions" icon="check-circle">
+    Make product and marketing decisions using trusted data instead of noisy numbers.
+  </Card>
+</CardGroup>
 
 ---
 
@@ -38,16 +195,43 @@ This page covers:
   <Tab title="Duplicate Events">
     Duplicate events happen when the same user action is tracked more than once.
 
-    Common examples:
-
-    - `button_clicked` fires two times for one click
-    - `screen_viewed` fires again when the screen is already visible
-    - `purchase_completed` is sent multiple times for one order
-    - SDK auto tracking and manual tracking both send the same event
-
     <Warning>
       Duplicate events can increase event counts and create incorrect reports, funnels, campaign results, and revenue metrics.
     </Warning>
+
+    ### Common examples
+
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <table className="w-full table-fixed divide-y divide-slate-200">
+        <thead className="bg-slate-50">
+          <tr>
+            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Example
+            </th>
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Why it is a problem
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-slate-100">
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">`button_clicked` fires twice</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">One click appears as two actions.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">`screen_viewed` fires repeatedly</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Screen views become inflated.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Auto + manual tracking both send same event</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Reports count the same action twice.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     ### How to prevent duplicate events
 
@@ -65,7 +249,7 @@ This page covers:
       </Step>
 
       <Step title="Test critical events">
-        Events like signup, checkout, payment, and purchase should be tested carefully before release.
+        Test signup, checkout, payment, and purchase events carefully before release.
       </Step>
     </Steps>
 
@@ -90,33 +274,62 @@ This page covers:
   <Tab title="Missing Events">
     Missing events happen when an expected user action is not tracked.
 
-    Common examples:
-
-    - User opens checkout but `checkout_started` is not received
-    - User signs up but `signup_completed` is missing
-    - Screen opens but `screen_viewed` is not tracked
-    - Notification is shown but `notification_received` is missing
-    - Payment fails but `payment_failed` is not received
-
     <Info>
       Missing events usually happen because of SDK setup issues, wrong trigger conditions, network failures, or code paths where tracking was not added.
     </Info>
 
+    ### Missing event examples
+
+    | Expected action | Missing event |
+    | --- | --- |
+    | User opens checkout | `checkout_started` is not received |
+    | User completes signup | `signup_completed` is missing |
+    | Screen opens | `screen_viewed` is not tracked |
+    | Notification is shown | `notification_received` is missing |
+    | Payment fails | `payment_failed` is not received |
+
     ### How to detect missing events
 
-    | Check | What to verify |
-    | --- | --- |
-    | Event flow | Expected events are received in the correct order |
-    | Platform coverage | Web, Android, and iOS send the same important events |
-    | Critical actions | Signup, checkout, payment, and purchase are always tracked |
-    | Session coverage | Events are linked with the correct user and session |
-    | SDK health | SDK is initialized before events are sent |
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <table className="w-full table-fixed divide-y divide-slate-200">
+        <thead className="bg-slate-50">
+          <tr>
+            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Check
+            </th>
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              What to verify
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-slate-100">
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Event flow</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Expected events are received in the correct order.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform coverage</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Web, Android, iOS, Flutter, and React Native send the same important events.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Critical actions</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Signup, checkout, payment, and purchase are always tracked.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">SDK health</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">SDK is initialized before events are sent.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <Tip>
       Create a small test journey and verify every expected event from start to finish.
     </Tip>
-
-    ### Example expected journey
 
     ```txt
     page_view
@@ -131,7 +344,7 @@ This page covers:
   <Tab title="Wrong Event Names">
     Wrong event names make analysis difficult because the same action appears as multiple different events.
 
-    Bad examples:
+    ### Avoid these names
 
     ```txt
     AddToCart
@@ -141,7 +354,7 @@ This page covers:
     addtocart
     ```
 
-    Recommended format:
+    ### Recommended format
 
     ```txt
     add_to_cart
@@ -154,30 +367,60 @@ This page covers:
 
     ### Event naming rules
 
-    | Rule | Recommended |
-    | --- | --- |
-    | Case style | Use lowercase |
-    | Word separator | Use underscore |
-    | Event meaning | Use action-based names |
-    | Platform consistency | Use the same name across Web, Android, and iOS |
-    | Avoid | Spaces, random casing, unclear short names |
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <table className="w-full table-fixed divide-y divide-slate-200">
+        <thead className="bg-slate-50">
+          <tr>
+            <th className="w-[32%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Rule
+            </th>
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Recommended
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-slate-100">
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Case style</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use lowercase.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Word separator</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use underscore.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Event meaning</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use action-based names.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform consistency</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use the same event name across Web, Android, and iOS.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <Warning>
-      Do not create multiple names for the same user action. It will split your reports and reduce data accuracy.
+      Do not create multiple names for the same user action. It will split reports and reduce data accuracy.
     </Warning>
   </Tab>
 
   <Tab title="Invalid Properties">
     Invalid properties happen when event data is missing, wrongly typed, or inconsistent.
 
-    Common issues:
+    ### Common property issues
 
-    - `price` sent as text instead of number
-    - `currency` missing from purchase events
-    - `userId` missing after login
-    - `country` sent as `India`, `IN`, and `india`
-    - `orderId` missing from purchase event
-    - `screenName` sent differently across platforms
+    | Issue | Example |
+    | --- | --- |
+    | Wrong data type | `price` sent as text instead of number |
+    | Missing required value | `currency` missing from purchase event |
+    | User mismatch | `userId` missing after login |
+    | Inconsistent value | `country` sent as `India`, `IN`, and `india` |
+    | Platform mismatch | `screenName` differs across platforms |
 
     ### Recommended property format
 
@@ -197,13 +440,42 @@ This page covers:
 
     ### Property validation checklist
 
-    | Property check | Example |
-    | --- | --- |
-    | Required value exists | `productId` should not be empty |
-    | Correct data type | `price` should be number |
-    | Consistent value | `currency` should be `INR`, not `inr` or `Rs` |
-    | Clear meaning | `screenName` should describe the actual screen |
-    | Platform match | Web and app should send similar property names |
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <table className="w-full table-fixed divide-y divide-slate-200">
+        <thead className="bg-slate-50">
+          <tr>
+            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Property check
+            </th>
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Example
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-slate-100">
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Required value exists</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`productId` should not be empty.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Correct data type</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`price` should be a number.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Consistent value</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`currency` should be `INR`, not `inr` or `Rs`.</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform match</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Web and app should send similar property names.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <Tip>
       Keep property names stable. Changing property names later can break filters, cohorts, and saved reports.
@@ -215,28 +487,58 @@ This page covers:
 
 ## Bot and unwanted traffic
 
-Bot traffic and unwanted traffic can make your analytics data inaccurate. Twinalyze should help you separate real user behavior from fake, automated, internal, or test activity.
+Bot traffic and unwanted traffic can make analytics inaccurate. Twinalyze should help you separate real user behavior from fake, automated, internal, test, or spam activity.
 
-<CardGroup cols={3}>
-  <Card title="Cleaner Reports" icon="shield-check">
-    Remove bot-like activity from reports, funnels, retention, and user insights.
-  </Card>
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-sm font-semibold text-slate-700">
+      01
+    </div>
 
-  <Card title="Better User Accuracy" icon="users">
-    Separate real users from fake, test, crawler, or automated traffic.
-  </Card>
+    <div className="text-base font-semibold text-slate-950">
+      Cleaner Reports
+    </div>
 
-  <Card title="Improved Decisions" icon="chart-no-axes-combined">
-    Avoid making product decisions based on invalid traffic.
-  </Card>
-</CardGroup>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Remove bot-like activity from reports, funnels, retention, and user insights.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-sm font-semibold text-slate-700">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Better User Accuracy
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Separate real users from fake, test, crawler, or automated traffic.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-slate-100 text-sm font-semibold text-slate-700">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Improved Decisions
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Avoid making product decisions based on invalid traffic.
+    </p>
+  </div>
+</div>
 
 ---
 
 ## Common unwanted traffic types
 
-<Tabs>
-  <Tab title="Bots">
+<AccordionGroup>
+  <Accordion title="Bots" icon="bot">
     Bots are automated systems that visit your website or app without real user intent.
 
     Common examples:
@@ -247,22 +549,20 @@ Bot traffic and unwanted traffic can make your analytics data inaccurate. Twinal
     - Headless browser traffic
     - Fake traffic generators
 
-    <Warning>
-      Bot traffic can increase page views, sessions, users, and event counts without real user activity.
-    </Warning>
-
-    ### Bot indicators
-
     | Signal | Example |
     | --- | --- |
     | Very high event frequency | Hundreds of events in a short time |
     | No real interaction pattern | Page views without clicks or meaningful actions |
     | Suspicious user agent | Headless browser, crawler, or automation tool |
     | Repeated IP/device pattern | Same source creating many sessions |
-    | Invalid session behavior | Session duration too short or too repetitive |
-  </Tab>
+    | Invalid session behavior | Session duration too short or repetitive |
 
-  <Tab title="Internal Traffic">
+    <Warning>
+      Bot traffic can increase page views, sessions, users, and event counts without real user activity.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Internal Traffic" icon="users">
     Internal traffic comes from your own team, developers, QA testers, support team, or admin users.
 
     This traffic is useful for testing, but it should not affect production analytics.
@@ -275,7 +575,7 @@ Bot traffic and unwanted traffic can make your analytics data inaccurate. Twinal
     - Internal users using staging or demo builds
 
     <Tip>
-      Use environment properties like `environment: "development"` or `environment: "staging"` to separate test data from production data.
+      Use properties like `environment: "development"` or `environment: "staging"` to separate test data from production data.
     </Tip>
 
     ```json
@@ -288,9 +588,9 @@ Bot traffic and unwanted traffic can make your analytics data inaccurate. Twinal
       }
     }
     ```
-  </Tab>
+  </Accordion>
 
-  <Tab title="Spam Traffic">
+  <Accordion title="Spam Traffic" icon="alert-triangle">
     Spam traffic is fake or low-quality traffic created to pollute analytics.
 
     Common examples:
@@ -300,8 +600,6 @@ Bot traffic and unwanted traffic can make your analytics data inaccurate. Twinal
     - Invalid referral traffic
     - Suspicious campaign traffic
     - Repeated events from the same unknown source
-
-    ### How to reduce spam traffic
 
     <Steps>
       <Step title="Validate important events">
@@ -316,25 +614,74 @@ Bot traffic and unwanted traffic can make your analytics data inaccurate. Twinal
         Filter traffic from known bot sources, invalid user agents, or suspicious repeated sessions.
       </Step>
     </Steps>
-  </Tab>
-
-</Tabs>
+  </Accordion>
+</AccordionGroup>
 
 ---
 
-## Recommended bot filtering rules
+## Recommended filtering rules
 
-Use these checks to separate real users from unwanted traffic.
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-slate-50 px-5 py-4">
+    <p className="text-lg font-semibold tracking-wide text-blue-700">
+      Bot and traffic filtering checklist
+    </p>
 
-| Check | What to detect | Recommended action |
-| --- | --- | --- |
-| User agent | Headless browsers, crawlers, automation tools | Mark as bot or exclude |
-| Event frequency | Too many events in a short time | Flag as suspicious |
-| Session pattern | Very short or repeated sessions | Review or exclude |
-| IP pattern | Repeated traffic from same source | Add to filter list |
-| Environment | `development`, `staging`, `debug` | Exclude from production reports |
-| Internal users | Team, QA, admin, developer traffic | Mark as internal |
-| Invalid properties | Missing user agent, device, platform, session | Flag for review |
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Use multiple signals to separate real users from unwanted traffic.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[26%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Check
+        </th>
+
+        <th className="w-[38%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What to detect
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Recommended action
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">User agent</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Headless browsers, crawlers, automation tools</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Mark as bot or exclude</td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Event frequency</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Too many events in a short time</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Flag as suspicious</td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Session pattern</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Very short or repeated sessions</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Review or exclude</td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Environment</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">`development`, `staging`, `debug`</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Exclude from production reports</td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Internal users</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Team, QA, admin, developer traffic</td>
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Mark as internal</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <Warning>
   Do not rely on only one signal to detect bots. Use multiple signals like user agent, IP pattern, event frequency, session behavior, and environment.
@@ -363,3 +710,62 @@ Send traffic-related properties with important events so Twinalyze can detect su
     "campaign": "summer_sale"
   }
 }
+```
+
+---
+
+## Before going live
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Final quality checklist
+    </p>
+
+    <h3 className="mt-1 text-xl font-semibold tracking-tight text-slate-950">
+      Verify your tracking before launch
+    </h3>
+
+    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+      Use this checklist before releasing SDK updates, new events, campaigns, or important product flows.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Event names are consistent
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use one clear name for each action across Web, Android, iOS, Flutter, and React Native.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Critical events are tested
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Test signup, checkout, payment, purchase, notification, and screen events.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Properties are valid
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Required properties should be present, correctly typed, and consistent.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Test traffic is separated
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use environment, internal user, and test user properties to protect production reports.
+      </p>
+    </div>
+  </div>
+</div>
