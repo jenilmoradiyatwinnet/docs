@@ -25,11 +25,8 @@
       {
         "label": "System Status",
         "href": "https://stats.uptimerobot.com/CtHHsPhHgi"
-      },
-      {
-        "label": "Visit website",
-        "href": "https://www.twinalyze.com/"
       }
+      
     ],
     "primary": {
       "type": "button",
