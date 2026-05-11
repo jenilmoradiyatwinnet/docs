@@ -86,7 +86,7 @@
                 "pages": [
                   {
                     "group": "Android",
-                       "icon": "mobile-screen-button",
+                        "icon": "/sdk-icon/android.svg",
                     
                     "pages": [
                       "sdks/app/android/analytics",
@@ -95,7 +95,7 @@
                   },
                   {
                     "group": "iOS",
-                    "icon": "apple",
+                    "icon": "/sdk-icon/apple.svg",
                     "pages": [
                       "sdks/app/ios/analytics",
                       "sdks/app/ios/ad-analytics"
@@ -103,7 +103,7 @@
                   },
                   {
                     "group": "Flutter",
-                   "icon": "layer-group",
+                   "icon": "/sdk-icon/flutter.svg",
                     "pages": [
                       "sdks/app/flutter/analytics",
                       "sdks/app/flutter/ad-analytics"
@@ -111,7 +111,7 @@
                   },
                   {
                     "group": "React Native",
-                    "icon": "atom",
+                    "icon": "/sdk-icon/react-native.svg",
                     "pages": [
                       "sdks/app/react-native/analytics",
                       "sdks/app/react-native/ad-analytics"
@@ -125,7 +125,7 @@
                 "pages": [
                   {
                     "group": "JavaScript",
-                      "group": "JavaScript",
+                      "icon": "/sdk-icon/javascript.svg",
                     "pages": [
                       "sdks/web/javascript/analytics",
                       "sdks/web/javascript/ad-analytics"
@@ -133,7 +133,7 @@
                   },
                   {
                     "group": "Shopify",
-                    "icon": "shopping-bag",
+                    "icon": "/sdk-icon/shopify.svg",
                     "pages": [
                       "sdks/web/Shopify/analytics",
                       "sdks/web/Shopify/ad-analytics"
