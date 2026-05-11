@@ -86,7 +86,7 @@
                 "pages": [
                   {
                     "group": "Android",
-                       "icon": "smartphone",
+                       "icon": "mobile-screen-button",
                     
                     "pages": [
                       "sdks/app/android/analytics",
@@ -95,7 +95,7 @@
                   },
                   {
                     "group": "iOS",
-                     "icon": "apple",
+                    "icon": "apple",
                     "pages": [
                       "sdks/app/ios/analytics",
                       "sdks/app/ios/ad-analytics"
@@ -103,7 +103,7 @@
                   },
                   {
                     "group": "Flutter",
-                    "icon": "layers",
+                   "icon": "layer-group",
                     "pages": [
                       "sdks/app/flutter/analytics",
                       "sdks/app/flutter/ad-analytics"
@@ -125,7 +125,7 @@
                 "pages": [
                   {
                     "group": "JavaScript",
-                     "icon": "braces",
+                      "group": "JavaScript",
                     "pages": [
                       "sdks/web/javascript/analytics",
                       "sdks/web/javascript/ad-analytics"
