@@ -86,6 +86,7 @@
                 "pages": [
                   {
                     "group": "Android",
+                       "icon": "smartphone",
                     
                     "pages": [
                       "sdks/app/android/analytics",
@@ -94,7 +95,7 @@
                   },
                   {
                     "group": "iOS",
-                   
+                     "icon": "apple",
                     "pages": [
                       "sdks/app/ios/analytics",
                       "sdks/app/ios/ad-analytics"
@@ -102,7 +103,7 @@
                   },
                   {
                     "group": "Flutter",
-                   
+                    "icon": "layers",
                     "pages": [
                       "sdks/app/flutter/analytics",
                       "sdks/app/flutter/ad-analytics"
@@ -110,7 +111,7 @@
                   },
                   {
                     "group": "React Native",
-                
+                    "icon": "atom",
                     "pages": [
                       "sdks/app/react-native/analytics",
                       "sdks/app/react-native/ad-analytics"
@@ -124,7 +125,7 @@
                 "pages": [
                   {
                     "group": "JavaScript",
-                  
+                     "icon": "braces",
                     "pages": [
                       "sdks/web/javascript/analytics",
                       "sdks/web/javascript/ad-analytics"
@@ -132,7 +133,7 @@
                   },
                   {
                     "group": "Shopify",
-                   
+                    "icon": "shopping-bag",
                     "pages": [
                       "sdks/web/Shopify/analytics",
                       "sdks/web/Shopify/ad-analytics"
@@ -144,7 +145,7 @@
             ]
           },
           {
-            "dropdown": "Integration",
+            "dropdown": "Integrations",
             "icon": "plug",
             "pages": [
               {
