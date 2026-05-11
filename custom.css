@@ -247,6 +247,24 @@ img[src*="Project_settings"] {
 }
 
 
+/* Sidebar icons follow text color */
+#sidebar a svg,
+#sidebar button svg {
+  color: inherit !important;
+  stroke: currentColor !important;
+  fill: none !important;
+}
 
+/* If icon has filled shape */
+#sidebar a svg [fill]:not([fill="none"]),
+#sidebar button svg [fill]:not([fill="none"]) {
+  fill: currentColor !important;
+}
+
+/* If icon has stroke */
+#sidebar a svg [stroke],
+#sidebar button svg [stroke] {
+  stroke: currentColor !important;
+}
 
 

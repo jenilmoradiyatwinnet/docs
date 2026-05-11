@@ -3,6 +3,15 @@
   "theme": "mint",
     "css": "custom.css",
   "name": "Twinalyze",
+    "contextual": {
+    "options": [
+      "copy",
+      "chatgpt",
+      "claude",
+      "mcp"
+    ],
+    "display": "toc"
+  },
   "icons": {
   "library": "fontawesome"
 },
