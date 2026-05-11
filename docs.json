@@ -7,8 +7,7 @@
     "options": [
       "copy",
       "chatgpt",
-      "claude",
-      "mcp"
+      "claude"
     ],
     "display": "toc"
   },
@@ -183,22 +182,42 @@
               "analytics/ask-ai"
             ]
           }, {
-            "group": "Dashboard",
+            "group": "Product Overview",
             "pages": [
-              "analytics/report",
-              "analytics/ask-ai"
+              "analytics/product-overview/system-insight",
+              "analytics/product-overview/reports",
+              "analytics/product-overview/advance-reports"
             ]
           }, {
-            "group": "Dashboard",
+            "group": "Users",
             "pages": [
-              "analytics/report",
-              "analytics/ask-ai"
+              "analytics/users/page-insight",
+             "analytics/users/user-engagement",
+             "analytics/users/user-retention",
+             "analytics/users/user-growth"
             ]
           }, {
-            "group": "Dashboard",
+            "group": "Ad",
             "pages": [
-              "analytics/report",
-              "analytics/ask-ai"
+              "analytics/ad/ad-report",
+              "analytics/ad/ad-failure-insights"
+            ]
+          },
+          {
+            "group": "Notification",
+            "pages": [
+              "analytics/notification/notification",
+              "analytics/notification/notification-campaign",
+              "analytics/notification/notification-report-list"
+            ]
+          },
+          {
+            "group": "Research",
+            "pages": [
+              "analytics/research/market-trends",
+              "analytics/research/country-store",
+               "analytics/research/country-details",
+                "analytics/research/custom-store-listing"
             ]
           }
         ]
