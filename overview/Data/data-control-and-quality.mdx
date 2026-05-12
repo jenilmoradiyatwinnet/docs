@@ -13,7 +13,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 ## Quality control map
 
 <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-slate-50 px-5 py-4">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
     <p className="text-lg font-semibold tracking-wide text-blue-700">
       Data quality overview
     </p>
@@ -181,11 +181,21 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
       Duplicate events can increase event counts and create incorrect reports, funnels, campaign results, and revenue metrics.
     </Warning>
 
-  **Common examples**
+    **Common examples**
 
     <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <p className="text-sm font-semibold tracking-wide text-blue-700">
+          Common duplicate event examples
+        </p>
+
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+          These issues usually happen when the same action is tracked more than once.
+        </p>
+      </div>
+
       <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-slate-50">
+        <thead className="bg-white">
           <tr>
             <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
               Example
@@ -196,7 +206,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100">
+        <tbody className="divide-y divide-slate-100 bg-white">
           <tr className="hover:bg-slate-50">
             <td className="px-5 py-4 text-sm font-semibold text-slate-950">`button_clicked` fires twice</td>
             <td className="px-5 py-4 text-sm leading-6 text-slate-600">One click appears as two actions.</td>
@@ -260,21 +270,75 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
       Missing events usually happen because of SDK setup issues, wrong trigger conditions, network failures, or code paths where tracking was not added.
     </Info>
 
-    ### Missing event examples
-
-    | Expected action | Missing event |
-    | --- | --- |
-    | User opens checkout | `checkout_started` is not received |
-    | User completes signup | `signup_completed` is missing |
-    | Screen opens | `screen_viewed` is not tracked |
-    | Notification is shown | `notification_received` is missing |
-    | Payment fails | `payment_failed` is not received |
-
-    ### How to detect missing events
+    **Missing event examples**
 
     <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <p className="text-sm font-semibold tracking-wide text-blue-700">
+          Missing event examples
+        </p>
+
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+          These examples show important actions where tracking may be missing.
+        </p>
+      </div>
+
       <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-slate-50">
+        <thead className="bg-white">
+          <tr>
+            <th className="w-[40%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Expected action
+            </th>
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Missing event
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-slate-100 bg-white">
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">User opens checkout</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`checkout_started` is not received</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">User completes signup</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`signup_completed` is missing</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Screen opens</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`screen_viewed` is not tracked</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Notification is shown</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`notification_received` is missing</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Payment fails</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`payment_failed` is not received</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    **How to detect missing events**
+
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <p className="text-sm font-semibold tracking-wide text-blue-700">
+          How to detect missing events
+        </p>
+
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+          Use these checks to confirm that important events are tracked correctly.
+        </p>
+      </div>
+
+      <table className="w-full table-fixed divide-y divide-slate-200">
+        <thead className="bg-white">
           <tr>
             <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
               Check
@@ -285,7 +349,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100">
+        <tbody className="divide-y divide-slate-100 bg-white">
           <tr className="hover:bg-slate-50">
             <td className="px-5 py-4 text-sm font-semibold text-slate-950">Event flow</td>
             <td className="px-5 py-4 text-sm leading-6 text-slate-600">Expected events are received in the correct order.</td>
@@ -326,7 +390,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
   <Tab title="Wrong Event Names">
     Wrong event names make analysis difficult because the same action appears as multiple different events.
 
-    ### Recommended format
+    **Recommended format**
 
     ```txt
     add_to_cart
@@ -337,11 +401,21 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
     notification_clicked
     ```
 
-    ### Event naming rules
+    **Event naming rules**
 
     <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <p className="text-sm font-semibold tracking-wide text-blue-700">
+          Event naming rules
+        </p>
+
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+          Follow one naming style across all platforms to avoid split reports.
+        </p>
+      </div>
+
       <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-slate-50">
+        <thead className="bg-white">
           <tr>
             <th className="w-[32%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
               Rule
@@ -352,7 +426,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100">
+        <tbody className="divide-y divide-slate-100 bg-white">
           <tr className="hover:bg-slate-50">
             <td className="px-5 py-4 text-sm font-semibold text-slate-950">Case style</td>
             <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use lowercase.</td>
@@ -384,17 +458,61 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
   <Tab title="Invalid Properties">
     Invalid properties happen when event data is missing, wrongly typed, or inconsistent.
 
-    ### Common property issues
+    **Common property issues**
 
-    | Issue | Example |
-    | --- | --- |
-    | Wrong data type | `price` sent as text instead of number |
-    | Missing required value | `currency` missing from purchase event |
-    | User mismatch | `userId` missing after login |
-    | Inconsistent value | `country` sent as `India`, `IN`, and `india` |
-    | Platform mismatch | `screenName` differs across platforms |
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <p className="text-sm font-semibold tracking-wide text-blue-700">
+          Common property issues
+        </p>
 
-    ### Recommended property format
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+          These property issues can break filters, reports, cohorts, and segmentation.
+        </p>
+      </div>
+
+      <table className="w-full table-fixed divide-y divide-slate-200">
+        <thead className="bg-white">
+          <tr>
+            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Issue
+            </th>
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Example
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-slate-100 bg-white">
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Wrong data type</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`price` sent as text instead of number</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Missing required value</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`currency` missing from purchase event</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">User mismatch</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`userId` missing after login</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Inconsistent value</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`country` sent as `India`, `IN`, and `india`</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform mismatch</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`screenName` differs across platforms</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    **Recommended property format**
 
     ```json
     {
@@ -410,11 +528,21 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
     }
     ```
 
-    ### Property validation checklist
+    **Property validation checklist**
 
     <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <p className="text-sm font-semibold tracking-wide text-blue-700">
+          Property validation checklist
+        </p>
+
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+          Validate important properties before using them in filters, cohorts, and reports.
+        </p>
+      </div>
+
       <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-slate-50">
+        <thead className="bg-white">
           <tr>
             <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
               Property check
@@ -425,7 +553,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100">
+        <tbody className="divide-y divide-slate-100 bg-white">
           <tr className="hover:bg-slate-50">
             <td className="px-5 py-4 text-sm font-semibold text-slate-950">Required value exists</td>
             <td className="px-5 py-4 text-sm leading-6 text-slate-600">`productId` should not be empty.</td>
@@ -460,7 +588,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 ## Common unwanted traffic types
 
 <AccordionGroup>
-  <Accordion title="Bots" >
+  <Accordion title="Bots">
     Bots are automated systems that visit your website or app without real user intent.
 
     Common examples:
@@ -471,20 +599,64 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
     - Headless browser traffic
     - Fake traffic generators
 
-    | Signal | Example |
-    | --- | --- |
-    | Very high event frequency | Hundreds of events in a short time |
-    | No real interaction pattern | Page views without clicks or meaningful actions |
-    | Suspicious user agent | Headless browser, crawler, or automation tool |
-    | Repeated IP/device pattern | Same source creating many sessions |
-    | Invalid session behavior | Session duration too short or repetitive |
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+        <p className="text-sm font-semibold tracking-wide text-blue-700">
+          Bot indicators
+        </p>
+
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+          These signals help identify traffic that may not represent real users.
+        </p>
+      </div>
+
+      <table className="w-full table-fixed divide-y divide-slate-200">
+        <thead className="bg-white">
+          <tr>
+            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Signal
+            </th>
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Example
+            </th>
+          </tr>
+        </thead>
+
+        <tbody className="divide-y divide-slate-100 bg-white">
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Very high event frequency</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Hundreds of events in a short time</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">No real interaction pattern</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Page views without clicks or meaningful actions</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Suspicious user agent</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Headless browser, crawler, or automation tool</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Repeated IP/device pattern</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Same source creating many sessions</td>
+          </tr>
+
+          <tr className="hover:bg-slate-50">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Invalid session behavior</td>
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Session duration too short or repetitive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <Warning>
       Bot traffic can increase page views, sessions, users, and event counts without real user activity.
     </Warning>
   </Accordion>
 
-  <Accordion title="Internal Traffic" >
+  <Accordion title="Internal Traffic">
     Internal traffic comes from your own team, developers, QA testers, support team, or admin users.
 
     This traffic is useful for testing, but it should not affect production analytics.
@@ -512,7 +684,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
     ```
   </Accordion>
 
-  <Accordion title="Spam Traffic" >
+  <Accordion title="Spam Traffic">
     Spam traffic is fake or low-quality traffic created to pollute analytics.
 
     Common examples:
@@ -544,7 +716,7 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 ## Recommended filtering rules
 
 <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-slate-50 px-5 py-4">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
     <p className="text-lg font-semibold tracking-wide text-blue-700">
       Bot and traffic filtering checklist
     </p>
@@ -643,7 +815,10 @@ Send traffic-related properties with important events so Twinalyze can detect su
     <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
       Final quality checklist
     </p>
-      **Verify your tracking before launch**
+
+    <div className="mt-1 text-lg font-semibold text-slate-950">
+      Verify your tracking before launch
+    </div>
 
     <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
       Use this checklist before releasing SDK updates, new events, campaigns, or important product flows.
