@@ -221,6 +221,97 @@
               "integrations/onesignal" 
               ] } ] }
         ]
+      },
+      {
+        "tab": "SDKs & Integrations",
+        "icon": "code",
+        "dropdowns": [
+          {
+            "dropdown": "SDK",
+            "icon": "code",
+            "pages": [
+              {
+                "group": "App",
+                
+                "pages": [
+                  {
+                    "group": "Android",
+                        "icon": "mobile-screen-button",
+                    
+                    "pages": [
+                      "sdks2/app/android/analytics",
+                      "sdks2/app/android/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "iOS",
+                    "icon": "apple",
+                    "pages": [
+                      "sdks2/app/ios/analytics",
+                      "sdks2/app/ios/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "Flutter",
+                     "icon": "layer-group",
+                    "pages": [
+                      "sdks2/app/flutter/analytics",
+                      "sdks2/app/flutter/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "React Native",
+                     "icon": "atom",
+                    "pages": [
+                      "sdks2/app/react-native/analytics",
+                      "sdks2/app/react-native/ad-analytics"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Web",
+               
+                "pages": [
+                  {
+                    "group": "JavaScript",
+                           "icon": "code",
+                    "pages": [
+                      "sdks2/web/javascript/analytics",
+                      "sdks2/web/javascript/ad-analytics"
+                    ]
+                  },
+                  {
+                    "group": "Shopify",
+                          "icon": "shopping-bag",
+                    "pages": [
+                      "sdks2/web/Shopify/analytics",
+                      "sdks2/web/Shopify/ad-analytics"
+                    ]
+                  }
+               
+                ]
+              }
+            ]
+          },
+    { "dropdown": "Integrations",
+     "icon": "plug", 
+     "pages": [ { 
+      "group": "Integrations",
+       "expanded": true, 
+       "pages": [ 
+        "integrations2/google-analytics-4", 
+        "integrations2/google-tag-manager",
+         "integrations2/firebase", 
+         "integrations2/admob", 
+         "integrations2/facebook-ad",
+          "integrations2/facebook-monetization-manager",
+           "integrations2/slack",
+            "integrations2/microsoft-teams",
+             "integrations2/applovin",
+              "integrations2/onesignal" 
+              ] } ] }
+        ]
       }
     ]
   },
