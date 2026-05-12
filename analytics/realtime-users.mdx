@@ -1,4 +1,402 @@
 ---
-title: 'Realtime Users'
+title: "Realtime Users"
+description: "Monitor live users, active users in the last 30 minutes, country activity, app open frequency, and app version usage in Twinalyze."
+hideFooterPagination: true
 ---
 
+Realtime Users helps you monitor what is happening inside your app or website right now.
+
+Use this page to see live user activity, active users in the last 30 minutes, country-wise users, app open frequency, and app version usage.
+
+---
+
+## Page preview
+
+<Frame>
+  <img src="/images/realtime-users.png" alt="Twinalyze Realtime Users page" />
+</Frame>
+
+---
+
+## Realtime Users overview
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Live activity monitoring
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Realtime Users gives you a quick view of current user activity, location distribution, app opens, and version usage.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Section
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What it shows
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Best for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Live Map
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Geographic activity
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows where active users are located on the world map.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Understanding live traffic by region.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Active Users
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Last 30 minutes
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows the number of users active in the last 30 minutes.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Live monitoring after campaigns, releases, or traffic changes.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Users by Country
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Country-wise users
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows which countries have active users.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Country-level activity analysis.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              App Open Frequency
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Opening behavior
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows how frequently users open the app.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Understanding repeated usage and engagement.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              App Version
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Version distribution
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows which app versions are currently being used.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Version rollout tracking and update analysis.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Main sections
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Live user map
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      View realtime user activity on a world map and understand where users are active.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Last 30 minutes
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Track active users from the recent 30-minute window for quick live monitoring.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Realtime widgets
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Review country, app open frequency, and app version data from one dashboard.
+    </p>
+  </div>
+</div>
+
+---
+
+## How to read this page
+
+<Steps>
+  <Step title="Check active users">
+    Start with the active users count to understand current live activity.
+  </Step>
+
+  <Step title="Review the map">
+    Use the map to understand where active users are coming from.
+  </Step>
+
+  <Step title="Analyze countries">
+    Check Users by Country to see which locations are currently active.
+  </Step>
+
+  <Step title="Check app open frequency">
+    Use App Open Frequency to understand how often users are opening the app.
+  </Step>
+
+  <Step title="Review app versions">
+    Use App Version to check which versions users are currently using.
+  </Step>
+</Steps>
+
+---
+
+## Realtime widgets explained
+
+<AccordionGroup>
+  <Accordion title="Active users in last 30 minutes" icon="users">
+    This metric shows how many users were active in the recent 30-minute window.
+
+    It is useful when you want to check live traffic after a campaign, push notification, app release, or marketing activity.
+  </Accordion>
+
+  <Accordion title="Users by Country" icon="globe">
+    This widget shows country-wise active users.
+
+    It helps you understand which regions are currently using your app or website.
+  </Accordion>
+
+  <Accordion title="App Open Frequency" icon="chart-line">
+    This widget helps you understand how frequently users open the app.
+
+    It is useful for measuring repeated usage and live engagement behavior.
+  </Accordion>
+
+  <Accordion title="App Version" icon="code">
+    This widget shows app version usage.
+
+    It helps product and development teams understand which versions are active and whether users are moving to the latest version.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Empty state
+
+If there are no live users, the page may show `No data found`.
+
+<Info>
+  No data found does not always mean tracking is broken. It can also mean there are no active users in the selected realtime window.
+</Info>
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Empty state checklist
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Use this checklist when the realtime page does not show data.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Check
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What to verify
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          SDK installed
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Make sure Twinalyze SDK is added and initialized correctly.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          App opened recently
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Open the app or website and wait for the realtime activity to update.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Correct project selected
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Confirm that you are viewing the correct organization and project.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Network and events
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Check that events are reaching Twinalyze from your SDK or website.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Best practices
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Recommended workflow
+    </p>
+
+    <div className="mt-1 text-lg font-semibold text-slate-950">
+      Use realtime data for quick decisions
+    </div>
+
+    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+      Realtime Users is useful for monitoring live activity, checking rollout impact, and confirming that tracking is working.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Monitor after campaigns
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Check realtime users after push notifications, ads, or marketing campaigns.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Verify SDK setup
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Open the app and confirm that realtime activity starts appearing.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Watch version rollout
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use App Version to check whether users are active on old or latest versions.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Compare country activity
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use country data to understand where your live users are active.
+      </p>
+    </div>
+  </div>
+</div>
+
+<Check>
+  Realtime Users helps your team monitor live activity, validate tracking, and understand current product usage.
+</Check>
