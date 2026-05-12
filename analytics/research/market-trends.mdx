@@ -1,57 +1,12 @@
 ---
 title: "Market Trends"
-description: "Explore top apps, country-wise rankings, categories, and market opportunities using Twinalyze Market Trends."
+description: "Explore top apps, tier-wise country lists, app categories, rankings, and market opportunities using Twinalyze Market Trends."
 hideFooterPagination: true
 ---
 
-Market Trends helps you understand which apps are performing well across countries, categories, and ranking types.
+Market Trends helps you understand which apps are performing well across countries, app categories, and ranking types.
 
-Use this page to find popular apps, compare markets, explore app categories, and discover opportunities before planning product, marketing, or growth decisions.
-
----
-
-## Market Trends overview
-
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Market intelligence
-    </p>
-
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Explore country-wise app rankings, category trends, top free apps, top paid apps, and grossing apps in one place.
-    </p>
-  </div>
-
-  <div className="grid gap-4 p-5 md:grid-cols-3">
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Country rankings
-      </div>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        View app trends by country and compare different markets.
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        App categories
-      </div>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Explore categories like finance, business, shopping, entertainment, tools, and more.
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        App performance
-      </div>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Discover top apps based on installs, ratings, revenue signals, and ranking position.
-      </p>
-    </div>
-  </div>
-</div>
+Use this page to find popular apps, compare markets, explore country tiers, analyze categories, and discover opportunities before planning product, marketing, or growth decisions.
 
 ---
 
@@ -60,10 +15,6 @@ Use this page to find popular apps, compare markets, explore app categories, and
 <Frame>
   <img src="/images/market-trends/market-trends-overview.png" alt="Twinalyze Market Trends page" />
 </Frame>
-
-<Tip>
-  Add your screenshot at <code>/images/market-trends/market-trends-overview.png</code> to show the actual Market Trends interface inside the documentation.
-</Tip>
 
 ---
 
@@ -76,7 +27,7 @@ Use this page to find popular apps, compare markets, explore app categories, and
     </p>
 
     <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Use Market Trends to understand app rankings, categories, regions, and market demand.
+      Use Market Trends to understand app rankings, tier-wise countries, categories, and market demand.
     </p>
   </div>
 
@@ -165,20 +116,20 @@ Use this page to find popular apps, compare markets, explore app categories, and
         <td className="px-5 py-5 align-top">
           <div className="border-l-2 border-blue-600 pl-3">
             <div className="text-sm font-semibold text-slate-950">
-              Country Filters
+              Tier-wise Country List
             </div>
             <div className="mt-1 text-xs text-slate-500">
-              Region-wise discovery
+              Country grouping by market tier
             </div>
           </div>
         </td>
 
         <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
-          Lets you select countries and compare app trends across different markets.
+          Shows countries grouped by tiers like All, T1, T2, T3, and T4 so you can explore markets faster.
         </td>
 
         <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
-          Country research, market comparison, and expansion planning.
+          Market comparison, country research, and expansion planning.
         </td>
       </tr>
 
@@ -200,6 +151,27 @@ Use this page to find popular apps, compare markets, explore app categories, and
 
         <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
           Category analysis, competitor discovery, and product idea validation.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              App List
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Ranked app cards
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Displays app cards with app name, rating, installs, and ranking signals.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Competitor research and app performance comparison.
         </td>
       </tr>
     </tbody>
@@ -281,16 +253,128 @@ Use this page to find popular apps, compare markets, explore app categories, and
 
 ---
 
-## Filters explained
+## Tier-wise country list
+
+Market Trends uses a tier-wise country list to help you quickly browse countries by market priority. Instead of selecting from one long country list, you can switch between tiers and focus on the countries that matter for your research.
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Country tiers
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Use tier tabs to move between all countries and selected market groups.
+    </p>
+  </div>
+
+  <div className="border-b border-slate-100 px-5 py-4">
+    <div className="flex flex-wrap gap-2">
+      <span className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white">All</span>
+      <span className="rounded-md bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-700">T1-1</span>
+      <span className="rounded-md bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-700">T4</span>
+      <span className="rounded-md bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-700">T3</span>
+      <span className="rounded-md bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-700">T2</span>
+      <span className="rounded-md bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-700">T1</span>
+    </div>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[24%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Tier
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What it shows
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Best for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              All
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Complete list
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows all available countries in the Market Trends country list.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Broad market discovery.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              T1 / T1-1
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              High-priority markets
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Helps you focus on important countries where app trends are usually more competitive and useful for benchmarking.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Competitor research and priority market analysis.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              T2 / T3 / T4
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Additional market groups
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Helps you explore broader markets and compare app performance across different country groups.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Expansion research and opportunity discovery.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Country and category discovery
 
 <div className="not-prose grid gap-4 md:grid-cols-2">
   <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
     <div className="text-base font-semibold text-slate-950">
-      Country filter
+      Country list
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Select a country to view market trends for that region. This helps you understand local demand, country-wise competitors, and regional app behavior.
+      Select a country from the tier-wise list to view app rankings for that market. This helps you understand local demand, country-wise competitors, and regional app behavior.
     </p>
 
     <div className="mt-4 flex flex-wrap gap-2">
@@ -298,25 +382,145 @@ Use this page to find popular apps, compare markets, explore app categories, and
       <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">United Kingdom</span>
       <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Germany</span>
       <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Canada</span>
+      <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Australia</span>
+      <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Singapore</span>
     </div>
   </div>
 
   <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
     <div className="text-base font-semibold text-slate-950">
-      Category filter
+      App categories
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Choose app categories to narrow your research. Categories help you focus on relevant apps instead of browsing all market data.
+      Browse app categories to focus your research on a specific market segment. Categories make it easier to compare similar apps.
     </p>
 
     <div className="mt-4 flex flex-wrap gap-2">
       <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Finance</span>
       <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Business</span>
       <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Shopping</span>
+      <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Entertainment</span>
       <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Tools</span>
+      <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Productivity</span>
     </div>
   </div>
+</div>
+
+---
+
+## App categories
+
+The App Categories panel helps you browse market trends by business type, user intent, and app use case.
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Category groups
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Categories help you narrow the app list and focus on the right market segment.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Group
+        </th>
+
+        <th className="w-[42%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Example categories
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Use for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Business
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Work and commerce
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Finance</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Business</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Shopping</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Education</span>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Finding business, commerce, and work-related market trends.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Entertainment
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Media and social activity
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Video Players</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Communication</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Social</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Music and Audio</span>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Understanding user interest in media, communication, and social apps.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Tools
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Utility and productivity
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Tools</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Productivity</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Lifestyle</span>
+            <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">Health and Fitness</span>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Researching utility, productivity, lifestyle, and daily-use app trends.
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ---
@@ -398,8 +602,12 @@ Each app card gives a quick view of how the app is performing in the selected ma
     Select Top Free, Top Paid, or Grossing based on what you want to analyze.
   </Step>
 
-  <Step title="Select country">
-    Choose a country to understand region-specific app performance.
+  <Step title="Select country tier">
+    Use All, T1-1, T4, T3, T2, or T1 to focus on the right country group.
+  </Step>
+
+  <Step title="Choose a country">
+    Select a country from the tier-wise country list to see market-specific app rankings.
   </Step>
 
   <Step title="Pick app category">
@@ -425,7 +633,7 @@ Each app card gives a quick view of how the app is performing in the selected ma
   </Accordion>
 
   <Accordion title="Research competitors" icon="search">
-    Select a category and country to find competitors in the same market segment.
+    Select a country tier, country, and category to find competitors in the same market segment.
   </Accordion>
 
   <Accordion title="Validate product ideas" icon="lightbulb">
@@ -448,12 +656,8 @@ Each app card gives a quick view of how the app is performing in the selected ma
 <div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
   <div className="mb-6">
     <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      Recommended workflow
-    </p>
-
-    <h3 className="mt-1 text-xl font-semibold tracking-tight text-slate-950">
       Turn market data into product decisions
-    </h3>
+    </p>
 
     <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
       Use Market Trends regularly to understand what users download, what competitors are doing, and where your product can grow.
@@ -472,19 +676,19 @@ Each app card gives a quick view of how the app is performing in the selected ma
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
       <div className="text-sm font-semibold text-slate-950">
-        Check both free and grossing apps
+        Check free, paid, and grossing apps
       </div>
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Free rankings show popularity, while grossing rankings show monetization strength.
+        Free rankings show popularity, paid rankings show purchase interest, and grossing rankings show monetization strength.
       </p>
     </div>
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
       <div className="text-sm font-semibold text-slate-950">
-        Use category filters
+        Use tier-wise country lists and categories
       </div>
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Category filters help you focus only on apps that are relevant to your product.
+        Tier tabs help you focus on selected country groups, while categories help you compare similar apps inside the same market.
       </p>
     </div>
 
@@ -500,5 +704,5 @@ Each app card gives a quick view of how the app is performing in the selected ma
 </div>
 
 <Check>
-  Market Trends helps your team discover app demand, compare countries, analyze categories, and find product growth opportunities.
+  Market Trends helps your team discover app demand, compare country tiers, analyze categories, and find product growth opportunities.
 </Check>
