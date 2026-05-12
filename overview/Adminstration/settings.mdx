@@ -89,62 +89,47 @@ Use this page to keep your workspace secure, organized, and up to date.
 </Tabs>
 
 ---
+## Frequently asked questions
 
-## Best practices
+<AccordionGroup>
+  <Accordion title="Who can update profile details?" icon="user">
+    Each user can manage their own profile details such as profile picture, name, mobile number, date of birth, and address information.
 
-<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-  <div className="mb-6">
-    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      Settings workflow
-    </p>
+    Some fields, such as email, may be disabled because they are used as the primary account identity.
+  </Accordion>
 
-    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      Keep profile details updated, review access regularly, and assign permissions based on each user’s actual responsibility.
-    </p>
-  </div>
+  <Accordion title="Who can update organization details?" icon="building">
+    Organization details should usually be managed by an admin or owner-level user.
 
-  <div className="grid gap-4 md:grid-cols-2">
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Keep profile details updated
-      </div>
+    This includes organization logo, organization name, website, mobile number, and other workspace information.
+  </Accordion>
 
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Updated profile and organization details make workspace management easier.
-      </p>
-    </div>
+  <Accordion title="Why is email or organization ID disabled?" icon="lock">
+    Email and organization ID may be locked because they are used as important identifiers inside Twinalyze.
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Use proper role types
-      </div>
+    This helps avoid account mismatch, workspace mismatch, or access issues.
+  </Accordion>
 
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Assign roles based on responsibility instead of giving every user admin access.
-      </p>
-    </div>
+  <Accordion title="When should I use two-factor authentication?" icon="shield">
+    Two-factor authentication should be enabled when you want stronger account protection.
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Review login history
-      </div>
+    It adds an extra security step during login and helps protect the workspace from unauthorized access.
+  </Accordion>
 
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Check login activity regularly to identify unusual or unwanted access.
-      </p>
-    </div>
+  <Accordion title="How do I invite a team member?" icon="user-plus">
+    Go to **Users and Permissions → Users**, enter the user email, select a role type, and click **Invite**.
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Review permissions regularly
-      </div>
+    The invited user can access the workspace based on the assigned role.
+  </Accordion>
 
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Update permissions when team structure, responsibilities, or access needs change.
-      </p>
-    </div>
-  </div>
-</div>
+  <Accordion title="How should I choose a role type?" icon="users">
+    Choose the role based on the user’s responsibility.
+
+    For example, give admin access only to users who need full control. Developers, designers, guests, or testing users should receive only the access they need.
+  </Accordion>
+
+
+</AccordionGroup>
 
 <Check>
   Settings helps your team manage account details, organization profile, security, login activity, users, roles, and permissions in one place.
