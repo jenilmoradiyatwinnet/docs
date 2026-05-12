@@ -288,8 +288,10 @@
             }
           ]
         }
-      ]
-    },
+       ]
+}
+    ]
+  },
     {
       "dropdown": "Integrations",
       "icon": "plug",
