@@ -4,9 +4,9 @@ description: "Manage profile details, organization profile, security settings, l
 hideFooterPagination: true
 ---
 
-Settings helps you manage your personal profile, organization details, security preferences, login activity, users, and permissions from one place.
+Settings is where users and admins manage account information, organization details, security preferences, login activity, team members, roles, and permissions.
 
-Use this page when you want to update account information, invite team members, assign roles, or review access inside your Twinalyze workspace.
+Use this page to keep your workspace secure, organized, and up to date.
 
 ---
 
@@ -16,18 +16,18 @@ Use this page when you want to update account information, invite team members, 
   <div>
     <div className="mb-3">
       <div className="text-sm font-semibold text-slate-950">
-        Manage Profile
+        Profile Details
       </div>
 
       <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Manage Profile lets users update personal details, address details, profile picture, organization profile, security settings, and login history.
+        Profile Details lets users update their profile picture, personal information, and address details.
       </p>
     </div>
 
     <Frame>
       <img
-        src="/images/Dashboard/settings-manage-profile.png"
-        alt="Twinalyze Manage Profile settings page"
+        src="/images/Dashboard/settings-profile-details.png"
+        alt="Twinalyze Profile Details settings page"
       />
     </Frame>
   </div>
@@ -35,18 +35,94 @@ Use this page when you want to update account information, invite team members, 
   <div>
     <div className="mb-3">
       <div className="text-sm font-semibold text-slate-950">
-        Users and Permissions
+        Security &amp; Settings
       </div>
 
       <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Users and Permissions helps admins invite team members, assign role types, filter users, and manage workspace access.
+        Security & Settings helps users change password, set default timezone, and manage two-factor authentication.
       </p>
     </div>
 
     <Frame>
       <img
-        src="/images/Dashboard/settings-users-permissions.png"
-        alt="Twinalyze Users and Permissions settings page"
+        src="/images/Dashboard/settings-security.png"
+        alt="Twinalyze Security and Settings page"
+      />
+    </Frame>
+  </div>
+
+  <div>
+    <div className="mb-3">
+      <div className="text-sm font-semibold text-slate-950">
+        Organization Profile
+      </div>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        Organization Profile stores company information such as logo, organization name, email, mobile number, website, organization ID, and created date.
+      </p>
+    </div>
+
+    <Frame>
+      <img
+        src="/images/Dashboard/settings-organization-profile.png"
+        alt="Twinalyze Organization Profile settings page"
+      />
+    </Frame>
+  </div>
+
+  <div>
+    <div className="mb-3">
+      <div className="text-sm font-semibold text-slate-950">
+        Login History
+      </div>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        Login History helps admins and users review login activity with date, user, location, role type, and access time.
+      </p>
+    </div>
+
+    <Frame>
+      <img
+        src="/images/Dashboard/settings-login-history.png"
+        alt="Twinalyze Login History page"
+      />
+    </Frame>
+  </div>
+
+  <div>
+    <div className="mb-3">
+      <div className="text-sm font-semibold text-slate-950">
+        Users
+      </div>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        Users helps admins invite team members, assign role types, filter users, and review user access.
+      </p>
+    </div>
+
+    <Frame>
+      <img
+        src="/images/Dashboard/settings-users.png"
+        alt="Twinalyze Users settings page"
+      />
+    </Frame>
+  </div>
+
+  <div>
+    <div className="mb-3">
+      <div className="text-sm font-semibold text-slate-950">
+        Permissions
+      </div>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        Permissions controls which roles can access menu groups, main menus, and sub menus inside the workspace.
+      </p>
+    </div>
+
+    <Frame>
+      <img
+        src="/images/Dashboard/settings-permissions.png"
+        alt="Twinalyze Permissions settings page"
       />
     </Frame>
   </div>
@@ -62,12 +138,12 @@ Use this page when you want to update account information, invite team members, 
       Workspace control center
     </p>
 
-    <h3 className="mt-1 text-xl font-semibold tracking-tight text-slate-950">
-      Manage account details and team access from one place
-    </h3>
+    <div className="mt-1 text-xl font-semibold tracking-tight text-slate-950">
+      Manage account, organization, security, and access from one place
+    </div>
 
     <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      Settings is divided into two main areas: profile management and access management. Profile management keeps user and organization information updated, while access management helps admins control users, roles, and permissions.
+      Settings is divided into two main areas. Manage Profile is used for account, organization, security, and login activity. Users and Permissions is used for inviting users, assigning roles, and controlling access.
     </p>
   </div>
 
@@ -82,11 +158,11 @@ Use this page when you want to update account information, invite team members, 
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Update profile picture, personal details, address information, organization profile, security settings, and login history.
+        Update personal profile, organization profile, security settings, timezone, two-factor authentication, and login history.
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Profile</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Profile Details</span>
         <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Organization</span>
         <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Security</span>
         <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Login History</span>
@@ -103,14 +179,14 @@ Use this page when you want to update account information, invite team members, 
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Invite users, assign role types, filter users by status or role, and review team access inside your organization.
+        Invite users, assign role types, filter users by status or role, and control menu-level permissions.
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Invite User</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">User List</span>
         <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Roles</span>
         <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">Permissions</span>
-        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700">User Status</span>
       </div>
     </div>
   </div>
@@ -118,9 +194,7 @@ Use this page when you want to update account information, invite team members, 
 
 ---
 
-## Manage Profile
-
-Manage Profile is used to update account-level details. It keeps user profile information, organization information, security preferences, and login activity organized.
+## Manage Profile flow
 
 <div className="not-prose grid gap-4 md:grid-cols-4">
   <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -131,7 +205,7 @@ Manage Profile is used to update account-level details. It keeps user profile in
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Manage profile picture, first name, last name, mobile number, date of birth, and address details.
+      Update profile picture, name, mobile number, birth date, address, country, state, city, and zip code.
     </p>
   </div>
 
@@ -143,7 +217,7 @@ Manage Profile is used to update account-level details. It keeps user profile in
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Update company or workspace details so your organization profile stays accurate.
+      Manage logo, organization name, email, mobile number, website, organization ID, and created date.
     </p>
   </div>
 
@@ -155,7 +229,7 @@ Manage Profile is used to update account-level details. It keeps user profile in
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Manage account security preferences and keep your workspace access safer.
+      Change password, choose default timezone, and enable or disable two-factor authentication.
     </p>
   </div>
 
@@ -167,23 +241,23 @@ Manage Profile is used to update account-level details. It keeps user profile in
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Review recent login activity and check account access history.
+      Review login activity by date, user, location, role type, and login time.
     </p>
   </div>
 </div>
 
 ---
 
-## Profile Details fields
+## Profile and organization details
 
 <div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
   <div className="mb-6">
     <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      Profile information
+      Account identity
     </p>
 
-    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-      Profile Details contains the main information connected with your Twinalyze account.
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      These sections help keep your user identity and organization information accurate inside Twinalyze.
     </p>
   </div>
 
@@ -194,41 +268,99 @@ Manage Profile is used to update account-level details. It keeps user profile in
       </div>
 
       <p className="text-sm leading-6 text-slate-600">
-        Upload or remove your profile picture so team members can identify your account easily.
+        Upload or remove your profile picture so team members can identify your account.
       </p>
     </div>
 
     <div className="rounded-2xl bg-slate-50 p-5">
       <div className="mb-3 text-sm font-semibold text-slate-950">
-        Personal details
+        Personal information
       </div>
 
       <p className="text-sm leading-6 text-slate-600">
-        Update first name, last name, mobile number, and date of birth.
+        Update your first name, last name, mobile number, birth date, and address details.
       </p>
     </div>
 
     <div className="rounded-2xl bg-slate-50 p-5">
       <div className="mb-3 text-sm font-semibold text-slate-950">
-        Address details
+        Organization information
       </div>
 
       <p className="text-sm leading-6 text-slate-600">
-        Add address, country, state, city, and zip code for complete profile information.
+        Manage organization name, logo, email, mobile number, website, and created date.
       </p>
     </div>
   </div>
 </div>
 
 <Info>
-  Email may be disabled because it is used as the primary account identity.
+  Email and organization ID may be disabled because they are used as primary account and workspace identifiers.
 </Info>
 
 ---
 
-## Users and Permissions
+## Security and login history
 
-Users and Permissions helps admins manage who can access the organization and what each user can do.
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Account protection
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Security settings help protect your account, while login history helps you review who accessed the workspace and when.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
+        1
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Change password
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use this when you want to update your account password.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
+        2
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Default timezone
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Select the timezone used for dates, reports, schedules, and activity views.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
+        3
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Two-factor authentication
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Add an extra security layer to protect your account from unauthorized access.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Users and permissions flow
 
 <div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
   <div className="mb-6">
@@ -236,12 +368,12 @@ Users and Permissions helps admins manage who can access the organization and wh
       Team access flow
     </p>
 
-    <h3 className="mt-1 text-xl font-semibold tracking-tight text-slate-950">
-      Invite, assign, filter, and review users
-    </h3>
+    <div className="mt-1 text-xl font-semibold tracking-tight text-slate-950">
+      Invite users, assign roles, and control access
+    </div>
 
     <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      This section helps admins invite team members, assign role types, manage permissions, and review all users in one workspace.
+      Users and Permissions helps admins manage who can access the organization and what each role is allowed to view or manage.
     </p>
   </div>
 
@@ -284,7 +416,7 @@ Users and Permissions helps admins manage who can access the organization and wh
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Click Invite to send access invitation to the selected user.
+        Click Invite to send the workspace invitation.
       </p>
     </div>
 
@@ -298,7 +430,7 @@ Users and Permissions helps admins manage who can access the organization and wh
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Use filters and user list to review existing team access.
+        Use filters and permission views to review user access.
       </p>
     </div>
   </div>
@@ -317,11 +449,11 @@ Users and Permissions helps admins manage who can access the organization and wh
 
       <div>
         <div className="text-sm font-semibold text-slate-950">
-          Invite User
+          Users
         </div>
 
         <p className="mt-2 text-sm leading-6 text-slate-600">
-          Invite a user by entering their email and selecting a role type. This is useful when adding product, marketing, developer, support, or admin team members.
+          View all organization users with name, email, phone, role type, and status.
         </p>
       </div>
     </div>
@@ -335,11 +467,11 @@ Users and Permissions helps admins manage who can access the organization and wh
 
       <div>
         <div className="text-sm font-semibold text-slate-950">
-          All Users
+          Filters
         </div>
 
         <p className="mt-2 text-sm leading-6 text-slate-600">
-          View users with name, email, phone, role type, and status. This helps admins understand who currently has access.
+          Search users and filter them by status or role type for quick review.
         </p>
       </div>
     </div>
@@ -353,11 +485,11 @@ Users and Permissions helps admins manage who can access the organization and wh
 
       <div>
         <div className="text-sm font-semibold text-slate-950">
-          Status and role filters
+          Permission levels
         </div>
 
         <p className="mt-2 text-sm leading-6 text-slate-600">
-          Filter users by status or role type. This helps in large teams where many users have different access levels.
+          Permissions are organized by Menu Group, Main Menu, and Sub Menu.
         </p>
       </div>
     </div>
@@ -371,11 +503,11 @@ Users and Permissions helps admins manage who can access the organization and wh
 
       <div>
         <div className="text-sm font-semibold text-slate-950">
-          Permissions
+          Role-based access
         </div>
 
         <p className="mt-2 text-sm leading-6 text-slate-600">
-          Control what each role can access or manage inside Twinalyze. This keeps workspace access organized and secure.
+          Assign menu access to role types like Administrator, Developer, Designer, Guest, or Testing.
         </p>
       </div>
     </div>
@@ -391,48 +523,26 @@ Users and Permissions helps admins manage who can access the organization and wh
     Go to Settings from the left sidebar.
   </Step>
 
-  <Step title="Update profile details">
-    Use Manage Profile to update profile picture, personal details, and address details.
+  <Step title="Update profile and organization details">
+    Use Manage Profile to update user information, address, organization logo, company details, and website.
   </Step>
 
-  <Step title="Review security">
-    Open Security & Settings or Login History to check account security and access activity.
+  <Step title="Review security settings">
+    Open Security & Settings to change password, set timezone, and manage two-factor authentication.
+  </Step>
+
+  <Step title="Check login history">
+    Use Login History to review recent login activity by date, user, location, role, and time.
   </Step>
 
   <Step title="Invite team members">
     Go to Users and Permissions, enter email, select role type, and click Invite.
   </Step>
 
-  <Step title="Review user access">
-    Use status, role, and search filters to find users and review their access.
+  <Step title="Manage permissions">
+    Use the Permissions tab to control menu access for each role.
   </Step>
 </Steps>
-
----
-
-## Common use cases
-
-<AccordionGroup>
-  <Accordion title="Update profile information" icon="user">
-    Use Profile Details to update your name, mobile number, date of birth, address, and profile picture.
-  </Accordion>
-
-  <Accordion title="Manage organization details" icon="building">
-    Use Organization Profile to update company or workspace-related information.
-  </Accordion>
-
-  <Accordion title="Review account security" icon="lock">
-    Use Security & Settings and Login History to review account safety and login activity.
-  </Accordion>
-
-  <Accordion title="Invite a new user" icon="user-plus">
-    Enter the user email, select a role type, and send an invitation.
-  </Accordion>
-
-  <Accordion title="Control team permissions" icon="shield">
-    Use Permissions to control what each role can view, create, update, or manage inside Twinalyze.
-  </Accordion>
-</AccordionGroup>
 
 ---
 
@@ -444,8 +554,8 @@ Users and Permissions helps admins manage who can access the organization and wh
       Settings workflow
     </p>
 
-    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-      Keep your profile, organization details, and team access updated so your workspace remains secure and easy to manage.
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Keep profile details updated, review access regularly, and assign permissions based on each user’s actual responsibility.
     </p>
   </div>
 
@@ -456,7 +566,7 @@ Users and Permissions helps admins manage who can access the organization and wh
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Update profile information so team members can identify your account correctly.
+        Updated profile and organization details make workspace management easier.
       </p>
     </div>
 
@@ -476,24 +586,24 @@ Users and Permissions helps admins manage who can access the organization and wh
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Check login activity regularly to identify unusual access.
+        Check login activity regularly to identify unusual or unwanted access.
       </p>
     </div>
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
       <div className="text-sm font-semibold text-slate-950">
-        Review users regularly
+        Review permissions regularly
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Remove or update users who no longer need access to the organization.
+        Update permissions when team structure, responsibilities, or access needs change.
       </p>
     </div>
   </div>
 </div>
 
 <Check>
-  Settings helps your team manage account details, security, users, roles, and permissions in one place.
+  Settings helps your team manage account details, organization profile, security, login activity, users, roles, and permissions in one place.
 </Check>
 
 ---
