@@ -236,7 +236,7 @@
                 "pages": [
                   {
                     "group": "Android",
-                        "icon": "sdk-icon/android",
+                        "icon": "sdk-icon/android.svg",
                     
                     "pages": [
                       "sdks2/app/android/analytics",
@@ -245,7 +245,7 @@
                   },
                   {
                     "group": "iOS",
-                    "icon": "sd-icon/apple.svg",
+                    "icon": "/sdk-icon/apple.svg",
                     "pages": [
                       "sdks2/app/ios/analytics",
                       "sdks2/app/ios/ad-analytics"
