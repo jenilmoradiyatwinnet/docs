@@ -231,69 +231,63 @@
             "icon": "code",
             "pages": [
               {
-                "group": "App",
-                
-                "pages": [
-                  {
-                    "group": "Android",
-                        "icon": "sdk-icon/android.svg",
-                    
-                    "pages": [
-                      "sdks2/app/android/analytics",
-                      "sdks2/app/android/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "iOS",
-                    "icon": "/sdk-icon/apple.svg",
-                    "pages": [
-                      "sdks2/app/ios/analytics",
-                      "sdks2/app/ios/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "Flutter",
-                     "icon": "layer-group",
-                    "pages": [
-                      "sdks2/app/flutter/analytics",
-                      "sdks2/app/flutter/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "React Native",
-                     "icon": "atom",
-                    "pages": [
-                      "sdks2/app/react-native/analytics",
-                      "sdks2/app/react-native/ad-analytics"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Web",
-               
-                "pages": [
-                  {
-                    "group": "JavaScript",
-                           "icon": "code",
-                    "pages": [
-                      "sdks2/web/javascript/analytics",
-                      "sdks2/web/javascript/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "Shopify",
-                          "icon": "shopping-bag",
-                    "pages": [
-                      "sdks2/web/Shopify/analytics",
-                      "sdks2/web/Shopify/ad-analytics"
-                    ]
-                  }
-               
-                ]
-              }
-            ]
-          },
+  "group": "App",
+  "pages": [
+    {
+      "group": "Android",
+      "icon": "/sdk-icon/android.svg",
+      "pages": [
+        "sdks2/app/android/analytics",
+        "sdks2/app/android/ad-analytics"
+      ]
+    },
+    {
+      "group": "iOS",
+      "icon": "/sdk-icon/apple.svg",
+      "pages": [
+        "sdks2/app/ios/analytics",
+        "sdks2/app/ios/ad-analytics"
+      ]
+    },
+    {
+      "group": "Flutter",
+      "icon": "/sdk-icon/flutter.svg",
+      "pages": [
+        "sdks2/app/flutter/analytics",
+        "sdks2/app/flutter/ad-analytics"
+      ]
+    },
+    {
+      "group": "React Native",
+      "icon": "/sdk-icon/react-native.svg",
+      "pages": [
+        "sdks2/app/react-native/analytics",
+        "sdks2/app/react-native/ad-analytics"
+      ]
+    }
+  ]
+},
+{
+  "group": "Web",
+  "pages": [
+    {
+      "group": "JavaScript",
+      "icon": "/sdk-icon/javascript.svg",
+      "pages": [
+        "sdks2/web/javascript/analytics",
+        "sdks2/web/javascript/ad-analytics"
+      ]
+    },
+    {
+      "group": "Shopify",
+      "icon": "/sdk-icon/shopify.svg",
+      "pages": [
+        "sdks2/web/Shopify/analytics",
+        "sdks2/web/Shopify/ad-analytics"
+      ]
+    }
+  ]
+},
     { "dropdown": "Integrations",
      "icon": "plug", 
      "pages": [ { 
