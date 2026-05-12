@@ -1,116 +1,245 @@
 ---
 title: Settings
-description: Manage profile details, organization information, security settings, users, and permissions in Twinalyze.
+description: Manage profile details, users, roles, permissions, security settings, and organization access in Twinalyze.
 ---
 
 # Settings
 
-The **Settings** section helps users manage their personal profile, organization information, security preferences, login activity, users, and permissions from one central place.
+Settings is the control area of Twinalyze where users can manage their profile, organization information, security options, team members, and role-based permissions.
 
-This page is mainly used by organization members and administrators to keep account details updated, invite team members, and control access based on user roles.
+<div className="not-prose my-6 rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-6">
+  <div className="flex flex-col gap-3">
+    <div className="inline-flex w-fit rounded-full border border-blue-200 bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+      Account & Access Management
+    </div>
 
-<CardGroup cols={2}>
-  <Card title="Manage Profile" icon="user">
-    Update personal details, profile picture, organization profile, security settings, and login history.
+    <h2 className="m-0 text-2xl font-bold tracking-tight text-slate-900">
+      Manage your profile, team, and permissions from one place
+    </h2>
+
+    <p className="m-0 max-w-3xl text-sm leading-6 text-slate-600">
+      The Settings module helps administrators and team members keep account information updated,
+      invite users, assign roles, manage permissions, and review security-related activity inside Twinalyze.
+    </p>
+  </div>
+</div>
+
+<CardGroup cols={3}>
+  <Card title="Profile Management" icon="user">
+    Update personal details, profile image, address information, and account-related details.
+  </Card>
+
+  <Card title="Organization Settings" icon="building">
+    Manage organization profile details connected with the current workspace.
   </Card>
 
   <Card title="Users & Permissions" icon="users">
-    Invite team members, assign roles, manage users, and control access permissions.
+    Invite team members, assign roles, and control access based on responsibilities.
   </Card>
 </CardGroup>
+
+---
+
+## Settings overview
+
+The Settings section is divided into two main areas: **Manage Profile** and **Users & Permissions**.
+
+<div className="not-prose my-6 grid gap-4 md:grid-cols-2">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+      👤
+    </div>
+    <h3 className="m-0 text-base font-semibold text-slate-900">
+      Manage Profile
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Used to update personal information, upload a profile picture, manage address details,
+      view login history, and review account security settings.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+      🛡️
+    </div>
+    <h3 className="m-0 text-base font-semibold text-slate-900">
+      Users & Permissions
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Used by admins to invite users, assign role types, manage active users, filter users,
+      and control organization-level access.
+    </p>
+  </div>
+</div>
 
 ---
 
 ## Manage Profile
 
-The **Manage Profile** page allows users to update their basic account information and profile details.
+The **Manage Profile** page allows users to update their personal and account-related information.
 
-Users can manage their name, email, mobile number, date of birth, address, country, state, city, and zip code. They can also upload or remove their profile picture.
+Users can manage their profile picture, first name, last name, mobile number, date of birth, address, country, state, city, and zip code.
 
 <Note>
-  Some fields such as email may be disabled because they are linked with the user account and cannot be changed directly.
+  Email may be disabled because it is connected with the registered account and is usually not editable from profile settings.
 </Note>
 
-### Profile sections
+### Available tabs
 
-<CardGroup cols={2}>
-  <Card title="Profile Details" icon="id-card">
-    Manage basic user information such as first name, last name, email, mobile number, and date of birth.
-  </Card>
+<div className="not-prose my-6 overflow-hidden rounded-2xl border border-slate-200 bg-white">
+  <div className="grid gap-0 md:grid-cols-4">
+    <div className="border-b border-slate-200 p-5 md:border-b-0 md:border-r">
+      <div className="text-sm font-semibold text-blue-600">01</div>
+      <div className="mt-1 font-semibold text-slate-900">Profile Details</div>
+      <p className="mt-2 text-sm leading-6 text-slate-500">
+        Manage name, email, phone number, profile image, and personal details.
+      </p>
+    </div>
 
-  <Card title="Address Details" icon="map-pin">
-    Add or update address information including country, state, city, zip code, and full address.
-  </Card>
+    <div className="border-b border-slate-200 p-5 md:border-b-0 md:border-r">
+      <div className="text-sm font-semibold text-blue-600">02</div>
+      <div className="mt-1 font-semibold text-slate-900">Organization Profile</div>
+      <p className="mt-2 text-sm leading-6 text-slate-500">
+        Review and update organization-related profile information.
+      </p>
+    </div>
 
-  <Card title="Organization Profile" icon="building">
-    Manage organization-related information connected with the current workspace.
-  </Card>
+    <div className="border-b border-slate-200 p-5 md:border-b-0 md:border-r">
+      <div className="text-sm font-semibold text-blue-600">03</div>
+      <div className="mt-1 font-semibold text-slate-900">Security & Settings</div>
+      <p className="mt-2 text-sm leading-6 text-slate-500">
+        Manage account security preferences and important settings.
+      </p>
+    </div>
 
-  <Card title="Security & Settings" icon="shield">
-    Review account security options and update important settings for safer access.
-  </Card>
+    <div className="p-5">
+      <div className="text-sm font-semibold text-blue-600">04</div>
+      <div className="mt-1 font-semibold text-slate-900">Login History</div>
+      <p className="mt-2 text-sm leading-6 text-slate-500">
+        View previous login activity and monitor account access.
+      </p>
+    </div>
+  </div>
+</div>
 
-  <Card title="Login History" icon="clock">
-    View previous login activity to monitor account access and security.
-  </Card>
-</CardGroup>
+### Profile information
+
+| Field | Description |
+| --- | --- |
+| First Name | User's first name. |
+| Last Name | User's last name. |
+| Email | Registered email address of the user. |
+| Mobile Number | User's contact number. |
+| Date of Birth | User's birth date. |
+| Address | Full address of the user. |
+| Country, State, City | Location details of the user. |
+| Zip Code | Postal or zip code of the user location. |
 
 ---
 
 ## Users & Permissions
 
-The **Users & Permissions** page helps administrators manage team access inside the organization.
+The **Users & Permissions** page helps admins manage team access inside the organization.
 
-Admins can invite new users by email, assign a role type, refresh the user list, search users, and filter users by status or role.
+Admins can invite new users, assign role types, search users, filter by status, filter by role, and review all users from the table.
 
-This helps organizations keep access clean, secure, and role-based.
+<div className="not-prose my-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+  <div className="mb-4">
+    <h3 className="m-0 text-base font-semibold text-slate-900">
+      Admin actions
+    </h3>
+    <p className="mt-1 text-sm leading-6 text-slate-600">
+      Use this section to keep organization access clean, secure, and role-based.
+    </p>
+  </div>
 
-### What admins can do
+  <div className="grid gap-3 md:grid-cols-2">
+    <div className="rounded-xl border border-slate-200 bg-white p-4">
+      <div className="font-semibold text-slate-900">Invite user</div>
+      <p className="mt-1 text-sm leading-6 text-slate-500">
+        Send an invitation by entering the user's email address and selecting a role type.
+      </p>
+    </div>
 
-<Steps>
-  <Step title="Invite a new user">
-    Enter the user's email address and select a role type to send an invitation.
-  </Step>
+    <div className="rounded-xl border border-slate-200 bg-white p-4">
+      <div className="font-semibold text-slate-900">Assign role</div>
+      <p className="mt-1 text-sm leading-6 text-slate-500">
+        Select a role based on the user's responsibility inside the organization.
+      </p>
+    </div>
 
-  <Step title="Assign a role">
-    Choose the correct role for the user based on their responsibility inside the organization.
-  </Step>
+    <div className="rounded-xl border border-slate-200 bg-white p-4">
+      <div className="font-semibold text-slate-900">Search users</div>
+      <p className="mt-1 text-sm leading-6 text-slate-500">
+        Quickly find users using name, email, or other available user details.
+      </p>
+    </div>
 
-  <Step title="Search and filter users">
-    Use status, role, and search filters to quickly find existing users.
-  </Step>
+    <div className="rounded-xl border border-slate-200 bg-white p-4">
+      <div className="font-semibold text-slate-900">Filter users</div>
+      <p className="mt-1 text-sm leading-6 text-slate-500">
+        Filter users by status or role to manage large teams more easily.
+      </p>
+    </div>
+  </div>
+</div>
 
-  <Step title="Review user details">
-    Check user name, email, phone number, role type, and current status from the users table.
-  </Step>
-</Steps>
+### User table details
+
+| Column | Description |
+| --- | --- |
+| First Name | First name of the user. |
+| Last Name | Last name of the user. |
+| Email | Email address used by the user. |
+| Phone | Contact number of the user, if available. |
+| Role Type | Assigned role of the user. |
+| Status | Current user status inside the organization. |
 
 ---
 
 ## Permissions
 
-The **Permissions** tab is used to control what each role can access inside Twinalyze.
+The **Permissions** tab is used to control feature access for each role.
 
-Permissions help define which users can view data, manage projects, invite users, update settings, access reports, or perform admin-level actions.
+Permissions define what a user can view, create, edit, delete, invite, export, or manage inside Twinalyze.
 
 <Info>
-  Role-based permissions help protect sensitive organization data and make sure each team member only has access to the features they need.
+  Role-based permissions help protect organization data and make sure users only access the features required for their work.
 </Info>
+
+<AccordionGroup>
+  <Accordion title="Why permissions are important">
+    Permissions help prevent unauthorized access to sensitive organization data, reports, users, and project settings.
+  </Accordion>
+
+  <Accordion title="Who should manage permissions">
+    Usually, owners and administrators should manage permissions because they control access for the full organization.
+  </Accordion>
+
+  <Accordion title="When to update permissions">
+    Update permissions when a user's responsibility changes, when a new team member joins, or when a user no longer needs access.
+  </Accordion>
+</AccordionGroup>
 
 ---
 
 # Page preview
 
-This section shows how the **Settings** pages appear inside the Twinalyze dashboard.
+This section shows how the Settings pages appear inside the Twinalyze dashboard.
 
-<div className="not-prose space-y-8">
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-700">
-        Manage Profile
+<div className="not-prose space-y-10">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-4 flex flex-col gap-1">
+      <div className="flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-blue-600"></span>
+        <div className="text-sm font-semibold text-slate-900">
+          Manage Profile
+        </div>
       </div>
-      <p className="mt-1 text-sm leading-6 text-slate-500">
-        The Manage Profile page allows users to update personal information, upload a profile picture, manage address details, and review account-related settings.
+
+      <p className="m-0 max-w-3xl text-sm leading-6 text-slate-500">
+        The Manage Profile page allows users to update personal information, upload a profile picture,
+        manage address details, and access profile-related settings from one place.
       </p>
     </div>
 
@@ -122,13 +251,18 @@ This section shows how the **Settings** pages appear inside the Twinalyze dashbo
     </Frame>
   </div>
 
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-700">
-        Users & Permissions
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-4 flex flex-col gap-1">
+      <div className="flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-blue-600"></span>
+        <div className="text-sm font-semibold text-slate-900">
+          Users & Permissions
+        </div>
       </div>
-      <p className="mt-1 text-sm leading-6 text-slate-500">
-        The Users & Permissions page allows admins to invite users, assign roles, filter users, search team members, and manage access inside the organization.
+
+      <p className="m-0 max-w-3xl text-sm leading-6 text-slate-500">
+        The Users & Permissions page allows admins to invite team members, assign roles,
+        search users, apply filters, and manage organization-level access.
       </p>
     </div>
 
@@ -145,20 +279,20 @@ This section shows how the **Settings** pages appear inside the Twinalyze dashbo
 
 ## Best practices
 
-<AccordionGroup>
-  <Accordion title="Keep profile details updated">
-    Update your name, mobile number, and address details whenever required so your account information stays accurate.
-  </Accordion>
+<Steps>
+  <Step title="Keep profile details updated">
+    Make sure personal and address details are accurate so account information stays clean.
+  </Step>
 
-  <Accordion title="Use correct roles for users">
-    Assign roles carefully based on each user's responsibility. Avoid giving admin access to users who only need view-level access.
-  </Accordion>
+  <Step title="Use role-based access">
+    Assign roles based on user responsibility instead of giving admin access to every user.
+  </Step>
 
-  <Accordion title="Review users regularly">
-    Check the users list regularly and remove or update access for users who no longer need access to the organization.
-  </Accordion>
+  <Step title="Review users regularly">
+    Remove or update access for users who no longer need access to the organization.
+  </Step>
 
-  <Accordion title="Monitor login activity">
-    Use login history to review account access and identify any unusual login activity.
-  </Accordion>
-</AccordionGroup>
+  <Step title="Check login history">
+    Review login history to monitor account access and identify unusual activity.
+  </Step>
+</Steps>
