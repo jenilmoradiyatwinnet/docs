@@ -49,19 +49,18 @@ Use these pages when you want to compare country markets, check store availabili
 </div>
 
 ---
-
 ## Country Store
 
-Country Store helps you browse countries visually by market tier. It is useful when you want to compare countries quickly without opening a detailed metadata table.
+Country Store shows each country in a card format. Each card gives a quick view of how that country is connected with store access, market size, currency value, population, and available store details.
 
 <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
   <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
     <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Country Store layout
+      Country card breakdown
     </p>
 
     <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Use tier tabs, sorting, search, and country cards to compare store and market signals.
+      Each country card gives a compact view of store availability, country identity, currency rate, population, and quick actions.
     </p>
   </div>
 
@@ -69,7 +68,7 @@ Country Store helps you browse countries visually by market tier. It is useful w
     <thead className="bg-white">
       <tr>
         <th className="w-[30%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Area
+          Card area
         </th>
 
         <th className="w-[42%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
@@ -86,132 +85,84 @@ Country Store helps you browse countries visually by market tier. It is useful w
       <tr className="hover:bg-slate-50">
         <td className="px-5 py-4 align-top">
           <div className="text-sm font-semibold text-slate-950">
-            Tier tabs and accordion
+            Store icons
           </div>
 
           <div className="mt-1 text-xs text-slate-500">
-            All, T1, T1-1, T2, T3, T4
+            Browser and app store
           </div>
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Groups countries by market tier. You can open a tier row to view countries inside that group.
+          Shows quick store shortcuts for the selected country. These icons help you open or review the country-specific store view.
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Market prioritization, tier-based research, and country grouping.
+          Checking how store data or listing view appears for that country.
         </td>
       </tr>
 
       <tr className="hover:bg-slate-50">
         <td className="px-5 py-4 align-top">
           <div className="text-sm font-semibold text-slate-950">
-            Sort and search controls
+            Country identity
           </div>
 
           <div className="mt-1 text-xs text-slate-500">
-            Country Name, Currency Rate, Population
+            Flag, country name, country code
           </div>
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Sort countries by name, currency rate, or population. Use search to find a country quickly.
+          Shows the country flag, country name, and short country code such as AU, CA, DK, FR, DE, or US.
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Faster comparison and quick country lookup.
+          Quickly identifying and comparing countries in the selected market group.
         </td>
       </tr>
 
       <tr className="hover:bg-slate-50">
         <td className="px-5 py-4 align-top">
           <div className="text-sm font-semibold text-slate-950">
-            Country cards
+            Currency and population
           </div>
 
           <div className="mt-1 text-xs text-slate-500">
-            Flag, country name, code, currency, population
+            Currency rate and market size
           </div>
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Each card shows country identity, local currency rate, population, country code, and basic store signals.
+          Shows the local currency rate and population value for the country. This helps you understand pricing context and market size.
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Country-level market size, pricing context, and quick comparison.
+          Pricing research, market comparison, and country opportunity analysis.
         </td>
       </tr>
 
       <tr className="hover:bg-slate-50">
         <td className="px-5 py-4 align-top">
           <div className="text-sm font-semibold text-slate-950">
-            Store shortcuts
+            Store count and quick action
           </div>
 
           <div className="mt-1 text-xs text-slate-500">
-            Browser, app store, language/store count, quick open
+            Count, dropdown, and open icon
           </div>
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Browser and store icons help open country-specific store views. The action icon opens more store-related details.
+          Shows available store or language count at the bottom of the card. The quick action icon helps open more country-specific store details.
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Checking how an app or store listing appears in a selected country.
+          Reviewing available store data and opening deeper country-level information.
         </td>
       </tr>
     </tbody>
   </table>
-</div>
-
----
-
-## Country card details
-
-<div className="not-prose grid gap-4 md:grid-cols-3">
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
-      01
-    </div>
-
-    <div className="text-base font-semibold text-slate-950">
-      Store icons
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      Use the browser and app store icons to check how the selected country’s store or listing view opens.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
-      02
-    </div>
-
-    <div className="text-base font-semibold text-slate-950">
-      Market signals
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      Currency rate and population help you understand pricing context, market size, and country-level opportunity.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
-      03
-    </div>
-
-    <div className="text-base font-semibold text-slate-950">
-      Quick actions
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      Use the quick action icon or store count area to open more country-specific store or listing information.
-    </p>
-  </div>
 </div>
 
 ---
