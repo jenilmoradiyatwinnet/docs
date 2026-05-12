@@ -12,125 +12,81 @@ Use this page to keep your workspace secure, organized, and up to date.
 
 ## Page preview
 
-<div className="not-prose space-y-10">
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-950">
-        Profile Details
-      </div>
+<Tabs>
+  <Tab title="Manage Profile">
+    <Steps>
+      <Step title="Profile Details">
+        Update profile picture, personal details, mobile number, date of birth, and address information.
 
-      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Profile Details lets users update their profile picture, personal information, and address details.
-      </p>
-    </div>
+        <Frame>
+          <img
+            src="/images/settings_manage_profile.png"
+            alt="Twinalyze Profile Details settings page"
+          />
+        </Frame>
+      </Step>
 
-    <Frame>
-      <img
-        src="/images/settings_manage_profile.png"
-        alt="Twinalyze Profile Details settings page"
-      />
-    </Frame>
-  </div>
+      <Step title="Organization Profile">
+        Manage organization logo, name, email, mobile number, website, organization ID, and created date.
 
+        <Frame>
+          <img
+            src="/images/setting_manage_organization.png"
+            alt="Twinalyze Organization Profile settings page"
+          />
+        </Frame>
+      </Step>
 
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-950">
-        Organization Profile
-      </div>
+      <Step title="Security & Settings">
+        Change password, select default timezone, and manage two-factor authentication.
 
-      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Organization Profile stores company information such as logo, organization name, email, mobile number, website, organization ID, and created date.
-      </p>
-    </div>
+        <Frame>
+          <img
+            src="/images/_manage_security.png"
+            alt="Twinalyze Security and Settings page"
+          />
+        </Frame>
+      </Step>
 
-    <Frame>
-      <img
-        src="/images/setting_manage_organization.png"
-        alt="Twinalyze Organization Profile settings page"
-      />
-    </Frame>
-  </div>
+      <Step title="Login History">
+        Review login activity with user, email, country, location, role type, and login time.
 
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-950">
-        Security &amp; Settings
-      </div>
+        <Frame>
+          <img
+            src="/images/setting_manage_login.png"
+            alt="Twinalyze Login History page"
+          />
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
 
-      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Security & Settings helps users change password, set default timezone, and manage two-factor authentication.
-      </p>
-    </div>
+  <Tab title="Users & Permissions">
+    <Steps>
+      <Step title="Users">
+        Invite team members, assign role types, filter users, and review existing user access.
 
-    <Frame>
-      <img
-        src="/images/_manage_security.png"
-        alt="Twinalyze Security and Settings page"
-      />
-    </Frame>
-  </div>
+        <Frame>
+          <img
+            src="/images/setting_users_users.png"
+            alt="Twinalyze Users settings page"
+          />
+        </Frame>
+      </Step>
 
+      <Step title="Permissions">
+        Manage menu-level access by Menu Group, Main Menu, and Sub Menu for each role type.
 
-
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-950">
-        Login History
-      </div>
-
-      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Login History helps admins and users review login activity with date, user, location, role type, and access time.
-      </p>
-    </div>
-
-    <Frame>
-      <img
-        src="/images/setting_manage_login.png"
-        alt="Twinalyze Login History page"
-      />
-    </Frame>
-  </div>
-
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-950">
-        Users
-      </div>
-
-      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Users helps admins invite team members, assign role types, filter users, and review user access.
-      </p>
-    </div>
-
-    <Frame>
-      <img
-        src="/images/setting_users_users.png"
-        alt="Twinalyze Users settings page"
-      />
-    </Frame>
-  </div>
-
-  <div>
-    <div className="mb-3">
-      <div className="text-sm font-semibold text-slate-950">
-        Permissions
-      </div>
-
-      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-        Permissions controls which roles can access menu groups, main menus, and sub menus inside the workspace.
-      </p>
-    </div>
-
-    <Frame>
-      <img
-        src="/images/setting_users_permission.png"
-        alt="Twinalyze Permissions settings page"
-      />
-    </Frame>
-  </div>
-</div>
-
+        <Frame>
+          <img
+            src="/images/setting_users_permission.png"
+            alt="Twinalyze Permissions settings page"
+          />
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
 ---
 
 ## Settings overview
