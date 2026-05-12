@@ -223,7 +223,7 @@
         ]
       },
       {
-        "tab": "SDKs & Integrations",
+        "tab": "SDKs & Integrations2",
         "icon": "code",
         "dropdowns": [
           {
@@ -245,7 +245,7 @@
                   },
                   {
                     "group": "iOS",
-                    "icon": "sd-icon/apple",
+                    "icon": "sd-icon/apple.svg",
                     "pages": [
                       "sdks2/app/ios/analytics",
                       "sdks2/app/ios/ad-analytics"
