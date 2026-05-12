@@ -6,12 +6,6 @@ hideFooterPagination: true
 
 Country Store and Country Details help you explore countries by market tier, currency, population, region, timezone, language, and store availability.
 
-Use these pages to compare countries, understand market priority, check local app store availability, and prepare country-wise research for app growth and market expansion.
-
----
-
-## Page preview
-
 <div className="not-prose space-y-10">
   <div>
     <div className="mb-3">
@@ -44,86 +38,6 @@ Use these pages to compare countries, understand market priority, check local ap
       <img src="/images/Dashboard/Dashboard_7_Research_CountryDetails_3.PNG" alt="Twinalyze Country Details page" />
     </Frame>
   </div>
-</div>
-
----
-
-## Overview
-
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Country research overview
-    </p>
-
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Country Store and Country Details help you understand countries, market tiers, store links, currency, population, and regional metadata.
-    </p>
-  </div>
-
-  <table className="w-full table-fixed divide-y divide-slate-200">
-    <thead className="bg-white">
-      <tr>
-        <th className="w-[26%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Page
-        </th>
-
-        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          What it shows
-        </th>
-
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Best for
-        </th>
-      </tr>
-    </thead>
-
-    <tbody className="divide-y divide-slate-100 bg-white">
-      <tr className="transition hover:bg-slate-50">
-        <td className="px-5 py-5 align-top">
-          <div className="border-l-2 border-blue-600 pl-3">
-            <div className="text-sm font-semibold text-slate-950">
-              Country Store
-            </div>
-
-            <div className="mt-1 text-xs text-slate-500">
-              Store availability and tier cards
-            </div>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
-          Shows country cards with store access, country code, currency rate, population, and tier grouping.
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
-          Country-wise app store research and market comparison.
-        </td>
-      </tr>
-
-      <tr className="transition hover:bg-slate-50">
-        <td className="px-5 py-5 align-top">
-          <div className="border-l-2 border-blue-600 pl-3">
-            <div className="text-sm font-semibold text-slate-950">
-              Country Details
-            </div>
-
-            <div className="mt-1 text-xs text-slate-500">
-              Country metadata table
-            </div>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
-          Shows country name, population, tier, currency, timezone, language, and more details in table format.
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
-          Market planning, localization, pricing, and regional analysis.
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </div>
 
 ---
@@ -354,84 +268,6 @@ Country Details gives a table-based view of country metadata. It is useful when 
 
         <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
           Pricing and currency research.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
----
-
-## Empty state
-
-If the page shows `No data`, it may mean the selected filter, tier, region, or search query does not currently have matching country data.
-
-<Info>
-  Try changing the region, tier, currency selector, or search keyword before assuming data is unavailable.
-</Info>
-
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Empty state checklist
-    </p>
-
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Use this checklist when country data does not appear.
-    </p>
-  </div>
-
-  <table className="w-full table-fixed divide-y divide-slate-200">
-    <thead className="bg-white">
-      <tr>
-        <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Check
-        </th>
-
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          What to verify
-        </th>
-      </tr>
-    </thead>
-
-    <tbody className="divide-y divide-slate-100 bg-white">
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
-          Search keyword
-        </td>
-
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
-          Clear the search field or try a different country name.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
-          Region filter
-        </td>
-
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
-          Switch to All if a specific region does not show data.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
-          Tier filter
-        </td>
-
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
-          Select All or another tier such as T1, T2, T3, or T4.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
-          Refresh data
-        </td>
-
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
-          Click Refresh to reload the latest country store or country details data.
         </td>
       </tr>
     </tbody>
