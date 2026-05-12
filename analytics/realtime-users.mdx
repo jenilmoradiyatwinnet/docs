@@ -1,12 +1,12 @@
 ---
 title: "Realtime Users"
-description: "Monitor live users, active users in the last 30 minutes, country activity, app open frequency, and app version usage in Twinalyze."
+description: "Monitor live users, active users in the last 30 minutes, country activity, traffic by UTM, app open frequency, and app version usage in Twinalyze."
 hideFooterPagination: true
 ---
 
 Realtime Users helps you monitor what is happening inside your app or website right now.
 
-Use this page to see live user activity, active users in the last 30 minutes, country-wise users, app open frequency, and app version usage.
+Use this page to see live user activity, active users in the last 30 minutes, country-wise users, traffic by UTM, app open frequency, and app version usage.
 
 ---
 
@@ -27,7 +27,7 @@ Use this page to see live user activity, active users in the last 30 minutes, co
     </p>
 
     <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Realtime Users gives you a quick view of current user activity, location distribution, app opens, and version usage.
+      Realtime Users gives you a quick view of current user activity, location distribution, campaign traffic, app opens, and version usage.
     </p>
   </div>
 
@@ -116,6 +116,27 @@ Use this page to see live user activity, active users in the last 30 minutes, co
         <td className="px-5 py-5 align-top">
           <div className="border-l-2 border-blue-600 pl-3">
             <div className="text-sm font-semibold text-slate-950">
+              Traffic by UTM
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Campaign traffic source
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows live traffic grouped by UTM values like source, medium, campaign, content, and term.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Tracking live campaign traffic and marketing performance.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
               App Open Frequency
             </div>
             <div className="mt-1 text-xs text-slate-500">
@@ -174,6 +195,12 @@ Use this page to see live user activity, active users in the last 30 minutes, co
     It helps you understand which regions are currently using your app or website.
   </Accordion>
 
+  <Accordion title="Traffic by UTM" icon="chart-line">
+    This widget shows live users grouped by UTM campaign values.
+
+    It helps marketing and growth teams understand which campaign source, medium, or campaign is bringing users right now.
+  </Accordion>
+
   <Accordion title="App Open Frequency" icon="chart-line">
     This widget helps you understand how frequently users open the app.
 
@@ -186,6 +213,118 @@ Use this page to see live user activity, active users in the last 30 minutes, co
     It helps product and development teams understand which versions are active and whether users are moving to the latest version.
   </Accordion>
 </AccordionGroup>
+
+---
+
+## Traffic by UTM
+
+Traffic by UTM helps you understand where realtime users are coming from when they open your app or website through tracked campaign links.
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      UTM traffic breakdown
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Use UTM values to identify live users from campaigns, ads, social posts, emails, and referral sources.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[30%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          UTM field
+        </th>
+
+        <th className="w-[42%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Meaning
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Example
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          utm_source
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows where the traffic came from.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          google, facebook, instagram
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          utm_medium
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the traffic channel or medium.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          cpc, email, social, referral
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          utm_campaign
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the campaign name.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          summer_sale, launch_offer
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          utm_content
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Helps compare different creatives or links in the same campaign.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          banner_a, button_top
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          utm_term
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Helps identify keyword or search term based traffic.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          analytics_tool, mobile_sdk
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Tip>
+  Traffic by UTM is useful after launching ads, social campaigns, email campaigns, influencer links, or referral campaigns.
+</Tip>
 
 ---
 
@@ -261,6 +400,16 @@ If there are no live users, the page may show `No data found`.
           Check that events are reaching Twinalyze from your SDK or website.
         </td>
       </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          UTM values
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          For Traffic by UTM, confirm that campaign links include UTM parameters.
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -286,7 +435,7 @@ If there are no live users, the page may show `No data found`.
         Monitor after campaigns
       </div>
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Check realtime users after push notifications, ads, or marketing campaigns.
+        Check realtime users and Traffic by UTM after push notifications, ads, email, or marketing campaigns.
       </p>
     </div>
 
@@ -310,10 +459,10 @@ If there are no live users, the page may show `No data found`.
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
       <div className="text-sm font-semibold text-slate-950">
-        Compare country activity
+        Compare country and campaign activity
       </div>
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Use country data to understand where your live users are active.
+        Use country data and UTM data to understand where live users are coming from.
       </p>
     </div>
   </div>
@@ -324,6 +473,7 @@ If there are no live users, the page may show `No data found`.
 </Check>
 
 ---
+
 <div className="twinalyze-bottom-nav">
   <a href="/overview/pricing" className="twinalyze-nav-side">
     <span className="twinalyze-nav-arrow">‹</span>
