@@ -1,4 +1,469 @@
 ---
-title: 'Custom Store Listing'
+title: "Custom Store Listing"
+description: "Understand how to check custom app store listings by app link, package ID, country, tier, language, logo, and app title in Twinalyze."
+hideFooterPagination: true
 ---
 
+Custom Store Listing helps you check how an app appears across different countries and languages.
+
+Use this page to submit an app link or package ID, select countries by tier, review localized store details, and export listing data for research.
+
+---
+
+## Page preview
+
+<Frame>
+  <img src="/images/custom-store-listing.png" alt="Twinalyze Custom Store Listing page" />
+</Frame>
+
+---
+
+## Custom Store Listing overview
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Store listing research
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Custom Store Listing helps you review app listing information by country, tier, language, logo, and app title.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Section
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What it does
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Best for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              App Link &amp; Package ID
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              App lookup input
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Lets you enter an app store link or package ID to fetch custom listing information.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Checking listing data for a specific app.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Country Panel
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Country and tier selection
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Helps you select countries using search and tier tabs such as All, T1, T1-1, T2, T3, and T4.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Country-wise listing comparison.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Listing Table
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Language, logo, and title
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows localized listing data such as language, app logo, and app title.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Localization and store listing review.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Search &amp; Export
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Find and download data
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Search inside listing results and export the available data for further analysis.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Reporting and competitor research.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Main areas
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Submit app details
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Enter the app link or package ID and submit it to fetch custom store listing data.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Select countries
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Use country search and tier tabs to choose the country group you want to review.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Review listing output
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Check language, logo, and app title for each selected country listing.
+    </p>
+  </div>
+</div>
+
+---
+
+## Listing table columns
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Custom listing columns
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      These columns help you understand how the app is presented in different countries and languages.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[30%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Column
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Meaning
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Use for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Language
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the language used for the app listing.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Localization review.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Logo
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the app logo used in the selected store listing.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Brand and visual check.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          App Title
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the localized app title for the selected country or language.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Title and keyword research.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## How to use Custom Store Listing
+
+<Steps>
+  <Step title="Enter app link or package ID">
+    Paste the app link or package ID in the input field.
+  </Step>
+
+  <Step title="Submit the app">
+    Click Submit to fetch listing information for the app.
+  </Step>
+
+  <Step title="Choose country tier">
+    Use All, T1, T1-1, T2, T3, or T4 to filter countries by market priority.
+  </Step>
+
+  <Step title="Search country">
+    Use the country search box when you want to find a specific country quickly.
+  </Step>
+
+  <Step title="Review listing data">
+    Check language, logo, and app title in the result table.
+  </Step>
+
+  <Step title="Export if needed">
+    Use Export when you want to download or share the listing data.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Check localized app titles" icon="language">
+    Review how the app title appears in different countries and languages.
+  </Accordion>
+
+  <Accordion title="Compare country listings" icon="globe">
+    Use tier tabs and country search to compare listing details across markets.
+  </Accordion>
+
+  <Accordion title="Review competitor listings" icon="search">
+    Enter a competitor app link or package ID to study their store listing setup.
+  </Accordion>
+
+  <Accordion title="Prepare localization research" icon="table">
+    Use language, title, and logo data to plan country-wise localization improvements.
+  </Accordion>
+
+  <Accordion title="Export listing data" icon="download">
+    Export results when you need to share listing data with product, marketing, or growth teams.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Empty state
+
+If the page shows `No data found`, it may mean the app link, package ID, selected country, or tier does not have available listing data.
+
+<Info>
+  Try entering a valid app link or package ID, changing the selected tier, clearing search, or clicking Refresh.
+</Info>
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Empty state checklist
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Use this checklist when listing data does not appear.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Check
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What to verify
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          App link or package ID
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Make sure the app link or package ID is correct and active.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Country search
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Clear the search field or try another country name.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Tier selection
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Switch to All or another tier such as T1, T2, T3, or T4.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Refresh data
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Click Refresh to reload the latest listing information.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Best practices
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Store listing workflow
+    </p>
+
+    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+      Use Custom Store Listing when you want to review how an app appears across different countries and languages.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Start with a valid app identifier
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use a correct app link or package ID before checking country-wise listing data.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Compare priority tiers
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Start with T1-1 and T1 for high-priority markets, then review T2, T3, and T4.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Review titles carefully
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Localized app titles can help you understand keyword strategy and country-specific positioning.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Export for team review
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Export listing data when product, marketing, or growth teams need to review it together.
+      </p>
+    </div>
+  </div>
+</div>
+
+<Check>
+  Custom Store Listing helps your team review app listing data by country, tier, language, logo, and title.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav-no-next">
+  <a href="/analytics/research/country-store-and-details" className="twinalyze-nav-side twinalyze-nav-side-prev">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/research/country-store-and-details" className="twinalyze-nav-center twinalyze-nav-center-no-next">
+    <strong>Country Store &amp; Details</strong>
+    <span>Understand country store and country details.</span>
+  </a>
+</div>
