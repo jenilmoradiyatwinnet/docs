@@ -1,274 +1,51 @@
 ---
-title: Settings
-description: Manage profile details, users, roles, permissions, security settings, and organization access in Twinalyze.
+title: "Settings"
+description: "Manage profile details, organization profile, security settings, login history, users, and permissions in Twinalyze."
+hideFooterPagination: true
 ---
 
-# Settings
+Settings helps you manage your personal profile, organization details, security preferences, login activity, users, and permissions from one place.
 
-Settings is the control area of Twinalyze where users can manage their profile, organization information, security options, team members, and role-based permissions.
-
-<div className="not-prose my-6 rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-6">
-  <div className="flex flex-col gap-3">
-    <div className="inline-flex w-fit rounded-full border border-blue-200 bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
-      Account & Access Management
-    </div>
-
-    <h2 className="m-0 text-2xl font-bold tracking-tight text-slate-900">
-      Manage your profile, team, and permissions from one place
-    </h2>
-
-    <p className="m-0 max-w-3xl text-sm leading-6 text-slate-600">
-      The Settings module helps administrators and team members keep account information updated,
-      invite users, assign roles, manage permissions, and review security-related activity inside Twinalyze.
-    </p>
-  </div>
-</div>
-
-<CardGroup cols={3}>
-  <Card title="Profile Management" icon="user">
-    Update personal details, profile image, address information, and account-related details.
-  </Card>
-
-  <Card title="Organization Settings" icon="building">
-    Manage organization profile details connected with the current workspace.
-  </Card>
-
-  <Card title="Users & Permissions" icon="users">
-    Invite team members, assign roles, and control access based on responsibilities.
-  </Card>
-</CardGroup>
+Use this page when you want to update account information, invite team members, assign roles, or review access inside your Twinalyze workspace.
 
 ---
 
-## Settings overview
-
-The Settings section is divided into two main areas: **Manage Profile** and **Users & Permissions**.
-
-<div className="not-prose my-6 grid gap-4 md:grid-cols-2">
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-      👤
-    </div>
-    <h3 className="m-0 text-base font-semibold text-slate-900">
-      Manage Profile
-    </h3>
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      Used to update personal information, upload a profile picture, manage address details,
-      view login history, and review account security settings.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-      🛡️
-    </div>
-    <h3 className="m-0 text-base font-semibold text-slate-900">
-      Users & Permissions
-    </h3>
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      Used by admins to invite users, assign role types, manage active users, filter users,
-      and control organization-level access.
-    </p>
-  </div>
-</div>
-
----
-
-## Manage Profile
-
-The **Manage Profile** page allows users to update their personal and account-related information.
-
-Users can manage their profile picture, first name, last name, mobile number, date of birth, address, country, state, city, and zip code.
-
-<Note>
-  Email may be disabled because it is connected with the registered account and is usually not editable from profile settings.
-</Note>
-
-### Available tabs
-
-<div className="not-prose my-6 overflow-hidden rounded-2xl border border-slate-200 bg-white">
-  <div className="grid gap-0 md:grid-cols-4">
-    <div className="border-b border-slate-200 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-600">01</div>
-      <div className="mt-1 font-semibold text-slate-900">Profile Details</div>
-      <p className="mt-2 text-sm leading-6 text-slate-500">
-        Manage name, email, phone number, profile image, and personal details.
-      </p>
-    </div>
-
-    <div className="border-b border-slate-200 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-600">02</div>
-      <div className="mt-1 font-semibold text-slate-900">Organization Profile</div>
-      <p className="mt-2 text-sm leading-6 text-slate-500">
-        Review and update organization-related profile information.
-      </p>
-    </div>
-
-    <div className="border-b border-slate-200 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-600">03</div>
-      <div className="mt-1 font-semibold text-slate-900">Security & Settings</div>
-      <p className="mt-2 text-sm leading-6 text-slate-500">
-        Manage account security preferences and important settings.
-      </p>
-    </div>
-
-    <div className="p-5">
-      <div className="text-sm font-semibold text-blue-600">04</div>
-      <div className="mt-1 font-semibold text-slate-900">Login History</div>
-      <p className="mt-2 text-sm leading-6 text-slate-500">
-        View previous login activity and monitor account access.
-      </p>
-    </div>
-  </div>
-</div>
-
-### Profile information
-
-| Field | Description |
-| --- | --- |
-| First Name | User's first name. |
-| Last Name | User's last name. |
-| Email | Registered email address of the user. |
-| Mobile Number | User's contact number. |
-| Date of Birth | User's birth date. |
-| Address | Full address of the user. |
-| Country, State, City | Location details of the user. |
-| Zip Code | Postal or zip code of the user location. |
-
----
-
-## Users & Permissions
-
-The **Users & Permissions** page helps admins manage team access inside the organization.
-
-Admins can invite new users, assign role types, search users, filter by status, filter by role, and review all users from the table.
-
-<div className="not-prose my-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-  <div className="mb-4">
-    <h3 className="m-0 text-base font-semibold text-slate-900">
-      Admin actions
-    </h3>
-    <p className="mt-1 text-sm leading-6 text-slate-600">
-      Use this section to keep organization access clean, secure, and role-based.
-    </p>
-  </div>
-
-  <div className="grid gap-3 md:grid-cols-2">
-    <div className="rounded-xl border border-slate-200 bg-white p-4">
-      <div className="font-semibold text-slate-900">Invite user</div>
-      <p className="mt-1 text-sm leading-6 text-slate-500">
-        Send an invitation by entering the user's email address and selecting a role type.
-      </p>
-    </div>
-
-    <div className="rounded-xl border border-slate-200 bg-white p-4">
-      <div className="font-semibold text-slate-900">Assign role</div>
-      <p className="mt-1 text-sm leading-6 text-slate-500">
-        Select a role based on the user's responsibility inside the organization.
-      </p>
-    </div>
-
-    <div className="rounded-xl border border-slate-200 bg-white p-4">
-      <div className="font-semibold text-slate-900">Search users</div>
-      <p className="mt-1 text-sm leading-6 text-slate-500">
-        Quickly find users using name, email, or other available user details.
-      </p>
-    </div>
-
-    <div className="rounded-xl border border-slate-200 bg-white p-4">
-      <div className="font-semibold text-slate-900">Filter users</div>
-      <p className="mt-1 text-sm leading-6 text-slate-500">
-        Filter users by status or role to manage large teams more easily.
-      </p>
-    </div>
-  </div>
-</div>
-
-### User table details
-
-| Column | Description |
-| --- | --- |
-| First Name | First name of the user. |
-| Last Name | Last name of the user. |
-| Email | Email address used by the user. |
-| Phone | Contact number of the user, if available. |
-| Role Type | Assigned role of the user. |
-| Status | Current user status inside the organization. |
-
----
-
-## Permissions
-
-The **Permissions** tab is used to control feature access for each role.
-
-Permissions define what a user can view, create, edit, delete, invite, export, or manage inside Twinalyze.
-
-<Info>
-  Role-based permissions help protect organization data and make sure users only access the features required for their work.
-</Info>
-
-<AccordionGroup>
-  <Accordion title="Why permissions are important">
-    Permissions help prevent unauthorized access to sensitive organization data, reports, users, and project settings.
-  </Accordion>
-
-  <Accordion title="Who should manage permissions">
-    Usually, owners and administrators should manage permissions because they control access for the full organization.
-  </Accordion>
-
-  <Accordion title="When to update permissions">
-    Update permissions when a user's responsibility changes, when a new team member joins, or when a user no longer needs access.
-  </Accordion>
-</AccordionGroup>
-
----
-
-# Page preview
-
-This section shows how the Settings pages appear inside the Twinalyze dashboard.
+## Page preview
 
 <div className="not-prose space-y-10">
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-4 flex flex-col gap-1">
-      <div className="flex items-center gap-2">
-        <span className="h-2 w-2 rounded-full bg-blue-600"></span>
-        <div className="text-sm font-semibold text-slate-900">
-          Manage Profile
-        </div>
+  <div>
+    <div className="mb-3">
+      <div className="text-sm font-semibold text-slate-950">
+        Manage Profile
       </div>
 
-      <p className="m-0 max-w-3xl text-sm leading-6 text-slate-500">
-        The Manage Profile page allows users to update personal information, upload a profile picture,
-        manage address details, and access profile-related settings from one place.
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        Manage Profile lets you update your profile picture, personal details, address information, organization profile, security settings, and login history.
       </p>
     </div>
 
     <Frame>
       <img
-        src="/images/Settings/Settings_Manage_Profile.png"
+        src="/images/Dashboard/settings-manage-profile.png"
         alt="Twinalyze Manage Profile settings page"
       />
     </Frame>
   </div>
 
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-4 flex flex-col gap-1">
-      <div className="flex items-center gap-2">
-        <span className="h-2 w-2 rounded-full bg-blue-600"></span>
-        <div className="text-sm font-semibold text-slate-900">
-          Users & Permissions
-        </div>
+  <div>
+    <div className="mb-3">
+      <div className="text-sm font-semibold text-slate-950">
+        Users and Permissions
       </div>
 
-      <p className="m-0 max-w-3xl text-sm leading-6 text-slate-500">
-        The Users & Permissions page allows admins to invite team members, assign roles,
-        search users, apply filters, and manage organization-level access.
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        Users and Permissions helps admins invite team members, assign role types, filter users by status or role, and review existing workspace access.
       </p>
     </div>
 
     <Frame>
       <img
-        src="/images/Settings/Settings_Users_Permissions.png"
+        src="/images/Dashboard/settings-users-permissions.png"
         alt="Twinalyze Users and Permissions settings page"
       />
     </Frame>
@@ -277,22 +54,604 @@ This section shows how the Settings pages appear inside the Twinalyze dashboard.
 
 ---
 
-## Best practices
+## Settings overview
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Settings sections
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Settings is divided into profile management and access management so teams can control account and workspace details easily.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Section
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What it does
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Best for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Manage Profile
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Account and profile details
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Lets users update profile picture, personal details, address details, organization profile, security settings, and login history.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Keeping account and organization information up to date.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Users and Permissions
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Team access control
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Lets admins invite users, assign roles, manage permissions, filter users, and review team access.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Managing team members and workspace access.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Manage Profile
+
+Manage Profile is used to update account-level details. It includes profile information, organization details, security options, and login activity.
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Manage Profile tabs
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Use these tabs to manage account details, organization information, security preferences, and login history.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Tab
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What it includes
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Use for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Profile Details
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Personal information
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Profile picture, first name, last name, email, mobile number, date of birth, and address details.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Updating personal account information.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Organization Profile
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Workspace details
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Organization name, organization profile information, and workspace-related details.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Managing company or workspace identity.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Security &amp; Settings
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Account security
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Security preferences, account protection options, and account-level settings.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Improving account safety and access control.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Login History
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Access activity
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows account login activity and helps review recent access.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Checking account activity and security history.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Profile Details fields
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Profile picture
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Upload or remove your profile picture so your account is easier to identify.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Personal details
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Update your first name, last name, mobile number, and date of birth.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Address details
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Add your address, country, state, city, and zip code for complete profile information.
+    </p>
+  </div>
+</div>
+
+<Info>
+  Email may be locked or disabled because it is used as the primary account identity.
+</Info>
+
+---
+
+## Users and Permissions
+
+Users and Permissions helps admins manage team members and access levels inside the organization.
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Team access management
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      Invite users, assign role types, filter existing users, and review team access from one place.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Section
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          What it does
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Best for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Invite User
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Add team members
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Invite a user by email and assign a role type before sending the invitation.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Adding new team members to the organization.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              All Users
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              User list
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Shows users with first name, last name, email, phone, role type, and status.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Reviewing existing users and their access.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Filters
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Status, role, and search
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Filter users by status, role, or search keyword.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Finding users quickly in large teams.
+        </td>
+      </tr>
+
+      <tr className="transition hover:bg-slate-50">
+        <td className="px-5 py-5 align-top">
+          <div className="border-l-2 border-blue-600 pl-3">
+            <div className="text-sm font-semibold text-slate-950">
+              Permissions
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Access control
+            </div>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Manage what each role can access or perform inside Twinalyze.
+        </td>
+
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+          Role-based access management.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## User table columns
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      All Users table
+    </p>
+
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+      The user table helps you review who has access to the organization and what role they have.
+    </p>
+  </div>
+
+  <table className="w-full table-fixed divide-y divide-slate-200">
+    <thead className="bg-white">
+      <tr>
+        <th className="w-[30%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Column
+        </th>
+
+        <th className="w-[44%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Meaning
+        </th>
+
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Use for
+        </th>
+      </tr>
+    </thead>
+
+    <tbody className="divide-y divide-slate-100 bg-white">
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          First Name / Last Name
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the user’s profile name.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          User identification.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Email
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the account email used for access.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Login and invitation tracking.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Phone
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the user’s phone number if available.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Contact reference.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Role Type
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows the access role assigned to the user.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Permission control.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 text-sm font-semibold text-slate-950">
+          Status
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Shows whether the user is active, pending, or inactive.
+        </td>
+
+        <td className="px-5 py-4 text-sm leading-6 text-slate-600">
+          Access review.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## How to use Settings
 
 <Steps>
-  <Step title="Keep profile details updated">
-    Make sure personal and address details are accurate so account information stays clean.
+  <Step title="Open Settings">
+    Go to Settings from the left sidebar.
   </Step>
 
-  <Step title="Use role-based access">
-    Assign roles based on user responsibility instead of giving admin access to every user.
+  <Step title="Update profile details">
+    Use Manage Profile to update profile picture, personal details, and address details.
   </Step>
 
-  <Step title="Review users regularly">
-    Remove or update access for users who no longer need access to the organization.
+  <Step title="Review security">
+    Open Security & Settings or Login History to check account security and access activity.
   </Step>
 
-  <Step title="Check login history">
-    Review login history to monitor account access and identify unusual activity.
+  <Step title="Invite team members">
+    Go to Users and Permissions, enter email, select role type, and click Invite.
+  </Step>
+
+  <Step title="Review user access">
+    Use status, role, and search filters to find users and review their access.
   </Step>
 </Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Update profile information" icon="user">
+    Use Profile Details to update your name, mobile number, date of birth, address, and profile picture.
+  </Accordion>
+
+  <Accordion title="Manage organization details" icon="building">
+    Use Organization Profile to update company or workspace-related information.
+  </Accordion>
+
+  <Accordion title="Review account security" icon="lock">
+    Use Security & Settings and Login History to review account safety and login activity.
+  </Accordion>
+
+  <Accordion title="Invite a new user" icon="user-plus">
+    Enter the user email, select a role type, and send an invitation.
+  </Accordion>
+
+  <Accordion title="Control team permissions" icon="shield">
+    Use Permissions to control what each role can view, create, update, or manage inside Twinalyze.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Best practices
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Settings workflow
+    </p>
+
+    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+      Keep your profile, organization details, and team access updated so your workspace remains secure and easy to manage.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Keep profile details updated
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Update your profile information so team members can identify your account correctly.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Use proper role types
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Assign roles based on responsibility instead of giving every user admin access.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Review login history
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Check login activity regularly to identify unusual access.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Review users regularly
+      </div>
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Remove or update users who no longer need access to the organization.
+      </p>
+    </div>
+  </div>
+</div>
+
+<Check>
+  Settings helps your team manage account details, security, users, roles, and permissions in one place.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav-no-next">
+  <a href="/overview/Adminstration/community" className="twinalyze-nav-side twinalyze-nav-side-prev">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/overview/Adminstration/community" className="twinalyze-nav-center twinalyze-nav-center-no-next">
+    <strong>Community</strong>
+    <span>Get support from Slack, Discord, and email.</span>
+  </a>
+</div>
