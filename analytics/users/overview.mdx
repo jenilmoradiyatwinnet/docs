@@ -1,4 +1,343 @@
 ---
-title: 'Overview'
+title: "User Overview"
+description: "Understand user list, user activity, device properties, event properties, traffic source, and screen journey in Twinalyze."
+hideFooterPagination: true
 ---
 
+User Overview helps you inspect individual users, understand their device details, review activity, and analyze how they move through your app.
+
+Use this page when you want to debug a user journey, check device properties, verify events, or understand where a user came from.
+
+---
+
+## Page preview
+
+<Tabs>
+  <Tab title="Users List">
+    <Steps>
+      <Step title="Review all users">
+        The Users page shows tracked users with country, retention status, app status, app version, brand, last activity, and registration date.
+
+        <Frame>
+          <img
+            src="/images/Dashboard/users-overview-list.png"
+            alt="Twinalyze Users list page"
+          />
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="User Overview">
+    <Steps>
+      <Step title="Open a user profile">
+        Click a user to open the user-level overview. This view shows sessions, device properties, event properties, traffic source, and screen journey.
+
+        <Frame>
+          <img
+            src="/images/Dashboard/users-overview-details.png"
+            alt="Twinalyze User Overview page"
+          />
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Activity Details">
+    <Steps>
+      <Step title="Expand user activity">
+        Open a session row to view detailed activity such as screen views, fragment views, back screens, splash time, and total time.
+
+        <Frame>
+          <img
+            src="/images/Dashboard/users-overview-activity.png"
+            alt="Twinalyze User activity details"
+          />
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+---
+
+## What this page shows
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      User list
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      View all tracked users with country, app status, app version, brand, last activity, and registration date.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      User profile
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Open a user to review total screens, total time duration, app background activity, and user-level session data.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Activity journey
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Understand user movement through screens, fragments, events, traffic source, and device properties.
+    </p>
+  </div>
+</div>
+
+---
+
+## User list view
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Users list
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      The Users list gives a quick overview of every tracked user. You can filter by date, country, and search keyword to find a specific user faster.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-4">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Country
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows the user’s country and city when available.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Retention
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Indicates whether the user is new, retained, or marked for testing.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        App details
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows app status, app version, device brand, and install state.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Activity dates
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows last activity and registered date for quick user activity review.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## User detail view
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      User-level analytics
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      After opening a user, Twinalyze shows a detailed profile with session summary, device data, events, traffic source, and screen journey.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-2">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Session summary
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows total screens, total time duration, app background count, and date-wise session rows.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Device properties
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows country, city, phone language, app language, app version, company name, brand, model, IP address, device ID, RAM, Android version, and screen size.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Event properties
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows event-level information such as screen name, screen class, fragment info, and fragment class.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Traffic source
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows UTM medium and UTM source, such as Organic and Google Play.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Screen journey
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      User journey timeline
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      The screen journey helps you understand how a user moved through the app. It can show screens, fragments, product pages, and back navigation.
+    </p>
+  </div>
+
+  <div className="grid gap-3 md:grid-cols-6">
+    <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4 text-center">
+      <div className="text-sm font-semibold text-blue-700">Splash</div>
+      <div className="mt-1 text-xs text-slate-600">App start</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Home</div>
+      <div className="mt-1 text-xs text-slate-600">Entry screen</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Store</div>
+      <div className="mt-1 text-xs text-slate-600">Browsing</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Back</div>
+      <div className="mt-1 text-xs text-slate-600">Navigation</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Product</div>
+      <div className="mt-1 text-xs text-slate-600">Detail view</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Home</div>
+      <div className="mt-1 text-xs text-slate-600">Return</div>
+    </div>
+  </div>
+</div>
+
+---
+
+## User flow
+
+<Steps>
+  <Step title="Open Users">
+    Go to **Users** from the left sidebar to view the tracked user list.
+  </Step>
+
+  <Step title="Filter users">
+    Use date range, country filter, and search to find the right user.
+  </Step>
+
+  <Step title="Open user overview">
+    Click a user row to open the detailed user overview page.
+  </Step>
+
+  <Step title="Review activity">
+    Check total screens, total time, app background, and date-wise session rows.
+  </Step>
+
+  <Step title="Inspect properties">
+    Review device properties, event properties, traffic source, and screen journey.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Debug a user journey" icon="route">
+    Open a user and review screen journey, event properties, and session activity to understand what happened.
+  </Accordion>
+
+  <Accordion title="Check device information" icon="smartphone">
+    Use Device Properties to review app version, brand, model, language, IP address, screen size, and device ID.
+  </Accordion>
+
+  <Accordion title="Understand traffic source" icon="chart-line">
+    Use Traffic to check whether the user came from Organic, Google Play, or another UTM source.
+  </Accordion>
+
+  <Accordion title="Review session behavior" icon="clock">
+    Use the session list to understand total screen count, total time, background activity, and date-wise behavior.
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  User Overview helps your team understand individual user behavior, device context, traffic source, and screen journey in one place.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/realtime-users" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/users/page-insights" className="twinalyze-nav-center">
+    <strong>Page Insights</strong>
+    <span>Understand page and screen level performance.</span>
+  </a>
+
+  <a href="/analytics/users/page-insights" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
