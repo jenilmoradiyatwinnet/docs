@@ -1,4 +1,448 @@
 ---
-title: 'System Insight'
+title: "System Insights"
+description: "Understand Android OS, brand, RAM, browser, store package, network, screen, VPN, proxy, and language insights in Twinalyze."
+hideFooterPagination: true
 ---
 
+
+System Insights helps you understand the technical environment of your users.
+
+<Steps>
+  <Step title="Review OS, brand, and RAM">
+    The first section gives a quick technical summary of your users. You can see Android OS versions, device brands, and RAM distribution.
+
+    This helps you understand which device environments are most common and where your testing should focus first.
+
+    <Frame>
+      <img
+        src="/images/Dashboard/Dashboard_3_ProductOverview_SystemInsights_1.PNG"
+        alt="Twinalyze System Insights Android OS brand RAM"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Check app store and browser packages">
+    This section shows the default app store package and default browser package used by users.
+
+    It helps you understand where users install from and which browser environments matter most for redirects, deep links, webviews, and compatibility.
+
+    <Frame>
+      <img
+        src="/images/Dashboard/Dashboard_3_ProductOverview_SystemInsights_2.PNG"
+        alt="Twinalyze System Insights store and browser package"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Understand device display profile">
+    This section shows device screen inch, screen density, and device type.
+
+    It helps your team make better layout, UI testing, responsive design, and asset scaling decisions.
+
+    <Frame>
+      <img
+        src="/images/Dashboard/Dashboard_3_ProductOverview_SystemInsights_3.PNG"
+        alt="Twinalyze System Insights device screen density type"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Review technical environment signals">
+    This section shows whether developer option, proxy, or VPN is enabled on user devices.
+
+    It helps with debugging, QA review, fraud checks, test-user behavior, and unusual environment analysis.
+
+    <Frame>
+      <img
+        src="/images/Dashboard/Dashboard_3_ProductOverview_SystemInsights_4.PNG"
+        alt="Twinalyze System Insights developer option proxy VPN"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Analyze network and language usage">
+    This section shows screen mode, network type, SIM name, device language, app language, and unsupported app languages.
+
+    It helps you understand connection quality, carrier distribution, theme usage, and localization opportunities.
+
+    <Frame>
+      <img
+        src="/images/Dashboard/Dashboard_3_ProductOverview_SystemInsights_5.PNG"
+        alt="Twinalyze System Insights network language SIM"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+## What this page helps you understand
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="text-base font-semibold text-slate-950">
+      Device environment
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Understand Android version, brand, RAM, screen size, density, and device type used by your users.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="text-base font-semibold text-slate-950">
+      Compatibility planning
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Identify which OS versions, browsers, stores, and device profiles should receive more testing and optimization.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="text-base font-semibold text-slate-950">
+      Network and security context
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Review Wi-Fi, mobile data, SIM provider, VPN, proxy, and developer option signals.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="text-base font-semibold text-slate-950">
+      Language readiness
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Compare device language with app language and identify languages that users need but the app does not fully support.
+    </p>
+  </div>
+</div>
+
+---
+
+## Section guide
+
+<div className="not-prose space-y-6">
+  <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+      <p className="text-sm font-semibold tracking-wide text-blue-700">
+        Device breakdown
+      </p>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        These charts help you understand the most common device environments used by your audience.
+      </p>
+    </div>
+
+    <div className="grid gap-4 p-5 md:grid-cols-3">
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Android OS
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows which Android versions are used most. Use it to plan OS support, testing coverage, and compatibility decisions.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Brand
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows device manufacturers such as Samsung, Realme, Oppo, Redmi, Motorola, and others.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          RAM
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows how much memory user devices have. This helps you understand performance limits and optimize for low-memory devices.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+      <p className="text-sm font-semibold tracking-wide text-blue-700">
+        Store and browser context
+      </p>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        These charts explain where users install from and which browser package they commonly use.
+      </p>
+    </div>
+
+    <div className="grid gap-4 p-5 md:grid-cols-2">
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Default App Store Package
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows the app store package available on user devices. Use this to understand install environment and store ecosystem distribution.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Default Browser Package
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows browser package usage. Use this to validate web links, app redirects, webviews, and browser compatibility.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+      <p className="text-sm font-semibold tracking-wide text-blue-700">
+        Device display profile
+      </p>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        These charts help your design and QA team understand the physical display conditions of user devices.
+      </p>
+    </div>
+
+    <div className="grid gap-4 p-5 md:grid-cols-3">
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Device Screen Inch
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows screen size ranges. Use it to test layouts on the most common device sizes.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Density
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows screen density groups such as HDPI, XHDPI, and XXHDPI. Use it for icon, image, and asset quality testing.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Device Type
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows whether users are on mobile, tablet, or other device types. Use it to prioritize device-class support.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+      <p className="text-sm font-semibold tracking-wide text-blue-700">
+        Security and environment signals
+      </p>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        These charts identify special device conditions that may affect tracking, debugging, or user analysis.
+      </p>
+    </div>
+
+    <div className="grid gap-4 p-5 md:grid-cols-3">
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Is Developer Option On
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows users with developer options enabled. This can help identify testing or developer-like environments.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Is Proxy On
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows whether users are using a proxy. This can affect network behavior, location accuracy, and debugging results.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Is VPN On
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows whether users are using a VPN. This can affect country detection, traffic source analysis, and regional insights.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+      <p className="text-sm font-semibold tracking-wide text-blue-700">
+        Network and language context
+      </p>
+
+      <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+        These charts explain how users connect, what carrier they use, and how their device language compares with your app language.
+      </p>
+    </div>
+
+    <div className="grid gap-4 p-5 md:grid-cols-2">
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Device Screen Mode
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows whether users are using light mode or dark mode. Use it to plan theme testing and UI consistency.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Device Network
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows whether users are connected through Wi-Fi, mobile data, or other network states.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Device SIM Name
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows carrier or SIM provider distribution. Use it for regional network and telecom context.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4">
+        <div className="text-sm font-semibold text-slate-950">
+          Device vs App Language
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Compares device language and app language. Use it to understand whether users are using the app in their preferred language.
+        </p>
+      </div>
+
+      <div className="rounded-xl border border-slate-200 p-4 md:col-span-2">
+        <div className="text-sm font-semibold text-slate-950">
+          Unsupportable App Language
+        </div>
+
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Shows languages found in user demand but not fully supported in the app. Use it to plan future localization.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## How to use System Insights
+
+<Steps>
+  <Step title="Select date and user type">
+    Use the top filters to choose a date range and user type. This updates all system insight charts.
+  </Step>
+
+  <Step title="Start with device basics">
+    Review Android OS, Brand, and RAM first to understand the most common technical environment.
+  </Step>
+
+  <Step title="Check store and browser packages">
+    Review app store and browser package charts to understand install and browser compatibility context.
+  </Step>
+
+  <Step title="Review display and security signals">
+    Check screen size, density, device type, developer option, proxy, and VPN status.
+  </Step>
+
+  <Step title="Analyze network and language">
+    Review network, SIM name, screen mode, device language, app language, and unsupported languages.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Plan testing coverage">
+    Use Android OS, Brand, RAM, Density, and Device Screen Inch to decide which devices and environments need more testing.
+  </Accordion>
+
+  <Accordion title="Improve compatibility decisions">
+    Use Default Browser Package, Default App Store Package, Device Type, and Screen Mode to improve app and web compatibility.
+  </Accordion>
+
+  <Accordion title="Find localization opportunities">
+    Use Device vs App Language and Unsupportable App Language to identify where new language support may be needed.
+  </Accordion>
+
+  <Accordion title="Understand network conditions">
+    Use Device Network and Device SIM Name to understand how users connect and which carriers are common.
+  </Accordion>
+
+  <Accordion title="Investigate unusual environments">
+    Use Developer Option, Proxy, and VPN charts to identify special technical setups or QA-like users.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Quick reading tips
+
+<Tip>
+  Start with **Android OS, Brand, and RAM** for the fastest understanding of your user device base.
+</Tip>
+
+<Tip>
+  If one browser, brand, OS version, or screen size dominates, prioritize testing and optimization there first.
+</Tip>
+
+<Tip>
+  If device language and app language do not match, review language detection, onboarding, and localization support.
+</Tip>
+
+<Check>
+  System Insights gives your team a technical view of your users across devices, operating systems, packages, network, security signals, screen behavior, and language usage.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/product-overview" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/product-overview/reports" className="twinalyze-nav-center">
+    <strong>Reports</strong>
+    <span>Build and review product analytics reports.</span>
+  </a>
+
+  <a href="/analytics/product-overview/reports" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
