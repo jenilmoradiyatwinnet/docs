@@ -1,4 +1,259 @@
 ---
-title: 'User Engagement'
+title: "User Engagement"
+description: "Understand app open frequency, recurring users, and average sessions per user in Twinalyze."
+hideFooterPagination: true
 ---
 
+User Engagement helps you understand how often users open your app and how frequently they return.
+
+Use this page to measure repeat usage, recurring users, average sessions per user, and overall engagement quality.
+
+---
+
+## Page preview
+
+The User Engagement page shows two main reports: **App Open Frequency** and **Average Sessions Per User**.
+
+<Frame>
+  <img
+    src="/images/Dashboard/user-engagement.png"
+    alt="Twinalyze User Engagement page"
+  />
+</Frame>
+
+---
+
+## What this page shows
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      App open frequency
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Shows how many users opened the app for the first time, second time, third time, fourth time, fifth time, and how many became recurring users.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Average sessions per user
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Shows the average number of sessions opened by users over time. This helps you understand how often users return and interact with your product.
+    </p>
+  </div>
+</div>
+
+---
+
+## App open frequency
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Open frequency breakdown
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      This report groups users based on how many times they opened the app. It helps you separate one-time users from users who repeatedly come back.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        First to fifth time
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows how many users opened the app one time, two times, three times, four times, or five times.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Recurring users
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows users who opened the app repeatedly and are more engaged than one-time users.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Percentage view
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        The bar and percentage help you quickly compare how many users fall into each open-frequency group.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Average sessions per user
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Session trend
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      This chart shows how many sessions each user opens on average during the selected period. Higher values usually mean stronger engagement and repeated usage.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Average sessions
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows the average number of sessions opened per user.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Date-wise trend
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Helps you compare engagement changes across different days.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Engagement quality
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        A rising trend means users are opening more sessions and interacting more often.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Filters
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Date range
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Select Today, Yesterday, 7 Days, or a custom date range to analyze engagement for a specific period.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Country
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Filter engagement by country to compare how users behave in different regions.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Refresh
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Reload the report to view the latest available engagement data.
+    </p>
+  </div>
+</div>
+
+---
+
+## How to read this page
+
+<Steps>
+  <Step title="Select the date range">
+    Choose the time period you want to analyze, such as Today, Yesterday, 7 Days, or a custom range.
+  </Step>
+
+  <Step title="Choose country">
+    Select All countries or filter by a specific country to understand regional engagement.
+  </Step>
+
+  <Step title="Review app open frequency">
+    Check how many users opened the app once, multiple times, or became recurring users.
+  </Step>
+
+  <Step title="Check average sessions">
+    Use the line chart to understand how average sessions per user changed over time.
+  </Step>
+
+  <Step title="Compare engagement quality">
+    More recurring users and higher average sessions usually indicate stronger user engagement.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Measure repeat usage" icon="repeat">
+    Use app open frequency to understand how many users return after their first app open.
+  </Accordion>
+
+  <Accordion title="Find recurring users" icon="users">
+    Check the Recurring User group to understand how many users are repeatedly opening the app.
+  </Accordion>
+
+  <Accordion title="Track engagement trend" icon="chart-line">
+    Use Average Sessions Per User to see whether engagement is increasing or decreasing over time.
+  </Accordion>
+
+  <Accordion title="Compare countries" icon="globe">
+    Use the country filter to compare user engagement across different markets.
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  User Engagement helps your team understand repeat usage, recurring users, and average sessions per user.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/users/page-insights" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/users/user-retention" className="twinalyze-nav-center">
+    <strong>User Retention</strong>
+    <span>Understand how many users return after their first activity.</span>
+  </a>
+
+  <a href="/analytics/users/user-retention" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
