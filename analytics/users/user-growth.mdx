@@ -1,4 +1,387 @@
 ---
-title: 'User Growth'
+title: "User Growth"
+description: "Understand installs, uninstalls, same-day uninstalls, app growth, and uninstall rate in Twinalyze."
+hideFooterPagination: true
 ---
 
+User Growth helps you understand how your app is growing over time.
+
+Use this page to track new installs, daily uninstalls, total uninstalls, same-day uninstalls, country-wise uninstall behavior, and overall app growth quality.
+
+---
+<Steps>
+  <Step title="Review growth overview">
+    The top section shows the main growth trend for the selected date range and country.
+
+    You can compare **New Installs**, **Daily Uninstalls**, and **Total Uninstalls** in one chart. The summary numbers above the chart help you quickly understand total installed users, total uninstalled users, and users who uninstalled on the same day.
+
+    <Frame>
+      <img
+        src="/images/User_userGrowth_1.PNG"
+        alt="Twinalyze User Growth overview"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Review app growth and uninstall rate">
+    The lower section helps you understand the balance between installed and uninstalled users.
+
+    The **App Growth** chart gives a quick install vs uninstall split, while **Uninstall Rate** shows uninstall activity by selected time format such as daily, weekly, monthly, or yearly.
+
+    <Frame>
+      <img
+        src="/images/User_userGrowth_2.PNG"
+        alt="Twinalyze App Growth and Uninstall Rate"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+## What this page shows
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Install growth
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Track how many new users installed your app during the selected period.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Uninstall behavior
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Review daily uninstalls, total uninstalls, and same-day uninstall users.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Country impact
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Compare install and uninstall behavior by country to understand market quality.
+    </p>
+  </div>
+</div>
+
+---
+
+## Growth overview
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      User activity overview
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      This section gives a quick summary of app growth. It shows how many users installed the app, how many uninstalled it, and how many uninstalled on the same day.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Total Install User
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Total users who installed the app in the selected date range.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Total Uninstall User
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Total users who uninstalled the app during the selected period.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Same Day Uninstall User
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Users who installed and uninstalled the app on the same day.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Growth chart
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Install and uninstall trend
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      The line chart helps you compare install and uninstall movement over time. It is useful for understanding whether your app is gaining users or losing users after install.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        New Installs
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows users who newly installed the app on each date.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Daily Uninstalls
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows how many users uninstalled the app on each date.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Total Uninstalls
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows the total uninstall count trend for the selected period.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Country wise uninstall
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Country-level uninstall analysis
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Country Wise Uninstall helps you understand where uninstall activity is coming from. It compares install users, uninstall users, and average uninstall percentage by country.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Install User
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of users who installed the app from a country.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Uninstall User
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of users who uninstalled the app from that country.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Average
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows uninstall percentage, helping identify countries with higher uninstall risk.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## App growth and uninstall rate
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="mb-4">
+      <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+        App Growth
+      </p>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        The App Growth chart shows the overall split between installed users and uninstalled users. Use it to quickly understand whether user growth is healthy.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Best for
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Checking the balance between retained installs and lost users.
+      </p>
+    </div>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="mb-4">
+      <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+        Uninstall Rate
+      </p>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        The Uninstall Rate chart shows uninstall movement by time period. You can review uninstall activity in daily, weekly, monthly, or yearly format.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Best for
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Finding when uninstall activity increases and reviewing growth quality over time.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Filters
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Date range
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Select Today, Yesterday, 7 Days, or a custom date range to analyze growth.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Country
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Filter growth data by country to understand regional install and uninstall behavior.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Refresh
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Reload the latest growth, uninstall, and country-wise data.
+    </p>
+  </div>
+</div>
+
+---
+
+## How to use User Growth
+
+<Steps>
+  <Step title="Select date range">
+    Choose the time period you want to analyze.
+  </Step>
+
+  <Step title="Choose country">
+    Select All countries or filter by one country to understand market-specific growth.
+  </Step>
+
+  <Step title="Review install and uninstall totals">
+    Check Total Install User, Total Uninstall User, and Same Day Uninstall User.
+  </Step>
+
+  <Step title="Analyze the growth chart">
+    Compare New Installs, Daily Uninstalls, and Total Uninstalls over time.
+  </Step>
+
+  <Step title="Check uninstall quality">
+    Use Country Wise Uninstall, App Growth, and Uninstall Rate to understand where users are being lost.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Track app growth" icon="chart-line">
+    Use New Installs and App Growth to understand whether your app is gaining users.
+  </Accordion>
+
+  <Accordion title="Find uninstall issues" icon="search">
+    Use Daily Uninstalls, Total Uninstalls, and Uninstall Rate to find uninstall spikes.
+  </Accordion>
+
+  <Accordion title="Review same-day uninstall" icon="clock">
+    Same-day uninstall users can indicate poor onboarding, wrong user expectations, bugs, or low first-use value.
+  </Accordion>
+
+  <Accordion title="Compare countries" icon="globe">
+    Use Country Wise Uninstall to find countries with higher uninstall percentage.
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  User Growth helps your team understand installs, uninstalls, same-day uninstalls, country-wise uninstall behavior, and overall growth quality.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/users/user-retention" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/ad/ad-overview" className="twinalyze-nav-center">
+    <strong>Ad Overview</strong>
+    <span>Understand ad performance and monetization insights.</span>
+  </a>
+
+  <a href="/analytics/ad/ad-overview" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
