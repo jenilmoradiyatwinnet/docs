@@ -9,7 +9,7 @@ User Overview helps you inspect individual users, review their activity, check d
 
 <Steps>
   <Step title="Open Users list">
-    The Users list gives a quick overview of every tracked user in the selected project. You can filter users by date, country, or search keyword. This view helps you quickly identify where a user is from, whether the user is new or retained, which app version they use, their device brand, last activity time, and registration date.
+    The Users list gives a quick overview of every tracked user in the selected project. You can filter users by date, country, or search keyword.
 
     <Frame>
       <img
@@ -20,7 +20,7 @@ User Overview helps you inspect individual users, review their activity, check d
   </Step>
 
   <Step title="Open user overview">
-    Click any user row to open the user overview page. This page shows the selected user’s session summary, device properties, event properties, traffic source, and screen journey. It helps you understand the full context of one user instead of only seeing aggregated analytics.
+    Click any user row to open the user overview page. This page shows the selected user’s session summary, device properties, event properties, traffic source, and screen journey.
 
     <Frame>
       <img
@@ -31,7 +31,7 @@ User Overview helps you inspect individual users, review their activity, check d
   </Step>
 
   <Step title="Expand activity details">
-    Expand a session row to view detailed user activity. You can see the sequence of events with time, screen or page movement, total time, background activity, and selected event properties. The right side helps you inspect device details, event details, traffic source, and journey context together.
+    Expand a session row to view detailed user activity. You can see the sequence of events with time, screen or page movement, total time, background activity, and selected event properties.
 
     <Frame>
       <img
@@ -203,56 +203,6 @@ Twinalyze shows different event names based on the selected platform. App events
 
 ---
 
-## Viewing event properties
-
-When you select an event from the activity list, its properties are shown on the side. This helps you understand exactly what happened during that event.
-
-<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-  <div className="mb-6">
-    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      Side property panel
-    </p>
-
-    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      The side panel can show event details, device context, traffic source, and journey data together. Use the Info view for readable values and JSON view when you need the original event payload.
-    </p>
-  </div>
-
-  <div className="grid gap-4 md:grid-cols-3">
-    <div className="rounded-2xl bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Info view
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows event properties in a clean readable format.
-      </p>
-    </div>
-
-    <div className="rounded-2xl bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        JSON view
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows the raw event payload for debugging and validation.
-      </p>
-    </div>
-
-    <div className="rounded-2xl bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Traffic view
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows source information such as Organic, Google Play, or UTM fields.
-      </p>
-    </div>
-  </div>
-</div>
-
----
-
 ## Example web event
 
 This is an example of a `pageView` event. It shows which page was opened, where the user came from, and which platform sent the event.
@@ -278,53 +228,6 @@ This is an example of a `pageView` event. It shows which page was opened, where 
 ```
 ---
 
-## Journey path
-
-<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-  <div className="mb-6">
-    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      User journey timeline
-    </p>
-
-    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      The journey path shows how the user moved through the product. For apps, it can include lifecycle events, screen views, splash time, and ad activity. For web, it can include page views, clicks, forms, scroll activity, search results, and custom events.
-    </p>
-  </div>
-
-  <div className="grid gap-3 md:grid-cols-6">
-    <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4 text-center">
-      <div className="text-sm font-semibold text-blue-700">Start</div>
-      <div className="mt-1 text-xs text-slate-600">First entry</div>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">View</div>
-      <div className="mt-1 text-xs text-slate-600">Screen or page</div>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Action</div>
-      <div className="mt-1 text-xs text-slate-600">Click or event</div>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Detail</div>
-      <div className="mt-1 text-xs text-slate-600">Event data</div>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Back</div>
-      <div className="mt-1 text-xs text-slate-600">Navigation</div>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Return</div>
-      <div className="mt-1 text-xs text-slate-600">Next activity</div>
-    </div>
-  </div>
-</div>
-
----
 ## Common use cases
 
 <AccordionGroup>
