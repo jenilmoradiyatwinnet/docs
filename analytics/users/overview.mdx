@@ -6,11 +6,6 @@ hideFooterPagination: true
 
 User Overview helps you inspect individual users, review their activity, check device details, and understand how they move through your app or website.
 
-Use this page when you want to debug a user journey, verify tracked events, understand traffic source, or analyze individual user behavior.
-
----
-
-## Page preview
 
 <Steps>
   <Step title="Open Users list">
@@ -18,7 +13,7 @@ Use this page when you want to debug a user journey, verify tracked events, unde
 
     <Frame>
       <img
-        src="/images/User_overview_1.PNG"
+        src="/images/Users_overview_1.PNG"
         alt="Twinalyze Users list page"
       />
     </Frame>
@@ -46,54 +41,6 @@ Use this page when you want to debug a user journey, verify tracked events, unde
     </Frame>
   </Step>
 </Steps>
-
----
-
-## What this page helps you do
-
-<div className="not-prose grid gap-4 md:grid-cols-3">
-  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
-    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
-      01
-    </div>
-
-    <div className="text-base font-semibold text-slate-950">
-      Find users
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      Filter users by date, country, and search to quickly find the user you want to inspect.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
-    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
-      02
-    </div>
-
-    <div className="text-base font-semibold text-slate-950">
-      Review behavior
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      Check screens, events, total time, background activity, and date-wise session details.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
-    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
-      03
-    </div>
-
-    <div className="text-base font-semibold text-slate-950">
-      Inspect context
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      View device properties, event properties, traffic source, and journey path in one place.
-    </p>
-  </div>
-</div>
 
 ---
 
@@ -150,52 +97,6 @@ Use this page when you want to debug a user journey, verify tracked events, unde
         Shows when the user was registered and when they were last active.
       </p>
     </div>
-  </div>
-</div>
-
----
-
-## User overview sections
-
-<div className="not-prose grid gap-4 md:grid-cols-2">
-  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-    <div className="mb-3 text-base font-semibold text-slate-950">
-      Session summary
-    </div>
-
-    <p className="text-sm leading-6 text-slate-600">
-      Shows total screens, total time duration, app background count, and date-wise session rows. Use this section to understand how much activity happened in a selected session.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-    <div className="mb-3 text-base font-semibold text-slate-950">
-      Device properties
-    </div>
-
-    <p className="text-sm leading-6 text-slate-600">
-      Shows user device context such as country, city, phone language, app language, app version, brand, model, IP address, device ID, RAM, Android version, and screen size.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-    <div className="mb-3 text-base font-semibold text-slate-950">
-      Event properties
-    </div>
-
-    <p className="text-sm leading-6 text-slate-600">
-      Shows details for the selected event. You can view event data in a readable Info view or inspect the raw JSON when deeper debugging is needed.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-    <div className="mb-3 text-base font-semibold text-slate-950">
-      Traffic source
-    </div>
-
-    <p className="text-sm leading-6 text-slate-600">
-      Shows where the user came from, such as Organic, Google Play, campaign source, or UTM values.
-    </p>
   </div>
 </div>
 
@@ -375,11 +276,6 @@ This is an example of a `pageView` event. It shows which page was opened, where 
   }
 }
 ```
-
-<Info>
-  In User Overview, this type of event can be inspected from Event Properties. For web tracking, fields like page URL, page path, page title, and referrer help explain how the user reached that page.
-</Info>
-
 ---
 
 ## Journey path
@@ -429,33 +325,6 @@ This is an example of a `pageView` event. It shows which page was opened, where 
 </div>
 
 ---
-
-## User flow
-
-<Steps>
-  <Step title="Open Users">
-    Go to **Users** from the left sidebar.
-  </Step>
-
-  <Step title="Filter the list">
-    Use date range, country filter, and search to find the right user.
-  </Step>
-
-  <Step title="Open user details">
-    Click a user row to open the user overview page.
-  </Step>
-
-  <Step title="Review activity">
-    Check session summary, total screens, total time, and date-wise activity.
-  </Step>
-
-  <Step title="Inspect properties">
-    Review device properties, event properties, traffic source, and journey path.
-  </Step>
-</Steps>
-
----
-
 ## Common use cases
 
 <AccordionGroup>
