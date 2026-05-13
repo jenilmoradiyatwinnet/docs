@@ -208,33 +208,28 @@ Twinalyze shows different event names based on the selected platform. App events
   </div>
 </div>
 
-<AccordionGroup>
-  <Accordion title="Example pageView event" icon="code">
-    This example shows a web `pageView` event. It includes page URL, page path, page title, referrer details, app version, and platform.
+### Example web event
 
-    ```json
-    {
-      "eventName": "pageView",
-      "eventType": "auto",
-      "appInfo": {
-        "appVersion": "1.0",
-        "platform": "javascript"
-      },
-      "properties": {
-        "pageCount": 17,
-        "pageDomain": "localhost",
-        "pageUrl": "http://localhost:3030/tools",
-        "pagePath": "/tools",
-        "pageTitle": "FF Tool",
-        "referrerUrl": "http://localhost:3030/",
-        "referrerType": "internal"
-      }
-    }
-    ```
+This example shows a web `pageView` event. It includes page URL, page path, page title, referrer details, app version, and platform.
 
-    In User Overview, this data appears in the side Event Properties panel when the selected event is a web page view.
-  </Accordion>
-</AccordionGroup>
+```json
+{
+  "eventName": "pageView",
+  "eventType": "auto",
+  "appInfo": {
+    "appVersion": "1.0",
+    "platform": "javascript"
+  },
+  "properties": {
+    "pageCount": 17,
+    "pageDomain": "localhost",
+    "pageUrl": "http://localhost:3030/tools",
+    "pagePath": "/tools",
+    "pageTitle": "FF Tool",
+    "referrerUrl": "http://localhost:3030/",
+    "referrerType": "internal"
+  }
+}
 
 ---
 
