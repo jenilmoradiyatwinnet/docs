@@ -6,7 +6,7 @@ hideFooterPagination: true
 
 User Retention helps you understand how many users come back after their first activity date.
 
-Use this page to measure returning users, compare retention by date, and understand whether users continue using your app or website after they become active.
+Use this page to check repeat usage, daily return percentage, and product stickiness over time.
 
 ---
 
@@ -19,7 +19,7 @@ Use this page to measure returning users, compare retention by date, and underst
     </div>
 
     <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
-      The User Retention table shows user cohorts by date and tracks how many users return on Day 0, Day 1, Day 2, and following days.
+      The retention view groups users by date and shows how many of them return on Day 0, Day 1, Day 2, and later days.
     </p>
   </div>
 
@@ -33,262 +33,195 @@ Use this page to measure returning users, compare retention by date, and underst
 
 ---
 
-## User Retention overview
-
-User Retention shows how users return over time after their first activity date. Each row represents a date-based user group, and each day column shows the return percentage for that group.
-
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Retention table breakdown
-    </p>
-
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Use the retention table to check cohort size, daily return rate, and user activity over the selected date range.
-    </p>
-  </div>
-
-  <table className="w-full table-fixed divide-y divide-slate-200">
-    <thead className="bg-white">
-      <tr>
-        <th className="w-[30%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Area
-        </th>
-
-        <th className="w-[42%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Meaning
-        </th>
-
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Use for
-        </th>
-      </tr>
-    </thead>
-
-    <tbody className="divide-y divide-slate-100 bg-white">
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 align-top">
-          <div className="text-sm font-semibold text-slate-950">
-            Date
-          </div>
-
-          <div className="mt-1 text-xs text-slate-500">
-            Cohort date
-          </div>
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Shows the date when users were grouped for retention tracking.
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Comparing user return behavior by day or selected date range.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 align-top">
-          <div className="text-sm font-semibold text-slate-950">
-            Users
-          </div>
-
-          <div className="mt-1 text-xs text-slate-500">
-            Cohort size
-          </div>
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Shows how many users are included in that retention group.
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Understanding how large each user group is before reading retention percentages.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 align-top">
-          <div className="text-sm font-semibold text-slate-950">
-            Day 0 to Day 6
-          </div>
-
-          <div className="mt-1 text-xs text-slate-500">
-            Return percentage
-          </div>
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Shows what percentage of users returned on each day after the cohort date.
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Measuring user stickiness, repeat usage, and product engagement.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 align-top">
-          <div className="text-sm font-semibold text-slate-950">
-            Total row
-          </div>
-
-          <div className="mt-1 text-xs text-slate-500">
-            Overall summary
-          </div>
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Shows the combined retention summary for the selected date range.
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Quickly understanding overall retention performance.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
----
-
-## Filters and controls
-
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Retention controls
-    </p>
-
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
-      Use date, format, and refresh controls to change how retention data is displayed.
-    </p>
-  </div>
-
-  <table className="w-full table-fixed divide-y divide-slate-200">
-    <thead className="bg-white">
-      <tr>
-        <th className="w-[30%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Control
-        </th>
-
-        <th className="w-[42%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Meaning
-        </th>
-
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-          Use for
-        </th>
-      </tr>
-    </thead>
-
-    <tbody className="divide-y divide-slate-100 bg-white">
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 align-top">
-          <div className="text-sm font-semibold text-slate-950">
-            Date filter
-          </div>
-
-          <div className="mt-1 text-xs text-slate-500">
-            Today, Yesterday, 7 Days, custom range
-          </div>
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Lets you choose the time period for retention analysis.
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Checking short-term or selected-period retention.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 align-top">
-          <div className="text-sm font-semibold text-slate-950">
-            Format
-          </div>
-
-          <div className="mt-1 text-xs text-slate-500">
-            Daily
-          </div>
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Controls how retention data is grouped and displayed.
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Viewing retention in daily format.
-        </td>
-      </tr>
-
-      <tr className="hover:bg-slate-50">
-        <td className="px-5 py-4 align-top">
-          <div className="text-sm font-semibold text-slate-950">
-            Refresh
-          </div>
-
-          <div className="mt-1 text-xs text-slate-500">
-            Reload latest data
-          </div>
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Refreshes the retention table with the latest available data.
-        </td>
-
-        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Updating the report after new activity or recent tracking changes.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
----
-
-## How to read the retention table
+## What this page tells you
 
 <div className="not-prose grid gap-4 md:grid-cols-3">
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
       01
     </div>
 
     <div className="text-base font-semibold text-slate-950">
-      Start with users
+      User groups
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      First check the Users column to know how many users are included in each date row.
+      Each date row represents users who became active on that date.
     </p>
   </div>
 
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
       02
     </div>
 
     <div className="text-base font-semibold text-slate-950">
-      Read day columns
+      Return rate
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Day 0, Day 1, Day 2, and later columns show how many users returned after the cohort date.
+      Day columns show the percentage of users who returned after the first activity date.
     </p>
   </div>
 
-  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 text-sm font-semibold text-blue-700">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
       03
     </div>
 
     <div className="text-base font-semibold text-slate-950">
-      Compare dates
+      Product stickiness
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Compare different date rows to understand which user groups are returning better.
+      Higher retention means users are finding value and coming back again.
+    </p>
+  </div>
+</div>
+
+---
+
+## How to read retention
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Retention reading flow
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Start from the cohort date, check the number of users, then read the day-by-day return percentage.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-4">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Date
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        The date when users are grouped.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Users
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Total users inside that cohort.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Day 0
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Users active on the same day.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Day 1+
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Users returning after later days.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Retention timeline
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Day-by-day view
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Retention is read from left to right. Day 0 starts from the cohort date, and later days show how many users returned.
+    </p>
+  </div>
+
+  <div className="grid gap-3 md:grid-cols-7">
+    <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4 text-center">
+      <div className="text-sm font-semibold text-blue-700">Day 0</div>
+      <div className="mt-1 text-xs text-slate-600">First activity</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Day 1</div>
+      <div className="mt-1 text-xs text-slate-600">Next day</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Day 2</div>
+      <div className="mt-1 text-xs text-slate-600">Return check</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Day 3</div>
+      <div className="mt-1 text-xs text-slate-600">Repeat use</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Day 4</div>
+      <div className="mt-1 text-xs text-slate-600">Trend</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Day 5</div>
+      <div className="mt-1 text-xs text-slate-600">Stickiness</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Day 6</div>
+      <div className="mt-1 text-xs text-slate-600">Retention</div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Filters
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Date range
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Choose Today, Yesterday, 7 Days, or a custom date range.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Format
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      View retention in a daily format.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Refresh
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Reload the latest retention data.
     </p>
   </div>
 </div>
@@ -298,29 +231,21 @@ User Retention shows how users return over time after their first activity date.
 ## Common use cases
 
 <AccordionGroup>
-  <Accordion title="Measure returning users" icon="users">
-    Use User Retention to understand how many users come back after their first activity date.
-  </Accordion>
-
-  <Accordion title="Compare retention by date" icon="calendar">
-    Compare different date rows to see which day or period has stronger retention.
-  </Accordion>
-
-  <Accordion title="Check product stickiness" icon="chart-line">
-    Use Day 1, Day 2, and later retention values to understand how sticky your product is.
-  </Accordion>
-
-  <Accordion title="Analyze campaign quality" icon="megaphone">
-    After a campaign or notification, check whether new users continue returning in the following days.
+  <Accordion title="Check if users come back" icon="users">
+    Use retention to understand whether users return after their first activity.
   </Accordion>
 
   <Accordion title="Find early drop-off" icon="search">
-    Low retention after Day 0 or Day 1 can indicate that users are not finding enough value after first use.
+    If Day 1 or Day 2 is low, users may not be finding enough value after first use.
+  </Accordion>
+
+  <Accordion title="Measure product stickiness" icon="chart-line">
+    Strong retention means users are repeatedly engaging with your product.
   </Accordion>
 </AccordionGroup>
 
 <Check>
-  User Retention helps your team understand repeat usage, returning users, and product stickiness over time.
+  User Retention helps your team understand repeat usage and long-term product engagement.
 </Check>
 
 ---
