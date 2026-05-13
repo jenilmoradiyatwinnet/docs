@@ -6,10 +6,13 @@ hideFooterPagination: true
 
 User Overview helps you inspect individual users, review their activity, check device details, and understand how they move through your app or website.
 
+---
 
 <Steps>
   <Step title="Open Users list">
     The Users list gives a quick overview of every tracked user in the selected project. You can filter users by date, country, or search keyword.
+
+    It helps you quickly check the user's country, retention type, app status, app version, device brand, last activity, and registration date.
 
     <Frame>
       <img
@@ -20,7 +23,9 @@ User Overview helps you inspect individual users, review their activity, check d
   </Step>
 
   <Step title="Open user overview">
-    Click any user row to open the user overview page. This page shows the selected user’s session summary, device properties, event properties, traffic source, and screen journey.
+    Click any user row to open the user overview page. This page gives a deeper view of one selected user.
+
+    You can review session summary, device properties, event properties, traffic source, and the user's journey path from one place.
 
     <Frame>
       <img
@@ -31,7 +36,9 @@ User Overview helps you inspect individual users, review their activity, check d
   </Step>
 
   <Step title="Expand activity details">
-    Expand a session row to view detailed user activity. You can see the sequence of events with time, screen or page movement, total time, background activity, and selected event properties.
+    Expand a session row to view detailed user activity. This helps you understand the exact sequence of events performed by the user.
+
+    The right-side property area helps you inspect device details, event information, traffic source, and selected event data.
 
     <Frame>
       <img
@@ -53,7 +60,7 @@ User Overview helps you inspect individual users, review their activity, check d
     </p>
 
     <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      The Users list helps you understand who is using your app or website. It shows important user-level details such as country, retention type, app status, app version, device brand, last activity, and registration date.
+      The Users list helps you understand who is using your app or website. It gives a clear user-level summary before opening the full user profile.
     </p>
   </div>
 
@@ -104,7 +111,7 @@ User Overview helps you inspect individual users, review their activity, check d
 
 ## Events you may see
 
-Twinalyze shows different event names based on the selected platform. App events are usually generated from the mobile SDK, while web events are generated from the website SDK.
+Twinalyze shows different event names based on the selected platform. App events are generated from the mobile SDK, while web events are generated from the website SDK.
 
 <div className="not-prose grid gap-4 md:grid-cols-2">
   <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -118,35 +125,35 @@ Twinalyze shows different event names based on the selected platform. App events
       </p>
     </div>
 
-    <div className="space-y-3 text-sm">
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+    <div className="space-y-2 text-sm">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">appForeground</span>
-        <span className="text-xs text-slate-500">App opened</span>
+        <span className="ml-2 text-xs text-slate-500">App comes to foreground</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">appBackground</span>
-        <span className="text-xs text-slate-500">App moved back</span>
+        <span className="ml-2 text-xs text-slate-500">App moves to background</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">language</span>
-        <span className="text-xs text-slate-500">Language captured</span>
+        <span className="ml-2 text-xs text-slate-500">App or device language</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">screeninfo</span>
-        <span className="text-xs text-slate-500">Screen viewed</span>
+        <span className="ml-2 text-xs text-slate-500">Screen or activity viewed</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">splashTime</span>
-        <span className="text-xs text-slate-500">Splash duration</span>
+        <span className="ml-2 text-xs text-slate-500">Splash screen duration</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">adInfo</span>
-        <span className="text-xs text-slate-500">Ad activity</span>
+        <span className="ml-2 text-xs text-slate-500">Ad related activity</span>
       </div>
     </div>
   </div>
@@ -162,80 +169,83 @@ Twinalyze shows different event names based on the selected platform. App events
       </p>
     </div>
 
-    <div className="space-y-3 text-sm">
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+    <div className="space-y-2 text-sm">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">pageView</span>
-        <span className="text-xs text-slate-500">Page opened</span>
+        <span className="ml-2 text-xs text-slate-500">Page opened</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">elementClick</span>
-        <span className="text-xs text-slate-500">Element clicked</span>
+        <span className="ml-2 text-xs text-slate-500">Button or element clicked</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">formStart</span>
-        <span className="text-xs text-slate-500">Form started</span>
+        <span className="ml-2 text-xs text-slate-500">Form interaction started</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">formSubmit</span>
-        <span className="text-xs text-slate-500">Form submitted</span>
+        <span className="ml-2 text-xs text-slate-500">Form submitted</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">scrollDepth</span>
-        <span className="text-xs text-slate-500">Scroll tracked</span>
+        <span className="ml-2 text-xs text-slate-500">Scroll progress reached</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">searchResultsView</span>
-        <span className="text-xs text-slate-500">Search results</span>
+        <span className="ml-2 text-xs text-slate-500">Search results viewed</span>
       </div>
 
-      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+      <div className="rounded-xl bg-slate-50 px-4 py-3">
         <span className="font-medium text-slate-950">customEvent</span>
-        <span className="text-xs text-slate-500">Custom action</span>
+        <span className="ml-2 text-xs text-slate-500">Custom tracked action</span>
       </div>
     </div>
   </div>
 </div>
 
----
+<AccordionGroup>
+  <Accordion title="Example pageView event" icon="code">
+    This example shows a web `pageView` event. It includes page URL, page path, page title, referrer details, app version, and platform.
 
-## Example web event
+    ```json
+    {
+      "eventName": "pageView",
+      "eventType": "auto",
+      "appInfo": {
+        "appVersion": "1.0",
+        "platform": "javascript"
+      },
+      "properties": {
+        "pageCount": 17,
+        "pageDomain": "localhost",
+        "pageUrl": "http://localhost:3030/tools",
+        "pagePath": "/tools",
+        "pageTitle": "FF Tool",
+        "referrerUrl": "http://localhost:3030/",
+        "referrerType": "internal"
+      }
+    }
+    ```
 
-This is an example of a `pageView` event. It shows which page was opened, where the user came from, and which platform sent the event.
+    In User Overview, this data appears in the side Event Properties panel when the selected event is a web page view.
+  </Accordion>
+</AccordionGroup>
 
-```json
-{
-  "eventName": "pageView",
-  "eventType": "auto",
-  "appInfo": {
-    "appVersion": "1.0",
-    "platform": "javascript"
-  },
-  "properties": {
-    "pageCount": 17,
-    "pageDomain": "localhost",
-    "pageUrl": "http://localhost:3030/tools",
-    "pagePath": "/tools",
-    "pageTitle": "FF Tool",
-    "referrerUrl": "http://localhost:3030/",
-    "referrerType": "internal"
-  }
-}
-```
 ---
 
 ## Common use cases
 
 <AccordionGroup>
-  <Accordion title="Debug a user journey" icon="route">
+  <Accordion title="Debug a user journey" icon="search">
     Open a user and review journey path, event properties, and session activity to understand what happened.
   </Accordion>
 
-  <Accordion title="Check device information" icon="smartphone">
+  <Accordion title="Check device information" icon="mobile">
     Use Device Properties to review app version, brand, model, language, IP address, screen size, and device ID.
   </Accordion>
 
@@ -243,7 +253,7 @@ This is an example of a `pageView` event. It shows which page was opened, where 
     Use Traffic to check whether the user came from Organic, Google Play, campaign source, or another UTM source.
   </Accordion>
 
-  <Accordion title="Review event properties" icon="mouse-pointer-click">
+  <Accordion title="Review event properties" icon="code">
     Use Event Properties to inspect app events like screeninfo, splashTime, and adInfo, or web events like pageView, elementClick, formSubmit, scrollDepth, and customEvent.
   </Accordion>
 </AccordionGroup>
