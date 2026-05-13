@@ -114,11 +114,11 @@
             ]
           },
           {
-            "group": "Notification",
+            "group": "Messaging",
             "pages": [
-              "analytics/notification/notification",
-              "analytics/notification/notification-campaign",
-              "analytics/notification/notification-report-list"
+              "analytics/messaging/notification",
+              "analytics/messaging/notification-campaign",
+              "analytics/messaging/notification-report-list"
             ]
           },
           {

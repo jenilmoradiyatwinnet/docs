@@ -4,64 +4,46 @@ description: "Understand user list, user activity, device properties, event prop
 hideFooterPagination: true
 ---
 
-User Overview helps you inspect individual users, understand their device details, review activity, and analyze how they move through your app.
+User Overview helps you inspect individual users, review their activity, check device details, and understand how they move through your app or website.
 
-Use this page when you want to debug a user journey, check device properties, verify events, or understand where a user came from.
+<Steps>
+  <Step title="Open Users list">
+    The Users page shows all tracked users with country, retention status, app status, app version, brand, last activity, and registration date.
 
----
+    <Frame>
+      <img
+        src="/images/User_overview_1.PNG"
+        alt="Twinalyze Users list page"
+      />
+    </Frame>
+  </Step>
 
-## Page preview
+  <Step title="Open user overview">
+    Click any user row to open the detailed user overview page. This view shows session summary, device properties, event properties, traffic source, and screen journey.
 
-<Tabs>
-  <Tab title="Users List">
-    <Steps>
-      <Step title="Review all users">
-        The Users page shows tracked users with country, retention status, app status, app version, brand, last activity, and registration date.
+    <Frame>
+      <img
+        src="/images/Users_overview_2.PNG"
+        alt="Twinalyze User Overview page"
+      />
+    </Frame>
+  </Step>
 
-        <Frame>
-          <img
-            src="/images/Dashboard/users-overview-list.png"
-            alt="Twinalyze Users list page"
-          />
-        </Frame>
-      </Step>
-    </Steps>
-  </Tab>
+  <Step title="Expand activity details">
+    Expand a session row to view detailed activity such as screen views, fragment views, back screens, splash time, total time, and event properties.
 
-  <Tab title="User Overview">
-    <Steps>
-      <Step title="Open a user profile">
-        Click a user to open the user-level overview. This view shows sessions, device properties, event properties, traffic source, and screen journey.
-
-        <Frame>
-          <img
-            src="/images/Dashboard/users-overview-details.png"
-            alt="Twinalyze User Overview page"
-          />
-        </Frame>
-      </Step>
-    </Steps>
-  </Tab>
-
-  <Tab title="Activity Details">
-    <Steps>
-      <Step title="Expand user activity">
-        Open a session row to view detailed activity such as screen views, fragment views, back screens, splash time, and total time.
-
-        <Frame>
-          <img
-            src="/images/Dashboard/users-overview-activity.png"
-            alt="Twinalyze User activity details"
-          />
-        </Frame>
-      </Step>
-    </Steps>
-  </Tab>
-</Tabs>
+    <Frame>
+      <img
+        src="/images/Users_overview_3.PNG"
+        alt="Twinalyze User activity details"
+      />
+    </Frame>
+  </Step>
+</Steps>
 
 ---
 
-## What this page shows
+## What this page helps you do
 
 <div className="not-prose grid gap-4 md:grid-cols-3">
   <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
@@ -70,11 +52,11 @@ Use this page when you want to debug a user journey, check device properties, ve
     </div>
 
     <div className="text-base font-semibold text-slate-950">
-      User list
+      Find users
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      View all tracked users with country, app status, app version, brand, last activity, and registration date.
+      Filter users by date, country, or search keyword and open the user you want to inspect.
     </p>
   </div>
 
@@ -84,11 +66,11 @@ Use this page when you want to debug a user journey, check device properties, ve
     </div>
 
     <div className="text-base font-semibold text-slate-950">
-      User profile
+      Review activity
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Open a user to review total screens, total time duration, app background activity, and user-level session data.
+      Check total screens, total time, background activity, and date-wise session details.
     </p>
   </div>
 
@@ -98,11 +80,11 @@ Use this page when you want to debug a user journey, check device properties, ve
     </div>
 
     <div className="text-base font-semibold text-slate-950">
-      Activity journey
+      Understand context
     </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Understand user movement through screens, fragments, events, traffic source, and device properties.
+      View device properties, event properties, traffic source, and journey path in one place.
     </p>
   </div>
 </div>
@@ -114,11 +96,11 @@ Use this page when you want to debug a user journey, check device properties, ve
 <div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
   <div className="mb-6">
     <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      Users list
+      User discovery
     </p>
 
     <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      The Users list gives a quick overview of every tracked user. You can filter by date, country, and search keyword to find a specific user faster.
+      The Users list gives a quick overview of every tracked user. It helps you identify who is active, where they are from, what app version they use, and when they last interacted.
     </p>
   </div>
 
@@ -129,7 +111,7 @@ Use this page when you want to debug a user journey, check device properties, ve
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows the user’s country and city when available.
+        Shows country and city when available.
       </p>
     </div>
 
@@ -139,17 +121,17 @@ Use this page when you want to debug a user journey, check device properties, ve
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Indicates whether the user is new, retained, or marked for testing.
+        Shows whether the user is new, retained, or marked as a test user.
       </p>
     </div>
 
     <div className="rounded-2xl bg-slate-50 p-5">
       <div className="text-sm font-semibold text-slate-950">
-        App details
+        App status
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows app status, app version, device brand, and install state.
+        Shows install status, app version, and device brand.
       </p>
     </div>
 
@@ -159,7 +141,7 @@ Use this page when you want to debug a user journey, check device properties, ve
       </div>
 
       <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows last activity and registered date for quick user activity review.
+        Shows last activity and registration date.
       </p>
     </div>
   </div>
@@ -167,65 +149,110 @@ Use this page when you want to debug a user journey, check device properties, ve
 
 ---
 
-## User detail view
+## User overview sections
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="mb-3 text-base font-semibold text-slate-950">
+      Session summary
+    </div>
+
+    <p className="text-sm leading-6 text-slate-600">
+      Shows total screens, total time duration, app background count, and session rows by date.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="mb-3 text-base font-semibold text-slate-950">
+      Device properties
+    </div>
+
+    <p className="text-sm leading-6 text-slate-600">
+      Shows country, city, phone language, app language, app version, company name, brand, model, IP address, device ID, RAM, Android version, and screen size.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="mb-3 text-base font-semibold text-slate-950">
+      Event properties
+    </div>
+
+    <p className="text-sm leading-6 text-slate-600">
+      Shows details of the selected event, such as screen data, app lifecycle activity, ad data, page data, click data, form data, scroll data, or custom event data.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="mb-3 text-base font-semibold text-slate-950">
+      Traffic source
+    </div>
+
+    <p className="text-sm leading-6 text-slate-600">
+      Shows where the user came from, such as Organic, Google Play, campaign source, or UTM values.
+    </p>
+  </div>
+</div>
+
+---
+
+## Events you may see
 
 <div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
   <div className="mb-6">
     <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      User-level analytics
+      App and Web activity
     </p>
 
     <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      After opening a user, Twinalyze shows a detailed profile with session summary, device data, events, traffic source, and screen journey.
+      User Overview can show both mobile app events and web events. The event list depends on the selected platform and tracking setup.
     </p>
   </div>
 
-  <div className="grid gap-4 md:grid-cols-2">
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Session summary
+  <div className="grid gap-5 md:grid-cols-2">
+    <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-5">
+      <div className="mb-3 text-sm font-semibold text-slate-950">
+        App events
       </div>
 
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows total screens, total time duration, app background count, and date-wise session rows.
+      <p className="mb-4 text-sm leading-6 text-slate-600">
+        App events help you understand lifecycle activity, screen movement, language, splash time, and ad behavior.
       </p>
+
+      <div className="flex flex-wrap gap-2">
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">appForeground</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">appBackground</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">language</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">screeninfo</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">splashTime</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">adInfo</span>
+      </div>
     </div>
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Device properties
+    <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-5">
+      <div className="mb-3 text-sm font-semibold text-slate-950">
+        Web events
       </div>
 
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows country, city, phone language, app language, app version, company name, brand, model, IP address, device ID, RAM, Android version, and screen size.
+      <p className="mb-4 text-sm leading-6 text-slate-600">
+        Web events help you understand page visits, clicks, form behavior, scrolling, search result views, and custom behavior.
       </p>
-    </div>
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Event properties
+      <div className="flex flex-wrap gap-2">
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">pageView</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">elementClick</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">formStart</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">formSubmit</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">scrollDepth</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">searchResultsView</span>
+        <span className="rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">customEvent</span>
       </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows event-level information such as screen name, screen class, fragment info, and fragment class.
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
-        Traffic source
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Shows UTM medium and UTM source, such as Organic and Google Play.
-      </p>
     </div>
   </div>
 </div>
 
 ---
 
-## Screen journey
+## Journey path
 
 <div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
   <div className="mb-6">
@@ -234,24 +261,29 @@ Use this page when you want to debug a user journey, check device properties, ve
     </p>
 
     <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      The screen journey helps you understand how a user moved through the app. It can show screens, fragments, product pages, and back navigation.
+      The journey path shows how the user moved through the product. For apps, it can include foreground/background activity, screeninfo, splashTime, and adInfo. For web, it can include pageView, elementClick, formSubmit, scrollDepth, searchResultsView, and customEvent.
     </p>
   </div>
 
   <div className="grid gap-3 md:grid-cols-6">
     <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4 text-center">
-      <div className="text-sm font-semibold text-blue-700">Splash</div>
-      <div className="mt-1 text-xs text-slate-600">App start</div>
+      <div className="text-sm font-semibold text-blue-700">Start</div>
+      <div className="mt-1 text-xs text-slate-600">First entry</div>
     </div>
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Home</div>
-      <div className="mt-1 text-xs text-slate-600">Entry screen</div>
+      <div className="text-sm font-semibold text-slate-950">View</div>
+      <div className="mt-1 text-xs text-slate-600">Screen or page</div>
     </div>
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Store</div>
-      <div className="mt-1 text-xs text-slate-600">Browsing</div>
+      <div className="text-sm font-semibold text-slate-950">Action</div>
+      <div className="mt-1 text-xs text-slate-600">Click or event</div>
+    </div>
+
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
+      <div className="text-sm font-semibold text-slate-950">Detail</div>
+      <div className="mt-1 text-xs text-slate-600">Event data</div>
     </div>
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
@@ -260,13 +292,8 @@ Use this page when you want to debug a user journey, check device properties, ve
     </div>
 
     <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Product</div>
-      <div className="mt-1 text-xs text-slate-600">Detail view</div>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-      <div className="text-sm font-semibold text-slate-950">Home</div>
-      <div className="mt-1 text-xs text-slate-600">Return</div>
+      <div className="text-sm font-semibold text-slate-950">Return</div>
+      <div className="mt-1 text-xs text-slate-600">Next activity</div>
     </div>
   </div>
 </div>
@@ -280,20 +307,20 @@ Use this page when you want to debug a user journey, check device properties, ve
     Go to **Users** from the left sidebar to view the tracked user list.
   </Step>
 
-  <Step title="Filter users">
+  <Step title="Filter the list">
     Use date range, country filter, and search to find the right user.
   </Step>
 
-  <Step title="Open user overview">
-    Click a user row to open the detailed user overview page.
+  <Step title="Open user details">
+    Click a user row to open the user overview page.
   </Step>
 
   <Step title="Review activity">
-    Check total screens, total time, app background, and date-wise session rows.
+    Check session summary, total screens, total time, and date-wise activity.
   </Step>
 
   <Step title="Inspect properties">
-    Review device properties, event properties, traffic source, and screen journey.
+    Review device properties, event properties, traffic source, and journey path.
   </Step>
 </Steps>
 
@@ -303,7 +330,7 @@ Use this page when you want to debug a user journey, check device properties, ve
 
 <AccordionGroup>
   <Accordion title="Debug a user journey" icon="route">
-    Open a user and review screen journey, event properties, and session activity to understand what happened.
+    Open a user and review journey path, event properties, and session activity to understand what happened.
   </Accordion>
 
   <Accordion title="Check device information" icon="smartphone">
@@ -311,16 +338,16 @@ Use this page when you want to debug a user journey, check device properties, ve
   </Accordion>
 
   <Accordion title="Understand traffic source" icon="chart-line">
-    Use Traffic to check whether the user came from Organic, Google Play, or another UTM source.
+    Use Traffic to check whether the user came from Organic, Google Play, campaign source, or another UTM source.
   </Accordion>
 
-  <Accordion title="Review session behavior" icon="clock">
-    Use the session list to understand total screen count, total time, background activity, and date-wise behavior.
+  <Accordion title="Review app and web events" icon="mouse-pointer-click">
+    Use Event Properties to understand app events like screeninfo, splashTime, and adInfo, or web events like pageView, elementClick, formSubmit, scrollDepth, and customEvent.
   </Accordion>
 </AccordionGroup>
 
 <Check>
-  User Overview helps your team understand individual user behavior, device context, traffic source, and screen journey in one place.
+  User Overview helps your team understand individual user behavior, device context, traffic source, events, and journey path in one place.
 </Check>
 
 ---
