@@ -5,8 +5,6 @@ hideFooterPagination: true
 ---
 Ad Report helps you review ad performance across countries, ad networks, and ad formats.
 
----
-
 <Steps>
   <Step title="Filter ad report data">
     You can filter the report by date range, app name, country, ad company, and ad format. After selecting filters, click **Submit** to load the report.
@@ -240,35 +238,107 @@ The Ad Report table gives a detailed date-wise view of ad performance. Each row 
 
 ## Table customization and export
 
-<div className="not-prose grid gap-4 md:grid-cols-2">
-  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      Column manager
+Prepare the report before sharing it with your team. You can choose the columns you need, keep the table focused, and export the final report as PDF or CSV.
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Report sharing workflow
     </p>
 
-    <h3 className="mt-2 text-base font-semibold text-slate-950">
-      Choose what appears in the report
-    </h3>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600">
-      The right-side column panel lets you control which report fields are visible. You can organize columns such as Country, Ad Company, Ad Format, Requested, Load, Show, Failed, Click, and other metrics.
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Use this section when you want to create a clean ad report for reviews, client updates, team discussions, or spreadsheet analysis.
     </p>
   </div>
 
-  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-      Export
-    </p>
+  <div className="grid gap-0 md:grid-cols-3">
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-50 text-sm font-semibold text-blue-700">
+        01
+      </div>
 
-    <h3 className="mt-2 text-base font-semibold text-slate-950">
-      Download report data
-    </h3>
+      <div className="text-base font-semibold text-slate-950">
+        Choose columns
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use the right-side column panel to show only the fields you need, such as Country, Ad Company, Ad Format, Requested, Load, Show, Failed, Click, and CTR.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-50 text-sm font-semibold text-blue-700">
+        02
+      </div>
+
+      <div className="text-base font-semibold text-slate-950">
+        Export PDF
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use PDF when you need a clean report for meetings, client sharing, internal reviews, or quick performance summaries.
+      </p>
+    </div>
+
+    <div className="p-6">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-50 text-sm font-semibold text-blue-700">
+        03
+      </div>
+
+      <div className="text-base font-semibold text-slate-950">
+        Export CSV
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use CSV when your team wants to open the report in Excel, Google Sheets, or another analysis tool for deeper filtering and calculations.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div className="not-prose mt-4 grid gap-4 md:grid-cols-2">
+  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+    <div className="text-sm font-semibold text-slate-950">
+      Best for quick sharing
+    </div>
 
     <p className="mt-2 text-sm leading-6 text-slate-600">
-      Use the Export menu to download the report as PDF or CSV. PDF is useful for sharing summaries, while CSV is useful for deeper analysis in spreadsheets.
+      PDF is better when the report needs to be readable, presentable, and easy to send.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+    <div className="text-sm font-semibold text-slate-950">
+      Best for analysis
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      CSV is better when the team needs to sort, filter, compare, or calculate values manually.
     </p>
   </div>
 </div>
+
+<Steps>
+  <Step title="Apply filters">
+    Select date range, app name, country, ad company, and ad format.
+  </Step>
+
+  <Step title="Review key metrics">
+    Check Requested, Load, Show, Failed, Click, and CTR before exporting.
+  </Step>
+
+  <Step title="Select columns">
+    Use the right-side column manager to keep the report simple and focused.
+  </Step>
+
+  <Step title="Export report">
+    Choose **PDF** for sharing or **CSV** for spreadsheet analysis.
+  </Step>
+</Steps>
+
+<Info>
+  Keep only the required columns before exporting. This makes the report easier to read and avoids unnecessary data in shared files.
+</Info>
 
 ---
 
