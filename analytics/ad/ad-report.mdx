@@ -1,4 +1,363 @@
 ---
-title: 'Ad Report'
+title: "Ad Report"
+description: "Understand ad performance by country, ad company, ad format, requested ads, loads, shows, failures, clicks, CTR, and exports in Twinalyze."
+hideFooterPagination: true
 ---
 
+# Ad Report
+
+Ad Report helps you review ad performance across countries, ad networks, and ad formats.
+
+Use this page to understand how many ads were requested, loaded, shown, failed, and clicked. You can also export the report as **PDF** or **CSV** for sharing and analysis.
+
+---
+
+## Page preview
+
+<Steps>
+  <Step title="Filter ad report data">
+    The top filter section helps you choose the exact ad data you want to review.
+
+    You can filter the report by date range, app name, country, ad company, and ad format. After selecting filters, click **Submit** to load the report.
+
+    <Frame>
+      <img
+        src="/images/Dashboard/ad-report.png"
+        alt="Twinalyze Ad Report page"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Review ad performance table">
+    The report table shows daily ad performance with country, company, format, requested ads, loads, shows, failures, clicks, and performance percentages.
+
+    Use this view to compare ad delivery quality and identify where ad performance is strong or weak.
+  </Step>
+
+  <Step title="Customize and export report">
+    The right-side column panel helps you organize the table fields. You can also export the report as **PDF** or **CSV** from the export menu.
+  </Step>
+</Steps>
+
+---
+
+## What Ad Report helps you understand
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Ad delivery
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Track how many ads were requested, loaded, shown, and failed.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Ad engagement
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Review ad clicks and CTR to understand how users interact with ads.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Ad comparison
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Compare ad performance by country, ad company, and ad format.
+    </p>
+  </div>
+</div>
+
+---
+
+## Filters
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Report filters
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Filters help you narrow the report to the right app, country, ad company, ad format, and time period.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Date range
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Select Today, Yesterday, 7 Days, or a custom date range to review ad performance for a specific period.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        App name
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Choose the app whose ad performance you want to analyze.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Country
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Select one or more countries to compare ad performance by region.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Ad company
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Filter by ad network or ad company, such as AdMob, Facebook, or other configured providers.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Ad format
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Filter by format such as native, banner, interstitial, rewarded, app open, or other supported ad types.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Submit and refresh
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Use Submit to apply filters and Refresh to reload the latest available report data.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Report table
+
+The Ad Report table gives a detailed date-wise view of ad performance. Each row represents ad activity for a selected date, country, ad company, and ad format.
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Metric guide
+    </p>
+
+    <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-600">
+      Use these fields to understand ad delivery, ad failures, and user interaction quality.
+    </p>
+  </div>
+
+  <div className="grid gap-0 md:grid-cols-2">
+    <div className="border-b border-slate-100 p-5 md:border-r">
+      <div className="text-sm font-semibold text-slate-950">
+        Requested
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of ad requests sent from the app.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Load
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of ads successfully loaded after being requested.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-5 md:border-r">
+      <div className="text-sm font-semibold text-slate-950">
+        Show
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of ads actually shown to users.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Failed
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of ad requests or loads that failed.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-5 md:border-r md:border-b-0">
+      <div className="text-sm font-semibold text-slate-950">
+        Click
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of times users clicked on shown ads.
+      </p>
+    </div>
+
+    <div className="p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        CTR
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Click-through rate. It helps measure how many shown ads received clicks.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Table customization and export
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Column manager
+    </p>
+
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Choose what appears in the report
+    </h3>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The right-side column panel lets you control which report fields are visible. You can organize columns such as Country, Ad Company, Ad Format, Requested, Load, Show, Failed, Click, and other metrics.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Export
+    </p>
+
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Download report data
+    </h3>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Use the Export menu to download the report as PDF or CSV. PDF is useful for sharing summaries, while CSV is useful for deeper analysis in spreadsheets.
+    </p>
+  </div>
+</div>
+
+---
+
+## How to read Ad Report
+
+<Steps>
+  <Step title="Select report filters">
+    Choose the date range, app name, country, ad company, and ad format.
+  </Step>
+
+  <Step title="Click Submit">
+    Apply the selected filters to generate the ad report.
+  </Step>
+
+  <Step title="Review delivery metrics">
+    Start with Requested, Load, Show, and Failed to understand ad delivery quality.
+  </Step>
+
+  <Step title="Check engagement">
+    Review Click and CTR to understand whether users are interacting with ads.
+  </Step>
+
+  <Step title="Compare by country and format">
+    Compare rows by country, company, and format to find high-performing and low-performing ad areas.
+  </Step>
+
+  <Step title="Export if needed">
+    Download the report as PDF or CSV for sharing or further analysis.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Compare ad networks">
+    Use Ad Company to compare providers such as AdMob, Facebook, or other ad networks.
+  </Accordion>
+
+  <Accordion title="Find ad failures">
+    Use Failed and Load metrics to identify where ads are not loading correctly.
+  </Accordion>
+
+  <Accordion title="Measure ad engagement">
+    Use Click and CTR to understand whether users are interacting with shown ads.
+  </Accordion>
+
+  <Accordion title="Analyze country-wise performance">
+    Use the Country filter to compare ad behavior across different markets.
+  </Accordion>
+
+  <Accordion title="Review ad format quality">
+    Use Ad Format to compare native, banner, interstitial, app open, rewarded, and other formats.
+  </Accordion>
+
+  <Accordion title="Share reports with team">
+    Export PDF for readable sharing or CSV for spreadsheet analysis.
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  Ad Report helps your team understand ad delivery, failures, clicks, CTR, country-wise performance, and exportable ad analytics in one place.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/users/user-growth" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/ad/ad-failure-insights" className="twinalyze-nav-center">
+    <strong>Ad Failure Insights</strong>
+    <span>Find where ad requests, loads, or shows are failing.</span>
+  </a>
+
+  <a href="/analytics/ad/ad-failure-insights" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
