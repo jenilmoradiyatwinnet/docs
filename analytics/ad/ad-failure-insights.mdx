@@ -1,4 +1,479 @@
 ---
-title: 'Ad Failure Insights'
+title: "Ad Failure Insights"
+description: "Understand ad failures by ad company, ad format, error code, screen, testing device, and app version in Twinalyze."
+hideFooterPagination: true
 ---
 
+
+Ad Failure Insights helps you understand **where ads are failing**, **which ad formats are affected**, and **which screen or error code needs attention**.
+
+<Steps>
+  <Step title="Review ad company failure cards">
+    The top section shows failure cards for each ad company, such as **Admob**, **Facebook**, and **Adx**.
+
+    Each card gives a quick summary of failed ad activity. You can compare total users, total failed events, average failure value, and format-wise failure distribution.
+
+    <Frame>
+      <img
+        src="/images/Ad_failure_1.PNG"
+        alt="Twinalyze Ad Failure Insights company cards"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Check errors and affected screens">
+    The lower section gives deeper debugging details.
+
+    **Total Errors** shows ad format, error code, error message, total users, total events, and average failure value. **Screen Info** shows which screens are affected by ad failures.
+
+    <Frame>
+      <img
+        src="/images/Ad_failure_2.PNG"
+        alt="Twinalyze Ad Failure Insights total errors and screen info"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+## What this page helps you find
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      01
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Failed ad networks
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Compare failures across ad companies like Admob, Facebook, Adx, or other configured ad providers.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      02
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Failed ad formats
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      See which format is failing most, such as Native, MREC, App Open, Interstitial, Banner, or In-feed.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-sm font-semibold text-blue-700 shadow-sm">
+      03
+    </div>
+
+    <div className="text-base font-semibold text-slate-950">
+      Failure reason
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Drill into error codes, messages, and screen names to understand the exact reason behind ad failures.
+    </p>
+  </div>
+</div>
+
+---
+
+## Filters
+
+Use filters to focus on the exact app environment where the ad failure happened.
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Failure report filters
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Select the right date range, app, testing device, and app version before checking failure details.
+    </p>
+  </div>
+
+  <div className="grid gap-0 md:grid-cols-4">
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="text-base font-semibold text-slate-950">
+        Date range
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Choose Today, Yesterday, 7 Days, or a custom range to review failures for a specific period.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="text-base font-semibold text-slate-950">
+        App name
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Select the app whose ad failure data you want to inspect.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="text-base font-semibold text-slate-950">
+        Testing device
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Filter failure data by a specific testing device or tester profile.
+      </p>
+    </div>
+
+    <div className="p-6">
+      <div className="text-base font-semibold text-slate-950">
+        App version
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Check whether the failure is happening in a specific app version.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Ad company cards
+
+The top cards help you compare ad failures by company before opening detailed error rows.
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Company-level summary
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Each ad company card shows a quick view of how many users were affected, how many failed events occurred, and which ad formats are causing failures.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Total User
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Number of users included in the selected failure report for that ad company.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Total Failed Events
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Total number of failed ad events generated by that ad company.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Average
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Failure average calculated from failed events and users. It helps compare failure impact between companies.
+      </p>
+    </div>
+  </div>
+</div>
+
+<Info>
+  The average value helps you compare failure intensity. A higher average usually means more failed events per affected user.
+</Info>
+
+---
+
+## Format-level failure breakdown
+
+Each ad company card also shows failures by ad format. This helps you identify whether the issue is specific to one format or spread across multiple formats.
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Chart view
+    </p>
+
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Compare users and events
+    </h3>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The chart compares users and failed events for each ad format. Use it to quickly spot which format has more failures.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Table view
+    </p>
+
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Read exact values
+    </h3>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The table shows format-wise users, events, and average. Use it when you need exact numbers for debugging.
+    </p>
+  </div>
+</div>
+
+---
+
+## Total Errors
+
+Total Errors is the main debugging area. It helps you move from a general ad format problem to the exact error code and error message.
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Error investigation flow
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Expand an ad format, then expand the error code to view the exact failure message and related details.
+    </p>
+  </div>
+
+  <div className="grid gap-0 md:grid-cols-4">
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-50 text-sm font-semibold text-blue-700">
+        01
+      </div>
+
+      <div className="text-base font-semibold text-slate-950">
+        Select ad company
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Choose Admob, Facebook, Adx, or another ad company from the tabs.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-50 text-sm font-semibold text-blue-700">
+        02
+      </div>
+
+      <div className="text-base font-semibold text-slate-950">
+        Expand ad format
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Open Native, App Open, MREC, Banner, or Interstitial to see format-specific failures.
+      </p>
+    </div>
+
+    <div className="border-b border-slate-100 p-6 md:border-b-0 md:border-r">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-50 text-sm font-semibold text-blue-700">
+        03
+      </div>
+
+      <div className="text-base font-semibold text-slate-950">
+        Read error code
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Expand the error code to view grouped failure messages and affected user count.
+      </p>
+    </div>
+
+    <div className="p-6">
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-50 text-sm font-semibold text-blue-700">
+        04
+      </div>
+
+      <div className="text-base font-semibold text-slate-950">
+        Copy or inspect
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Copy the message or open related details when you need to share the issue with your development team.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Error fields
+
+<div className="not-prose grid gap-4 md:grid-cols-3">
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Error Code
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Groups similar failures together so you can identify recurring ad issues faster.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Error Message
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Shows the exact reason returned by the ad SDK or provider, such as no fill, app not foreground, or account approval issue.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="text-sm font-semibold text-slate-950">
+      Total Events
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Shows how many times the selected failure happened.
+    </p>
+  </div>
+</div>
+
+---
+
+## Screen Info
+
+Screen Info helps you understand **where** ad failures are happening inside the app.
+
+<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <div className="mb-6">
+    <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+      Screen-level failure context
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Use Screen Info to connect ad failures with app screens. This helps you understand whether a failure is happening on one screen, one flow, or multiple parts of the app.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-3">
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Screen preview
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows visual previews of screens where ad failures were recorded.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Screen name
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows the screen or activity name connected to the failure.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-slate-50 p-5">
+      <div className="text-sm font-semibold text-slate-950">
+        Users and events
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-slate-600">
+        Shows how many users and events were affected on that screen.
+      </p>
+    </div>
+  </div>
+</div>
+
+<Tip>
+  If one screen has a high average failure value, check that screen’s ad placement, lifecycle timing, and ad request logic first.
+</Tip>
+
+---
+
+## How to use Ad Failure Insights
+
+<Steps>
+  <Step title="Select filters">
+    Choose date range, app name, testing device, and app version.
+  </Step>
+
+  <Step title="Compare ad companies">
+    Start with the top cards to see which ad company has the highest failed events or average value.
+  </Step>
+
+  <Step title="Find the failing format">
+    Review format-level data to identify whether Native, App Open, Banner, Interstitial, MREC, or In-feed is failing most.
+  </Step>
+
+  <Step title="Open Total Errors">
+    Expand the ad format and error code to view exact failure messages.
+  </Step>
+
+  <Step title="Check Screen Info">
+    Review which screens are connected to the ad failures.
+  </Step>
+
+  <Step title="Share details with developers">
+    Copy the error message, error code, app version, screen name, and affected format for debugging.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Find why ads are not showing">
+    Use Total Errors to inspect error codes and messages returned by the ad provider.
+  </Accordion>
+
+  <Accordion title="Compare ad companies">
+    Use company cards to compare Admob, Facebook, Adx, or other providers by failed events and average value.
+  </Accordion>
+
+  <Accordion title="Detect failing ad formats">
+    Use format-level breakdown to find if Native, App Open, Banner, MREC, Interstitial, or In-feed is causing failures.
+  </Accordion>
+
+  <Accordion title="Debug screen-specific failures">
+    Use Screen Info to find which screen or flow is connected to the failure.
+  </Accordion>
+
+  <Accordion title="Check version-specific issues">
+    Use App Version filter to confirm whether the failure is happening only in a specific release.
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  Ad Failure Insights helps your team move from high-level failure counts to exact ad format, error code, error message, screen, app version, and testing device context.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/ad/ad-report" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/app-insights" className="twinalyze-nav-center">
+    <strong>App Insights</strong>
+    <span>Review app-level insights and performance details.</span>
+  </a>
+
+  <a href="/analytics/app-insights" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
