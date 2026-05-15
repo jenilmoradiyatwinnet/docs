@@ -85,7 +85,6 @@
           {
             "group": "Dashboard",
             "pages": [
-              "analytics/home",
               "analytics/realtime-users",
               "analytics/ask-ai"
             ]
@@ -116,9 +115,9 @@
           {
             "group": "Messaging",
             "pages": [
-              "analytics/messaging/notification",
-              "analytics/messaging/notification-campaign",
-              "analytics/messaging/notification-report-list"
+              "analytics/messaging/messaging-overview",
+              "analytics/messaging/create-message",
+              "analytics/messaging/campaign-history"
             ]
           },
           {
