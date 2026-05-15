@@ -1,101 +1,427 @@
 ---
-title: "Ask AI"
-description: "Learn how to use Ask AI in Twinalyze to get quick answers from your analytics data."
+title: "Ask Twinalyze AI"
+description: "Use Ask Twinalyze AI to ask questions, explore analytics data, generate summaries, view tables, and get faster insights from your Twinalyze project."
 hideFooterPagination: true
 ---
 
-Ask AI helps you quickly understand your analytics data using simple questions. You can ask questions about users, events, retention, campaigns, reports, and product activity.
+# Ask Twinalyze AI
+
+Ask Twinalyze AI helps you explore your analytics data using simple questions.
+
+Instead of opening multiple reports manually, you can ask questions like **“Why did retention drop?”**, **“Which users are most active?”**, or **“Show DAU for last 7 days”** and get an easy-to-read answer.
+
+<Steps>
+  <Step title="Start from the Ask Twinalyze screen">
+    The Ask Twinalyze home screen gives you a clean place to ask questions about your project.
+
+    You can type your own question or start from suggested prompts such as retention, DAU, or most active users.
+
+    <Frame>
+      <img
+        src="/images/ask_ai_1.png"
+        alt="Twinalyze AI welcome screen"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Review AI answers and generated data">
+    After asking a question, Twinalyze AI responds with a clear explanation.
+
+    It can also show structured results like tables, charts, pagination, load-more options, and follow-up suggestions.
+
+    <Frame>
+      <img
+        src="/images/Ask_ai_2.png"
+        alt="Twinalyze AI chat response with table result"
+      />
+    </Frame>
+  </Step>
+</Steps>
 
 ---
 
-## Watch Ask AI demo
+## What Ask Twinalyze AI does
 
-Use this interactive demo to understand how Ask AI works inside Twinalyze.
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      AI analytics assistant
+    </p>
 
-<div style={{ position: "relative", width: "100%", paddingBottom: "56.25%", height: 0, overflow: "hidden", borderRadius: "16px", border: "1px solid #E5E7EB", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
-  <iframe
-    src="https://app.supademo.com/embed/cmotz4qxv18ilftttj4xk820z"
-    title="Twinalyze Ask AI Demo"
-    allow="clipboard-write"
-    allowFullScreen
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      border: 0,
-    }}
-  />
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Ask Twinalyze AI turns product analytics questions into simple answers, tables, and follow-up insights.
+    </p>
+  </div>
+
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Ask questions
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Type a natural question about your product, users, retention, sessions, traffic, or performance.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Get simple answers
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Twinalyze AI explains the result in plain language so teams can understand what happened quickly.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        View data formats
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Answers can include text summaries, tables, charts, pagination, and load-more options when the result has many rows.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Continue investigation
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        You can ask follow-up questions in the same chat to go deeper into countries, users, crashes, retention, or campaigns.
+      </p>
+    </div>
+  </div>
 </div>
 
 ---
 
-## What you can do with Ask AI
+## Main areas
 
-<CardGroup cols={4}>
-  <Card title="Ask analytics questions" icon="message-circle">
-    Ask questions about users, events, sessions, retention, and product performance.
-  </Card>
+<div className="not-prose space-y-5">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+      <div>
+        <p className="text-sm font-semibold text-blue-700">
+          01. Welcome screen
+        </p>
 
-  <Card title="Get quick insights" icon="sparkles">
-    Understand important trends without manually opening multiple reports.
-  </Card>
+        <h3 className="mt-2 text-lg font-semibold text-slate-950">
+          Start with a question
+        </h3>
 
-  <Card title="Save time" icon="clock">
-    Quickly find answers from your analytics data using natural language.
-  </Card>
-</CardGroup>
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+          The welcome screen provides suggested questions and a message box. This helps new users start quickly without thinking about the exact query format.
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+        Example: “Why retention dropped?”
+      </div>
+    </div>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+      <div>
+        <p className="text-sm font-semibold text-blue-700">
+          02. Chat workspace
+        </p>
+
+        <h3 className="mt-2 text-lg font-semibold text-slate-950">
+          Continue analysis in conversation
+        </h3>
+
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+          The chat view keeps your question history, AI responses, and generated results in one place. You can continue the same topic with follow-up questions.
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+        Example: “Which countries are affected the most?”
+      </div>
+    </div>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+      <div>
+        <p className="text-sm font-semibold text-blue-700">
+          03. Table and chart result
+        </p>
+
+        <h3 className="mt-2 text-lg font-semibold text-slate-950">
+          Review generated data visually
+        </h3>
+
+        <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+          When the answer needs data, Twinalyze AI can show it in a table or chart. This makes it easier to review users, SDKs, dates, countries, events, and other structured details.
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+        Table · Chart · Load more
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 
-## Example questions
+## What you can ask
 
-You can ask questions like:
+Use Ask Twinalyze AI for questions that normally require checking multiple reports.
 
-- Which users were active today?
-- Which events are growing this week?
-- What is my user retention?
-- Which screen has the highest drop-off?
-- How many users completed checkout?
-- Which campaign performed best?
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Common question types
+    </p>
 
-<Tip>
-  Ask AI works best when your project has enough event and user data.
-</Tip>
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Start with simple questions. Add filters like date, country, app version, or user type when you need a more specific answer.
+    </p>
+  </div>
+
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Retention questions
+      </div>
+
+      <div className="space-y-2 text-sm leading-6 text-slate-600">
+        <p>Ask why users are not returning or which segment has the biggest retention drop.</p>
+        <p className="rounded-2xl bg-slate-50 px-4 py-3 text-slate-700">
+          “Why did retention drop last week?”
+        </p>
+      </div>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Active user questions
+      </div>
+
+      <div className="space-y-2 text-sm leading-6 text-slate-600">
+        <p>Ask about DAU, active users, or which users are most active.</p>
+        <p className="rounded-2xl bg-slate-50 px-4 py-3 text-slate-700">
+          “Show DAU for last 7 days.”
+        </p>
+      </div>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Country questions
+      </div>
+
+      <div className="space-y-2 text-sm leading-6 text-slate-600">
+        <p>Ask which countries are affected by a change, drop, campaign, or user behavior.</p>
+        <p className="rounded-2xl bg-slate-50 px-4 py-3 text-slate-700">
+          “Which countries are affected the most?”
+        </p>
+      </div>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Data table requests
+      </div>
+
+      <div className="space-y-2 text-sm leading-6 text-slate-600">
+        <p>Ask Twinalyze AI to show structured results when you need a list or comparison.</p>
+        <p className="rounded-2xl bg-slate-50 px-4 py-3 text-slate-700">
+          “Generate details in table form.”
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 
-## Best practices
+## Chat result actions
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-blue-700">
+      Copy response
+    </p>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Use the copy action when you want to share an AI explanation with your team or add it into a report.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-blue-700">
+      Switch result type
+    </p>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      When available, switch between table and chart view to understand the same answer in different formats.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-blue-700">
+      Load more rows
+    </p>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      If the result has many records, use load-more options such as +10 or +20 to continue viewing more rows.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-blue-700">
+      Download result
+    </p>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Use download actions when you want to save generated tables or share data outside Twinalyze.
+    </p>
+  </div>
+</div>
+
+---
+
+## Sidebar and chat management
+
+The Ask Twinalyze workspace also includes chat management options.
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        New Chat
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Start a fresh conversation when you want to ask about a different topic.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Search chats
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Find older conversations quickly using chat search.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Projects
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Keep AI conversations organized by project, so each workspace stays relevant to its app or product.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        All Chats
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Review previous AI conversations and continue from earlier analysis.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Best way to ask
+
+<Steps>
+  <Step title="Start with the problem">
+    Ask what you want to understand, such as retention drop, active users, traffic change, or country impact.
+  </Step>
+
+  <Step title="Add a time period">
+    Add a date range like today, yesterday, last 7 days, or last week when your question depends on time.
+  </Step>
+
+  <Step title="Ask for the format">
+    Ask for a table, chart, summary, or explanation depending on how you want to review the answer.
+  </Step>
+
+  <Step title="Ask a follow-up">
+    Continue with follow-up questions to narrow the answer by country, user type, version, campaign, or event.
+  </Step>
+</Steps>
+
+---
+
+## Example prompts
 
 <AccordionGroup>
-  <Accordion title="Ask clear questions">
-    Use simple and direct questions. For example, ask “How many users opened the app today?” instead of vague questions.
+  <Accordion title="Retention analysis">
+    “Why did retention drop last week?”
   </Accordion>
 
-  <Accordion title="Use date ranges">
-    Add time periods like today, yesterday, last 7 days, or last month to get more accurate answers.
+  <Accordion title="Country impact">
+    “Which countries are affected the most?”
   </Accordion>
 
-  <Accordion title="Use event names">
-    If you know the event name, include it in your question. For example, “How many users triggered add_to_cart last week?”
+  <Accordion title="Active users">
+    “Which users are most active?”
+  </Accordion>
+
+  <Accordion title="DAU report">
+    “Show DAU for last 7 days.”
+  </Accordion>
+
+  <Accordion title="Table output">
+    “Generate details in table form.”
+  </Accordion>
+
+  <Accordion title="Make answer simpler">
+    “Explain this in simple terms for my team.”
   </Accordion>
 </AccordionGroup>
 
 ---
 
+## Good to know
+
+<Tip>
+  Ask one clear question at a time. You can always ask follow-up questions after the first answer.
+</Tip>
+
+<Tip>
+  Add context like date range, country, app version, or user type when you need a more accurate answer.
+</Tip>
+
+<Info>
+  Twinalyze AI can make mistakes. Always review important answers before using them for business decisions, client reports, or production changes.
+</Info>
+
+<Check>
+  Ask Twinalyze AI helps your team move from raw analytics data to clear answers, tables, charts, and follow-up insights faster.
+</Check>
+
+---
+
 <div className="twinalyze-bottom-nav">
-  <a href="/analytics/home" className="twinalyze-nav-side">
+  <a href="/analytics/ad/ad-failure-insights" className="twinalyze-nav-side">
     <span className="twinalyze-nav-arrow">‹</span>
     <span>Previous</span>
   </a>
 
-  <a href="/analyticss/product-overview/overview" className="twinalyze-nav-center">
-    <strong>Create your account</strong>
-    <span>Create your account of twinalyze.</span>
+  <a href="/overview/settings" className="twinalyze-nav-center">
+    <strong>Settings</strong>
+    <span>Manage profile, organization, users, and permissions.</span>
   </a>
 
-  <a href="/analytics/product-overview/overview" className="twinalyze-nav-side">
+  <a href="/overview/settings" className="twinalyze-nav-side">
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
