@@ -3,70 +3,158 @@ title: "Messaging Overview"
 description: "Create, personalize, translate, preview, test, and schedule push notifications in Twinalyze."
 hideFooterPagination: true
 ---
-
-# Messaging Overview
-
 Messaging helps you create targeted push notifications for your app users.
-
-Use this page to select an audience, choose a notification template, write message content, manage translations, preview the notification, test it, and schedule the final campaign.
 
 <Note>
   Messaging is useful when you want to send product updates, offers, reminders, alerts, or re-engagement campaigns to a selected user group.
 </Note>
 
 ---
-
 ## Messaging flow
 
+Messaging follows a simple campaign-building journey: choose the audience, create the message, review translations, preview it, and schedule the final notification.
+
 <div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 via-white to-white px-6 py-6">
     <p className="text-sm font-semibold tracking-wide text-blue-700">
       Push notification creation flow
     </p>
 
-    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      Build a notification from left to right: select users, choose a template, write content, localize it, preview it, then review and schedule.
+    <h3 className="mt-2 text-xl font-semibold text-slate-950">
+      From audience selection to scheduled campaign
+    </h3>
+
+    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
+      Follow this flow to create a targeted push notification, personalize it for multiple languages, preview it on a phone, and schedule it for delivery.
     </p>
   </div>
 
-  <div className="grid gap-0 md:grid-cols-6">
-    <div className="border-b border-slate-100 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-700">01</div>
-      <div className="mt-2 text-sm font-semibold text-slate-950">Select users</div>
-      <p className="mt-2 text-xs leading-5 text-slate-600">Choose audience using event filters.</p>
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-base font-semibold text-white shadow-sm">
+        01
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Select audience
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Filters panel
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Choose the date range and select an event to decide which users should receive the notification. Use filters when you want to target a more specific group, such as users from a country, language, device, or behavior segment.
+      </p>
     </div>
 
-    <div className="border-b border-slate-100 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-700">02</div>
-      <div className="mt-2 text-sm font-semibold text-slate-950">Pick template</div>
-      <p className="mt-2 text-xs leading-5 text-slate-600">Choose the notification layout.</p>
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-base font-semibold text-blue-700 ring-1 ring-blue-100">
+        02
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Choose template
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Template tabs
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Select a notification template from the top template tabs. The template controls the layout and visual style of the push notification shown in the phone preview.
+      </p>
     </div>
 
-    <div className="border-b border-slate-100 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-700">03</div>
-      <div className="mt-2 text-sm font-semibold text-slate-950">Add content</div>
-      <p className="mt-2 text-xs leading-5 text-slate-600">Write title, description, logo, and URL.</p>
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-base font-semibold text-blue-700 ring-1 ring-blue-100">
+        03
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Add message content
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Default editor
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Write the default title and description, upload a logo or image, set vibrance, and choose the launch action. The launch action controls what opens when the user taps the notification.
+      </p>
     </div>
 
-    <div className="border-b border-slate-100 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-700">04</div>
-      <div className="mt-2 text-sm font-semibold text-slate-950">Translate</div>
-      <p className="mt-2 text-xs leading-5 text-slate-600">Review language-wise content.</p>
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-base font-semibold text-blue-700 ring-1 ring-blue-100">
+        04
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Review translations
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Language panel
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Review translated content for each language. A green check shows translated content, while a yellow dot shows manually edited content. This helps you confirm which language versions are ready before sending.
+      </p>
     </div>
 
-    <div className="border-b border-slate-100 p-5 md:border-b-0 md:border-r">
-      <div className="text-sm font-semibold text-blue-700">05</div>
-      <div className="mt-2 text-sm font-semibold text-slate-950">Preview</div>
-      <p className="mt-2 text-xs leading-5 text-slate-600">Check how the push will look.</p>
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-base font-semibold text-blue-700 ring-1 ring-blue-100">
+        05
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Preview and test
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Phone preview
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Check the notification preview on the phone mockup. Use Test Notification to verify the title, description, image, template layout, and click behavior before scheduling.
+      </p>
     </div>
 
-    <div className="p-5">
-      <div className="text-sm font-semibold text-blue-700">06</div>
-      <div className="mt-2 text-sm font-semibold text-slate-950">Schedule</div>
-      <p className="mt-2 text-xs leading-5 text-slate-600">Review and schedule the campaign.</p>
+    <div className="grid gap-4 bg-slate-50 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-base font-semibold text-white shadow-sm">
+        06
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Review and schedule
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Final step
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        After the audience, content, translations, and preview are ready, click Review & Schedule to finalize the campaign and schedule delivery.
+      </p>
     </div>
   </div>
 </div>
+
+<Tip>
+  Build the notification in this order: audience first, message second, translations third, preview fourth, and schedule last.
+</Tip>
 
 ---
 
