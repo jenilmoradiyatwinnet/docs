@@ -1,4 +1,403 @@
 ---
-title: 'Advance Reports'
+title: "Advanced Report"
+description: "Build flexible analytics reports with Segmentation and Funnel views in Twinalyze."
+hideFooterPagination: true
 ---
 
+# Advanced Report
+
+Advanced Report helps you build custom analytics views without opening multiple dashboards.
+
+Use it when you want to:
+- compare one or more events over time
+- break down data by filters or groups
+- analyze conversion between steps
+- switch between **Segmentation** and **Funnel**
+- save a report for later use
+
+<Note>
+  Advanced Report has **two main tabs only** in the current UI: **Segmentation** and **Funnel**.
+</Note>
+
+---
+
+## What you can do here
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-blue-700">Segmentation</p>
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Compare events over time
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Track one or multiple events, apply filters, group data, and view the result in charts and tables.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-blue-700">Funnel</p>
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Measure step-by-step conversion
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Add events in a sequence and see how many users move from one step to the next.
+    </p>
+  </div>
+</div>
+
+---
+
+## Common controls
+
+These controls are available in the Advanced Report page and are commonly used in both report types.
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Shared controls
+    </p>
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Use these controls first before analyzing the chart or table.
+    </p>
+  </div>
+
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">Date range</div>
+      <p className="text-sm leading-6 text-slate-600">
+        Select predefined ranges like <strong>Today</strong>, <strong>Yesterday</strong>, or <strong>7 Days</strong>, or choose a custom date range to control the report period.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">Refresh</div>
+      <p className="text-sm leading-6 text-slate-600">
+        Reload the current report data without changing the selected setup.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">Save</div>
+      <p className="text-sm leading-6 text-slate-600">
+        Save the current report configuration so you can open the same setup again later.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">Link / Share</div>
+      <p className="text-sm leading-6 text-slate-600">
+        Copy the report link when you want to share the same report view with your team.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Report views
+
+<Tabs>
+  <Tab title="Segmentation">
+
+### What Segmentation is
+
+Segmentation helps you analyze how selected events perform across time.
+
+You can compare:
+- a single event
+- multiple events
+- filtered event groups
+- grouped event breakdowns
+
+It is useful when you want to answer questions like:
+- How many times did an event happen?
+- Which event is higher over time?
+- Which country, user type, or property drives the event?
+- How do two events compare in the same date range?
+
+---
+
+### Main parts of Segmentation
+
+<div className="not-prose space-y-4">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">1. Event builder</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Add one or more events from the left panel. Each selected event appears as a separate series in the report.
+    </p>
+    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+      <li><strong>Add Event</strong> lets you select another event.</li>
+      <li>Each event gets a label like <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>.</li>
+      <li>You can remove an event by clicking the close icon.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">2. Filter by</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Use <strong>Filter by</strong> to narrow the result for a selected event.
+    </p>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Filters can be based on:
+    </p>
+    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+      <li>event properties</li>
+      <li>user type details</li>
+      <li>device properties such as country, city, Android OS, brand, and package</li>
+    </ul>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">3. Group by</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Use <strong>Group by</strong> when you want the same event broken into multiple categories.
+    </p>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Example: group an event by <strong>Country</strong>, <strong>City</strong>, or <strong>Brand</strong> to compare each segment in the same chart.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">4. Chart area</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The chart visualizes the selected events for the chosen date range.
+    </p>
+    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+      <li><strong>Line Chart</strong> is best for trend comparison.</li>
+      <li><strong>Bar Chart</strong> is useful for side-by-side value comparison.</li>
+      <li><strong>Stacked Bar</strong> helps compare totals with composition.</li>
+      <li><strong>Pie Chart</strong> is useful for share-based comparison.</li>
+    </ul>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">5. Interval selector</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Change the interval such as <strong>Daily</strong> to control how the timeline is grouped.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">6. Overview table</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The Overview table shows the exact values behind the chart. It is useful when you want precise numbers instead of just visual trends.
+    </p>
+    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+      <li>See event values by date</li>
+      <li>Search within results</li>
+      <li>Export the table</li>
+      <li>Show or hide selected event rows using checkboxes</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+### When to use Segmentation
+
+<AccordionGroup>
+  <Accordion title="Compare multiple events">
+    Use Segmentation when you want to compare events like <strong>Fragment Viewed</strong> and <strong>SplashTime</strong> in the same report.
+  </Accordion>
+
+  <Accordion title="Break down one event">
+    Use <strong>Group by</strong> when you want one event split by country, city, OS, brand, or other properties.
+  </Accordion>
+
+  <Accordion title="Track trend over time">
+    Use a line chart with a selected date range when you want to understand increase, drop, or pattern changes.
+  </Accordion>
+
+  <Accordion title="Export a detailed report">
+    Use the Overview table when you need exact date-wise values and want to export them.
+  </Accordion>
+</AccordionGroup>
+
+  </Tab>
+
+  <Tab title="Funnel">
+
+### What Funnel is
+
+Funnel helps you measure how users move from one event to the next.
+
+It is used to understand conversion flow, step drop-off, and step performance.
+
+This is useful when you want answers like:
+- How many users completed step 2 after step 1?
+- Where are users dropping in a flow?
+- What is the conversion rate from the first event?
+
+---
+
+### Main parts of Funnel
+
+<div className="not-prose space-y-4">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">1. Step builder</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Add events one by one to define the funnel flow. Each event becomes a step in the conversion path.
+    </p>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Example flow:
+    </p>
+    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+      <li>Step A: Fragment Viewed</li>
+      <li>Step B: Back Screen</li>
+    </ul>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">2. Event order</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The funnel supports event order logic such as <strong>Any order</strong> depending on your setup. Use this to control how conversion should be evaluated.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">3. Filters for each step</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Each funnel step can have its own filter. This helps you measure conversion for a specific segment instead of all users.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">4. Group by</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Use <strong>Group by</strong> when you want to compare funnel conversion across segments such as country, city, OS, or brand.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">5. Funnel chart</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The chart shows the conversion percentage from the first step. This makes it easy to see how much drop happens between steps.
+    </p>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      In a single-step funnel, the first event is shown as <strong>100%</strong>. When more steps are added, later steps show how much of the first-step audience completed each next step.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <h3 className="text-base font-semibold text-slate-950">6. Funnel table</h3>
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      The Funnel Table provides the numerical view of the funnel result.
+    </p>
+    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+      <li>See the conversion value clearly</li>
+      <li>Compare each step count</li>
+      <li>Export the result</li>
+      <li>Search within table data</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+### When to use Funnel
+
+<AccordionGroup>
+  <Accordion title="Measure drop between steps">
+    Use Funnel when you want to know how many users moved from one event to the next.
+  </Accordion>
+
+  <Accordion title="Understand conversion rate">
+    Funnel is useful when you need the percentage of users completing later steps from the starting event.
+  </Accordion>
+
+  <Accordion title="Compare conversion across segments">
+    Use filters or group by options to understand which user segment converts better.
+  </Accordion>
+
+  <Accordion title="Review exact counts">
+    Use the Funnel Table when you need the precise step values along with conversion percentages.
+  </Accordion>
+</AccordionGroup>
+
+  </Tab>
+</Tabs>
+
+---
+
+## Suggested workflow
+
+<Steps>
+  <Step title="Choose the report type">
+    Start by switching to either <strong>Segmentation</strong> or <strong>Funnel</strong> based on the analysis you want.
+  </Step>
+
+  <Step title="Set the date range">
+    Select the time period first so all results are based on the correct window.
+  </Step>
+
+  <Step title="Add events">
+    Add one or more events from the left-side panel.
+  </Step>
+
+  <Step title="Apply filters or groups">
+    Narrow the report using <strong>Filter by</strong> or compare breakdowns using <strong>Group by</strong>.
+  </Step>
+
+  <Step title="Review chart and table">
+    Use the chart for quick understanding and the table for exact values.
+  </Step>
+
+  <Step title="Save the report">
+    Save the report if you want to reuse or share the same setup later.
+  </Step>
+</Steps>
+
+---
+
+## Best practices
+
+<div className="not-prose rounded-3xl border border-emerald-200 bg-emerald-50 p-6">
+  <h3 className="text-base font-semibold text-emerald-900">
+    Tips for better reporting
+  </h3>
+
+  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-emerald-800">
+    <li>Use Segmentation for trend analysis and comparison.</li>
+    <li>Use Funnel for conversion and drop-off analysis.</li>
+    <li>Do not add too many events at once unless comparison is necessary.</li>
+    <li>Apply filters carefully to avoid mixing unrelated audiences.</li>
+    <li>Use the table view when exact values are more important than visual trend.</li>
+    <li>Save commonly used reports to reduce repeated setup work.</li>
+  </ul>
+</div>
+
+---
+
+## Quick summary
+
+<Check>
+  Advanced Report gives you two focused analysis modes: <strong>Segmentation</strong> for comparing events and <strong>Funnel</strong> for understanding conversion flow.
+</Check>
+
+<Info>
+  The chart helps you understand the trend visually, while the table helps you verify the exact numbers behind the result.
+</Info>
+
+<Tip>
+  If your goal is “compare event performance,” start with <strong>Segmentation</strong>.  
+  If your goal is “measure step completion,” start with <strong>Funnel</strong>.
+</Tip>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/product-overview/reports" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/users/page-insights" className="twinalyze-nav-center">
+    <strong>Users</strong>
+    <span>Explore user behavior, engagement, retention, and growth.</span>
+  </a>
+
+  <a href="/analytics/users/page-insights" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
