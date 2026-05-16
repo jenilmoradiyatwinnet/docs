@@ -1,6 +1,6 @@
 ---
 title: "Advanced Report"
-description: "Build custom Segmentation and Funnel reports using events, filters, groups, charts, tables, and saved report views in Twinalyze."
+description: "Create custom Segmentation and Funnel reports with event filters, group by options, charts, tables, and saveable report configurations."
 hideFooterPagination: true
 ---
 
@@ -8,502 +8,253 @@ hideFooterPagination: true
 
 Advanced Report helps you build custom reports from your tracked events.
 
-Use it when you want to compare event trends, filter users, group data by properties, measure funnel conversion, and save the report for later use.
+Use it when you want to:
+
+- compare event trends over time
+- analyze user movement between events
+- apply filters and groups
+- review charts and exact values together
+- save a report for reuse later
 
 <Note>
-  Advanced Report currently has two main report modes: **Segmentation** and **Funnel**.
+  Advanced Report has two main modes: **Segmentation** and **Funnel**.
 </Note>
 
 ---
 
-## Page preview
+## Explore Advanced Report
 
 <Tabs>
   <Tab title="Segmentation">
-    Segmentation is used to compare one or more events over time.
+    Segmentation helps you compare one or more events over time.
 
-    <Frame>
-      <img
-        src="/images/Advance_report_1.png"
-        alt="Twinalyze Advanced Report Segmentation default view"
-      />
-    </Frame>
+    It is useful when you want to understand how event activity changes by date, user group, or property.
 
-    <Frame>
-      <img
-        src="/images/Advance_report_2.PNG"
-        alt="Twinalyze Advanced Report Segmentation with selected event"
-      />
-    </Frame>
+    <Steps>
+      <Step title="Open Segmentation">
+        Start by opening **Advanced Report** and staying on the **Segmentation** tab.
 
-    <Frame>
-      <img
-        src="/images/Advance_report_3.PNG"
-        alt="Twinalyze Advanced Report Segmentation with multiple events and group by"
-      />
-    </Frame>
+        This is the starting point for trend analysis. From here, you can choose an app, date range, and begin building your report.
 
-    <Frame>
-      <img
-        src="/images/Advance_report_4.png"
-        alt="Twinalyze Advanced Report chart type dropdown"
-      />
-    </Frame>
+        <Frame>
+          <img
+            src="/images/Advance_report_1.png"
+            alt="Advanced Report Segmentation starting view"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Add an event">
+        Click **Add Event** and select the event you want to analyze.
+
+        Each selected event appears as a block with a label such as **A**, **B**, or **C**. This helps you compare multiple events in the same report.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_2.png"
+            alt="Advanced Report Segmentation with selected event"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Use Filter by and Group by">
+        Use **Filter by** to narrow the report to a specific audience or condition.
+
+        Use **Group by** to split the event into meaningful segments such as country, city, Android OS, brand, or other properties.
+
+        This is useful when you want to compare one event across multiple user groups.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_3.png"
+            alt="Advanced Report Segmentation with multiple events and group by"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Choose chart type and review results">
+        The chart area helps you visualize the data, while the **Overview** table shows exact values by date.
+
+        You can switch the chart type based on how you want to view the data:
+
+        - **Line Chart** for trends over time
+        - **Bar Chart** for event comparison
+        - **Stacked Bar** for grouped comparison
+        - **Pie Chart** for distribution view
+
+        <Frame>
+          <img
+            src="/images/Advance_report_4.png"
+            alt="Advanced Report Segmentation chart type dropdown"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Save the report">
+        After setting up your event selection, filters, chart type, and date range, click **Save**.
+
+        Saving helps you keep the same report configuration so you or your team can open it again without rebuilding it manually.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_2.png"
+            alt="Advanced Report Segmentation save report step"
+          />
+        </Frame>
+      </Step>
+    </Steps>
   </Tab>
 
   <Tab title="Funnel">
-    Funnel is used to measure how users move from one event step to another.
-
-    <Frame>
-      <img
-        src="/images/Advance_report_fragment_1.png"
-        alt="Twinalyze Advanced Report Funnel single step"
-      />
-    </Frame>
-
-    <Frame>
-      <img
-        src="/images/Advance_report_fragment_2.png"
-        alt="Twinalyze Advanced Report Funnel with multiple steps"
-      />
-    </Frame>
-
-    <Frame>
-      <img
-        src="/images/Advance_report5.png"
-        alt="Twinalyze Advanced Report Funnel with group by"
-      />
-    </Frame>
-  </Tab>
-
-  <Tab title="Save report">
-    Save is common for both Segmentation and Funnel. Use it when you want to reuse the same report setup later.
-
-    <Frame>
-      <img
-        src="/images/advance_report_Common_save.png"
-        alt="Twinalyze Advanced Report save option"
-      />
-    </Frame>
-  </Tab>
-</Tabs>
-
----
-
-## Choose the right report mode
-
-<Tabs>
-  <Tab title="Use Segmentation when">
-    Use **Segmentation** when you want to understand how events perform over time.
-
-    Best for:
-
-    - comparing one event with another
-    - checking event growth or drop
-    - filtering users by properties
-    - grouping results by country, city, device, OS, brand, or other properties
-    - reviewing exact values in the Overview table
-
-    <Tip>
-      Use Segmentation when your question starts with: **“How many users did this event?”** or **“How did this event change over time?”**
-    </Tip>
-  </Tab>
-
-  <Tab title="Use Funnel when">
-    Use **Funnel** when you want to understand how users move through steps.
-
-    Best for:
-
-    - checking conversion between events
-    - finding where users drop off
-    - comparing step completion
-    - measuring whether users completed the next action
-    - reviewing conversion percentage in the Funnel Table
-
-    <Tip>
-      Use Funnel when your question starts with: **“How many users moved from step A to step B?”**
-    </Tip>
-  </Tab>
-</Tabs>
-
----
-
-## How Advanced Report works
-
-<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Report building flow
-    </p>
-
-    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      Build a report from left to right: choose the mode, add events, apply conditions, review the chart, then save or export the result.
-    </p>
-  </div>
-
-  <div className="divide-y divide-slate-100">
-    <div className="grid gap-4 px-6 py-5 md:grid-cols-[160px_1fr_220px]">
-      <div className="text-sm font-semibold text-blue-700">
-        Step 01
-      </div>
-
-      <div>
-        <div className="text-base font-semibold text-slate-950">
-          Select report mode
-        </div>
-
-        <p className="mt-1 text-sm leading-6 text-slate-600">
-          Choose Segmentation for event comparison or Funnel for conversion analysis.
-        </p>
-      </div>
-
-      <div className="text-sm leading-6 text-slate-500">
-        Segmentation / Funnel
-      </div>
-    </div>
-
-    <div className="grid gap-4 px-6 py-5 md:grid-cols-[160px_1fr_220px]">
-      <div className="text-sm font-semibold text-blue-700">
-        Step 02
-      </div>
-
-      <div>
-        <div className="text-base font-semibold text-slate-950">
-          Add event
-        </div>
-
-        <p className="mt-1 text-sm leading-6 text-slate-600">
-          Select the event you want to analyze, such as Fragment Viewed, SplashTime, Back Screen, App in Foreground, App in Background, or Screen Viewed.
-        </p>
-      </div>
-
-      <div className="text-sm leading-6 text-slate-500">
-        Event selector
-      </div>
-    </div>
-
-    <div className="grid gap-4 px-6 py-5 md:grid-cols-[160px_1fr_220px]">
-      <div className="text-sm font-semibold text-blue-700">
-        Step 03
-      </div>
-
-      <div>
-        <div className="text-base font-semibold text-slate-950">
-          Apply filter or group
-        </div>
-
-        <p className="mt-1 text-sm leading-6 text-slate-600">
-          Use Filter by to narrow the result. Use Group by to split results by country, city, OS, brand, device property, or user type.
-        </p>
-      </div>
-
-      <div className="text-sm leading-6 text-slate-500">
-        Filter by / Group by
-      </div>
-    </div>
-
-    <div className="grid gap-4 px-6 py-5 md:grid-cols-[160px_1fr_220px]">
-      <div className="text-sm font-semibold text-blue-700">
-        Step 04
-      </div>
-
-      <div>
-        <div className="text-base font-semibold text-slate-950">
-          Review chart and table
-        </div>
-
-        <p className="mt-1 text-sm leading-6 text-slate-600">
-          Use the chart for quick visual analysis and the table for exact values, search, export, and date-wise comparison.
-        </p>
-      </div>
-
-      <div className="text-sm leading-6 text-slate-500">
-        Chart + Overview table
-      </div>
-    </div>
-
-    <div className="grid gap-4 px-6 py-5 md:grid-cols-[160px_1fr_220px]">
-      <div className="text-sm font-semibold text-blue-700">
-        Step 05
-      </div>
-
-      <div>
-        <div className="text-base font-semibold text-slate-950">
-          Save report
-        </div>
-
-        <p className="mt-1 text-sm leading-6 text-slate-600">
-          Save the current setup when the same report needs to be reused by you or your team.
-        </p>
-      </div>
-
-      <div className="text-sm leading-6 text-slate-500">
-        Save button
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-## Segmentation
-
-Segmentation helps you compare event activity over time.
-
-Use it when you want to understand whether an event increased, dropped, or changed across selected dates.
-
-### Segmentation screen areas
-
-<Steps>
-  <Step title="Add one or more events">
-    Select an event from the event list. Each selected event appears with a label such as **A**, **B**, or **C**.
-
-    This makes it easy to compare multiple events in the same chart.
-  </Step>
-
-  <Step title="Use Filter by">
-    Use **Filter by** to narrow the event data.
-
-    Example: show only users from a specific country, city, Android OS, brand, or device property.
-  </Step>
-
-  <Step title="Use Group by">
-    Use **Group by** to split one event into multiple segments.
-
-    Example: group **Fragment Viewed** by country to compare which countries generated more activity.
-  </Step>
-
-  <Step title="Choose chart type">
-    Select the chart view based on the type of analysis you need.
-
-    - **Line Chart** for trends
-    - **Bar Chart** for comparison
-    - **Stacked Bar** for grouped totals
-    - **Pie Chart** for share-based view
-  </Step>
-
-  <Step title="Review Overview table">
-    The Overview table shows exact event values by date.
-
-    Use it when you need precise numbers, search, export, or row-level comparison.
-  </Step>
-</Steps>
-
----
-
-## Funnel
-
-Funnel helps you measure conversion from one event step to another.
-
-Use it when you want to understand how many users completed the next action after the first action.
-
-### Funnel screen areas
-
-<Steps>
-  <Step title="Add funnel steps">
-    Add events one by one. Each event becomes a step in the funnel.
-
-    Example:
-
-    - Step A: Fragment Viewed
-    - Step B: Back Screen
-  </Step>
-
-  <Step title="Choose order logic">
-    Use order logic such as **Any order** to control how user movement should be counted.
-  </Step>
-
-  <Step title="Apply filters">
-    Add filters to a funnel step when you want to measure conversion for a specific audience or condition.
-  </Step>
-
-  <Step title="Review conversion chart">
-    The chart shows conversion from the first step.
-
-    The first event starts at **100%**. The next step shows how many users continued from the first step.
-  </Step>
-
-  <Step title="Review Funnel Table">
-    The Funnel Table shows conversion percentage and exact user counts for each step.
-  </Step>
-</Steps>
-
----
-
-## Common controls
-
-<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
-      Controls used in both modes
-    </p>
-
-    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-      These controls are available while building Segmentation or Funnel reports.
-    </p>
-  </div>
-
-  <div className="divide-y divide-slate-100">
-    <div className="grid gap-4 px-6 py-4 md:grid-cols-[220px_1fr]">
-      <div className="text-sm font-semibold text-slate-950">
-        Date range
-      </div>
-
-      <p className="text-sm leading-6 text-slate-600">
-        Choose Today, Yesterday, 7 Days, or a custom date range.
-      </p>
-    </div>
-
-    <div className="grid gap-4 px-6 py-4 md:grid-cols-[220px_1fr]">
-      <div className="text-sm font-semibold text-slate-950">
-        Refresh
-      </div>
-
-      <p className="text-sm leading-6 text-slate-600">
-        Reload the current report after changing filters, events, or date range.
-      </p>
-    </div>
-
-    <div className="grid gap-4 px-6 py-4 md:grid-cols-[220px_1fr]">
-      <div className="text-sm font-semibold text-slate-950">
-        Export
-      </div>
-
-      <p className="text-sm leading-6 text-slate-600">
-        Download table data when you need to share or analyze report values outside Twinalyze.
-      </p>
-    </div>
-
-    <div className="grid gap-4 px-6 py-4 md:grid-cols-[220px_1fr]">
-      <div className="text-sm font-semibold text-slate-950">
-        Save
-      </div>
-
-      <p className="text-sm leading-6 text-slate-600">
-        Save the current report setup for future use.
-      </p>
-    </div>
-
-    <div className="grid gap-4 px-6 py-4 md:grid-cols-[220px_1fr]">
-      <div className="text-sm font-semibold text-slate-950">
-        Share link
-      </div>
-
-      <p className="text-sm leading-6 text-slate-600">
-        Copy the report link to share the same report view with your team.
-      </p>
-    </div>
-  </div>
-</div>
-
----
-
-## Examples
-
-<Tabs>
-  <Tab title="Segmentation example">
-    Question: **How many users viewed a fragment during the last 7 days?**
-
-    Setup:
-
-    - Choose **Segmentation**
-    - Add event **Fragment Viewed**
-    - Select **7 Days**
-    - Choose **Line Chart**
-    - Review the Overview table for daily values
-
-    <Check>
-      This is useful when you want to track event activity over time.
-    </Check>
-  </Tab>
-
-  <Tab title="Group by example">
-    Question: **Which country generated more Fragment Viewed events?**
-
-    Setup:
-
-    - Choose **Segmentation**
-    - Add event **Fragment Viewed**
-    - Click **Group by**
-    - Select **Country**
-    - Compare results in the chart and Overview table
-
-    <Check>
-      This is useful when you want to compare one event across user segments.
-    </Check>
-  </Tab>
-
-  <Tab title="Funnel example">
-    Question: **How many users moved from Fragment Viewed to Back Screen?**
-
-    Setup:
-
-    - Choose **Funnel**
-    - Step A: **Fragment Viewed**
-    - Step B: **Back Screen**
-    - Select date range
-    - Review conversion chart and Funnel Table
-
-    <Check>
-      This is useful when you want to measure step-by-step conversion.
-    </Check>
+    Funnel helps you measure how users move from one event step to the next.
+
+    It is useful when you want to understand user conversion and identify where users drop off.
+
+    <Steps>
+      <Step title="Open Funnel">
+        Switch from **Segmentation** to the **Funnel** tab.
+
+        Funnel starts with step-based analysis. Instead of comparing event trends, it measures how many users completed each next step.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_funnel_1.png"
+            alt="Advanced Report Funnel starting view"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Add the first event step">
+        Select the first event in the funnel.
+
+        The first event becomes the starting point of the conversion flow and is treated as **100%** of users entering the funnel.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_funnel_2.png"
+            alt="Advanced Report Funnel with first event selected"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Add more funnel steps">
+        Add the next events in the sequence to measure how users move forward.
+
+        For example, you may start with **Fragment Viewed** and then add **Back Screen** as the second step.
+
+        The chart and Funnel Table will then show how many users moved from the first step to the next one.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_funnel_3.png"
+            alt="Advanced Report Funnel with multiple steps"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Apply filters or group the funnel">
+        Use **Filter by** to narrow the funnel to a specific audience.
+
+        Use **Group by** if you want to compare funnel conversion across segments such as country, state, city, Android OS, or brand.
+
+        This helps you understand which user group converts better and where drop-off is higher.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_funnel_4.png"
+            alt="Advanced Report Funnel with group by section"
+          />
+        </Frame>
+      </Step>
+
+      <Step title="Save the funnel report">
+        Once your funnel steps, filters, and date range are set, click **Save**.
+
+        Saving keeps the funnel setup ready for future analysis, especially when the same conversion flow needs to be reviewed regularly.
+
+        <Frame>
+          <img
+            src="/images/Advance_report_funnel_4.png"
+            alt="Advanced Report Funnel save report step"
+          />
+        </Frame>
+      </Step>
+    </Steps>
   </Tab>
 </Tabs>
 
 ---
 
-## Save report
-
-Save keeps the current report configuration available for later.
-
-Use Save when the same report will be used repeatedly by your team.
-
-<Steps>
-  <Step title="Build the report">
-    Select Segmentation or Funnel, add events, filters, groups, date range, and chart settings.
-  </Step>
-
-  <Step title="Check the output">
-    Review the chart and table to confirm the report is correct.
-  </Step>
-
-  <Step title="Click Save">
-    Save the report configuration for future access.
-  </Step>
-</Steps>
-
-<Tip>
-  Save the report after the setup is final. This avoids rebuilding the same event, filter, and chart configuration again.
-</Tip>
-
----
-
-## Quick guide
+## What you can do in Advanced Report
 
 <AccordionGroup>
-  <Accordion title="When should I use Segmentation?">
-    Use Segmentation when you want to compare event trends, event counts, or grouped event breakdowns over time.
+  <Accordion title="Compare event trends">
+    In Segmentation, you can compare one or more events across selected dates to understand whether activity increased, decreased, or stayed stable.
   </Accordion>
 
-  <Accordion title="When should I use Funnel?">
-    Use Funnel when you want to measure how users move from one event step to another.
+  <Accordion title="Analyze conversion">
+    In Funnel, you can measure how many users completed the next event step and identify the exact drop-off between steps.
   </Accordion>
 
-  <Accordion title="What is Filter by?">
-    Filter by narrows the report to a specific condition, such as country, city, brand, OS, or event property.
+  <Accordion title="Use filters">
+    Filters help you narrow the report to a specific user segment, property, or condition so that the output is more relevant.
   </Accordion>
 
-  <Accordion title="What is Group by?">
-    Group by splits the result into categories so you can compare segments inside the same report.
+  <Accordion title="Use group by">
+    Group by lets you split the same event or funnel by country, city, OS, brand, and more, making comparison easier.
   </Accordion>
 
-  <Accordion title="Why should I save a report?">
-    Save a report when you want to reuse the same setup later without rebuilding it.
+  <Accordion title="Save reusable reports">
+    Save keeps the report configuration for future use so you do not need to rebuild the same analysis again.
   </Accordion>
 </AccordionGroup>
 
+---
+
+## Quick difference
+
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+  <div className="grid gap-0 md:grid-cols-2">
+    <div className="border-b border-slate-200 px-6 py-5 md:border-b-0 md:border-r">
+      <p className="text-sm font-semibold tracking-wide text-blue-700">
+        Segmentation
+      </p>
+
+      <h3 className="mt-2 text-base font-semibold text-slate-950">
+        Best for trend analysis
+      </h3>
+
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+        <li>Compare event activity over time</li>
+        <li>Analyze multiple events together</li>
+        <li>Use chart types for visual comparison</li>
+        <li>Review exact values in the Overview table</li>
+      </ul>
+    </div>
+
+    <div className="px-6 py-5">
+      <p className="text-sm font-semibold tracking-wide text-blue-700">
+        Funnel
+      </p>
+
+      <h3 className="mt-2 text-base font-semibold text-slate-950">
+        Best for conversion analysis
+      </h3>
+
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600">
+        <li>Measure step-by-step user movement</li>
+        <li>Track conversion from the first event</li>
+        <li>Understand where users drop off</li>
+        <li>Review conversion values in the Funnel Table</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
 <Check>
-  Advanced Report gives you two simple ways to analyze data: **Segmentation** for event trends and **Funnel** for conversion flow.
+  Use **Segmentation** when you want to compare event activity. Use **Funnel** when you want to measure user conversion between steps.
 </Check>
 
 ---
@@ -516,7 +267,7 @@ Use Save when the same report will be used repeatedly by your team.
 
   <a href="/analytics/users/page-insights" className="twinalyze-nav-center">
     <strong>Users</strong>
-    <span>Explore user behavior, engagement, retention, and growth.</span>
+    <span>Understand page activity, engagement, retention, and user growth.</span>
   </a>
 
   <a href="/analytics/users/page-insights" className="twinalyze-nav-side">
