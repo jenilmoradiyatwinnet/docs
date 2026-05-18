@@ -150,30 +150,6 @@
                       "sdks/app/android/analytics",
                       "sdks/app/android/ad-analytics"
                     ]
-                  },
-                  {
-                    "group": "iOS",
-                    "icon": "apple",
-                    "pages": [
-                      "sdks/app/ios/analytics",
-                      "sdks/app/ios/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "Flutter",
-                     "icon": "layer-group",
-                    "pages": [
-                      "sdks/app/flutter/analytics",
-                      "sdks/app/flutter/ad-analytics"
-                    ]
-                  },
-                  {
-                    "group": "React Native",
-                     "icon": "atom",
-                    "pages": [
-                      "sdks/app/react-native/analytics",
-                      "sdks/app/react-native/ad-analytics"
-                    ]
                   }
                 ]
               },
@@ -188,36 +164,20 @@
                       "sdks/web/javascript/analytics",
                       "sdks/web/javascript/ad-analytics"
                     ]
-                  },
-                  {
-                    "group": "Shopify",
-                          "icon": "shopping-bag",
-                    "pages": [
-                      "sdks/web/Shopify/analytics",
-                      "sdks/web/Shopify/ad-analytics"
-                    ]
-                  }
-               
+                  }  
                 ]
               }
             ]
           },
+
     { "dropdown": "Integrations",
      "icon": "plug", 
      "pages": [ { 
       "group": "Integrations",
        "expanded": true, 
        "pages": [ 
-        "integrations/google-analytics-4", 
-        "integrations/google-tag-manager",
-         "integrations/firebase", 
-         "integrations/admob", 
-         "integrations/facebook-ad",
-          "integrations/facebook-monetization-manager",
-           "integrations/slack",
-            "integrations/microsoft-teams",
-             "integrations/applovin",
-              "integrations/onesignal" 
+        "integrations/google-analytics-4"
+     
               ] } ] }
         ]
       },

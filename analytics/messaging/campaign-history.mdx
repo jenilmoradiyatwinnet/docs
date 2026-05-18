@@ -1,4 +1,472 @@
 ---
-title: 'Campaign History'
+title: "Campaign History"
+description: "View, filter, monitor, duplicate, and manage push notification campaigns in Twinalyze."
+hideFooterPagination: true
 ---
 
+Campaign History helps you track all push notification campaigns in one place.
+
+Campaign History gives a table-based view of all notification campaigns with important delivery and engagement details.
+<Frame>
+  <img
+    src="/images/Dashboard/Campaign_history_1.png"
+    alt="Twinalyze Campaign History page"
+  />
+</Frame>
+
+---
+
+## How Campaign History works
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 via-white to-white px-6 py-6">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Campaign management flow
+    </p>
+
+    <h3 className="mt-2 text-xl font-semibold text-slate-950">
+      Review campaign status and performance from one table
+    </h3>
+
+    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
+      Start by filtering campaigns, then review delivery metrics, check campaign status, and use row actions when you want to duplicate or delete a campaign.
+    </p>
+  </div>
+
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-base font-semibold text-white shadow-sm">
+        01
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Filter campaigns
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Date · Status · Search
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Select a date range, choose campaign status, or search by campaign name to quickly find the campaign you want to review.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-base font-semibold text-blue-700 ring-1 ring-blue-100">
+        02
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Check performance
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Users · Opened · Failed · Click Rate
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Review how many users were targeted, how many opened the notification, how many failed, and the click rate for each campaign.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-base font-semibold text-blue-700 ring-1 ring-blue-100">
+        03
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Review delivery status
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Scheduled · Sent · Failed · Draft · Cancelled
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Use status labels to understand the current state of every campaign and identify which campaigns still need action.
+      </p>
+    </div>
+
+    <div className="grid gap-4 bg-slate-50 px-6 py-6 md:grid-cols-[80px_220px_1fr] md:items-start">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-base font-semibold text-white shadow-sm">
+        04
+      </div>
+
+      <div>
+        <div className="text-base font-semibold text-slate-950">
+          Manage campaign
+        </div>
+
+        <div className="mt-1 text-xs font-medium uppercase tracking-wide text-blue-700">
+          Duplicate · Delete · New Campaign
+        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Use the row action menu to duplicate or delete a campaign. Use New Campaign when you want to create a fresh push notification campaign.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Top controls
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Date range
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Use Today, Yesterday, 7 Days, or a custom date range to view campaigns created or scheduled within a selected period.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Status filter
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Filter campaigns by status, such as Scheduled, Sent, Failed, Draft, or Cancelled.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Search
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Search campaigns by campaign name to find a specific notification quickly.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        New Campaign
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Opens the campaign creation flow where you can build a new push notification campaign.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[220px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Refresh
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Reloads the campaign list to show the latest status and performance data.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Campaign table fields
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5">
+    <p className="text-sm font-semibold tracking-wide text-blue-700">
+      Table columns
+    </p>
+
+    <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+      Each row represents one campaign and shows its delivery, engagement, schedule, and current status.
+    </p>
+  </div>
+
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Campaign Name
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        The name used to identify the notification campaign.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Notification Type
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Shows the campaign template or message type, such as promo alert, quick update, feature update, or notification template.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Users
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Total users targeted by the campaign.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Opened
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Number of users who opened or interacted with the notification.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Failed
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Number of notifications that failed to send or deliver.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Click Rate
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Percentage of users who clicked or opened the notification compared with the campaign audience.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Scheduled Type
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Shows whether the campaign was sent immediately, scheduled for a custom time, or set as recurring.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-4 md:grid-cols-[240px_1fr]">
+      <div className="text-sm font-semibold text-slate-950">
+        Schedule Date
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        Shows when the campaign is scheduled or when it was planned to run.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Campaign statuses
+
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="divide-y divide-slate-100">
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[180px_180px_1fr] md:items-center">
+      <div>
+        <span className="rounded-lg bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700">
+          Scheduled
+        </span>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Waiting to send
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        The campaign is created and scheduled for a future time.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[180px_180px_1fr] md:items-center">
+      <div>
+        <span className="rounded-lg bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-700">
+          Sent
+        </span>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Delivered
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        The campaign has been sent successfully.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[180px_180px_1fr] md:items-center">
+      <div>
+        <span className="rounded-lg bg-red-50 px-3 py-1.5 text-sm font-semibold text-red-700">
+          Failed
+        </span>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Needs review
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        The campaign failed to send or some delivery issue occurred.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[180px_180px_1fr] md:items-center">
+      <div>
+        <span className="rounded-lg bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700">
+          Draft
+        </span>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Not sent yet
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        The campaign is saved but not scheduled or sent.
+      </p>
+    </div>
+
+    <div className="grid gap-4 px-6 py-5 md:grid-cols-[180px_180px_1fr] md:items-center">
+      <div>
+        <span className="rounded-lg bg-amber-50 px-3 py-1.5 text-sm font-semibold text-amber-700">
+          Cancelled
+        </span>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950">
+        Stopped
+      </div>
+
+      <p className="text-sm leading-6 text-slate-600">
+        The campaign was cancelled before sending or completion.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Row actions
+
+Each campaign row has an action menu for quick management.
+
+<div className="not-prose grid gap-4 md:grid-cols-2">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-blue-700">
+      Duplicate
+    </p>
+
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Reuse an existing campaign setup
+    </h3>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Duplicate is useful when you want to create a similar campaign using the same structure, notification type, or audience setup.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <p className="text-sm font-semibold text-red-700">
+      Delete
+    </p>
+
+    <h3 className="mt-2 text-base font-semibold text-slate-950">
+      Remove an unwanted campaign
+    </h3>
+
+    <p className="mt-2 text-sm leading-6 text-slate-600">
+      Delete removes the selected campaign from Campaign History. Use this carefully for drafts, test campaigns, or campaigns no longer needed.
+    </p>
+  </div>
+</div>
+
+---
+
+## Recommended workflow
+
+<Steps>
+  <Step title="Open Campaign History">
+    Go to **Messaging** and open **Campaign History**.
+  </Step>
+
+  <Step title="Filter campaign list">
+    Select a date range, choose status, or search by campaign name.
+  </Step>
+
+  <Step title="Review campaign metrics">
+    Check users, opened count, failed count, click rate, status, scheduled type, and schedule date.
+  </Step>
+
+  <Step title="Take action">
+    Duplicate a campaign to reuse it, delete unnecessary campaigns, or click New Campaign to create a new one.
+  </Step>
+
+  <Step title="Refresh if needed">
+    Use Refresh to reload the latest campaign data.
+  </Step>
+</Steps>
+
+---
+
+## Common use cases
+
+<AccordionGroup>
+  <Accordion title="Check whether a campaign was sent">
+    Use the Status column to confirm whether the campaign is Sent, Scheduled, Failed, Draft, or Cancelled.
+  </Accordion>
+
+  <Accordion title="Find failed campaigns">
+    Use the Status filter or Failed column to find campaigns that need delivery review.
+  </Accordion>
+
+  <Accordion title="Compare campaign engagement">
+    Use Opened and Click Rate to compare which campaigns performed better.
+  </Accordion>
+
+  <Accordion title="Reuse a campaign">
+    Use Duplicate when you want to create a similar campaign without starting from zero.
+  </Accordion>
+
+  <Accordion title="Create a new campaign">
+    Click New Campaign to start a new push notification campaign.
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  Campaign History helps you monitor campaign delivery, engagement, status, schedule, and actions from one clean view.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/analytics/messaging/overview" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/analytics/research/market-trends" className="twinalyze-nav-center">
+    <strong>Research</strong>
+    <span>Explore market trends, country data, and store insights.</span>
+  </a>
+
+  <a href="/analytics/research/market-trends" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
