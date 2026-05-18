@@ -4,10 +4,11 @@ description: "Understand country-wise app store data, market tiers, currency rat
 hideFooterPagination: true
 ---
 
-Country Store and Country Details help you explore countries by market tier, currency, population, region, timezone, language, and store availability.
+
+
+Country Store and Country Details help you explore country-wise market information in Twinalyze.
 
 ---
-
 ## Country Store
 
 Country Store shows countries in a card-based layout. Each card includes store shortcuts, country identity, currency rate, population, store count, and a quick action to open more details.
@@ -18,18 +19,18 @@ Country Store shows countries in a card-based layout. Each card includes store s
     alt="Twinalyze Country Store page"
   />
 </Frame>
-<br>
-Country Store shows each country in a compact card format. It helps you quickly understand store availability, country identity, market size, currency value, and available country-specific store actions.
+
+Country Store helps you quickly understand country-level store signals without opening a detailed table.
 
 <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
   <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="text-lg leading-7 font-semibold tracking-wide text-blue-700">
       Country card breakdown
-    </p>
+    </div>
 
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+    <div className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
       Each country card gives a quick view of store shortcuts, country details, market signals, and available actions.
-    </p>
+    </div>
   </div>
 
   <table className="w-full table-fixed divide-y divide-slate-200">
@@ -137,7 +138,7 @@ Country Store shows each country in a compact card format. It helps you quickly 
 
 ## Country Details
 
-Country Details shows country information in a structured table. It helps you review country name, population, tier, currency, timezone, language, and additional details for market research.
+Country Details shows country information in a structured table. It helps you review country name, population, tier, currency, timezone, language, and additional market details.
 
 <Frame>
   <img
@@ -145,18 +146,18 @@ Country Details shows country information in a structured table. It helps you re
     alt="Twinalyze Country Details page"
   />
 </Frame>
-<br>
-Country Details gives a table-based view of country metadata. It is useful when you need structured data for market research, localization, billing, currency planning, and regional analysis.
+
+Country Details is useful when you need structured data for market research, localization, billing, pricing, currency planning, and regional analysis.
 
 <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
   <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="text-lg leading-7 font-semibold tracking-wide text-blue-700">
       Country Details layout
-    </p>
+    </div>
 
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+    <div className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
       Use filters and table columns to explore country information in a clean structured view.
-    </p>
+    </div>
   </div>
 
   <table className="w-full table-fixed divide-y divide-slate-200">
@@ -180,7 +181,7 @@ Country Details gives a table-based view of country metadata. It is useful when 
       <tr className="hover:bg-slate-50">
         <td className="px-5 py-4 align-top">
           <div className="text-sm font-semibold text-slate-950">
-            Region tabs
+            Region filters
           </div>
 
           <div className="mt-1 text-xs text-slate-500">
@@ -200,7 +201,7 @@ Country Details gives a table-based view of country metadata. It is useful when 
       <tr className="hover:bg-slate-50">
         <td className="px-5 py-4 align-top">
           <div className="text-sm font-semibold text-slate-950">
-            Tier tabs
+            Tier filters
           </div>
 
           <div className="mt-1 text-xs text-slate-500">
@@ -213,27 +214,67 @@ Country Details gives a table-based view of country metadata. It is useful when 
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Priority market planning and country grouping.
+          Priority market research and tier-based planning.
         </td>
       </tr>
 
       <tr className="hover:bg-slate-50">
         <td className="px-5 py-4 align-top">
           <div className="text-sm font-semibold text-slate-950">
-            Country metadata table
+            Country table
           </div>
 
           <div className="mt-1 text-xs text-slate-500">
-            Country, population, tier, currency, timezone, language
+            Country name, population, tier, currency, timezone, language
           </div>
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Shows structured country data with filters for currency, country, and search.
+          Shows country metadata in a structured table format for quick review and comparison.
         </td>
 
         <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
-          Pricing, scheduling, localization, and deeper country research.
+          Comparing countries using structured metadata.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 align-top">
+          <div className="text-sm font-semibold text-slate-950">
+            Currency selector
+          </div>
+
+          <div className="mt-1 text-xs text-slate-500">
+            INR and other currency views
+          </div>
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
+          Lets you view country currency information based on the selected currency.
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
+          Pricing research, regional billing, and currency comparison.
+        </td>
+      </tr>
+
+      <tr className="hover:bg-slate-50">
+        <td className="px-5 py-4 align-top">
+          <div className="text-sm font-semibold text-slate-950">
+            More Info
+          </div>
+
+          <div className="mt-1 text-xs text-slate-500">
+            Target type and extra details
+          </div>
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
+          Shows additional country-level information when available.
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600">
+          Reviewing deeper country metadata for research and planning.
         </td>
       </tr>
     </tbody>
@@ -245,26 +286,30 @@ Country Details gives a table-based view of country metadata. It is useful when 
 ## Common use cases
 
 <AccordionGroup>
-  <Accordion title="Compare country markets" icon="globe">
-    Use tier, population, and currency data to compare countries before planning product growth or market expansion.
+  <Accordion title="Compare country markets">
+    Use Country Store and Country Details to compare countries by population, currency, tier, language, and availability.
   </Accordion>
 
-  <Accordion title="Plan pricing by country" icon="chart-line">
-    Use currency information and country grouping to plan pricing strategy for different regions.
+  <Accordion title="Plan pricing by country">
+    Review currency data and country market size before deciding region-wise pricing.
   </Accordion>
 
-  <Accordion title="Prepare localization" icon="language">
-    Use country language and timezone information to plan localized content, notifications, and campaigns.
+  <Accordion title="Prepare localization">
+    Use language, timezone, and regional information to plan localized campaigns, app content, and store listings.
   </Accordion>
 
-  <Accordion title="Review store availability" icon="search">
-    Use Country Store cards to check country-wise store access and app marketplace availability.
+  <Accordion title="Review store availability">
+    Use Country Store cards to check country-wise store access and available store-related details.
   </Accordion>
 
-  <Accordion title="Prioritize markets by tier" icon="table">
-    Use T1-1, T1, T2, T3, and T4 to decide which countries should receive higher research or launch priority.
+  <Accordion title="Prioritize markets by tier">
+    Use tier filters to focus on high-priority markets first.
   </Accordion>
 </AccordionGroup>
+
+<Check>
+  Country Store gives a visual country card view, while Country Details gives a structured metadata table for deeper country research.
+</Check>
 
 ---
 
@@ -275,8 +320,8 @@ Country Details gives a table-based view of country metadata. It is useful when 
   </a>
 
   <a href="/analytics/research/custom-store-listing" className="twinalyze-nav-center">
-    <strong>Create your store</strong>
-    <span>Find how to list your store.</span>
+    <strong>Custom Store Listing</strong>
+    <span>Review app listing information by country, tier, language, logo, and app title.</span>
   </a>
 
   <a href="/analytics/research/custom-store-listing" className="twinalyze-nav-side">
