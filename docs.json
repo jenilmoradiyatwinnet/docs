@@ -44,7 +44,6 @@
             "group": "Getting Started",
             "pages": [
               "overview/introduction",
-              "overview/pricing",
               "overview/dashboard-tour"
             ]
           },
@@ -69,7 +68,6 @@
           {
             "group": "Adminstration",
             "pages": [
-              "overview/Adminstration/billing",
               "overview/Adminstration/privacy-policy",
               "overview/Adminstration/faq",
               "overview/Adminstration/community",
