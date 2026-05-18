@@ -220,7 +220,7 @@ It connects data from SDKs, ads, notifications, and third-party tools into one c
           </div>
         </a>
 
-        <a href="/analytics/report" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/product-overview/reports" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="flex items-center gap-2 text-gray-950 text-sm">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-100 text-purple-600">
               <svg
@@ -253,7 +253,7 @@ It connects data from SDKs, ads, notifications, and third-party tools into one c
           </div>
         </a>
 
-        <a href="/analytics/system-insights" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/product-overview/system-insight" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="flex items-center gap-2 text-gray-950 text-sm">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
               <svg
@@ -283,25 +283,19 @@ It connects data from SDKs, ads, notifications, and third-party tools into one c
           </div>
         </a>
 
-        <a href="/analytics/users-behaviour" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/users/overview" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">Users Behaviour</div>
           <div className="text-sm text-gray-600">Understand how users move through product.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
         </a>
 
-        <a href="/analytics/engagement" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/users/user-engagement" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">Engagement</div>
           <div className="text-sm text-gray-600">Measure interactions, activity depth, and usage.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
         </a>
 
-        <a href="/analytics/cohort" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
-          <div className="text-gray-950 text-sm">Cohort</div>
-          <div className="text-sm text-gray-600">Track retention across selected user groups.</div>
-          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
-        </a>
-
-        <a href="/analytics/user-growth" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/users/user-growth" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">User Growth</div>
           <div className="text-sm text-gray-600">Monitor new, active, and returning users.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
@@ -323,7 +317,7 @@ It connects data from SDKs, ads, notifications, and third-party tools into one c
           </div>
 
           <a
-            href="/analytics/messaging/messaging-overview"
+            href="/analytics/ad/ad-report"
             className="inline-flex w-fit items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-100"
           >
             Open Ads <span>→</span>
@@ -399,43 +393,39 @@ It connects data from SDKs, ads, notifications, and third-party tools into one c
       </div>
 
       <div className="divide-y divide-gray-100">
-        <a href="/engagement/create-notification" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/messaging/create-message" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">Create Notifications</div>
           <div className="text-sm text-gray-600">Create targeted campaigns for engagement.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
         </a>
 
-        <a href="/engagement/target-users" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/messaging/create-message" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">Target Users</div>
           <div className="text-sm text-gray-600">Send messages to selected segments.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
         </a>
 
-        <a href="/engagement/user-segments" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/messaging/create-message" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">User Segments</div>
           <div className="text-sm text-gray-600">Group users by behavior and properties.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
         </a>
 
-        <a href="/engagement/schedule-campaigns" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
-          <div className="text-gray-950 text-sm">Schedule Campaigns</div>
-          <div className="text-sm text-gray-600">Plan messages for future delivery.</div>
-          <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
-        </a>
+       
 
-        <a href="/engagement/delivery-status" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/messaging/campaign-history" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">Delivery Status</div>
           <div className="text-sm text-gray-600">Track sent, delivered, and failed messages.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
         </a>
 
-        <a href="/engagement/campaign-reports" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/messaging/campaign-history" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">Campaign Reports</div>
           <div className="text-sm text-gray-600">Analyze delivery, opens, clicks, and results.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
         </a>
 
-        <a href="/engagement/improve-retention" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
+        <a href="/analytics/messaging/campaign-history" className="grid gap-3 px-5 py-4 transition hover:bg-blue-50 md:grid-cols-[180px_1fr_140px] md:items-center">
           <div className="text-gray-950 text-sm">Improve Retention</div>
           <div className="text-sm text-gray-600">Bring users back with timely messages.</div>
           <div className="text-sm font-medium text-blue-600 md:text-right">View →</div>
