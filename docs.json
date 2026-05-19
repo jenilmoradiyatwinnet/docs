@@ -294,6 +294,9 @@
   "api": {
     "openapi": [],
     "asyncapi": []
+  },
+  "styling": {
+    "latex": false
   }
 }
 
