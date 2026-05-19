@@ -131,41 +131,57 @@
           }
         ]
       },
-      {
-        "tab": "SDKs & Integrations",
+      { 
+        "tab": "SDKs",
         "icon": "code",
         "dropdowns": [
           {
-            "dropdown": "SDK",
+            "dropdown": "Android",
             "icon": "code",
             "pages": [
               {
-                "group": "App",
+                "group": "Analytics",
                 
                 "pages": [
-                  {
-                    "group": "Android",
-                        "icon": "mobile-screen-button",
-                    
-                    "pages": [
-                      "sdks/app/android/analytics",
-                      "sdks/app/android/ad-analytics"
-                    ]
-                  }
+                 
+                      "sdks/app/analytics/get-started",
+                      "sdks/app/analytics/sdk-initialization",
+                      "sdks/app/analytics/custom-event-tracking",
+                      "sdks/app/analytics/manual-ad-event-tracking"
+                  
                 ]
               },
               {
-                "group": "Web",
+                "group": "Ad Analytics",
                
                 "pages": [
-                  {
-                    "group": "JavaScript",
-                           "icon": "code",
-                    "pages": [
-                      "sdks/web/javascript/analytics",
-                      "sdks/web/javascript/ad-analytics"
-                    ]
-                  }  
+                  
+                      "sdks/app/ad-analytics/ad-analytics-sdk",
+                      "sdks/app/ad-analytics/ad-sdk-initialization"   
+                   
+                ]
+              }
+            ]
+          },   {
+            "dropdown": "Javascript",
+            "icon": "code",
+            "pages": [
+              {
+                "group": "Analytics",
+                
+                "pages": [
+                 
+                      "sdks/javascript/analytics/get-started"
+                  
+                ]
+              },
+              {
+                "group": "Ad Analytics",
+               
+                   "pages": [
+                  
+                      
+                   
                 ]
               }
             ]
@@ -178,15 +194,15 @@
        "expanded": true, 
        "pages": [ 
         "integrations/google-analytics-4",
-        "integrations2/google-tag-manager",
-            "integrations2/firebase",
-            "integrations2/admob",
-            "integrations2/facebook-ad",
-            "integrations2/facebook-monetization-manager",
-            "integrations2/slack",
-            "integrations2/microsoft-teams",
-            "integrations2/applovin",
-            "integrations2/onesignal"
+        "integrations/google-tag-manager",
+            "integrations/google_ad",
+            "integrations/admob",
+            "integrations/facebook-ad",
+            "integrations/facebook-monetization-manager",
+            "integrations/slack",
+            "integrations/microsoft-teams"
+         
+          
      
               ] } ] }
         ]

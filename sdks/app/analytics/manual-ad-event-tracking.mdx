@@ -1,0 +1,740 @@
+---
+title: "Auto & Manual Event Tracking"
+description: "Our SDK supports automatic tracking for key user behavior events out of the box. In cases where automatic tracking may not be supported on certain devices or custom flows, manual tracking can be used"
+hideFooterPagination: true
+---
+
+#### Events Automatically Tracked
+
+These events are tracked by default (no code required):
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Event Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Screen Viewed</strong></td>
+      <td>Automatically logs activity-level screen views (e.g., `HomeActivity`, `LoginActivity`).</td>
+    </tr>
+  
+    <tr>
+      <td><strong>Fragment Viewed</strong></td>
+      <td>Logs views for individual fragments within an activity, e.g., `ProductListFragment`.</td>
+    </tr>
+  
+    <tr>
+      <td><strong>Tab View</strong></td>
+      <td>Tracks user switching between bottom or custom tab components (e.g., Home, Cart, Profile).</td>
+    </tr>
+  
+    <tr>
+      <td><strong>Drawer View</strong></td>
+      <td>Tracks drawer open/close events, useful for identifying navigation engagement.</td>
+    </tr>
+  
+    <tr>
+      <td><strong>Dialog</strong></td>
+      <td>Tracks dialog open/close events (e.g., alerts, pop-ups, confirmation dialogs)</td>
+    </tr>
+  
+    <tr>
+      <td><strong>App in Foreground</strong></td>
+      <td>Fires when the app enters the foreground (e.g., user opens or resumes the app).</td>
+    </tr>
+  
+    <tr>
+      <td><strong>App Language</strong></td>
+      <td>Tracks the app’s current language on first launch or when changed by the user. Useful for understanding localization trends.</td>
+    </tr>
+  
+    <tr>
+      <td><strong>Splash Time</strong></td>
+      <td>Captures time spent on the splash screen to help analyze loading performance.</td>
+    </tr>
+  
+  </tbody>
+</table>
+
+#### Manual Tracking (Fallback)
+
+If auto-tracking fails on certain devices or flows, use the following manual methods to ensure data is captured.
+
+#### Screen Viewed
+
+Call this method in `onCreate()`.
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setActivityEvent(
+    screenName: String,
+    screenClass: Activity
+  )
+```
+```java Java
+SetAnalytics.getInstance()
+  .setActivityEvent(
+   String screenName,
+   Activity screenClass
+  );
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`screenName`</td>
+      <td>Display name of the screen</td>
+      <td>`Main Activity`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`screenClass`</td>
+      <td>Full class name of the activity screen</td>
+      <td>`com.MainActivity`</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+
+Example of Screen Viewed
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+    .setActivityEvent(
+        "MainActivity",    // screenName
+        this@MainActivity // screenClass
+    )
+```
+
+```java Java
+SetAnalytics.getInstance()
+    .setActivityEvent(
+        "MainActivity",  // screenName
+        this            // screenClass
+        );
+```
+
+</CodeGroup>
+
+---
+
+#### Fragment Viewed
+
+Call this method in `onCreateView()`.
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setFragmentEvent(
+    screenName: String,
+    screenClass: Activity,
+    fragmentClass: Fragment,
+    fragmentIndex: Int
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setFragmentEvent(
+   String screenName,
+   Activity screenClass,
+   Fragment fragmentClass,
+   Int fragmentIndex
+  );
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`screenName`</td>
+      <td>Display name of the screen</td>
+      <td>`Home`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`screenClass`</td>
+      <td>Activity class hosting the fragment</td>
+      <td>`com.mainActivity`</td>
+      <td>Optional</td>
+    </tr>
+    <tr>
+      <td>`fragmentClass`</td>
+      <td>Fully qualified class name of fragment</td>
+      <td>`com.home`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`fragmentIndex`</td>
+      <td>Position index of the fragment within the stack</td>
+      <td>`0`</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+Example of Fragment Viewed
+
+<CodeGroup>
+
+```kotlin Kotlin (Example 1)
+activity?.let {
+    SetAnalytics.getInstance()
+        .setFragmentEvent(
+            "fragmentName",    // screenName
+            it,                // screenClass
+            this@FragmentOne,  // fragmentClass
+            0                  // fragmentIndex
+        )
+}
+```
+
+```kotlin Kotlin (Example 2)
+activity?.let { activity ->
+  SetAnalytics.getInstance()
+      .setFragmentEvent(
+          "fragmentName",     // screenName
+          activity,           // screenClass
+          this@FragmentOne,   // fragmentClass
+          0                   // fragmentIndex
+          )
+}
+```
+
+```java Java
+SetAnalytics.getInstance()
+    .setFragmentEvent(
+        "fragmentName", // screenName
+        getActivity(),  // screenClass
+        this,           // fragmentClass
+        0               // fragmentIndex
+        );
+```
+
+</CodeGroup>
+
+---
+
+#### Tab View
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setTabEvent(
+    tabName: String,
+    tabIndex: Int,
+    screenClass: Activity,
+    fragmentClass: Fragment ?
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setTabEvent(
+   String tabName,
+   Int tabIndex,
+   Activity screenClass,
+   Fragment fragmentClass
+  );
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`tabName`</td>
+      <td>Name or label of the tab that was selected</td>
+      <td>`Tab 1`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`tabIndex`</td>
+      <td>Index of the tab that was selected</td>
+      <td>`1`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`screenClass`</td>
+      <td>Full class name of the activity screen</td>
+      <td>`com.MainActivity`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`fragmentClass`</td>
+      <td>Name of the fragment (if any) where the drawer is hosted</td>
+      <td>`com.FragmentOne`</td>
+      <td>Optional</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+Example of Tab View
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setTabEvent(
+    "tabName",          // tabName
+    1,                  // tabIndex
+    this,               // screenClass
+    this@FragmentOne,   // fragmentClass
+  )
+```
+
+```kotlin Kotlin (without fragment)
+SetAnalytics.getInstance()
+  .setTabEvent(
+    "tabName",     // tabName
+    1,             // tabIndex
+    this,          // screenClass
+    null        // fragmentClass
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setTabEvent(
+    "tabName",          // tabName
+    1,                  // tabIndex
+    this,               // screenClass
+    this@FragmentOne,   // fragmentClass
+  );
+```
+
+</CodeGroup>
+
+---
+
+#### Drawer
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setDrawerEvent(
+    screenClass: Activity,
+    action: String
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setDrawerEvent(
+   Activity screenClass,
+   String action
+  );
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`drawerName`</td>
+      <td>Descriptive name of the drawer being interacted with</td>
+      <td>`Menu` / `Profile`</td>
+      <td>Optional</td>
+    </tr>
+    <tr>
+      <td>`action`</td>
+      <td>Indicates whether the drawer was opened or closed</td>
+      <td>`open` / `close`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`screenClass`</td>
+      <td>Full class name of the activity screen</td>
+      <td>`com.mainActivity`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`fragmentClass`</td>
+      <td>Name of the fragment (if any) where the drawer is hosted</td>
+      <td>`com.home`</td>
+      <td>Optional</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+Example of Drawer
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+    .setDrawerEvent(
+        this@MainActivity, // screenClass
+        "open"             // action (open or close)
+    )
+```
+
+```java Java
+SetAnalytics.getInstance()
+    .setDrawerEvent(
+        this,   // screenClass
+        "open"  // action (open or close)
+    );
+```
+
+</CodeGroup>
+
+---
+
+#### Dialog
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setDialogEvent(
+    dialogName: String,
+    action: String,
+    screenClass: Activity
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setDialogEvent(
+   String dialogName,
+   String action,
+   Activity screenClass
+  );
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`dialogName`</td>
+      <td>Name or identifier of the dialog shown</td>
+      <td>`Alert Dialog`</td>
+      <td>Optional</td>
+    </tr>
+    <tr>
+      <td>`action`</td>
+      <td>Dialog interaction type</td>
+      <td>`open` / `close`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`screenClass`</td>
+      <td>Full class name where dialog appeared</td>
+      <td>`com.homeActivity`</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+Example of Dialog
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setDialogEvent(
+    "Alert Dialog",    // dialogName
+    "open",            // action (open or close)
+    this@MainActivity  // screenClass
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setDialogEvent(
+    "Alert Dialog", //dialogName
+    "open",         //action (open or close)
+    this.           //screenClass
+  );
+```
+
+</CodeGroup>
+
+---
+
+#### App in Foreground
+
+<CodeGroup>
+
+```kotlin Kotlin
+// Some Code
+```
+
+```java Java
+// Some Code
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`eventName`</td>
+      <td>Static identifier for this event</td>
+      <td>`appBackground`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`screenName`</td>
+      <td>Display name of the  last visible screen before app was backgrounded</td>
+      <td>`Home`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`screenClass`</td>
+      <td>Class name of the activity visible before the app moved to background</td>
+      <td>`com.mainActivity`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`fragmentClass`</td>
+      <td>Fragment class visible (if any) when app moved to background</td>
+      <td>`com.home`</td>
+      <td>Optional</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+---
+
+#### App Language
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setAppLanguage(
+    activity: Activity,
+    languageCode: String
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setAppLanguage(
+    Activity activity,
+    String languageCode
+  );
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`screenClass`</td>
+      <td>Display name of the screen</td>
+      <td>`this`</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>`languageCode`</td>
+      <td>ISO language code</td>
+      <td>`en`</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+Example of App Language
+
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setAppLanguage(
+    this, // screenClass
+    "en" // languageCode
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setAppLanguage(
+    this, // screenClass
+    "en" // languageCode
+  );
+```
+
+</CodeGroup>
+
+---
+
+#### Splash Time
+
+Call this method in `onCreate()`.
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance()
+  .setSplashTimeEvent(
+    time: Long
+  )
+```
+
+```java Java
+SetAnalytics.getInstance()
+  .setSplashTimeEvent(
+    Long time
+  );
+```
+
+</CodeGroup>
+
+<Accordion title="Property Definitions">
+
+<table class="event-table">
+  <thead>
+    <tr>
+      <th>Property Key</th>
+      <th>Description</th>
+      <th>Example Value</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`time`</td>
+      <td>Duration the splash screen was shown (in milliseconds)</td>
+      <td>`0.02`</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+Example of Splash Time
+
+<CodeGroup>
+
+```kotlin Kotlin
+SetAnalytics.getInstance().setSplashTimeEvent(2000)
+```
+
+```java Java
+SetAnalytics.getInstance().setSplashTimeEvent(2000);
+```
+
+</CodeGroup>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/sdks/app/analytics/custom-event-tracking" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/sdks/app/ad-analytics/ad-analytics-sdk" className="twinalyze-nav-center">
+    <strong>Ad Analytics SDK</strong>
+    <span>Start with Ad SDK.</span>
+  </a>
+
+  <a href="/sdks/app/ad-analytics/ad-analytics-sdk" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>

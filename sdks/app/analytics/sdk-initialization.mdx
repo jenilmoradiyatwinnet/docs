@@ -1,0 +1,217 @@
+---
+title: "SDK Initialization"
+description: "Initialize the Twinalyze Android Analytics SDK in your app."
+hideFooterPagination: true
+---
+
+## Add the SDK Dependency
+
+Add the following dependency to your app-level `build.gradle` file.
+
+<CodeGroup>
+
+```kotlin Kotlin
+implementation("com.twinalyze:analytics:1+")
+```
+
+```java Java
+implementation("com.twinalyze:analytics:1+");
+```
+
+</CodeGroup>
+
+In your **project-level** `build.gradle`, make sure the following plugins are configured:
+
+<CodeGroup>
+
+```kotlin Kotlin
+plugins {
+    id("com.android.application") version "8.13.2" apply false
+    id("org.jetbrains.kotlin.android") version "2.0.21" apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21" apply false
+}
+```
+
+```java Java
+plugins {
+    id 'com.android.application' version '8.13.2' apply false
+    id 'org.jetbrains.kotlin.android' version '2.0.21' apply false
+    id 'org.jetbrains.kotlin.plugin.compose' version '2.0.21' apply false
+}
+```
+
+</CodeGroup>
+
+---
+
+## Initializing Analytics SDK in Android
+
+Initialize the **Twinalyze Analytics SDK** inside your `Application` class. This allows the SDK to start tracking sessions, events, and app-level insights properly.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.initialize(
+    this,
+    "YOUR_API_KEY",
+    "YOUR_SECRET_ID",
+    object : TwinalyzeInitializationStatus {
+        override fun onSuccess() {
+
+        }
+
+        override fun onFailed(twinalyzeError: TwinalyzeError) {
+
+        }
+    }
+)
+```
+
+```java Java
+Twinalyze.initialize(
+        this,
+        "YOUR_API_KEY",
+        "YOUR_SECRET_ID",
+        new TwinalyzeInitializationStatus() {
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onFailed(TwinalyzeError twinalyzeError) {
+
+            }
+        }
+);
+```
+
+</CodeGroup>
+
+<CardGroup cols={3}>
+  <Card title="application" icon="box">
+    Android application context.
+  </Card>
+
+  <Card title="apiKey" icon="key">
+    Your Twinalyze project API key.
+  </Card>
+
+  <Card title="secretKey" icon="lock">
+    Your Twinalyze project secret key.
+  </Card>
+</CardGroup>
+
+---
+
+<Card title="Demo Account" icon="key">
+  Email: support@twinalyze.com
+
+  Password: demo@123
+</Card>
+
+<CardGroup cols={3}>
+  <Card
+    title="Github Demo"
+    icon="github"
+    href="https://github.com/twinalyze/twinalyze-android-food-delivery-app-demo.git"
+  >
+    Open the Android demo project.
+  </Card>
+
+  <Card
+    title="Download APK"
+    icon="mobile-screen-button"
+    href="https://drive.google.com/drive/folders/1czFBkIDrxdkPcQRpOcrwFnjzPujvh7K7"
+  >
+    Download and test the demo APK.
+  </Card>
+
+  <Card
+    title="Demo"
+    icon="external-link"
+    href="https://app.twinalyze.com/"
+  >
+    Open the Twinalyze demo dashboard.
+  </Card>
+</CardGroup>
+
+> ✅ Best Practice  
+> Always call `initialize()` inside your `Application` class, not inside an Activity. This helps Twinalyze capture complete session tracking from the start of the app lifecycle.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.initialize(
+    this,
+    "4204c9d6815644247690743d26fa7d1ae8b6c210c6",
+    "c07168ab44102507311682f976863dd0cfaf62d7196c6d7d3d234353b8ec9d86",
+    object : TwinalyzeInitializationStatus {
+        override fun onSuccess() {
+
+        }
+
+        override fun onFailed(twinalyzeError: TwinalyzeError) {
+
+        }
+    }
+)
+```
+
+```java Java
+Twinalyze.initialize(
+        this,
+        "4204c9d6815644247690743d26fa7d1ae8b6c210c6",
+        "c07168ab44102507311682f976863dd0cfaf62d7196c6d7d3d234353b8ec9d86",
+        new TwinalyzeInitializationStatus() {
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onFailed(TwinalyzeError twinalyzeError) {
+
+            }
+        }
+);
+```
+
+</CodeGroup>
+
+---
+
+## Add ProGuard File
+
+Add the following rules in your `proguard-rules.pro` file.
+
+<CodeGroup>
+
+```proguard proguard-rules.pro
+-keepnames class * extends android.app.Activity
+-keepnames class * extends androidx.appcompat.app.AppCompatActivity
+-keepnames class * extends androidx.fragment.app.FragmentActivity
+-keepnames class * extends androidx.fragment.app.Fragment
+-keep class com.twinalyze.** { *; }
+```
+
+</CodeGroup>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/sdks/app/analytics/get-started" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/sdks/app/analytics/custom-event-tracking" className="twinalyze-nav-center">
+    <strong>Custom Event Tracking</strong>
+    <span>Track custom user actions in your Android app.</span>
+  </a>
+
+  <a href="/sdks/app/analytics/custom-event-tracking" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>

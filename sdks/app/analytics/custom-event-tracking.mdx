@@ -1,0 +1,215 @@
+---
+title: "Custom Event Tracking"
+description: "Use custom event tracking to capture user actions that matter to your app. such as button taps, page views, purchases, or any other interaction."
+hideFooterPagination: true
+---
+
+## How to Send a Custom Event
+
+### Send a Single Field
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setCustomEvent("addtocart")
+```
+
+```java Java
+Twinalyze.setCustomEvent("addtocart");
+```
+
+</CodeGroup>
+
+### Send a Object
+
+<CodeGroup>
+
+```javascript Kotlin
+JSONObject eventProperties = new JSONObject()
+eventProperties.put("productId", "125")
+eventProperties.put("productName", "Headphones") // Optional
+eventProperties.put("currency", "USD")          // Optional
+eventProperties.put("amount", 249.99)           // Optional
+
+// You can add more properties like userId, paymentMethod, etc.
+Twinalyze.setCustomEvent("addtocart", eventProperties)
+```
+
+```javascript Java
+JSONObject eventProperties = new JSONObject();
+eventProperties.put("productId", "125");
+eventProperties.put("productName", "Headphones"); // Optional
+eventProperties.put("currency", "USD");           // Optional
+eventProperties.put("amount", 249.99);            // Optional
+
+// You can add more properties like userId, paymentMethod, etc.
+Twinalyze.setCustomEvent("addtocart", eventProperties);
+```
+
+</CodeGroup>
+
+<Accordion title="Supported Data Types for Event Properties">
+
+<table class="custom-event-table">
+  <thead>
+    <tr>
+      <th>Data Type</th>
+      <th>Example Key</th>
+      <th>Example Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`String`</td>
+      <td>"productName"</td>
+      <td>"Headphones"</td>
+    </tr>
+    <tr>
+      <td>`Int` / `Long`</td>
+      <td>"quantity"</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>`Boolean`</td>
+      <td>"isNewUser"</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>`Double` / `Float`</td>
+      <td>"price"</td>
+      <td>199.99</td>
+    </tr>
+    <tr>
+      <td>`JSONArray`</td>
+      <td>"tags"</td>
+      <td>["electronics", "audio"]</td>
+    </tr>
+    <tr>
+      <td>`JSONObject`</td>
+      <td>"userInfo"</td>
+      <td>&#123; "id": "u123", "age": 28 &#125;</td>
+    </tr>
+    <tr>
+      <td>`null`</td>
+      <td>"discount"</td>
+      <td>null <br />
+      (Not allowed. Avoid using null in `eventProperties`. Use `"0"`, `"unknown"`, or remove the key.)</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</Accordion>
+
+
+> 📝 **Note** <br />
+Only primitive types, `JSONArray`, and `JSONObject` are allowed inside `eventProperties`.  
+Avoid passing complex objects or custom class instances directly. Convert them to JSON first.<br /><br />💡 All properties must be JSON-serializable. Also, avoid passing `null` values.
+
+---
+
+## Example of Custom Event Payload: Supported Data Types
+
+Understand the types of data you can pass inside `eventProperties` and how to structure complex objects.
+
+<CodeGroup>
+
+```javascript Kotlin
+val eventProps = JSONObject().apply {
+    put("event", "add_to_cart") // String
+    put("productId", "125") // String
+    put("productName", "Bluetooth Speaker X10") // String
+    put("price", 129.99) // Number (Double)
+    put("currency", "USD") // String
+    put("quantity", 2) // Number (Int)
+    put("category", "Audio Equipment") // String
+    put("isInStock", true) // Boolean
+
+    val tags = JSONArray().apply {
+        put("bluetooth") // String
+        put("portable")  // String
+        put("bass")      // String
+    }
+    put("tags", tags) // Array[String]
+
+    val userInfo = JSONObject().apply {
+        put("userId", "user_456789") // String
+        put("membershipLevel", "Platinum") // String
+    }
+    put("userInfo", userInfo) // Object
+}
+
+// Trigger the event with all custom properties
+Twinalyze.setCustomEvent("addtocart", eventProps)
+```
+
+```javascript Java
+val eventProps = JSONObject().apply {
+    put("event", "add_to_cart"); // String
+    put("productId", "125"); // String
+    put("productName", "Bluetooth Speaker X10"); // String
+    put("price", 129.99); // Number (Double)
+    put("currency", "USD"); // String
+    put("quantity", 2); // Number (Int)
+    put("category", "Audio Equipment"); // String
+    put("isInStock", true); // Boolean
+
+    val tags = JSONArray().apply {
+        put("bluetooth"); // String
+        put("portable");  // String
+        put("bass");      // String
+    }
+    put("tags", tags); // Array[String]
+
+    val userInfo = JSONObject().apply {
+        put("userId", "user_456789"); // String
+        put("membershipLevel", "Platinum"); // String
+    }
+    put("userInfo", userInfo); // Object
+}
+
+// Trigger the event with all custom properties
+Twinalyze.setCustomEvent("addtocart", eventProps);
+```
+
+</CodeGroup>
+
+
+<Accordion title="Best Practices for Custom Event Tracking">
+
+    Follow these guidelines to help users name, structure, and send custom events effectively.
+
+1. Naming Guidelines
+   - Use `camelCase` or `snake_case` for event names (e.g., `purchaseCompleted`, `user_logged_in`)
+   - Keep names **short and descriptive**
+   - Avoid **spaces** or special characters
+
+2. Event Structure
+   - Use consistent keys (e.g., always use `"productId"`)
+   - Include only **relevant attributes**
+   - Skip redundant or unused properties
+
+3. Avoid These Mistakes
+   - Don’t send raw classes — always serialize to JSON
+   - Avoid high-cardinality keys (e.g., UUIDs, timestamps)
+   - Never pass `null` — use `"unknown"` or remove the key
+
+</Accordion>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/sdks/app/analytics/sdk-initialization" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/sdks/app/analytics/manual-ad-event-tracking" className="twinalyze-nav-center">
+    <strong>Manual-ad-event-tracking</strong>
+    <span>Track manual user actions in your Android app.</span>
+  </a>
+
+  <a href="/sdks/app/analytics/manual-ad-event-tracking" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
