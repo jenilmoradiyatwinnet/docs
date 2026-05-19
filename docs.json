@@ -44,7 +44,8 @@
             "group": "Getting Started",
             "pages": [
               "overview/introduction",
-              "overview/dashboard-tour"
+              "overview/dashboard-tour",
+              "overview/dashboard-tour_newUI"
             ]
           },
           {
