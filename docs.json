@@ -177,7 +177,16 @@
       "group": "Integrations",
        "expanded": true, 
        "pages": [ 
-        "integrations/google-analytics-4"
+        "integrations/google-analytics-4",
+        "integrations2/google-tag-manager",
+            "integrations2/firebase",
+            "integrations2/admob",
+            "integrations2/facebook-ad",
+            "integrations2/facebook-monetization-manager",
+            "integrations2/slack",
+            "integrations2/microsoft-teams",
+            "integrations2/applovin",
+            "integrations2/onesignal"
      
               ] } ] }
         ]
