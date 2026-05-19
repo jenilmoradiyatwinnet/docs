@@ -19,7 +19,10 @@
     "light": "#3B82F6",
     "dark": "#1D4ED8"
   },
-  "favicon": "favicon.png",
+  "favicon": {
+    "light": "favicon.png",
+    "dark": "favicon.png"
+  },
   "navbar": {
     "links": [
       {
@@ -287,6 +290,10 @@
   },
   "custom": {
     "css": "custom.css"
+  },
+  "api": {
+    "openapi": [],
+    "asyncapi": []
   }
 }
 
