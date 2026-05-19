@@ -1,4 +1,357 @@
 ---
-title: 'Ad Analytics'
+title: "Ad Analytics SDK"
+description: "Set up the Ad Analytics SDK to track ad requests, loads, shows, clicks, failures, and revenue data."
+hideFooterPagination: true
 ---
 
+Want deeper insights into your ad monetization?
+
+The **Ad Analytics SDK** helps you monitor and analyze ad behavior across major networks like **AdMob**, **Facebook**, and **AdX** so you can optimize revenue, reduce errors, and make data-driven ad decisions.
+
+---
+
+## What It Tracks
+
+<CardGroup cols={2}>
+  <Card title="Ad Requests and Loads">
+    Track when an ad request starts and when the ad successfully loads.
+  </Card>
+
+  <Card title="Ad Shows and Clicks">
+    Track when ads are displayed to users and when users click on them.
+  </Card>
+
+  <Card title="Ad Failures">
+    Capture ad failure details with error codes and messages.
+  </Card>
+
+  <Card title="Revenue Data">
+    Track AdMob paid events using micros, currency, and precision values.
+  </Card>
+</CardGroup>
+
+Whether you're using **Interstitial**, **Banner**, or **App Open Ads**, this SDK logs everything that matters _at the right moment_.
+
+---
+
+## Why Use It
+
+<CardGroup cols={2}>
+  <Card title="Smarter Optimization">
+    Know exactly when ads fail or succeed.
+  </Card>
+
+  <Card title="Full Ad Visibility">
+    From request to paid impressions, track it all.
+  </Card>
+
+  <Card title="Easy Integration">
+    Just one dependency and your existing initialization.
+  </Card>
+
+  <Card title="Fully Compatible">
+    Built on top of our Analytics SDK. No duplicate setup required.
+  </Card>
+</CardGroup>
+
+---
+
+## Where to Next?
+
+<Steps>
+  <Step title="Ad SDK Initialization">
+    Add the dependency and start tracking ad-related insights.
+  </Step>
+  <Step title="Ad Event Tracking">
+    Track ad actions, formats, parameters, failures, clicks, and paid events.
+  </Step>
+</Steps>
+
+Make smarter **ad decisions** from **day one with real-time analytics**.
+
+---
+
+## Add the Ad SDK Dependency
+
+Add the following dependency to your app-level `build.gradle` file.
+
+<CodeGroup>
+
+```kotlin Kotlin
+implementation("com.twinalyze:ads:1+")
+```
+
+```java Java
+implementation("com.twinalyze:ads:1+");
+```
+
+</CodeGroup>
+
+> 📝 **Note**\
+> If you're using the **Ad Analytics SDK**, you **do not need to add the Analytics SDK dependency separately**. The Ad SDK already includes all analytics features, events, and insights. However, you **must initialize the SDK** in your `Application` class.
+
+---
+
+## Initializing Analytics SDK in Android
+
+Initialize the **SDK** in your `Application` class to start tracking sessions, events, and insights.
+
+<CodeGroup>
+
+```kotlin Kotlin
+class MyApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        MyApp.init(
+            this,
+            "YOUR_API_KEY",
+            "YOUR_ORG_ID",
+            false
+        )
+    }
+}
+```
+
+```java Java
+class MyApp extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MyApp.init(
+            this,
+            "YOUR_API_KEY",
+            "YOUR_ORG_ID",
+            false
+        );
+    }
+}
+```
+
+</CodeGroup>
+
+<CardGroup cols={3}>
+  <Card title="application">
+    Android application context.
+  </Card>
+
+  <Card title="apiKey">
+    Your Project API key.
+  </Card>
+
+  <Card title="orgId">
+    Your organization ID, for example `twinalyze_demo_7356297484`.
+  </Card>
+</CardGroup>
+
+<Card title="Demo Account">
+  Email: [info@twinalyze.com](mailto:info@twinalyze.com)
+
+  Password: 123
+</Card>
+
+<CardGroup cols={3}>
+  <Card title="Github Demo" href="https://github.com/twinalyze/twinalyze-ads-android-ott-app-demo">
+    Open the Ad SDK Android demo project.
+  </Card>
+
+  <Card title="Download APK" href="https://drive.google.com/drive/folders/1bctCmWwYCndBdOGcSySJTsrYOGF7U-Ag">
+    Download and test the demo APK.
+  </Card>
+
+  <Card title="Demo" href="https://app.twinalyze.com/">
+    Open the Twinalyze demo dashboard.
+  </Card>
+</CardGroup>
+
+> ✅ Best Practice\
+> Always call `initialize()` inside your `Application` class, not inside an Activity, to ensure complete session tracking.
+
+<CodeGroup>
+
+```kotlin Kotlin
+class MyApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        MyApp.init(
+            this,
+            "YOUR_API_KEY",
+            "YOUR_ORG_ID"
+        )
+    }
+}
+```
+
+```java Java
+class MyApp extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MyApp.Companion.init(
+            this,
+            "YOUR_API_KEY",
+            "YOUR_ORG_ID"
+        );
+    }
+}
+```
+
+</CodeGroup>
+
+---
+
+## Initialize Ads in the Launch Activity
+
+Run `initAds()` in the launch activity, typically `SplashActivity`, `StartActivity`, or `MainActivity`.
+
+<CodeGroup>
+
+```kotlin Kotlin
+initAds()
+
+fun initAds() {
+    Ads.init(this, object : AdsInitListner {
+        override fun onSuccess() {
+            try {
+                val data = JSONObject(AppUtil.GetOtherData())
+                val showAppOpen = data.optBoolean("isShowAppOpenOnSplash", false)
+
+                if (showAppOpen) {
+                    AdsManagerAppOpen.initAd(this@SplashActivity, object : AdsInitListner {
+                        override fun onSuccess() {
+                            val intent = Intent(this@SplashActivity, StartActivity::class.java)
+                            startActivity(intent)
+                        }
+
+                        override fun failedOnAdsInit(error: ErrorType?, msg: String?) {
+                            val intent = Intent(this@SplashActivity, StartActivity::class.java)
+                            startActivity(intent)
+                        }
+                    })
+                } else {
+                    val intent = Intent(this@SplashActivity, StartActivity::class.java)
+                    startActivity(intent)
+                }
+            } catch (e: JSONException) {
+                e.printStackTrace()
+
+                val intent = Intent(this@SplashActivity, StartActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+        override fun failedOnAdsInit(error: ErrorType?, msg: String?) {
+            if (error == ErrorType.NO_INTERNET) {
+                runOnUiThread {
+                    Toast.makeText(
+                        applicationContext,
+                        "checkInternet",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            val intent = Intent(this@SplashActivity, StartActivity::class.java)
+            startActivity(intent)
+        }
+    })
+}
+```
+
+```java Java
+private void initAds() {
+    Ads.init(this, new AdsInitListner() {
+        @Override
+        public void onSuccess() {
+            try {
+                JSONObject data = new JSONObject(AppUtil.GetOtherData());
+                boolean showAppOpen = data.optBoolean("isShowAppOpenOnSplash", false);
+
+                if (showAppOpen) {
+                    AdsManagerAppOpen.initAd(SplashActivity.this, new AdsInitListner() {
+                        @Override
+                        public void onSuccess() {
+                            Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void failedOnAdsInit(ErrorType error, String msg) {
+                            Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                } else {
+                    Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+                    startActivity(intent);
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+
+                Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+                startActivity(intent);
+            }
+        }
+
+        @Override
+        public void failedOnAdsInit(ErrorType error, String msg) {
+            if (error == ErrorType.NO_INTERNET) {
+                runOnUiThread(() -> Toast.makeText(
+                    getApplicationContext(),
+                    "checkInternet",
+                    Toast.LENGTH_SHORT
+                ).show());
+            }
+
+            Intent intent = new Intent(SplashActivity.this, StartActivity.class);
+            startActivity(intent);
+        }
+    });
+}
+```
+
+</CodeGroup>
+
+---
+
+## Add Ad View in XML
+
+Place two ads in one Activity using `app:position="top"` and `app:position="bottom"`.
+
+<CodeGroup>
+
+```xml XML
+<com.twinalyze.ads.View.NativeAdView
+    android:id="@+id/nativeBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    app:position="bottom"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical" />
+```
+
+</CodeGroup>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/sdks-and-integrations/android-analytics-sdk" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/sdks-and-integrations/ad-event-tracking" className="twinalyze-nav-center">
+    <strong>Ad Event Tracking</strong>
+    <span>Track ad requests, loads, shows, clicks, failures, and paid events.</span>
+  </a>
+
+  <a href="/sdks-and-integrations/ad-event-tracking" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
