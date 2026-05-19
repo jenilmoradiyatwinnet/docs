@@ -137,7 +137,7 @@
         "dropdowns": [
           {
             "dropdown": "Android",
-            "icon": "code",
+            "icon": "android",
             "pages": [
               {
                 "group": "Analytics",
@@ -185,26 +185,7 @@
                 ]
               }
             ]
-          },
-
-    { "dropdown": "Integrations",
-     "icon": "plug", 
-     "pages": [ { 
-      "group": "Integrations",
-       "expanded": true, 
-       "pages": [ 
-        "integrations/google-analytics-4",
-        "integrations/google-tag-manager",
-            "integrations/google_ad",
-            "integrations/admob",
-            "integrations/facebook-ad",
-            "integrations/facebook-monetization-manager",
-            "integrations/slack",
-            "integrations/microsoft-teams"
-         
-          
-     
-              ] } ] }
+          }
         ]
       },
   {
