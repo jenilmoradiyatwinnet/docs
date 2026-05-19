@@ -1,5 +1,5 @@
 ---
-title: "Get Started"
+title: "Analytics"
 description: "Welcome to the Twinalyze Analytics SDK, your gateway to real-time, actionable insights for mobile apps."
 hideFooterPagination: true
 ---
@@ -15,11 +15,11 @@ Whether you're building an Android app, our SDK seamlessly integrates with your 
 We offer **two SDK options** tailored to different needs:
 
 <CardGroup cols={2}>
-  <Card title="Analytics SDK" icon="chart-line">
+  <Card title="Analytics SDK">
     Tracks screens, user behavior, fragments, tabs, app in background/foreground, and sends notifications and more.
   </Card>
 
-  <Card title="Ad Analytics SDK" icon="megaphone">
+  <Card title="Ad Analytics SDK">
     Track live ad events, including requests, impressions, failures, revenue, and more, all in real time. Our SDK also supports individual user-level ad tracking, helping you identify and reduce ad failures for specific users and ensure better performance across your app.
   </Card>
 </CardGroup>
@@ -28,7 +28,7 @@ We offer **two SDK options** tailored to different needs:
 
 ---
 
-## What You'll Learn
+## What You’ll Learn
 
 - How to integrate the SDK in minutes
 - What events are tracked automatically
@@ -86,81 +86,71 @@ Initialize the **SDK** in your `Application` class to start tracking sessions, e
 <CodeGroup>
 
 ```kotlin Kotlin
-Twinalyze.initialize(
-    this,
-    "YOUR_API_KEY",
-    "YOUR_SECRET_ID",
-    object : TwinalyzeInitializationStatus {
-        override fun onSuccess() {
+Twinalyze.initialize(this,
+   "YOUR_API_KEY",
+   "YOUR_SECRET_ID",
+   object : TwinalyzeInitializationStatus {
+       override fun onSuccess() {
 
-        }
+       }
 
-        override fun onFailed(twinalyzeError: TwinalyzeError) {
+       override fun onFailed(twinalyzeError: TwinalyzeError) {
 
-        }
-    }
-)
+       }
+   })
 ```
 
 ```java Java
-Twinalyze.initialize(
-    this,
-    "YOUR_API_KEY",
-    "YOUR_SECRET_ID",
-    new TwinalyzeInitializationStatus() {
-        @Override
-        public void onSuccess() {
+Twinalyze.initialize(this,
+       "YOUR_API_KEY",
+       "YOUR_SECRET_ID",
+       new TwinalyzeInitializationStatus() {
+           @Override
+           public void onSuccess() {
 
-        }
+           }
 
-        @Override
-        public void onFailed(TwinalyzeError twinalyzeError) {
+           @Override
+           public void onFailed(TwinalyzeError twinalyzeError) {
 
-        }
-    }
+           }
+       }
 );
 ```
 
 </CodeGroup>
 
----
-
-### Parameter Reference
-
 <CardGroup cols={3}>
-  <Card title="application" icon="box">
+  <Card title="application">
     Android application context.
   </Card>
 
-  <Card title="apiKey" icon="key">
+  <Card title="apiKey">
     Your Api Key.
   </Card>
 
-  <Card title="secretKey" icon="lock">
+  <Card title="secretKey">
     Your Project Secret key.
   </Card>
 </CardGroup>
 
----
+<Card title="Demo Account">
+  Email: [support@twinalyze.com](mailto:support@twinalyze.com)
 
-## Demo Access and Resources
-
-<Card title="Demo Account" icon="key">
-  Email: [support@twinalyze.com](mailto:support@twinalyze.com)\
   Password: demo@123
 </Card>
 
 <CardGroup cols={3}>
-  <Card title="Github Demo" icon="github" href="https://github.com/twinalyze/twinalyze-android-food-delivery-app-demo.git">
-    View Android demo project.
+  <Card title="Github Demo" href="https://github.com/twinalyze/twinalyze-android-food-delivery-app-demo.git">
+    Open the Android demo project.
   </Card>
 
-  <Card title="Download APK" icon="mobile" href="https://drive.google.com/drive/folders/1czFBkIDrxdkPcQRpOcrwFnjzPujvh7K7">
-    Test the Android app.
+  <Card title="Download APK" href="https://drive.google.com/drive/folders/1czFBkIDrxdkPcQRpOcrwFnjzPujvh7K7">
+    Download and test the demo APK.
   </Card>
 
-  <Card title="Demo" icon="external-link" href="https://app.twinalyze.com/">
-    Open Twinalyze dashboard.
+  <Card title="Demo" href="https://app.twinalyze.com/">
+    Open the Twinalyze demo dashboard.
   </Card>
 </CardGroup>
 
@@ -170,38 +160,35 @@ Twinalyze.initialize(
 <CodeGroup>
 
 ```kotlin Kotlin
-Twinalyze.initialize(
-    this,
-    "4204c9d6815644247690743d26fa7d1ae8b6c210c6",
-    "c07168ab44102507311682f976863dd0cfaf62d7196c6d7d3d234353b8ec9d86",
-    object : TwinalyzeInitializationStatus {
-        override fun onSuccess() {
+Twinalyze.initialize(this,
+   "4204c9d6815644247690743d26fa7d1ae8b6c210c6",
+   "c07168ab44102507311682f976863dd0cfaf62d7196c6d7d3d234353b8ec9d86",
+   object : TwinalyzeInitializationStatus {
+       override fun onSuccess() {
 
-        }
+       }
 
-        override fun onFailed(twinalyzeError: TwinalyzeError) {
+       override fun onFailed(twinalyzeError: TwinalyzeError) {
 
-        }
-    }
-)
+       }
+   })
 ```
 
 ```java Java
-Twinalyze.initialize(
-    this,
-    "4204c9d6815644247690743d26fa7d1ae8b6c210c6",
-    "c07168ab44102507311682f976863dd0cfaf62d7196c6d7d3d234353b8ec9d86",
-    new TwinalyzeInitializationStatus() {
-        @Override
-        public void onSuccess() {
+Twinalyze.initialize(this,
+       "4204c9d6815644247690743d26fa7d1ae8b6c210c6",
+       "c07168ab44102507311682f976863dd0cfaf62d7196c6d7d3d234353b8ec9d86",
+       new TwinalyzeInitializationStatus() {
+           @Override
+           public void onSuccess() {
 
-        }
+           }
 
-        @Override
-        public void onFailed(TwinalyzeError twinalyzeError) {
+           @Override
+           public void onFailed(TwinalyzeError twinalyzeError) {
 
-        }
-    }
+           }
+       }
 );
 ```
 
@@ -209,9 +196,9 @@ Twinalyze.initialize(
 
 ---
 
-### Add ProGuard file
+### Add ProGuard File
 
-`proguard-rules.pro`
+Add the following rules in your `proguard-rules.pro` file.
 
 <CodeGroup>
 
@@ -227,505 +214,9 @@ Twinalyze.initialize(
 
 ---
 
-## Auto and Manual Event Tracking
-
-Our SDK supports automatic tracking for key user behavior events out of the box. In cases where automatic tracking may not be supported on certain devices or custom flows, manual tracking can be used.
-
----
-
-### Events Automatically Tracked
-
-<CardGroup cols={2}>
-  <Card title="Screen Viewed" icon="monitor">
-    Automatically logs activity-level screen views, such as `HomeActivity` or `LoginActivity`.
-  </Card>
-
-  <Card title="Fragment Viewed" icon="layers">
-    Logs views for individual fragments within an activity, such as `ProductListFragment`.
-  </Card>
-
-  <Card title="Tab View" icon="panel-top">
-    Tracks user switching between bottom or custom tab components, such as Home, Cart, or Profile.
-  </Card>
-
-  <Card title="Drawer View" icon="panel-left">
-    Tracks drawer open and close events, useful for identifying navigation engagement.
-  </Card>
-
-  <Card title="Dialog" icon="message-square">
-    Tracks dialog open and close events, such as alerts, pop-ups, or confirmation dialogs.
-  </Card>
-
-  <Card title="App in Foreground" icon="smartphone">
-    Fires when the app enters the foreground, such as when the user opens or resumes the app.
-  </Card>
-
-  <Card title="App Language" icon="languages">
-    Tracks the app’s current language on first launch or when changed by the user. Useful for understanding localization trends.
-  </Card>
-
-  <Card title="Splash Time" icon="timer">
-    Captures time spent on the splash screen to help analyze loading performance.
-  </Card>
-</CardGroup>
-
----
-
-## Manual Tracking Fallback
-
-If auto-tracking fails on certain devices or flows, use the following manual methods to ensure data is captured.
-
----
-
-### Screen Viewed
-
-Call this method in `onCreate()`.
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setActivityEvent(
-        screenName: String,
-        screenClass: Activity
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setActivityEvent(
-        String screenName,
-        Activity screenClass
-    );
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `screenName` | Display name of the screen | `Main Activity` | Yes |
-| `screenClass` | Full class name of the activity screen | `com.MainActivity` | Yes |
-
-#### Example of Screen Viewed
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setActivityEvent(
-        "MainActivity",
-        this@MainActivity
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setActivityEvent(
-        "MainActivity",
-        this
-    );
-```
-
-</CodeGroup>
-
----
-
-### Fragment Viewed
-
-Call this method in `onCreateView()`.
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setFragmentEvent(
-        screenName: String,
-        screenClass: Activity,
-        fragmentClass: Fragment,
-        fragmentIndex: Int
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setFragmentEvent(
-        String screenName,
-        Activity screenClass,
-        Fragment fragmentClass,
-        int fragmentIndex
-    );
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `screenName` | Display name of the screen | `Home` | Yes |
-| `screenClass` | Activity class hosting the fragment | `com.mainActivity` | Optional |
-| `fragmentClass` | Fully qualified class name of fragment | `com.home` | Yes |
-| `fragmentIndex` | Position index of the fragment within the stack | `0` | Yes |
-
-#### Example of Fragment Viewed
-
-<CodeGroup>
-
-```kotlin Kotlin Example 1
-activity?.let {
-    SetAnalytics.getInstance()
-        .setFragmentEvent(
-            "fragmentName",
-            it,
-            this@FragmentOne,
-            0
-        )
-}
-```
-
-```kotlin Kotlin Example 2
-activity?.let { activity ->
-    SetAnalytics.getInstance()
-        .setFragmentEvent(
-            "fragmentName",
-            activity,
-            this@FragmentOne,
-            0
-        )
-}
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setFragmentEvent(
-        "fragmentName",
-        getActivity(),
-        this,
-        0
-    );
-```
-
-</CodeGroup>
-
----
-
-### Tab View
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setTabEvent(
-        tabName: String,
-        tabIndex: Int,
-        screenClass: Activity,
-        fragmentClass: Fragment?
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setTabEvent(
-        String tabName,
-        int tabIndex,
-        Activity screenClass,
-        Fragment fragmentClass
-    );
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `tabName` | Name or label of the tab that was selected | `Tab 1` | Yes |
-| `tabIndex` | Index of the tab that was selected | `1` | Yes |
-| `screenClass` | Full class name of the activity screen | `com.MainActivity` | Yes |
-| `fragmentClass` | Name of the fragment, if any, where the drawer is hosted | `com.FragmentOne` | Optional |
-
-#### Example of Tab View
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setTabEvent(
-        "tabName",
-        1,
-        this,
-        this@FragmentOne
-    )
-```
-
-```kotlin Kotlin Without Fragment
-SetAnalytics.getInstance()
-    .setTabEvent(
-        "tabName",
-        1,
-        this,
-        null
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setTabEvent(
-        "tabName",
-        1,
-        this,
-        null
-    );
-```
-
-</CodeGroup>
-
----
-
-### Drawer
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setDrawerEvent(
-        screenClass: Activity,
-        action: String
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setDrawerEvent(
-        Activity screenClass,
-        String action
-    );
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `drawerName` | Descriptive name of the drawer being interacted with | `Menu` / `Profile` | Optional |
-| `action` | Indicates whether the drawer was opened or closed | `open` / `close` | Yes |
-| `screenClass` | Full class name of the activity screen | `com.mainActivity` | Yes |
-| `fragmentClass` | Name of the fragment, if any, where the drawer is hosted | `com.home` | Optional |
-
-#### Example of Drawer
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setDrawerEvent(
-        this@MainActivity,
-        "open"
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setDrawerEvent(
-        this,
-        "open"
-    );
-```
-
-</CodeGroup>
-
----
-
-### Dialog
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setDialogEvent(
-        dialogName: String,
-        action: String,
-        screenClass: Activity
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setDialogEvent(
-        String dialogName,
-        String action,
-        Activity screenClass
-    );
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `dialogName` | Name or identifier of the dialog shown | `Alert Dialog` | Optional |
-| `action` | Dialog interaction type | `open` / `close` | Yes |
-| `screenClass` | Full class name where dialog appeared | `com.homeActivity` | Yes |
-
-#### Example of Dialog
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setDialogEvent(
-        "Alert Dialog",
-        "open",
-        this@MainActivity
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setDialogEvent(
-        "Alert Dialog",
-        "open",
-        this
-    );
-```
-
-</CodeGroup>
-
----
-
-### App in Foreground
-
-<CodeGroup>
-
-```kotlin Kotlin
-// Some Code
-```
-
-```java Java
-// Some Code
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `eventName` | Static identifier for this event | `appBackground` | Yes |
-| `screenName` | Display name of the last visible screen before app was backgrounded | `Home` | Yes |
-| `screenClass` | Class name of the activity visible before the app moved to background | `com.mainActivity` | Yes |
-| `fragmentClass` | Fragment class visible, if any, when app moved to background | `com.home` | Optional |
-
----
-
-### App Language
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setAppLanguage(
-        activity: Activity,
-        languageCode: String
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setAppLanguage(
-        Activity activity,
-        String languageCode
-    );
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `screenClass` | Display name of the screen | `this` | Yes |
-| `languageCode` | ISO language code | `en` | Yes |
-
-#### Example of App Language
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setAppLanguage(
-        this,
-        "en"
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setAppLanguage(
-        this,
-        "en"
-    );
-```
-
-</CodeGroup>
-
----
-
-### Splash Time
-
-Call this method in `onCreate()`.
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance()
-    .setSplashTimeEvent(
-        time: Long
-    )
-```
-
-```java Java
-SetAnalytics.getInstance()
-    .setSplashTimeEvent(
-        Long time
-    );
-```
-
-</CodeGroup>
-
-#### Property Definitions
-
-| Property Key | Description | Example Value | Required |
-| --- | --- | --- | --- |
-| `time` | Duration the splash screen was shown, in milliseconds | `0.02` | Yes |
-
-#### Example of Splash Time
-
-<CodeGroup>
-
-```kotlin Kotlin
-SetAnalytics.getInstance().setSplashTimeEvent(2000)
-```
-
-```java Java
-SetAnalytics.getInstance().setSplashTimeEvent(2000);
-```
-
-</CodeGroup>
-
----
-
-## Custom Event Tracking
+## How to Send a Custom Event
 
 Use custom event tracking to capture user actions that matter to your app, such as button taps, page views, purchases, or any other interaction.
-
----
-
-## How to Send a Custom Event
 
 ### Send a Single Field
 
@@ -770,23 +261,6 @@ Twinalyze.setCustomEvent("addtocart", eventProperties);
 ```
 
 </CodeGroup>
-
----
-
-### Supported Data Types for Event Properties
-
-| Data Type | Example Key | Example Value |
-| --- | --- | --- |
-| `String` | `"productName"` | `"Headphones"` |
-| `Int` / `Long` | `"quantity"` | `2` |
-| `Boolean` | `"isNewUser"` | `true` |
-| `Double` / `Float` | `"price"` | `199.99` |
-| `JSONArray` | `"tags"` | `["electronics", "audio"]` |
-| `JSONObject` | `"userInfo"` | `{ "id": "u123", "age": 28 }` |
-| `null` | `"discount"` | Not allowed. Avoid using null in `eventProperties`. Use `"0"`, `"unknown"`, or remove the key. |
-
-> 📝 **Note**\
-> Only primitive types, `JSONArray`, and `JSONObject` are allowed inside `eventProperties`. Avoid passing complex objects or custom class instances directly. Convert them to JSON first. All properties must be JSON-serializable. Also, avoid passing `null` values.
 
 ---
 
@@ -852,9 +326,8 @@ Twinalyze.setCustomEvent("addtocart", eventProps);
 
 </CodeGroup>
 
----
-
-## Best Practices for Custom Event Tracking
+> 📝 **Note**\
+> Only primitive types, `JSONArray`, and `JSONObject` are allowed inside `eventProperties`. Avoid passing complex objects or custom class instances directly. Convert them to JSON first. All properties must be JSON-serializable. Also, avoid passing `null` values.
 
 <Steps>
   <Step title="Naming Guidelines">
@@ -878,18 +351,268 @@ Twinalyze.setCustomEvent("addtocart", eventProps);
 
 ---
 
+## Ad Event Parameters
+
+Track detailed ad lifecycle events such as request, load, show, click, failure, and revenue. These events help measure ad performance and optimize monetization across different ad networks.
+
+| Parameter | Description | Example |
+| --- | --- | --- |
+| `AdsCompany` | Ad network | `AdsCompany.Admob`, `AdsCompany.Adx`, `AdsCompany.Facebook` |
+| `AdsType` | Ad format | `AdsType.Interstitial`, `AdsType.AppOpen`, `AdsType.Native`, `AdsType.Banner`, `AdsType.Mrc` |
+| `activityFullName` | Your activity class | `"com.analytics.test.MainActivity"` |
+| `adUnitId` | Your ad unit ID | `"ca-app-pub-3940256099942544/9214589741"` |
+| `uniqId` | Unique identifier per ad event | `System.currentTimeMillis()` |
+
+---
+
+## How to Send an Ad Event
+
+### Ad Request
+
+When an ad fetch is initiated.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsRequestEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName: String,
+    adUnitId: String,
+    uniqId: String
+)
+```
+
+```java Java
+Twinalyze.setAdsRequestEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName,
+    adUnitId,
+    uniqId
+);
+```
+
+</CodeGroup>
+
+---
+
+### Ad Load
+
+When the ad successfully loads.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsLoadedEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName: String,
+    adUnitId: String,
+    uniqId: String
+)
+```
+
+```java Java
+Twinalyze.setAdsLoadedEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName,
+    adUnitId,
+    uniqId
+);
+```
+
+</CodeGroup>
+
+---
+
+### Ad Show
+
+When the ad is displayed.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsImpressionEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName: String,
+    adUnitId: String,
+    uniqId: String,
+    bannerImpressionCount: String? = null
+)
+```
+
+```java Java
+Twinalyze.setAdsImpressionEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName,
+    adUnitId,
+    uniqId,
+    bannerImpressionCount
+);
+```
+
+</CodeGroup>
+
+---
+
+### Ad Click
+
+Tracks user clicks on the ad.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsClickEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName: String,
+    adUnitId: String,
+    uniqId: String,
+    bannerImpressionCount: String? = null
+)
+```
+
+```java Java
+Twinalyze.setAdsClickEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName,
+    adUnitId,
+    uniqId,
+    bannerImpressionCount
+);
+```
+
+</CodeGroup>
+
+---
+
+### Ad Failed
+
+Captures load/show errors with error codes and messages.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdFailedToLoadEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName: String,
+    adUnitId: String,
+    uniqId: String,
+    bannerImpressionCount: String? = null,
+    errorCode: String,
+    errorMessage: String
+)
+```
+
+```java Java
+Twinalyze.setAdFailedToLoadEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName,
+    adUnitId,
+    uniqId,
+    bannerImpressionCount,
+    errorCode,
+    errorMessage
+);
+```
+
+</CodeGroup>
+
+---
+
+### Ad Failed Other
+
+Captures show errors with error codes and messages. For example: `onAdFailedToShowFullScreenContent`.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdFailedToShowEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName: String,
+    adUnitId: String,
+    uniqId: String,
+    bannerImpressionCount: String? = null,
+    errorCode: String,
+    errorMessage: String
+)
+```
+
+```java Java
+Twinalyze.setAdFailedToShowEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName,
+    adUnitId,
+    uniqId,
+    bannerImpressionCount,
+    errorCode,
+    errorMessage
+);
+```
+
+</CodeGroup>
+
+---
+
+### Ad Paid Event
+
+Records revenue data only uses AdMob: micros, currency, and precision.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsPaidEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName: String,
+    adUnitId: String,
+    uniqId: String,
+    bannerImpressionCount: String? = null,
+    currencyCode: String,
+    precisionType: String,
+    valueMicros: String
+)
+```
+
+```java Java
+Twinalyze.setAdsPaidEvent(
+    AdsCompany.Admob,
+    AdsType.Interstitial,
+    activityFullName,
+    adUnitId,
+    uniqId,
+    bannerImpressionCount,
+    currencyCode,
+    precisionType,
+    valueMicros
+);
+```
+
+</CodeGroup>
+
+---
+
 <div className="twinalyze-bottom-nav">
   <a href="/sdks-and-integrations" className="twinalyze-nav-side">
     <span className="twinalyze-nav-arrow">‹</span>
     <span>Previous</span>
   </a>
 
-  <a href="/sdks-and-integrations/ad-analytics-sdk" className="twinalyze-nav-center">
-    <strong>Ad Analytics SDK</strong>
-    <span>Track ad requests, impressions, failures, revenue, and user-level ad performance.</span>
+  <a href="/sdks-and-integrations/web-sdk" className="twinalyze-nav-center">
+    <strong>Web SDK</strong>
+    <span>Continue with web analytics integration.</span>
   </a>
 
-  <a href="/sdks-and-integrations/ad-analytics-sdk" className="twinalyze-nav-side">
+  <a href="/sdks-and-integrations/web-sdk" className="twinalyze-nav-side">
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
