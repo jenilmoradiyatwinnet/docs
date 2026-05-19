@@ -4,8 +4,6 @@ description: "Welcome to the Twinalyze Analytics SDK, your gateway to real-time,
 hideFooterPagination: true
 ---
 
-# Android Analytics SDK
-
 Our SDK helps you understand **how users interact with your app**, track screens, live events, sessions, session durations, app states, and more with almost zero setup.
 
 Whether you're building an Android app, our SDK seamlessly integrates with your workflow, delivering powerful results with minimal overhead.
@@ -16,10 +14,15 @@ Whether you're building an Android app, our SDK seamlessly integrates with your 
 
 We offer **two SDK options** tailored to different needs:
 
-|  |  |
-| --- | --- |
-| <strong>Analytics SDK</strong> | Tracks screens, user behavior, fragments, tabs, app in background/foreground, and sends notifications and more. |
-| <strong>Ad Analytics SDK</strong> | Track live ad events, including requests, impressions, failures, revenue, and more, all in real time. Our SDK also supports individual user-level ad tracking, helping you identify and reduce ad failures for specific users and ensure better performance across your app. |
+<CardGroup cols={2}>
+  <Card title="Analytics SDK" icon="chart-line">
+    Tracks screens, user behavior, fragments, tabs, app in background/foreground, and sends notifications and more.
+  </Card>
+
+  <Card title="Ad Analytics SDK" icon="megaphone">
+    Track live ad events, including requests, impressions, failures, revenue, and more, all in real time. Our SDK also supports individual user-level ad tracking, helping you identify and reduce ad failures for specific users and ensure better performance across your app.
+  </Card>
+</CardGroup>
 
 > Both SDKs share a common foundation, initialize once and start tracking.
 
@@ -52,7 +55,7 @@ implementation("com.twinalyze:analytics:1+");
 
 </CodeGroup>
 
-In your **project-level** `build.gradle` make sure the following plugins are configured:
+In your **project-level** `build.gradle`, make sure the following plugins are configured:
 
 <CodeGroup>
 
@@ -74,7 +77,9 @@ plugins {
 
 </CodeGroup>
 
-### Initialize Analytics SDK in Android
+---
+
+### Initializing Analytics SDK in Android
 
 Initialize the **SDK** in your `Application` class to start tracking sessions, events, and insights.
 
@@ -118,13 +123,23 @@ Twinalyze.initialize(
 
 </CodeGroup>
 
-<Accordion title="Parameter Reference" defaultOpen="true">
-  |  |
-  | --- |
-  |  |
-  |  |
-  |  |
-</Accordion>
+---
+
+### Parameter Reference
+
+<CardGroup cols={3}>
+  <Card title="application" icon="box">
+    Android application context.
+  </Card>
+
+  <Card title="apiKey" icon="key">
+    Your Api Key.
+  </Card>
+
+  <Card title="secretKey" icon="lock">
+    Your Project Secret key.
+  </Card>
+</CardGroup>
 
 ---
 
@@ -135,37 +150,19 @@ Twinalyze.initialize(
   Password: demo@123
 </Card>
 
-<div className="not-prose mt-5 grid gap-3 md:grid-cols-3">
-  <a href="https://github.com/twinalyze/twinalyze-android-food-delivery-app-demo.git" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-200 bg-white p-4 text-sm no-underline shadow-sm transition hover:border-blue-300 hover:bg-blue-50">
-    <div className="font-semibold text-slate-950">
-      Github Demo
-    </div>
+<CardGroup cols={3}>
+  <Card title="Github Demo" icon="github" href="https://github.com/twinalyze/twinalyze-android-food-delivery-app-demo.git">
+    View Android demo project.
+  </Card>
 
-    <div className="mt-1 text-slate-600">
-      View Android demo project
-    </div>
-  </a>
+  <Card title="Download APK" icon="mobile" href="https://drive.google.com/drive/folders/1czFBkIDrxdkPcQRpOcrwFnjzPujvh7K7">
+    Test the Android app.
+  </Card>
 
-  <a href="https://drive.google.com/drive/folders/1czFBkIDrxdkPcQRpOcrwFnjzPujvh7K7" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-200 bg-white p-4 text-sm no-underline shadow-sm transition hover:border-blue-300 hover:bg-blue-50">
-    <div className="font-semibold text-slate-950">
-      Download APK
-    </div>
-
-    <div className="mt-1 text-slate-600">
-      Test the Android app
-    </div>
-  </a>
-
-  <a href="https://app.twinalyze.com/" target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-200 bg-white p-4 text-sm no-underline shadow-sm transition hover:border-blue-300 hover:bg-blue-50">
-    <div className="font-semibold text-slate-950">
-      Demo
-    </div>
-
-    <div className="mt-1 text-slate-600">
-      Open Twinalyze dashboard
-    </div>
-  </a>
-</div>
+  <Card title="Demo" icon="external-link" href="https://app.twinalyze.com/">
+    Open Twinalyze dashboard.
+  </Card>
+</CardGroup>
 
 > ✅ Best Practice\
 > Always call `initialize()` inside your `Application` class — not inside an Activity — to ensure complete session tracking.
@@ -210,6 +207,8 @@ Twinalyze.initialize(
 
 </CodeGroup>
 
+---
+
 ### Add ProGuard file
 
 `proguard-rules.pro`
@@ -232,24 +231,47 @@ Twinalyze.initialize(
 
 Our SDK supports automatic tracking for key user behavior events out of the box. In cases where automatic tracking may not be supported on certain devices or custom flows, manual tracking can be used.
 
+---
+
 ### Events Automatically Tracked
 
-These events are tracked by default, with no code required.
+<CardGroup cols={2}>
+  <Card title="Screen Viewed" icon="monitor">
+    Automatically logs activity-level screen views, such as `HomeActivity` or `LoginActivity`.
+  </Card>
 
-|  |  |
-| --- | --- |
-| <strong>Screen Viewed</strong> |
-| <strong>Fragment Viewed</strong> | Logs views for individual fragments within an activity, such as . |
-| <strong>Tab View</strong> | Tracks user switching between bottom or custom tab components, such as Home, Cart, or Profile. |
-| <strong>Drawer View</strong> | Tracks drawer open and close events, useful for identifying navigation engagement. |
-| <strong>Dialog</strong> | Tracks dialog open and close events, such as alerts, pop-ups, or confirmation dialogs. |
-| <strong>App in Foreground</strong> | Fires when the app enters the foreground, such as when the user opens or resumes the app. |
-| <strong>App Language</strong> | Tracks the app’s current language on first launch or when changed by the user. Useful for understanding localization trends. |
-| <strong>Splash Time</strong> | Captures time spent on the splash screen to help analyze loading performance. |
+  <Card title="Fragment Viewed" icon="layers">
+    Logs views for individual fragments within an activity, such as `ProductListFragment`.
+  </Card>
+
+  <Card title="Tab View" icon="panel-top">
+    Tracks user switching between bottom or custom tab components, such as Home, Cart, or Profile.
+  </Card>
+
+  <Card title="Drawer View" icon="panel-left">
+    Tracks drawer open and close events, useful for identifying navigation engagement.
+  </Card>
+
+  <Card title="Dialog" icon="message-square">
+    Tracks dialog open and close events, such as alerts, pop-ups, or confirmation dialogs.
+  </Card>
+
+  <Card title="App in Foreground" icon="smartphone">
+    Fires when the app enters the foreground, such as when the user opens or resumes the app.
+  </Card>
+
+  <Card title="App Language" icon="languages">
+    Tracks the app’s current language on first launch or when changed by the user. Useful for understanding localization trends.
+  </Card>
+
+  <Card title="Splash Time" icon="timer">
+    Captures time spent on the splash screen to help analyze loading performance.
+  </Card>
+</CardGroup>
 
 ---
 
-### Manual Tracking Fallback
+## Manual Tracking Fallback
 
 If auto-tracking fails on certain devices or flows, use the following manual methods to ensure data is captured.
 
@@ -279,14 +301,14 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |  |
-  |  |  |
-</Accordion>
+#### Property Definitions
 
-Example of Screen Viewed:
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `screenName` | Display name of the screen | `Main Activity` | Yes |
+| `screenClass` | Full class name of the activity screen | `com.MainActivity` | Yes |
+
+#### Example of Screen Viewed
 
 <CodeGroup>
 
@@ -338,16 +360,16 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |  |
-  |  |  |
-  |  |  |
-  |  |  |
-</Accordion>
+#### Property Definitions
 
-Example of Fragment Viewed:
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `screenName` | Display name of the screen | `Home` | Yes |
+| `screenClass` | Activity class hosting the fragment | `com.mainActivity` | Optional |
+| `fragmentClass` | Fully qualified class name of fragment | `com.home` | Yes |
+| `fragmentIndex` | Position index of the fragment within the stack | `0` | Yes |
+
+#### Example of Fragment Viewed
 
 <CodeGroup>
 
@@ -415,16 +437,16 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |  |
-  |  |  |
-  |  |  |
-  |  |  |
-</Accordion>
+#### Property Definitions
 
-Example of Tab View:
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `tabName` | Name or label of the tab that was selected | `Tab 1` | Yes |
+| `tabIndex` | Index of the tab that was selected | `1` | Yes |
+| `screenClass` | Full class name of the activity screen | `com.MainActivity` | Yes |
+| `fragmentClass` | Name of the fragment, if any, where the drawer is hosted | `com.FragmentOne` | Optional |
+
+#### Example of Tab View
 
 <CodeGroup>
 
@@ -484,16 +506,16 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |
-  |  |
-  |  |  |
-  |  |  |
-</Accordion>
+#### Property Definitions
 
-Example of Drawer:
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `drawerName` | Descriptive name of the drawer being interacted with | `Menu` / `Profile` | Optional |
+| `action` | Indicates whether the drawer was opened or closed | `open` / `close` | Yes |
+| `screenClass` | Full class name of the activity screen | `com.mainActivity` | Yes |
+| `fragmentClass` | Name of the fragment, if any, where the drawer is hosted | `com.home` | Optional |
+
+#### Example of Drawer
 
 <CodeGroup>
 
@@ -541,15 +563,15 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |  |
-  |  |
-  |  |  |
-</Accordion>
+#### Property Definitions
 
-Example of Dialog:
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `dialogName` | Name or identifier of the dialog shown | `Alert Dialog` | Optional |
+| `action` | Dialog interaction type | `open` / `close` | Yes |
+| `screenClass` | Full class name where dialog appeared | `com.homeActivity` | Yes |
+
+#### Example of Dialog
 
 <CodeGroup>
 
@@ -589,14 +611,14 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |  |
-  |  |  |
-  |  |  |
-  |  |  |
-</Accordion>
+#### Property Definitions
+
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `eventName` | Static identifier for this event | `appBackground` | Yes |
+| `screenName` | Display name of the last visible screen before app was backgrounded | `Home` | Yes |
+| `screenClass` | Class name of the activity visible before the app moved to background | `com.mainActivity` | Yes |
+| `fragmentClass` | Fragment class visible, if any, when app moved to background | `com.home` | Optional |
 
 ---
 
@@ -622,14 +644,14 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |  |
-  |  |  |
-</Accordion>
+#### Property Definitions
 
-Example of App Language:
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `screenClass` | Display name of the screen | `this` | Yes |
+| `languageCode` | ISO language code | `en` | Yes |
+
+#### Example of App Language
 
 <CodeGroup>
 
@@ -675,13 +697,13 @@ SetAnalytics.getInstance()
 
 </CodeGroup>
 
-<Accordion title="Property Definitions">
-  |  |  |
-  | --- | --- |
-  |  |  |
-</Accordion>
+#### Property Definitions
 
-Example of Splash Time:
+| Property Key | Description | Example Value | Required |
+| --- | --- | --- | --- |
+| `time` | Duration the splash screen was shown, in milliseconds | `0.02` | Yes |
+
+#### Example of Splash Time
 
 <CodeGroup>
 
@@ -719,6 +741,8 @@ Twinalyze.setCustomEvent("addtocart");
 
 </CodeGroup>
 
+---
+
 ### Send an Object
 
 <CodeGroup>
@@ -747,17 +771,19 @@ Twinalyze.setCustomEvent("addtocart", eventProperties);
 
 </CodeGroup>
 
-<Accordion title="Supported Data Types for Event Properties">
-  |  |  |
-  | --- | --- |
-  |  |  |
-  | / |  |
-  |  |  |
-  | / |  |
-  |  |  |
-  |  |  |
-  |  | Not allowed. Avoid using null in . Use "0", "unknown", or remove the key. |
-</Accordion>
+---
+
+### Supported Data Types for Event Properties
+
+| Data Type | Example Key | Example Value |
+| --- | --- | --- |
+| `String` | `"productName"` | `"Headphones"` |
+| `Int` / `Long` | `"quantity"` | `2` |
+| `Boolean` | `"isNewUser"` | `true` |
+| `Double` / `Float` | `"price"` | `199.99` |
+| `JSONArray` | `"tags"` | `["electronics", "audio"]` |
+| `JSONObject` | `"userInfo"` | `{ "id": "u123", "age": 28 }` |
+| `null` | `"discount"` | Not allowed. Avoid using null in `eventProperties`. Use `"0"`, `"unknown"`, or remove the key. |
 
 > 📝 **Note**\
 > Only primitive types, `JSONArray`, and `JSONObject` are allowed inside `eventProperties`. Avoid passing complex objects or custom class instances directly. Convert them to JSON first. All properties must be JSON-serializable. Also, avoid passing `null` values.
@@ -826,22 +852,29 @@ Twinalyze.setCustomEvent("addtocart", eventProps);
 
 </CodeGroup>
 
-<Accordion title="Best Practices for Custom Event Tracking">
-  Follow these guidelines to help users name, structure, and send custom events effectively.
+---
 
-  1. Naming Guidelines
-     - Use `camelCase` or `snake_case` for event names, such as `purchaseCompleted` or `user_logged_in`
-     - Keep names **short and descriptive**
-     - Avoid **spaces** or special characters
-  2. Event Structure
-     - Use consistent keys, such as always using `"productId"`
-     - Include only **relevant attributes**
-     - Skip redundant or unused properties
-  3. Avoid These Mistakes
-     - Don’t send raw classes — always serialize to JSON
-     - Avoid high-cardinality keys, such as UUIDs or timestamps
-     - Never pass `null` — use `"unknown"` or remove the key
-</Accordion>
+## Best Practices for Custom Event Tracking
+
+<Steps>
+  <Step title="Naming Guidelines">
+    Use `camelCase` or `snake_case` for event names, such as `purchaseCompleted` or `user_logged_in`.
+
+    Keep names short and descriptive. Avoid spaces or special characters.
+  </Step>
+  <Step title="Event Structure">
+    Use consistent keys, such as always using `"productId"`.
+
+    Include only relevant attributes and skip redundant or unused properties.
+  </Step>
+  <Step title="Avoid These Mistakes">
+    Don’t send raw classes. Always serialize to JSON.
+
+    Avoid high-cardinality keys, such as UUIDs or timestamps.
+
+    Never pass `null`. Use `"unknown"` or remove the key.
+  </Step>
+</Steps>
 
 ---
 
