@@ -11,11 +11,11 @@ Add the following dependency to your app-level `build.gradle` file.
 <CodeGroup>
 
 ```kotlin Kotlin
-implementation("com.twinalyze:analytics:1+")
+implementation("com.twinalyze:analytics:1.2.18")
 ```
 
 ```java Java
-implementation("com.twinalyze:analytics:1+");
+implementation("com.twinalyze:analytics:1.2.18");
 ```
 
 </CodeGroup>
@@ -105,38 +105,26 @@ Twinalyze.initialize(
 ---
 
 <Card title="Demo Account" icon="key">
-  Email: support@twinalyze.com
+  Email: [support@twinalyze.com](mailto:support@twinalyze.com)
 
   Password: demo@123
 </Card>
 
 <CardGroup cols={3}>
-  <Card
-    title="Github Demo"
-    icon="github"
-    href="https://github.com/twinalyze/twinalyze-android-food-delivery-app-demo.git"
-  >
+  <Card title="Github Demo" icon="github" href="https://github.com/twinalyze/twinalyze-android-food-delivery-app-demo.git">
     Open the Android demo project.
   </Card>
 
-  <Card
-    title="Download APK"
-    icon="mobile-screen-button"
-    href="https://drive.google.com/drive/folders/1czFBkIDrxdkPcQRpOcrwFnjzPujvh7K7"
-  >
+  <Card title="Download APK" icon="mobile-screen-button" href="https://drive.google.com/drive/folders/1czFBkIDrxdkPcQRpOcrwFnjzPujvh7K7">
     Download and test the demo APK.
   </Card>
 
-  <Card
-    title="Demo"
-    icon="external-link"
-    href="https://app.twinalyze.com/"
-  >
+  <Card title="Demo" icon="external-link" href="https://app.twinalyze.com/">
     Open the Twinalyze demo dashboard.
   </Card>
 </CardGroup>
 
-> ✅ Best Practice  
+> ✅ Best Practice\
 > Always call `initialize()` inside your `Application` class, not inside an Activity. This helps Twinalyze capture complete session tracking from the start of the app lifecycle.
 
 <CodeGroup>
