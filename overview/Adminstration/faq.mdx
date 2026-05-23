@@ -1,4 +1,503 @@
 ---
-title: 'Faq'
+title: "FAQ"
+sidebarTitle: "FAQ"
+description: "Find quick answers about Twinalyze setup, analytics, reports, SDKs, integrations, messaging, ads, and account settings."
+hideFooterPagination: true
 ---
 
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+  <div className="bg-gradient-to-r from-blue-50 via-white to-indigo-50 px-6 py-7">
+    <div className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+      Help center
+    </div>
+
+    <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
+      Frequently asked questions
+    </h2>
+
+    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
+      Find simple answers about setting up Twinalyze, tracking users, reading reports, managing SDKs, using messaging, analyzing ads, and connecting integrations.
+    </p>
+  </div>
+</div>
+
+---
+
+## Getting Started
+
+<AccordionGroup>
+  <Accordion title="What is Twinalyze?">
+    Twinalyze is an analytics and engagement platform that helps you understand how users interact with your app or website.
+
+    It helps you track user activity, sessions, screens, events, retention, ads, notifications, reports, and growth insights from one place.
+  </Accordion>
+
+  <Accordion title="Who should use Twinalyze?">
+    Twinalyze is useful for product teams, app owners, developers, marketers, growth teams, and businesses that want to understand user behavior and improve product performance.
+  </Accordion>
+
+  <Accordion title="What do I need before using Twinalyze?">
+    You need a Twinalyze account, an organization, a project, and SDK credentials such as API key and secret key which you will get after adding project from project settings.
+
+    After that, you can integrate the SDK into your app or website.
+  </Accordion>
+
+  <Accordion title="How does Twinalyze start collecting data?">
+    Twinalyze starts collecting data after the SDK is added and initialized correctly in your app or website.
+
+    For Android, the SDK should be initialized inside the `Application` class.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Organization and Project
+
+<AccordionGroup>
+  <Accordion title="What is an organization in Twinalyze?">
+    An organization represents your company or team inside Twinalyze.
+
+    You can manage projects, members, roles, settings, and permissions under one organization.
+  </Accordion>
+
+  <Accordion title="What is a project?">
+    A project represents one app, website, or product that you want to track.
+
+    Each project has its own SDK credentials and analytics data.
+  </Accordion>
+
+  <Accordion title="Can one organization have multiple projects?">
+    Yes. One organization can have multiple projects.
+
+    This is useful when you manage multiple apps, websites, or client products.
+  </Accordion>
+
+  <Accordion title="Where can I find my project credentials?">
+    You can find project credentials such as API key and secret key inside the project settings or SDK setup section.
+
+    These credentials are required for SDK initialization.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## SDKs and Tracking
+
+<AccordionGroup>
+  <Accordion title="Which SDKs does Twinalyze support?">
+    Twinalyze supports app and web tracking.
+
+    Current SDK documentation includes Android Analytics SDK, Android Ad Analytics SDK, and JavaScript SDK pages.
+  </Accordion>
+
+  <Accordion title="Where should I initialize the Android SDK?">
+    Initialize the Android SDK inside your `Application` class.
+
+    Do not initialize it inside an Activity because complete session tracking should start from the app lifecycle level.
+  </Accordion>
+
+  <Accordion title="What does the Analytics SDK track?">
+    The Analytics SDK can track app sessions, screen views, fragments, tabs, app foreground/background state, custom events, user behavior, and engagement signals.
+  </Accordion>
+
+  <Accordion title="What is custom event tracking?">
+    Custom event tracking lets you track business-specific actions such as signup, add to cart, checkout, purchase, payment failed, button click, or any important user action.
+  </Accordion>
+
+  <Accordion title="Can I send event properties with custom events?">
+    Yes. You can send properties with custom events using JSON.
+
+    Example properties include product ID, product name, currency, amount, category, user type, or any useful business detail.
+  </Accordion>
+
+  <Accordion title="Why should I avoid sending null values in event properties?">
+    Null values can make reports harder to read and may create inconsistent event data.
+
+    Use `"unknown"`, `0`, or remove the key when a value is not available.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Product Overview and Analytics
+
+<AccordionGroup>
+  <Accordion title="What does Product Overview show?">
+    Product Overview gives a high-level view of your app or website performance.
+
+    It includes user overview, active users, retention users, average session duration, country-wise users, traffic source, app opens, notification permission, version distribution, and app growth.
+  </Accordion>
+
+  <Accordion title="What is User Overview?">
+    User Overview shows key user metrics such as new users, active users, retention users, and average session duration.
+
+    It helps you understand product health quickly.
+  </Accordion>
+
+  <Accordion title="What does Users by Country mean?">
+    Users by Country shows where your users are located.
+
+    You can use it to understand regional traffic, compare countries, and plan marketing or product decisions.
+  </Accordion>
+
+  <Accordion title="What is User Acquisition by Source?">
+    User Acquisition by Source shows where users are coming from, such as Facebook, Google Play Store, direct traffic, or other campaign sources.
+
+    It helps you understand which channels bring users to your product.
+  </Accordion>
+
+  <Accordion title="What is Version Distribution?">
+    Version Distribution shows which app versions are currently being used by users.
+
+    It helps you understand if users are using the latest version or old versions.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Realtime Users
+
+<AccordionGroup>
+  <Accordion title="What does Realtime Users show?">
+    Realtime Users shows live user activity inside your app or website.
+
+    It helps you monitor active users, traffic source, location, app opens, and version usage in real time.
+  </Accordion>
+
+  <Accordion title="When should I use realtime analytics?">
+    Use realtime analytics during campaigns, app releases, traffic spikes, technical testing, or live monitoring.
+
+    It helps you quickly detect changes in user activity.
+  </Accordion>
+
+  <Accordion title="What is Live Map?">
+    Live Map shows where active users are located on the world map.
+
+    It helps you understand live geographic activity.
+  </Accordion>
+
+  <Accordion title="What is Traffic by UTM?">
+    Traffic by UTM shows live traffic grouped by campaign values such as source, medium, campaign, content, and term.
+
+    It helps you monitor campaign traffic in real time.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## User Insights
+
+<AccordionGroup>
+  <Accordion title="What is Page Insights?">
+    Page Insights helps you understand which screens, pages, or fragments users visit the most.
+
+    It shows visits, active users, average page views, and remaining users.
+  </Accordion>
+
+  <Accordion title="What is User Engagement?">
+    User Engagement helps you understand how often users open your app and how many sessions each user creates.
+
+    It is useful for measuring repeated usage and app activity.
+  </Accordion>
+
+  <Accordion title="What is User Retention?">
+    User Retention shows how many users come back after their first activity.
+
+    It helps you understand whether users continue using your product over time.
+  </Accordion>
+
+  <Accordion title="What is User Growth?">
+    User Growth shows install users, uninstall users, same-day uninstall users, app growth, uninstall rate, and country-wise uninstall data.
+
+    It helps you understand product growth and churn.
+  </Accordion>
+
+  <Accordion title="How should I read remain users in Page Insights?">
+    Remain users show how many users continue after visiting a screen.
+
+    If a screen has high visits but low remaining users, it may indicate a drop-off point.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Advanced Reports
+
+<AccordionGroup>
+  <Accordion title="What is Advanced Report?">
+    Advanced Report helps you build custom analysis using selected events.
+
+    It currently includes Segmentation and Funnel views.
+  </Accordion>
+
+  <Accordion title="What is Segmentation?">
+    Segmentation helps you compare one or more events over time.
+
+    You can use it to understand trends, event activity, and user behavior patterns.
+  </Accordion>
+
+  <Accordion title="What is Funnel?">
+    Funnel helps you measure how users move from one step to another.
+
+    It is useful for conversion analysis, drop-off tracking, and user journey optimization.
+  </Accordion>
+
+  <Accordion title="What is Filter by?">
+    Filter by helps you narrow the report data.
+
+    You can filter users by country, city, Android OS, brand, screen, user type, or other available properties.
+  </Accordion>
+
+  <Accordion title="What is Group by?">
+    Group by helps split report data into smaller segments.
+
+    Example: group an event by country to compare activity between different regions.
+  </Accordion>
+
+  <Accordion title="Can I save an advanced report?">
+    Yes. You can save reports and open them later from the Reports page.
+
+    This helps teams reuse important analysis without rebuilding it every time.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Ads and Ad Failure Insights
+
+<AccordionGroup>
+  <Accordion title="What does Ad Report show?">
+    Ad Report shows ad performance data such as requested ads, loaded ads, shown ads, failed ads, clicks, CTR, show rate, and other ad metrics.
+
+    It helps you understand how ads perform across countries, ad companies, and ad formats.
+  </Accordion>
+
+  <Accordion title="What is Ad Failure Insights?">
+    Ad Failure Insights helps you understand why ads are failing.
+
+    It shows failed events, error codes, error messages, ad formats, ad companies, and screen-level failure details.
+  </Accordion>
+
+  <Accordion title="Why should I track ad failures?">
+    Ad failures can reduce revenue and affect user experience.
+
+    By tracking error details, you can identify no-fill issues, invalid ad units, failed loads, and screen-specific ad problems.
+  </Accordion>
+
+  <Accordion title="What ad companies can be analyzed?">
+    Twinalyze can help analyze ad data from supported networks such as AdMob, Facebook, AdX, and other configured ad providers.
+  </Accordion>
+
+  <Accordion title="What does Average mean in Ad Failure Insights?">
+    Average shows failed events compared with total users or relevant ad activity.
+
+    It helps you understand the failure impact more clearly.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Messaging and Campaigns
+
+<AccordionGroup>
+  <Accordion title="What is Messaging in Twinalyze?">
+    Messaging helps you create and manage push notification campaigns.
+
+    You can select users, choose templates, write notification content, translate messages, preview the notification, and schedule campaigns.
+  </Accordion>
+
+  <Accordion title="What is Create Message?">
+    Create Message is used to build a new push notification campaign.
+
+    You can select an event-based audience, choose a template, add title and description, configure launch URL, and review the preview.
+  </Accordion>
+
+  <Accordion title="Can I create multilingual notifications?">
+    Yes. Twinalyze supports language-wise notification content.
+
+    You can review translated languages, edit content, and check status such as translated or edited.
+  </Accordion>
+
+  <Accordion title="What is Campaign History?">
+    Campaign History shows previously created campaigns with users, opened count, failed count, click rate, status, schedule type, and schedule date.
+
+    It helps you monitor notification performance.
+  </Accordion>
+
+  <Accordion title="What campaign statuses are available?">
+    Campaigns can have statuses such as scheduled, sent, failed, draft, or cancelled.
+
+    These statuses help you understand the current state of each campaign.
+  </Accordion>
+
+  <Accordion title="Can I duplicate or delete a campaign?">
+    Yes. Campaign actions can include options such as duplicate or delete.
+
+    Duplicate is useful when you want to reuse a previous campaign setup.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Ask Twinalyze AI
+
+<AccordionGroup>
+  <Accordion title="What is Ask Twinalyze AI?">
+    Ask Twinalyze AI is an assistant inside Twinalyze that helps you ask questions about your product data.
+
+    You can ask about retention, active users, traffic, countries, reports, and other analytics insights.
+  </Accordion>
+
+  <Accordion title="What kind of questions can I ask?">
+    You can ask questions like:
+
+    - Why did retention drop?
+    - Show DAU for the last 7 days.
+    - Which users are most active?
+    - Which countries are affected the most?
+    - Generate details in table form.
+  </Accordion>
+
+  <Accordion title="Can Ask Twinalyze AI show results in a table?">
+    Yes. Ask Twinalyze AI can show answers in table format when structured data is useful.
+
+    This helps you compare results more clearly.
+  </Accordion>
+
+  <Accordion title="Should I verify AI answers?">
+    Yes. AI answers can help you understand data faster, but important business decisions should be double-checked with dashboard reports.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Integrations
+
+<AccordionGroup>
+  <Accordion title="What integrations are available in Twinalyze docs?">
+    Twinalyze integration pages include Google Analytics 4, Google Tag Manager, Google Ads, AdMob, Facebook Ads, Facebook Monetization Manager, Slack, Microsoft Teams, AppLovin, and OneSignal.
+  </Accordion>
+
+  <Accordion title="Why are some integrations marked as coming soon?">
+    Coming soon means the integration is planned but the setup guide is not yet available.
+
+    The page explains what the integration will support and how users can prepare for it.
+  </Accordion>
+
+  <Accordion title="What is the purpose of Slack and Microsoft Teams integrations?">
+    Slack and Microsoft Teams integrations will help send important Twinalyze alerts, reports, and product updates directly to team channels.
+  </Accordion>
+
+  <Accordion title="What is the purpose of Google Ads and Facebook Ads integrations?">
+    These integrations help connect campaign performance with Twinalyze user behavior.
+
+    This makes it easier to understand which campaigns bring valuable users.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Settings, Roles, and Permissions
+
+<AccordionGroup>
+  <Accordion title="What can I manage from Settings?">
+    Settings helps you manage account details, organization profile, members, roles, permissions, security, login activity, and project-level configuration.
+  </Accordion>
+
+  <Accordion title="What are roles used for?">
+    Roles control what each team member can view or manage inside Twinalyze.
+
+    Common role examples include Owner, Admin, Analyst, and Viewer.
+  </Accordion>
+
+  <Accordion title="How should I choose a role type?">
+    Choose a role based on responsibility.
+
+    Owners and admins usually manage setup and users. Analysts usually work with reports. Viewers usually only review data.
+  </Accordion>
+
+  <Accordion title="Can permissions be different for each role?">
+    Yes. Permissions can be configured based on what each role should access.
+
+    This helps protect sensitive settings while allowing teams to work with analytics data.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Data and Quality
+
+<AccordionGroup>
+  <Accordion title="What is Data Control and Quality?">
+    Data Control and Quality helps you manage tracking accuracy, event quality, and data consistency.
+
+    It helps teams keep analytics reliable and easy to understand.
+  </Accordion>
+
+  <Accordion title="Why is clean event naming important?">
+    Clean event names make reports easier to read.
+
+    Use consistent names such as `signupCompleted`, `add_to_cart`, or `purchase_completed`.
+  </Accordion>
+
+  <Accordion title="What should I avoid in event properties?">
+    Avoid null values, unnecessary fields, raw class objects, very large values, and inconsistent key names.
+
+    Keep event properties useful and readable.
+  </Accordion>
+
+  <Accordion title="Why are SDK credentials important?">
+    SDK credentials connect your app or website to the correct Twinalyze project.
+
+    Wrong credentials can send data to the wrong project or stop tracking.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Why is data not showing after SDK setup?">
+    Check whether the SDK dependency is added, initialization is placed correctly, API key and secret key are correct, internet permission is available, and the app is opened after setup.
+  </Accordion>
+
+  <Accordion title="Why are custom events not visible?">
+    Make sure the event name is valid, event tracking method is called, event properties are JSON-serializable, and the SDK is initialized before sending events.
+  </Accordion>
+
+  <Accordion title="Why are ad events missing?">
+    Check whether the Ad Analytics SDK is added, ad events are called at the correct lifecycle points, ad unit ID is passed correctly, and the ad provider callbacks are connected properly.
+  </Accordion>
+
+  <Accordion title="Why is the report empty?">
+    A report may be empty when no data exists for the selected date range, country, user type, event, or filter.
+
+    Try changing the date range or removing filters.
+  </Accordion>
+
+  <Accordion title="Why does a table show no data found?">
+    No data found means the selected filters or date range do not have matching records.
+
+    It does not always mean tracking is broken.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/overview/Adminstration/privacy-policy" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/overview/Adminstration/faq" className="twinalyze-nav-center">
+    <strong>Community</strong>
+    <span>Have question? do visit community.</span>
+  </a>
+
+  <a href="/overview/Adminstration/community" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
