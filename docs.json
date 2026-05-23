@@ -3,13 +3,10 @@
   "theme": "mint",
     "css": "custom.css",
   "name": "Twinalyze",
-    "contextual": {
-    "options": [
-      "copy",
-      "chatgpt",
-      "claude"
-    ],
-    "display": "toc"
+  "logo": {
+    "light": "/logo/Twinalyze.svg",
+    "dark": "/logo/Twinalyze.svg",
+    "href": "https://www.twinalyze.com/"
   },
   "icons": {
   "library": "fontawesome"
