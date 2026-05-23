@@ -38,7 +38,8 @@
     "tabs": [
       {
         "tab": "Overview",
-        "icon": "house",
+        "icon": "/logo/home.svg",
+        
         "groups": [
           {
             "group": "Getting Started",
@@ -78,7 +79,7 @@
       },
       {
         "tab": "Analytics",
-        "icon": "chart-line",
+        "icon": "/logo/analytics.svg",
         "groups": [
           {
             "group": "Dashboard",
@@ -130,7 +131,7 @@
       },
       { 
         "tab": "SDKs",
-        "icon": "code",
+        "icon": "/logo/sdk.svg",
         "dropdowns": [
           {
             "dropdown": "Android",
