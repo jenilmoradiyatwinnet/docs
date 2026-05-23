@@ -11,131 +11,195 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 ---
 ## Quality control map
 
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-sm font-semibold tracking-wide text-blue-700">
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+    <p className="text-sm font-semibold tracking-wide text-blue-700 dark:text-blue-300">
       Data quality overview
     </p>
 
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600">
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-300">
       These are the most common data quality issues that can affect reports, funnels, retention, campaigns, and user insights.
     </p>
   </div>
 
-  <table className="w-full table-fixed divide-y divide-slate-200">
-    <thead className="bg-white">
+  <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+    <thead className="bg-white dark:bg-slate-900">
       <tr>
-        <th className="w-[30%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="w-[64px] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          
+        </th>
+
+        <th className="w-[28%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Issue
         </th>
 
-        <th className="w-[42%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="w-[40%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           What can go wrong
         </th>
 
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Business impact
         </th>
       </tr>
     </thead>
 
-    <tbody className="divide-y divide-slate-100 bg-white">
-      <tr className="transition hover:bg-slate-50">
+    <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
         <td className="px-5 py-5 align-top">
-          <div className="text-sm font-semibold text-slate-950">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 text-red-600 dark:bg-red-900/30 dark:text-red-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M8 7H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M8 12H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M8 17H13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M6 4H18C19.1 4 20 4.9 20 6V18C20 19.1 19.1 20 18 20H6C4.9 20 4 19.1 4 18V6C4 4.9 4.9 4 6 4Z" stroke="currentColor" strokeWidth="1.8" />
+              <path d="M15.5 15.5L19.5 19.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M19.5 15.5L15.5 19.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
             Duplicate Events
           </div>
 
-          <div className="mt-1 text-xs text-slate-500">
+          <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
             Same action tracked twice
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           The same event is sent more than once for one user action.
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Inflated counts, wrong funnels, and inaccurate revenue or engagement reports.
         </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
         <td className="px-5 py-5 align-top">
-          <div className="text-sm font-semibold text-slate-950">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4V12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M12 16H12.01" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+              <path d="M10.2 4.8L3.8 17.2C3.1 18.5 4 20 5.5 20H18.5C20 20 20.9 18.5 20.2 17.2L13.8 4.8C13.1 3.5 10.9 3.5 10.2 4.8Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
             Missing Events
           </div>
 
-          <div className="mt-1 text-xs text-slate-500">
+          <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
             Expected event not received
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Important actions like signup, checkout, purchase, or screen view are not tracked.
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Broken funnels, incomplete journeys, and incorrect conversion analysis.
         </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
         <td className="px-5 py-5 align-top">
-          <div className="text-sm font-semibold text-slate-950">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 7H19" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M5 12H13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M5 17H10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M15 15L18 18L21 14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
             Wrong Event Names
           </div>
 
-          <div className="mt-1 text-xs text-slate-500">
+          <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
             Same action, different names
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
-          One action is tracked with multiple names such as <code>AddToCart</code>, <code>add_cart</code>, or <code>add_to_cart</code>.
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          One action is tracked with multiple names such as{" "}
+          <code className="rounded bg-slate-100 px-1 py-0.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-200">AddToCart</code>
+          ,{" "}
+          <code className="rounded bg-slate-100 px-1 py-0.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-200">add_cart</code>
+          , or{" "}
+          <code className="rounded bg-slate-100 px-1 py-0.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-200">add_to_cart</code>
+          .
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Split reports, confusing analysis, and unreliable filters.
         </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
         <td className="px-5 py-5 align-top">
-          <div className="text-sm font-semibold text-slate-950">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M4 7H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M7 12H17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M10 17H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M6 4H18C19.1 4 20 4.9 20 6V18C20 19.1 19.1 20 18 20H6C4.9 20 4 19.1 4 18V6C4 4.9 4.9 4 6 4Z" stroke="currentColor" strokeWidth="1.8" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
             Invalid Properties
           </div>
 
-          <div className="mt-1 text-xs text-slate-500">
+          <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
             Missing or wrong values
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Required properties are missing, inconsistent, or sent in the wrong data type.
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Bad segments, wrong cohorts, and unreliable reports.
         </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
         <td className="px-5 py-5 align-top">
-          <div className="text-sm font-semibold text-slate-950">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3L19 6V11C19 15.5 16.2 19.5 12 21C7.8 19.5 5 15.5 5 11V6L12 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+              <path d="M9 12L11 14L15.5 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-5 align-top">
+          <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
             Bot &amp; Unwanted Traffic
           </div>
 
-          <div className="mt-1 text-xs text-slate-500">
+          <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
             Fake or non-human activity
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Crawlers, scrapers, spam, test users, or internal users are mixed with real users.
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Fake users, wrong sessions, and misleading product decisions.
         </td>
       </tr>
@@ -156,43 +220,59 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 
     **Common examples**
 
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+        <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
           Common duplicate event examples
         </p>
 
-        <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
           These issues usually happen when the same action is tracked more than once.
         </p>
       </div>
 
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
+      <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+        <thead className="bg-white dark:bg-slate-900">
           <tr>
-            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Example
             </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Why it is a problem
             </th>
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">`button_clicked` fires twice</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">One click appears as two actions.</td>
+        <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              `button_clicked` fires twice
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              One click appears as two actions.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">`screen_viewed` fires repeatedly</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Screen views become inflated.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              `screen_viewed` fires repeatedly
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Screen views become inflated.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Auto + manual tracking both send same event</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Reports count the same action twice.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Auto + manual tracking both send same event
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Reports count the same action twice.
+            </td>
           </tr>
         </tbody>
       </table>
@@ -245,53 +325,79 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 
     **Missing event examples**
 
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+        <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
           Missing event examples
         </p>
 
-        <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
           These examples show important actions where tracking may be missing.
         </p>
       </div>
 
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
+      <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+        <thead className="bg-white dark:bg-slate-900">
           <tr>
-            <th className="w-[40%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <th className="w-[40%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Expected action
             </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Missing event
             </th>
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">User opens checkout</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`checkout_started` is not received</td>
+        <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              User opens checkout
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `checkout_started` is not received
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">User completes signup</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`signup_completed` is missing</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              User completes signup
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `signup_completed` is missing
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Screen opens</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`screen_viewed` is not tracked</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Screen opens
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `screen_viewed` is not tracked
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Notification is shown</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`notification_received` is missing</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Notification is shown
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `notification_received` is missing
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Payment fails</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`payment_failed` is not received</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Payment fails
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `payment_failed` is not received
+            </td>
           </tr>
         </tbody>
       </table>
@@ -299,48 +405,69 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 
     **How to detect missing events**
 
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+        <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
           How to detect missing events
         </p>
 
-        <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
           Use these checks to confirm that important events are tracked correctly.
         </p>
       </div>
 
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
+      <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+        <thead className="bg-white dark:bg-slate-900">
           <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Check
             </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               What to verify
             </th>
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Event flow</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Expected events are received in the correct order.</td>
+        <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Event flow
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Expected events are received in the correct order.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform coverage</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Web, Android, iOS, Flutter, and React Native send the same important events.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Platform coverage
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Web, Android, iOS, Flutter, and React Native send the same important events.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Critical actions</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Signup, checkout, payment, and purchase are always tracked.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Critical actions
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Signup, checkout, payment, and purchase are always tracked.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">SDK health</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">SDK is initialized before events are sent.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              SDK health
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              SDK is initialized before events are sent.
+            </td>
           </tr>
         </tbody>
       </table>
@@ -376,48 +503,69 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 
     **Event naming rules**
 
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+        <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
           Event naming rules
         </p>
 
-        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-950">
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
           Follow one naming style across all platforms to avoid split reports.
         </p>
       </div>
 
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
+      <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+        <thead className="bg-white dark:bg-slate-900">
           <tr>
-            <th className="w-[32%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <th className="w-[32%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Rule
             </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Recommended
             </th>
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Case style</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use lowercase.</td>
+        <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Case style
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Use lowercase.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Word separator</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use underscore.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Word separator
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Use underscore.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Event meaning</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use action-based names.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Event meaning
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Use action-based names.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform consistency</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use the same event name across Web, Android, and iOS.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Platform consistency
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Use the same event name across Web, Android, and iOS.
+            </td>
           </tr>
         </tbody>
       </table>
@@ -433,53 +581,79 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 
     **Common property issues**
 
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+        <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
           Common property issues
         </p>
 
-        <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
           These property issues can break filters, reports, cohorts, and segmentation.
         </p>
       </div>
 
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
+      <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+        <thead className="bg-white dark:bg-slate-900">
           <tr>
-            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Issue
             </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Example
             </th>
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Wrong data type</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`price` sent as text instead of number</td>
+        <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Wrong data type
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `price` sent as text instead of number
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Missing required value</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`currency` missing from purchase event</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Missing required value
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `currency` missing from purchase event
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">User mismatch</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`userId` missing after login</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              User mismatch
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `userId` missing after login
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Inconsistent value</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`country` sent as `India`, `IN`, and `india`</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Inconsistent value
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `country` sent as `India`, `IN`, and `india`
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform mismatch</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`screenName` differs across platforms</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Platform mismatch
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `screenName` differs across platforms
+            </td>
           </tr>
         </tbody>
       </table>
@@ -503,48 +677,69 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 
     **Property validation checklist**
 
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-lg font-semibold tracking-wide text-blue-700">
+    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+        <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
           Property validation checklist
         </p>
 
-        <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+        <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
           Validate important properties before using them in filters, cohorts, and reports.
         </p>
       </div>
 
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
+      <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+        <thead className="bg-white dark:bg-slate-900">
           <tr>
-            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <th className="w-[36%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Property check
             </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+
+            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Example
             </th>
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Required value exists</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`productId` should not be empty.</td>
+        <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Required value exists
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `productId` should not be empty.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Correct data type</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`price` should be a number.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Correct data type
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `price` should be a number.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Consistent value</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">`currency` should be `INR`, not `inr` or `Rs`.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Consistent value
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              `currency` should be `INR`, not `inr` or `Rs`.
+            </td>
           </tr>
 
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Platform match</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Web and app should send similar property names.</td>
+          <tr className="hover:bg-slate-50 dark:hover:bg-slate-800">
+            <td className="px-5 py-4 text-sm font-semibold text-slate-950 dark:text-slate-100">
+              Platform match
+            </td>
+
+            <td className="px-5 py-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Web and app should send similar property names.
+            </td>
           </tr>
         </tbody>
       </table>
@@ -688,63 +883,163 @@ Twinalyze helps you find tracking issues early, keep reports reliable, and make 
 
 ## Recommended filtering rules
 
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-lg font-semibold tracking-wide text-blue-700">
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+    <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
       Bot and traffic filtering checklist
     </p>
 
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
       Use multiple signals to separate real users from unwanted traffic.
     </p>
   </div>
 
-  <table className="w-full table-fixed divide-y divide-slate-200">
-    <thead className="bg-white">
+  <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+    <thead className="bg-white dark:bg-slate-900">
       <tr>
-        <th className="w-[26%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="w-[64px] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          
+        </th>
+
+        <th className="w-[24%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Check
         </th>
 
-        <th className="w-[38%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="w-[38%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           What to detect
         </th>
 
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Recommended action
         </th>
       </tr>
     </thead>
 
-    <tbody className="divide-y divide-slate-100 bg-white">
-      <tr className="transition hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">User agent</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Headless browsers, crawlers, automation tools</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Mark as bot or exclude</td>
+    <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-4 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 7H19" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M5 12H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M5 17H10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M16 14L20 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M20 14L16 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm font-semibold text-slate-950 dark:text-slate-100">
+          User agent
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Headless browsers, crawlers, automation tools
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Mark as bot or exclude
+        </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Event frequency</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Too many events in a short time</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Flag as suspicious</td>
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-4 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M4 18H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M7 15V11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M12 15V7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M17 15V9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M7 8L12 5L17 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm font-semibold text-slate-950 dark:text-slate-100">
+          Event frequency
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Too many events in a short time
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Flag as suspicious
+        </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Session pattern</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Very short or repeated sessions</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Review or exclude</td>
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-4 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M6 7H18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M6 12H18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M6 17H13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <circle cx="17" cy="17" r="2" stroke="currentColor" strokeWidth="1.8" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm font-semibold text-slate-950 dark:text-slate-100">
+          Session pattern
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Very short or repeated sessions
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Review or exclude
+        </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Environment</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">`development`, `staging`, `debug`</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Exclude from production reports</td>
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-4 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
+              <path d="M8 9H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M8 13H13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M8 17H11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm font-semibold text-slate-950 dark:text-slate-100">
+          Environment
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          `development`, `staging`, `debug`
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Exclude from production reports
+        </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
-        <td className="px-5 py-4 text-sm font-semibold text-slate-950">Internal users</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Team, QA, admin, developer traffic</td>
-        <td className="px-5 py-4 text-sm leading-6 text-slate-600">Mark as internal</td>
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-4 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.8" />
+              <path d="M4.5 18C5.2 15.8 6.8 14.5 9 14.5C11.2 14.5 12.8 15.8 13.5 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M16 9L18 11L21 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm font-semibold text-slate-950 dark:text-slate-100">
+          Internal users
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Team, QA, admin, developer traffic
+        </td>
+
+        <td className="px-5 py-4 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
+          Mark as internal
+        </td>
       </tr>
     </tbody>
   </table>
@@ -783,50 +1078,89 @@ Send traffic-related properties with important events so Twinalyze can detect su
 
 ## Before going live
 
-<div className="not-prose rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-  <div className="mb-6">
-    <p className="text-lg font-semibold tracking-wide text-blue-700">
+<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+    <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
       Final quality checklist
     </p>
 
-    <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-950">
-          Verify your tracking before launch
+    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
+      Verify your tracking before launch
     </p>
   </div>
 
-  <div className="grid gap-4 md:grid-cols-2">
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
+  <div className="grid gap-4 p-5 md:grid-cols-2">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
+      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M5 7H19" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M5 12H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M5 17H11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M16 15L18 17L21 13.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
         Event names are consistent
       </div>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
+
+      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
         Use one clear name for each action across Web, Android, iOS, Flutter, and React Native.
       </p>
     </div>
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
+      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3L19 6V11C19 15.5 16.2 19.5 12 21C7.8 19.5 5 15.5 5 11V6L12 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+          <path d="M9 12L11 14L15.5 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
         Critical events are tested
       </div>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
+
+      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
         Test signup, checkout, payment, purchase, notification, and screen events.
       </p>
     </div>
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
+      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M7 12H17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M10 17H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M6 4H18C19.1 4 20 4.9 20 6V18C20 19.1 19.1 20 18 20H6C4.9 20 4 19.1 4 18V6C4 4.9 4.9 4 6 4Z" stroke="currentColor" strokeWidth="1.8" />
+        </svg>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
         Properties are valid
       </div>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
+
+      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
         Required properties should be present, correctly typed, and consistent.
       </p>
     </div>
 
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-sm font-semibold text-slate-950">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
+      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.8" />
+          <path d="M4.5 18C5.2 15.8 6.8 14.5 9 14.5C11.2 14.5 12.8 15.8 13.5 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M16 8H21" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M16 12H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M16 16H19" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        </svg>
+      </div>
+
+      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
         Test traffic is separated
       </div>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
+
+      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
         Use environment, internal user, and test user properties to protect production reports.
       </p>
     </div>

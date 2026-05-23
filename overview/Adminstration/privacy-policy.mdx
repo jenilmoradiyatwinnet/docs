@@ -6,48 +6,62 @@ hideFooterPagination: true
 
 Twinalyze keeps all important legal and policy documents in one place so users can easily review privacy, terms, cookies, refunds, and cancellation details.
 
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-    <p className="text-lg font-semibold tracking-wide text-blue-700">
+<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
+    <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
       Legal policy center
     </p>
 
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-950">
+    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
       A simple overview of Twinalyze legal policies with direct links to read the full documents.
     </p>
   </div>
 
-  <table className="w-full table-fixed divide-y divide-slate-200">
-    <thead className="bg-white">
+  <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
+    <thead className="bg-white dark:bg-slate-900">
       <tr>
-        <th className="w-[26%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="w-[64px] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          
+        </th>
+
+        <th className="w-[24%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Policy
         </th>
 
-        <th className="w-[46%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="w-[46%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           What it covers
         </th>
 
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Action
         </th>
       </tr>
     </thead>
 
-    <tbody className="divide-y divide-slate-100 bg-white">
-      <tr className="transition hover:bg-slate-50">
+    <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-5 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3L19 6V11C19 15.5 16.2 19.5 12 21C7.8 19.5 5 15.5 5 11V6L12 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+              <path d="M9 12L11 14L15.5 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </td>
+
         <td className="px-5 py-5 align-top">
           <div>
-            <div className="text-sm font-semibold text-slate-950">
+            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
               Privacy Policy
             </div>
-            <div className="mt-1 text-xs text-slate-500">
+
+            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
               Data handling
             </div>
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Explains how Twinalyze collects, uses, stores, protects, and manages customer and product data.
         </td>
 
@@ -56,26 +70,37 @@ Twinalyze keeps all important legal and policy documents in one place so users c
             href="https://www.twinalyze.com/privacy"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-700"
+            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
           >
             Open privacy policy →
           </a>
         </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-5 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M7 4H17C18.1 4 19 4.9 19 6V20L16 18L13 20L10 18L7 20V6C7 4.9 7.9 4 9 4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+              <path d="M10 8H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M10 12H15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </div>
+        </td>
+
         <td className="px-5 py-5 align-top">
           <div>
-            <div className="text-sm font-semibold text-slate-950">
+            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
               Terms &amp; Conditions
             </div>
-            <div className="mt-1 text-xs text-slate-500">
+
+            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
               Platform rules
             </div>
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Explains account responsibility, acceptable use, service access, customer data, and platform usage rules.
         </td>
 
@@ -84,26 +109,39 @@ Twinalyze keeps all important legal and policy documents in one place so users c
             href="https://www.twinalyze.com/terms"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-700"
+            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
           >
             Open terms →
           </a>
         </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-5 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
+              <circle cx="9.5" cy="9" r="1.2" fill="currentColor" />
+              <circle cx="14.5" cy="10.5" r="1.2" fill="currentColor" />
+              <circle cx="11.5" cy="15" r="1.2" fill="currentColor" />
+              <path d="M12 4C12 7 14 8 20 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </div>
+        </td>
+
         <td className="px-5 py-5 align-top">
           <div>
-            <div className="text-sm font-semibold text-slate-950">
+            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
               Cookie Policy
             </div>
-            <div className="mt-1 text-xs text-slate-500">
+
+            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
               Cookies and tracking
             </div>
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Explains how Twinalyze may use cookies for login, security, preferences, analytics, and performance.
         </td>
 
@@ -112,26 +150,38 @@ Twinalyze keeps all important legal and policy documents in one place so users c
             href="https://twinalyze.com/legal/cookie-policy"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-700"
+            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
           >
             Open cookie policy →
           </a>
         </td>
       </tr>
 
-      <tr className="transition hover:bg-slate-50">
+      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
+        <td className="px-5 py-5 align-top">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M6 7H18C19.1 7 20 7.9 20 9V18C20 19.1 19.1 20 18 20H6C4.9 20 4 19.1 4 18V9C4 7.9 4.9 7 6 7Z" stroke="currentColor" strokeWidth="1.8" />
+              <path d="M8 7V5C8 4.4 8.4 4 9 4H15C15.6 4 16 4.4 16 5V7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M8 12H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M8 16H13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </div>
+        </td>
+
         <td className="px-5 py-5 align-top">
           <div>
-            <div className="text-sm font-semibold text-slate-950">
+            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
               Refund &amp; Cancellation
             </div>
-            <div className="mt-1 text-xs text-slate-500">
+
+            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
               Billing policy
             </div>
           </div>
         </td>
 
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600">
+        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
           Explains cancellation rules, refund eligibility, billing changes, and refund request process.
         </td>
 
@@ -140,7 +190,7 @@ Twinalyze keeps all important legal and policy documents in one place so users c
             href="https://www.twinalyze.com/refund"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-700"
+            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
           >
             Open refund policy →
           </a>
