@@ -88,59 +88,7 @@
   color: var(--twinalyze-primary);
 }
 
-/* ================================
-   Twinalyze Bottom Navigation
-   No Previous Version
-================================ */
 
- /* .twinalyze-bottom-nav-no-prev {
-  display: grid;
-  grid-template-columns: 1fr 100px;
-  align-items: center;
-  width: 100%;
-  min-height: 60px;
-  margin-top: 24px !important;
-  margin-bottom: 6px !important;
-  border-radius: 16px;
-  background: #f7f7f7;
-  overflow: hidden;
-}
-
-.twinalyze-bottom-nav-no-prev a {
-  text-decoration: none !important;
-}
-
-.twinalyze-nav-center-no-prev {
-  height: 54px;
-  margin: 3px 0 3px 3px;
-  padding: 6px 18px;
-  border: 1px solid #eeeeee;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.015);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #222;
-}
-
-.twinalyze-nav-side-next {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: #777;
-  font-size: 14px;
-  font-weight: 500;
-  border-left: 1px solid #eeeeee;
-}
-
-.twinalyze-nav-side-next:hover {
-  color: var(--twinalyze-primary);
-}  */
 /* ================================
    Twinalyze Bottom Navigation
    No Previous Version
@@ -417,82 +365,6 @@ img[src*="Project_settings"] {
 }
 
 
-/* previous button in community */
-/* ================================
-   Twinalyze Bottom Navigation
-   No Next Version
-================================ */
-/* 
-.twinalyze-bottom-nav-no-next {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  align-items: center;
-  width: 100%;
-  min-height: 60px;
-  margin-top: 24px !important;
-  margin-bottom: 6px !important;
-  border-radius: 16px;
-  background: #f7f7f7;
-  overflow: hidden;
-}
-
-.twinalyze-bottom-nav-no-next a {
-  text-decoration: none !important;
-}
-
-.twinalyze-nav-side-prev {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: #777;
-  font-size: 14px;
-  font-weight: 500;
-  border-right: 1px solid #eeeeee;
-}
-
-.twinalyze-nav-side-prev:hover {
-  color: var(--twinalyze-primary);
-}
-
-.twinalyze-nav-center-no-next {
-  height: 54px;
-  margin: 3px 3px 3px 0;
-  padding: 6px 18px;
-  border: 1px solid #eeeeee;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.015);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #222;
-}
-
-.twinalyze-nav-center-no-next strong {
-  font-size: 13px;
-  font-weight: 600;
-  color: #222;
-}
-
-.twinalyze-nav-center-no-next span {
-  margin-top: 2px;
-  font-size: 12px;
-  color: #777;
-}
-
-.twinalyze-nav-center-no-next:hover {
-  border-color: #dbeafe;
-  background: #ffffff;
-}
-
-.twinalyze-nav-arrow {
-  font-size: 20px;
-  line-height: 1;
-}  */
 /* ================================
    Final Fix: No Next Navigation
    Light mode normal + Dark mode dark previous button
@@ -713,3 +585,223 @@ img[src*="Project_settings"] {
 
 
 
+
+
+/* =====================================================
+   Bottom Navigation: No Previous Page
+   Remove separator line + improve dark mode
+===================================================== */
+
+/* Remove the vertical separator shown before "Next" */
+.twinalyze-nav-center-no-prev {
+  border-right: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.twinalyze-nav-side-next {
+  border-left: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ================================
+   Dark Mode
+================================ */
+
+.dark .twinalyze-bottom-nav-no-prev,
+[data-theme="dark"] .twinalyze-bottom-nav-no-prev {
+  background: #111827 !important;
+  border: 1px solid #1f2937 !important;
+}
+
+.dark .twinalyze-nav-center-no-prev,
+[data-theme="dark"] .twinalyze-nav-center-no-prev {
+  background: #0f172a !important;
+  border-color: #1f2937 !important;
+  border-right: 0 !important;
+  box-shadow: none !important;
+}
+
+.dark .twinalyze-nav-center-no-prev strong,
+[data-theme="dark"] .twinalyze-nav-center-no-prev strong {
+  color: #f8fafc !important;
+}
+
+.dark .twinalyze-nav-center-no-prev span,
+[data-theme="dark"] .twinalyze-nav-center-no-prev span {
+  color: #94a3b8 !important;
+}
+
+.dark .twinalyze-nav-side-next,
+[data-theme="dark"] .twinalyze-nav-side-next {
+  background: transparent !important;
+  color: #cbd5e1 !important;
+  border-left: 0 !important;
+  box-shadow: none !important;
+}
+
+.dark .twinalyze-nav-side-next:hover,
+[data-theme="dark"] .twinalyze-nav-side-next:hover {
+  background: #172033 !important;
+  color: #ffffff !important;
+}
+
+/* Keep a horizontal divider only on mobile */
+@media (max-width: 640px) {
+  .twinalyze-nav-center-no-prev {
+    border-right: 1px solid #eeeeee !important;
+    border-radius: 0 !important;
+  }
+
+  .twinalyze-nav-side-next {
+    border-left: 0 !important;
+    border-top: 1px solid #eeeeee !important;
+  }
+
+  .dark .twinalyze-nav-center-no-prev,
+  [data-theme="dark"] .twinalyze-nav-center-no-prev {
+    border-right: 1px solid #1f2937 !important;
+  }
+
+  .dark .twinalyze-nav-side-next,
+  [data-theme="dark"] .twinalyze-nav-side-next {
+    border-top: 1px solid #1f2937 !important;
+  }
+}
+
+
+/* Remove blue bottom line from Previous and Next buttons */
+.twinalyze-bottom-nav > a,
+.twinalyze-bottom-nav > a:hover,
+.twinalyze-bottom-nav > a:focus,
+.twinalyze-bottom-nav > a:active {
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Remove any Mintlify-generated underline */
+.twinalyze-bottom-nav > a::before,
+.twinalyze-bottom-nav > a::after {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Dark mode */
+.dark .twinalyze-bottom-nav > a,
+.dark .twinalyze-bottom-nav > a:hover,
+.dark .twinalyze-bottom-nav > a:focus,
+[data-theme="dark"] .twinalyze-bottom-nav > a,
+[data-theme="dark"] .twinalyze-bottom-nav > a:hover,
+[data-theme="dark"] .twinalyze-bottom-nav > a:focus {
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* =====================================================
+   FINAL Dark Mode Fix for all bottom navigation variants
+===================================================== */
+
+.dark .twinalyze-nav-center,
+.dark .twinalyze-nav-center-no-prev,
+.dark .twinalyze-nav-center-no-next,
+[data-theme="dark"] .twinalyze-nav-center,
+[data-theme="dark"] .twinalyze-nav-center-no-prev,
+[data-theme="dark"] .twinalyze-nav-center-no-next {
+  background: #172033 !important;
+  border-color: #263550 !important;
+  box-shadow: none !important;
+  color: #f8fafc !important;
+}
+
+/* Center title */
+.dark .twinalyze-nav-center strong,
+.dark .twinalyze-nav-center-no-prev strong,
+.dark .twinalyze-nav-center-no-next strong,
+[data-theme="dark"] .twinalyze-nav-center strong,
+[data-theme="dark"] .twinalyze-nav-center-no-prev strong,
+[data-theme="dark"] .twinalyze-nav-center-no-next strong {
+  color: #f8fafc !important;
+}
+
+/* Center description */
+.dark .twinalyze-nav-center span,
+.dark .twinalyze-nav-center-no-prev span,
+.dark .twinalyze-nav-center-no-next span,
+[data-theme="dark"] .twinalyze-nav-center span,
+[data-theme="dark"] .twinalyze-nav-center-no-prev span,
+[data-theme="dark"] .twinalyze-nav-center-no-next span {
+  color: #94a3b8 !important;
+}
+
+/* Center hover */
+.dark .twinalyze-nav-center:hover,
+.dark .twinalyze-nav-center-no-prev:hover,
+.dark .twinalyze-nav-center-no-next:hover,
+[data-theme="dark"] .twinalyze-nav-center:hover,
+[data-theme="dark"] .twinalyze-nav-center-no-prev:hover,
+[data-theme="dark"] .twinalyze-nav-center-no-next:hover {
+  background: #1e293b !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Outer navigation */
+.dark .twinalyze-bottom-nav,
+.dark .twinalyze-bottom-nav-no-prev,
+.dark .twinalyze-bottom-nav-no-next,
+[data-theme="dark"] .twinalyze-bottom-nav,
+[data-theme="dark"] .twinalyze-bottom-nav-no-prev,
+[data-theme="dark"] .twinalyze-bottom-nav-no-next {
+  background: #111827 !important;
+  border: 1px solid #263550 !important;
+}
+
+/* Previous and Next buttons */
+.dark .twinalyze-nav-side,
+.dark .twinalyze-nav-side-prev,
+.dark .twinalyze-nav-side-next,
+[data-theme="dark"] .twinalyze-nav-side,
+[data-theme="dark"] .twinalyze-nav-side-prev,
+[data-theme="dark"] .twinalyze-nav-side-next {
+  background: transparent !important;
+  color: #e2e8f0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove the unwanted blue bottom line */
+.twinalyze-bottom-nav > a,
+.twinalyze-bottom-nav-no-prev > a,
+.twinalyze-bottom-nav-no-next > a {
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+  background-image: none !important;
+}
+
+.dark .twinalyze-nav-center,
+.dark .twinalyze-nav-center-no-prev,
+.dark .twinalyze-nav-center-no-next,
+[data-theme="dark"] .twinalyze-nav-center,
+[data-theme="dark"] .twinalyze-nav-center-no-prev,
+[data-theme="dark"] .twinalyze-nav-center-no-next {
+  color: #e2e8f0 !important;
+}
+
+.dark .twinalyze-nav-center strong,
+.dark .twinalyze-nav-center span,
+.dark .twinalyze-nav-center-no-prev strong,
+.dark .twinalyze-nav-center-no-prev span,
+.dark .twinalyze-nav-center-no-next strong,
+.dark .twinalyze-nav-center-no-next span,
+[data-theme="dark"] .twinalyze-nav-center strong,
+[data-theme="dark"] .twinalyze-nav-center span,
+[data-theme="dark"] .twinalyze-nav-center-no-prev strong,
+[data-theme="dark"] .twinalyze-nav-center-no-prev span,
+[data-theme="dark"] .twinalyze-nav-center-no-next strong,
+[data-theme="dark"] .twinalyze-nav-center-no-next span {
+  color: inherit !important;
+}
