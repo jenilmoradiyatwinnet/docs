@@ -187,6 +187,25 @@
           }
         ]
       },
+      {
+        "tab": "Integrations",
+        "icon": "/logo/analytics.svg",
+        "groups": [
+          {
+            "group": "3rd part integrations",
+            "pages": [
+              "integrations/admob",
+              "integrations/facebook-ad",
+              "integrations/firebase",
+              "integrations/google-ads",
+              "integrations/google-tag-manager",
+              "integrations/slack",
+              "integrations/microsoft-teams"
+            ]
+          }
+        
+        ]
+      },
   {
   "tab": "SDKs & Integrations2",
   "icon": "code",
