@@ -1,5 +1,445 @@
 ---
-title: "Role based authentication"
-description: "Everything your app needs to understand its users — one SDK, full visibility."
+title: "Roles and permissions"
+sidebarTitle: "Roles and permissions"
+description: "Invite team members, assign roles, and control access to Twinalyze."
+hideFooterPagination: true
 ---
 
+<div className="not-prose overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+  <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 px-6 py-8 dark:from-blue-950/30 dark:via-gray-950 dark:to-indigo-950/20 sm:px-8 sm:py-10">
+    <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 shadow-sm dark:border-blue-900 dark:bg-gray-900 dark:text-blue-300">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="15"
+        height="15"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+
+      Organization access
+    </div>
+
+    <h2 className="mt-5 text-3xl font-bold tracking-tight text-gray-950 dark:text-gray-100 sm:text-4xl">
+      Roles and permissions
+    </h2>
+
+    <p className="mt-4 max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-400">
+      Add people to your organization and decide which parts of Twinalyze they
+      can access.
+    </p>
+
+    <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+    
+
+      <a
+        href="#manage-permissions"
+        className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-800 dark:hover:bg-blue-950/30 dark:hover:text-blue-300"
+      >
+        Set permissions
+        <span>↓</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+---
+
+
+
+## Invite a user
+
+Invite a person using their email address and assign their role before they join.
+
+<div className="not-prose mt-6 grid gap-3 md:grid-cols-3">
+  <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-950">
+    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
+      1
+    </div>
+
+    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
+      Enter email
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+      Enter the email address of the person you want to invite.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-950">
+    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
+      2
+    </div>
+
+    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
+      Select role
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+      Choose Owner, Admin, Analyst, or Viewer.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-950">
+    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
+      3
+    </div>
+
+    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
+      Select Invite
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+      Twinalyze sends an invitation to the entered email address.
+    </p>
+  </div>
+</div>
+
+<div className="not-prose mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+  <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
+    <div className="flex items-center gap-2">
+      <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+      <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+      <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+    </div>
+
+    <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+      Users
+    </span>
+  </div>
+
+  <img
+    src="/images/user_permission.png"
+    alt="Twinalyze users and invitation management page"
+    className="h-auto w-full"
+  />
+</div>
+
+### Review invited users
+
+Use these two tabs inside the Users page:
+
+<div className="not-prose mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
+    <div className="text-sm font-semibold text-gray-950 dark:text-gray-100">
+      All Users
+    </div>
+
+    <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+      Shows users who have joined the organization.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
+    <div className="text-sm font-semibold text-gray-950 dark:text-gray-100">
+      Pending User
+    </div>
+
+    <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+      Shows invitations that have not yet been accepted.
+    </p>
+  </div>
+</div>
+
+---
+
+## Choose the correct role
+
+<div className="not-prose grid gap-3 sm:grid-cols-2">
+  <div className="rounded-2xl border border-amber-200 bg-amber-50/70 p-5 dark:border-amber-900 dark:bg-amber-950/20">
+    <div className="inline-flex rounded-lg bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:bg-amber-950 dark:text-amber-300">
+      Owner
+    </div>
+
+    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
+      Full organization control
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+      Use for the organization owner or the person responsible for the complete
+      account.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-purple-200 bg-purple-50/70 p-5 dark:border-purple-900 dark:bg-purple-950/20">
+    <div className="inline-flex rounded-lg bg-purple-100 px-2.5 py-1 text-xs font-semibold text-purple-700 dark:bg-purple-950 dark:text-purple-300">
+      Admin
+    </div>
+
+    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
+      Manage team and settings
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+      Use for trusted team members who manage users, permissions, and settings.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-blue-200 bg-blue-50/70 p-5 dark:border-blue-900 dark:bg-blue-950/20">
+    <div className="inline-flex rounded-lg bg-blue-100 px-2.5 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+      Analyst
+    </div>
+
+    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
+      Work with analytics
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+      Use for people who review reports, users, events, and product performance.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5 dark:border-gray-800 dark:bg-gray-900">
+    <div className="inline-flex rounded-lg bg-gray-200 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+      Viewer
+    </div>
+
+    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
+      View information
+    </div>
+
+    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+      Use for people who only need to review the information available to them.
+    </p>
+  </div>
+</div>
+
+<Note>
+  The selected role does not automatically receive every permission. Access
+  depends on the permissions assigned to that role.
+</Note>
+
+---
+
+<div id="manage-permissions" className="scroll-mt-24" />
+
+## Set permissions
+
+Permissions are arranged from broad access to detailed access.
+
+<div className="not-prose mt-6">
+  <div className="grid gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
+    <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-900 dark:bg-blue-950/20">
+      <div className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+        Level 1
+      </div>
+
+      <div className="mt-2 text-base font-semibold text-gray-950 dark:text-gray-100">
+        Menu Group
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+        A complete product area.
+      </p>
+
+      <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+        Example: Users
+      </div>
+    </div>
+
+    <div className="hidden text-xl text-gray-400 md:block">→</div>
+
+    <div className="rounded-2xl border border-purple-200 bg-purple-50 p-5 dark:border-purple-900 dark:bg-purple-950/20">
+      <div className="text-xs font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400">
+        Level 2
+      </div>
+
+      <div className="mt-2 text-base font-semibold text-gray-950 dark:text-gray-100">
+        Main Menu
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+        A page inside a Menu Group.
+      </p>
+
+      <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+        Example: Page Insights
+      </div>
+    </div>
+
+    <div className="hidden text-xl text-gray-400 md:block">→</div>
+
+    <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-900 dark:bg-emerald-950/20">
+      <div className="text-xs font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+        Level 3
+      </div>
+
+      <div className="mt-2 text-base font-semibold text-gray-950 dark:text-gray-100">
+        Sub Menu
+      </div>
+
+      <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+        A nested page or action.
+      </p>
+
+      <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+        Example: Detailed report
+      </div>
+    </div>
+  </div>
+</div>
+
+<Warning>
+  To access a Sub Menu, the role may also need access to its parent Menu Group
+  and Main Menu.
+</Warning>
+
+---
+
+## View each permission level
+
+<Tabs>
+  <Tab title="Menu Group">
+    Use **Menu Group** when you want to control access to a complete Twinalyze
+    section.
+
+    Examples include Users, Product Overview, Ad, Data, and Settings.
+
+    <div className="not-prose mt-5 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+      <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
+        <div className="flex gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+        </div>
+
+        <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+          Menu Group
+        </span>
+      </div>
+
+      <img
+        src="/images/Menu_group_permission.png"
+        alt="Twinalyze Menu Group permissions"
+        className="h-auto w-full"
+      />
+    </div>
+  </Tab>
+
+  <Tab title="Main Menu">
+    Use **Main Menu** when you want to control access to one page inside a
+    product section.
+
+    <div className="not-prose mt-5 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+      <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
+        <div className="flex gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+        </div>
+
+        <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+          Main Menu
+        </span>
+      </div>
+
+      <img
+        src="/images/Main_menu_permission.png"
+        alt="Twinalyze Main Menu permissions"
+        className="h-auto w-full"
+      />
+    </div>
+  </Tab>
+
+  <Tab title="Sub Menu">
+    Use **Sub Menu** when you need more detailed control over a nested page or
+    feature.
+
+    <div className="not-prose mt-5 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+      <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
+        <div className="flex gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+        </div>
+
+        <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+          Sub Menu
+        </span>
+      </div>
+
+      <img
+        src="/images/Sub_menu_permission.png"
+        alt="Twinalyze Sub Menu permissions"
+        className="h-auto w-full"
+      />
+    </div>
+  </Tab>
+</Tabs>
+
+---
+
+## Give a role access
+
+<Steps>
+  <Step title="Choose a permission level">
+    Open **Menu Group**, **Main Menu**, or **Sub Menu**.
+  </Step>
+
+  <Step title="Find the required feature">
+    Use the filters or search field to find the menu or page.
+  </Step>
+
+  <Step title="Select the edit icon">
+    Open the permission editor using the pencil icon.
+  </Step>
+
+  <Step title="Select allowed roles">
+    Choose the roles that should be able to access the feature.
+  </Step>
+
+  <Step title="Confirm the permission is active">
+    Keep the status toggle enabled and save the change.
+  </Step>
+</Steps>
+
+---
+
+## What do the controls mean?
+
+| Control | What it does |
+| --- | --- |
+| **Role Type** | Shows permissions assigned to a selected role. |
+| **Status** | Shows active or inactive permissions. |
+| **Search** | Finds a menu or page by name. |
+| **Pencil icon** | Opens the permission editor. |
+| **Status toggle** | Enables or disables the permission. |
+
+<Check>
+  Start by inviting the user, assign the correct role, and then give that role
+  access to the required Menu Groups and pages.
+</Check>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a
+    href="/overview/organization-and-project/core-features"
+    className="twinalyze-nav-side"
+  >
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a
+    href="/overview/Data/users-events-properties"
+    className="twinalyze-nav-center"
+  >
+    <strong>Users, events, and properties</strong>
+    <span>Understand how Twinalyze organizes analytics data.</span>
+  </a>
+
+  <a
+    href="/overview/Data/users-events-properties"
+    className="twinalyze-nav-side"
+  >
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
