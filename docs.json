@@ -45,6 +45,7 @@
             "group": "Getting Started",
             "pages": [
               "overview/introduction",
+              "overview/pricing",
               "overview/dashboard-tour"
             ]
           },
