@@ -298,9 +298,9 @@ footer [role="separator"] {
    Use only if some active links still stay green
 ================================ */
 
-a:hover {
+/* a:hover {
   color: var(--twinalyze-primary);
-}
+} */
 
 button:hover {
   border-color: var(--twinalyze-primary-light);
@@ -804,4 +804,291 @@ img[src*="Project_settings"] {
 [data-theme="dark"] .twinalyze-nav-center-no-next strong,
 [data-theme="dark"] .twinalyze-nav-center-no-next span {
   color: inherit !important;
+}
+
+
+
+
+
+/* =====================================================
+   Twinalyze Top Navigation Tabs Only
+===================================================== */
+
+:root {
+  --twinalyze-tab-blue: #2563eb;
+}
+
+/*
+  Important:
+  The "header" scope prevents these styles from affecting
+  SDK and Integration cards inside the page content.
+*/
+
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ) {
+  transition: color 0.2s ease;
+}
+
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  )
+  img[src*="/logo/"] {
+  transition: filter 0.2s ease;
+}
+
+/* Hover text */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):hover {
+  color: var(--twinalyze-tab-blue) !important;
+}
+
+/* Hover child text */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):hover
+  span {
+  color: var(--twinalyze-tab-blue) !important;
+}
+
+/* Hover icon */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):hover
+  img[src*="/logo/"] {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+/* Active tab */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  ),
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  )[class*="text-primary"],
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):has([class*="text-primary"]) {
+  color: var(--twinalyze-tab-blue) !important;
+  border-color: var(--twinalyze-tab-blue) !important;
+}
+
+/* Active tab child text */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  )
+  span,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  )[class*="text-primary"]
+  span,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):has([class*="text-primary"])
+  span {
+  color: var(--twinalyze-tab-blue) !important;
+}
+
+/* Active tab icon */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  )
+  img[src*="/logo/"],
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  )[class*="text-primary"]
+  img[src*="/logo/"],
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):has([class*="text-primary"])
+  img[src*="/logo/"] {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+/* Dark mode hover text */
+.dark
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):hover,
+[data-theme="dark"]
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):hover {
+  color: #60a5fa !important;
+}
+
+/* Dark mode hover and active icon */
+.dark
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):hover
+  img[src*="/logo/"],
+.dark
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  )[class*="text-primary"]
+  img[src*="/logo/"],
+.dark
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):has([class*="text-primary"])
+  img[src*="/logo/"],
+[data-theme="dark"]
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):hover
+  img[src*="/logo/"],
+[data-theme="dark"]
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  )[class*="text-primary"]
+  img[src*="/logo/"],
+[data-theme="dark"]
+  header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"],
+    a[href^="/sdks2"]
+  ):has([class*="text-primary"])
+  img[src*="/logo/"] {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(91%)
+    saturate(1776%) hue-rotate(191deg) brightness(101%) contrast(96%) !important;
+}
+
+
+/* Introduction feature icons — dark mode */
+.dark img[src="/icon/introduction/user.svg"],
+.dark img[src="/icon/introduction/insights.svg"],
+.dark img[src="/icon/introduction/engagement.svg"],
+.dark img[src="/icon/introduction/ROI.svg"],
+[data-theme="dark"] img[src="/icon/introduction/user.svg"],
+[data-theme="dark"] img[src="/icon/introduction/insights.svg"],
+[data-theme="dark"] img[src="/icon/introduction/engagement.svg"],
+[data-theme="dark"] img[src="/icon/introduction/ROI.svg"] {
+  filter: brightness(0) invert(1) !important;
 }

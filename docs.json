@@ -42,7 +42,7 @@
         
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "GETTING STARTED",
             "pages": [
               "overview/introduction",
               "overview/pricing",
@@ -50,7 +50,7 @@
             ]
           },
           {
-            "group": "Organization and Project",
+            "group": "ORGANIZATION AND PROJECT",
             "pages": [
               "overview/organization-and-project/create-an-account",
               "overview/organization-and-project/create-an-project",
@@ -59,7 +59,7 @@
             ]
           },
           {
-            "group": "Data",
+            "group": "DATA",
             "pages": [
               "overview/Data/users-events-properties",
               "overview/Data/auto-capture-events",
@@ -68,7 +68,7 @@
             ]
           },
           {
-            "group": "Adminstration",
+            "group": "ADMINSTRATION",
             "pages": [
               "overview/Adminstration/privacy-policy",
               "overview/Adminstration/faq",
@@ -83,13 +83,13 @@
         "icon": "/logo/analytics.svg",
         "groups": [
           {
-            "group": "Dashboard",
+            "group": "DASHBOARD",
             "pages": [
               "analytics/realtime-users",
               "analytics/ask-ai"
             ]
           }, {
-            "group": "Product Overview",
+            "group": "PRODUCT OVERVIEW",
             "pages": [
               "analytics/product-overview/overview",
               "analytics/product-overview/system-insight",
@@ -97,7 +97,7 @@
               "analytics/product-overview/advance-reports"
             ]
           }, {
-            "group": "Users",
+            "group": "USERS",
             "pages": [
               "analytics/users/overview",
               "analytics/users/page-insight",
@@ -106,14 +106,14 @@
              "analytics/users/user-growth"
             ]
           }, {
-            "group": "Ad",
+            "group": "AD",
             "pages": [
               "analytics/ad/ad-report",
               "analytics/ad/ad-failure-insights"
             ]
           },
           {
-            "group": "Messaging",
+            "group": "MESSAGING",
             "pages": [
               "analytics/messaging/messaging-overview",
               "analytics/messaging/create-message",
@@ -121,7 +121,7 @@
             ]
           },
           {
-            "group": "Research",
+            "group": "RESEARCH",
             "pages": [
               "analytics/research/market-trends",
               "analytics/research/country-store-and-details",
@@ -139,7 +139,7 @@
             "icon": "android",
             "pages": [
               {
-                "group": "Analytics",
+                "group": "ANALYTICS",
                 
                 "pages": [
                  
@@ -151,7 +151,7 @@
                 ]
               },
               {
-                "group": "Ad Analytics",
+                "group": "AD ANALYTICS",
                
                 "pages": [
                   
@@ -192,7 +192,7 @@
         "icon": "/logo/analytics.svg",
         "groups": [
           {
-            "group": "3rd part integrations",
+            "group": "3RD PARTY INTEGRATIONS",
             "pages": [
               "integrations/admob",
               "integrations/facebook-ad",
