@@ -417,6 +417,44 @@ export const DashboardTour = () => {
           Explore the Twinalyze dashboard step by step.
         </p>
       </div> */}
+      
+
+      <div className="mb-6">
+  <div className="mb-2 text-sm font-semibold text-blue-600 dark:text-blue-400">
+    Getting Started
+  </div>
+
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "10px",
+    }}
+  >
+    <h1
+      className="m-0 font-bold tracking-tight text-gray-950 dark:text-gray-100"
+      style={{
+        margin: 0,
+        fontSize: "30px",
+        lineHeight: "36px",
+      }}
+    >
+      Dashboard Tour
+    </h1>
+
+    <p
+      className="m-0 text-gray-600 dark:text-gray-400"
+      style={{
+        margin: 0,
+        fontSize: "18px",
+        lineHeight: "28px",
+      }}
+    >
+      Explore the Twinalyze dashboard step by step.
+    </p>
+  </div>
+</div>
+
 
       <div className="mb-5 hidden border-b border-gray-200 dark:border-gray-700 md:block">
         <div className="flex items-center gap-2">
