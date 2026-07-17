@@ -1589,16 +1589,15 @@ export const DashboardTour = () => {
         </div>
       </div>
 
-      <div className="m-0 overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm dark:border-gray-700 dark:bg-gray-900">
-        <div className="flex h-[220px] items-center justify-center bg-white dark:bg-gray-950 sm:h-[300px] lg:h-[353px]">
-          <img
-            key={`${activeSection.id}-${activeImageIndex}`}
-            src={activeImage.src}
-            alt={activeImage.title}
-            className="h-full w-full object-contain"
-          />
-        </div>
-      </div>
+     {/* Dashboard image */}
+<div className="m-0 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-950">
+  <img
+    key={`${activeSection.id}-${activeImageIndex}`}
+    src={activeImage.src}
+    alt={activeImage.title}
+    className="block h-auto w-full"
+  />
+</div>
     </div>
   )
 }
