@@ -5,6 +5,376 @@ description: "Invite team members, assign roles, and control access to Twinalyze
 hideFooterPagination: true
 ---
 
+{/* ---
+title: "Roles and Permissions"
+sidebarTitle: "Roles and permissions"
+description: "Invite members, assign Owner, Admin, Analyst, or Viewer roles, and control access to your Twinalyze organization."
+hideFooterPagination: true
+---
+
+<h2 id="roles-and-permissions" className="sr-only">
+  Roles and permissions
+</h2>
+
+Use **Roles and Permissions** to control who can access your Twinalyze organization and what each person can do.
+
+Membership is managed at the organization level. Invite members by email, assign the appropriate role, and configure access to specific Twinalyze sections when more detailed control is required.
+
+---
+
+## Role capabilities
+
+Twinalyze provides four organization roles: **Owner**, **Admin**, **Analyst**, and **Viewer**.
+
+| Organization role | Primary responsibility | Can invite | Can change roles | Can remove |
+| --- | --- | --- | --- | --- |
+| **Owner** | Full organization ownership and control | Admin, Analyst, Viewer | Admin, Analyst, Viewer | Admin, Analyst, Viewer |
+| **Admin** | Manage members, projects, settings, and permissions | Analyst, Viewer | Analyst, Viewer | Analyst, Viewer |
+| **Analyst** | Analyze users, events, reports, and product performance | No | No | No |
+| **Viewer** | Review permitted dashboards and reports without making changes | No | No | No |
+
+Feature access can be further controlled using **Menu Group**, **Main Menu**, and **Sub Menu** permissions.
+
+### Owner
+
+The Owner has the highest level of access and is responsible for the organization.
+
+Keep the number of Owners limited to people who require complete control over organization members, projects, settings, and permissions.
+
+### Admin
+
+Admins manage day-to-day organization operations.
+
+They can manage projects, invite team members, update supported roles, configure permissions, and maintain organization settings.
+
+### Analyst
+
+Analysts work with product and user data.
+
+Use this role for team members who need to analyze dashboards, reports, users, events, engagement, retention, and product performance.
+
+### Viewer
+
+Viewers have limited, read-only access.
+
+Use this role for stakeholders, clients, or team members who only need to review the dashboards and reports available to them.
+
+---
+
+## Manage members
+
+Open the **Users** page to review organization members and pending invitations.
+
+| Member view | What it shows |
+| --- | --- |
+| **All Users** | Members who have accepted their invitation and joined the organization. |
+| **Pending User** | Invitations that have been sent but have not yet been accepted. |
+
+<Frame>
+  ![Twinalyze users and invitation management page](/images/user_permission.png)
+</Frame>
+
+From this page, authorized users can invite members, review pending invitations, update roles, and remove members.
+
+---
+
+## Invite a member
+
+<Steps titleSize="h3">
+  <Step title="Open the Users page">
+    Open your Twinalyze organization and go to the **Users** page.
+
+    This page displays existing organization members and pending invitations.
+  </Step>
+
+  <Step title="Click Invite User">
+    Click the **Invite User** button to open the invitation form.
+  </Step>
+
+  <Step title="Enter the email address">
+    Enter the email address of the person you want to invite.
+
+    Use the email address they will use to access Twinalyze.
+  </Step>
+
+  <Step title="Choose a role">
+    Select the role that matches the member's responsibilities:
+
+    - **Owner** for complete organization control
+    - **Admin** for managing members, projects, and settings
+    - **Analyst** for working with analytics and reports
+    - **Viewer** for read-only access
+  </Step>
+
+  <Step title="Send the invitation">
+    Click **Invite** to send the organization invitation.
+
+    Twinalyze sends an invitation to the entered email address.
+  </Step>
+
+  <Step title="Review the pending invitation">
+    Open the **Pending User** tab.
+
+    The invited member remains in this section until they accept the invitation.
+  </Step>
+</Steps>
+
+---
+
+## Change a member's role
+
+<Steps titleSize="h3">
+  <Step title="Open All Users">
+    Go to the **Users** page and open the **All Users** tab.
+  </Step>
+
+  <Step title="Find the member">
+    Find the member whose role you want to update.
+
+    Use the available search or filtering options when the organization contains many members.
+  </Step>
+
+  <Step title="Open the role selector">
+    Click the current role shown for the member.
+  </Step>
+
+  <Step title="Choose the new role">
+    Select **Admin**, **Analyst**, or **Viewer**, depending on the access the member requires.
+  </Step>
+
+  <Step title="Confirm the change">
+    Save or confirm the role update.
+
+    The member's access is updated according to the selected role and its assigned permissions.
+  </Step>
+</Steps>
+
+---
+
+## Revoke a pending invitation
+
+Revoke an invitation when it was sent to the wrong email address or when the person no longer requires access.
+
+<Steps titleSize="h3">
+  <Step title="Open Pending User">
+    Go to the **Users** page and open the **Pending User** tab.
+  </Step>
+
+  <Step title="Find the invitation">
+    Find the pending invitation you want to cancel.
+  </Step>
+
+  <Step title="Open the invitation actions">
+    Open the available actions for the pending user.
+  </Step>
+
+  <Step title="Revoke the invitation">
+    Select **Revoke Invitation** and confirm the action.
+
+    The pending invitation is removed and can no longer be used to join the organization.
+  </Step>
+</Steps>
+
+---
+
+## Remove a member
+
+Removing a member revokes their access to the Twinalyze organization.
+
+<Steps titleSize="h3">
+  <Step title="Open All Users">
+    Go to the **Users** page and open the **All Users** tab.
+  </Step>
+
+  <Step title="Find the member">
+    Find the member you want to remove from the organization.
+  </Step>
+
+  <Step title="Open member actions">
+    Open the available actions for that member.
+  </Step>
+
+  <Step title="Select Remove User">
+    Select **Remove User** from the available options.
+  </Step>
+
+  <Step title="Confirm removal">
+    Review the confirmation message and remove the member.
+
+    The user immediately loses access to the organization and its projects.
+  </Step>
+</Steps>
+
+---
+
+## Configure feature permissions
+
+Roles define a member's general responsibilities, while feature permissions control which areas of Twinalyze each role can access.
+
+Permissions are organized into three levels.
+
+| Permission level | What it controls | Example |
+| --- | --- | --- |
+| **Menu Group** | A complete product area in Twinalyze | Users |
+| **Main Menu** | A page inside a Menu Group | Page Insights |
+| **Sub Menu** | A nested page, report, or action | Detailed report |
+
+Access normally follows this hierarchy:
+
+**Menu Group → Main Menu → Sub Menu**
+
+A role may require access to the parent Menu Group and Main Menu before it can access a Sub Menu.
+
+---
+
+## View permission levels
+
+<Tabs>
+  <Tab title="Menu Group">
+    Use **Menu Group** permissions to control access to an entire Twinalyze product area.
+
+    Examples include Users, Product Overview, Ad, Data, Messaging, Research, and Settings.
+
+    <Frame>
+      ![Twinalyze Menu Group permissions](/images/Menu_group_permission.png)
+    </Frame>
+  </Tab>
+
+  <Tab title="Main Menu">
+    Use **Main Menu** permissions to control access to an individual page inside a Menu Group.
+
+    For example, a role may have access to the Users Menu Group but only be allowed to open specific user analytics pages.
+
+    <Frame>
+      ![Twinalyze Main Menu permissions](/images/Main_menu_permission.png)
+    </Frame>
+  </Tab>
+
+  <Tab title="Sub Menu">
+    Use **Sub Menu** permissions when you need detailed control over a nested page, report, or feature.
+
+    <Frame>
+      ![Twinalyze Sub Menu permissions](/images/Sub_menu_permission.png)
+    </Frame>
+  </Tab>
+</Tabs>
+
+---
+
+## Give a role access
+
+<Steps titleSize="h3">
+  <Step title="Choose a permission level">
+    Open **Menu Group**, **Main Menu**, or **Sub Menu**, depending on the level of access you want to configure.
+  </Step>
+
+  <Step title="Select the role">
+    Choose **Owner**, **Admin**, **Analyst**, or **Viewer** from the Role Type selector.
+  </Step>
+
+  <Step title="Find the feature">
+    Use the search field or available filters to find the required menu, page, report, or feature.
+  </Step>
+
+  <Step title="Open the permission editor">
+    Click the pencil icon for the permission you want to update.
+  </Step>
+
+  <Step title="Assign the role">
+    Select the roles that should be allowed to access the feature.
+  </Step>
+
+  <Step title="Enable the permission">
+    Make sure the permission status is active.
+  </Step>
+
+  <Step title="Save the changes">
+    Save the permission configuration.
+
+    Members assigned to the selected role can now access the feature according to the configured hierarchy.
+  </Step>
+</Steps>
+
+---
+
+## Permission controls
+
+| Control | What it does |
+| --- | --- |
+| **Role Type** | Displays permissions assigned to the selected role. |
+| **Status** | Shows whether a permission is active or inactive. |
+| **Search** | Finds a Menu Group, Main Menu, Sub Menu, or page by name. |
+| **Pencil icon** | Opens the permission editor. |
+| **Status toggle** | Enables or disables the selected permission. |
+| **Save** | Applies the updated role permission configuration. |
+
+---
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Keep the number of Owners limited">
+    Give the Owner role only to people who require complete control over the organization.
+  </Accordion>
+
+  <Accordion title="Use Admin for trusted managers">
+    Assign Admin access to team members who manage projects, users, settings, integrations, and permissions.
+  </Accordion>
+
+  <Accordion title="Use Analyst for data teams">
+    Assign Analyst access to people who work with users, events, reports, engagement, retention, and product performance.
+  </Accordion>
+
+  <Accordion title="Use Viewer for read-only access">
+    Assign Viewer access to stakeholders or team members who only need to review permitted dashboards and reports.
+  </Accordion>
+
+  <Accordion title="Follow least-privilege access">
+    Give each member only the permissions required for their responsibilities.
+  </Accordion>
+
+  <Accordion title="Review pending invitations regularly">
+    Revoke invitations that were sent incorrectly or are no longer required.
+  </Accordion>
+
+  <Accordion title="Keep parent permissions enabled">
+    When granting access to a Sub Menu, confirm that the role also has access to its parent Main Menu and Menu Group.
+  </Accordion>
+
+  <Accordion title="Review permissions when responsibilities change">
+    Update a member's role and permissions whenever their position or responsibilities change.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a
+    href="/overview/organization-and-project/core-features"
+    className="twinalyze-nav-side"
+  >
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a
+    href="/overview/Data/users-events-properties"
+    className="twinalyze-nav-center"
+  >
+    <strong>Users, events, and properties</strong>
+    <span>Understand how Twinalyze organizes analytics data.</span>
+  </a>
+
+  <a
+    href="/overview/Data/users-events-properties"
+    className="twinalyze-nav-side"
+  >
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div> */}
+
+
 <div className="not-prose overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
   <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 px-6 py-8 dark:from-blue-950/30 dark:via-gray-950 dark:to-indigo-950/20 sm:px-8 sm:py-10">
     <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 shadow-sm dark:border-blue-900 dark:bg-gray-900 dark:text-blue-300">

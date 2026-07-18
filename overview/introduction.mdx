@@ -220,7 +220,7 @@ export const CoreFeatureIcon = ({ src, alt }) => (
   </span>
 )
 
-## Core Features
+{/* ## Core Features
 
 <Tabs>
   <Tab title="Analytics">
@@ -640,106 +640,431 @@ export const CoreFeatureIcon = ({ src, alt }) => (
     </div>
   </Tab>
 </Tabs>
+
 ---
- 
- {/* ## Support channels
+  */}
+ ## Core Features
 
-<div className="not-prose grid gap-4 md:grid-cols-3">
-  <a
-    href="https://twinalyze.com/community/slack"
-    target="_blank"
-    rel="noreferrer"
-    className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-blue-700"
-  >
-    <img
-      src="/icon/introduction/slack.svg"
-      alt="Slack community"
-      className="mb-5 h-6 w-6 object-contain"
-    />
+<Tabs>
+  <Tab title="Analytics">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-base font-semibold text-black dark:text-white">
+              Analytics Features
+            </p>
 
-    <div className="text-base font-semibold text-slate-950 dark:text-slate-100">
-      Slack Community
+            <div className="mt-1 text-sm text-gray-600 dark:text-gray-300">
+              Explore the complete analytics toolkit
+            </div>
+          </div>
+
+          <a
+            href="/analytics"
+            className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40"
+          >
+            Explore Analytics <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        <a
+          href="/analytics/users/overview"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/event.svg"
+              alt="Autocapture Event"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Autocapture Event
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Automatically track user events and behaviour.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/realtime-users"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/realtime.svg"
+              alt="Real Time"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Real Time
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Monitor live users, sessions, and activity instantly.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/product-overview/overview"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/productoverview.svg"
+              alt="Product Overview"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Product Overview
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            View product performance and usage summary.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/product-overview/reports"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/reports.svg"
+              alt="Reports"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Reports
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Build custom reports for deeper analytics.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/product-overview/system-insight"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/systeminsght.svg"
+              alt="System Insights"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              System Insights
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Analyze device, OS, and system performance.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/users/overview"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/userbehavior.svg"
+              alt="Users Behaviour"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Users Behaviour
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Understand how users move through product.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/users/user-engagement"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/engagement.svg"
+              alt="Engagement"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Engagement
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Measure interactions, activity depth, and usage.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/users/user-growth"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/usergrowth.svg"
+              alt="User Growth"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              User Growth
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Monitor new, active, and returning users.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+      </div>
     </div>
+  </Tab>
 
-    <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
-      Join Slack for product questions, setup help, quick discussions, and direct community support.
-    </p>
+  <Tab title="Ads Analytics">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-base font-semibold text-black dark:text-white">
+              Ads Analytics Features
+            </p>
 
-    <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4 dark:border-slate-800">
-      <span className="text-sm font-medium text-blue-700 dark:text-blue-400">
-        Join Slack
-      </span>
+            <div className="mt-1 text-sm text-gray-600 dark:text-gray-300">
+              Measure campaign and ad performance
+            </div>
+          </div>
 
-      <span className="text-sm text-blue-700 transition group-hover:translate-x-1 dark:text-blue-400">
-        →
-      </span>
+          <a
+            href="/analytics/ad/ad-report"
+            className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40"
+          >
+            Explore Ads <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        <a
+          href="/analytics/ad/ad-report"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/megaphone.svg"
+              alt="Campaign Performance"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Campaign Performance
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Track campaign traffic, conversions, and outcomes.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/ad/ad-report"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/introduction/user.svg"
+              alt="Ad Revenue"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Ad Revenue
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Measure ad earnings and monetization trends.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/ad/ad-report"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/reports.svg"
+              alt="Ad Impressions"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Ad Impressions
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Track total impressions across placements.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+      </div>
     </div>
-  </a>
+  </Tab>
 
-  <a
-    href="https://discord.gg/qKKUyFwvH"
-    target="_blank"
-    rel="noreferrer"
-    className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-blue-700"
-  >
-    <img
-      src="/icon/introduction/discord.svg"
-      alt="Discord community"
-      className="mb-5 h-6 w-6 object-contain"
-    />
+  <Tab title="Messaging">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-base font-semibold text-black dark:text-white">
+              Messaging Features
+            </p>
 
-    <div className="text-base font-semibold text-slate-950 dark:text-slate-100">
-      Discord Community
+            <div className="mt-1 text-sm text-gray-600 dark:text-gray-300">
+              Create and measure engagement campaigns
+            </div>
+          </div>
+
+          <a
+            href="/analytics/messaging/messaging-overview"
+            className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40"
+          >
+            Explore Messaging <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        <a
+          href="/analytics/messaging/create-message"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/createnotification.svg"
+              alt="Create Notifications"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Create Notifications
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Create targeted campaigns for engagement.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/messaging/campaign-history"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/campaignreports.svg"
+              alt="Campaign Reports"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Campaign Reports
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Analyze delivery, opens, clicks, and results.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/messaging/campaign-history"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/improvertention.svg"
+              alt="Improve Retention"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Improve Retention
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Bring users back with timely messages.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+      </div>
     </div>
+  </Tab>
+</Tabs>
 
-    <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
-      Use Discord for developer discussions, SDK questions, integration help, and community conversations.
-    </p>
-
-    <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4 dark:border-slate-800">
-      <span className="text-sm font-medium text-blue-700 dark:text-blue-400">
-        Join Discord
-      </span>
-
-      <span className="text-sm text-blue-700 transition group-hover:translate-x-1 dark:text-blue-400">
-        →
-      </span>
-    </div>
-  </a>
-
-  <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=support@twinalyze.com"
-    target="_blank"
-    rel="noreferrer"
-    className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-blue-700"
-  >
-    <img
-      src="/icon/introduction/Mail.svg"
-      alt="Email support"
-      className="mb-5 h-6 w-6 object-contain"
-    />
-
-    <div className="text-base font-semibold text-slate-950 dark:text-slate-100">
-      Email Support
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
-      Email us for account, billing, technical issues, private questions, or support that needs detailed review.
-    </p>
-
-    <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4 dark:border-slate-800">
-      <span className="text-sm font-medium text-blue-700 dark:text-blue-400">
-        Email Support
-      </span>
-
-      <span className="text-sm text-blue-700 transition group-hover:translate-x-1 dark:text-blue-400">
-        →
-      </span>
-    </div>
-  </a>
-</div>
-
---- */}
+---
 
 ## Support channels
 
