@@ -1,5 +1,29 @@
 ---
 title: "Core Features"
+description: "Discover how Twinalyze brings product analytics, ad performance, notifications, integrations, custom events, reports, and SDK data into one platform."
+hideFooterPagination: true
+---
+
+Twinalyze is built for product, marketing, growth, and development teams that need one clear view of product performance and user activity.
+
+{/* Bring user behavior, advertising data, messaging performance, integrations, and technical insights together to understand what is happening across your product. */}
+
+<CardGroup cols={3}>
+  <Card title="Capture every interaction" icon="/icon/cards/path.svg">
+    Track users, sessions, screens, events, ads, notifications, and SDK activity across your product.
+  </Card>
+
+  <Card title="Connect your performance data" icon="/icon/cards/tree-structure.svg">
+    Analyze product behavior, custom events, integrations, and reports from one connected workspace.
+  </Card>
+
+  <Card title="Turn insights into growth" icon="/icon/cards/rocket-launch.svg">
+    Use clear insights to improve engagement, retention, conversions, and product decisions.
+  </Card>
+</CardGroup>
+
+{/* ---
+title: "Core Features"
 description: "Explore Twinalyze core capabilities for analytics, ad analytics, notifications, integrations, custom events, advanced reports, and SDKs."
 hideFooterPagination: true
 ---
@@ -22,12 +46,11 @@ Twinalyze brings your product data, user behavior, ads performance, notification
 
 <Check>
   Twinalyze is designed for product, marketing, growth, and development teams that need one clear view of product performance and user activity.
-</Check>
-
----
+</Check> */}
 
 
-## Feature map
+
+{/* ## Feature map
 
 <Tabs>
   <Tab title="Analytics">
@@ -298,502 +321,472 @@ Twinalyze brings your product data, user behavior, ads performance, notification
       </div>
     </div>
   </Tab>
+</Tabs> */}
+
+---
+
+export const CoreFeatureIcon = ({ src, alt }) => (
+  <span
+    role="img"
+    aria-label={alt}
+    className="inline-flex shrink-0"
+    style={{
+      width: "18px",
+      height: "18px",
+      minWidth: "18px",
+      minHeight: "18px",
+    }}
+  >
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      width="18"
+      height="18"
+      className="block shrink-0 object-contain dark:hidden"
+      style={{
+        width: "18px",
+        height: "18px",
+      }}
+    />
+
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      width="18"
+      height="18"
+      className="hidden shrink-0 object-contain dark:block"
+      style={{
+        width: "18px",
+        height: "18px",
+        filter: "brightness(0) saturate(100%) invert(100%)",
+      }}
+    />
+  </span>
+)
+
+## Core Features
+
+<Tabs>
+  <Tab title="Analytics">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-base font-semibold text-black dark:text-white">
+              Analytics Features
+            </p>
+
+            <div className="mt-1 text-sm text-gray-950 dark:text-gray-300">
+              Explore the complete analytics toolkit
+            </div>
+          </div>
+
+          <a
+            href="/analytics"
+            className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40"
+          >
+            Explore Analytics <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        <a
+          href="/analytics/users/overview"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/event.svg"
+              alt="Autocapture Event"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Autocapture Event
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Automatically track user events and behaviour.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/realtime-users"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/realtime.svg"
+              alt="Real Time"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Real Time
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Monitor live users, sessions, and activity instantly.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/product-overview/overview"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/productoverview.svg"
+              alt="Product Overview"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Product Overview
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            View product performance and usage summary.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/product-overview/reports"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/reports.svg"
+              alt="Reports"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Reports
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Build custom reports for deeper analytics.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/product-overview/system-insight"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/systeminsght.svg"
+              alt="System Insights"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              System Insights
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Analyze device, OS, and system performance.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/users/overview"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/userbehavior.svg"
+              alt="Users Behaviour"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Users Behaviour
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Understand how users move through product.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/users/user-engagement"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/engagement.svg"
+              alt="Engagement"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Engagement
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Measure interactions, activity depth, and usage.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/users/user-growth"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/usergrowth.svg"
+              alt="User Growth"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              User Growth
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Monitor new, active, and returning users.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Ads Analytics">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-base font-semibold text-black dark:text-white">
+              Ads Analytics Features
+            </p>
+
+            <div className="mt-1 text-sm text-gray-950 dark:text-gray-300">
+              Measure campaign and ad performance
+            </div>
+          </div>
+
+          <a
+            href="/analytics/ad/ad-report"
+            className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40"
+          >
+            Explore Ads <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        <a
+          href="/analytics/ad/ad-report"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/megaphone.svg"
+              alt="Campaign Performance"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Campaign Performance
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Track campaign traffic, conversions, and outcomes.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/ad/ad-report"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/introduction/user.svg"
+              alt="Ad Revenue"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Ad Revenue
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Measure ad earnings and monetization trends.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/ad/ad-report"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/reports.svg"
+              alt="Ad Impressions"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Ad Impressions
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Track total impressions across placements.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+      </div>
+    </div>
+  </Tab>
+
+  <Tab title="Messaging">
+    <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-base font-semibold text-black dark:text-white">
+              Messaging Features
+            </p>
+
+            <div className="mt-1 text-sm text-gray-950 dark:text-gray-300">
+              Create and measure engagement campaigns
+            </div>
+          </div>
+
+          <a
+            href="/analytics/messaging/messaging-overview"
+            className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40"
+          >
+            Explore Messaging <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        <a
+          href="/analytics/messaging/create-message"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/createnotification.svg"
+              alt="Create Notifications"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Create Notifications
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Create targeted campaigns for engagement.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/messaging/campaign-history"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/campaignreports.svg"
+              alt="Campaign Reports"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Campaign Reports
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Analyze delivery, opens, clicks, and results.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+
+        <a
+          href="/analytics/messaging/campaign-history"
+          className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_110px] md:items-center"
+        >
+          <div className="flex items-center gap-3">
+            <CoreFeatureIcon
+              src="/icon/Introduction-coreFeatures/improvertention.svg"
+              alt="Improve Retention"
+            />
+
+            <span className="text-sm font-medium text-black dark:text-white">
+              Improve Retention
+            </span>
+          </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-300">
+            Bring users back with timely messages.
+          </div>
+
+          <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
+            View →
+          </div>
+        </a>
+      </div>
+    </div>
+  </Tab>
 </Tabs>
 
----
-
-## Feature details
-
-<AccordionGroup>
-  <Accordion title="1. Analytics" icon="chart-line">
-    Analytics helps your team understand how users behave inside your app or website.
-
-    It gives a clear view of users, sessions, screens, activity, engagement, and product usage. This helps product and growth teams understand what is working and where users are dropping.
-
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-sm font-semibold tracking-wide text-blue-700">
-          Analytics capabilities
-        </p>
-      </div>
-
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
-          <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Capability
-            </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Simple explanation
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Users</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Understand new, active, and returning users.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Sessions</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Track how often users open and use your product.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Screen Views</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">See which pages or screens users visit most.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Engagement</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Measure how deeply users interact with your product.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Behavior Insights</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Find usage patterns and drop-off points.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <Tip>
-      Best for understanding product usage, user behavior, and engagement trends.
-    </Tip>
-  </Accordion>
-
-  <Accordion title="2. Ad Analytics" icon="rectangle-ad">
-    Ad Analytics helps your team measure ad performance and monetization.
-
-    You can track impressions, clicks, revenue, failures, and ad performance trends in one place. This helps you find missed revenue and improve ad delivery.
-
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-sm font-semibold tracking-wide text-blue-700">
-          Ad analytics capabilities
-        </p>
-      </div>
-
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
-          <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Capability
-            </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Simple explanation
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Impressions</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Track how many times ads are shown.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Clicks</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Measure how many users click ads.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Revenue</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Monitor ad earnings clearly.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Failures</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Detect failed ad loads and missed revenue.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Optimization</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Improve fill rate, clicks, and revenue performance.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <Check>
-      Use this to improve ad revenue, reduce ad failures, and understand ad performance.
-    </Check>
-  </Accordion>
-
-  <Accordion title="3. Notification" icon="bell">
-    Notification helps your team send targeted messages and measure campaign performance.
-
-    You can schedule campaigns, send messages in multiple languages, automate user engagement, and track delivery, opens, clicks, and responses.
-
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-sm font-semibold tracking-wide text-blue-700">
-          Notification capabilities
-        </p>
-      </div>
-
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
-          <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Capability
-            </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Simple explanation
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Scheduled Notifications</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Send campaigns at a selected date and time.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Multilingual Campaigns</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Send messages in different user languages.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Automated Messaging</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Trigger messages based on behavior or rules.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Engagement Tracking</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Track delivery, opens, clicks, and responses.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <Tip>
-      Best for re-engaging users, improving campaign performance, and increasing retention.
-    </Tip>
-  </Accordion>
-
-  <Accordion title="4. Integrations" icon="plug">
-    Integrations connect Twinalyze with third-party platforms so your analytics workflow becomes more complete.
-
-    You can bring data from ad platforms, notification services, monetization tools, and team communication tools into your product analytics process.
-
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-sm font-semibold tracking-wide text-blue-700">
-          Integration types
-        </p>
-      </div>
-
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
-          <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Integration type
-            </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Examples
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Ads platforms</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Google Ads, Facebook Ads, AdMob, AppLovin</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Analytics and app tools</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Google Analytics 4, Firebase, Google Tag Manager</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Messaging tools</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">OneSignal, Slack, Microsoft Teams</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Monetization tools</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Facebook Monetization Manager</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <Check>
-      Use integrations to connect marketing, ads, notification, and analytics data with Twinalyze.
-    </Check>
-  </Accordion>
-
-  <Accordion title="5. Custom Events" icon="code">
-    Custom Events help you track business-specific actions that matter to your product.
-
-    Instead of tracking only default activity, you can define events like signup, add to cart, checkout started, payment failed, purchase, subscription started, or any custom action.
-
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-sm font-semibold tracking-wide text-blue-700">
-          Custom event examples
-        </p>
-      </div>
-
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
-          <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Event example
-            </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Why it matters
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">signup_completed</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Understand user activation.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">add_to_cart</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Track shopping intent.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">checkout_started</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Measure purchase flow.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">payment_failed</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Find revenue loss points.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">purchase_completed</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Track successful conversion.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <Tip>
-      Best for tracking product-specific actions and building meaningful reports.
-    </Tip>
-  </Accordion>
-
-  <Accordion title="6. Advanced Reports" icon="table">
-    Advanced Reports help your team go deeper than basic dashboards.
-
-    You can analyze funnels, retention, cohorts, user segments, campaign performance, and custom reports to understand growth patterns and product bottlenecks.
-
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-sm font-semibold tracking-wide text-blue-700">
-          Advanced report types
-        </p>
-      </div>
-
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
-          <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Report type
-            </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Simple explanation
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Funnels</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Find where users convert or drop off.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Retention</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Measure how often users return.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Cohorts</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Group users by date, event, behavior, or property.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Segmentation</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Filter users by platform, country, campaign, event, or property.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Custom Reports</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Build reports based on your product goals.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <Check>
-      Use advanced reports to find drop-offs, compare user groups, and make better product decisions.
-    </Check>
-  </Accordion>
-
-  <Accordion title="7. SDKs" icon="code">
-    SDKs help developers add Twinalyze tracking quickly across apps and websites.
-
-    Once integrated, Twinalyze can collect users, sessions, screens, events, device data, ads, and notification activity automatically or manually based on your setup.
-
-    <div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4">
-        <p className="text-sm font-semibold tracking-wide text-blue-700">
-          SDK capabilities
-        </p>
-      </div>
-
-      <table className="w-full table-fixed divide-y divide-slate-200">
-        <thead className="bg-white">
-          <tr>
-            <th className="w-[34%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              SDK capability
-            </th>
-            <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Simple explanation
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="divide-y divide-slate-100 bg-white">
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Lightweight setup</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Add tracking without heavy development work.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Multi-platform support</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Use Android, iOS, Flutter, React Native, and Web SDKs.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Auto data collection</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Capture common activity after setup.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Manual events</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Track custom business actions when needed.</td>
-          </tr>
-          <tr className="hover:bg-slate-50">
-            <td className="px-5 py-4 text-sm font-semibold text-slate-950">Developer-friendly</td>
-            <td className="px-5 py-4 text-sm leading-6 text-slate-600">Simple integration for product and engineering teams.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <Tip>
-      Best for fast implementation and reliable product data collection.
-    </Tip>
-  </Accordion>
-</AccordionGroup>
-
----
-
-## How these features work together
-
-<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-6 py-5 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
-    <p className="text-sm font-semibold tracking-wide text-blue-700 dark:text-blue-300">
-      From SDK data to growth decisions 
-    </p>
-
-    <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-300">
-      Twinalyze collects product activity, connects it with events and integrations, and turns it into useful analytics and reports.
-    </p>
-  </div>
-
-  <div className="grid gap-4 p-5 md:grid-cols-4">
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <rect x="7" y="3" width="10" height="18" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
-            <path d="M10 6H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M11 18H13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
-        </div>
-
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white">
-          1
-        </div>
-      </div>
-
-      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-        SDK collects data
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
-        Twinalyze SDKs capture users, sessions, screens, events, ads, and notifications.
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M5 7.5H19" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M5 12H15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M5 16.5H11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <circle cx="18" cy="16.5" r="2" stroke="currentColor" strokeWidth="1.8" />
-          </svg>
-        </div>
-
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white">
-          2
-        </div>
-      </div>
-
-      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-        Events add meaning
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
-        Custom events and properties explain what users actually do.
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <circle cx="6" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
-            <circle cx="18" cy="6" r="3" stroke="currentColor" strokeWidth="1.8" />
-            <circle cx="18" cy="18" r="3" stroke="currentColor" strokeWidth="1.8" />
-            <path d="M8.8 10.8L15.2 7.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M8.8 13.2L15.2 16.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
-        </div>
-
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white">
-          3
-        </div>
-      </div>
-
-      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-        Integrations enrich data
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
-        Ads, notification, and third-party tools add more context to product activity.
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-slate-700 dark:bg-slate-950 dark:hover:border-blue-700">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M4 19H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M7 16V12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M12 16V8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M17 16V10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M7 9L12 5L17 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white">
-          4
-        </div>
-      </div>
-
-      <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-        Reports show insights
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
-        Analytics and advanced reports help teams improve engagement, revenue, and retention.
-      </p>
-    </div>
-  </div>
-</div>
 
 ---
 
