@@ -1,348 +1,188 @@
 ---
 title: "Roles and Permissions"
-sidebarTitle: "Roles and permissions"
-description: "Invite team members, assign roles, and control access to Twinalyze."
+sidebarTitle: "Roles and Permissions"
+description: "Manage organization members, assign roles, and control access across Twinalyze."
+icon: "users-gear"
 hideFooterPagination: true
 ---
 
 {/* ---
 title: "Roles and Permissions"
 sidebarTitle: "Roles and permissions"
-description: "Invite members, assign Owner, Admin, Analyst, or Viewer roles, and control access to your Twinalyze organization."
+description: "Invite team members, assign roles, and control access to Twinalyze."
 hideFooterPagination: true
----
+--- */}
 
-<h2 id="roles-and-permissions" className="sr-only">
-  Roles and permissions
-</h2>
 
-Use **Roles and Permissions** to control who can access your Twinalyze organization and what each person can do.
 
-Membership is managed at the organization level. Invite members by email, assign the appropriate role, and configure access to specific Twinalyze sections when more detailed control is required.
+Twinalyze uses role-based access control at the organization level. Each member is assigned a role for **Menu Group**, **Main Menu**, and **Sub Menu** permissions configured for that role.
+
 
 ---
 
-## Role capabilities
+## Organization roles
 
-Twinalyze provides four organization roles: **Owner**, **Admin**, **Analyst**, and **Viewer**.
+Twinalyze provides four organization roles. .
 
-| Organization role | Primary responsibility | Can invite | Can change roles | Can remove |
-| --- | --- | --- | --- | --- |
-| **Owner** | Full organization ownership and control | Admin, Analyst, Viewer | Admin, Analyst, Viewer | Admin, Analyst, Viewer |
-| **Admin** | Manage members, projects, settings, and permissions | Analyst, Viewer | Analyst, Viewer | Analyst, Viewer |
-| **Analyst** | Analyze users, events, reports, and product performance | No | No | No |
-| **Viewer** | Review permitted dashboards and reports without making changes | No | No | No |
+<div className="not-prose mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+  <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
+    <p className="text-base font-semibold text-black dark:text-white">
+      Organization role overview
+    </p>
+  </div>
 
-Feature access can be further controlled using **Menu Group**, **Main Menu**, and **Sub Menu** permissions.
+  <div className="overflow-x-auto">
+    <table className="w-full min-w-[700px] table-fixed">
+      <thead>
+        <tr className="border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
+          <th className="w-[180px] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Role
+          </th>
 
-### Owner
+          <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Description
+          </th>
+        </tr>
+      </thead>
 
-The Owner has the highest level of access and is responsible for the organization.
+      <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+        <tr className="transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800">
+          <td className="px-5 py-4 align-top">
+            <div className="flex items-center gap-3">
+             
 
-Keep the number of Owners limited to people who require complete control over organization members, projects, settings, and permissions.
+              <span className="text-sm font-semibold text-gray-950 dark:text-gray-100">
+                Owner
+              </span>
+            </div>
+          </td>
 
-### Admin
+          <td className="px-5 py-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
+            Full control
+          </td>
+        </tr>
 
-Admins manage day-to-day organization operations.
+        <tr className="transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800">
+          <td className="px-5 py-4 align-top">
+            <div className="flex items-center gap-3">
+            
 
-They can manage projects, invite team members, update supported roles, configure permissions, and maintain organization settings.
+              <span className="text-sm font-semibold text-gray-950 dark:text-gray-100">
+                Admin
+              </span>
+            </div>
+          </td>
 
-### Analyst
+          <td className="px-5 py-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
+            Manages organization members, projects, event, integrations.
+          </td>
+        </tr>
 
-Analysts work with product and user data.
+        <tr className="transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800">
+          <td className="px-5 py-4 align-top">
+            <div className="flex items-center gap-3">
 
-Use this role for team members who need to analyze dashboards, reports, users, events, engagement, retention, and product performance.
+              <span className="text-sm font-semibold text-gray-950 dark:text-gray-100">
+                Analyst
+              </span>
+            </div>
+          </td>
 
-### Viewer
+          <td className="px-5 py-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
+            Read-only access and can export data.
+          </td>
+        </tr>
 
-Viewers have limited, read-only access.
+        <tr className="transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800">
+          <td className="px-5 py-4 align-top">
+            <div className="flex items-center gap-3">
+              
 
-Use this role for stakeholders, clients, or team members who only need to review the dashboards and reports available to them.
+              <span className="text-sm font-semibold text-gray-950 dark:text-gray-100">
+                Viewer
+              </span>
+            </div>
+          </td>
+
+          <td className="px-5 py-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
+           Read-only access. Cannot modify anything.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 ---
 
-## Manage members
-
-Open the **Users** page to review organization members and pending invitations.
-
-| Member view | What it shows |
-| --- | --- |
-| **All Users** | Members who have accepted their invitation and joined the organization. |
-| **Pending User** | Invitations that have been sent but have not yet been accepted. |
-
-<Frame>
-  ![Twinalyze users and invitation management page](/images/user_permission.png)
-</Frame>
-
-From this page, authorized users can invite members, review pending invitations, update roles, and remove members.
-
----
 
 ## Invite a member
 
+Follow these steps to invite a member and assign the correct organization role.
+
 <Steps titleSize="h3">
-  <Step title="Open the Users page">
-    Open your Twinalyze organization and go to the **Users** page.
 
-    This page displays existing organization members and pending invitations.
-  </Step>
-
-  <Step title="Click Invite User">
-    Click the **Invite User** button to open the invitation form.
-  </Step>
-
-  <Step title="Enter the email address">
-    Enter the email address of the person you want to invite.
-
-    Use the email address they will use to access Twinalyze.
-  </Step>
-
-  <Step title="Choose a role">
-    Select the role that matches the member's responsibilities:
-
-    - **Owner** for complete organization control
-    - **Admin** for managing members, projects, and settings
-    - **Analyst** for working with analytics and reports
-    - **Viewer** for read-only access
-  </Step>
 
   <Step title="Send the invitation">
-    Click **Invite** to send the organization invitation.
+    Review the email address and selected role, then click **Invite**.
 
-    Twinalyze sends an invitation to the entered email address.
+    Twinalyze sends an invitation email with instructions for joining the organization.
+
+    <Frame caption="Send the organization invitation">
+      ![Send a Twinalyze organization invitation](/images/roles-permissions/send-invite.png)
+    </Frame>
   </Step>
 
   <Step title="Review the pending invitation">
-    Open the **Pending User** tab.
+    Open the **Pending User** tab to confirm that the invitation was sent.
 
-    The invited member remains in this section until they accept the invitation.
-  </Step>
-</Steps>
+    The member remains in this section until they accept the invitation.
 
----
-
-## Change a member's role
-
-<Steps titleSize="h3">
-  <Step title="Open All Users">
-    Go to the **Users** page and open the **All Users** tab.
-  </Step>
-
-  <Step title="Find the member">
-    Find the member whose role you want to update.
-
-    Use the available search or filtering options when the organization contains many members.
-  </Step>
-
-  <Step title="Open the role selector">
-    Click the current role shown for the member.
-  </Step>
-
-  <Step title="Choose the new role">
-    Select **Admin**, **Analyst**, or **Viewer**, depending on the access the member requires.
-  </Step>
-
-  <Step title="Confirm the change">
-    Save or confirm the role update.
-
-    The member's access is updated according to the selected role and its assigned permissions.
-  </Step>
-</Steps>
-
----
-
-## Revoke a pending invitation
-
-Revoke an invitation when it was sent to the wrong email address or when the person no longer requires access.
-
-<Steps titleSize="h3">
-  <Step title="Open Pending User">
-    Go to the **Users** page and open the **Pending User** tab.
-  </Step>
-
-  <Step title="Find the invitation">
-    Find the pending invitation you want to cancel.
-  </Step>
-
-  <Step title="Open the invitation actions">
-    Open the available actions for the pending user.
-  </Step>
-
-  <Step title="Revoke the invitation">
-    Select **Revoke Invitation** and confirm the action.
-
-    The pending invitation is removed and can no longer be used to join the organization.
-  </Step>
-</Steps>
-
----
-
-## Remove a member
-
-Removing a member revokes their access to the Twinalyze organization.
-
-<Steps titleSize="h3">
-  <Step title="Open All Users">
-    Go to the **Users** page and open the **All Users** tab.
-  </Step>
-
-  <Step title="Find the member">
-    Find the member you want to remove from the organization.
-  </Step>
-
-  <Step title="Open member actions">
-    Open the available actions for that member.
-  </Step>
-
-  <Step title="Select Remove User">
-    Select **Remove User** from the available options.
-  </Step>
-
-  <Step title="Confirm removal">
-    Review the confirmation message and remove the member.
-
-    The user immediately loses access to the organization and its projects.
-  </Step>
-</Steps>
-
----
-
-## Configure feature permissions
-
-Roles define a member's general responsibilities, while feature permissions control which areas of Twinalyze each role can access.
-
-Permissions are organized into three levels.
-
-| Permission level | What it controls | Example |
-| --- | --- | --- |
-| **Menu Group** | A complete product area in Twinalyze | Users |
-| **Main Menu** | A page inside a Menu Group | Page Insights |
-| **Sub Menu** | A nested page, report, or action | Detailed report |
-
-Access normally follows this hierarchy:
-
-**Menu Group → Main Menu → Sub Menu**
-
-A role may require access to the parent Menu Group and Main Menu before it can access a Sub Menu.
-
----
-
-## View permission levels
-
-<Tabs>
-  <Tab title="Menu Group">
-    Use **Menu Group** permissions to control access to an entire Twinalyze product area.
-
-    Examples include Users, Product Overview, Ad, Data, Messaging, Research, and Settings.
-
-    <Frame>
-      ![Twinalyze Menu Group permissions](/images/Menu_group_permission.png)
+    <Frame caption="Review pending organization invitations">
+      ![Twinalyze pending user invitations](/images/roles-permissions/pending-user.png)
     </Frame>
-  </Tab>
-
-  <Tab title="Main Menu">
-    Use **Main Menu** permissions to control access to an individual page inside a Menu Group.
-
-    For example, a role may have access to the Users Menu Group but only be allowed to open specific user analytics pages.
-
-    <Frame>
-      ![Twinalyze Main Menu permissions](/images/Main_menu_permission.png)
-    </Frame>
-  </Tab>
-
-  <Tab title="Sub Menu">
-    Use **Sub Menu** permissions when you need detailed control over a nested page, report, or feature.
-
-    <Frame>
-      ![Twinalyze Sub Menu permissions](/images/Sub_menu_permission.png)
-    </Frame>
-  </Tab>
-</Tabs>
-
----
-
-## Give a role access
-
-<Steps titleSize="h3">
-  <Step title="Choose a permission level">
-    Open **Menu Group**, **Main Menu**, or **Sub Menu**, depending on the level of access you want to configure.
-  </Step>
-
-  <Step title="Select the role">
-    Choose **Owner**, **Admin**, **Analyst**, or **Viewer** from the Role Type selector.
-  </Step>
-
-  <Step title="Find the feature">
-    Use the search field or available filters to find the required menu, page, report, or feature.
-  </Step>
-
-  <Step title="Open the permission editor">
-    Click the pencil icon for the permission you want to update.
-  </Step>
-
-  <Step title="Assign the role">
-    Select the roles that should be allowed to access the feature.
-  </Step>
-
-  <Step title="Enable the permission">
-    Make sure the permission status is active.
-  </Step>
-
-  <Step title="Save the changes">
-    Save the permission configuration.
-
-    Members assigned to the selected role can now access the feature according to the configured hierarchy.
   </Step>
 </Steps>
 
----
-
-## Permission controls
-
-| Control | What it does |
-| --- | --- |
-| **Role Type** | Displays permissions assigned to the selected role. |
-| **Status** | Shows whether a permission is active or inactive. |
-| **Search** | Finds a Menu Group, Main Menu, Sub Menu, or page by name. |
-| **Pencil icon** | Opens the permission editor. |
-| **Status toggle** | Enables or disables the selected permission. |
-| **Save** | Applies the updated role permission configuration. |
 
 ---
+
 
 ## Best practices
 
 <AccordionGroup>
+  <Accordion title="Assign the lowest required access">
+    Give each member only the role and permissions required for their
+    responsibilities.
+  </Accordion>
+
   <Accordion title="Keep the number of Owners limited">
-    Give the Owner role only to people who require complete control over the organization.
+    Assign the Owner role only to people who require complete control over the
+    organization.
   </Accordion>
 
   <Accordion title="Use Admin for trusted managers">
-    Assign Admin access to team members who manage projects, users, settings, integrations, and permissions.
+    Assign Admin access to members who manage projects, users, settings,
+    integrations, and permissions.
   </Accordion>
 
-  <Accordion title="Use Analyst for data teams">
-    Assign Analyst access to people who work with users, events, reports, engagement, retention, and product performance.
+  <Accordion title="Use Analyst for analytics teams">
+    Assign Analyst access to members who work with users, events, reports,
+    engagement, retention, and product performance.
   </Accordion>
 
   <Accordion title="Use Viewer for read-only access">
-    Assign Viewer access to stakeholders or team members who only need to review permitted dashboards and reports.
-  </Accordion>
-
-  <Accordion title="Follow least-privilege access">
-    Give each member only the permissions required for their responsibilities.
+    Assign Viewer access to stakeholders or team members who only need to
+    review permitted dashboards and reports.
   </Accordion>
 
   <Accordion title="Review pending invitations regularly">
     Revoke invitations that were sent incorrectly or are no longer required.
   </Accordion>
 
-  <Accordion title="Keep parent permissions enabled">
-    When granting access to a Sub Menu, confirm that the role also has access to its parent Main Menu and Menu Group.
-  </Accordion>
-
-  <Accordion title="Review permissions when responsibilities change">
-    Update a member's role and permissions whenever their position or responsibilities change.
+  <Accordion title="Review access when responsibilities change">
+    Update a member's role and permissions whenever their position or
+    responsibilities change.
   </Accordion>
 </AccordionGroup>
 
@@ -372,443 +212,5 @@ A role may require access to the parent Menu Group and Main Menu before it can a
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
-</div> */}
-
-
-<div className="not-prose overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-  <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 px-6 py-8 dark:from-blue-950/30 dark:via-gray-950 dark:to-indigo-950/20 sm:px-8 sm:py-10">
-    <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 shadow-sm dark:border-blue-900 dark:bg-gray-900 dark:text-blue-300">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="15"
-        height="15"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z" />
-        <path d="m9 12 2 2 4-4" />
-      </svg>
-
-      Organization access
-    </div>
-
-    <h2 className="mt-5 text-3xl font-bold tracking-tight text-gray-950 dark:text-gray-100 sm:text-4xl">
-      Roles and permissions
-    </h2>
-
-    <p className="mt-4 max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-400">
-      Add people to your organization and decide which parts of Twinalyze they can access.
-    </p>
-
-    <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-    
-
-      <a
-        href="#manage-permissions"
-        className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-800 dark:hover:bg-blue-950/30 dark:hover:text-blue-300"
-      >
-        Set permissions
-        <span>↓</span>
-      </a>
-    </div>
-  </div>
 </div>
 
----
-
-
-
-## Invite a user
-
-Invite a person using their email address and assign their role before they join.
-
-<div className="not-prose mt-6 grid gap-3 md:grid-cols-3">
-  <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-950">
-    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
-      1
-    </div>
-
-    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
-      Enter email
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-      Enter the email address of the person you want to invite.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-950">
-    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
-      2
-    </div>
-
-    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
-      Select role
-    </div>
-    
-    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-      Choose Owner, Admin, Analyst, or Viewer.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-950">
-    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">
-      3
-    </div>
-
-    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
-      Select Invite
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-      Twinalyze sends an invitation to the entered email address.
-    </p>
-  </div>
-</div>
-
-<div className="not-prose mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-  <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
-    <div className="flex items-center gap-2">
-      <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-      <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-      <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-    </div>
-
-    <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
-      Users
-    </span>
-</div>
-
-  <img
-    src="/images/user_permission.png"
-    alt="Twinalyze users and invitation management page"
-    className="h-auto w-full"
-  />
-</div>
-
-### Review invited users
-
-Use these two tabs inside the Users page:
-
-<div className="not-prose mt-4 grid gap-3 sm:grid-cols-2">
-  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
-    <div className="text-sm font-semibold text-gray-950 dark:text-gray-100">
-      All Users
-    </div>
-
-    <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-      Shows users who have joined the organization.
-    </p>
-  </div>
-
-  <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-900">
-    <div className="text-sm font-semibold text-gray-950 dark:text-gray-100">
-      Pending User
-    </div>
-
-    <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-      Shows invitations that have not yet been accepted.
-    </p>
-  </div>
-</div>
-
----
-
-## Choose the correct role
-
-<div className="not-prose grid gap-3 sm:grid-cols-2">
-  <div className="rounded-2xl border border-amber-200 bg-amber-50/70 p-5 dark:border-amber-900 dark:bg-amber-950/20">
-    <div className="inline-flex rounded-lg bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:bg-amber-950 dark:text-amber-300">
-      Owner
-    </div>
-
-    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
-      Full organization control
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-      Use for the organization owner or the person responsible for the complete
-      account.
-    </p>
-</div>
-
-  <div className="rounded-2xl border border-purple-200 bg-purple-50/70 p-5 dark:border-purple-900 dark:bg-purple-950/20">
-    <div className="inline-flex rounded-lg bg-purple-100 px-2.5 py-1 text-xs font-semibold text-purple-700 dark:bg-purple-950 dark:text-purple-300">
-      Admin
-    </div>
-
-    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
-      Manage team and settings
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-      Use for trusted team members who manage users, permissions, and settings.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-blue-200 bg-blue-50/70 p-5 dark:border-blue-900 dark:bg-blue-950/20">
-    <div className="inline-flex rounded-lg bg-blue-100 px-2.5 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-950 dark:text-blue-300">
-      Analyst
-    </div>
-
-    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
-      Work with analytics
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-      Use for people who review reports, users, events, and product performance.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5 dark:border-gray-800 dark:bg-gray-900">
-    <div className="inline-flex rounded-lg bg-gray-200 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:bg-gray-800 dark:text-gray-300">
-      Viewer
-    </div>
-
-    <div className="mt-4 text-sm font-semibold text-gray-950 dark:text-gray-100">
-      View information
-    </div>
-
-    <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-      Use for people who only need to review the information available to them.
-    </p>
-  </div>
-</div>
-
-<Note>
-  The selected role does not automatically receive every permission. Access
-  depends on the permissions assigned to that role.
-</Note>
-
----
-
-<div id="manage-permissions" className="scroll-mt-24" />
-
-## Set permissions
-
-Permissions are arranged from broad access to detailed access.
-
-<div className="not-prose mt-6">
-  <div className="grid gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
-    <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-900 dark:bg-blue-950/20">
-      <div className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
-        Level 1
-      </div>
-
-      <div className="mt-2 text-base font-semibold text-gray-950 dark:text-gray-100">
-        Menu Group
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-        A complete product area.
-      </p>
-
-      <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
-        Example: Users
-      </div>
-    </div>
-
-    <div className="hidden text-xl text-gray-400 md:block">→</div>
-
-    <div className="rounded-2xl border border-purple-200 bg-purple-50 p-5 dark:border-purple-900 dark:bg-purple-950/20">
-      <div className="text-xs font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400">
-        Level 2
-    </div>
-
-      <div className="mt-2 text-base font-semibold text-gray-950 dark:text-gray-100">
-        Main Menu
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-        A page inside a Menu Group.
-      </p>
-
-      <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
-        Example: Page Insights
-      </div>
-    </div>
-
-    <div className="hidden text-xl text-gray-400 md:block">→</div>
-
-    <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-900 dark:bg-emerald-950/20">
-      <div className="text-xs font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
-        Level 3
-      </div>
-
-      <div className="mt-2 text-base font-semibold text-gray-950 dark:text-gray-100">
-        Sub Menu
-      </div>
-
-      <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-        A nested page or action.
-      </p>
-
-      <div className="mt-3 text-xs text-gray-500 dark:text-gray-400">
-        Example: Detailed report
-      </div>
-    </div>
-  </div>
-</div>
-
-<Warning>
-  To access a Sub Menu, the role may also need access to its parent Menu Group
-  and Main Menu.
-</Warning>
-
----
-
-## View each permission level
-
-<Tabs>
-  <Tab title="Menu Group">
-    Use **Menu Group** when you want to control access to a complete Twinalyze
-    section.
- 
-    Examples include Users, Product Overview, Ad, Data, and Settings.
-
-    <div className="not-prose mt-5 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-      <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
-        <div className="flex gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-        </div>
-
-        <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
-          Menu Group
-        </span>
-      </div>
-
-      <img
-        src="/images/Menu_group_permission.png"
-        alt="Twinalyze Menu Group permissions"
-        className="h-auto w-full"
-      />
-    </div>
-  </Tab>
-
-  <Tab title="Main Menu">
-    Use **Main Menu** when you want to control access to one page inside a
-    product section.
-
-    <div className="not-prose mt-5 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-      <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
-        <div className="flex gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-        </div>
-
-        <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
-          Main Menu
-        </span>
-      </div>
-
-      <img
-        src="/images/Main_menu_permission.png"
-        alt="Twinalyze Main Menu permissions"
-        className="h-auto w-full"
-      />
-    </div>
-  </Tab>
-
-  <Tab title="Sub Menu">
-    Use **Sub Menu** when you need more detailed control over a nested page or
-    feature.
-
-    <div className="not-prose mt-5 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
-      <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
-        <div className="flex gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-        </div>
-
-        <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
-          Sub Menu
-        </span>
-      </div>
-
-      <img
-        src="/images/Sub_menu_permission.png"
-        alt="Twinalyze Sub Menu permissions"
-        className="h-auto w-full"
-      />
-    </div>
-  </Tab>
-</Tabs>
-
----
-
-## Give a role access
-
-<Steps>
-  <Step title="Choose a permission level">
-    Open **Menu Group**, **Main Menu**, or **Sub Menu**.
-  </Step>
-
-  <Step title="Find the required feature">
-    Use the filters or search field to find the menu or page.
-  </Step>
-
-  <Step title="Select the edit icon">
-    Open the permission editor using the pencil icon.
-  </Step>
-
-  <Step title="Select allowed roles">
-    Choose the roles that should be able to access the feature.
-  </Step>
-
-  <Step title="Confirm the permission is active">
-    Keep the status toggle enabled and save the change.
-  </Step>
-</Steps>
-
----
-
-## What do the controls mean?
-
-| Control | What it does |
-| --- | --- |
-| **Role Type** | Shows permissions assigned to a selected role. |
-| **Status** | Shows active or inactive permissions. |
-| **Search** | Finds a menu or page by name. |
-| **Pencil icon** | Opens the permission editor. |
-| **Status toggle** | Enables or disables the permission. |
-
-<Check>
-  Start by inviting the user, assign the correct role, and then give that role
-  access to the required Menu Groups and pages.
-</Check>
-
----
-
-<div className="twinalyze-bottom-nav">
-  <a
-    href="/overview/organization-and-project/core-features"
-    className="twinalyze-nav-side"
-  >
-    <span className="twinalyze-nav-arrow">‹</span>
-    <span>Previous</span>
-  </a>
-
-  <a
-    href="/overview/Data/users-events-properties"
-    className="twinalyze-nav-center"
-  >
-    <strong>Users, events, and properties</strong>
-    <span>Understand how Twinalyze organizes analytics data.</span>
-  </a>
-
-  <a
-    href="/overview/Data/users-events-properties"
-    className="twinalyze-nav-side"
-  >
-    <span>Next</span>
-    <span className="twinalyze-nav-arrow">›</span>
-  </a>
-</div>

@@ -1,4 +1,446 @@
 ---
+title: "Users, Events & Tracking"
+description: "Learn how Twinalyze identifies users, captures events, and uses properties to provide meaningful product insights."
+hideFooterPagination: true
+---
+
+Twinalyze organizes your analytics data into three main parts: **users, events, and properties**.
+
+<CardGroup cols={3}>
+  <Card title="Users" icon="users">
+    People who interact with your website or application.
+  </Card>
+
+  <Card title="Events" icon="bolt">
+    Actions performed by users, such as viewing a page or submitting a form.
+  </Card>
+
+  <Card title="Properties" icon="tags">
+    Additional details about users, devices, pages, screens, and events.
+  </Card>
+</CardGroup>
+
+---
+
+## How tracking works
+
+<Steps>
+  <Step title="A user visits your product">
+    A user opens your website or application.
+  </Step>
+
+  <Step title="Twinalyze identifies the user">
+    The SDK connects the activity with the available user, device, and session information.
+  </Step>
+
+  <Step title="An action is captured">
+    Common actions are captured automatically. Business-specific actions can be sent as custom events.
+  </Step>
+
+  <Step title="Properties add context">
+    Properties describe the page, screen, device, source, user, or action.
+  </Step>
+
+  <Step title="Insights appear in the dashboard">
+    Twinalyze uses the collected data to generate reports and user behavior insights.
+  </Step>
+</Steps>
+
+---
+
+## Understand the data model
+
+A user opens a product page and adds a product to the cart.
+
+```json
+{
+  "userId": "user_1025",
+  "eventName": "add_to_cart",
+  "properties": {
+    "productName": "Hair Clip",
+    "price": 299,
+    "pageUrl": "/products/hair-clip",
+    "device": "Chrome Browser",
+    "country": "India"
+  }
+}
+```
+
+| Data type | Example | What it tells you |
+| --- | --- | --- |
+| **User** | `user_1025` | Who performed the action |
+| **Event** | `add_to_cart` | What action was performed |
+| **Properties** | `productName`, `price`, `pageUrl` | Additional information about the action |
+
+<Info>
+  An event tells you what happened. Properties explain where, how, and under what conditions it happened.
+</Info>
+
+---
+
+## Users
+
+A user represents a person interacting with your website or application.
+
+Twinalyze can associate user activity with:
+
+- User ID
+- Device ID
+- Session ID
+- Browser or device
+- Operating system
+- Country and city
+- First and last activity
+- User properties
+
+### Find users in the dashboard
+
+```txt
+Dashboard → Users
+```
+
+<Frame>
+  <img
+    src="/images/User_sideTab.PNG"
+    alt="Twinalyze Users sidebar showing Page Insights, User Engagement, User Retention, and User Growth"
+  />
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Page Insights" icon="browser">
+    Understand how users interact with individual pages.
+  </Card>
+
+  <Card title="User Engagement" icon="chart-line-up">
+    Analyze how actively users interact with your product.
+  </Card>
+
+  <Card title="User Retention" icon="repeat">
+    Measure how many users return over time.
+  </Card>
+
+  <Card title="User Growth" icon="trend-up">
+    Track new, active, and returning user trends.
+  </Card>
+</CardGroup>
+
+---
+
+## Events and properties
+
+An event represents an action performed by a user. A property provides additional information about that action.
+
+| Event | Example properties |
+| --- | --- |
+| `page_view` | `page_url`, `page_title`, `referrer` |
+| `elementClick` | `element_text`, `element_tag` |
+| `formSubmit` | `form_id`, `form_name`, `page_url` |
+| `add_to_cart` | `product_name`, `price`, `quantity` |
+| `purchase_completed` | `order_id`, `revenue`, `currency` |
+
+### Event vs property
+
+| Event | Property |
+| --- | --- |
+| Describes the action | Describes the action in more detail |
+| `page_view` | `page_url`, `page_title` |
+| `elementClick` | `element_text`, `element_id` |
+| `add_to_cart` | `product_name`, `price` |
+
+---
+
+## How events are collected
+
+Twinalyze supports two event collection methods.
+
+<CardGroup cols={2}>
+  <Card title="Auto Capture" icon="wand-magic-sparkles">
+    Automatically collects supported website and application activity.
+  </Card>
+
+  <Card title="Custom Events" icon="code">
+    Tracks important product or business actions defined by your team.
+  </Card>
+</CardGroup>
+
+| Type | Best used for | Examples |
+| --- | --- | --- |
+| **Auto Capture** | Common user interactions | `page_view`, `elementClick`, `screenViewed` |
+| **Custom Event** | Business-specific actions | `checkout_started`, `purchase_completed` |
+
+---
+
+## Auto Capture Events
+
+Auto Capture Events are common actions tracked automatically by the Twinalyze SDK.
+
+They help you start collecting analytics data without manually adding tracking code for every basic interaction.
+
+<Steps>
+  <Step title="Install the SDK">
+    Add the Twinalyze SDK to your website or application.
+  </Step>
+
+  <Step title="SDK detects supported activity">
+    Twinalyze detects supported page, screen, lifecycle, form, and interaction events.
+  </Step>
+
+  <Step title="Events are sent to Twinalyze">
+    Each event is sent with its source, timestamp, session information, and properties.
+  </Step>
+
+  <Step title="Manage events in the dashboard">
+    View and control collected events from the Data section.
+  </Step>
+</Steps>
+
+<Tip>
+  Available auto-captured events depend on the platform, SDK version, and enabled SDK configuration.
+</Tip>
+
+---
+
+## Auto-captured events by platform
+
+<Tabs>
+  <Tab title="Web">
+    Web auto capture tracks common actions performed on a website.
+
+    | Event | What it tracks |
+    | --- | --- |
+    | `page_view` | When a user visits or navigates to a page |
+    | `elementClick` | When a user clicks a button, link, or element |
+    | `scrollDepth` | How far a user scrolls on a page |
+    | `formStart` | When a user starts interacting with a form |
+    | `formSubmit` | When a user submits a form |
+    | `searchResultsView` | When website search results are viewed |
+
+    ### Common Web properties
+
+    | Property | Example |
+    | --- | --- |
+    | `page_url` | `/pricing` |
+    | `page_title` | `Pricing` |
+    | `element_text` | `Start Free` |
+    | `element_tag` | `button` |
+    | `referrer` | `google.com` |
+    | `utm_source` | `google` |
+
+    <Card
+      title="Explore Web SDK"
+      icon="globe"
+      href="/sdks/javascript/analytics/get-started"
+    >
+      Install the Web SDK and start collecting website activity.
+    </Card>
+  </Tab>
+
+  <Tab title="Android">
+    Android auto capture tracks app screens, lifecycle activity, language, permissions, and app startup performance.
+
+    | Event | What it tracks |
+    | --- | --- |
+    | **App Language** | The language currently used in the application |
+    | **Splash Time** | Time taken by the splash screen before the next screen opens |
+    | **Screen Viewed** | When a user views an activity or application screen |
+    | **Fragment Viewed** | When a user views a fragment |
+    | **App in Background** | When the application moves to the background |
+    | **App in Foreground** | When the application returns to the foreground |
+    | **Permission** | Permission request and permission response activity |
+
+    ### Common Android properties
+
+    | Property | Example |
+    | --- | --- |
+    | `appLanguage` | `English` |
+    | `splashTime` | `1.8 seconds` |
+    | `screenName` | `HomeActivity` |
+    | `screenClass` | `HomeActivity` |
+    | `fragmentName` | `ProductFragment` |
+    | `permissionName` | `POST_NOTIFICATIONS` |
+    | `permissionStatus` | `granted` |
+    | `appVersion` | `1.0.8` |
+    | `deviceModel` | `Samsung SM-A525F` |
+
+    <Card
+      title="Explore Android SDK"
+      icon="smartphone"
+      href="/sdks/app/analytics/get-started"
+    >
+      Install the Android SDK and start collecting application activity.
+    </Card>
+  </Tab>
+</Tabs>
+
+---
+
+## Manage events
+
+View and manage all tracked events from:
+
+```txt
+Dashboard → Data → Events
+```
+
+<Frame>
+  <img
+    src="/images/Data_events.PNG"
+    alt="Twinalyze Data Events screen showing event names, sources, statuses, and visibility controls"
+  />
+</Frame>
+
+### Event controls
+
+| Control | Purpose |
+| --- | --- |
+| **Event Name** | Shows the system name of the event |
+| **Custom Event Name** | Adds a readable dashboard name |
+| **Source** | Shows whether the event came from Web, Android, or iOS |
+| **Auto Status** | Controls automatic event collection |
+| **Manual Status** | Controls manual event collection |
+| **Status** | Activates or deactivates the event |
+| **Visible** | Shows or hides the event in dashboard views |
+| **Search** | Finds an event quickly |
+
+<Warning>
+  Disabling an important event can affect reports that use that event.
+</Warning>
+
+---
+
+## Manage properties
+
+View collected properties from:
+
+```txt
+Dashboard → Data → Properties
+```
+
+<Frame>
+  <img
+    src="/images/properties.PNG"
+    alt="Twinalyze Data Properties screen showing collected event properties"
+  />
+</Frame>
+
+Properties help you understand the context connected with each event.
+
+Common property categories include:
+
+<CardGroup cols={3}>
+  <Card title="Event Properties" icon="bolt">
+    Information related to a specific user action.
+  </Card>
+
+  <Card title="User Properties" icon="user">
+    Information that describes an identified user.
+  </Card>
+
+  <Card title="Device Properties" icon="devices">
+    Information about the user's browser, device, or operating system.
+  </Card>
+</CardGroup>
+
+---
+
+## When to use custom events
+
+Use custom events for important actions that cannot be fully understood through auto capture.
+
+| Custom event | Meaning |
+| --- | --- |
+| `signup_completed` | User completed signup |
+| `add_to_cart` | User added a product to the cart |
+| `checkout_started` | User started checkout |
+| `purchase_completed` | User completed a purchase |
+| `payment_failed` | A payment attempt failed |
+| `subscription_started` | User started a subscription |
+
+<Info>
+  Let auto capture handle common interactions. Use custom events for important product, conversion, and revenue actions.
+</Info>
+
+---
+
+
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Keep important auto events active">
+    Page views, screen views, foreground, background, and session-related events are required for accurate basic analytics.
+  </Accordion>
+
+  <Accordion title="Use clear event names">
+    Use readable names such as `checkout_started`, `purchase_completed`, and `payment_failed`.
+  </Accordion>
+
+  <Accordion title="Keep naming consistent">
+    Follow the same naming format across Web, Android, iOS, and other platforms.
+  </Accordion>
+
+  <Accordion title="Add only useful properties">
+    Add properties that help your team filter, segment, compare, or understand an event.
+  </Accordion>
+
+  <Accordion title="Do not send sensitive data">
+    Never send passwords, access tokens, payment card information, or confidential personal information.
+  </Accordion>
+
+  <Accordion title="Test before production">
+    Verify users, events, properties, sources, and sessions in a test project before releasing the integration.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<CardGroup cols={2}>
+  <Card
+    title="Web SDK"
+    icon="globe"
+    href="/sdks/javascript/analytics/get-started"
+  >
+    Set up tracking for your website.
+  </Card>
+
+  <Card
+    title="Android SDK"
+    icon="smartphone"
+    href="/sdks/app/analytics/get-started"
+  >
+    Set up tracking for your Android application.
+  </Card>
+</CardGroup>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a
+    href="/overview/Project-and-Organization/role-based-authentication"
+    className="twinalyze-nav-side"
+  >
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a
+    href="/overview/Data/data-control-and-quality"
+    className="twinalyze-nav-center"
+  >
+    <strong>Data Control and Quality</strong>
+    <span>Learn how to maintain accurate and reliable analytics data.</span>
+  </a>
+
+  <a
+    href="/overview/Data/data-control-and-quality"
+    className="twinalyze-nav-side"
+  >
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
+
+{/* ---
 title: "Users, Events & Properties"
 description: "Understand users, events, and properties in Twinalyze and where to manage them in the dashboard."
 hideFooterPagination: true
@@ -166,4 +608,4 @@ Properties help you manage extra details connected to events.
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
-</div>
+</div> */}

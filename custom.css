@@ -1104,3 +1104,103 @@ header
 
 
 
+
+
+
+
+
+/* =================================
+   SDK, Integration and Support icons
+   Exact size: 26px
+================================= */
+
+.twinalyze-card-icons-26 img {
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  max-width: 26px !important;
+  max-height: 26px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+}
+
+/* =================================
+   Core Features tabs
+
+   Inactive:
+   - Black
+   - Normal weight
+
+   Selected:
+   - Blue
+   - Bold
+================================= */
+/* Default and inactive tabs */
+.twinalyze-core-feature-tabs [role="tab"],
+.twinalyze-core-feature-tabs [role="tab"] * {
+  color: #000000 !important;
+  font-weight: 400 !important;
+}
+
+/* Selected tab: blue and bold */
+.twinalyze-core-feature-tabs [role="tab"][aria-selected="true"],
+.twinalyze-core-feature-tabs [role="tab"][aria-selected="true"] *,
+.twinalyze-core-feature-tabs [role="tab"][data-state="active"],
+.twinalyze-core-feature-tabs [role="tab"][data-state="active"] * {
+  color: #2563eb !important;
+  font-weight: 700 !important;
+}
+
+/* Inactive tab: black and normal */
+.twinalyze-core-feature-tabs [role="tab"][aria-selected="false"],
+.twinalyze-core-feature-tabs [role="tab"][aria-selected="false"] *,
+.twinalyze-core-feature-tabs [role="tab"][data-state="inactive"],
+.twinalyze-core-feature-tabs [role="tab"][data-state="inactive"] * {
+  color: #000000 !important;
+  font-weight: 400 !important;
+}
+
+/* Dark mode inactive */
+html.dark .twinalyze-core-feature-tabs [role="tab"],
+html.dark .twinalyze-core-feature-tabs [role="tab"] *,
+.dark .twinalyze-core-feature-tabs [role="tab"],
+.dark .twinalyze-core-feature-tabs [role="tab"] * {
+  color: #ffffff !important;
+  font-weight: 400 !important;
+}
+
+/* Dark mode selected: blue and bold */
+html.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"],
+html.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"]
+  *,
+html.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"],
+html.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"]
+  *,
+.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"],
+.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"]
+  *,
+.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"],
+.dark
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"]
+  * {
+  color: #60a5fa !important;
+  font-weight: 700 !important;
+}
+
+

@@ -324,7 +324,7 @@ Twinalyze brings your product data, user behavior, ads performance, notification
 </Tabs> */}
 
 ---
-
+{/*
 export const CoreFeatureIcon = ({ src, alt }) => (
   <span
     role="img"
@@ -790,8 +790,50 @@ export const CoreFeatureIcon = ({ src, alt }) => (
 
 --- */}
 
- ## Core Features
+ ---
+export const CoreFeatureIcon = ({ src, alt }) => (
+  <span
+    role="img"
+    aria-label={alt}
+    className="inline-flex shrink-0"
+    style={{
+      width: "18px",
+      height: "18px",
+      minWidth: "18px",
+      minHeight: "18px",
+    }}
+  >
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      width="18"
+      height="18"
+      className="block shrink-0 object-contain dark:hidden"
+      style={{
+        width: "18px",
+        height: "18px",
+      }}
+    />
 
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      width="18"
+      height="18"
+      className="hidden shrink-0 object-contain dark:block"
+      style={{
+        width: "18px",
+        height: "18px",
+        filter: "brightness(0) saturate(100%) invert(100%)",
+      }}
+    />
+  </span>
+)
+
+## Core Features
+<div className="twinalyze-core-feature-tabs">
 <Tabs>
   <Tab title="Analytics">
     <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
@@ -1210,7 +1252,7 @@ export const CoreFeatureIcon = ({ src, alt }) => (
     </div>
   </Tab>
 </Tabs>
-
+</div>
 ---
 
 

@@ -11,7 +11,7 @@ export const DashboardTour = () => {
         "Get a clear starting point for your dashboard with setup shortcuts and quick access to key sections.",
       images: [
         {
-          src: "/images/Dashboard/Dashboard.png",
+          src: "/images/Dashboard/Home.png",
           title: "Home",
           caption:
             "View your dashboard overview, setup status, project shortcuts, and quick links to continue configuration.",
@@ -25,7 +25,7 @@ export const DashboardTour = () => {
         "Monitor live users, active sessions, and current activity happening across your app or website.",
       images: [
         {
-          src: "/images/Dashboard/RealTime.PNG",
+          src: "/images/Dashboard/RealTime.png",
           title: "Realtime User",
           caption:
             "Track users who are active right now, see live activity, and understand current product usage instantly.",
@@ -45,7 +45,7 @@ export const DashboardTour = () => {
             "See product-level performance, active users, retention users, session duration, country data, and usage summaries.",
         },
         {
-          src: "/images/Dashboard/Dashboard_3_System_Insights_2.PNG",
+          src: "/images/Dashboard/SystemInsights.png",
           title: "System Insights",
           caption:
             "Analyze device, operating system, app version, browser, and technical performance to understand system behavior.",
