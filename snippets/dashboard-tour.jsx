@@ -212,6 +212,18 @@ export const DashboardTour = () => {
           caption:
             "Manage organization information, team members, users, roles, access, and permissions.",
         },
+         {
+          src: "/images/Dashboard/.PNG",
+          title: "Project Setting",
+          caption:
+            "Update project name, logo, API keys, platform details, Firebase key, and project configuration.",
+        },
+         {
+          src: "/images/Dashboard/.PNG",
+          title: "Project Setting",
+          caption:
+            "Update project name, logo, API keys, platform details, Firebase key, and project configuration.",
+        }
       ],
     },
   ]
