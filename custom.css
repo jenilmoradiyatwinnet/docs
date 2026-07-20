@@ -1275,3 +1275,62 @@ html.dark
   filter: brightness(0) saturate(100%) invert(66%) sepia(91%)
     saturate(1776%) hue-rotate(191deg) brightness(101%) contrast(96%) !important;
 }
+
+/* =================================
+   Universal Mintlify tab styling
+
+   Inactive:
+   - Black
+   - Normal weight
+
+   Selected:
+   - Blue
+   - Bold
+================================= */
+
+/* Default and inactive tabs */
+.twinalyze-tabs [role="tab"],
+.twinalyze-tabs [role="tab"] * {
+  color: #000000 !important;
+  font-weight: 400 !important;
+}
+
+/* Selected tab */
+.twinalyze-tabs [role="tab"][aria-selected="true"],
+.twinalyze-tabs [role="tab"][aria-selected="true"] *,
+.twinalyze-tabs [role="tab"][data-state="active"],
+.twinalyze-tabs [role="tab"][data-state="active"] * {
+  color: #2563eb !important;
+  font-weight: 700 !important;
+}
+
+/* Explicit inactive state */
+.twinalyze-tabs [role="tab"][aria-selected="false"],
+.twinalyze-tabs [role="tab"][aria-selected="false"] *,
+.twinalyze-tabs [role="tab"][data-state="inactive"],
+.twinalyze-tabs [role="tab"][data-state="inactive"] * {
+  color: #000000 !important;
+  font-weight: 400 !important;
+}
+
+/* Dark mode inactive */
+.dark .twinalyze-tabs [role="tab"],
+.dark .twinalyze-tabs [role="tab"] *,
+[data-theme="dark"] .twinalyze-tabs [role="tab"],
+[data-theme="dark"] .twinalyze-tabs [role="tab"] * {
+  color: #ffffff !important;
+  font-weight: 400 !important;
+}
+
+/* Dark mode selected */
+.dark .twinalyze-tabs [role="tab"][aria-selected="true"],
+.dark .twinalyze-tabs [role="tab"][aria-selected="true"] *,
+.dark .twinalyze-tabs [role="tab"][data-state="active"],
+.dark .twinalyze-tabs [role="tab"][data-state="active"] *,
+[data-theme="dark"] .twinalyze-tabs [role="tab"][aria-selected="true"],
+[data-theme="dark"] .twinalyze-tabs [role="tab"][aria-selected="true"] *,
+[data-theme="dark"] .twinalyze-tabs [role="tab"][data-state="active"],
+[data-theme="dark"] .twinalyze-tabs [role="tab"][data-state="active"] * {
+  color: #60a5fa !important;
+  font-weight: 700 !important;
+}
