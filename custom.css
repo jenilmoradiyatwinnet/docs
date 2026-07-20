@@ -1203,4 +1203,75 @@ html.dark
   font-weight: 700 !important;
 }
 
+/* =====================================================
+   Mintlify custom sidebar image icons
+   Active icon becomes blue
+===================================================== */
 
+/* Normal custom sidebar icons */
+#sidebar-content img[src*="Side-Bar"],
+#mobile-nav-content img[src*="Side-Bar"] {
+  opacity: 0.65 !important;
+  transition:
+    filter 0.2s ease,
+    opacity 0.2s ease !important;
+}
+
+/* Active sidebar item — custom SVG loaded as an image */
+#sidebar-content li[data-active] a img,
+#sidebar-content a[aria-current="page"] img,
+#sidebar-content a[data-active="true"] img,
+#sidebar-content a[data-state="active"] img,
+#sidebar-content a[class*="text-primary"] img,
+#sidebar-content a[class*="bg-primary"] img,
+#sidebar-content a:has([class*="text-primary"]) img,
+#sidebar-content a:has([class*="bg-primary"]) img {
+  opacity: 1 !important;
+
+  /* Converts a black/gray SVG image to #2563EB */
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+/* Active sidebar text */
+#sidebar-content li[data-active] a,
+#sidebar-content a[aria-current="page"],
+#sidebar-content a[data-active="true"],
+#sidebar-content a[data-state="active"],
+#sidebar-content a[class*="text-primary"],
+#sidebar-content a[class*="bg-primary"] {
+  color: #2563eb !important;
+}
+
+/* Mobile active custom icon */
+#mobile-nav-content li[data-active] a img,
+#mobile-nav-content a[aria-current="page"] img,
+#mobile-nav-content a[data-active="true"] img,
+#mobile-nav-content a[data-state="active"] img,
+#mobile-nav-content a[class*="text-primary"] img,
+#mobile-nav-content a[class*="bg-primary"] img {
+  opacity: 1 !important;
+
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+/* Dark mode active custom icon */
+.dark #sidebar-content li[data-active] a img,
+.dark #sidebar-content a[aria-current="page"] img,
+.dark #sidebar-content a[data-active="true"] img,
+.dark #sidebar-content a[data-state="active"] img,
+.dark #sidebar-content a[class*="text-primary"] img,
+.dark #sidebar-content a[class*="bg-primary"] img,
+[data-theme="dark"] #sidebar-content li[data-active] a img,
+[data-theme="dark"] #sidebar-content a[aria-current="page"] img,
+[data-theme="dark"] #sidebar-content a[data-active="true"] img,
+[data-theme="dark"] #sidebar-content a[data-state="active"] img,
+[data-theme="dark"] #sidebar-content a[class*="text-primary"] img,
+[data-theme="dark"] #sidebar-content a[class*="bg-primary"] img {
+  opacity: 1 !important;
+
+  /* Converts the icon to #60A5FA */
+  filter: brightness(0) saturate(100%) invert(66%) sepia(91%)
+    saturate(1776%) hue-rotate(191deg) brightness(101%) contrast(96%) !important;
+}

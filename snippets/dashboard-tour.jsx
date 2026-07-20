@@ -51,7 +51,7 @@ export const DashboardTour = () => {
             "Analyze device, operating system, app version, browser, and technical performance to understand system behavior.",
         },
         {
-          src: "/images/Dashboard/Dashboard_3_Repots_3.PNG",
+          src: "/images/Dashboard/Reports.png",
           title: "Reports",
           caption:
             "Create and review reports for product usage, events, behavior trends, and business performance insights.",
@@ -65,31 +65,31 @@ export const DashboardTour = () => {
         "Analyze users, page behavior, engagement, retention, and growth across your product lifecycle.",
       images: [
         {
-          src: "/images/Dashboard/Dashboard_4_users_1.PNG",
+          src: "/images/Dashboard/Users.png",
           title: "Users",
           caption:
             "View user lists, user details, sessions, devices, activity history, and important user-level analytics.",
         },
         {
-          src: "/images/Dashboard/Dashboard_4_-page_insight_2.PNG",
+          src: "/images/Dashboard/Pageinsights.png",
           title: "Page Insights",
           caption:
             "Understand page views, page activity, user movement, popular pages, and page-level performance insights.",
         },
         {
-          src: "/images/Dashboard/Dashboard_4_User_userEngagement_3.PNG",
+          src: "/images/Dashboard/UserEngagement.png",
           title: "User Engagement",
           caption:
             "Measure how users interact with screens, pages, events, features, and important product actions.",
         },
         {
-          src: "/images/Dashboard/Dashboard_4_user_userRetention_4.PNG",
+          src: "/images/Dashboard/UserRetention.png",
           title: "User Retention",
           caption:
             "Track how many users return after first use and compare retention across selected time periods.",
         },
         {
-          src: "/images/Dashboard/DashBoard_4_User_User Growth_5.PNG",
+          src: "/images/Dashboard/UserGrowth.png",
           title: "User Growth",
           caption:
             "Monitor new users, active users, returning users, and overall user growth trends over time.",
@@ -103,13 +103,13 @@ export const DashboardTour = () => {
         "Track advertising performance, revenue, failures, impressions, clicks, and campaign-level results.",
       images: [
         {
-          src: "/images/Dashboard/DashBoard_5_Ad_AdReport_1.PNG",
+          src: "/images/Dashboard/AdReport.png",
           title: "Ad Report",
           caption:
             "View ad impressions, clicks, revenue, fill rate, campaign performance, and monetization results.",
         },
         {
-          src: "/images/Dashboard/Dashboard_5_a_AdFailureInsight_3.PNG",
+          src: "/images/Dashboard/.PNG",
           title: "Ad Failure Insights",
           caption:
             "Find ad loading failures, failed impressions, network issues, and problems affecting ad revenue.",
@@ -149,19 +149,19 @@ export const DashboardTour = () => {
         "Explore market trends, country insights, store performance, and custom listing opportunities.",
       images: [
         {
-          src: "/images/Dashboard/Dashboard_7_Research_MarketTrends_1.PNG",
+          src: "/images/Dashboard/MarketTrends.png",
           title: "Market Trends",
           caption:
             "Analyze market movement, category trends, top opportunities, and regional demand patterns.",
         },
         {
-          src: "/images/Dashboard/Dashboard_7_Research_CountryDetails_2.PNG",
+          src: "/images/Dashboard/.PNG",
           title: "Country Details",
           caption:
             "Review country-level user behavior, store data, traffic quality, and market performance details.",
         },
         {
-          src: "/images/Dashboard/Dashboard_7_Research_CustomStoreListing_3.PNG",
+          src: "/images/Dashboard/StoreInsights.png",
           title: "Custom Store Listing",
           caption:
             "Track custom store listings, visibility, traffic, ranking opportunities, and listing performance.",
@@ -175,13 +175,13 @@ export const DashboardTour = () => {
         "Manage events, properties, captured data, visibility, and tracking configuration in one place.",
       images: [
         {
-          src: "/images/Dashboard/Dashboard_8_Data_Events_1.PNG",
+          src: "/images/Dashboard/Events.png",
           title: "Events",
           caption:
             "View tracked events, event names, sources, auto/manual tracking status, visibility, and event details.",
         },
         {
-          src: "/images/Dashboard/Dashboard_8_Data_Properties_2.PNG",
+          src: "/images/Dashboard/Properties.png",
           title: "Properties",
           caption:
             "Manage user properties, device properties, event properties, and captured analytics attributes.",
@@ -195,7 +195,7 @@ export const DashboardTour = () => {
         "Manage project settings, profile details, organization details, users, roles, and permissions.",
       images: [
         {
-          src: "/images/Dashboard/Dashboard_9_ProjectSetting_1.PNG",
+          src: "/images/Dashboard/.PNG",
           title: "Project Setting",
           caption:
             "Update project name, logo, API keys, platform details, Firebase key, and project configuration.",
