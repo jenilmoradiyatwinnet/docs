@@ -1804,3 +1804,46 @@ html.dark
 
 
 
+/* Ad SDK Parameter Reference */
+
+.ad-sdk-parameter-reference {
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.ad-sdk-parameter-reference .event-table {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.ad-sdk-parameter-reference .event-table th,
+.ad-sdk-parameter-reference .event-table td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.ad-sdk-parameter-reference .event-table th:first-child,
+.ad-sdk-parameter-reference .event-table td:first-child {
+  width: 150px;
+}
+
+/* Demo account card */
+
+.pass-card {
+  width: max-content;
+  max-width: 100%;
+}
+
+.pass-card a {
+  color: #2563eb !important;
+  font-weight: 600;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+/* Initialize Ads section spacing */
+
+#initialize-ads-in-the-launch-activity {
+  margin-top: 44px !important;
+  margin-bottom: 12px !important;
+}

@@ -109,7 +109,7 @@ export const DashboardTour = () => {
             "View ad impressions, clicks, revenue, fill rate, campaign performance, and monetization results.",
         },
         {
-          src: "/images/Dashboard/.PNG",
+          src: "/images/Dashboard/Ads.png",
           title: "Ad Failure Insights",
           caption:
             "Find ad loading failures, failed impressions, network issues, and problems affecting ad revenue.",
@@ -123,14 +123,14 @@ export const DashboardTour = () => {
         "Create, manage, schedule, target, and analyze messaging campaigns for user engagement.",
       images: [
         {
-          src: "/images/Dashboard/Add-Notification.png",
+          src: "/images/analyticspage/Add-Notification.png",
           title: "Messaging- create Message",
           caption:
             "Create messages, configure message content, select users, and prepare engagement campaigns.",
         },
         {
-          src: "/images/Dashboard/.PNG",
-          title: "Messaging Campaign",
+          src: "/images/Dashboard/Campaignhistory.png",
+          title: "Campaign history",
           caption:
             "Manage campaign lists, campaign status, schedule time, audience targeting, and campaign actions.",
         },
