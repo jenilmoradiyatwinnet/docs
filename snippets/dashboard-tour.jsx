@@ -39,7 +39,7 @@ export const DashboardTour = () => {
         "Understand product health, performance, usage trends, reports, and system-level insights from one place.",
       images: [
         {
-          src: "/images/Dashboard/Dashboard_3_product_overview_1.PNG",
+          src: "/images/Dashboard/Dashboard.png",
           title: "Product Overview",
           caption:
             "See product-level performance, active users, retention users, session duration, country data, and usage summaries.",

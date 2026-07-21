@@ -196,109 +196,16 @@
             "pages": [
               "integrations/admob",
               "integrations/facebook-ad",
-              "integrations/firebase",
+              "integrations/facebook-monetization-manager",
               "integrations/google-ads",
-              "integrations/google-tag-manager",
+              "integrations/discord",
               "integrations/slack",
               "integrations/microsoft-teams"
             ]
           }
         
         ]
-      },
-  {
-  "tab": "SDKs & Integrations2",
-  "icon": "code",
-  "dropdowns": [
-    {
-      "dropdown": "SDK",
-      "icon": "code",
-      "pages": [
-        {
-          "group": "App",
-          "pages": [
-            {
-              "group": "Android",
-              "icon": "/sdk-icon/android.svg",
-              "pages": [
-                "sdks2/app/android/analytics",
-                "sdks2/app/android/ad-analytics"
-              ]
-            },
-            {
-              "group": "iOS",
-              "icon": "/sdk-icon/apple.svg",
-              "pages": [
-                "sdks2/app/ios/analytics",
-                "sdks2/app/ios/ad-analytics"
-              ]
-            },
-            {
-              "group": "Flutter",
-              "icon": "/sdk-icon/flutter.svg",
-              "pages": [
-                "sdks2/app/flutter/analytics",
-                "sdks2/app/flutter/ad-analytics"
-              ]
-            },
-            {
-              "group": "React Native",
-              "icon": "/sdk-icon/react-native.svg",
-              "pages": [
-                "sdks2/app/react-native/analytics",
-                "sdks2/app/react-native/ad-analytics"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "Web",
-          "pages": [
-            {
-              "group": "JavaScript",
-              "icon": "/sdk-icon/javascript.svg",
-              "pages": [
-                "sdks2/web/javascript/analytics",
-                "sdks2/web/javascript/ad-analytics"
-              ]
-            },
-            {
-              "group": "Shopify",
-              "icon": "/sdk-icon/shopify.svg",
-              "pages": [
-                "sdks2/web/Shopify/analytics",
-                "sdks2/web/Shopify/ad-analytics"
-              ]
-            }
-          ]
-        }
-
-    ]
-  },
-    {
-      "dropdown": "Integrations",
-      "icon": "plug",
-      "pages": [
-        {
-          "group": "Integrations",
-          "expanded": true,
-          "pages": [
-            "integrations2/google-analytics-4",
-            "integrations2/google-tag-manager",
-            "integrations2/firebase",
-            "integrations2/admob",
-            "integrations2/facebook-ad",
-            "integrations2/facebook-monetization-manager",
-            "integrations2/slack",
-            "integrations2/microsoft-teams",
-            "integrations2/applovin",
-            "integrations2/onesignal"
-          ]
-        }
-      ]
-    }
-   ]
-        }
+      }
 
     ]
   },
