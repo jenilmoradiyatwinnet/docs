@@ -38,7 +38,7 @@
     "tabs": [
       {
         "tab": "Overview",
-        "icon": "/logo/home.svg",
+        "icon": "/icon/Side-Bar/house-bold.svg",
         
         "groups": [
           {
@@ -80,7 +80,7 @@
       },
       {
         "tab": "Analytics",
-        "icon": "/logo/analytics.svg",
+        "icon": "/icon/Side-Bar/dashboard.svg",
         "groups": [
           {
             "group": "DASHBOARD",
@@ -132,7 +132,7 @@
       },
       { 
         "tab": "SDKs",
-        "icon": "/logo/sdk.svg",
+        "icon": "/icon/Side-Bar/code-bold.svg",
         "dropdowns": [
           {
             "dropdown": "Android",
@@ -189,7 +189,7 @@
       },
       {
         "tab": "Integrations",
-        "icon": "/logo/analytics.svg",
+        "icon": "/icon/Side-Bar/link-bold.svg",
         "groups": [
           {
             "group": "3RD PARTY INTEGRATIONS",
