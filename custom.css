@@ -1847,3 +1847,33 @@ html.dark
   margin-top: 44px !important;
   margin-bottom: 12px !important;
 }
+
+
+
+/* Ad SDK Parameter Reference: two-column table */
+
+.twinalyze-parameter-table th:first-child {
+  width: 24% !important;
+}
+
+.twinalyze-parameter-table th:last-child {
+  width: 76% !important;
+}
+
+/* Initialize Ads heading spacing */
+
+#initialize-ads-in-the-launch-activity {
+  margin-top: 44px !important;
+  margin-bottom: 12px !important;
+}
+
+#initialize-ads-in-the-launch-activity + p {
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+@media (max-width: 640px) {
+  .twinalyze-parameter-table {
+    min-width: 560px;
+  }
+}
