@@ -117,29 +117,24 @@ export const DashboardTour = () => {
       ],
     },
     {
-      id: "notification",
-      title: "Notification",
+      id: "messaging",
+      title: "Messaging",
       description:
-        "Create, manage, schedule, target, and analyze notification campaigns for user engagement.",
+        "Create, manage, schedule, target, and analyze messaging campaigns for user engagement.",
       images: [
         {
-          src: "/images/Dashboard/Dashboard_6_notification_1.PNG",
-          title: "Notification",
+          src: "/images/Dashboard/Add-Notification.png",
+          title: "Messaging- create Message",
           caption:
-            "Create notifications, configure message content, select users, and prepare engagement campaigns.",
+            "Create messages, configure message content, select users, and prepare engagement campaigns.",
         },
         {
-          src: "/images/Dashboard/Dashboard_6_notification_notificationCampaign_2.PNG",
-          title: "Notification Campaign",
+          src: "/images/Dashboard/.PNG",
+          title: "Messaging Campaign",
           caption:
             "Manage campaign lists, campaign status, schedule time, audience targeting, and campaign actions.",
         },
-        {
-          src: "/images/Dashboard/Dashboard_6_notification_notificationReportList_3.PNG",
-          title: "Notification Report List",
-          caption:
-            "Review delivery, opens, clicks, failed notifications, campaign reports, and engagement performance.",
-        },
+       
       ],
     },
     {
