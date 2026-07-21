@@ -195,34 +195,34 @@ export const DashboardTour = () => {
         "Manage project settings, profile details, organization details, users, roles, and permissions.",
       images: [
         {
-          src: "/images/Dashboard/.PNG",
+          src: "/images/Dashboard/project-setting.png",
           title: "Project Setting",
           caption:
             "Update project name, logo, API keys, platform details, Firebase key, and project configuration.",
         },
         {
-          src: "/images/Dashboard/Dashboard_11_settings_ProfileDetails_1.PNG",
-          title: "Profile Details",
+          src: "/images/Dashboard/Integration.png",
+          title: "Integrations",
           caption:
-            "Manage profile information, personal details, account settings, and user preferences.",
+            "Manage all of your integrations here.",
         },
         {
-          src: "/images/Dashboard/Dashboard_11_settings_Organization_2.PNG",
-          title: "Organization",
+          src: "/images/Dashboard/Version.png",
+          title: "Version",
           caption:
-            "Manage organization information, team members, users, roles, access, and permissions.",
+            "Manage version of Sdk.",
         },
          {
-          src: "/images/Dashboard/.PNG",
-          title: "Project Setting",
+          src: "/images/Dashboard/Device-info.png",
+          title: "Device",
           caption:
-            "Update project name, logo, API keys, platform details, Firebase key, and project configuration.",
+            "Check device info.",
         },
          {
-          src: "/images/Dashboard/.PNG",
-          title: "Project Setting",
+          src: "/images/Dashboard/New-Scree-activity.png",
+          title: "Screen Activity",
           caption:
-            "Update project name, logo, API keys, platform details, Firebase key, and project configuration.",
+            "Check what screen activity is being done.",
         }
       ],
     },
