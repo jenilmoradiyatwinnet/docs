@@ -219,7 +219,7 @@ export const DashboardTour = () => {
             "Check device info.",
         },
          {
-          src: "/images/Dashboard/New-Scree-activity.png",
+          src: "/images/Dashboard/New-Screen-activity.png",
           title: "Screen Activity",
           caption:
             "Check what screen activity is being done.",
