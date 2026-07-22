@@ -1082,7 +1082,7 @@ header
 
 
 /* Introduction feature icons — dark mode */
-.dark img[src="/icon/introduction/user.svg"],
+/* .dark img[src="/icon/introduction/user.svg"],
 .dark img[src="/icon/introduction/insights.svg"],
 .dark img[src="/icon/introduction/engagement.svg"],
 .dark img[src="/icon/introduction/ROI.svg"],
@@ -1091,7 +1091,8 @@ header
 [data-theme="dark"] img[src="/icon/introduction/engagement.svg"],
 [data-theme="dark"] img[src="/icon/introduction/ROI.svg"] {
   filter: brightness(0) invert(1) !important;
-}
+} */
+
 
 
 
@@ -2916,7 +2917,7 @@ html.dark
 html.dark
   #sidebar-content
   a[href^="/integrations"][data-active="true"],
-.dark
+.dark/* Introduction feature icons — dark mode */
   #sidebar-content
   a[href^="/integrations"][data-active="true"],
 [data-theme="dark"]
@@ -2948,4 +2949,30 @@ html.dark
 .dark .twinalyze-nav-center-no-next,
 [data-theme="dark"] .twinalyze-nav-center-no-next {
   border-left: 0 !important;
+}
+
+
+/* =====================================================
+   FINAL Introduction Card Icons
+   Supports local and live optimized image URLs
+===================================================== */
+
+/* Light mode */
+html:not(.dark) img[src*="/icon/introduction/"],
+html:not(.dark) img[src*="icon%2Fintroduction%2F"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+/* Dark mode */
+html.dark img[src*="/icon/introduction/"],
+html.dark img[src*="icon%2Fintroduction%2F"],
+.dark img[src*="/icon/introduction/"],
+.dark img[src*="icon%2Fintroduction%2F"],
+[data-theme="dark"] img[src*="/icon/introduction/"],
+[data-theme="dark"] img[src*="icon%2Fintroduction%2F"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: brightness(0) saturate(100%) invert(100%) !important;
 }
