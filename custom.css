@@ -812,7 +812,7 @@ img[src*="Project_settings"] {
 
 /* =====================================================
    Twinalyze Top Navigation Tabs Only
-===================================================== */
+===================================================== 
 
 :root {
   --twinalyze-tab-blue: #2563eb;
@@ -822,7 +822,7 @@ img[src*="Project_settings"] {
   Important:
   The "header" scope prevents these styles from affecting
   SDK and Integration cards inside the page content.
-*/
+
 
 header
   :is(
@@ -847,7 +847,7 @@ header
   transition: filter 0.2s ease;
 }
 
-/* Hover text */
+/* Hover text 
 header
   :is(
     a[href^="/overview"],
@@ -859,7 +859,7 @@ header
   color: var(--twinalyze-tab-blue) !important;
 }
 
-/* Hover child text */
+/* Hover child text 
 header
   :is(
     a[href^="/overview"],
@@ -872,7 +872,7 @@ header
   color: var(--twinalyze-tab-blue) !important;
 }
 
-/* Hover icon */
+/* Hover icon 
 header
   :is(
     a[href^="/overview"],
@@ -886,7 +886,7 @@ header
     saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
 }
 
-/* Active tab */
+/* Active tab 
 header
   :is(
     a[href^="/overview"],
@@ -920,7 +920,7 @@ header
   border-color: var(--twinalyze-tab-blue) !important;
 }
 
-/* Active tab child text */
+/* Active tab child text 
 header
   :is(
     a[href^="/overview"],
@@ -956,7 +956,7 @@ header
   color: var(--twinalyze-tab-blue) !important;
 }
 
-/* Active tab icon */
+/* Active tab icon 
 header
   :is(
     a[href^="/overview"],
@@ -993,7 +993,7 @@ header
     saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
 }
 
-/* Dark mode hover text */
+/* Dark mode hover text 
 .dark
   header
   :is(
@@ -1015,7 +1015,7 @@ header
   color: #60a5fa !important;
 }
 
-/* Dark mode hover and active icon */
+/* Dark mode hover and active icon 
 .dark
   header
   :is(
@@ -1202,81 +1202,6 @@ html.dark
   color: #60a5fa !important;
   font-weight: 700 !important;
 }
-/*
-/* =====================================================
-   Mintlify custom sidebar image icons
-   Active icon becomes blue
-===================================================== 
-
-/* Normal custom sidebar icons
-#sidebar-content img[src*="Side-Bar"],
-#mobile-nav-content img[src*="Side-Bar"] {
-  opacity: 0.65 !important;
-  transition:
-    filter 0.2s ease,
-    opacity 0.2s ease !important;
-}
-
-/* Active sidebar item — custom SVG loaded as an image 
-#sidebar-content li[data-active] a img,
-#sidebar-content a[aria-current="page"] img,
-#sidebar-content a[data-active="true"] img,
-#sidebar-content a[data-state="active"] img,
-#sidebar-content a[class*="text-primary"] img,
-#sidebar-content a[class*="bg-primary"] img,
-#sidebar-content a:has([class*="text-primary"]) img,
-#sidebar-content a:has([class*="bg-primary"]) img {
-  opacity: 1 !important;
-
-  /* Converts a black/gray SVG image to #2563EB 
-  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
-    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
-}
-
-/* Active sidebar text 
-#sidebar-content li[data-active] a,
-#sidebar-content a[aria-current="page"],
-#sidebar-content a[data-active="true"],
-#sidebar-content a[data-state="active"],
-#sidebar-content a[class*="text-primary"],
-#sidebar-content a[class*="bg-primary"] {
-  color: #2563eb !important;
-}
-
-/* Mobile active custom icon 
-#mobile-nav-content li[data-active] a img,
-#mobile-nav-content a[aria-current="page"] img,
-#mobile-nav-content a[data-active="true"] img,
-#mobile-nav-content a[data-state="active"] img,
-#mobile-nav-content a[class*="text-primary"] img,
-#mobile-nav-content a[class*="bg-primary"] img {
-  opacity: 1 !important;
-
-  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
-    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
-}
-
-/* Dark mode active custom icon 
-.dark #sidebar-content li[data-active] a img,
-.dark #sidebar-content a[aria-current="page"] img,
-.dark #sidebar-content a[data-active="true"] img,
-.dark #sidebar-content a[data-state="active"] img,
-.dark #sidebar-content a[class*="text-primary"] img,
-.dark #sidebar-content a[class*="bg-primary"] img,
-[data-theme="dark"] #sidebar-content li[data-active] a img,
-[data-theme="dark"] #sidebar-content a[aria-current="page"] img,
-[data-theme="dark"] #sidebar-content a[data-active="true"] img,
-[data-theme="dark"] #sidebar-content a[data-state="active"] img,
-[data-theme="dark"] #sidebar-content a[class*="text-primary"] img,
-[data-theme="dark"] #sidebar-content a[class*="bg-primary"] img {
-  opacity: 1 !important;
-
-   Converts the icon to #60A5FA 
-  filter: brightness(0) saturate(100%) invert(66%) sepia(91%)
-    saturate(1776%) hue-rotate(191deg) brightness(101%) contrast(96%) !important;
-}
-*/
-
 
 
 /* =================================
@@ -1349,7 +1274,7 @@ html.dark
    Active icon: #2563EB
    Active text: #2563EB
    Hover: no color change
-===================================================== */
+===================================================== 
 
 :root {
   --sidebar-icon-inactive: #848689;
@@ -1359,7 +1284,7 @@ html.dark
 
 /* =====================================================
    Inactive sidebar items
-===================================================== */
+===================================================== 
 
 #sidebar-content a:has(img[src*="/icon/Side-Bar/"]),
 #mobile-nav-content a:has(img[src*="/icon/Side-Bar/"]) {
@@ -1373,7 +1298,7 @@ html.dark
   transition: none !important;
 }
 
-/* Inactive custom icons: #848689 */
+/* Inactive custom icons: #848689 
 #sidebar-content img[src*="/icon/Side-Bar/"],
 #mobile-nav-content img[src*="/icon/Side-Bar/"] {
   opacity: 1 !important;
@@ -1386,7 +1311,7 @@ html.dark
 
 /* =====================================================
    No hover color change
-===================================================== */
+=====================================================
 
 #sidebar-content a:has(img[src*="/icon/Side-Bar/"]):hover,
 #mobile-nav-content a:has(img[src*="/icon/Side-Bar/"]):hover {
@@ -1409,7 +1334,7 @@ html.dark
   filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
     saturate(289%) hue-rotate(182deg) brightness(93%) contrast(91%) !important;
 }
-
+ */
 /* =====================================================
    Active sidebar icon: #2563EB
 ===================================================== */
@@ -1877,3 +1802,1125 @@ html.dark
     min-width: 560px;
   }
 }
+
+
+
+
+
+/* =====================================================
+   TOP NAVIGATION ICON FIX
+
+   Inactive icon: #848689
+   Active icon: #2563EB
+   Active text: #2563EB
+   No hover change
+===================================================== */
+
+/* All top navigation tabs */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ) {
+  color: #52525b !important;
+}
+
+/* Inactive custom image icons */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  )
+  img {
+  opacity: 1 !important;
+
+  /* #848689 */
+  filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
+    saturate(289%) hue-rotate(182deg) brightness(93%) contrast(91%) !important;
+
+  transition: none !important;
+}
+
+/* No hover color change */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):hover {
+  color: #52525b !important;
+}
+
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):hover
+  img {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
+    saturate(289%) hue-rotate(182deg) brightness(93%) contrast(91%) !important;
+}
+
+/* Active tab text */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  ),
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  )[class*="text-primary"],
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([class*="text-primary"]),
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([aria-current="page"]),
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([data-active="true"]) {
+  color: #2563eb !important;
+  border-color: #2563eb !important;
+}
+
+/* Active tab child text */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  )
+  *,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  )[class*="text-primary"]
+  *,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([class*="text-primary"])
+  * {
+  color: #2563eb !important;
+}
+
+/* Active image icon */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  )
+  img,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  )[class*="text-primary"]
+  img,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([class*="text-primary"])
+  img,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([aria-current="page"])
+  img,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([data-active="true"])
+  img {
+  opacity: 1 !important;
+
+  /* #2563EB */
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+/* Active inline SVG icon */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([class*="text-primary"])
+  svg,
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  )
+  svg {
+  color: #2563eb !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Active CSS-mask icon */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([class*="text-primary"])
+  [style*="mask"],
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):is(
+    [aria-current="page"],
+    [aria-selected="true"],
+    [data-active="true"],
+    [data-state="active"]
+  )
+  [style*="mask"] {
+  color: #2563eb !important;
+  background-color: #2563eb !important;
+}
+
+/* Keep active tab blue on hover */
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([class*="text-primary"]):hover {
+  color: #2563eb !important;
+}
+
+header
+  :is(
+    a[href^="/overview"],
+    a[href^="/analytics"],
+    a[href^="/sdks"],
+    a[href^="/integrations"]
+  ):has([class*="text-primary"]):hover
+  img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+
+
+/* =====================================================
+   FINAL SDK SIDEBAR ACTIVE ICON FIX
+=====================================================
+
+/* Active sidebar row and text 
+#sidebar-content a[aria-current="page"],
+#sidebar-content a[class*="text-primary"],
+#sidebar-content a[class*="bg-primary"],
+#sidebar-content a:has([class*="text-primary"]),
+#sidebar-content a:has([class*="bg-primary"]),
+#mobile-nav-content a[aria-current="page"],
+#mobile-nav-content a[class*="text-primary"],
+#mobile-nav-content a[class*="bg-primary"],
+#mobile-nav-content a:has([class*="text-primary"]),
+#mobile-nav-content a:has([class*="bg-primary"]) {
+  color: #2563eb !important;
+}
+
+/* Override Mintlify grey icon wrapper 
+#sidebar-content a[aria-current="page"] [class*="text-gray"],
+#sidebar-content a[class*="text-primary"] [class*="text-gray"],
+#sidebar-content a[class*="bg-primary"] [class*="text-gray"],
+#sidebar-content a:has([class*="text-primary"]) [class*="text-gray"],
+#sidebar-content a:has([class*="bg-primary"]) [class*="text-gray"],
+#mobile-nav-content a[aria-current="page"] [class*="text-gray"],
+#mobile-nav-content a[class*="text-primary"] [class*="text-gray"],
+#mobile-nav-content a[class*="bg-primary"] [class*="text-gray"],
+#mobile-nav-content a:has([class*="text-primary"]) [class*="text-gray"],
+#mobile-nav-content a:has([class*="bg-primary"]) [class*="text-gray"] {
+  color: #2563eb !important;
+}
+
+/* Active SVG icon 
+#sidebar-content a[aria-current="page"] svg,
+#sidebar-content a[class*="text-primary"] svg,
+#sidebar-content a[class*="bg-primary"] svg,
+#sidebar-content a:has([class*="text-primary"]) svg,
+#sidebar-content a:has([class*="bg-primary"]) svg,
+#mobile-nav-content a[aria-current="page"] svg,
+#mobile-nav-content a[class*="text-primary"] svg,
+#mobile-nav-content a[class*="bg-primary"] svg,
+#mobile-nav-content a:has([class*="text-primary"]) svg,
+#mobile-nav-content a:has([class*="bg-primary"]) svg {
+  color: #2563eb !important;
+  opacity: 1 !important;
+}
+
+/* Stroke-based icons 
+#sidebar-content a[aria-current="page"] svg [stroke]:not([stroke="none"]),
+#sidebar-content a[class*="text-primary"] svg [stroke]:not([stroke="none"]),
+#sidebar-content a[class*="bg-primary"] svg [stroke]:not([stroke="none"]),
+#sidebar-content
+  a:has([class*="text-primary"])
+  svg
+  [stroke]:not([stroke="none"]),
+#sidebar-content
+  a:has([class*="bg-primary"])
+  svg
+  [stroke]:not([stroke="none"]),
+#mobile-nav-content
+  a[aria-current="page"]
+  svg
+  [stroke]:not([stroke="none"]),
+#mobile-nav-content
+  a[class*="text-primary"]
+  svg
+  [stroke]:not([stroke="none"]),
+#mobile-nav-content
+  a[class*="bg-primary"]
+  svg
+  [stroke]:not([stroke="none"]) {
+  stroke: #2563eb !important;
+}
+
+/* Fill-based icons 
+#sidebar-content a[aria-current="page"] svg [fill]:not([fill="none"]),
+#sidebar-content a[class*="text-primary"] svg [fill]:not([fill="none"]),
+#sidebar-content a[class*="bg-primary"] svg [fill]:not([fill="none"]),
+#sidebar-content
+  a:has([class*="text-primary"])
+  svg
+  [fill]:not([fill="none"]),
+#sidebar-content
+  a:has([class*="bg-primary"])
+  svg
+  [fill]:not([fill="none"]),
+#mobile-nav-content
+  a[aria-current="page"]
+  svg
+  [fill]:not([fill="none"]),
+#mobile-nav-content
+  a[class*="text-primary"]
+  svg
+  [fill]:not([fill="none"]),
+#mobile-nav-content
+  a[class*="bg-primary"]
+  svg
+  [fill]:not([fill="none"]) {
+  fill: #2563eb !important;
+}
+
+/* Icons rendered with a CSS mask 
+#sidebar-content a[aria-current="page"] [style*="mask"],
+#sidebar-content a[class*="text-primary"] [style*="mask"],
+#sidebar-content a[class*="bg-primary"] [style*="mask"],
+#sidebar-content a:has([class*="text-primary"]) [style*="mask"],
+#sidebar-content a:has([class*="bg-primary"]) [style*="mask"],
+#mobile-nav-content a[aria-current="page"] [style*="mask"],
+#mobile-nav-content a[class*="text-primary"] [style*="mask"],
+#mobile-nav-content a[class*="bg-primary"] [style*="mask"] {
+  color: #2563eb !important;
+  background-color: #2563eb !important;
+}
+
+/* Image-based icons 
+#sidebar-content a[aria-current="page"] img,
+#sidebar-content a[class*="text-primary"] img,
+#sidebar-content a[class*="bg-primary"] img,
+#sidebar-content a:has([class*="text-primary"]) img,
+#sidebar-content a:has([class*="bg-primary"]) img,
+#mobile-nav-content a[aria-current="page"] img,
+#mobile-nav-content a[class*="text-primary"] img,
+#mobile-nav-content a[class*="bg-primary"] img {
+  opacity: 1 !important;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+
+
+/* =====================================================
+   FINAL UNIVERSAL SIDEBAR COLORS
+
+   Light inactive text: #111827
+   Dark inactive text: #D1D5DB
+   Inactive icon: #848689
+   Active light: #2563EB
+   Active dark: #60A5FA
+   Hover: no color change
+===================================================== */
+
+/* =====================================================
+   LIGHT MODE — INACTIVE ITEMS
+===================================================== */
+
+#sidebar-content a,
+#mobile-nav-content a {
+  color: #111827 !important;
+  transition: none !important;
+}
+
+#sidebar-content a span,
+#sidebar-content a div,
+#mobile-nav-content a span,
+#mobile-nav-content a div {
+  color: inherit !important;
+  transition: none !important;
+}
+
+/* Normal inline SVG icons */
+#sidebar-content a svg,
+#mobile-nav-content a svg {
+  color: #848689 !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* Stroke-based icons */
+#sidebar-content a svg [stroke]:not([stroke="none"]),
+#mobile-nav-content a svg [stroke]:not([stroke="none"]) {
+  stroke: #848689 !important;
+}
+
+/* Fill-based icons */
+#sidebar-content a svg [fill]:not([fill="none"]),
+#mobile-nav-content a svg [fill]:not([fill="none"]) {
+  fill: #848689 !important;
+}
+
+/* Custom image icons */
+#sidebar-content a img[src*="/icon/"],
+#mobile-nav-content a img[src*="/icon/"] {
+  opacity: 1 !important;
+
+  filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
+    saturate(289%) hue-rotate(182deg) brightness(93%) contrast(91%) !important;
+
+  transition: none !important;
+}
+
+/* =====================================================
+   LIGHT MODE — NO HOVER COLOR CHANGE
+===================================================== */
+
+#sidebar-content a:hover,
+#mobile-nav-content a:hover {
+  color: #111827 !important;
+}
+
+#sidebar-content a:hover span,
+#sidebar-content a:hover div,
+#mobile-nav-content a:hover span,
+#mobile-nav-content a:hover div {
+  color: inherit !important;
+}
+
+#sidebar-content a:hover svg,
+#mobile-nav-content a:hover svg {
+  color: #848689 !important;
+}
+
+#sidebar-content a:hover svg [stroke]:not([stroke="none"]),
+#mobile-nav-content a:hover svg [stroke]:not([stroke="none"]) {
+  stroke: #848689 !important;
+}
+
+#sidebar-content a:hover svg [fill]:not([fill="none"]),
+#mobile-nav-content a:hover svg [fill]:not([fill="none"]) {
+  fill: #848689 !important;
+}
+
+#sidebar-content a:hover img[src*="/icon/"],
+#mobile-nav-content a:hover img[src*="/icon/"] {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
+    saturate(289%) hue-rotate(182deg) brightness(93%) contrast(91%) !important;
+}
+
+/* =====================================================
+   LIGHT MODE — ACTIVE ITEM
+===================================================== */
+
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ),
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ) {
+  color: #2563eb !important;
+}
+
+/* Active text remains blue */
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  :is(span, div),
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  :is(span, div) {
+  color: #2563eb !important;
+}
+
+/* Active normal SVG icon */
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg,
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg {
+  color: #2563eb !important;
+  opacity: 1 !important;
+}
+
+/* Active stroke icon */
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg
+  [stroke]:not([stroke="none"]),
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg
+  [stroke]:not([stroke="none"]) {
+  stroke: #2563eb !important;
+}
+
+/* Active filled icon */
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg
+  [fill]:not([fill="none"]),
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg
+  [fill]:not([fill="none"]) {
+  fill: #2563eb !important;
+}
+
+/* Active custom image icon */
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  img[src*="/icon/"],
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  img[src*="/icon/"] {
+  opacity: 1 !important;
+
+  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
+    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
+}
+
+/* =====================================================
+   ACTIVE ITEM — STAYS BLUE ON HOVER
+===================================================== */
+
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ):hover,
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ):hover {
+  color: #2563eb !important;
+}
+
+#sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ):hover
+  :is(span, div),
+#mobile-nav-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ):hover
+  :is(span, div) {
+  color: #2563eb !important;
+}
+
+/* =====================================================
+   DARK MODE — INACTIVE ITEMS AND HOVER
+===================================================== */
+
+html.dark #sidebar-content a,
+html.dark #mobile-nav-content a,
+.dark #sidebar-content a,
+.dark #mobile-nav-content a,
+[data-theme="dark"] #sidebar-content a,
+[data-theme="dark"] #mobile-nav-content a {
+  color: #d1d5db !important;
+}
+
+html.dark #sidebar-content a:hover,
+html.dark #mobile-nav-content a:hover,
+.dark #sidebar-content a:hover,
+.dark #mobile-nav-content a:hover,
+[data-theme="dark"] #sidebar-content a:hover,
+[data-theme="dark"] #mobile-nav-content a:hover {
+  color: #d1d5db !important;
+}
+
+html.dark #sidebar-content a :is(span, div),
+html.dark #mobile-nav-content a :is(span, div),
+.dark #sidebar-content a :is(span, div),
+.dark #mobile-nav-content a :is(span, div),
+[data-theme="dark"] #sidebar-content a :is(span, div),
+[data-theme="dark"] #mobile-nav-content a :is(span, div) {
+  color: inherit !important;
+}
+
+/* =====================================================
+   DARK MODE — ACTIVE ITEM
+===================================================== */
+
+html.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ),
+.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ),
+[data-theme="dark"]
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ) {
+  color: #60a5fa !important;
+}
+
+/* Dark active text, including hover */
+html.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  :is(span, div),
+html.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ):hover
+  :is(span, div),
+.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  :is(span, div),
+.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ):hover
+  :is(span, div),
+[data-theme="dark"]
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  :is(span, div),
+[data-theme="dark"]
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  ):hover
+  :is(span, div) {
+  color: #60a5fa !important;
+}
+
+/* Dark active SVG */
+html.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg,
+.dark
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg,
+[data-theme="dark"]
+  #sidebar-content
+  :is(
+    li[data-active] > a,
+    a[aria-current="page"],
+    a[data-active="true"],
+    a[data-state="active"],
+    a[class*="text-primary"],
+    a[class*="bg-primary"],
+    a:has([class*="text-primary"]),
+    a:has([class*="bg-primary"])
+  )
+  svg {
+  color: #60a5fa !important;
+}
+
+
+
+
+
+/* =====================================================
+   INTEGRATIONS SIDEBAR
+
+   Icons: keep original appearance
+   Inactive text: normal
+   Active text: blue
+   Hover: no color change
+===================================================== */
+
+/* Inactive Integration text */
+#sidebar-content a[href^="/integrations"],
+#mobile-nav-content a[href^="/integrations"] {
+  color: #111827 !important;
+}
+
+/* Keep Integration image icons completely original */
+html body
+  #sidebar-content
+  a[href^="/integrations"][href^="/integrations"][href^="/integrations"]
+  img,
+html body
+  #mobile-nav-content
+  a[href^="/integrations"][href^="/integrations"][href^="/integrations"]
+  img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Keep normal Mintlify Integration SVG icons grey/original */
+html body
+  #sidebar-content
+  a[href^="/integrations"][href^="/integrations"][href^="/integrations"]
+  svg,
+html body
+  #mobile-nav-content
+  a[href^="/integrations"][href^="/integrations"][href^="/integrations"]
+  svg {
+  color: #848689 !important;
+  opacity: 1 !important;
+  fill: revert !important;
+  stroke: revert !important;
+}
+
+/* Restore the original SVG path styling */
+html body
+  #sidebar-content
+  a[href^="/integrations"][href^="/integrations"][href^="/integrations"]
+  svg
+  *,
+html body
+  #mobile-nav-content
+  a[href^="/integrations"][href^="/integrations"][href^="/integrations"]
+  svg
+  * {
+  fill: revert !important;
+  stroke: revert !important;
+}
+
+/* No hover text change */
+#sidebar-content a[href^="/integrations"]:hover,
+#mobile-nav-content a[href^="/integrations"]:hover {
+  color: #111827 !important;
+}
+
+/* Active Integration text only */
+#sidebar-content li[data-active] > a[href^="/integrations"],
+#sidebar-content a[href^="/integrations"][aria-current="page"],
+#sidebar-content a[href^="/integrations"][data-active="true"],
+#sidebar-content a[href^="/integrations"][data-state="active"],
+#sidebar-content a[href^="/integrations"][class*="text-primary"],
+#sidebar-content a[href^="/integrations"][class*="bg-primary"],
+#mobile-nav-content li[data-active] > a[href^="/integrations"],
+#mobile-nav-content a[href^="/integrations"][aria-current="page"],
+#mobile-nav-content a[href^="/integrations"][data-active="true"],
+#mobile-nav-content a[href^="/integrations"][data-state="active"],
+#mobile-nav-content a[href^="/integrations"][class*="text-primary"],
+#mobile-nav-content a[href^="/integrations"][class*="bg-primary"] {
+  color: #2563eb !important;
+}
+
+/* Active child text only */
+#sidebar-content li[data-active] > a[href^="/integrations"] :is(span, div),
+#sidebar-content
+  a[href^="/integrations"][aria-current="page"]
+  :is(span, div),
+#sidebar-content
+  a[href^="/integrations"][data-active="true"]
+  :is(span, div),
+#sidebar-content
+  a[href^="/integrations"][data-state="active"]
+  :is(span, div),
+#sidebar-content
+  a[href^="/integrations"][class*="text-primary"]
+  :is(span, div),
+#sidebar-content
+  a[href^="/integrations"][class*="bg-primary"]
+  :is(span, div),
+#mobile-nav-content
+  li[data-active]
+  > a[href^="/integrations"]
+  :is(span, div),
+#mobile-nav-content
+  a[href^="/integrations"][aria-current="page"]
+  :is(span, div),
+#mobile-nav-content
+  a[href^="/integrations"][data-active="true"]
+  :is(span, div),
+#mobile-nav-content
+  a[href^="/integrations"][data-state="active"]
+  :is(span, div) {
+  color: #2563eb !important;
+}
+
+/* Even when active, SVG icon remains original */
+html body
+  #sidebar-content
+  li[data-active]
+  > a[href^="/integrations"][href^="/integrations"]
+  svg,
+html body
+  #sidebar-content
+  a[href^="/integrations"][aria-current="page"][href^="/integrations"]
+  svg,
+html body
+  #sidebar-content
+  a[href^="/integrations"][data-active="true"][href^="/integrations"]
+  svg,
+html body
+  #sidebar-content
+  a[href^="/integrations"][class*="text-primary"][href^="/integrations"]
+  svg,
+html body
+  #mobile-nav-content
+  li[data-active]
+  > a[href^="/integrations"][href^="/integrations"]
+  svg,
+html body
+  #mobile-nav-content
+  a[href^="/integrations"][aria-current="page"][href^="/integrations"]
+  svg {
+  color: #848689 !important;
+}
+
+/* Active item stays blue on hover, icon stays original */
+#sidebar-content li[data-active] > a[href^="/integrations"]:hover,
+#sidebar-content a[href^="/integrations"][aria-current="page"]:hover,
+#sidebar-content a[href^="/integrations"][data-active="true"]:hover,
+#sidebar-content a[href^="/integrations"][class*="text-primary"]:hover,
+#mobile-nav-content li[data-active] > a[href^="/integrations"]:hover,
+#mobile-nav-content a[href^="/integrations"][aria-current="page"]:hover {
+  color: #2563eb !important;
+}
+
+/* Dark mode inactive text */
+html.dark #sidebar-content a[href^="/integrations"],
+html.dark #mobile-nav-content a[href^="/integrations"],
+.dark #sidebar-content a[href^="/integrations"],
+.dark #mobile-nav-content a[href^="/integrations"],
+[data-theme="dark"] #sidebar-content a[href^="/integrations"],
+[data-theme="dark"] #mobile-nav-content a[href^="/integrations"] {
+  color: #d1d5db !important;
+}
+
+/* Dark mode active text */
+html.dark
+  #sidebar-content
+  a[href^="/integrations"][aria-current="page"],
+.dark
+  #sidebar-content
+  a[href^="/integrations"][aria-current="page"],
+[data-theme="dark"]
+  #sidebar-content
+  a[href^="/integrations"][aria-current="page"],
+html.dark
+  #sidebar-content
+  a[href^="/integrations"][data-active="true"],
+.dark
+  #sidebar-content
+  a[href^="/integrations"][data-active="true"],
+[data-theme="dark"]
+  #sidebar-content
+  a[href^="/integrations"][data-active="true"] {
+  color: #60a5fa !important;
+}                                                                                                                                                                                                                                                                                                                             

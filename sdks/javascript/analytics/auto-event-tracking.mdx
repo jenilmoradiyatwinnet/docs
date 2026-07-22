@@ -1,0 +1,259 @@
+---
+title: "Automatic Event Tracking"
+description: "Automatically track page views, clicks, scrolls, forms, searches, and file downloads with the Twinalyze JavaScript Analytics SDK."
+icon: "/icon/sdk-icon/manual-ad-event.svg"
+hideFooterPagination: true
+---
+
+Twinalyze automatically tracks common website interactions after the JavaScript SDK is initialized.
+
+No additional `track()` calls are required for automatic events.
+
+## Automatic events
+
+| Event | Description |
+| --- | --- |
+| `pageView` | Tracks the initial page load and route changes in single-page applications. |
+| `elementClick` | Tracks links, buttons, dropdown options, and other interactive elements. |
+| `scrollDepth` | Tracks when a user reaches at least 90% of a page. |
+| `formStart` | Tracks when a user starts interacting with a form. |
+| `formSubmit` | Tracks when a form is submitted. |
+| `searchResultsView` | Tracks searches using configured URL query parameters. |
+| `fileDownload` | Tracks clicks on supported downloadable files. |
+
+<Info>
+Automatic events include page and session information such as the page title, URL, domain, path, previous page URL, and previous page type.
+</Info>
+
+## Configure automatic events
+
+Use `enhancedMeasurement` during SDK initialization.
+
+```javascript
+TwinalyzeAnalytics.init({
+  apiKey: "YOUR_API_KEY",
+  secretKey: "YOUR_SECRET_KEY",
+  apiBaseUrl: "https://api.twinalyze.com",
+  version: "YOUR_VERSION",
+  debug: false,
+
+  enhancedMeasurement: {
+    pageViews: true,
+    scrolls: true,
+    outboundClicks: true,
+
+    siteSearch: {
+      params: ["q", "s", "search", "query"],
+    },
+
+    formInteractions: true,
+
+    fileDownloads: {
+      extensions: [
+        "pdf",
+        "zip",
+        "apk",
+        "doc",
+        "docx",
+        "xls",
+        "xlsx",
+        "ppt",
+        "pptx",
+      ],
+    },
+  },
+});
+```
+
+<Note>
+For CDN installations, use `window.TwinalyzeAnalytics.init()` with the same configuration.
+</Note>
+
+## Page views
+
+When `pageViews` is enabled, Twinalyze tracks:
+
+- The initial page load
+- Browser back and forward navigation
+- SPA navigation using `pushState`
+- SPA navigation using `replaceState`
+
+```javascript
+enhancedMeasurement: {
+  pageViews: true,
+}
+```
+
+The `pageView` event can include:
+
+```text
+pageTitle
+pageDomain
+pageUrl
+pagePath
+previousPageUrl
+previousPageType
+```
+
+## Click tracking
+
+When `outboundClicks` is enabled, Twinalyze tracks:
+
+- Links
+- Buttons
+- Dropdown items
+- Menu items
+- Other interactive elements
+
+```javascript
+enhancedMeasurement: {
+  outboundClicks: true,
+}
+```
+
+The `elementClick` event can include:
+
+```text
+clickType
+elementTag
+elementText
+elementId
+elementName
+elementRole
+linkUrl
+linkDomain
+linkPath
+isExternalLink
+buttonType
+disabled
+```
+
+<Note>
+Although the configuration option is named `outboundClicks`, it tracks supported internal and external links, buttons, dropdown items, and other interactive elements.
+</Note>
+
+## Scroll tracking
+
+When `scrolls` is enabled, Twinalyze sends a `scrollDepth` event when the user reaches at least 90% of the page.
+
+```javascript
+enhancedMeasurement: {
+  scrolls: true,
+}
+```
+
+Example property:
+
+```text
+scrollPercent: 90
+```
+
+The event is sent once for each page view.
+
+## Form tracking
+
+When `formInteractions` is enabled, Twinalyze tracks form activity.
+
+```javascript
+enhancedMeasurement: {
+  formInteractions: true,
+}
+```
+
+### Form start
+
+The `formStart` event is sent when the user first interacts with a form.
+
+It can include:
+
+```text
+formId
+formName
+formActionUrl
+```
+
+### Form submit
+
+The `formSubmit` event is sent when the form is submitted.
+
+It can include:
+
+```text
+formStatus
+formId
+formName
+formActionUrl
+formDestinationUrl
+```
+
+## Site search tracking
+
+Twinalyze can detect searches from URL query parameters.
+
+```javascript
+enhancedMeasurement: {
+  siteSearch: {
+    params: ["q", "s", "search", "query"],
+  },
+}
+```
+
+For example:
+
+```text
+https://example.com/search?q=analytics
+```
+
+This generates a `searchResultsView` event with properties such as:
+
+```text
+searchKey
+searchTerm
+searchUrl
+```
+
+You can add your website’s custom search parameter:
+
+```javascript
+enhancedMeasurement: {
+  siteSearch: {
+    params: ["q", "search", "keyword", "searchTerm"],
+  },
+}
+```
+
+## File download tracking
+
+Twinalyze tracks clicks on links containing configured file extensions.
+
+```javascript
+enhancedMeasurement: {
+  fileDownloads: {
+    extensions: [
+      "pdf",
+      "zip",
+      "csv",
+      "doc",
+      "docx",
+      "xls",
+      "xlsx",
+      "ppt",
+      "pptx",
+    ],
+  },
+}
+```
+
+The `fileDownload` event can include:
+
+```text
+linkUrl
+fileExtension
+fileName
+```
+
+
+
+<Warning>
+Automatic events are collected only when automatic event tracking is enabled for your Twinalyze project.
+</Warning>

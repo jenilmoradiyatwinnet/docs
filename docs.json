@@ -132,11 +132,11 @@
       },
       { 
         "tab": "SDKs",
-        "icon": "/icon/Side-Bar/code-bold.svg",
+        "icon": "/icon/Navbar/code-bold.svg",
         "dropdowns": [
           {
             "dropdown": "Android",
-            "icon": "android",
+           "icon": "/icon/introduction/android.svg",
             "pages": [
               {
                 "group": "ANALYTICS",
@@ -163,14 +163,19 @@
             ]
           },   {
             "dropdown": "Javascript",
-            "icon": "code",
+            "icon": "/icon/introduction/javascript.svg",
             "pages": [
               {
                 "group": "Analytics",
                 
                 "pages": [
                  
-                      "sdks/javascript/analytics/get-started"
+                      "sdks/javascript/analytics/get-started",
+                       "sdks/javascript/analytics/sdk-initialization", 
+                      "sdks/javascript/analytics/identify-user",
+                       "sdks/javascript/analytics/custom-event-tracking",
+                      "sdks/javascript/analytics/auto-event-tracking"
+                     
                   
                 ]
               },
@@ -189,7 +194,7 @@
       },
       {
         "tab": "Integrations",
-        "icon": "/icon/Side-Bar/link-bold.svg",
+        "icon": "/icon/Navbar/link-bold.svg",
         "groups": [
           {
             "group": "3RD PARTY INTEGRATIONS",

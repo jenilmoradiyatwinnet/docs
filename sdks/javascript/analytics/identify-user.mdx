@@ -1,0 +1,127 @@
+---
+title: "Identify Users"
+description: "Identify logged-in users and send user properties with the Twinalyze JavaScript Analytics SDK."
+icon: "user-check"
+hideFooterPagination: true
+---
+
+Use `identify()` after a user logs in, registers, or when their profile information becomes available.
+
+The method connects anonymous website activity with a known user.
+<Note>
+For npm installations, use `TwinalyzeAnalytics`.
+
+For CDN installations, use `window.TwinalyzeAnalytics`.
+</Note>
+## Identify a user
+
+<div className="twinalyze-tabs">
+
+<Tabs>
+  <Tab title="npm">
+    ```javascript
+    import TwinalyzeAnalytics from "@twinalyze/web-analytics";
+
+    TwinalyzeAnalytics.identify("USER_123");
+    ```
+  </Tab>
+
+  <Tab title="CDN">
+    ```html
+    <script>
+      window.TwinalyzeAnalytics.identify("USER_123");
+    </script>
+    ```
+  </Tab>
+</Tabs>
+
+</div>
+
+## Identify with user properties
+
+You can send additional user information as the second parameter.
+
+<div className="twinalyze-tabs">
+
+<Tabs>
+  <Tab title="npm">
+    ```javascript
+    TwinalyzeAnalytics.identify("USER_123", {
+      name: "John Doe",
+      email: "john@example.com",
+      phone: "+919876543210",
+      plan: "Growth",
+      company: "Example Company",
+    });
+    ```
+  </Tab>
+
+  <Tab title="CDN">
+    ```html
+    <script>
+      window.TwinalyzeAnalytics.identify("USER_123", {
+        name: "John Doe",
+        email: "john@example.com",
+        phone: "+919876543210",
+        plan: "Growth",
+        company: "Example Company",
+      });
+    </script>
+    ```
+  </Tab>
+</Tabs>
+
+</div>
+
+## When to call identify
+
+Call `identify()` when:
+
+- A user successfully logs in
+- A user completes registration
+- User profile information becomes available
+- User properties such as plan or company change
+
+```javascript
+function handleLogin(user) {
+  TwinalyzeAnalytics.identify(user.id, {
+    name: user.name,
+    email: user.email,
+    plan: user.plan,
+  });
+}
+```
+
+## Parameters
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| `userId` | String | Yes | Unique identifier of the user. |
+| `identifyProperties` | Object | No | User profile information such as name, email, phone, plan, or company. |
+
+<Info>
+Initialize the Twinalyze SDK before calling `identify()`.
+</Info>
+
+<Warning>
+Use a permanent and unique user ID from your application. Do not use values that may change, such as a display name.
+</Warning>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/sdks/javascript/analytics/identify-user" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/sdks/javascript/analytics/custom-event-tracking" className="twinalyze-nav-center">
+    <strong>Configure custom events.</strong>
+    <span>Configure custom events.</span>
+  </a>
+
+  <a href="/sdks/javascript/analytics/custom-event-tracking" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>

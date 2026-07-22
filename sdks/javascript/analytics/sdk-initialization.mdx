@@ -1,0 +1,268 @@
+---
+title: "SDK Initialization"
+description: "Install and initialize the Twinalyze JavaScript Analytics SDK."
+icon: "/icon/sdk-icon/sdk-initialization.svg"
+hideFooterPagination: true
+---
+
+## Install and initialize the SDK
+
+<Tabs>
+  <Tab title="npm">
+    Install the package:
+
+    ```bash
+    npm install @twinalyze/web-analytics
+    ```
+
+    Import and initialize the SDK:
+
+    ```javascript
+    import TwinalyzeAnalytics from "@twinalyze/web-analytics";
+
+    TwinalyzeAnalytics.init({
+      apiKey: "YOUR_API_KEY",
+      secretKey: "YOUR_SECRET_KEY",
+      apiBaseUrl: "https://api.twinalyze.com",
+      version: "YOUR_VERSION",
+      debug: false,
+    });
+    ```
+  </Tab>
+
+  <Tab title="CDN">
+    Add the Twinalyze script before the closing `</body>` tag:
+
+    ```html
+    <script src="https://cdn.jsdelivr.net/npm/@twinalyze/web-analytics@1.0.21/dist/cdn.global.min.js"></script>
+    ```
+
+    Initialize the SDK after the script is loaded:
+
+    ```html
+    <script>
+      window.TwinalyzeAnalytics.init({
+        apiKey: "YOUR_API_KEY",
+        secretKey: "YOUR_SECRET_KEY",
+        apiBaseUrl: "https://api.twinalyze.com",
+        version: "YOUR_VERSION",
+        debug: false,
+      });
+    </script>
+    ```
+
+    Complete CDN example:
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        />
+
+        <title>My Website</title>
+      </head>
+
+      <body>
+        <h1>My Website</h1>
+
+        <script src="https://cdn.jsdelivr.net/npm/@twinalyze/web-analytics@1.0.21/dist/cdn.global.min.js"></script>
+
+        <script>
+          if (window.TwinalyzeAnalytics) {
+            window.TwinalyzeAnalytics.init({
+              apiKey: "YOUR_API_KEY",
+              secretKey: "YOUR_SECRET_KEY",
+              apiBaseUrl: "https://api.twinalyze.com",
+              version: "YOUR_VERSION",
+              debug: false,
+            });
+          }
+        </script>
+      </body>
+    </html>
+    ```
+  </Tab>
+</Tabs>
+
+Replace `YOUR_API_KEY` and `YOUR_SECRET_KEY` with the credentials available in your Twinalyze project.
+
+Set `YOUR_VERSION` to the Twinalyze SDK version used by your website.
+
+<Info>
+Initialize the SDK only once. After initialization, Twinalyze creates the device and session identifiers and starts collecting supported website events.
+</Info>
+
+<Warning>
+Set `debug` to `false` in production. Enable it only while testing or troubleshooting the SDK.
+</Warning>
+
+## Complete configuration
+
+<Tabs>
+  <Tab title="npm">
+    ```javascript
+    import TwinalyzeAnalytics from "@twinalyze/web-analytics";
+
+    TwinalyzeAnalytics.init({
+      apiKey: "YOUR_API_KEY",
+      secretKey: "YOUR_SECRET_KEY",
+      apiBaseUrl: "https://api.twinalyze.com",
+      version: "YOUR_VERSION",
+
+      debug: false,
+      persistSession: true,
+      source: "web",
+
+      enhancedMeasurement: {
+        pageViews: true,
+        scrolls: true,
+        outboundClicks: true,
+
+        siteSearch: {
+          params: ["q", "s", "search", "query"],
+        },
+
+        formInteractions: true,
+
+        fileDownloads: {
+          extensions: [
+            "pdf",
+            "zip",
+            "apk",
+            "doc",
+            "docx",
+            "xls",
+            "xlsx",
+            "ppt",
+            "pptx",
+          ],
+        },
+      },
+
+      fcm: {
+        enabled: true,
+        configUrl: "/twinalyze-fcm-sw.js",
+        serviceWorkerPath: "/twinalyze-fcm-sw.js",
+      },
+    });
+    ```
+  </Tab>
+
+  <Tab title="CDN">
+    ```html
+    <script src="https://cdn.jsdelivr.net/npm/@twinalyze/web-analytics@1.0.21/dist/cdn.global.min.js"></script>
+
+    <script>
+      window.TwinalyzeAnalytics.init({
+        apiKey: "YOUR_API_KEY",
+        secretKey: "YOUR_SECRET_KEY",
+        apiBaseUrl: "https://api.twinalyze.com",
+        version: "YOUR_VERSION",
+
+        debug: false,
+        persistSession: true,
+        source: "web",
+
+        enhancedMeasurement: {
+          pageViews: true,
+          scrolls: true,
+          outboundClicks: true,
+
+          siteSearch: {
+            params: ["q", "s", "search", "query"],
+          },
+
+          formInteractions: true,
+
+          fileDownloads: {
+            extensions: [
+              "pdf",
+              "zip",
+              "apk",
+              "doc",
+              "docx",
+              "xls",
+              "xlsx",
+              "ppt",
+              "pptx",
+            ],
+          },
+        },
+
+        fcm: {
+          enabled: true,
+          configUrl: "/twinalyze-fcm-sw.js",
+          serviceWorkerPath: "/twinalyze-fcm-sw.js",
+        },
+      });
+    </script>
+    ```
+  </Tab>
+</Tabs>
+
+Notification permission must be requested after a user action, such as clicking an **Enable Notifications** button.
+
+```javascript
+async function enableNotifications() {
+  if (!("Notification" in window)) {
+    console.log("Notifications are not supported.");
+    return;
+  }
+
+  const permission =
+    await Notification.requestPermission();
+
+  if (permission === "granted") {
+    console.log(
+      "Notification permission granted."
+    );
+  }
+
+  if (permission === "denied") {
+    console.log(
+      "Notification permission denied."
+    );
+  }
+}
+```
+
+```html
+<button onclick="enableNotifications()">
+  Enable Notifications
+</button>
+```
+
+When permission is granted, Twinalyze can:
+
+- Register the FCM service worker
+- Retrieve the Firebase messaging token
+- Save the token in device properties
+- Receive background notifications
+- Open the configured URL when a notification is clicked
+
+<Info>
+FCM works only when the browser supports notifications, FCM is enabled, the service worker is available, and notification permission is granted.
+</Info>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a href="/sdks/javascript/analytics/sdk-initialization" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/sdks/javascript/analytics/identify-user" className="twinalyze-nav-center">
+    <strong>Configure twinalyze identify properties.</strong>
+    <span>Configure twinalyze identify properties.</span>
+  </a>
+
+  <a href="/sdks/javascript/analytics/identify-user" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
