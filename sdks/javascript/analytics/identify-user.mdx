@@ -8,6 +8,202 @@ hideFooterPagination: true
 Use `identify()` after a user logs in, registers, or when their profile information becomes available.
 
 The method connects anonymous website activity with a known user.
+
+## Identify a user
+
+Pass your application’s unique user ID to the `identify()` method.
+
+<CodeGroup>
+
+```javascript npm
+import TwinalyzeAnalytics from "@twinalyze/web-analytics";
+
+TwinalyzeAnalytics.identify("USER_123");
+```
+
+```html CDN
+<script>
+  window.TwinalyzeAnalytics.identify("USER_123");
+</script>
+```
+
+</CodeGroup>
+
+## Identify with user properties
+
+Pass user information as the second parameter.
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.identify("USER_123", {
+  name: "John Doe",
+  email: "john@example.com",
+  phone: "+919876543210",
+  plan: "Growth",
+  company: "Example Company",
+});
+```
+
+```html CDN
+<script>
+  window.TwinalyzeAnalytics.identify("USER_123", {
+    name: "John Doe",
+    email: "john@example.com",
+    phone: "+919876543210",
+    plan: "Growth",
+    company: "Example Company",
+  });
+</script>
+```
+
+</CodeGroup>
+
+## Login example
+
+Call `identify()` after a user successfully logs in.
+
+<CodeGroup>
+
+```javascript npm
+function handleLogin(user) {
+  TwinalyzeAnalytics.identify(user.id, {
+    name: user.name,
+    email: user.email,
+    plan: user.plan,
+  });
+}
+```
+
+```javascript CDN
+function handleLogin(user) {
+  window.TwinalyzeAnalytics.identify(user.id, {
+    name: user.name,
+    email: user.email,
+    plan: user.plan,
+  });
+}
+```
+
+</CodeGroup>
+
+## Registration example
+
+Call `identify()` after a user completes registration.
+
+<CodeGroup>
+
+```javascript npm
+function handleRegistration(user) {
+  TwinalyzeAnalytics.identify(user.id, {
+    name: user.name,
+    email: user.email,
+    registrationMethod: "email",
+  });
+}
+```
+
+```javascript CDN
+function handleRegistration(user) {
+  window.TwinalyzeAnalytics.identify(user.id, {
+    name: user.name,
+    email: user.email,
+    registrationMethod: "email",
+  });
+}
+```
+
+</CodeGroup>
+
+## Update user properties
+
+Call `identify()` again when important user information changes, such as the user’s subscription plan or company.
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.identify("USER_123", {
+  name: "John Doe",
+  email: "john@example.com",
+  plan: "Enterprise",
+  company: "Example Company",
+});
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.identify("USER_123", {
+  name: "John Doe",
+  email: "john@example.com",
+  plan: "Enterprise",
+  company: "Example Company",
+});
+```
+
+</CodeGroup>
+
+## When to call identify
+
+Call `identify()` when:
+
+- A user successfully logs in
+- A user completes registration
+- User profile information becomes available
+- User properties such as plan or company change
+
+## Parameters
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| `userId` | String | Yes | Permanent and unique identifier of the user. |
+| `identifyProperties` | Object | No | User information such as name, email, phone, plan, or company. |
+
+<Info>
+Initialize the Twinalyze SDK before calling `identify()`.
+</Info>
+
+<Warning>
+Use a permanent and unique user ID from your application. Do not use a display name, session ID, or another value that may change.
+</Warning>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a
+    href="/sdks/javascript/analytics/sdk-initialization"
+    className="twinalyze-nav-side"
+  >
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a
+    href="/sdks/javascript/analytics/custom-event-tracking"
+    className="twinalyze-nav-center"
+  >
+    <strong>Track custom events</strong>
+    <span>Track website actions and event properties.</span>
+  </a>
+
+  <a
+    href="/sdks/javascript/analytics/custom-event-tracking"
+    className="twinalyze-nav-side"
+  >
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
+
+
+{/* ---
+title: "Identify Users"
+description: "Identify logged-in users and send user properties with the Twinalyze JavaScript Analytics SDK."
+icon: "user-check"
+hideFooterPagination: true
+---
+
+Use `identify()` after a user logs in, registers, or when their profile information becomes available.
+
+The method connects anonymous website activity with a known user.
 <Note>
 For npm installations, use `TwinalyzeAnalytics`.
 
@@ -124,4 +320,4 @@ Use a permanent and unique user ID from your application. Do not use values that
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
-</div>
+</div> */}

@@ -5,6 +5,220 @@ icon: "/icon/sdk-icon/custom-event-tracking.svg"
 hideFooterPagination: true
 ---
 
+Custom events help you track actions specific to your website, such as registrations, purchases, subscriptions, and feature usage.
+
+Before tracking custom events, make sure the Twinalyze SDK is initialized.
+
+## Track an event
+
+Use the `track()` method and pass the event name as the first parameter.
+
+<CodeGroup>
+
+```javascript npm
+import TwinalyzeAnalytics from "@twinalyze/web-analytics";
+
+TwinalyzeAnalytics.track("signUp");
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.track("signUp");
+```
+
+</CodeGroup>
+
+## Track event properties
+
+Pass an object as the second parameter to send additional information with the event.
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.track("productViewed", {
+  productId: "PROD_101",
+  productName: "Premium Plan",
+  category: "Subscription",
+  price: 999,
+  currency: "INR",
+});
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.track("productViewed", {
+  productId: "PROD_101",
+  productName: "Premium Plan",
+  category: "Subscription",
+  price: 999,
+  currency: "INR",
+});
+```
+
+</CodeGroup>
+
+Twinalyze automatically adds the current page information to the custom event, including the page title, URL, domain, path, previous page URL, and previous page type.
+
+## Examples
+
+### Track user registration
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.track("registrationCompleted", {
+  registrationMethod: "email",
+  planName: "Free",
+});
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.track("registrationCompleted", {
+  registrationMethod: "email",
+  planName: "Free",
+});
+```
+
+</CodeGroup>
+
+### Track add to cart
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.track("addToCart", {
+  productId: "PROD_101",
+  productName: "Analytics Plan",
+  quantity: 1,
+  price: 999,
+  currency: "INR",
+});
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.track("addToCart", {
+  productId: "PROD_101",
+  productName: "Analytics Plan",
+  quantity: 1,
+  price: 999,
+  currency: "INR",
+});
+```
+
+</CodeGroup>
+
+### Track a purchase
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.track("purchaseCompleted", {
+  orderId: "ORDER_1001",
+  totalAmount: 1999,
+  currency: "INR",
+  paymentMethod: "card",
+});
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.track("purchaseCompleted", {
+  orderId: "ORDER_1001",
+  totalAmount: 1999,
+  currency: "INR",
+  paymentMethod: "card",
+});
+```
+
+</CodeGroup>
+
+### Track feature usage
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.track("featureUsed", {
+  featureName: "Realtime Users",
+  source: "dashboard",
+});
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.track("featureUsed", {
+  featureName: "Realtime Users",
+  source: "dashboard",
+});
+```
+
+</CodeGroup>
+
+## Parameters
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| `eventName` | String | Yes | Name of the custom event. |
+| `properties` | Object | No | Additional information related to the event. |
+
+## Recommended naming
+
+Use clear and consistent event names that describe the completed user action.
+
+<CodeGroup>
+
+```javascript npm
+TwinalyzeAnalytics.track("checkoutStarted");
+TwinalyzeAnalytics.track("subscriptionPurchased");
+TwinalyzeAnalytics.track("reportExported");
+```
+
+```javascript CDN
+window.TwinalyzeAnalytics.track("checkoutStarted");
+window.TwinalyzeAnalytics.track("subscriptionPurchased");
+window.TwinalyzeAnalytics.track("reportExported");
+```
+
+</CodeGroup>
+
+<Info>
+Custom events are temporarily queued when the SDK session is not ready and are sent after initialization is completed.
+</Info>
+
+<Note>
+Custom events are collected only when manual event tracking is enabled for your Twinalyze project.
+</Note>
+
+---
+
+<div className="twinalyze-bottom-nav">
+  <a
+    href="/sdks/javascript/analytics/identify-user"
+    className="twinalyze-nav-side"
+  >
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a
+    href="/sdks/javascript/analytics/automatic-event-tracking"
+    className="twinalyze-nav-center"
+  >
+    <strong>Automatic event tracking</strong>
+    <span>Automatically track common website interactions.</span>
+  </a>
+
+  <a
+    href="/sdks/javascript/analytics/automatic-event-tracking"
+    className="twinalyze-nav-side"
+  >
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
+
+{/* ---
+title: "Custom Events"
+description: "Track custom website events and properties with the Twinalyze JavaScript Analytics SDK."
+icon: "/icon/sdk-icon/custom-event-tracking.svg"
+hideFooterPagination: true
+---
+
 Custom events help you track actions that are specific to your website, such as registrations, purchases, subscriptions, and feature usage.
 
 Before tracking custom events, make sure the Twinalyze SDK is initialized.
@@ -160,4 +374,4 @@ Custom events are collected only when manual event tracking is enabled for your 
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>
-</div>
+</div> */}
