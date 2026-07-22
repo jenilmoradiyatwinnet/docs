@@ -1,6 +1,92 @@
 ---
 title: "Discord"
-sidebarTitle: "Discord"
-description: "Connect discord community with Twinalyze."
+description: "Connect Discord with Twinalyze to receive selected alerts and updates in a Discord channel."
 icon: "/icon/introduction/discord.svg"
+hideFooterPagination: true
 ---
+
+Twinalyze uses a Discord webhook URL to deliver messages to the channel you select.
+
+## Before you begin
+
+Make sure you have:
+
+- Access to the Discord server
+- Permission to manage webhooks
+- A text channel for Twinalyze notifications
+- Permission to manage integrations in Twinalyze
+
+## Connect Discord
+
+<Steps titleSize="h3">
+  <Step title="Open Discord server settings">
+    Open the Discord server where you want to receive Twinalyze notifications.
+
+    Select the server name and open **Server Settings**.
+  </Step>
+
+  <Step title="Create a webhook">
+    Go to **Integrations → Webhooks** and select **New Webhook** or **Create Webhook**.
+
+    Enter a name such as:
+
+    ```text
+    Twinalyze
+    ```
+
+    Select the channel where Twinalyze should send notifications.
+  </Step>
+
+  <Step title="Copy the webhook URL">
+    Select **Copy Webhook URL**.
+
+    The webhook URL connects Twinalyze to the selected Discord channel.
+
+    <Warning>
+    Keep the webhook URL private. Anyone with access to it may be able to send messages to the connected Discord channel.
+    </Warning>
+  </Step>
+
+  <Step title="Open Twinalyze Integrations">
+    Open your Twinalyze project and go to **Project Setting → Integrations**.
+
+    Find **Discord** under the available communication integrations.
+  </Step>
+
+  <Step title="Add the webhook URL">
+    Open the Discord integration and paste the copied webhook URL into the **Webhook URL** field.
+
+    Select the notification options available for your Twinalyze project.
+  </Step>
+
+  <Step title="Test the connection">
+    Click **Test Connection** to send a test notification to Discord.
+
+    Open the selected Discord channel and confirm that the test message was received.
+  </Step>
+
+  <Step title="Save the integration">
+    Click **Connect**, **Submit**, or **Save** to complete the integration.
+
+    Discord will appear as connected in the Twinalyze integrations page.
+  </Step>
+</Steps>
+
+
+
+<div className="twinalyze-bottom-nav">
+  <a href="/integrations/facebook-monetization-manager" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/integrations/slack" className="twinalyze-nav-center">
+    <strong>Slack.</strong>
+    <span>Configure slack.</span>
+  </a>
+
+  <a href="/integrations/slack" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>

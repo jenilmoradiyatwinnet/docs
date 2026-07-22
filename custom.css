@@ -2924,3 +2924,28 @@ html.dark
   a[href^="/integrations"][data-active="true"] {
   color: #60a5fa !important;
 }                                                                                                                                                                                                                                                                                                                             
+
+
+
+
+/* Remove line between Previous and center card */
+.twinalyze-nav-side-prev {
+  border-right: 0 !important;
+}
+
+.twinalyze-nav-center-no-next {
+  border-left: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+/* Dark mode */
+.dark .twinalyze-nav-side-prev,
+[data-theme="dark"] .twinalyze-nav-side-prev {
+  border-right: 0 !important;
+}
+
+.dark .twinalyze-nav-center-no-next,
+[data-theme="dark"] .twinalyze-nav-center-no-next {
+  border-left: 0 !important;
+}

@@ -199,10 +199,10 @@
           {
             "group": "3RD PARTY INTEGRATIONS",
             "pages": [
+               "integrations/google-ads",
               "integrations/admob",
               "integrations/facebook-ad",
               "integrations/facebook-monetization-manager",
-              "integrations/google-ads",
               "integrations/discord",
               "integrations/slack",
               "integrations/microsoft-teams"

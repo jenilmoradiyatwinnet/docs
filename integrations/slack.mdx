@@ -1,89 +1,102 @@
 ---
-title: "Slack"
-sidebarTitle: "Slack"
-description: "Connect Slack with Twinalyze."
+title: "Slack Integration"
+description: "Connect Slack with Twinalyze to receive selected alerts and project updates in a Slack channel."
 icon: "/icon/introduction/Slack-updated.svg"
 hideFooterPagination: true
 ---
 
-<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-  <div className="bg-gradient-to-r from-blue-50 via-white to-indigo-50 px-6 py-8">
-    <div className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-      Coming soon
-    </div>
+Twinalyze uses a Slack Incoming Webhook URL to send notifications to the channel you select.
 
-    <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
-      Slack integration is coming soon
-    </h2>
 
-    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
-      The Slack integration will help your team receive important Twinalyze alerts, reports, and activity updates directly inside Slack channels.
-    </p>
-  </div>
-</div>
+## Before you begin
 
----
+Make sure you have:
 
-## What will be available
+- Access to the required Slack workspace
+- Permission to create or install Slack apps
+- A channel for Twinalyze notifications
+- Permission to manage integrations in Twinalyze
 
-<CardGroup cols={2}>
-  <Card title="Send alerts to Slack">
-    Receive important alerts in selected Slack channels.
-  </Card>
+## Connect Slack
 
-  <Card title="Share reports with teams">
-    Send report summaries to product, marketing, or support channels.
-  </Card>
+<Steps titleSize="h3">
+  <Step title="Create a Slack app">
+    Open the Slack app management page and select **Create New App**.
 
-  <Card title="Monitor key changes">
-    Get notified about drops, spikes, failures, or campaign changes.
-  </Card>
-
-  <Card title="Improve team response">
-    Help teams react faster to important product and analytics signals.
-  </Card>
-</CardGroup>
-
----
-
-## Preparation checklist
-
-<Steps>
-  <Step title="Choose target channels">
-    Decide where Twinalyze alerts should be sent.
+    Choose **From scratch**, enter an app name such as `Twinalyze`, and select the required Slack workspace.
   </Step>
 
-  <Step title="Prepare alert rules">
-    Review which alerts or reports should notify your team.
+  <Step title="Enable Incoming Webhooks">
+    Open the newly created Slack app.
+
+    Select **Incoming Webhooks** from the app settings and enable **Activate Incoming Webhooks**.
   </Step>
 
-  <Step title="Assign team ownership">
-    Decide which team should receive which type of alert.
+  <Step title="Add a webhook to the workspace">
+    Click **Add New Webhook to Workspace**.
+
+    Select the Slack channel where Twinalyze should send notifications, then click **Allow** or **Authorize**.
+
+    <Note>
+    To connect a private channel, your Slack account must already be a member of that channel.
+    </Note>
+  </Step>
+
+  <Step title="Copy the webhook URL">
+    After authorization, return to the **Incoming Webhooks** section.
+
+    Copy the generated webhook URL from **Webhook URLs for Your Workspace**.
+
+    The URL will look similar to:
+
+    ```text
+    https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXX
+    ```
+
+    <Warning>
+    Keep the webhook URL private. Do not share it publicly or commit it to a public repository.
+    </Warning>
+  </Step>
+
+  <Step title="Open Twinalyze Integrations">
+    Open your Twinalyze project and go to **Project Setting → Integrations**.
+
+    Find **Slack** under the communication integrations.
+  </Step>
+
+  <Step title="Add the webhook URL">
+    Open the Slack integration and paste the copied URL into the **Webhook URL** field.
+
+    Select the notification options available for your project.
+  </Step>
+
+  <Step title="Test the connection">
+    Click **Test Connection** to send a test notification.
+
+    Open the selected Slack channel and confirm that the message was received.
+  </Step>
+
+  <Step title="Save the integration">
+    Click **Connect**, **Submit**, or **Save** to complete the integration.
+
+    Slack will appear as connected on the Twinalyze integrations page.
   </Step>
 </Steps>
 
 ---
 
-## Availability
-
-<Note>
-  This integration is currently planned. The setup guide will be updated here once it becomes available.
-</Note>
-
----
-
 <div className="twinalyze-bottom-nav">
-  <a href="/integrations/facebook-monetization-manager" className="twinalyze-nav-side">
+  <a href="/integrations/slack" className="twinalyze-nav-side">
     <span className="twinalyze-nav-arrow">‹</span>
     <span>Previous</span>
   </a>
 
   <a href="/integrations/microsoft-teams" className="twinalyze-nav-center">
-    <strong>Microsoft Teams</strong>
-    <span>Send alerts and reports to your Teams workspace.</span>
+    <strong>Microsoft Teams.</strong>
+    <span>Configure Microsoft Teams.</span>
   </a>
 
-  <a href="/integrations/microsoft-teams" className="twinalyze-nav-side">
+  <a href="/integrations/microsoft" className="twinalyze-nav-side">
     <span>Next</span>
     <span className="twinalyze-nav-arrow">›</span>
   </a>

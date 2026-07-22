@@ -1,70 +1,73 @@
 ---
 title: "Meta Monetization Manager"
-description: "Connect Meta Monetization Manager with Twinalyze."
+description: "Connect Meta Monetization Manager with Twinalyze to import Audience Network revenue and ad performance data."
 icon: "/icon/introduction/Fb-Monitization.svg"
+hideFooterPagination: true
 ---
 
+Twinalyze imports reporting data from the Meta business and monetized property you select.
 
-<div className="not-prose overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-  <div className="bg-gradient-to-r from-blue-50 via-white to-indigo-50 px-6 py-8">
-    <div className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-      Coming soon
-    </div>
+## Connect Meta Monetization Manager
 
-    <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
-      Meta Monetization Manager integration is coming soon
-    </h2>
+<Steps titleSize="h3">
+  <Step title="Open Integrations">
+    Open your Twinalyze project and go to **Project Setting → Integrations**.
 
-    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
-      This integration will help you connect Facebook monetization data with Twinalyze so you can review ad performance, failures, and revenue signals in one place.
-    </p>
-  </div>
-</div>
-
----
-
-## What will be available
-
-<CardGroup cols={2}>
-  <Card title="Monitor monetization performance">
-    Review ad activity and monetization behavior from Facebook placements.
-  </Card>
-
-  <Card title="Track ad failures">
-    Identify where ads fail and which formats need attention.
-  </Card>
-
-  <Card title="Compare ad formats">
-    Analyze performance across native, banner, interstitial, and other formats.
-  </Card>
-
-  <Card title="Understand user-level impact">
-    Connect monetization performance with user activity and engagement.
-  </Card>
-</CardGroup>
-
----
-
-## Preparation checklist
-
-<Steps>
-  <Step title="Keep placement details ready">
-    Prepare placement IDs and ad format details.
+    Find **Meta Monetization Manager** under the **Marketing** section.
   </Step>
 
-  <Step title="Review monetization events">
-    Decide which ad events should be tracked in Twinalyze.
+  <Step title="Open the integration">
+    Select **Meta Monetization Manager** from the integrations page.
+
+    Review how Twinalyze uses your monetization reporting data, then click **Connect with Meta**.
   </Step>
 
-  <Step title="Use consistent ad naming">
-    Keep ad unit and placement names clear for reporting.
+  <Step title="Sign in with Meta">
+    Sign in using the Meta or Facebook account that has access to the required Monetization Manager property.
+
+    Use another account when the displayed account does not have the required access.
+  </Step>
+
+  <Step title="Review permissions">
+    Review the permissions requested by Twinalyze and continue.
+
+    These permissions allow Twinalyze to retrieve available businesses, properties, placements, and reporting data.
+  </Step>
+
+  <Step title="Select a monetization property">
+    Return to Twinalyze and select the required Meta business and monetization property.
+
+    Select the correct property when your account manages multiple applications.
+  </Step>
+
+  <Step title="Select historical data">
+    Choose the historical reporting period you want to import.
+
+    The available historical period depends on the options provided in your Twinalyze project.
+  </Step>
+
+  <Step title="Complete the integration">
+    Review the selected business, property, and historical data period.
+
+    Click **Submit** to complete the integration.
   </Step>
 </Steps>
 
 ---
 
-## Availability
+<div className="twinalyze-bottom-nav">
+  <a href="/integrations/facebook-ad" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
 
-<Note>
-  This integration is currently planned. The setup guide will be updated here once it becomes available.
-</Note>
+  <a href="/integrations/discord" className="twinalyze-nav-center">
+    <strong>Discord.</strong>
+    <span>Configure Discord.</span>
+  </a>
+
+  <a href="/integrations/discord" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>
