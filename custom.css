@@ -2957,16 +2957,16 @@ html.dark
 
 /* =====================================================
    Introduction top feature icons only
-===================================================== */
+===================================================== 
 
-/* Light mode: original color */
+/* Light mode: original color 
 .twinalyze-introduction-page img {
   opacity: 1 !important;
   visibility: visible !important;
   filter: none !important;
 }
 
-/* Dark mode: only wrapped top feature icons become white */
+/* Dark mode: only wrapped top feature icons become white 
 html.dark .twinalyze-introduction-page img,
 .dark .twinalyze-introduction-page img,
 [data-theme="dark"] .twinalyze-introduction-page img {
@@ -2975,11 +2975,62 @@ html.dark .twinalyze-introduction-page img,
   filter: brightness(0) saturate(100%) invert(100%) !important;
 }
 
-/* SDK, Integration and Support icons always stay original */
+/* SDK, Integration and Support icons always stay original 
 .twinalyze-card-icons-26 img,
 html.dark .twinalyze-card-icons-26 img,
 .dark .twinalyze-card-icons-26 img,
 [data-theme="dark"] .twinalyze-card-icons-26 img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   GLOBAL CONTENT ICON DARK MODE
+
+   Default:
+   - Light mode: original icon
+   - Dark mode: white icon
+
+   Excluded:
+   - SDK icons
+   - Integration icons
+   - Community & Support icons
+===================================================== */
+
+/* Main content icons — light mode */
+main img[src*="/icon/"],
+main img[src*="icon%2F"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+/* Main content icons — dark mode */
+html.dark main img[src*="/icon/"],
+html.dark main img[src*="icon%2F"],
+.dark main img[src*="/icon/"],
+.dark main img[src*="icon%2F"],
+[data-theme="dark"] main img[src*="/icon/"],
+[data-theme="dark"] main img[src*="icon%2F"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: brightness(0) saturate(100%) invert(100%) !important;
+}
+
+/* SDK, Integration and Community & Support icons:
+   always preserve original colors */
+main .twinalyze-card-icons-26 img,
+html.dark main .twinalyze-card-icons-26 img,
+.dark main .twinalyze-card-icons-26 img,
+[data-theme="dark"] main .twinalyze-card-icons-26 img {
   opacity: 1 !important;
   visibility: visible !important;
   filter: none !important;
