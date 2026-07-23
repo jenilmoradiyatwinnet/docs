@@ -2952,86 +2952,34 @@ html.dark
 }
 
 
+
+
+
 /* =====================================================
-   FINAL Introduction Card Icons
-   Supports local and live optimized image URLs
+   Introduction top feature icons only
 ===================================================== */
 
-/* Light mode */
-html:not(.dark) img[src*="/icon/introduction/"],
-html:not(.dark) img[src*="icon%2Fintroduction%2F"] {
+/* Light mode: original color */
+.twinalyze-introduction-page img {
   opacity: 1 !important;
   visibility: visible !important;
   filter: none !important;
 }
 
-/* Dark mode */
-html.dark img[src*="/icon/introduction/"],
-html.dark img[src*="icon%2Fintroduction%2F"],
-.dark img[src*="/icon/introduction/"],
-.dark img[src*="icon%2Fintroduction%2F"],
-[data-theme="dark"] img[src*="/icon/introduction/"],
-[data-theme="dark"] img[src*="icon%2Fintroduction%2F"] {
+/* Dark mode: only wrapped top feature icons become white */
+html.dark .twinalyze-introduction-page img,
+.dark .twinalyze-introduction-page img,
+[data-theme="dark"] .twinalyze-introduction-page img {
   opacity: 1 !important;
   visibility: visible !important;
   filter: brightness(0) saturate(100%) invert(100%) !important;
 }
 
-
-/* =====================================================
-   Introduction page icons
-
-   Dark mode:
-   - All page icons become white
-   - SDK, Integration and Support icons stay original
-===================================================== */
-
-/* Light mode: keep every icon original */
-.twinalyze-introduction-page img[src*="/icon/"],
-.twinalyze-introduction-page img[src*="icon%2F"] {
-  opacity: 1 !important;
-  visibility: visible !important;
-  filter: none !important;
-}
-
-/* Dark mode: all Introduction page icons become white */
-html.dark
-  .twinalyze-introduction-page
-  img[src*="/icon/"],
-html.dark
-  .twinalyze-introduction-page
-  img[src*="icon%2F"],
-.dark
-  .twinalyze-introduction-page
-  img[src*="/icon/"],
-.dark
-  .twinalyze-introduction-page
-  img[src*="icon%2F"],
-[data-theme="dark"]
-  .twinalyze-introduction-page
-  img[src*="/icon/"],
-[data-theme="dark"]
-  .twinalyze-introduction-page
-  img[src*="icon%2F"] {
-  opacity: 1 !important;
-  visibility: visible !important;
-  filter: brightness(0) saturate(100%) invert(100%) !important;
-}
-
-/* SDKs, Integrations and Community & Support:
-   always keep original icon colors */
-html.dark
-  .twinalyze-introduction-page
-  .twinalyze-card-icons-26
-  img,
-.dark
-  .twinalyze-introduction-page
-  .twinalyze-card-icons-26
-  img,
-[data-theme="dark"]
-  .twinalyze-introduction-page
-  .twinalyze-card-icons-26
-  img {
+/* SDK, Integration and Support icons always stay original */
+.twinalyze-card-icons-26 img,
+html.dark .twinalyze-card-icons-26 img,
+.dark .twinalyze-card-icons-26 img,
+[data-theme="dark"] .twinalyze-card-icons-26 img {
   opacity: 1 !important;
   visibility: visible !important;
   filter: none !important;
