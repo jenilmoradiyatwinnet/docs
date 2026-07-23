@@ -35,9 +35,6 @@ import TwinalyzeAnalytics from "@twinalyze/web-analytics";
 TwinalyzeAnalytics.init({
   apiKey: "YOUR_API_KEY",
   secretKey: "YOUR_SECRET_KEY",
-  apiBaseUrl: "https://api.twinalyze.com",
-  version: "1.0.21", 
-  debug: false,
 });
 ```
 
@@ -45,10 +42,7 @@ TwinalyzeAnalytics.init({
 <script>
   window.TwinalyzeAnalytics.init({
     apiKey: "YOUR_API_KEY",
-    secretKey: "YOUR_SECRET_KEY",
-    apiBaseUrl: "https://api.twinalyze.com",
-    version: "1.0.21",
-    debug: false,
+    secretKey: "YOUR_SECRET_KEY"
   });
 </script>
 ```
@@ -61,9 +55,6 @@ Replace `YOUR_API_KEY` and `YOUR_SECRET_KEY` with the credentials available in y
 Initialize the SDK only once. After initialization, Twinalyze creates the device and session identifiers and starts collecting supported website events.
 </Info>
 
-<Warning>
-Set `debug` to `false` in production. Enable it only while testing or troubleshooting the SDK.
-</Warning>
 
 ## Complete configuration
 
@@ -76,17 +67,14 @@ import TwinalyzeAnalytics from "@twinalyze/web-analytics";
 
 TwinalyzeAnalytics.init({
   apiKey: "YOUR_API_KEY",
-  secretKey: "YOUR_SECRET_KEY",
-  apiBaseUrl: "https://api.twinalyze.com",
-  version: "1.0.21",
+  secretKey: "YOUR_SECRET_KEY"
 
-  debug: false,
   enhancedMeasurement: {
-    pageViews: true,
-    scrolls: true,
-    outboundClicks: true,
+    pageView: true,
+    scrollDepth: true,
+    elementClick: true,
 
-    siteSearch: {
+    searchResultsView: {
       params: ["q", "s", "search", "query"],
     },
 
@@ -121,20 +109,14 @@ TwinalyzeAnalytics.init({
 <script>
   window.TwinalyzeAnalytics.init({
     apiKey: "YOUR_API_KEY",
-    secretKey: "YOUR_SECRET_KEY",
-    apiBaseUrl: "https://api.twinalyze.com",
-    version: "1.0.21",
-
-    debug: false,
-    persistSession: true,
-    source: "web",
-
+    secretKey: "YOUR_SECRET_KEY"
+  
     enhancedMeasurement: {
-      pageViews: true,
-      scrolls: true,
-      outboundClicks: true,
+      pageView: true,
+      scrollDepth: true,
+      elementClick: true,
 
-      siteSearch: {
+      searchResultsView: {
         params: ["q", "s", "search", "query"],
       },
 
@@ -172,11 +154,6 @@ TwinalyzeAnalytics.init({
 | --- | --- | --- |
 | `apiKey` | Required | API key of your Twinalyze project. |
 | `secretKey` | Required | Project key used to sign SDK requests. |
-| `apiBaseUrl` | `https://api.twinalyze.com` | Twinalyze API endpoint. |
-| `version` | `1.0.0` | Version of the SDK used by your website. |
-| `debug` | `true` | Displays SDK activity in the browser console. |
-| `persistSession` | `true` | Stores the session identifier in `sessionStorage`. |
-| `source` | `web` | Identifies events as website events. |
 | `enhancedMeasurement` | Enabled | Controls automatic website event tracking. |
 | `fcm` | Disabled | Controls Firebase Cloud Messaging support. |
 
@@ -186,10 +163,10 @@ Enhanced measurement automatically tracks supported website interactions without
 
 | Option | Event | Description |
 | --- | --- | --- |
-| `pageViews` | `pageView` | Tracks initial page loads and SPA route changes. |
-| `scrolls` | `scrollDepth` | Tracks when a user reaches at least 90% of a page. |
-| `outboundClicks` | `elementClick` | Tracks links, buttons, dropdown items, and interactive elements. |
-| `siteSearch` | `searchResultsView` | Tracks searches using configured URL parameters. |
+| `pageView` | `pageView` | Tracks initial page loads and SPA route changes. |
+| `scrollDepth` | `scrollDepth` | Tracks when a user reaches at least 90% of a page. |
+| `elementClick` | `elementClick` | Tracks links, buttons, dropdown items, and interactive elements. |
+| `searchResultsView` | `searchResultsView` | Tracks searches using configured URL parameters. |
 | `formInteractions` | `formStart`, `formSubmit` | Tracks form interaction and submission. |
 | `fileDownloads` | `fileDownload` | Tracks clicks on supported downloadable files. |
 
@@ -197,10 +174,10 @@ You can disable any automatic tracking option by setting it to `false`.
 
 ```javascript
 enhancedMeasurement: {
-  pageViews: true,
-  scrolls: false,
-  outboundClicks: true,
-  siteSearch: false,
+  pageView: true,
+  scrollDepth: false,
+  elementClick: true,
+  searchResultsView: false,
   formInteractions: false,
   fileDownloads: false,
 }
@@ -211,7 +188,7 @@ enhancedMeasurement: {
 Add the URL parameters used by your website’s search feature.
 
 ```javascript
-siteSearch: {
+searchResultsView: {
   params: ["q", "s", "search", "query"],
 }
 ```

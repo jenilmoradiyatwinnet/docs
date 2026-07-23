@@ -32,17 +32,14 @@ Use `enhancedMeasurement` during SDK initialization.
 ```javascript
 TwinalyzeAnalytics.init({
   apiKey: "YOUR_API_KEY",
-  secretKey: "YOUR_SECRET_KEY",
-  apiBaseUrl: "https://api.twinalyze.com",
-  version: "YOUR_VERSION",
-  debug: false,
+  secretKey: "YOUR_SECRET_KEY"
 
   enhancedMeasurement: {
-    pageViews: true,
-    scrolls: true,
-    outboundClicks: true,
+    pageView: true,
+    scrollDepth: true,
+    elementClick: true,
 
-    siteSearch: {
+    searchResultsView: {
       params: ["q", "s", "search", "query"],
     },
 
@@ -69,9 +66,9 @@ TwinalyzeAnalytics.init({
 For CDN installations, use `window.TwinalyzeAnalytics.init()` with the same configuration.
 </Note>
 
-## Page views
+## Page view
 
-When `pageViews` is enabled, Twinalyze tracks:
+When `pageView` is enabled, Twinalyze tracks:
 
 - The initial page load
 - Browser back and forward navigation
@@ -80,7 +77,7 @@ When `pageViews` is enabled, Twinalyze tracks:
 
 ```javascript
 enhancedMeasurement: {
-  pageViews: true,
+  pageView: true,
 }
 ```
 
@@ -97,7 +94,7 @@ previousPageType
 
 ## Click tracking
 
-When `outboundClicks` is enabled, Twinalyze tracks:
+When `elementClick` is enabled, Twinalyze tracks:
 
 - Links
 - Buttons
@@ -107,7 +104,7 @@ When `outboundClicks` is enabled, Twinalyze tracks:
 
 ```javascript
 enhancedMeasurement: {
-  outboundClicks: true,
+  elementClick: true,
 }
 ```
 
@@ -129,16 +126,16 @@ disabled
 ```
 
 <Note>
-Although the configuration option is named `outboundClicks`, it tracks supported internal and external links, buttons, dropdown items, and other interactive elements.
+Although the configuration option is named `elementClick`, it tracks supported internal and external links, buttons, dropdown items, and other interactive elements.
 </Note>
 
 ## Scroll tracking
 
-When `scrolls` is enabled, Twinalyze sends a `scrollDepth` event when the user reaches at least 90% of the page.
+When `scrollDepth` is enabled, Twinalyze sends a `scrollDepth` event when the user reaches at least 90% of the page.
 
 ```javascript
 enhancedMeasurement: {
-  scrolls: true,
+  scrollDepth: true,
 }
 ```
 
@@ -192,7 +189,7 @@ Twinalyze can detect searches from URL query parameters.
 
 ```javascript
 enhancedMeasurement: {
-  siteSearch: {
+  searchResultsView: {
     params: ["q", "s", "search", "query"],
   },
 }
@@ -216,7 +213,7 @@ You can add your website’s custom search parameter:
 
 ```javascript
 enhancedMeasurement: {
-  siteSearch: {
+  searchResultsView: {
     params: ["q", "search", "keyword", "searchTerm"],
   },
 }
