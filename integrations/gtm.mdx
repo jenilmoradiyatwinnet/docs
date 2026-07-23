@@ -1,0 +1,469 @@
+---
+
+title: "Google Tag Manager"
+---
+
+
+Use the Twinalyze Google Tag Manager template to install Twinalyze Web Analytics SDK on your website without manually adding SDK code to every page.
+
+With this integration, you can initialize Twinalyze Analytics, enable automatic tracking, and send custom events from Google Tag Manager.
+
+<Info>
+  This guide covers GTM installation, Twinalyze SDK initialization, and custom event tracking using GTM variables, triggers, and tags.
+</Info>
+
+---
+
+## Overview
+
+The Twinalyze GTM integration works like this:
+
+```txt
+Website
+   ↓
+Google Tag Manager
+   ↓
+Twinalyze Initialize SDK Tag
+   ↓
+Twinalyze Web Analytics SDK
+   ↓
+Automatic Tracking + Custom Events
+   ↓
+Twinalyze Dashboard
+```
+
+| Feature                | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| Initialize SDK         | Loads and initializes the Twinalyze Web Analytics SDK.      |
+| Page View Tracking     | Tracks page visits.                                         |
+| Scroll Depth Tracking  | Tracks how far users scroll.                                |
+| Element Click Tracking | Tracks clicks on buttons, links, menus, and other elements. |
+| Form Tracking          | Tracks form start and form submit activity.                 |
+| Site Search Tracking   | Tracks search keywords from URL parameters.                 |
+| File Download Tracking | Tracks downloadable file clicks.                            |
+| Custom Event Tracking  | Sends custom business events from GTM to Twinalyze.         |
+
+Before you start, make sure you have:
+
+* A Twinalyze account
+* A Twinalyze project
+* API Key and Public Key
+* A Google Tag Manager account
+* GTM container access
+* Website code or admin access
+
+<Warning>
+  Use only client-safe keys inside Google Tag Manager because GTM runs in the browser.
+</Warning>
+
+---
+
+## Install Google Tag Manager
+
+First, add the Google Tag Manager script to your website.
+
+<Steps>
+  <Step title="Open your GTM container">
+    Open Google Tag Manager and select your website container.
+  </Step>
+
+  <Step title="Copy GTM install code">
+    Click your GTM container ID, such as <code>GTM-XXXXXXX</code>. Google Tag Manager will show two code snippets.
+  </Step>
+
+  <Step title="Add script in head">
+    Add the first GTM script as high as possible inside your website <code>&lt;head&gt;</code> tag.
+  </Step>
+
+  <Step title="Add noscript in body">
+    Add the second GTM noscript code immediately after the opening <code>&lt;body&gt;</code> tag.
+  </Step>
+
+  <Step title="Publish website changes">
+    Save and publish your website changes.
+  </Step>
+</Steps>
+
+Head script:
+
+```html
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),
+  dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');
+</script>
+<!-- End Google Tag Manager -->
+```
+
+Body noscript:
+
+```html
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+```
+
+<Note>
+  Replace <code>GTM-XXXXXXX</code> with your actual Google Tag Manager container ID.
+</Note>
+
+---
+
+## Initialize Twinalyze SDK
+
+After GTM is installed, create the Twinalyze initialization tag.
+
+<Steps>
+  <Step title="Create new tag">
+    In Google Tag Manager, go to <code>Tags</code> and click <code>New</code>.
+  </Step>
+
+  <Step title="Choose Twinalyze template">
+    In Tag Configuration, select <code>Twinalyze Web Analytics SDK</code>.
+  </Step>
+
+  <Step title="Select Initialize SDK">
+    In the <code>Tag Type</code> dropdown, select <code>Initialize SDK</code>.
+  </Step>
+
+  <Step title="Add project details">
+    Enter your <code>API Key</code>, <code>Public key</code>, and <code>API Base URL</code>.
+  </Step>
+
+  <Step title="Enable tracking options">
+    Enable the tracking options you need, such as page view, scroll depth, element click, form, site search, and file download tracking.
+  </Step>
+
+  <Step title="Add trigger">
+    Select the <code>All Pages</code> trigger.
+  </Step>
+
+  <Step title="Save tag">
+    Name the tag <code>Twinalyze - Initialize SDK</code> and save it.
+  </Step>
+</Steps>
+
+Recommended setup:
+
+| Field                    | Recommended value           |
+| ------------------------ | --------------------------- |
+| Tag name                 | Twinalyze - Initialize SDK  |
+| Template                 | Twinalyze Web Analytics SDK |
+| Tag Type                 | Initialize SDK              |
+| Trigger                  | All Pages                   |
+| API Base URL             | https://api.twinalyze.com   |
+| Debug mode while testing | Enabled                     |
+| Debug mode in production | Disabled                    |
+
+<Tip>
+  The Initialize SDK tag should fire on <code>All Pages</code>. This makes Twinalyze available across your complete website.
+</Tip>
+
+<AccordionGroup>
+  <Accordion title="API Key">
+    Your Twinalyze project API Key. This connects website activity with your Twinalyze project.
+  </Accordion>
+
+  <Accordion title="Public key">
+    Your Twinalyze project Public Key. This is used by the Web SDK while sending analytics data from the browser.
+  </Accordion>
+
+  <Accordion title="API Base URL">
+    The API endpoint where Twinalyze events are sent.
+
+```
+Default value: <code>https://api.twinalyze.com</code>
+```
+
+  </Accordion>
+
+  <Accordion title="Automatic tracking options">
+    You can enable page view, scroll depth, element click, form start/submit, site search, and file download tracking.
+  </Accordion>
+
+  <Accordion title="Site Search Params">
+    Add search URL parameters used by your website.
+
+```
+Recommended value: <code>q,s,search,query</code>
+```
+
+  </Accordion>
+
+  <Accordion title="File Download Extensions">
+    Add file extensions you want to track.
+
+```
+Example: <code>pdf,zip,apk,doc,docx,xls,xlsx,ppt,pptx</code>
+```
+
+  </Accordion>
+
+  <Accordion title="Advanced - Debug Mode">
+    Enable debug mode while testing. Disable it before publishing to production.
+  </Accordion>
+
+  <Accordion title="Advanced - SDK Version and SDK URL">
+    SDK version example: <code>1.0.19</code>
+
+```
+SDK URL example: <code>https://cdn.jsdelivr.net/npm/@twinalyze/web-analytics</code>
+```
+
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Track Custom Events
+
+To track custom actions like add to cart, purchase, signup, or form submit, push an event into GTM <code>dataLayer</code>.
+
+Example website code:
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: "add_to_cart",
+  product_id: "125",
+  product_name: "Premium Hair Pin",
+  price: 499,
+  currency: "INR",
+  quantity: 1
+});
+</script>
+```
+
+Common event examples:
+
+| Event name         | When to send                          |
+| ------------------ | ------------------------------------- |
+| add_to_cart        | When user adds a product to cart.     |
+| checkout_started   | When user starts checkout.            |
+| purchase_completed | When user completes a purchase.       |
+| signup_completed   | When user creates an account.         |
+| button_clicked     | When user clicks an important button. |
+| form_submitted     | When user submits a form.             |
+
+Now create GTM variables, trigger, and tag.
+
+<Steps>
+  <Step title="Create Data Layer Variables">
+    Go to <code>Variables</code>, create new <code>Data Layer Variable</code> entries, and use the exact keys from your dataLayer event.
+  </Step>
+
+  <Step title="Create Custom Event Trigger">
+    Go to <code>Triggers</code>, create a <code>Custom Event</code> trigger, and enter the event name. For this example, use <code>add_to_cart</code>.
+  </Step>
+
+  <Step title="Create Twinalyze event tag">
+    Go to <code>Tags</code>, create a new Twinalyze tag, select <code>Track Event</code> or your custom event option, and set event name as <code>add_to_cart</code>.
+  </Step>
+
+  <Step title="Map event properties">
+    Map GTM variables as event properties, such as product_id, product_name, price, currency, and quantity.
+  </Step>
+
+  <Step title="Attach trigger">
+    Attach your custom event trigger, such as <code>CE - add_to_cart</code>, to the Twinalyze custom event tag.
+  </Step>
+</Steps>
+
+Recommended Data Layer Variables:
+
+| GTM variable name  | Data Layer Variable Name |
+| ------------------ | ------------------------ |
+| DLV - product_id   | product_id               |
+| DLV - product_name | product_name             |
+| DLV - price        | price                    |
+| DLV - currency     | currency                 |
+| DLV - quantity     | quantity                 |
+
+Custom Event Trigger example:
+
+| Field        | Value            |
+| ------------ | ---------------- |
+| Trigger name | CE - add_to_cart |
+| Trigger type | Custom Event     |
+| Event name   | add_to_cart      |
+
+Twinalyze custom event tag example:
+
+| Field      | Value                       |
+| ---------- | --------------------------- |
+| Tag name   | Twinalyze - Add To Cart     |
+| Template   | Twinalyze Web Analytics SDK |
+| Tag Type   | Track Event / Custom Event  |
+| Event Name | add_to_cart                 |
+| Trigger    | CE - add_to_cart            |
+
+Event property mapping:
+
+<table>
+  <thead>
+    <tr>
+      <th>Property name</th>
+      <th>GTM value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>product_id</td>
+      <td><code>{"{{DLV - product_id}}"}</code></td>
+    </tr>
+    <tr>
+      <td>product_name</td>
+      <td><code>{"{{DLV - product_name}}"}</code></td>
+    </tr>
+    <tr>
+      <td>price</td>
+      <td><code>{"{{DLV - price}}"}</code></td>
+    </tr>
+    <tr>
+      <td>currency</td>
+      <td><code>{"{{DLV - currency}}"}</code></td>
+    </tr>
+    <tr>
+      <td>quantity</td>
+      <td><code>{"{{DLV - quantity}}"}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+Complete custom event flow:
+
+```txt
+User clicks Add to Cart
+   ↓
+Website pushes add_to_cart to dataLayer
+   ↓
+GTM Custom Event Trigger detects add_to_cart
+   ↓
+Twinalyze - Add To Cart tag fires
+   ↓
+Twinalyze receives the event
+   ↓
+Event appears in Twinalyze dashboard
+```
+
+---
+
+## Test and Publish
+
+Test your setup before publishing.
+
+<Steps>
+  <Step title="Open GTM Preview Mode">
+    In Google Tag Manager, click <code>Preview</code> and connect your website.
+  </Step>
+
+  <Step title="Check Initialize SDK tag">
+    Visit your website and confirm that <code>Twinalyze - Initialize SDK</code> fires on page load.
+  </Step>
+
+  <Step title="Check custom event">
+    Perform the action, such as clicking Add to Cart, and confirm that <code>add_to_cart</code> appears in GTM Preview Mode.
+  </Step>
+
+  <Step title="Check event tag">
+    Confirm that <code>Twinalyze - Add To Cart</code> fires on the custom event.
+  </Step>
+
+  <Step title="Check Twinalyze dashboard">
+    Open your Twinalyze dashboard and confirm that events are visible.
+  </Step>
+
+  <Step title="Publish container">
+    Disable debug mode and publish your GTM container.
+  </Step>
+</Steps>
+
+Production checklist:
+
+* GTM script is added to the website
+* Twinalyze Initialize SDK tag is firing
+* Initialize SDK trigger is set to All Pages
+* API Key is correct
+* Public key is correct
+* API Base URL is correct
+* Required automatic tracking options are enabled
+* Data Layer Variables are created correctly
+* Custom Event Trigger event name matches the dataLayer event
+* Twinalyze custom event tag is firing
+* Debug mode is disabled
+* GTM container is published
+* Events are visible in Twinalyze dashboard
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="GTM is not loading on website">
+    Check that both GTM snippets are added correctly. The script should be inside <code>&lt;head&gt;</code> and the noscript should be immediately after <code>&lt;body&gt;</code>.
+  </Accordion>
+
+  <Accordion title="Initialize SDK tag is not firing">
+    Check that the tag trigger is set to <code>All Pages</code>.
+  </Accordion>
+
+  <Accordion title="SDK is not loading">
+    Check that the SDK URL is correct and allowed in template permissions.
+
+```
+Default SDK URL: <code>https://cdn.jsdelivr.net/npm/@twinalyze/web-analytics</code>
+```
+
+  </Accordion>
+
+  <Accordion title="Custom event is not showing in GTM Preview Mode">
+    Check that your website is pushing the event to <code>window.dataLayer</code>. The pushed event name must match the Custom Event Trigger name.
+  </Accordion>
+
+  <Accordion title="Event properties are empty">
+    Check that Data Layer Variables use the exact same names as the keys pushed in dataLayer. For example, if dataLayer has <code>product_id</code>, the Data Layer Variable Name must also be <code>product_id</code>.
+  </Accordion>
+
+  <Accordion title="Events are not visible in Twinalyze">
+    Check API Key, Public key, API Base URL, GTM publish status, Twinalyze tag firing status, and whether your website blocks the SDK CDN URL.
+  </Accordion>
+
+  <Accordion title="Duplicate events are coming">
+    Make sure only one Twinalyze Initialize SDK tag is firing on the same page. Also check that your custom event is not pushed multiple times from your website code.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+ <div className="twinalyze-bottom-nav-no-next">
+  <a
+    href="/integrations/microsoft-teams"
+    className="twinalyze-nav-side-prev"
+  >
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a
+    href="/integrations/microsoft-teams"
+    className="twinalyze-nav-center-no-next"
+  >
+    <strong>Microsoft </strong>
+    <span>Connect Slack with Twinalyze.</span>
+  </a>
+</div> 

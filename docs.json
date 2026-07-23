@@ -205,7 +205,8 @@
               "integrations/facebook-monetization-manager",
               "integrations/discord",
               "integrations/slack",
-              "integrations/microsoft-teams"
+              "integrations/microsoft-teams",
+              "integrations/gtm"
             ]
           }
         
