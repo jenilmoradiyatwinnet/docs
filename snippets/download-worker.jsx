@@ -1,16 +1,15 @@
 import { useState } from "react"
 
-const WORKER_URL =
-  "https://raw.githubusercontent.com/jenilmoradiyatwinnet/docs/main/images/twinalyze-fcm-sw.txt"
-
 export const DownloadWorker = () => {
   const [downloading, setDownloading] = useState(false)
+  const workerUrl =
+    "https://raw.githubusercontent.com/jenilmoradiyatwinnet/docs/main/images/twinalyze-fcm-sw.txt"
 
   const handleDownload = async () => {
     try {
       setDownloading(true)
 
-      const response = await fetch(WORKER_URL, {
+      const response = await fetch(workerUrl, {
         cache: "no-store",
       })
 
@@ -33,7 +32,7 @@ export const DownloadWorker = () => {
       URL.revokeObjectURL(fileUrl)
     } catch (error) {
       console.error("[Twinalyze] Download failed:", error)
-      window.open(WORKER_URL, "_blank", "noopener,noreferrer")
+      window.open(workerUrl, "_blank", "noopener,noreferrer")
     } finally {
       setDownloading(false)
     }
