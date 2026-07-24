@@ -1,260 +1,201 @@
 ---
-title: "Automatic Event Tracking"
-description: "Automatically track page views, clicks, scrolls, forms, searches, and file downloads with the Twinalyze JavaScript Analytics SDK."
+title: "Automatic Event"
+description: "See the website interactions Twinalyze captures automatically."
 icon: "/icon/sdk-icon/manual-ad-event.svg"
 hideFooterPagination: true
 ---
 
-Twinalyze automatically tracks common website interactions after the JavaScript SDK is initialized.
+Twinalyze automatically captures important website interactions after the JavaScript SDK is initialized.
 
-No additional `track()` calls are required for automatic events.
+No additional `track()` calls are required.
+
+<Info>
+Twinalyze currently captures seven automatic website events.
+</Info>
 
 ## Automatic events
 
-| Event | Description |
-| --- | --- |
-| `pageView` | Tracks the initial page load and route changes in single-page applications. |
-| `elementClick` | Tracks links, buttons, dropdown options, and other interactive elements. |
-| `scrollDepth` | Tracks when a user reaches at least 90% of a page. |
-| `formStart` | Tracks when a user starts interacting with a form. |
-| `formSubmit` | Tracks when a form is submitted. |
-| `searchResultsView` | Tracks searches using configured URL query parameters. |
-| `fileDownload` | Tracks clicks on supported downloadable files. |
+<div className="not-prose grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-<Info>
-Automatic events include page and session information such as the page title, URL, domain, path, previous page URL, and previous page type.
-</Info>
+  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+    <code className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+      pageView
+    </code>
+    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      See which pages visitors open.
+    </p>
+  </div>
 
-## Configure automatic events
+  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+    <code className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+      elementClick
+    </code>
+    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      See which links, buttons, and elements visitors click.
+    </p>
+  </div>
 
-Use `enhancedMeasurement` during SDK initialization.
+  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+    <code className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+      scrollDepth
+    </code>
+    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      See when visitors reach 90% of a page.
+    </p>
+  </div>
 
-```javascript
-TwinalyzeAnalytics.init({
-  apiKey: "YOUR_API_KEY",
-  secretKey: "YOUR_SECRET_KEY"
+  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+    <code className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+      formStart
+    </code>
+    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      See when visitors begin using a form.
+    </p>
+  </div>
 
-  enhancedMeasurement: {
-    pageView: true,
-    scrollDepth: true,
-    elementClick: true,
+  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+    <code className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+      formSubmit
+    </code>
+    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      See when visitors submit a form.
+    </p>
+  </div>
 
-    searchResultsView: {
-      params: ["q", "s", "search", "query"],
-    },
+  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+    <code className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+      searchResultsView
+    </code>
+    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      See what visitors search for.
+    </p>
+  </div>
 
-    formInteractions: true,
+  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+    <code className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+      fileDownload
+    </code>
+    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+      See which supported files visitors download.
+    </p>
+  </div>
 
-    fileDownloads: {
-      extensions: [
-        "pdf",
-        "zip",
-        "apk",
-        "doc",
-        "docx",
-        "xls",
-        "xlsx",
-        "ppt",
-        "pptx",
-      ],
-    },
-  },
-});
-```
+</div>
 
-<Note>
-For CDN installations, use `window.TwinalyzeAnalytics.init()` with the same configuration.
-</Note>
+## Event details
 
-## Page view
+<AccordionGroup>
 
-When `pageView` is enabled, Twinalyze tracks:
+  <Accordion title="Page views — pageView">
 
-- The initial page load
-- Browser back and forward navigation
-- SPA navigation using `pushState`
-- SPA navigation using `replaceState`
+    Captured when a visitor:
 
-```javascript
-enhancedMeasurement: {
-  pageView: true,
-}
-```
+    - Opens a page
+    - Uses browser back or forward
+    - Changes routes in a single-page application
 
-The `pageView` event can include:
+    **Properties**
 
-```text
-pageTitle
-pageDomain
-pageUrl
-pagePath
-previousPageUrl
-previousPageType
-```
+    `pageTitle`, `pageDomain`, `pageUrl`, `pagePath`, `previousPageUrl`, `previousPageType`
 
-## Click tracking
+  </Accordion>
 
-When `elementClick` is enabled, Twinalyze tracks:
+  <Accordion title="Element clicks — elementClick">
 
-- Links
-- Buttons
-- Dropdown items
-- Menu items
-- Other interactive elements
+    Captured when a visitor clicks a supported link, button, menu item, dropdown option, or interactive element.
 
-```javascript
-enhancedMeasurement: {
-  elementClick: true,
-}
-```
+    **Properties**
 
-The `elementClick` event can include:
+    `clickType`, `elementTag`, `elementText`, `elementId`, `elementName`, `elementRole`
 
-```text
-clickType
-elementTag
-elementText
-elementId
-elementName
-elementRole
-linkUrl
-linkDomain
-linkPath
-isExternalLink
-buttonType
-disabled
-```
+    Link clicks can also include:
 
-<Note>
-Although the configuration option is named `elementClick`, it tracks supported internal and external links, buttons, dropdown items, and other interactive elements.
-</Note>
+    `linkUrl`, `linkDomain`, `linkPath`, `isExternalLink`
 
-## Scroll tracking
+    Button clicks can also include:
 
-When `scrollDepth` is enabled, Twinalyze sends a `scrollDepth` event when the user reaches at least 90% of the page.
+    `buttonType`, `disabled`
 
-```javascript
-enhancedMeasurement: {
-  scrollDepth: true,
-}
-```
+  </Accordion>
 
-Example property:
+  <Accordion title="Scroll depth — scrollDepth">
 
-```text
-scrollPercent: 90
-```
+    Captured when a visitor reaches at least 90% of a page.
 
-The event is sent once for each page view.
+    **Property**
 
-## Form tracking
+    `scrollPercent`
 
-When `formInteractions` is enabled, Twinalyze tracks form activity.
+    The event is captured once for each page view.
 
-```javascript
-enhancedMeasurement: {
-  formInteractions: true,
-}
-```
+  </Accordion>
 
-### Form start
+  <Accordion title="Form start — formStart">
 
-The `formStart` event is sent when the user first interacts with a form.
+    Captured when a visitor first interacts with a form.
 
-It can include:
+    **Properties**
 
-```text
-formId
-formName
-formActionUrl
-```
+    `formId`, `formName`, `formActionUrl`
 
-### Form submit
+    The event is captured once for each form during the current page visit.
 
-The `formSubmit` event is sent when the form is submitted.
+  </Accordion>
 
-It can include:
+  <Accordion title="Form submit — formSubmit">
 
-```text
-formStatus
-formId
-formName
-formActionUrl
-formDestinationUrl
-```
+    Captured when the browser submits a form.
 
-## Site search tracking
+    **Properties**
 
-Twinalyze can detect searches from URL query parameters.
+    `formStatus`, `formId`, `formName`, `formActionUrl`, `formDestinationUrl`
 
-```javascript
-enhancedMeasurement: {
-  searchResultsView: {
-    params: ["q", "s", "search", "query"],
-  },
-}
-```
+    <Note>
+    This event records the browser submission. It does not confirm that the server successfully processed the form.
+    </Note>
 
-For example:
+  </Accordion>
 
-```text
-https://example.com/search?q=analytics
-```
+  <Accordion title="Site search — searchResultsView">
 
-This generates a `searchResultsView` event with properties such as:
+    Captured when a search term is found in a supported URL parameter.
 
-```text
-searchKey
-searchTerm
-searchUrl
-```
+    **Supported parameters**
 
-You can add your website’s custom search parameter:
+    `q`, `s`, `search`, `query`
 
-```javascript
-enhancedMeasurement: {
-  searchResultsView: {
-    params: ["q", "search", "keyword", "searchTerm"],
-  },
-}
-```
+    **Example**
 
-## File download tracking
+    ```text
+    https://example.com/search?q=analytics
+    ```
 
-Twinalyze tracks clicks on links containing configured file extensions.
+    **Properties**
 
-```javascript
-enhancedMeasurement: {
-  fileDownloads: {
-    extensions: [
-      "pdf",
-      "zip",
-      "csv",
-      "doc",
-      "docx",
-      "xls",
-      "xlsx",
-      "ppt",
-      "pptx",
-    ],
-  },
-}
-```
+    `searchKey`, `searchTerm`, `searchUrl`
 
-The `fileDownload` event can include:
+  </Accordion>
 
-```text
-linkUrl
-fileExtension
-fileName
-```
+  <Accordion title="File downloads — fileDownload">
+
+    Captured when a visitor clicks a supported file link.
+
+    **Supported files**
+
+    `pdf`, `zip`, `apk`, `doc`, `docx`, `xls`, `xlsx`, `ppt`, `pptx`
+
+    **Properties**
+
+    `linkUrl`, `fileExtension`, `fileName`
+
+  </Accordion>
+
+</AccordionGroup>
 
 
 
-<Warning>
-Automatic events are collected only when automatic event tracking is enabled for your Twinalyze project.
-</Warning>
 
+---
 
 <div className="twinalyze-bottom-nav">
   <a

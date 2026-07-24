@@ -1,33 +1,52 @@
 ---
 title: "Custom Events"
-description: "Track custom website events and properties with the Twinalyze JavaScript Analytics SDK."
+description: "Custom events help you track actions specific to your website, such as registrations, purchases, subscriptions, and feature usage."
 icon: "/icon/sdk-icon/custom-event-tracking.svg"
 hideFooterPagination: true
 ---
 
-Custom events help you track actions specific to your website, such as registrations, purchases, subscriptions, and feature usage.
+{/* Custom events help you track actions specific to your website, such as registrations, purchases, subscriptions, and feature usage. */}
 
 Before tracking custom events, make sure the Twinalyze SDK is initialized.
-
 ## Track an event
 
-Use the `track()` method and pass the event name as the first parameter.
+Use the `track()` method and pass the event name as the first parameter.Pass an object as the second parameter to send additional information with the event.
 
 <CodeGroup>
 
 ```javascript npm
-import TwinalyzeAnalytics from "@twinalyze/web-analytics";
-
-TwinalyzeAnalytics.track("signUp");
+TwinalyzeAnalytics.track("productViewed", 
+ { //Add event propteries according to your needs
+  productId: "PROD_101",
+  productName: "Premium Plan",
+  category: "Subscription",
+  price: 999,
+  currency: "INR",
+})
 ```
 
 ```javascript CDN
-window.TwinalyzeAnalytics.track("signUp");
+window.TwinalyzeAnalytics.track("signUp",
+ { //Add event propteries according to your needs
+  productId: "PROD_101",
+  productName: "Premium Plan",
+  category: "Subscription",
+  price: 999,
+  currency: "INR",
+})
 ```
 
 </CodeGroup>
 
-## Track event properties
+## Parameters
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| `eventName` | String | Yes | Name of the custom event. |
+| `properties` | Object | No | Additional information related to the event. |
+
+
+{/* ## Track event properties
 
 Pass an object as the second parameter to send additional information with the event.
 
@@ -55,25 +74,27 @@ window.TwinalyzeAnalytics.track("productViewed", {
 
 </CodeGroup>
 
-Twinalyze automatically adds the current page information to the custom event, including the page title, URL, domain, path, previous page URL, and previous page type.
+Twinalyze automatically adds the current page information to the custom event, including the page title, URL, domain, path, previous page URL, and previous page type. */}
 
 ## Examples
 
-### Track user registration
+### Track product viewed
 
 <CodeGroup>
 
 ```javascript npm
-TwinalyzeAnalytics.track("registrationCompleted", {
-  registrationMethod: "email",
-  planName: "Free",
+TwinalyzeAnalytics.track("ProductViewed", {
+  productId: "email",
+  productname: "Free",
+  productcost:900,
 });
 ```
 
 ```javascript CDN
-window.TwinalyzeAnalytics.track("registrationCompleted", {
-  registrationMethod: "email",
-  planName: "Free",
+window.TwinalyzeAnalytics.track("ProductViewed", {
+   productId: "email",
+  productname: "Free",
+  productcost:900,
 });
 ```
 
@@ -129,32 +150,7 @@ window.TwinalyzeAnalytics.track("purchaseCompleted", {
 
 </CodeGroup>
 
-### Track feature usage
 
-<CodeGroup>
-
-```javascript npm
-TwinalyzeAnalytics.track("featureUsed", {
-  featureName: "Realtime Users",
-  source: "dashboard",
-});
-```
-
-```javascript CDN
-window.TwinalyzeAnalytics.track("featureUsed", {
-  featureName: "Realtime Users",
-  source: "dashboard",
-});
-```
-
-</CodeGroup>
-
-## Parameters
-
-| Parameter | Type | Required | Description |
-| --- | --- | --- | --- |
-| `eventName` | String | Yes | Name of the custom event. |
-| `properties` | Object | No | Additional information related to the event. |
 
 ## Recommended naming
 
@@ -176,13 +172,6 @@ window.TwinalyzeAnalytics.track("reportExported");
 
 </CodeGroup>
 
-<Info>
-Custom events are temporarily queued when the SDK session is not ready and are sent after initialization is completed.
-</Info>
-
-<Note>
-Custom events are collected only when manual event tracking is enabled for your Twinalyze project.
-</Note>
 
 ---
 

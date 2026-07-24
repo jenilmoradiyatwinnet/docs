@@ -25,8 +25,8 @@ npm install @twinalyze/web-analytics
 
 ## Initialize the SDK
 
-Add your Twinalyze project credentials and initialize the SDK.
-
+{/* Add your Twinalyze project credentials and initialize the SDK. */}
+Add this Javascript sdk script to your code and your SDK is ready to send events.
 <CodeGroup>
 
 ```javascript npm
@@ -42,7 +42,7 @@ TwinalyzeAnalytics.init({
 <script>
   window.TwinalyzeAnalytics.init({
     apiKey: "YOUR_API_KEY",
-    secretKey: "YOUR_SECRET_KEY"
+    secretKey: "YOUR_SECRET_KEY",
   });
 </script>
 ```
@@ -56,86 +56,9 @@ Initialize the SDK only once. After initialization, Twinalyze creates the device
 </Info>
 
 
-## Complete configuration
 
-The complete configuration allows you to manage sessions, automatic event tracking, site search, file downloads, and Firebase Cloud Messaging.
 
-<CodeGroup>
-
-```javascript npm
-import TwinalyzeAnalytics from "@twinalyze/web-analytics";
-
-TwinalyzeAnalytics.init({
-  apiKey: "YOUR_API_KEY",
-  secretKey: "YOUR_SECRET_KEY"
-
-  enhancedMeasurement: {
-    pageView: true,
-    scrollDepth: true,
-    elementClick: true,
-    searchResultsView: {
-      params: ["q", "s", "search", "query"],
-    },
-    formInteractions: true,
-    fileDownloads: {
-      extensions: [
-        "pdf","zip","apk","doc","docx","xls","xlsx","ppt","pptx",
-      ],
-    },
-  },
-
-  fcm: {
-    enabled: true,
-    configUrl: "/twinalyze-fcm-sw.js",
-    serviceWorkerPath: "/twinalyze-fcm-sw.js",
-  },
-});
-```
-
-```html CDN
-<script src="https://cdn.jsdelivr.net/npm/@twinalyze/web-analytics/dist/cdn.global.min.js"></script>
-
-<script>
-  window.TwinalyzeAnalytics.init({
-    apiKey: "YOUR_API_KEY",
-    secretKey: "YOUR_SECRET_KEY"
-  
-    enhancedMeasurement: {
-      pageView: true,
-      scrollDepth: true,
-      elementClick: true,
-      searchResultsView: {
-        params: ["q", "s", "search", "query"],
-      },
-      formInteractions: true,
-      fileDownloads: {
-        extensions: [
-          "pdf","zip","apk","doc","docx","xls","xlsx","ppt","pptx",
-        ],
-      },
-    },
-
-    fcm: {
-      enabled: true,
-      configUrl: "/twinalyze-fcm-sw.js",
-      serviceWorkerPath: "/twinalyze-fcm-sw.js",
-    },
-  });
-</script>
-```
-
-</CodeGroup>
-
-## Configuration options
-
-| Option | Default | Description |
-| --- | --- | --- |
-| `apiKey` | Required | API key of your Twinalyze project. |
-| `secretKey` | Required | Project key used to sign SDK requests. |
-| `enhancedMeasurement` | Enabled | Controls automatic website event tracking. |
-| `fcm` | Disabled | Controls Firebase Cloud Messaging support. |
-
-## Enhanced measurement
+{/* ## Enhanced measurement
 
 Enhanced measurement automatically tracks supported website interactions without requiring manual `track()` calls.
 
@@ -195,9 +118,48 @@ fileDownloads: {
     "pptx",
   ],
 }
-```
+``` */}
 
 ## Enable Firebase Cloud Messaging
+
+
+The complete configuration allows you to manage sessions, automatic event tracking, site search, file downloads, and Firebase Cloud Messaging.
+
+<CodeGroup>
+
+```javascript npm
+import TwinalyzeAnalytics from "@twinalyze/web-analytics";
+
+TwinalyzeAnalytics.init({
+  apiKey: "YOUR_API_KEY",
+  secretKey: "YOUR_SECRET_KEY",
+
+  fcm: {
+    enabled: true,
+    configUrl: "/twinalyze-fcm-sw.js",
+    serviceWorkerPath: "/twinalyze-fcm-sw.js",
+  },
+});
+```
+
+```html CDN
+<script src="https://cdn.jsdelivr.net/npm/@twinalyze/web-analytics/dist/cdn.global.min.js"></script>
+
+<script>
+  window.TwinalyzeAnalytics.init({
+    apiKey: "YOUR_API_KEY",
+    secretKey: "YOUR_SECRET_KEY",
+
+    fcm: {
+      enabled: true,
+      configUrl: "/twinalyze-fcm-sw.js",
+      serviceWorkerPath: "/twinalyze-fcm-sw.js",
+    },
+  });
+</script>
+```
+
+</CodeGroup>
 
 To enable web push notifications, create the following service worker file:
 
@@ -211,7 +173,7 @@ The final file must be publicly available at:
 https://your-domain.com/twinalyze-fcm-sw.js
 ```
 
-Add the Firebase configuration and background-notification handling:
+{/* Add the Firebase configuration and background-notification handling:
 
 ```javascript twinalyze-fcm-sw.js
 self.TWINALYZE_FCM_CONFIG = {
@@ -303,17 +265,39 @@ self.addEventListener(
     );
   }
 );
-```
+``` */}
 
-Enable FCM in the Twinalyze initialization configuration:
+To enable web push notifications, download the Twinalyze Firebase service worker file.
 
-```javascript
-fcm: {
-  enabled: true,
-  configUrl: "/twinalyze-fcm-sw.js",
-  serviceWorkerPath: "/twinalyze-fcm-sw.js",
-}
-```
+<div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+  <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
+    <p className="m-0 text-base font-semibold text-black dark:text-white">
+      Twinalyze FCM Service Worker
+    </p>
+
+    <p className="m-0 mt-1 text-sm text-gray-600 dark:text-gray-300">
+      Download the worker file and add your Firebase configuration.
+    </p>
+  </div>
+
+  <div className="flex flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <code>twinalyze-fcm-sw.js</code>
+
+      <p className="m-0 mt-2 text-sm text-gray-600 dark:text-gray-300">
+        Place this file in your application's public root directory.
+      </p>
+    </div>
+
+    <a
+      href="/downloads/twinalyze-fcm-sw.js"
+      download="twinalyze-fcm-sw.js"
+      className="inline-flex w-fit items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white no-underline transition hover:bg-blue-700"
+    >
+      Download Worker File ↓
+    </a>
+  </div>
+</div>
 
 <Note>
 The service worker must be available from your website root. Opening `/twinalyze-fcm-sw.js` in the browser should display the worker file.
@@ -323,6 +307,8 @@ The service worker must be available from your website root. Opening `/twinalyze
 
 Notification permission must be requested after a user action, such as clicking an **Enable Notifications** button.
 
+
+
 ```javascript
 async function enableNotifications() {
   if (!("Notification" in window)) {
@@ -330,38 +316,21 @@ async function enableNotifications() {
     return;
   }
 
-  const permission =
-    await Notification.requestPermission();
+  const permission =await Notification.requestPermission();
 
   if (permission === "granted") {
-    console.log(
-      "Notification permission granted."
+    console.log("Notification permission granted."
     );
   }
 
   if (permission === "denied") {
-    console.log(
-      "Notification permission denied."
+    console.log( "Notification permission denied."
     );
   }
 }
 ```
 
-Call the function from a button:
 
-```html
-<button onclick="enableNotifications()">
-  Enable Notifications
-</button>
-```
-
-When notification permission is granted, Twinalyze can:
-
-- Register the FCM service worker
-- Retrieve the Firebase messaging token
-- Save the token in device properties
-- Receive background notifications
-- Open the configured URL when a notification is clicked
 
 <Info>
 FCM works only when the browser supports notifications, FCM is enabled, the service worker is publicly available, and notification permission is granted.

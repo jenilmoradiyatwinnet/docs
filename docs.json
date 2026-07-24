@@ -171,12 +171,11 @@
                 "pages": [
                  
                       "sdks/javascript/analytics/get-started",
-                       "sdks/javascript/analytics/sdk-initialization", 
+                      "sdks/javascript/analytics/sdk-initialization", 
+                       "sdks/javascript/analytics/auto-event-tracking" ,
                       "sdks/javascript/analytics/identify-user",
-                       "sdks/javascript/analytics/custom-event-tracking",
-                      "sdks/javascript/analytics/auto-event-tracking"
-                     
-                  
+                      "sdks/javascript/analytics/custom-event-tracking"
+                      
                 ]
               },
               {
