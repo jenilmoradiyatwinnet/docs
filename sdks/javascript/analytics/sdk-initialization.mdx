@@ -299,16 +299,22 @@ To enable web push notifications, download the Twinalyze Firebase service worker
   </div>
 </div>
 
-<Note>
+{/* <Note>
 The service worker must be available from your website root. Opening `/twinalyze-fcm-sw.js` in the browser should display the worker file.
-</Note>
+</Note> */}
 
 ## Request notification permission
 
 Notification permission must be requested after a user action, such as clicking an **Enable Notifications** button.
 
 
+Call the function from a button:
 
+```html
+<button onclick="enableNotifications()">
+  Enable Notifications
+</button>
+```
 ```javascript
 async function enableNotifications() {
   if (!("Notification" in window)) {
