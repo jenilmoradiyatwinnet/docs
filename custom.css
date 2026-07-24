@@ -1912,6 +1912,12 @@ header
   ):has([data-active="true"]) {
   color: #2563eb !important;
   border-color: #2563eb !important;
+  border-bottom-width: 1px !important;
+}
+
+/* Mintlify renders the active underline as a separate 1.5px element. */
+header a.nav-tabs-item > div.absolute.bottom-0 {
+  height: 1px !important;
 }
 
 /* Active tab child text */
