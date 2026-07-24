@@ -82,7 +82,455 @@ Twinalyze currently captures seven automatic website events.
 
 </div>
 
+---
+
 ## Event details
+
+<div className="not-prose">
+
+  {/* Page View */}
+  <div className="grid gap-5 border-t border-gray-200 py-7 dark:border-gray-800 md:grid-cols-[170px_1fr]">
+    <div>
+      <p className="m-0 text-sm font-semibold text-black dark:text-white">
+        Page views
+      </p>
+
+      <span className="mt-1 block font-mono text-sm font-semibold text-blue-600 dark:text-blue-400">
+        pageView
+      </span>
+    </div>
+
+    <div>
+      <p className="m-0 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        Captured when a visitor opens a page, uses browser back or forward,
+        or changes routes in a single-page application.
+      </p>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-[140px_1fr]">
+        <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+          Properties
+        </span>
+
+        <div className="flex flex-wrap gap-2">
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            pageTitle
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            pageDomain
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            pageUrl
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            pagePath
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            previousPageUrl
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            previousPageType
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Element Click */}
+  <div className="grid gap-5 border-t border-gray-200 py-7 dark:border-gray-800 md:grid-cols-[170px_1fr]">
+    <div>
+      <p className="m-0 text-sm font-semibold text-black dark:text-white">
+        Element clicks
+      </p>
+
+      <span className="mt-1 block font-mono text-sm font-semibold text-blue-600 dark:text-blue-400">
+        elementClick
+      </span>
+    </div>
+
+    <div>
+      <p className="m-0 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        Captured when a visitor clicks a supported link, button, menu item,
+        dropdown option, or interactive element.
+      </p>
+
+      <div className="mt-5 space-y-5">
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Common
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              clickType
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              elementTag
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              elementText
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              elementId
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              elementName
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              elementRole
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Links
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              linkUrl
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              linkDomain
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              linkPath
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              isExternalLink
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Buttons
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              buttonType
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              disabled
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {/* Scroll Depth */}
+  <div className="grid gap-5 border-t border-gray-200 py-7 dark:border-gray-800 md:grid-cols-[170px_1fr]">
+    <div>
+      <p className="m-0 text-sm font-semibold text-black dark:text-white">
+        Scroll depth
+      </p>
+
+      <span className="mt-1 block font-mono text-sm font-semibold text-blue-600 dark:text-blue-400">
+        scrollDepth
+      </span>
+    </div>
+
+    <div>
+      <p className="m-0 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        Captured when a visitor reaches at least 90% of a page.
+      </p>
+
+      <p className="m-0 mt-2 text-sm leading-6 text-gray-500 dark:text-gray-400">
+        The event is captured once for each page view.
+      </p>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-[140px_1fr]">
+        <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+          Property
+        </span>
+
+        <div className="flex flex-wrap gap-2">
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            scrollPercent
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Form Start */}
+  <div className="grid gap-5 border-t border-gray-200 py-7 dark:border-gray-800 md:grid-cols-[170px_1fr]">
+    <div>
+      <p className="m-0 text-sm font-semibold text-black dark:text-white">
+        Form start
+      </p>
+
+      <span className="mt-1 block font-mono text-sm font-semibold text-blue-600 dark:text-blue-400">
+        formStart
+      </span>
+    </div>
+
+    <div>
+      <p className="m-0 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        Captured when a visitor first interacts with a form.
+      </p>
+
+      <p className="m-0 mt-2 text-sm leading-6 text-gray-500 dark:text-gray-400">
+        The event is captured once for each form during the current page visit.
+      </p>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-[140px_1fr]">
+        <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+          Properties
+        </span>
+
+        <div className="flex flex-wrap gap-2">
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formId
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formName
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formActionUrl
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Form Submit */}
+  <div className="grid gap-5 border-t border-gray-200 py-7 dark:border-gray-800 md:grid-cols-[170px_1fr]">
+    <div>
+      <p className="m-0 text-sm font-semibold text-black dark:text-white">
+        Form submit
+      </p>
+
+      <span className="mt-1 block font-mono text-sm font-semibold text-blue-600 dark:text-blue-400">
+        formSubmit
+      </span>
+    </div>
+
+    <div>
+      <p className="m-0 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        Captured when the browser submits a form.
+      </p>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-[140px_1fr]">
+        <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+          Properties
+        </span>
+
+        <div className="flex flex-wrap gap-2">
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formStatus
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formId
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formName
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formActionUrl
+          </span>
+
+          <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+            formDestinationUrl
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Site Search */}
+  <div className="grid gap-5 border-t border-gray-200 py-7 dark:border-gray-800 md:grid-cols-[170px_1fr]">
+    <div>
+      <p className="m-0 text-sm font-semibold text-black dark:text-white">
+        Site search
+      </p>
+
+      <span className="mt-1 block font-mono text-sm font-semibold text-blue-600 dark:text-blue-400">
+        searchResultsView
+      </span>
+    </div>
+
+    <div>
+      <p className="m-0 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        Captured when a search term is found in a supported URL parameter.
+      </p>
+
+      <div className="mt-5 space-y-5">
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Parameters
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              q
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              s
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              search
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              query
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Properties
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              searchKey
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              searchTerm
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              searchUrl
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Example
+          </span>
+
+          <span className="break-all font-mono text-sm text-gray-700 dark:text-gray-300">
+            https://example.com/search?q=analytics
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {/* File Download */}
+  <div className="grid gap-5 border-y border-gray-200 py-7 dark:border-gray-800 md:grid-cols-[170px_1fr]">
+    <div>
+      <p className="m-0 text-sm font-semibold text-black dark:text-white">
+        File downloads
+      </p>
+
+      <span className="mt-1 block font-mono text-sm font-semibold text-blue-600 dark:text-blue-400">
+        fileDownload
+      </span>
+    </div>
+
+    <div>
+      <p className="m-0 text-sm leading-6 text-gray-600 dark:text-gray-300">
+        Captured when a visitor clicks a supported file link.
+      </p>
+
+      <div className="mt-5 space-y-5">
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            File types
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              pdf
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              zip
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              apk
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              doc
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              docx
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              xls
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              xlsx
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              ppt
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              pptx
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-[140px_1fr]">
+          <span className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Properties
+          </span>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              linkUrl
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              fileExtension
+            </span>
+
+            <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 font-mono text-xs font-medium text-blue-700 dark:bg-blue-950/40 dark:text-blue-300">
+              fileName
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+{/* ## Event details
 
 <AccordionGroup>
 
@@ -190,12 +638,12 @@ Twinalyze currently captures seven automatic website events.
 
   </Accordion>
 
-</AccordionGroup>
+</AccordionGroup> */}
 
 
 
 
----
+
 
 <div className="twinalyze-bottom-nav">
   <a

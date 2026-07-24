@@ -84,7 +84,7 @@ Twinalyze automatically adds the current page information to the custom event, i
 
 ```javascript npm
 TwinalyzeAnalytics.track("ProductViewed", {
-  productId: "email",
+  productId: "PROD_101",
   productname: "Free",
   productcost:900,
 });
@@ -92,7 +92,7 @@ TwinalyzeAnalytics.track("ProductViewed", {
 
 ```javascript CDN
 window.TwinalyzeAnalytics.track("ProductViewed", {
-   productId: "email",
+  productId: "PROD_101",
   productname: "Free",
   productcost:900,
 });
@@ -160,14 +160,20 @@ Use clear and consistent event names that describe the completed user action.
 
 ```javascript npm
 TwinalyzeAnalytics.track("checkoutStarted");
-TwinalyzeAnalytics.track("subscriptionPurchased");
 TwinalyzeAnalytics.track("reportExported");
+TwinalyzeAnalytics.track("checkoutCompleted");
+TwinalyzeAnalytics.track("paymentFailed");
+TwinalyzeAnalytics.track("subscriptionPurchased");
+TwinalyzeAnalytics.track("subscriptionCancelled");
 ```
 
 ```javascript CDN
 window.TwinalyzeAnalytics.track("checkoutStarted");
-window.TwinalyzeAnalytics.track("subscriptionPurchased");
 window.TwinalyzeAnalytics.track("reportExported");
+window.TwinalyzeAnalytics.track("checkoutCompleted");
+window.TwinalyzeAnalytics.track("paymentFailed");
+window.TwinalyzeAnalytics.track("subscriptionPurchased");
+window.TwinalyzeAnalytics.track("subscriptionCancelled");
 ```
 
 </CodeGroup>
