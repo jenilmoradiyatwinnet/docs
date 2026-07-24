@@ -3,7 +3,7 @@ import { useState } from "react"
 export const DownloadWorker = () => {
   const [downloading, setDownloading] = useState(false)
   const workerUrl =
-    "https://raw.githubusercontent.com/jenilmoradiyatwinnet/docs/main/images/twinalyze-fcm-sw.txt"
+    "https://raw.githubusercontent.com/jenilmoradiyatwinnet/docs/main/images/twinalyze-fcm-sw.js"
 
   const handleDownload = async () => {
     try {
@@ -23,7 +23,7 @@ export const DownloadWorker = () => {
       const link = document.createElement("a")
 
       link.href = fileUrl
-      link.download = "twinalyze-fcm-sw.txt"
+      link.download = "twinalyze-fcm-sw.js"
 
       document.body.appendChild(link)
       link.click()
