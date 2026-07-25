@@ -1206,7 +1206,7 @@ export const DashboardTour = () => {
     </div>
   </div>
 
-{/* <div
+<div
   className="w-full overflow-hidden rounded-2xl shadow-sm ring-1 ring-inset ring-gray-200 dark:ring-gray-700"
   style={{
     maxWidth: "939px",
@@ -1227,25 +1227,8 @@ export const DashboardTour = () => {
       display: "block",
     }}
   />
-</div> */}
-
-<div
-  className="w-full overflow-hidden rounded-2xl shadow-sm ring-1 ring-inset ring-gray-200 dark:ring-gray-700"
-  style={{
-    maxWidth: "939px",
-  }}
->
-  <img
-    key={`${activeSection.id}-${activeImageIndex}`}
-    src={activeImage.src}
-    alt={activeImage.title}
-    className="block h-auto w-full"
-    style={{
-      maxWidth: "939px",
-      imageRendering: "auto",
-    }}
-  />
 </div>
+
 
 </div>      
     </div>
