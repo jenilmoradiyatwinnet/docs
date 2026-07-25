@@ -1206,14 +1206,29 @@ export const DashboardTour = () => {
     </div>
   </div>
 
-<div className="w-full overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700">
+<div
+  className="relative w-full overflow-hidden rounded-2xl shadow-sm ring-1 ring-inset ring-gray-200 dark:ring-gray-700"
+  style={{
+    maxWidth: "939px",
+    aspectRatio: "939 / 501",
+  }}
+>
+  {/* Blurred background fills empty space */}
+  <img
+    src={activeImage.src}
+    alt=""
+    aria-hidden="true"
+    className="absolute inset-0 block h-full w-full scale-110 object-cover blur-lg"
+  />
+
+  {/* Original image remains complete and sharp */}
   <img
     key={`${activeSection.id}-${activeImageIndex}`}
     src={activeImage.src}
     alt={activeImage.title}
     width={939}
     height={501}
-    className="block h-auto w-full"
+    className="relative z-10 block h-full w-full object-contain"
   />
 </div>
 </div>
