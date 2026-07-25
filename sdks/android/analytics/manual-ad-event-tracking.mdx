@@ -1,0 +1,298 @@
+---
+title: "Manual Ad Event Tracking"
+description: "Track detailed ad lifecycle events such as request, load, show, click, failure, and revenue. These events help measure ad performance and optimize monetization across different ad networks."
+icon: "/icon/sdk-icon/manual-ad-event.svg"
+hideFooterPagination: true
+---
+
+### Ad Event Parameters <br/>
+
+<table class="ad-event-table">
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`AdsCompany`</td>
+      <td>Ad network</td>
+      <td class="third">
+        <div>`AdsCompany.Admob`</div>
+        <div>`AdsCompany.Adx`</div>
+        <div>`AdsCompany.Facebook`</div>
+      </td>
+    </tr>
+    <tr>
+      <td>`AdsType`</td>
+      <td>Ad format</td>
+      <td class="third">
+        <div>
+         <div>`AdsType.Interstitial`</div>
+         <div>`AdsType.AppOpen`</div>
+        </div>
+        <div>`AdsType.Native`</div>
+        <div> 
+           <div>`AdsType.Banner`</div>
+           <div>`AdsType.Mrc`</div>
+         </div>
+         etc.
+      </td>
+    </tr>
+    <tr>
+      <td>`activityFullName`</td>
+      <td>Your activity class</td>
+      <td>`"com.analytics.test.MainActivity"`</td>
+    </tr>
+    <tr id="param-adid">
+      <td>`adUnitId`</td>
+      <td>Your ad unit ID</td>
+      <td>`"ca-app-pub-3940256099942544/9214589741"`</td>
+    </tr>
+    <tr>
+      <td>`uniqId`</td>
+      <td>Unique identifier per ad event</td>
+      <td>`System.currentTimeMillis()`</td>
+    </tr>
+  </tbody>
+</table>
+
+## How to Send an Ad Event
+
+### Ad Request
+   When an ad fetch is initiated.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsRequestEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String
+    )
+```
+
+```java Java
+Twinalyze.setAdsRequestEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String
+    );
+```
+
+</CodeGroup>
+
+### Ad Load
+   When the ad successfully loads.
+   
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsLoadedEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String
+    )
+```
+
+```java Java
+Twinalyze.setAdsLoadedEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String
+    );
+```
+
+</CodeGroup>
+
+
+### Ad Show  
+  When the ad is displayed.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsImpressionEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null
+    )
+```
+
+```java Java
+Twinalyze.setAdsImpressionEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null
+    );
+```
+
+</CodeGroup>
+
+### Ad Click  
+   Tracks user clicks on the ad.
+  
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsClickEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null
+    )
+```
+
+```java Java
+Twinalyze.setAdsClickEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null
+    );
+```
+
+</CodeGroup>
+
+### Ad Failed 
+   Captures load/show errors with error codes and messages.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdFailedToLoadEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null,
+        errorCode: String,
+        errorMessage: String
+    )
+```
+
+```java Java
+Twinalyze.setAdFailedToLoadEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null,
+        errorCode: String,
+        errorMessage: String
+    );
+```
+
+</CodeGroup>
+   
+
+### Ad Failed Other  
+   Captures load/show errors with error codes and messages. As an example: onAdFailedToShowFullScreenContent.
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdFailedToShowEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null,
+        errorCode: String,
+        errorMessage: String
+    )
+```
+
+```java Java
+Twinalyze.setAdFailedToShowEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null,
+        errorCode: String,
+        errorMessage: String
+    );
+```
+
+</CodeGroup>
+
+### Ad Paid Event  
+   Records revenue data only uses AdMob (micros, currency, precision).
+
+<CodeGroup>
+
+```kotlin Kotlin
+Twinalyze.setAdsPaidEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null,
+        currencyCode: String,
+        precisionType: String,
+        valueMicros: String
+    )
+```
+
+```java Java
+Twinalyze.setAdsPaidEvent(
+        AdsCompany.Admob,
+        AdsType.Interstitial,
+        activityFullName: string,
+        adUnitId: String,
+        uniqId: String,
+        bannerImpressionCount: String ?= null,
+        currencyCode: String,
+        precisionType: String,
+        valueMicros: String
+    );
+```
+
+</CodeGroup>
+
+
+---
+
+
+<div className="twinalyze-bottom-nav">
+  <a href="/sdks/app/analytics/custom-event-tracking" className="twinalyze-nav-side">
+    <span className="twinalyze-nav-arrow">‹</span>
+    <span>Previous</span>
+  </a>
+
+  <a href="/sdks/app/ad-analytics/ad-analytics-sdk" className="twinalyze-nav-center">
+    <strong>Start with ad analytics</strong>
+    <span>Start with ad analytics.</span>
+  </a>
+
+  <a href="/sdks/app/ad-analytics/ad-analytics-sdk" className="twinalyze-nav-side">
+    <span>Next</span>
+    <span className="twinalyze-nav-arrow">›</span>
+  </a>
+</div>

@@ -8,7 +8,6 @@
   --twinalyze-primary-dark: #1d4ed8;
 }
 
-
 /* ================================
    Twinalyze Bottom Navigation
    Previous + Center + Next
@@ -347,17 +346,50 @@ button:hover {
 }
 
 /* Make dashboard tour images cleaner */
-img[src*="/images/dashboard-tour/"] {
+/* img[src*="/images/dashboard-tour/"] {
   border-radius: 12px;
 }
 
-/* Optional: dashboard tour content image width control */
+/* Optional: dashboard tour content image width control 
 .dashboard-tour-image img,
 img[src*="Data_events"],
 img[src*="properties"],
 img[src*="Project_settings"] {
   width: 100%;
   height: auto;
+} */
+
+/* =================================
+   Dashboard Tour image size
+   Desktop: 939 × 501px
+================================= */
+
+.dashboard-tour-image img,
+img[src*="/images/dashboard-tour/"],
+img[src*="Data_events"],
+img[src*="properties"],
+img[src*="Project_settings"] {
+  display: block;
+  width: 939px !important;
+  height: 501px !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Responsive on tablet and mobile */
+@media (max-width: 939px) {
+  .dashboard-tour-image img,
+  img[src*="/images/dashboard-tour/"],
+  img[src*="Data_events"],
+  img[src*="properties"],
+  img[src*="Project_settings"] {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 939 / 501;
+  }
 }
 
 #page-context-menu {
@@ -2998,6 +3030,7 @@ html.dark .twinalyze-card-icons-26 img,
 
 
 
+
 /* =====================================================
    GLOBAL CONTENT ICON DARK MODE
 
@@ -3053,6 +3086,11 @@ html.dark main .twinalyze-card-icons-26 img,
   Navbar icon : Grey color in dark mode.
 ===================================================== */
 
+/* Remove only the divider directly below the logo and search row. */
+#navbar [class~="border-b"]:not(#navbar-transition) {
+  border-bottom: 0 !important;
+}
+
 
 
 /* Dark top navbar colors same as sidebar */
@@ -3091,4 +3129,20 @@ header
 ):has([class*="text-primary"]) {
   color: #60a5fa !important;
   border-color: #60a5fa !important;
+}
+
+
+
+
+/* Dashboard Tour bottom navigation spacing */
+.dashboard-tour-bottom-nav {
+  margin-top: 48px !important;
+  margin-bottom: 150px !important;
+}
+
+@media (max-width: 640px) {
+  .dashboard-tour-bottom-nav {
+    margin-top: 36px !important;
+    margin-bottom: 80px !important;
+  }
 }

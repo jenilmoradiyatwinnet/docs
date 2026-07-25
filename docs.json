@@ -143,10 +143,10 @@
                 
                 "pages": [
                  
-                      "sdks/app/analytics/get-started",
-                      "sdks/app/analytics/sdk-initialization",
-                      "sdks/app/analytics/custom-event-tracking",
-                      "sdks/app/analytics/manual-ad-event-tracking"
+                      "sdks/android/analytics/get-started",
+                      "sdks/android/analytics/sdk-initialization",
+                      "sdks/android/analytics/custom-event-tracking",
+                      "sdks/android/analytics/manual-ad-event-tracking"
                   
                 ]
               },
@@ -155,8 +155,8 @@
                
                 "pages": [
                   
-                      "sdks/app/ad-analytics/ad-analytics-sdk",
-                      "sdks/app/ad-analytics/ad-sdk-initialization"   
+                      "sdks/android/ad-analytics/ad-analytics-sdk",
+                      "sdks/android/ad-analytics/ad-sdk-initialization"   
                    
                 ]
               }
