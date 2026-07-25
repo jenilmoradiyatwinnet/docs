@@ -363,7 +363,7 @@ img[src*="Project_settings"] {
    Dashboard Tour image size
    Desktop: 939 × 501px
 ================================= */
-
+/* 
 .dashboard-tour-image img,
 img[src*="/images/dashboard-tour/"],
 img[src*="Data_events"],
@@ -379,7 +379,7 @@ img[src*="Project_settings"] {
   object-fit: contain;
 }
 
-/* Responsive on tablet and mobile */
+/* Responsive on tablet and mobile
 @media (max-width: 939px) {
   .dashboard-tour-image img,
   img[src*="/images/dashboard-tour/"],
@@ -390,7 +390,7 @@ img[src*="Project_settings"] {
     height: auto !important;
     aspect-ratio: 939 / 501;
   }
-}
+} */
 
 #page-context-menu {
   margin-top: 22px !important;
