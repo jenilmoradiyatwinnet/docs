@@ -1207,23 +1207,26 @@ export const DashboardTour = () => {
     </div>
   </div>
 
-  {/* Dashboard image */}
-  <div
-    className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-950"
+ <div
+  className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700"
+  style={{
+    width: "939px",
+    maxWidth: "100%",
+    height: "501px",
+  }}
+>
+  <img
+    key={`${activeSection.id}-${activeImageIndex}`}
+    src={activeImage.src}
+    alt={activeImage.title}
+    width={939}
+    height={501}
+    className="block h-full w-full"
     style={{
-      width: "100%",
-      aspectRatio: "939 / 501",
+      objectFit: "fill",
     }}
-  >
-    <img
-      key={`${activeSection.id}-${activeImageIndex}`}
-      src={activeImage.src}
-      alt={activeImage.title}
-      width={939}
-      height={501}
-      className="block h-full w-full object-contain"
-    />
-  </div>
+  />
+</div>
 </div>
 
 
