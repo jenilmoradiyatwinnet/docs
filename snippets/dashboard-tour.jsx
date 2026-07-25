@@ -934,7 +934,12 @@ export const DashboardTour = () => {
   }
 
   return (
-    <div className="not-prose m-0 w-full max-w-none p-0">
+    <div
+  className="not-prose m-0 p-0"
+  style={{
+    width: "939px",
+    maxWidth: "100%",
+  }}>
       <style>{`
         .dashboard-tour-scrollbar::-webkit-scrollbar {
           display: none;
@@ -1172,12 +1177,7 @@ export const DashboardTour = () => {
         </div>
       )}
 
-<div
-  style={{
-    width: "939px",
-    maxWidth: "100%",
-  }}
->
+<div className="w-full">
   {/* Description and navigation buttons */}
   <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
     <div className="min-w-0 flex-1">
