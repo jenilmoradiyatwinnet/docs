@@ -937,8 +937,7 @@ export const DashboardTour = () => {
     <div
   className="not-prose m-0 p-0"
   style={{
-    width: "939px",
-    maxWidth: "100%",
+    maxWidth: "939px",
   }}>
       <style>{`
         .dashboard-tour-scrollbar::-webkit-scrollbar {
@@ -1207,20 +1206,14 @@ export const DashboardTour = () => {
     </div>
   </div>
 
-<div
-  className="w-full overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700"
-  style={{
-    maxWidth: "939px",
-    aspectRatio: "939 / 501",
-  }}
->
+<div className="w-full overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700">
   <img
     key={`${activeSection.id}-${activeImageIndex}`}
     src={activeImage.src}
     alt={activeImage.title}
     width={939}
     height={501}
-    className="block h-full w-full object-cover"
+    className="block h-auto w-full"
   />
 </div>
 </div>
