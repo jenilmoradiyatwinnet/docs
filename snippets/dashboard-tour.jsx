@@ -1207,12 +1207,11 @@ export const DashboardTour = () => {
     </div>
   </div>
 
- <div
-  className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700"
+<div
+  className="w-full overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700"
   style={{
-    width: "939px",
-    maxWidth: "100%",
-    height: "501px",
+    maxWidth: "939px",
+    aspectRatio: "939 / 501",
   }}
 >
   <img
@@ -1221,10 +1220,7 @@ export const DashboardTour = () => {
     alt={activeImage.title}
     width={939}
     height={501}
-    className="block h-full w-full"
-    style={{
-      objectFit: "fill",
-    }}
+    className="block h-full w-full object-cover"
   />
 </div>
 </div>
