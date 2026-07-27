@@ -17,10 +17,7 @@ hideFooterPagination: true
 
 Twinalyze uses role-based access control at the organization level. Each member is assigned a role for **Menu Group**, **Main Menu**, and **Sub Menu** permissions configured for that role.
 
-
----
-
-## Organization roles
+{/* ## Organization roles
 
 Twinalyze provides four organization roles. .
 
@@ -114,6 +111,43 @@ Twinalyze provides four organization roles. .
 </div>
 
 ---
+ */}
+
+
+<div className="organization-role-table">
+  {/* Table header */}
+  <div className="organization-role-header">
+    <div>Role</div>
+    <div>Description</div>
+  </div>
+
+  {/* Table rows */}
+  <div className="organization-role-row">
+    <div className="organization-role-name">Owner</div>
+    <div className="organization-role-description">Full control</div>
+  </div>
+
+  <div className="organization-role-row">
+    <div className="organization-role-name">Admin</div>
+    <div className="organization-role-description">
+      Manages organization members, projects, events, and integrations.
+    </div>
+  </div>
+
+  <div className="organization-role-row">
+    <div className="organization-role-name">Analyst</div>
+    <div className="organization-role-description">
+      Read-only access and can export data.
+    </div>
+  </div>
+
+  <div className="organization-role-row">
+    <div className="organization-role-name">Viewer</div>
+    <div className="organization-role-description">
+      Read-only access. Cannot modify anything.
+    </div>
+  </div>
+</div>
 
 
 ## Invite a member

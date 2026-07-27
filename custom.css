@@ -1158,83 +1158,40 @@ header
   flex-shrink: 0 !important;
 }
 
-/* =================================
-   Core Features tabs
 
-   Inactive:
-   - Black
-   - Normal weight
 
-   Selected:
-   - Blue
-   - Bold
-================================= */
-/* Default and inactive tabs */
-.twinalyze-core-feature-tabs [role="tab"],
-.twinalyze-core-feature-tabs [role="tab"] * {
-  color: #000000 !important;
-  font-weight: 400 !important;
+
+
+/* =====================================================
+   Core Features row height
+===================================================== */
+
+.twinalyze-core-feature-row {
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
 }
 
-/* Selected tab: blue and bold */
-.twinalyze-core-feature-tabs [role="tab"][aria-selected="true"],
-.twinalyze-core-feature-tabs [role="tab"][aria-selected="true"] *,
-.twinalyze-core-feature-tabs [role="tab"][data-state="active"],
-.twinalyze-core-feature-tabs [role="tab"][data-state="active"] * {
-  color: #2563eb !important;
-  font-weight: 700 !important;
+.twinalyze-core-feature-description {
+  margin: 0 !important;
+  line-height: 16px !important;
 }
 
-/* Inactive tab: black and normal */
-.twinalyze-core-feature-tabs [role="tab"][aria-selected="false"],
-.twinalyze-core-feature-tabs [role="tab"][aria-selected="false"] *,
-.twinalyze-core-feature-tabs [role="tab"][data-state="inactive"],
-.twinalyze-core-feature-tabs [role="tab"][data-state="inactive"] * {
-  color: #000000 !important;
-  font-weight: 400 !important;
+/* Mobile */
+@media (max-width: 767px) {
+  .twinalyze-core-feature-row {
+    height: auto !important;
+    min-height: 48px !important;
+    max-height: none !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
 }
 
-/* Dark mode inactive */
-html.dark .twinalyze-core-feature-tabs [role="tab"],
-html.dark .twinalyze-core-feature-tabs [role="tab"] *,
-.dark .twinalyze-core-feature-tabs [role="tab"],
-.dark .twinalyze-core-feature-tabs [role="tab"] * {
-  color: #ffffff !important;
-  font-weight: 400 !important;
-}
-
-/* Dark mode selected: blue and bold */
-html.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][aria-selected="true"],
-html.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][aria-selected="true"]
-  *,
-html.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][data-state="active"],
-html.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][data-state="active"]
-  *,
-.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][aria-selected="true"],
-.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][aria-selected="true"]
-  *,
-.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][data-state="active"],
-.dark
-  .twinalyze-core-feature-tabs
-  [role="tab"][data-state="active"]
-  * {
-  color: #60a5fa !important;
-  font-weight: 700 !important;
-}
 
 
 /* =================================
@@ -3144,5 +3101,362 @@ header
   .dashboard-tour-bottom-nav {
     margin-top: 36px !important;
     margin-bottom: 80px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Dashboard Tour separator */
+.dashboard-tour-separator {
+  display: block;
+  width: 100%;
+  max-width: 939px;
+  height: 1px;
+  margin: 32px 0 48px;
+  background-color: #e5e7eb;
+}
+
+/* Dashboard Tour bottom navigation */
+.dashboard-tour-bottom-nav {
+  width: 100% !important;
+  max-width: 939px !important;
+  min-height: 52px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 4px 8px !important;
+  box-sizing: border-box !important;
+}
+
+.dark .dashboard-tour-separator,
+[data-theme="dark"] .dashboard-tour-separator {
+  background-color: #374151;
+}
+
+@media (max-width: 640px) {
+  .dashboard-tour-separator {
+    margin: 24px 0 32px;
+  }
+
+  .dashboard-tour-bottom-nav {
+    min-height: 48px !important;
+    padding: 3px 6px !important;
+  }
+}
+
+
+
+/* =====================================================
+   Core Features tabs — final clean styling
+===================================================== */
+
+/* Inactive tabs: medium */
+html body main
+  .twinalyze-core-feature-tabs
+  [role="tab"]:not([aria-selected="true"]):not([data-state="active"]),
+html body main
+  .twinalyze-core-feature-tabs
+  [role="tab"]:not([aria-selected="true"]):not([data-state="active"])
+  * {
+  color: #000000 !important;
+  font-weight: 500 !important;
+  font-variation-settings: "wght" 500 !important;
+}
+
+/* Active tab: blue and bold */
+html body main
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"],
+html body main
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"]
+  *,
+html body main
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"],
+html body main
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"]
+  * {
+  color: #2563eb !important;
+  font-weight: 700 !important;
+  font-variation-settings: "wght" 700 !important;
+}
+
+/* Dark mode inactive */
+:is(html.dark, .dark, [data-theme="dark"])
+  main
+  .twinalyze-core-feature-tabs
+  [role="tab"]:not([aria-selected="true"]):not([data-state="active"]),
+:is(html.dark, .dark, [data-theme="dark"])
+  main
+  .twinalyze-core-feature-tabs
+  [role="tab"]:not([aria-selected="true"]):not([data-state="active"])
+  * {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-variation-settings: "wght" 500 !important;
+}
+
+/* Dark mode active */
+:is(html.dark, .dark, [data-theme="dark"])
+  main
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"],
+:is(html.dark, .dark, [data-theme="dark"])
+  main
+  .twinalyze-core-feature-tabs
+  [role="tab"][aria-selected="true"]
+  *,
+:is(html.dark, .dark, [data-theme="dark"])
+  main
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"],
+:is(html.dark, .dark, [data-theme="dark"])
+  main
+  .twinalyze-core-feature-tabs
+  [role="tab"][data-state="active"]
+  * {
+  color: #60a5fa !important;
+  font-weight: 700 !important;
+  font-variation-settings: "wght" 700 !important;
+}
+
+
+
+/* =====================================================
+   Organization role table
+===================================================== */
+
+.organization-role-table {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+}
+/* Vertical line between Role and Description */
+.organization-role-header > div:first-child,
+.organization-role-row > div:first-child {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-right: 16px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.organization-role-header > div:nth-child(2),
+.organization-role-row > div:nth-child(2) {
+  padding-left: 16px;
+}
+
+/* Dark mode */
+.dark .organization-role-header > div:first-child,
+.dark .organization-role-row > div:first-child,
+[data-theme="dark"] .organization-role-header > div:first-child,
+[data-theme="dark"] .organization-role-row > div:first-child {
+  border-right-color: #374151;
+}
+
+.organization-role-header,
+.organization-role-row {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Grey header with Role and Description */
+.organization-role-header {
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  padding: 0 16px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Exact 48px data rows */
+.organization-role-row {
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  padding: 0 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.organization-role-name {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.organization-role-description {
+  min-width: 0;
+  overflow: hidden;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Dark mode */
+.dark .organization-role-table,
+[data-theme="dark"] .organization-role-table {
+  border-color: #374151;
+  background: #111827;
+}
+
+.dark .organization-role-header,
+[data-theme="dark"] .organization-role-header {
+  background: #1f2937;
+  color: #d1d5db;
+}
+
+.dark .organization-role-row,
+[data-theme="dark"] .organization-role-row {
+  border-top-color: #374151;
+}
+
+.dark .organization-role-name,
+[data-theme="dark"] .organization-role-name {
+  color: #f9fafb;
+}
+
+.dark .organization-role-description,
+[data-theme="dark"] .organization-role-description {
+  color: #d1d5db;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .organization-role-header,
+  .organization-role-row {
+    grid-template-columns: 90px minmax(0, 1fr);
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .organization-role-name,
+  .organization-role-description {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Global navigation progress loader
+===================================================== */
+
+#twinalyze-navigation-loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2147483647;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease;
+}
+
+#twinalyze-navigation-loader.is-visible {
+  opacity: 1;
+}
+
+.twinalyze-navigation-loader-bar {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(
+    90deg,
+    #2563eb 0%,
+    #3b82f6 60%,
+    #60a5fa 100%
+  );
+  box-shadow:
+    0 0 8px rgba(37, 99, 235, 0.55),
+    0 0 3px rgba(37, 99, 235, 0.8);
+}
+
+#twinalyze-navigation-loader.is-loading
+  .twinalyze-navigation-loader-bar {
+  animation: twinalyze-navigation-progress 8s
+    cubic-bezier(0.1, 0.6, 0.2, 1) forwards;
+}
+
+#twinalyze-navigation-loader.is-complete
+  .twinalyze-navigation-loader-bar {
+  animation: none;
+  transform: scaleX(1);
+  transition: transform 180ms ease;
+}
+
+@keyframes twinalyze-navigation-progress {
+  0% {
+    transform: scaleX(0.03);
+  }
+
+  18% {
+    transform: scaleX(0.28);
+  }
+
+  45% {
+    transform: scaleX(0.52);
+  }
+
+  72% {
+    transform: scaleX(0.72);
+  }
+
+  100% {
+    transform: scaleX(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #twinalyze-navigation-loader,
+  .twinalyze-navigation-loader-bar {
+    transition: none !important;
+  }
+
+  #twinalyze-navigation-loader.is-loading
+    .twinalyze-navigation-loader-bar {
+    animation: none;
+    transform: scaleX(0.75);
   }
 }

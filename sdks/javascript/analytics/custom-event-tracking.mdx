@@ -18,9 +18,11 @@ Use the `track()` method and pass the event name as the first parameter.Pass an 
 TwinalyzeAnalytics.track("productViewed", 
  { //Add event propteries according to your needs
   productId: "PROD_101",
-  productName: "Premium Plan",
-  category: "Subscription",
-  price: 999,
+  productName: "Nike Air Running Shoes",
+  productCategory: "Footwear",
+  brand: "Nike",
+  variant: "Black / UK 9",
+  price: 3499,
   currency: "INR",
 })
 ```
@@ -29,9 +31,11 @@ TwinalyzeAnalytics.track("productViewed",
 window.TwinalyzeAnalytics.track("signUp",
  { //Add event propteries according to your needs
   productId: "PROD_101",
-  productName: "Premium Plan",
-  category: "Subscription",
-  price: 999,
+  productName: "Nike Air Running Shoes",
+  productCategory: "Footwear",
+  brand: "Nike",
+  variant: "Black / UK 9",
+  price: 3499,
   currency: "INR",
 })
 ```
@@ -83,18 +87,26 @@ Twinalyze automatically adds the current page information to the custom event, i
 <CodeGroup>
 
 ```javascript npm
-TwinalyzeAnalytics.track("ProductViewed", {
+TwinalyzeAnalytics.track("productViewed", {
   productId: "PROD_101",
-  productname: "Free",
-  productcost:900,
+  productName: "Nike Air Running Shoes",
+  productCategory: "Footwear",
+  brand: "Nike",
+  variant: "Black / UK 9",
+  price: 3499,
+  currency: "INR",
 });
 ```
 
 ```javascript CDN
-window.TwinalyzeAnalytics.track("ProductViewed", {
+window.TwinalyzeAnalytics.track("productViewed", {
   productId: "PROD_101",
-  productname: "Free",
-  productcost:900,
+  productName: "Nike Air Running Shoes",
+  productCategory: "Footwear",
+  brand: "Nike",
+  variant: "Black / UK 9",
+  price: 3499,
+  currency: "INR",
 });
 ```
 
@@ -105,21 +117,29 @@ window.TwinalyzeAnalytics.track("ProductViewed", {
 <CodeGroup>
 
 ```javascript npm
-TwinalyzeAnalytics.track("addToCart", {
+TwinalyzeAnalytics.track("productAddedToCart", {
   productId: "PROD_101",
-  productName: "Analytics Plan",
+  productName: "Nike Air Running Shoes",
+  productCategory: "Footwear",
+  brand: "Nike",
+  variant: "Black / UK 9",
   quantity: 1,
-  price: 999,
+  price: 3499,
+  totalAmount: 3499,
   currency: "INR",
 });
 ```
 
 ```javascript CDN
-window.TwinalyzeAnalytics.track("addToCart", {
+window.TwinalyzeAnalytics.track("productAddedToCart", {
   productId: "PROD_101",
-  productName: "Analytics Plan",
+  productName: "Nike Air Running Shoes",
+  productCategory: "Footwear",
+  brand: "Nike",
+  variant: "Black / UK 9",
   quantity: 1,
-  price: 999,
+  price: 3499,
+  totalAmount: 3499,
   currency: "INR",
 });
 ```
@@ -131,20 +151,60 @@ window.TwinalyzeAnalytics.track("addToCart", {
 <CodeGroup>
 
 ```javascript npm
-TwinalyzeAnalytics.track("purchaseCompleted", {
-  orderId: "ORDER_1001",
-  totalAmount: 1999,
+TwinalyzeAnalytics.track("checkoutStarted", {
+  cartId: "CART_501",
+  itemCount: 2,
+  subtotal: 4498,
+  discountAmount: 500,
+  shippingAmount: 99,
+  totalAmount: 4097,
   currency: "INR",
-  paymentMethod: "card",
+  couponCode: "WELCOME500",
+  items: [
+    {
+      productId: "PROD_101",
+      productName: "Nike Air Running Shoes",
+      variant: "Black / UK 9",
+      quantity: 1,
+      price: 3499,
+    },
+    {
+      productId: "PROD_102",
+      productName: "Sports Ankle Socks",
+      variant: "White",
+      quantity: 1,
+      price: 999,
+    },
+  ],
 });
 ```
 
 ```javascript CDN
-window.TwinalyzeAnalytics.track("purchaseCompleted", {
-  orderId: "ORDER_1001",
-  totalAmount: 1999,
+window.TwinalyzeAnalytics.track("checkoutStarted", {
+  cartId: "CART_501",
+  itemCount: 2,
+  subtotal: 4498,
+  discountAmount: 500,
+  shippingAmount: 99,
+  totalAmount: 4097,
   currency: "INR",
-  paymentMethod: "card",
+  couponCode: "WELCOME500",
+  items: [
+    {
+      productId: "PROD_101",
+      productName: "Nike Air Running Shoes",
+      variant: "Black / UK 9",
+      quantity: 1,
+      price: 3499,
+    },
+    {
+      productId: "PROD_102",
+      productName: "Sports Ankle Socks",
+      variant: "White",
+      quantity: 1,
+      price: 999,
+    },
+  ],
 });
 ```
 
