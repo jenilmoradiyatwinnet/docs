@@ -2772,9 +2772,11 @@ html body main
 }
 
 .dark .organization-role-header,
-[data-theme="dark"] .organization-role-header {
+.dark .organization-role-header > div,
+[data-theme="dark"] .organization-role-header,
+[data-theme="dark"] .organization-role-header > div {
   background: #1f2937;
-  color: #d1d5db;
+  color: #ffffff !important;
 }
 
 .dark .organization-role-row,
