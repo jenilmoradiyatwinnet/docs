@@ -195,17 +195,21 @@
         "tab": "Integrations",
         "icon": "/icon/Navbar/link-bold.svg",
         "groups": [
-          {
-            "group": "3RD PARTY INTEGRATIONS",
+           {
+            "group": "MARKETING",
             "pages": [
-               "integrations/google-ads",
+              "integrations/google-ads",
               "integrations/facebook-ad",
               "integrations/admob",
-              "integrations/facebook-monetization-manager",
-              "integrations/discord",
+                "integrations/facebook-monetization-manager",
+                 "integrations/gtm"
+            ]
+          }, {
+            "group": "COMMUNICATION",
+            "pages": [
+            "integrations/discord",
               "integrations/slack",
-              "integrations/microsoft-teams",
-              "integrations/gtm"
+              "integrations/microsoft-teams"
             ]
           }
         
