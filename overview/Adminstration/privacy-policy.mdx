@@ -5,246 +5,113 @@ icon: "/icon/Side-Bar/privacypolicy.svg"
 hideFooterPagination: true
 ---
 
-{/* <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
-  <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
-    <p className="text-base font-semibold text-black dark:text-white">
-      Policy center
-    </p>
 
-
+<div className="organization-role-table">
+  {/* Table header */}
+  <div
+    className="organization-role-header"
+    style={{
+      gridTemplateColumns: "180px minmax(0, 1fr)",
+    }}
+  >
+    <div>Policy</div>
+    <div>Description</div>
   </div>
 
-  <div className="divide-y divide-gray-100 dark:divide-gray-800">
-    <a
-      href="https://www.twinalyze.com/privacy"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div>
-        <div className="flex items-center gap-3">
-          <img
-            src="/icon/privacy-policy/privacy.svg"
-            alt=""
-            aria-hidden="true"
-            width="18"
-            height="18"
-            className="h-[18px] w-[18px] shrink-0 object-contain"
-          />
-
-          <div className="text-sm font-medium text-black dark:text-white">
-            Privacy Policy
-          </div>
-        </div>
-
-   
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Learn how Twinalyze collects, uses, stores, protects, and manages
-        customer, user, and product data.
-      </div>
-
-      
-    </a>
-
-    <a
-      href="https://www.twinalyze.com/terms"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div>
-        <div className="flex items-center gap-3">
-          <img
-            src="/icon/privacy-policy/terms.svg"
-            alt=""
-            aria-hidden="true"
-            width="18"
-            height="18"
-            className="h-[18px] w-[18px] shrink-0 object-contain"
-          />
-
-          <div className="text-sm font-medium text-black dark:text-white">
-            Terms &amp; Conditions
-          </div>
-        </div>
-
-        
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Review account responsibilities, acceptable use, service access,
-        customer data, and platform usage rules.
-      </div>
-
-     
-    </a>
-
-    <a
-      href="https://twinalyze.com/legal/cookie-policy"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div>
-        <div className="flex items-center gap-3">
-          <img
-            src="/icon/privacy-policy/cookie.svg"
-            alt=""
-            aria-hidden="true"
-            width="18"
-            height="18"
-            className="h-[18px] w-[18px] shrink-0 object-contain"
-          />
-
-          <div className="text-sm font-medium text-black dark:text-white">
-            Cookie Policy
-          </div>
-        </div>
-
-      
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Understand how cookies may be used for authentication, security,
-        preferences, analytics, and platform performance.
-      </div>
-
-    </a>
-
-    <a
-      href="https://www.twinalyze.com/refund"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div>
-        <div className="flex items-center gap-3">
-          <img
-            src="/icon/privacy-policy/refund.svg"
-            alt=""
-            aria-hidden="true"
-            width="18"
-            height="18"
-            className="h-[18px] w-[18px] shrink-0 object-contain"
-          />
-
-          <div className="text-sm font-medium text-black dark:text-white">
-            Refund &amp; Cancellation
-          </div>
-        </div>
-
-      
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Review cancellation rules, refund eligibility, billing changes,
-        subscription terms, and the refund request process.
-      </div>
-
-    
-    </a>
-  </div>
-</div>
-
- */}
-
-
-
-<div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
-  <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
-    <p className="m-0 text-base font-semibold text-black dark:text-white">
-      Policy center
-    </p>
-  </div>
-
-  <div className="divide-y divide-gray-100 dark:divide-gray-800">
-    <div
-      className="grid min-h-[48px] items-center gap-4 bg-white px-5 py-3 transition hover:bg-[#F3F4F6] dark:bg-gray-900 dark:hover:bg-gray-800"
-      style={{
-        gridTemplateColumns: "180px minmax(0, 1fr)",
-      }}
-    >
+  {/* Privacy Policy */}
+  <div
+    className="organization-role-row"
+    style={{
+      gridTemplateColumns: "180px minmax(0, 1fr)",
+    }}
+  >
+    <div className="organization-role-name">
       <a
         href="https://www.twinalyze.com/privacy-policy"
         target="_blank"
         rel="noreferrer"
-        className="w-fit text-sm font-semibold text-black underline transition hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+       className="text-black underline decoration-black !border-b-0 transition hover:text-blue-600 hover:decoration-black dark:text-white dark:decoration-white dark:hover:text-blue-400 dark:hover:decoration-white"
       >
         Privacy Policy
       </a>
-
-      <div className="min-w-0 text-sm leading-5 text-gray-600 dark:text-gray-300">
-        Learn how Twinalyze collects, uses, protects, and manages your data.
-      </div>
     </div>
 
-    <div
-      className="grid min-h-[48px] items-center gap-4 bg-white px-5 py-3 transition hover:bg-[#F3F4F6] dark:bg-gray-900 dark:hover:bg-gray-800"
-      style={{
-        gridTemplateColumns: "180px minmax(0, 1fr)",
-      }}
-    >
+    <div className="organization-role-description">
+      Learn how Twinalyze collects, uses, protects, and manages your data.
+    </div>
+  </div>
+
+  {/* Terms and Conditions */}
+  <div
+    className="organization-role-row"
+    style={{
+      gridTemplateColumns: "180px minmax(0, 1fr)",
+    }}
+  >
+    <div className="organization-role-name">
       <a
         href="https://www.twinalyze.com/terms-of-service"
-        
         target="_blank"
         rel="noreferrer"
-        className="w-fit text-sm font-semibold text-black underline transition hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+       className="text-black underline decoration-black !border-b-0 transition hover:text-blue-600 hover:decoration-black dark:text-white dark:decoration-white dark:hover:text-blue-400 dark:hover:decoration-white"
       >
         Terms &amp; Conditions
       </a>
-
-      <div className="min-w-0 text-sm leading-5 text-gray-600 dark:text-gray-300">
-        Review account responsibilities, service access, and platform usage
-        rules.
-      </div>
     </div>
 
-    <div
-      className="grid min-h-[48px] items-center gap-4 bg-white px-5 py-3 transition hover:bg-[#F3F4F6] dark:bg-gray-900 dark:hover:bg-gray-800"
-      style={{
-        gridTemplateColumns: "180px minmax(0, 1fr)",
-      }}
-    >
+    <div className="organization-role-description">
+      Review account responsibilities, service access, and platform usage
+      rules.
+    </div>
+  </div>
+
+  {/* Cookie Policy */}
+  <div
+    className="organization-role-row"
+    style={{
+      gridTemplateColumns: "180px minmax(0, 1fr)",
+    }}
+  >
+    <div className="organization-role-name">
       <a
         href="https://twinalyze.com/legal/cookie-policy"
-        
         target="_blank"
         rel="noreferrer"
-        className="w-fit text-sm font-semibold text-black underline transition hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+       className="text-black underline decoration-black !border-b-0 transition hover:text-blue-600 hover:decoration-black dark:text-white dark:decoration-white dark:hover:text-blue-400 dark:hover:decoration-white"
       >
         Cookie Policy
       </a>
-
-      <div className="min-w-0 text-sm leading-5 text-gray-600 dark:text-gray-300">
-        Understand how cookies support security, preferences, and analytics.
-      </div>
     </div>
 
-    <div
-      className="grid min-h-[48px] items-center gap-4 bg-white px-5 py-3 transition hover:bg-[#F3F4F6] dark:bg-gray-900 dark:hover:bg-gray-800"
-      style={{
-        gridTemplateColumns: "180px minmax(0, 1fr)",
-      }}
-    >
+    <div className="organization-role-description">
+      Understand how cookies support security, preferences, and analytics.
+    </div>
+  </div>
+
+  {/* Refund and Cancellation */}
+  <div
+    className="organization-role-row"
+    style={{
+      gridTemplateColumns: "180px minmax(0, 1fr)",
+    }}
+  >
+    <div className="organization-role-name">
       <a
         href="https://www.twinalyze.com/refunds-cancellations-policy"
         target="_blank"
         rel="noreferrer"
-        className="w-fit text-sm font-semibold text-black underline transition hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+       className="text-black underline decoration-black !border-b-0 transition hover:text-blue-600 hover:decoration-black dark:text-white dark:decoration-white dark:hover:text-blue-400 dark:hover:decoration-white"
       >
         Refund &amp; Cancellation
       </a>
+    </div>
 
-      <div className="min-w-0 text-sm leading-5 text-gray-600 dark:text-gray-300">
-        Review cancellation, refund eligibility, and subscription terms.
-      </div>
+    <div className="organization-role-description">
+      Review cancellation, refund eligibility, and subscription terms.
     </div>
   </div>
 </div>
----
+
 
 <div className="twinalyze-bottom-nav">
   <a
@@ -273,707 +140,3 @@ hideFooterPagination: true
 </div>
 
 
-
-{/* ---
-title: "Privacy & Policy"
-description: "Review Twinalyze privacy, terms, cookie, refund, cancellation, and legal policies."
-icon: "shield-check"
-hideFooterPagination: true
----
-
-Twinalyze keeps all important legal and policy documents in one place so you can easily understand how data, platform usage, cookies, billing, refunds, and cancellations are handled.
-
-<div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
-  <div className="border-b border-gray-200 bg-[#ECEEF2] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
-    <p className="text-base font-semibold text-black dark:text-white">
-      Legal policy center
-    </p>
-
-    <div className="mt-1 text-sm text-gray-600 dark:text-gray-300">
-      Review Twinalyze legal, privacy, cookie, billing, and platform policies.
-    </div>
-  </div>
-
-  <div className="divide-y divide-gray-100 dark:divide-gray-800">
-    <a
-      href="https://www.twinalyze.com/privacy"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center">
-          <img
-            src="/icon/privacy-policy/privacy.svg"
-            alt=""
-            aria-hidden="true"
-            className="h-[18px] w-[18px] object-contain"
-          />
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Privacy Policy
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Data handling
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Learn how Twinalyze collects, uses, stores, protects, and manages
-        customer, user, and product data.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open privacy policy →
-      </div>
-    </a>
-
-    <a
-      href="https://www.twinalyze.com/terms"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center">
-          <img
-            src="/icon/privacy-policy/terms.svg"
-            alt=""
-            aria-hidden="true"
-            className="h-[18px] w-[18px] object-contain"
-          />
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Terms &amp; Conditions
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Platform rules
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Review account responsibilities, acceptable use, service access,
-        customer data, and platform usage rules.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open terms →
-      </div>
-    </a>
-
-    <a
-      href="https://twinalyze.com/legal/cookie-policy"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center">
-          <img
-            src="/icon/privacy-policy/cookie.svg"
-            alt=""
-            aria-hidden="true"
-            className="h-[18px] w-[18px] object-contain"
-          />
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Cookie Policy
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Cookies and tracking
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Understand how cookies may be used for authentication, security,
-        preferences, analytics, and platform performance.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open cookie policy →
-      </div>
-    </a>
-
-    <a
-      href="https://www.twinalyze.com/refund"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center">
-          <img
-            src="/icon/privacy-policy/refund.svg"
-            alt=""
-            aria-hidden="true"
-            className="h-[18px] w-[18px] object-contain"
-          />
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Refund &amp; Cancellation
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Billing policy
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Review cancellation rules, refund eligibility, billing changes,
-        subscription terms, and the refund request process.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open refund policy →
-      </div>
-    </a>
-  </div>
-</div>
-
-<Note>
-  Review these policies regularly because privacy, billing, cookie, and legal
-  terms may be updated as Twinalyze services evolve.
-</Note>
-
----
-
-<div className="twinalyze-bottom-nav">
-  <a
-    href="/overview/Adminstration/billing"
-    className="twinalyze-nav-side"
-  >
-    <span className="twinalyze-nav-arrow">‹</span>
-    <span>Previous</span>
-  </a>
-
-  <a
-    href="/overview/Adminstration/faq"
-    className="twinalyze-nav-center"
-  >
-    <strong>FAQs</strong>
-    <span>Find answers to common Twinalyze questions.</span>
-  </a>
-
-  <a
-    href="/overview/Adminstration/faq"
-    className="twinalyze-nav-side"
-  >
-    <span>Next</span>
-    <span className="twinalyze-nav-arrow">›</span>
-  </a>
-</div> */}
-{/* ---
-title: "Privacy & Policy"
-description: "Review Twinalyze privacy, terms, cookie, refund, cancellation, and legal policies."
-icon: "shield-check"
-hideFooterPagination: true
----
-
-Twinalyze keeps all important legal and policy documents in one place so you can easily understand how data, platform usage, cookies, billing, refunds, and cancellations are handled.
-
-<div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
-  {/* <div className="border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900"> 
-  <div className="border-b border-gray-200 bg-[#F3F4F6] px-5 py-4 dark:border-gray-700 dark:bg-gray-800">
-    <div>
-      <p className="text-base font-semibold text-black dark:text-white">
-        Legal policy center
-      </p>
-
-      <div className="mt-1 text-sm text-gray-600 dark:text-gray-300">
-        Review Twinalyze legal, privacy, cookie, billing, and platform policies.
-      </div>
-    </div>
-  </div>
-
-  <div className="divide-y divide-gray-100 dark:divide-gray-800">
-    <a
-      href="https://www.twinalyze.com/privacy"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center text-blue-600 dark:text-blue-400">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M12 3L19 6V11C19 15.5 16.2 19.5 12 21C7.8 19.5 5 15.5 5 11V6L12 3Z"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M9 12L11 14L15.5 9.5"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Privacy Policy
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Data handling
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Learn how Twinalyze collects, uses, stores, protects, and manages customer, user, and product data.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open privacy policy →
-      </div>
-    </a>
-
-    <a
-      href="https://www.twinalyze.com/terms"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center text-purple-600 dark:text-purple-400">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M7 4H17C18.1 4 19 4.9 19 6V20L16 18L13 20L10 18L7 20V6C7 4.9 7.9 4 9 4Z"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M10 8H16"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M10 12H15"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Terms &amp; Conditions
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Platform rules
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Review account responsibilities, acceptable use, service access, customer data, and platform usage rules.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open terms →
-      </div>
-    </a>
-
-    <a
-      href="https://twinalyze.com/legal/cookie-policy"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center text-orange-600 dark:text-orange-400">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <circle
-              cx="12"
-              cy="12"
-              r="8"
-              stroke="currentColor"
-              strokeWidth="1.8"
-            />
-            <circle cx="9.5" cy="9" r="1.1" fill="currentColor" />
-            <circle cx="14.5" cy="10.5" r="1.1" fill="currentColor" />
-            <circle cx="11.5" cy="15" r="1.1" fill="currentColor" />
-            <path
-              d="M12 4C12 7 14 8 20 8"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Cookie Policy
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Cookies and tracking
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Understand how cookies may be used for authentication, security, preferences, analytics, and performance.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open cookie policy →
-      </div>
-    </a>
-
-    <a
-      href="https://www.twinalyze.com/refund"
-      target="_blank"
-      rel="noreferrer"
-      className="grid gap-3 px-5 py-4 transition hover:bg-[#F3F4F6] dark:hover:bg-gray-800 md:grid-cols-[220px_1fr_180px] md:items-center"
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex h-[18px] w-[18px] shrink-0 items-center justify-center text-emerald-600 dark:text-emerald-400">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M6 7H18C19.1 7 20 7.9 20 9V18C20 19.1 19.1 20 18 20H6C4.9 20 4 19.1 4 18V9C4 7.9 4.9 7 6 7Z"
-              stroke="currentColor"
-              strokeWidth="1.8"
-            />
-            <path
-              d="M8 7V5C8 4.4 8.4 4 9 4H15C15.6 4 16 4.4 16 5V7"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8 12H16"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-            <path
-              d="M8 16H13"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-
-        <div>
-          <div className="text-sm font-medium text-black dark:text-white">
-            Refund &amp; Cancellation
-          </div>
-
-          <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-            Billing policy
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-        Review cancellation rules, refund eligibility, billing changes, subscription terms, and the refund request process.
-      </div>
-
-      <div className="text-sm font-medium text-blue-600 dark:text-blue-400 md:text-right">
-        Open refund policy →
-      </div>
-    </a>
-  </div>
-</div>
-
-<Note>
-  Review these policies regularly because privacy, billing, cookie, and legal terms may be updated as Twinalyze services evolve.
-</Note>
-
----
-
-<div className="twinalyze-bottom-nav">
-  <a
-    href="/overview/Adminstration/billing"
-    className="twinalyze-nav-side"
-  >
-    <span className="twinalyze-nav-arrow">‹</span>
-    <span>Previous</span>
-  </a>
-
-  <a
-    href="/overview/Adminstration/faq"
-    className="twinalyze-nav-center"
-  >
-    <strong>FAQs</strong>
-    <span>Find answers to common Twinalyze questions.</span>
-  </a>
-
-  <a
-    href="/overview/Adminstration/faq"
-    className="twinalyze-nav-side"
-  >
-    <span>Next</span>
-    <span className="twinalyze-nav-arrow">›</span>
-  </a>
-</div> */}
-
-{/* ---
-title: "Privacy & Policy"
-description: "Understand Twinalyze privacy, terms, cookies, refunds, cancellations, and legal policies."
-hideFooterPagination: true
----
-
-Twinalyze keeps all important legal and policy documents in one place so users can easily review privacy, terms, cookies, refunds, and cancellation details.
-
-<div className="not-prose overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
-  <div className="border-b border-slate-200 bg-gradient-to-r from-blue-50 to-white px-5 py-4 dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
-    <p className="text-lg font-semibold tracking-wide text-blue-700 dark:text-blue-300">
-      Legal policy center
-    </p>
-
-    <p className="mt-1 max-w-2xl text-sm leading-6 text-slate-700 dark:text-slate-300">
-      A simple overview of Twinalyze legal policies with direct links to read the full documents.
-    </p>
-  </div>
-
-  <table className="w-full table-fixed divide-y divide-slate-200 dark:divide-slate-700">
-    <thead className="bg-white dark:bg-slate-900">
-      <tr>
-        <th className="w-[64px] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          
-        </th>
-
-        <th className="w-[24%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          Policy
-        </th>
-
-        <th className="w-[46%] px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          What it covers
-        </th>
-
-        <th className="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          Action
-        </th>
-      </tr>
-    </thead>
-
-    <tbody className="divide-y divide-slate-100 bg-white dark:divide-slate-800 dark:bg-slate-900">
-      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
-        <td className="px-5 py-5 align-top">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M12 3L19 6V11C19 15.5 16.2 19.5 12 21C7.8 19.5 5 15.5 5 11V6L12 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-              <path d="M9 12L11 14L15.5 9.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top">
-          <div>
-            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-              Privacy Policy
-            </div>
-
-            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-              Data handling
-            </div>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
-          Explains how Twinalyze collects, uses, stores, protects, and manages customer and product data.
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm font-medium">
-          <a
-            href="https://www.twinalyze.com/privacy"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-          >
-            Open privacy policy →
-          </a>
-        </td>
-      </tr>
-
-      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
-        <td className="px-5 py-5 align-top">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M7 4H17C18.1 4 19 4.9 19 6V20L16 18L13 20L10 18L7 20V6C7 4.9 7.9 4 9 4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-              <path d="M10 8H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-              <path d="M10 12H15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            </svg>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top">
-          <div>
-            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-              Terms &amp; Conditions
-            </div>
-
-            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-              Platform rules
-            </div>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
-          Explains account responsibility, acceptable use, service access, customer data, and platform usage rules.
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm font-medium">
-          <a
-            href="https://www.twinalyze.com/terms"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-          >
-            Open terms →
-          </a>
-        </td>
-      </tr>
-
-      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
-        <td className="px-5 py-5 align-top">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
-              <circle cx="9.5" cy="9" r="1.2" fill="currentColor" />
-              <circle cx="14.5" cy="10.5" r="1.2" fill="currentColor" />
-              <circle cx="11.5" cy="15" r="1.2" fill="currentColor" />
-              <path d="M12 4C12 7 14 8 20 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            </svg>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top">
-          <div>
-            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-              Cookie Policy
-            </div>
-
-            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-              Cookies and tracking
-            </div>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
-          Explains how Twinalyze may use cookies for login, security, preferences, analytics, and performance.
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm font-medium">
-          <a
-            href="https://twinalyze.com/legal/cookie-policy"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-          >
-            Open cookie policy →
-          </a>
-        </td>
-      </tr>
-
-      <tr className="transition hover:bg-slate-50 dark:hover:bg-slate-800">
-        <td className="px-5 py-5 align-top">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-300">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M6 7H18C19.1 7 20 7.9 20 9V18C20 19.1 19.1 20 18 20H6C4.9 20 4 19.1 4 18V9C4 7.9 4.9 7 6 7Z" stroke="currentColor" strokeWidth="1.8" />
-              <path d="M8 7V5C8 4.4 8.4 4 9 4H15C15.6 4 16 4.4 16 5V7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-              <path d="M8 12H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-              <path d="M8 16H13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            </svg>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top">
-          <div>
-            <div className="text-sm font-semibold text-slate-950 dark:text-slate-100">
-              Refund &amp; Cancellation
-            </div>
-
-            <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-              Billing policy
-            </div>
-          </div>
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm leading-6 text-slate-600 dark:text-slate-300">
-          Explains cancellation rules, refund eligibility, billing changes, and refund request process.
-        </td>
-
-        <td className="px-5 py-5 align-top text-sm font-medium">
-          <a
-            href="https://www.twinalyze.com/refund"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-          >
-            Open refund policy →
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<Check>
-  We recommend reviewing the full external policies regularly because legal, billing, cookie, and privacy terms may be updated as Twinalyze grows.
-</Check>
-
----
-
-<div className="twinalyze-bottom-nav">
-  <a href="/overview/Adminstration/billing" className="twinalyze-nav-side">
-    <span className="twinalyze-nav-arrow">‹</span>
-    <span>Previous</span>
-  </a>
-
-  <a href="/overview/Adminstration/faq" className="twinalyze-nav-center">
-    <strong>FAQs</strong>
-    <span>Have questions? Go on to FAQs.</span>
-  </a>
-
-  <a href="/overview/Adminstration/faq" className="twinalyze-nav-side">
-    <span>Next</span>
-    <span className="twinalyze-nav-arrow">›</span>
-  </a>
-</div> */}

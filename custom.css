@@ -270,7 +270,7 @@
 /* ================================
    Reduce Mintlify Footer Gap
 ================================ */
-
+/* 
 footer {
   margin-top: 10px !important;
   padding-top: 10px !important;
@@ -290,7 +290,7 @@ footer [role="separator"] {
 .twinalyze-bottom-nav + *,
 .twinalyze-bottom-nav-no-prev + * {
   margin-top: 10px !important;
-}
+} */
 
 /* ================================
    Optional Mintlify Blue Force
@@ -842,303 +842,6 @@ img[src*="Project_settings"] {
 
 
 
-/* =====================================================
-   Twinalyze Top Navigation Tabs Only
-===================================================== 
-
-:root {
-  --twinalyze-tab-blue: #2563eb;
-}
-
-/*
-  Important:
-  The "header" scope prevents these styles from affecting
-  SDK and Integration cards inside the page content.
-
-
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ) {
-  transition: color 0.2s ease;
-}
-
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  )
-  img[src*="/logo/"] {
-  transition: filter 0.2s ease;
-}
-
-/* Hover text 
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):hover {
-  color: var(--twinalyze-tab-blue) !important;
-}
-
-/* Hover child text 
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):hover
-  span {
-  color: var(--twinalyze-tab-blue) !important;
-}
-
-/* Hover icon 
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):hover
-  img[src*="/logo/"] {
-  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
-    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
-}
-
-/* Active tab 
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):is(
-    [aria-current="page"],
-    [aria-selected="true"],
-    [data-active="true"],
-    [data-state="active"]
-  ),
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  )[class*="text-primary"],
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):has([class*="text-primary"]) {
-  color: var(--twinalyze-tab-blue) !important;
-  border-color: var(--twinalyze-tab-blue) !important;
-}
-
-/* Active tab child text 
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):is(
-    [aria-current="page"],
-    [aria-selected="true"],
-    [data-active="true"],
-    [data-state="active"]
-  )
-  span,
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  )[class*="text-primary"]
-  span,
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):has([class*="text-primary"])
-  span {
-  color: var(--twinalyze-tab-blue) !important;
-}
-
-/* Active tab icon 
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):is(
-    [aria-current="page"],
-    [aria-selected="true"],
-    [data-active="true"],
-    [data-state="active"]
-  )
-  img[src*="/logo/"],
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  )[class*="text-primary"]
-  img[src*="/logo/"],
-header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):has([class*="text-primary"])
-  img[src*="/logo/"] {
-  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
-    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
-}
-
-/* Dark mode hover text 
-.dark
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):hover,
-[data-theme="dark"]
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):hover {
-  color: #60a5fa !important;
-}
-
-/* Dark mode hover and active icon 
-.dark
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):hover
-  img[src*="/logo/"],
-.dark
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  )[class*="text-primary"]
-  img[src*="/logo/"],
-.dark
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):has([class*="text-primary"])
-  img[src*="/logo/"],
-[data-theme="dark"]
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):hover
-  img[src*="/logo/"],
-[data-theme="dark"]
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  )[class*="text-primary"]
-  img[src*="/logo/"],
-[data-theme="dark"]
-  header
-  :is(
-    a[href^="/overview"],
-    a[href^="/analytics"],
-    a[href^="/sdks"],
-    a[href^="/integrations"],
-    a[href^="/sdks2"]
-  ):has([class*="text-primary"])
-  img[src*="/logo/"] {
-  filter: brightness(0) saturate(100%) invert(66%) sepia(91%)
-    saturate(1776%) hue-rotate(191deg) brightness(101%) contrast(96%) !important;
-}
-
-
-/* Introduction feature icons — dark mode */
-/* .dark img[src="/icon/introduction/user.svg"],
-.dark img[src="/icon/introduction/insights.svg"],
-.dark img[src="/icon/introduction/engagement.svg"],
-.dark img[src="/icon/introduction/ROI.svg"],
-[data-theme="dark"] img[src="/icon/introduction/user.svg"],
-[data-theme="dark"] img[src="/icon/introduction/insights.svg"],
-[data-theme="dark"] img[src="/icon/introduction/engagement.svg"],
-[data-theme="dark"] img[src="/icon/introduction/ROI.svg"] {
-  filter: brightness(0) invert(1) !important;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1167,9 +870,9 @@ header
 ===================================================== */
 
 .twinalyze-core-feature-row {
-  height: 48px !important;
-  min-height: 48px !important;
-  max-height: 48px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  max-height: 46px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   align-items: center !important;
@@ -1185,7 +888,7 @@ header
 @media (max-width: 767px) {
   .twinalyze-core-feature-row {
     height: auto !important;
-    min-height: 48px !important;
+    min-height: 46px !important;
     max-height: none !important;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
@@ -1256,75 +959,6 @@ header
 
 
 
-/* =====================================================
-   ALL CUSTOM SIDEBAR ICONS
-
-   Inactive icon: #848689
-   Inactive text: normal dark color
-   Active icon: #2563EB
-   Active text: #2563EB
-   Hover: no color change
-===================================================== 
-
-:root {
-  --sidebar-icon-inactive: #848689;
-  --sidebar-text-inactive: #111827;
-  --sidebar-active: #2563eb;
-}
-
-/* =====================================================
-   Inactive sidebar items
-===================================================== 
-
-#sidebar-content a:has(img[src*="/icon/Side-Bar/"]),
-#mobile-nav-content a:has(img[src*="/icon/Side-Bar/"]) {
-  color: var(--sidebar-text-inactive) !important;
-  transition: none !important;
-}
-
-#sidebar-content a:has(img[src*="/icon/Side-Bar/"]) span,
-#mobile-nav-content a:has(img[src*="/icon/Side-Bar/"]) span {
-  color: inherit !important;
-  transition: none !important;
-}
-
-/* Inactive custom icons: #848689 
-#sidebar-content img[src*="/icon/Side-Bar/"],
-#mobile-nav-content img[src*="/icon/Side-Bar/"] {
-  opacity: 1 !important;
-
-  filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
-    saturate(289%) hue-rotate(182deg) brightness(93%) contrast(91%) !important;
-
-  transition: none !important;
-}
-
-/* =====================================================
-   No hover color change
-=====================================================
-
-#sidebar-content a:has(img[src*="/icon/Side-Bar/"]):hover,
-#mobile-nav-content a:has(img[src*="/icon/Side-Bar/"]):hover {
-  color: var(--sidebar-text-inactive) !important;
-}
-
-#sidebar-content a:has(img[src*="/icon/Side-Bar/"]):hover span,
-#mobile-nav-content a:has(img[src*="/icon/Side-Bar/"]):hover span {
-  color: var(--sidebar-text-inactive) !important;
-}
-
-#sidebar-content
-  a:has(img[src*="/icon/Side-Bar/"]):hover
-  img[src*="/icon/Side-Bar/"],
-#mobile-nav-content
-  a:has(img[src*="/icon/Side-Bar/"]):hover
-  img[src*="/icon/Side-Bar/"] {
-  opacity: 1 !important;
-
-  filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
-    saturate(289%) hue-rotate(182deg) brightness(93%) contrast(91%) !important;
-}
- */
 /* =====================================================
    Active sidebar icon: #2563EB
 ===================================================== */
@@ -2071,135 +1705,6 @@ header
     saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
 }
 
-
-
-/* =====================================================
-   FINAL SDK SIDEBAR ACTIVE ICON FIX
-=====================================================
-
-/* Active sidebar row and text 
-#sidebar-content a[aria-current="page"],
-#sidebar-content a[class*="text-primary"],
-#sidebar-content a[class*="bg-primary"],
-#sidebar-content a:has([class*="text-primary"]),
-#sidebar-content a:has([class*="bg-primary"]),
-#mobile-nav-content a[aria-current="page"],
-#mobile-nav-content a[class*="text-primary"],
-#mobile-nav-content a[class*="bg-primary"],
-#mobile-nav-content a:has([class*="text-primary"]),
-#mobile-nav-content a:has([class*="bg-primary"]) {
-  color: #2563eb !important;
-}
-
-/* Override Mintlify grey icon wrapper 
-#sidebar-content a[aria-current="page"] [class*="text-gray"],
-#sidebar-content a[class*="text-primary"] [class*="text-gray"],
-#sidebar-content a[class*="bg-primary"] [class*="text-gray"],
-#sidebar-content a:has([class*="text-primary"]) [class*="text-gray"],
-#sidebar-content a:has([class*="bg-primary"]) [class*="text-gray"],
-#mobile-nav-content a[aria-current="page"] [class*="text-gray"],
-#mobile-nav-content a[class*="text-primary"] [class*="text-gray"],
-#mobile-nav-content a[class*="bg-primary"] [class*="text-gray"],
-#mobile-nav-content a:has([class*="text-primary"]) [class*="text-gray"],
-#mobile-nav-content a:has([class*="bg-primary"]) [class*="text-gray"] {
-  color: #2563eb !important;
-}
-
-/* Active SVG icon 
-#sidebar-content a[aria-current="page"] svg,
-#sidebar-content a[class*="text-primary"] svg,
-#sidebar-content a[class*="bg-primary"] svg,
-#sidebar-content a:has([class*="text-primary"]) svg,
-#sidebar-content a:has([class*="bg-primary"]) svg,
-#mobile-nav-content a[aria-current="page"] svg,
-#mobile-nav-content a[class*="text-primary"] svg,
-#mobile-nav-content a[class*="bg-primary"] svg,
-#mobile-nav-content a:has([class*="text-primary"]) svg,
-#mobile-nav-content a:has([class*="bg-primary"]) svg {
-  color: #2563eb !important;
-  opacity: 1 !important;
-}
-
-/* Stroke-based icons 
-#sidebar-content a[aria-current="page"] svg [stroke]:not([stroke="none"]),
-#sidebar-content a[class*="text-primary"] svg [stroke]:not([stroke="none"]),
-#sidebar-content a[class*="bg-primary"] svg [stroke]:not([stroke="none"]),
-#sidebar-content
-  a:has([class*="text-primary"])
-  svg
-  [stroke]:not([stroke="none"]),
-#sidebar-content
-  a:has([class*="bg-primary"])
-  svg
-  [stroke]:not([stroke="none"]),
-#mobile-nav-content
-  a[aria-current="page"]
-  svg
-  [stroke]:not([stroke="none"]),
-#mobile-nav-content
-  a[class*="text-primary"]
-  svg
-  [stroke]:not([stroke="none"]),
-#mobile-nav-content
-  a[class*="bg-primary"]
-  svg
-  [stroke]:not([stroke="none"]) {
-  stroke: #2563eb !important;
-}
-
-/* Fill-based icons 
-#sidebar-content a[aria-current="page"] svg [fill]:not([fill="none"]),
-#sidebar-content a[class*="text-primary"] svg [fill]:not([fill="none"]),
-#sidebar-content a[class*="bg-primary"] svg [fill]:not([fill="none"]),
-#sidebar-content
-  a:has([class*="text-primary"])
-  svg
-  [fill]:not([fill="none"]),
-#sidebar-content
-  a:has([class*="bg-primary"])
-  svg
-  [fill]:not([fill="none"]),
-#mobile-nav-content
-  a[aria-current="page"]
-  svg
-  [fill]:not([fill="none"]),
-#mobile-nav-content
-  a[class*="text-primary"]
-  svg
-  [fill]:not([fill="none"]),
-#mobile-nav-content
-  a[class*="bg-primary"]
-  svg
-  [fill]:not([fill="none"]) {
-  fill: #2563eb !important;
-}
-
-/* Icons rendered with a CSS mask 
-#sidebar-content a[aria-current="page"] [style*="mask"],
-#sidebar-content a[class*="text-primary"] [style*="mask"],
-#sidebar-content a[class*="bg-primary"] [style*="mask"],
-#sidebar-content a:has([class*="text-primary"]) [style*="mask"],
-#sidebar-content a:has([class*="bg-primary"]) [style*="mask"],
-#mobile-nav-content a[aria-current="page"] [style*="mask"],
-#mobile-nav-content a[class*="text-primary"] [style*="mask"],
-#mobile-nav-content a[class*="bg-primary"] [style*="mask"] {
-  color: #2563eb !important;
-  background-color: #2563eb !important;
-}
-
-/* Image-based icons 
-#sidebar-content a[aria-current="page"] img,
-#sidebar-content a[class*="text-primary"] img,
-#sidebar-content a[class*="bg-primary"] img,
-#sidebar-content a:has([class*="text-primary"]) img,
-#sidebar-content a:has([class*="bg-primary"]) img,
-#mobile-nav-content a[aria-current="page"] img,
-#mobile-nav-content a[class*="text-primary"] img,
-#mobile-nav-content a[class*="bg-primary"] img {
-  opacity: 1 !important;
-  filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
-    saturate(3291%) hue-rotate(217deg) brightness(98%) contrast(96%) !important;
-}
 
 
 
@@ -2951,44 +2456,6 @@ html.dark
 
 
 /* =====================================================
-   Introduction top feature icons only
-===================================================== 
-
-/* Light mode: original color 
-.twinalyze-introduction-page img {
-  opacity: 1 !important;
-  visibility: visible !important;
-  filter: none !important;
-}
-
-/* Dark mode: only wrapped top feature icons become white 
-html.dark .twinalyze-introduction-page img,
-.dark .twinalyze-introduction-page img,
-[data-theme="dark"] .twinalyze-introduction-page img {
-  opacity: 1 !important;
-  visibility: visible !important;
-  filter: brightness(0) saturate(100%) invert(100%) !important;
-}
-
-/* SDK, Integration and Support icons always stay original 
-.twinalyze-card-icons-26 img,
-html.dark .twinalyze-card-icons-26 img,
-.dark .twinalyze-card-icons-26 img,
-[data-theme="dark"] .twinalyze-card-icons-26 img {
-  opacity: 1 !important;
-  visibility: visible !important;
-  filter: none !important;
-}
-
-
-
-
-
-
-
-
-
-/* =====================================================
    GLOBAL CONTENT ICON DARK MODE
 
    Default:
@@ -3089,20 +2556,6 @@ header
 }
 
 
-
-
-/* Dashboard Tour bottom navigation spacing */
-.dashboard-tour-bottom-nav {
-  margin-top: 48px !important;
-  margin-bottom: 150px !important;
-}
-
-@media (max-width: 640px) {
-  .dashboard-tour-bottom-nav {
-    margin-top: 36px !important;
-    margin-bottom: 80px !important;
-  }
-}
 
 
 
@@ -3278,17 +2731,18 @@ html body main
   max-height: 48px;
   padding: 0 16px;
   background: #f3f4f6;
-  color:#000000 !important;;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
+  color: #000000 !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: none;
 }
 
 /* Exact 48px data rows */
 .organization-role-row {
-  height: 48px;
-  min-height: 48px;
-  max-height: 48px;
+  height: 46px;
+  min-height: 46px;
+  max-height: 46px;
   padding: 0 16px;
   border-top: 1px solid #e5e7eb;
 }
@@ -3302,7 +2756,7 @@ html body main
 .organization-role-description {
   min-width: 0;
   overflow: hidden;
-  color: #6b7280;
+  color: #3F4145;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -3458,5 +2912,43 @@ html body main
     .twinalyze-navigation-loader-bar {
     animation: none;
     transform: scaleX(0.75);
+  }
+}
+
+
+/* =====================================================
+   Final bottom navigation and footer spacing
+===================================================== */
+
+#content,
+#body-content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* All normal pages: 20px before footer */
+.twinalyze-bottom-nav,
+.twinalyze-bottom-nav-no-prev,
+.twinalyze-bottom-nav-no-next {
+  margin-bottom: 20px !important;
+}
+
+/* Dashboard Tour: separator to navigation gap */
+.dashboard-tour-bottom-nav {
+  margin-top: 48px !important;
+  margin-bottom: 100px !important;
+}
+
+/* Remove Mintlify extra footer spacing */
+#footer,
+footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .dashboard-tour-bottom-nav {
+    margin-top: 36px !important;
+    margin-bottom: 20px !important;
   }
 }

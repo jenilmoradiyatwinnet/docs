@@ -199,8 +199,8 @@
             "group": "3RD PARTY INTEGRATIONS",
             "pages": [
                "integrations/google-ads",
-              "integrations/admob",
               "integrations/facebook-ad",
+              "integrations/admob",
               "integrations/facebook-monetization-manager",
               "integrations/discord",
               "integrations/slack",
