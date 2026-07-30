@@ -21,7 +21,7 @@
     "dark": "favicon.png"
   },
   "navbar": {
-    "links": [
+    "links": [                                                                                                                                                                        
       {
         "label": "System Status",
         "href": "https://stats.uptimerobot.com/CtHHsPhHgi"
@@ -101,9 +101,9 @@
             "pages": [
               "analytics/users/overview",
               "analytics/users/page-insight",
-             "analytics/users/user-engagement",
-             "analytics/users/user-retention",
-             "analytics/users/user-growth"
+              "analytics/users/user-engagement",
+              "analytics/users/user-retention",
+              "analytics/users/user-growth"
             ]
           }, {
             "group": "AD",
@@ -125,7 +125,7 @@
             "pages": [
               "analytics/research/market-trends",
               "analytics/research/country-store-and-details",
-                "analytics/research/custom-store-listing"
+              "analytics/research/custom-store-listing"
             ]
           }
         ]
@@ -136,28 +136,24 @@
         "dropdowns": [
           {
             "dropdown": "Android",
-           "icon": "/icon/introduction/android.svg",
+            "icon": "/icon/introduction/android.svg",
             "pages": [
               {
                 "group": "ANALYTICS",
                 
-                "pages": [
-                 
+                "pages": [       
                       "sdks/android/analytics/get-started",
                       "sdks/android/analytics/sdk-initialization",
                       "sdks/android/analytics/custom-event-tracking",
-                      "sdks/android/analytics/manual-ad-event-tracking"
-                  
+                      "sdks/android/analytics/manual-ad-event-tracking"     
                 ]
               },
               {
                 "group": "AD ANALYTICS",
                
-                "pages": [
-                  
+                "pages": [    
                       "sdks/android/ad-analytics/ad-analytics-sdk",
                       "sdks/android/ad-analytics/ad-sdk-initialization"   
-                   
                 ]
               }
             ]
@@ -169,21 +165,18 @@
                 "group": "Analytics",
                 
                 "pages": [
-                 
                       "sdks/javascript/analytics/get-started",
                       "sdks/javascript/analytics/sdk-initialization", 
-                       "sdks/javascript/analytics/auto-event-tracking" ,
+                      "sdks/javascript/analytics/auto-event-tracking" ,
                       "sdks/javascript/analytics/identify-user",
                       "sdks/javascript/analytics/custom-event-tracking"
-                      
                 ]
               },
               {
                 "group": "Ad Analytics",
                
                    "pages": [
-                  
-                      
+                    
                    
                 ]
               }
@@ -201,23 +194,31 @@
               "integrations/google-ads",
               "integrations/facebook-ad",
               "integrations/admob",
-                "integrations/facebook-monetization-manager",
-                 "integrations/gtm"
+              "integrations/facebook-monetization-manager",
+              "integrations/gtm"
             ]
           }, {
             "group": "COMMUNICATION",
             "pages": [
             "integrations/discord",
-              "integrations/slack",
-              "integrations/microsoft-teams"
+            "integrations/slack",
+            "integrations/microsoft-teams"
             ]
-          }
-        
+          } 
         ]
-      }
+      },
 
+{
+  "tab": "Changelog",
+  "icon": "clock-rotate-left",
+  "pages": [
+    "changelog"
+  ]
+}
     ]
   },
+
+  
   "footer": {
     "socials": {
        "x": "https://x.com/twinalyze",

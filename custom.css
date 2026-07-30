@@ -2824,12 +2824,6 @@ html body main
 
 
 
-
-
-
-
-
-
 /* =====================================================
    Global navigation progress loader
 ===================================================== */
@@ -2953,4 +2947,114 @@ footer {
     margin-top: 36px !important;
     margin-bottom: 20px !important;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Changelog date — remove Mintlify blue pill
+===================================================== */
+
+html body [data-component-part="update-label"] {
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #4b5563 !important;
+  justify-content: flex-start !important;
+}
+
+/* Dark mode */
+html.dark body [data-component-part="update-label"],/* =====================================================
+   Changelog
+   Plain date + Area badge below date
+===================================================== */
+
+/* Keep date as plain text */
+[data-component-part="update-label"] {
+  width: fit-content !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  justify-content: flex-start !important;
+}
+
+/* Style Update description as Area badge */
+.update-container
+  > div:has(> [data-component-part="update-label"])
+  > [data-component-part="update-label"]
+  + *,
+.update-container
+  > div:has(> [data-component-part="update-label"])
+  > :last-child:not([data-component-part="update-label"]):not(.absolute) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: fit-content !important;
+
+  margin-top: 8px !important;
+  padding: 2px 8px !important;
+
+  border: 0 !important;
+  border-radius: 6px !important;
+
+  background-color: color-mix(
+    in oklab,
+    rgb(var(--primary)) 10%,
+    transparent
+  ) !important;
+
+  color: rgb(var(--primary)) !important;
+
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  text-transform: uppercase !important;
+}
+
+/* Dark mode */
+:is(html.dark, .dark, [data-theme="dark"])
+  .update-container
+  > div:has(> [data-component-part="update-label"])
+  > [data-component-part="update-label"]
+  + *,
+:is(html.dark, .dark, [data-theme="dark"])
+  .update-container
+  > div:has(> [data-component-part="update-label"])
+  > :last-child:not([data-component-part="update-label"]):not(.absolute) {
+  background-color: color-mix(
+    in oklab,
+    rgb(var(--primary)) 18%,
+    transparent
+  ) !important;
+
+  color: rgb(var(--primary-light)) !important;
+}
+.dark body [data-component-part="update-label"],
+[data-theme="dark"] body [data-component-part="update-label"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #d1d5db !important;
 }
