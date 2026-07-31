@@ -3058,3 +3058,115 @@ html.dark body [data-component-part="update-label"],/* =========================
   background-color: transparent !important;
   color: #d1d5db !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Changelog right TOC
+   Persistent active date like X changelog
+===================================================== */
+
+/* Normal date */
+html[data-current-path="/changelog"]
+  #table-of-contents
+  a[href*="#"] {
+  position: relative !important;
+  color: #52525b !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  transition: color 150ms ease !important;
+}
+
+/* Active date */
+html[data-current-path="/changelog"]
+  #table-of-contents
+  a[data-twinalyze-active="true"] {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+
+/* Keep nested text blue */
+html[data-current-path="/changelog"]
+  #table-of-contents
+  a[data-twinalyze-active="true"]
+  * {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+
+/* Blue side dot */
+html[data-current-path="/changelog"]
+  #table-of-contents
+  a[data-twinalyze-active="true"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background-color: #2563eb;
+}
+
+/* Optional thin vertical indicator */
+html[data-current-path="/changelog"]
+  toc-item[data-twinalyze-active="true"] {
+  position: relative;
+}
+
+/* Dark mode normal */
+:is(html.dark, .dark, [data-theme="dark"])
+  #table-of-contents
+  a[href*="#"] {
+  color: #a1a1aa !important;
+}
+
+/* Dark mode active */
+:is(html.dark, .dark, [data-theme="dark"])
+  #table-of-contents
+  a[data-twinalyze-active="true"],
+:is(html.dark, .dark, [data-theme="dark"])
+  #table-of-contents
+  a[data-twinalyze-active="true"]
+  * {
+  color: #60a5fa !important;
+}
+
+/* Dark mode dot */
+:is(html.dark, .dark, [data-theme="dark"])
+  #table-of-contents
+  a[data-twinalyze-active="true"]::before {
+  background-color: #60a5fa;
+}
+
+
+
+
+
+
+
+
+
+
