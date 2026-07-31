@@ -3077,96 +3077,348 @@ html.dark body [data-component-part="update-label"],/* =========================
 
 
 
-
-
-
-
-
 /* =====================================================
-   Changelog right TOC
-   Persistent active date like X changelog
+   Custom Changelog Layout
 ===================================================== */
 
-/* Normal date */
-html[data-current-path="/changelog"]
-  #table-of-contents
-  a[href*="#"] {
-  position: relative !important;
-  color: #52525b !important;
-  font-weight: 400 !important;
-  text-decoration: none !important;
-  transition: color 150ms ease !important;
+.tw-changelog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 205px;
+  align-items: start;
+  gap: 52px;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
-/* Active date */
-html[data-current-path="/changelog"]
-  #table-of-contents
-  a[data-twinalyze-active="true"] {
-  color: #2563eb !important;
-  font-weight: 600 !important;
+.tw-changelog-main {
+  min-width: 0;
 }
 
-/* Keep nested text blue */
-html[data-current-path="/changelog"]
-  #table-of-contents
-  a[data-twinalyze-active="true"]
-  * {
-  color: #2563eb !important;
-  font-weight: 600 !important;
+.tw-changelog-year {
+  margin: 0;
+  padding: 0;
 }
 
-/* Blue side dot */
-html[data-current-path="/changelog"]
-  #table-of-contents
-  a[data-twinalyze-active="true"]::before {
-  content: "";
+.tw-changelog-year + .tw-changelog-year {
+  margin-top: 64px;
+}
+
+.tw-changelog-year-title {
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  color: inherit;
+  font-size: 25px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  scroll-margin-top: 110px;
+}
+
+.tw-changelog-entry {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 34px;
+  margin: 0;
+  padding: 30px 0 42px;
+  border-bottom: 1px solid rgba(113, 113, 122, 0.2);
+  scroll-margin-top: 110px;
+}
+
+.tw-changelog-entry-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  min-width: 0;
+}
+
+.tw-changelog-date {
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.tw-changelog-area {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.tw-changelog-entry-content {
+  min-width: 0;
+}
+
+.tw-changelog-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 0 19px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.tw-changelog-category-new-release {
+  background: rgba(22, 163, 74, 0.14);
+  color: #15803d;
+}
+
+.tw-changelog-category-improved {
+  background: rgba(37, 99, 235, 0.14);
+  color: #2563eb;
+}
+
+.tw-changelog-category-bug-fixed {
+  background: rgba(217, 119, 6, 0.15);
+  color: #b45309;
+}
+
+.tw-changelog-category-deprecated {
+  background: rgba(220, 38, 38, 0.14);
+  color: #dc2626;
+}
+
+.tw-changelog-entry-title {
+  margin: 0 0 9px !important;
+  padding: 0 !important;
+  color: inherit;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+.tw-changelog-summary {
+  margin: 0 0 18px !important;
+  color: inherit;
+  opacity: 0.76;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.tw-changelog-release-type {
+  margin: 0 0 16px !important;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tw-changelog-points {
+  margin: 0 !important;
+  padding-left: 22px !important;
+}
+
+.tw-changelog-points li {
+  margin: 0 0 9px !important;
+  padding-left: 3px;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.tw-changelog-points li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* =====================================================
+   Custom right navigation
+===================================================== */
+
+.tw-changelog-navigation {
+  position: sticky;
+  top: 98px;
+  width: 100%;
+  min-width: 0;
+}
+
+.tw-changelog-navigation-title {
+  margin-bottom: 15px;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tw-changelog-navigation-scroll {
+  max-height: calc(100vh - 145px);
+  padding: 0 3px 22px 17px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.tw-changelog-navigation-year {
+  margin-bottom: 17px;
+}
+
+.tw-changelog-navigation-year-label {
+  margin-bottom: 6px;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tw-changelog-navigation-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  padding: 5px 0;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit;
+  opacity: 0.66;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: none !important;
+  outline-offset: 3px;
+  transition:
+    color 140ms ease,
+    opacity 140ms ease,
+    font-weight 140ms ease;
+}
+
+.tw-changelog-navigation-item:hover {
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit;
+  opacity: 1;
+}
+
+.tw-changelog-navigation-dot {
   position: absolute;
   top: 50%;
-  left: -16px;
+  left: -14px;
   width: 6px;
   height: 6px;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0.7);
   border-radius: 999px;
-  background-color: #2563eb;
+  background: #2563eb;
+  opacity: 0;
+  transition:
+    opacity 140ms ease,
+    transform 140ms ease;
 }
 
-/* Optional thin vertical indicator */
-html[data-current-path="/changelog"]
-  toc-item[data-twinalyze-active="true"] {
-  position: relative;
+.tw-changelog-navigation-item.is-active {
+  color: #2563eb;
+  opacity: 1;
+  font-weight: 600;
 }
 
-/* Dark mode normal */
+.tw-changelog-navigation-item.is-active
+  .tw-changelog-navigation-dot {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+/* =====================================================
+   Dark mode
+===================================================== */
+
 :is(html.dark, .dark, [data-theme="dark"])
-  #table-of-contents
-  a[href*="#"] {
-  color: #a1a1aa !important;
+  .tw-changelog-entry {
+  border-bottom-color: rgba(161, 161, 170, 0.25);
 }
 
-/* Dark mode active */
 :is(html.dark, .dark, [data-theme="dark"])
-  #table-of-contents
-  a[data-twinalyze-active="true"],
-:is(html.dark, .dark, [data-theme="dark"])
-  #table-of-contents
-  a[data-twinalyze-active="true"]
-  * {
-  color: #60a5fa !important;
+  .tw-changelog-area {
+  background: rgba(96, 165, 250, 0.17);
+  color: #60a5fa;
 }
 
-/* Dark mode dot */
 :is(html.dark, .dark, [data-theme="dark"])
-  #table-of-contents
-  a[data-twinalyze-active="true"]::before {
-  background-color: #60a5fa;
+  .tw-changelog-category-new-release {
+  background: rgba(74, 222, 128, 0.16);
+  color: #86efac;
 }
 
+:is(html.dark, .dark, [data-theme="dark"])
+  .tw-changelog-category-improved {
+  background: rgba(96, 165, 250, 0.17);
+  color: #93c5fd;
+}
 
+:is(html.dark, .dark, [data-theme="dark"])
+  .tw-changelog-category-bug-fixed {
+  background: rgba(251, 191, 36, 0.16);
+  color: #fcd34d;
+}
 
+:is(html.dark, .dark, [data-theme="dark"])
+  .tw-changelog-category-deprecated {
+  background: rgba(248, 113, 113, 0.17);
+  color: #fca5a5;
+}
 
+:is(html.dark, .dark, [data-theme="dark"])
+  .tw-changelog-navigation-item.is-active {
+  color: #60a5fa;
+}
 
+:is(html.dark, .dark, [data-theme="dark"])
+  .tw-changelog-navigation-dot {
+  background: #60a5fa;
+}
 
+/* =====================================================
+   Tablet
+===================================================== */
 
+@media (max-width: 1080px) {
+  .tw-changelog-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
+  .tw-changelog-navigation {
+    display: none;
+  }
+}
 
+/* =====================================================
+   Mobile
+===================================================== */
 
+@media (max-width: 700px) {
+  .tw-changelog-year + .tw-changelog-year {
+    margin-top: 48px;
+  }
+
+  .tw-changelog-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+    padding: 24px 0 34px;
+  }
+
+  .tw-changelog-entry-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .tw-changelog-category {
+    margin-bottom: 15px;
+  }
+
+  .tw-changelog-entry-title {
+    font-size: 18px !important;
+  }
+}
