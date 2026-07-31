@@ -2988,6 +2988,31 @@ html.dark body [data-component-part="update-label"],/* =========================
    Plain date + Area badge below date
 ===================================================== */
 
+/*
+ * The changelog script owns the active Update state. Neutralize Mintlify's
+ * transient scroll-spy color so only the entry at our reading line is blue.
+ */
+body:has(.update-container)
+  #table-of-contents
+  a[href*="#"]:not(.twinalyze-toc-active),
+body:has(.update-container)
+  #table-of-contents
+  a[href*="#"]:not(.twinalyze-toc-active)
+  * {
+  color: inherit !important;
+}
+
+body:has(.update-container)
+  #table-of-contents
+  a.twinalyze-toc-active,
+body:has(.update-container)
+  #table-of-contents
+  a.twinalyze-toc-active
+  * {
+  color: rgb(var(--primary)) !important;
+  font-weight: 600 !important;
+}
+
 /* Keep date as plain text */
 [data-component-part="update-label"] {
   width: fit-content !important;
