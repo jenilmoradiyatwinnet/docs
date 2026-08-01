@@ -3013,6 +3013,30 @@ body:has(.update-container)
   font-weight: 600 !important;
 }
 
+/* Color only the changelog year headings in the right sidebar. */
+body:has(.update-container)
+  #table-of-contents
+  a:is(
+    [href$="#2023"],
+    [href$="#2024"],
+    [href$="#2025"],
+    [href$="#2026"]
+  ) {
+  color: rgb(var(--primary)) !important;
+}
+
+body:has(.update-container)
+  #table-of-contents
+  a:is(
+    [href$="#2023"],
+    [href$="#2024"],
+    [href$="#2025"],
+    [href$="#2026"]
+  )
+  * {
+  color: inherit !important;
+}
+
 /* Keep date as plain text */
 [data-component-part="update-label"] {
   width: fit-content !important;
@@ -3290,7 +3314,7 @@ body:has(.update-container)
 
 .tw-changelog-navigation-year-label {
   margin-bottom: 6px;
-  color: inherit;
+  color: #2563eb;
   font-size: 14px;
   font-weight: 600;
 }

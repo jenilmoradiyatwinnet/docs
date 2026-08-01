@@ -1,4 +1,600 @@
- ## 2025
+<Update
+  label="Jul 25, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Identify properties in the Web SDK
+
+  Expanded the Web SDK identify method so applications can associate custom
+  properties with identified users.
+
+  **Release type:** Minor release
+
+  - **User identification:** Added support for identifying users with a unique user ID.
+  - **Custom properties:** Allowed applications to send additional user properties during identification.
+  - **Profile enrichment:** Connected identify properties with the existing user profile.
+  - **Consistent context:** Attached the identified user information to subsequent tracked activity.
+</Update>
+
+<Update
+  label="Jul 18, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Dynamic segment series in Advanced Reports
+
+  Improved Advanced Reports so the graph starts with default data and expands
+  as users select additional segments.
+
+  **Release type:** Minor release
+
+  - **Default visualization:** Displayed the primary graph series when a report first opens.
+  - **Additive segments:** Added new graph series without removing the existing default data.
+  - **Dynamic bars and lines:** Increased the number of bars or lines according to selected segments.
+  - **Series identification:** Connected every graph series with its selected segment and legend.
+  - **Selection updates:** Refreshed the visualization when segments were added or removed.
+</Update>
+
+<Update
+  label="Jul 11, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Panel-wide App and Web filters
+
+  Expanded platform filtering so analytics pages can display application and
+  website activity separately.
+
+  **Release type:** Minor release
+
+  - **Platform selection:** Added App and Web options across supported analytics pages.
+  - **Filtered charts:** Updated graph data according to the selected platform.
+  - **Consistent selection:** Standardized the platform filter across dashboard sections.
+  - **Separated metrics:** Prevented application and website totals from being mixed.
+  - **Page compatibility:** Prepared existing reports to support platform-specific data.
+</Update>
+
+<Update
+  label="Jul 4, 2026"
+  description="AI"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Ask AI foundation
+
+  Completed the first development cycle for an AI-assisted analytics
+  experience inside Twinalyze.
+
+  **Release type:** Minor release
+
+  - **Analytics questions:** Prepared a flow for asking natural-language questions about product data.
+  - **Context preparation:** Structured report and metric information for AI-based analysis.
+  - **Response experience:** Created the initial interface for displaying generated answers.
+  - **Prototype validation:** Tested the first Ask AI workflow with analytics use cases.
+  - **Development status:** Temporarily paused active development while report and SDK improvements are completed.
+</Update>
+
+<Update
+  label="Jun 27, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Default Reports in Advanced Reports
+
+  Added ready-to-use reports so users can access useful analytics without
+  creating every report manually.
+
+  **Release type:** Minor release
+
+  - **Prebuilt reports:** Added default reports for common analytics requirements.
+  - **Immediate access:** Allowed users to open reports directly from the Advanced Reports page.
+  - **Configured metrics:** Added predefined metrics, dimensions, and visualizations.
+  - **Reduced setup:** Removed the need to configure a report before viewing initial data.
+  - **Report foundation:** Prepared default reports for future customization.
+</Update>
+
+<Update
+  label="Jun 20, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Instant report opening
+
+  Improved the Advanced Reports experience so report data is displayed as
+  soon as a user opens a default report.
+
+  **Release type:** Minor release
+
+  - **Automatic loading:** Loaded the default report configuration immediately.
+  - **Initial graph data:** Displayed the primary visualization without requiring a selection.
+  - **Saved configuration:** Reused the predefined report setup for every user.
+  - **Faster navigation:** Reduced the number of steps required to start report analysis.
+</Update>
+
+<Update
+  label="Jun 13, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Default report visualizations
+
+  Standardized how default report metrics are presented across supported
+  analytics use cases.
+
+  **Release type:** Minor release
+
+  - **Chart selection:** Assigned suitable bar, line, or summary visualizations to each report.
+  - **Metric mapping:** Connected predefined report metrics with their graph series.
+  - **Default date range:** Added an initial date range for immediate analysis.
+  - **Readable output:** Improved graph titles, legends, labels, and empty states.
+</Update>
+
+<Update
+  label="Jun 6, 2026"
+  description="Data"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Advanced Report data preparation
+
+  Reorganized Advanced Report data so default reports and future segment
+  comparisons can use a consistent response structure.
+
+  **Release type:** Minor release
+
+  - **Default dataset:** Added a primary dataset for the initial report visualization.
+  - **Series structure:** Prepared report data to support multiple bars and lines.
+  - **Segment compatibility:** Added identifiers for connecting selected segments with graph series.
+  - **Consistent response:** Standardized labels, values, dates, and totals returned to the frontend.
+</Update>
+
+<Update
+  label="May 30, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### App and Web analytics separation
+
+  Introduced separate analytics processing for application and website
+  activity across the Twinalyze platform.
+
+  **Release type:** Major release
+
+  - **Platform identification:** Classified tracked activity as App or Web.
+  - **Separated calculations:** Calculated user, session, and event metrics by platform.
+  - **Chart preparation:** Prepared analytics graphs to display platform-specific values.
+  - **Report compatibility:** Added platform information to supported report responses.
+  - **Accurate totals:** Reduced incorrect totals caused by combining different platforms.
+</Update>
+
+<Update
+  label="May 23, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Platform filter foundation
+
+  Added a shared filtering structure for applying App and Web selections
+  across analytics pages.
+
+  **Release type:** Minor release
+
+  - **Shared options:** Standardized App and Web filter values.
+  - **API parameters:** Added platform information to supported analytics requests.
+  - **State handling:** Maintained the selected platform while users reviewed report data.
+  - **Consistent behaviour:** Applied the same filtering logic across dashboard sections.
+</Update>
+
+<Update
+  label="May 16, 2026"
+  description="Analytics"
+>
+  <div className="mb-4">
+    <Badge color="red" size="sm">DEPRECATED</Badge>
+  </div>
+
+  ### Simplified organization roles
+
+  Replaced the previous role labels with four clearer organization roles.
+
+  **Release type:** Minor release
+
+  - **Owner:** Added full organization ownership and administrative access.
+  - **Admin:** Added management access for projects, members, and settings.
+  - **Analyst:** Added analytics and report access without full administration control.
+  - **Viewer:** Added read-only access to available analytics information.
+  - **Previous labels:** Deprecated the older role names and updated permission mappings.
+</Update>
+
+<Update
+  label="May 9, 2026"
+  description="Integrations"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Additional marketing and communication integrations
+
+  Expanded the Twinalyze integration catalog with additional data and
+  communication connections.
+
+  **Release type:** Minor release
+
+  - **Meta Monetization Manager:** Prepared advertising and monetization data connectivity.
+  - **Slack:** Added the foundation for delivering analytics and operational notifications.
+  - **Connection settings:** Added integration-specific configuration fields.
+  - **Integration status:** Added visibility into active and inactive connections.
+</Update>
+
+<Update
+  label="Apr 25, 2026"
+  description="Integrations"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Google Ads integration
+
+  Added the foundation for connecting Google Ads data with Twinalyze
+  analytics.
+
+  **Release type:** Minor release
+
+  - **Account connection:** Added the initial Google Ads connection flow.
+  - **Campaign context:** Prepared campaign and advertising identifiers for analysis.
+  - **Performance data:** Structured advertising metrics for future reporting.
+  - **Integration status:** Added connection and configuration visibility.
+</Update>
+
+<Update
+  label="Apr 18, 2026"
+  description="Integrations"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Meta Ads integration
+
+  Added the initial connection structure for combining Meta advertising
+  information with product analytics.
+
+  **Release type:** Minor release
+
+  - **Business connection:** Added the foundation for connecting a Meta advertising account.
+  - **Campaign identifiers:** Prepared campaign, ad set, and advertisement information.
+  - **Performance mapping:** Structured available advertising metrics for reporting.
+  - **Configuration flow:** Added settings for managing the integration connection.
+</Update>
+
+<Update
+  label="Apr 11, 2026"
+  description="Integrations"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Google Tag Manager and Google AdMob integrations
+
+  Expanded Twinalyze connectivity for website tracking and mobile advertising
+  use cases.
+
+  **Release type:** Minor release
+
+  - **Google Tag Manager:** Prepared a simpler Web SDK deployment flow through a tag container.
+  - **Tag configuration:** Added the required Twinalyze project and tracking settings.
+  - **Google AdMob:** Prepared mobile ad activity and monetization data connectivity.
+  - **Integration guidance:** Added configuration requirements for both connections.
+</Update>
+
+<Update
+  label="Apr 4, 2026"
+  description="Integrations"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Integration management foundation
+
+  Improved the integration area to support multiple marketing, advertising,
+  messaging, and tracking connections.
+
+  **Release type:** Minor release
+
+  - **Integration catalog:** Organized available connections by their supported use case.
+  - **Connection status:** Added active and inactive states for each integration.
+  - **Configuration storage:** Prepared project-specific integration settings.
+  - **Reusable flow:** Standardized connection, update, and disconnection behaviour.
+</Update>
+
+<Update
+  label="Mar 28, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Expanded Web SDK device properties
+
+  Added more browser and device context to website analytics activity.
+
+  **Release type:** Minor release
+
+  - **Browser details:** Added browser name and version information.
+  - **Operating system:** Added operating-system and version details.
+  - **Device classification:** Added device type and available device information.
+  - **Screen context:** Added screen dimensions and viewport information.
+  - **Consistent properties:** Attached device context to supported events.
+</Update>
+
+<Update
+  label="Mar 21, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Expanded Web SDK user properties
+
+  Improved user context collection so website activity can be connected with
+  more useful profile information.
+
+  **Release type:** Minor release
+
+  - **User ID support:** Connected tracked activity with an identified user.
+  - **Profile properties:** Prepared name, email, and custom user information.
+  - **Anonymous continuity:** Maintained device activity before user identification.
+  - **Event context:** Attached available user information to subsequent activity.
+</Update>
+
+<Update
+  label="Mar 14, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Automatic website event tracking
+
+  Expanded the Web SDK with automatic tracking for common website
+  interactions.
+
+  **Release type:** Minor release
+
+  - **Element interactions:** Added automatic tracking for supported user clicks.
+  - **Form activity:** Added tracking for supported form interactions.
+  - **Scroll activity:** Added scroll-depth information for page engagement.
+  - **File activity:** Added tracking for supported file downloads.
+  - **Search activity:** Prepared automatic tracking for website search interactions.
+</Update>
+
+<Update
+  label="Mar 7, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="orange" size="sm">BUG FIXED</Badge>
+  </div>
+
+  ### Web event validation and testing
+
+  Tested different website events and corrected inconsistencies in their
+  payloads and delivery.
+
+  **Release type:** Patch release
+
+  - **Property validation:** Checked required and optional event properties.
+  - **Event naming:** Standardized automatic and manually tracked event names.
+  - **Payload testing:** Validated event data across different website interactions.
+  - **Duplicate prevention:** Improved handling of repeated automatic activity.
+  - **Debug output:** Added clearer development logs for tracking validation.
+</Update>
+
+<Update
+  label="Feb 28, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Web session tracking
+
+  Added session handling to group website activity into meaningful user
+  visits.
+
+  **Release type:** Minor release
+
+  - **Session creation:** Created a session when website activity begins.
+  - **Activity updates:** Updated the active session as additional events were tracked.
+  - **Session timeout:** Prepared session renewal after extended inactivity.
+  - **Page continuity:** Connected page views and custom events with the same session.
+</Update>
+
+<Update
+  label="Feb 21, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Custom event properties
+
+  Expanded manual Web SDK events with additional properties supplied by the
+  application.
+
+  **Release type:** Minor release
+
+  - **Custom payloads:** Allowed developers to send event-specific property values.
+  - **Property types:** Supported common text, number, and structured values.
+  - **Default context:** Combined custom properties with Twinalyze tracking information.
+  - **Backend compatibility:** Standardized custom event payload processing.
+</Update>
+
+<Update
+  label="Feb 14, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Web user identification foundation
+
+  Added the first identify flow for connecting anonymous website activity
+  with a known user.
+
+  **Release type:** Minor release
+
+  - **Identify method:** Added a method for assigning a unique user identifier.
+  - **Anonymous activity:** Preserved activity collected before identification.
+  - **Profile connection:** Connected future events with the identified user.
+</Update>
+
+<Update
+  label="Feb 7, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="orange" size="sm">BUG FIXED</Badge>
+  </div>
+
+  ### More reliable Web SDK request delivery
+
+  Resolved early SDK issues affecting event requests, configuration
+  validation, and development testing.
+
+  **Release type:** Patch release
+
+  - **Configuration checks:** Improved validation of required project credentials.
+  - **Request handling:** Improved event delivery during temporary connection issues.
+  - **Error visibility:** Added clearer errors for invalid SDK configuration.
+  - **Debug mode:** Improved development logs for tracked events and requests.
+</Update>
+
+<Update
+  label="Jan 31, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### First Twinalyze Web SDK
+
+  Introduced the initial JavaScript SDK for connecting websites with
+  Twinalyze analytics.
+
+  **Release type:** Major release
+
+  - **JavaScript integration:** Added the first browser-based Twinalyze SDK.
+  - **Project connection:** Connected website activity with a Twinalyze project.
+  - **Event foundation:** Prepared automatic and manually tracked website events.
+  - **Browser support:** Created the initial tracking flow for modern browsers.
+</Update>
+
+<Update
+  label="Jan 24, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Web SDK initialization
+
+  Added the configuration and initialization flow required to start website
+  analytics tracking.
+
+  **Release type:** Minor release
+
+  - **Initialization method:** Added the SDK startup configuration.
+  - **Project credentials:** Added support for connecting project-specific keys.
+  - **API configuration:** Prepared the analytics endpoint and SDK version settings.
+  - **Debug option:** Added development logging for integration testing.
+</Update>
+
+<Update
+  label="Jan 17, 2026"
+  description="SDKs"
+>
+  <div className="mb-4">
+    <Badge color="green" size="sm">NEW RELEASE</Badge>
+  </div>
+
+  ### Website page-view tracking
+
+  Added the first automatic page-view tracking flow for websites and
+  single-page applications.
+
+  **Release type:** Minor release
+
+  - **Initial page view:** Tracked the page loaded when the SDK starts.
+  - **Page context:** Added URL, path, title, and referrer information.
+  - **Route preparation:** Prepared tracking for client-side navigation.
+  - **Event connection:** Connected page views with the current device and session context.
+</Update>
+
+<Update
+  label="Jan 10, 2026"
+  description="Data"
+>
+  <div className="mb-4">
+    <Badge color="blue" size="sm">IMPROVED</Badge>
+  </div>
+
+  ### Web analytics event pipeline
+
+  Prepared the backend and event structure required to receive analytics data
+  from websites.
+
+  **Release type:** Minor release
+
+  - **Web event source:** Added identification for browser-based analytics activity.
+  - **Payload structure:** Defined the initial Web SDK event format.
+  - **Project validation:** Connected incoming activity with the correct project.
+  - **Data processing:** Prepared website events for users, sessions, and analytics reports.
+</Update>
+ 
+ 
+ 
+
 
 <Update
   label="Dec 27, 2025"
@@ -442,7 +1038,7 @@
   - **Initialization safety:** Prevented repeated SDK initialization from duplicating activity.
 </Update>
 
- ## 2024
+
 
 <Update
   label="Dec 28, 2024"
@@ -695,7 +1291,7 @@
   - **Data ownership:** Prepared analytics records to remain associated with the correct organization.
 </Update>
 
-## 2023
+
 
 <Update
   label="Dec 30, 2023"
@@ -850,3 +1446,5 @@
   - **Core data models:** Added foundations for users, projects, devices, events, sessions, and analytics.
   - **Product direction:** Prepared Twinalyze for analytics dashboards, Android SDK tracking, realtime activity, messaging, and research features.
 </Update> 
+
+
