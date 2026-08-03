@@ -210,7 +210,7 @@
 
 {
   "tab": "Changelog",
-  "icon": "clock-rotate-left",
+  "icon": "/icon/Navbar/changelog.svg",
   "pages": [
     "changelog"
   ]

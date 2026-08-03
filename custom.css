@@ -1446,7 +1446,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ) {
   color: #52525b !important;
 }
@@ -1458,6 +1459,7 @@ header
     a[href^="/analytics"],
     a[href^="/sdks"],
     a[href^="/integrations"]
+     a[href^="/changelog"]
   )
   img {
   opacity: 1 !important;
@@ -1475,7 +1477,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):hover {
   color: #52525b !important;
 }
@@ -1485,7 +1488,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):hover
   img {
   filter: brightness(0) saturate(100%) invert(56%) sepia(6%)
@@ -1498,7 +1502,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):is(
     [aria-current="page"],
     [aria-selected="true"],
@@ -1510,28 +1515,32 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   )[class*="text-primary"],
 header
   :is(
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([class*="text-primary"]),
 header
   :is(
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([aria-current="page"]),
 header
   :is(
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([data-active="true"]) {
   color: #2563eb !important;
   border-color: #2563eb !important;
@@ -1549,7 +1558,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):is(
     [aria-current="page"],
     [aria-selected="true"],
@@ -1562,7 +1572,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   )[class*="text-primary"]
   *,
 header
@@ -1570,7 +1581,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([class*="text-primary"])
   * {
   color: #2563eb !important;
@@ -1582,7 +1594,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):is(
     [aria-current="page"],
     [aria-selected="true"],
@@ -1595,7 +1608,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   )[class*="text-primary"]
   img,
 header
@@ -1603,7 +1617,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([class*="text-primary"])
   img,
 header
@@ -1611,7 +1626,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([aria-current="page"])
   img,
 header
@@ -1620,6 +1636,7 @@ header
     a[href^="/analytics"],
     a[href^="/sdks"],
     a[href^="/integrations"]
+     a[href^="/changelog"]
   ):has([data-active="true"])
   img {
   opacity: 1 !important;
@@ -1635,7 +1652,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([class*="text-primary"])
   svg,
 header
@@ -1643,7 +1661,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):is(
     [aria-current="page"],
     [aria-selected="true"],
@@ -1662,7 +1681,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([class*="text-primary"])
   [style*="mask"],
 header
@@ -1670,7 +1690,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):is(
     [aria-current="page"],
     [aria-selected="true"],
@@ -1688,7 +1709,8 @@ header
     a[href^="/overview"],
     a[href^="/analytics"],
     a[href^="/sdks"],
-    a[href^="/integrations"]
+    a[href^="/integrations"],
+     a[href^="/changelog"]
   ):has([class*="text-primary"]):hover {
   color: #2563eb !important;
 }
@@ -1699,6 +1721,7 @@ header
     a[href^="/analytics"],
     a[href^="/sdks"],
     a[href^="/integrations"]
+     a[href^="/changelog"]
   ):has([class*="text-primary"]):hover
   img {
   filter: brightness(0) saturate(100%) invert(34%) sepia(94%)
@@ -2524,7 +2547,8 @@ header
   a[href^="/overview"],
   a[href^="/analytics"],
   a[href^="/sdks"],
-  a[href^="/integrations"]
+  a[href^="/integrations"],
+   a[href^="/changelog"]
 ) {
   color: #d1d5db !important;
 }
@@ -2536,7 +2560,8 @@ header
   a[href^="/overview"],
   a[href^="/analytics"],
   a[href^="/sdks"],
-  a[href^="/integrations"]
+  a[href^="/integrations"],
+   a[href^="/changelog"]
 ):is(
   [aria-current="page"],
   [data-active="true"],
@@ -2549,7 +2574,8 @@ header
   a[href^="/overview"],
   a[href^="/analytics"],
   a[href^="/sdks"],
-  a[href^="/integrations"]
+  a[href^="/integrations"],
+   a[href^="/changelog"]
 ):has([class*="text-primary"]) {
   color: #60a5fa !important;
   border-color: #60a5fa !important;
