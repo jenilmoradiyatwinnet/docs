@@ -2845,834 +2845,115 @@ html body main
 
 
 
-
-
-
-
-
-/* =====================================================
-   Global navigation progress loader
-===================================================== */
-
-#twinalyze-navigation-loader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2147483647;
-  width: 100%;
-  height: 3px;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 150ms ease;
-}
-
-#twinalyze-navigation-loader.is-visible {
-  opacity: 1;
-}
-
-.twinalyze-navigation-loader-bar {
-  width: 100%;
-  height: 100%;
-  transform: scaleX(0);
-  transform-origin: left center;
-  border-radius: 0 999px 999px 0;
-  background: linear-gradient(
-    90deg,
-    #2563eb 0%,
-    #3b82f6 60%,
-    #60a5fa 100%
-  );
-  box-shadow:
-    0 0 8px rgba(37, 99, 235, 0.55),
-    0 0 3px rgba(37, 99, 235, 0.8);
-}
-
-#twinalyze-navigation-loader.is-loading
-  .twinalyze-navigation-loader-bar {
-  animation: twinalyze-navigation-progress 8s
-    cubic-bezier(0.1, 0.6, 0.2, 1) forwards;
-}
-
-#twinalyze-navigation-loader.is-complete
-  .twinalyze-navigation-loader-bar {
-  animation: none;
-  transform: scaleX(1);
-  transition: transform 180ms ease;
-}
-
-@keyframes twinalyze-navigation-progress {
-  0% {
-    transform: scaleX(0.03);
-  }
-
-  18% {
-    transform: scaleX(0.28);
-  }
-
-  45% {
-    transform: scaleX(0.52);
-  }
-
-  72% {
-    transform: scaleX(0.72);
-  }
-
-  100% {
-    transform: scaleX(0.9);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #twinalyze-navigation-loader,
-  .twinalyze-navigation-loader-bar {
-    transition: none !important;
-  }
-
-  #twinalyze-navigation-loader.is-loading
-    .twinalyze-navigation-loader-bar {
-    animation: none;
-    transform: scaleX(0.75);
-  }
-}
-
-
-/* =====================================================
-   Final bottom navigation and footer spacing
-===================================================== */
-
-#content,
-#body-content {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* All normal pages: 20px before footer */
-.twinalyze-bottom-nav,
-.twinalyze-bottom-nav-no-prev,
-.twinalyze-bottom-nav-no-next {
-  margin-bottom: 20px !important;
-}
-
-/* Dashboard Tour: separator to navigation gap */
-.dashboard-tour-bottom-nav {
-  margin-top: 48px !important;
-  margin-bottom: 100px !important;
-}
-
-/* Remove Mintlify extra footer spacing */
-#footer,
-footer {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-@media (max-width: 640px) {
-  .dashboard-tour-bottom-nav {
-    margin-top: 36px !important;
-    margin-bottom: 20px !important;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================================
-   Changelog date — remove Mintlify blue pill
-===================================================== */
-
-html body [data-component-part="update-label"] {
-  padding: 0 !important;
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  color: #4b5563 !important;
-  justify-content: flex-start !important;
-}
-
-/* Dark mode */
-html.dark body [data-component-part="update-label"],/* =====================================================
-   Changelog
-   Plain date + Area badge below date
-===================================================== */
-
-/*
- * The changelog script owns the active Update state. Neutralize Mintlify's
- * transient scroll-spy color so only the entry at our reading line is blue.
- */
-body:has(.update-container)
-  #table-of-contents
-  a[href*="#"]:not(.twinalyze-toc-active),
-body:has(.update-container)
-  #table-of-contents
-  a[href*="#"]:not(.twinalyze-toc-active)
-  * {
-  color: inherit !important;
-}
-
-body:has(.update-container)
-  #table-of-contents
-  a.twinalyze-toc-active,
-body:has(.update-container)
-  #table-of-contents
-  a.twinalyze-toc-active
-  * {
-  color: rgb(var(--primary)) !important;
-  font-weight: 600 !important;
-}
-
-/* Color only the changelog year headings in the right sidebar. */
-body:has(.update-container)
-  #table-of-contents
-  a:is(
-    [href$="#2023"],
-    [href$="#2024"],
-    [href$="#2025"],
-    [href$="#2026"]
-  ) {
-  color: rgb(var(--primary)) !important;
-}
-
-body:has(.update-container)
-  #table-of-contents
-  a:is(
-    [href$="#2023"],
-    [href$="#2024"],
-    [href$="#2025"],
-    [href$="#2026"]
-  )
-  * {
-  color: inherit !important;
-}
-
-/* Keep date as plain text */
-[data-component-part="update-label"] {
-  width: fit-content !important;
-  padding: 0 !important;
-  background: transparent !important;
-  background-color: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  color: inherit !important;
-  justify-content: flex-start !important;
-}
-
-/* Style Update description as Area badge */
-.update-container
-  > div:has(> [data-component-part="update-label"])
-  > [data-component-part="update-label"]
-  + *,
-.update-container
-  > div:has(> [data-component-part="update-label"])
-  > :last-child:not([data-component-part="update-label"]):not(.absolute) {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: fit-content !important;
-
-  margin-top: 8px !important;
-  padding: 2px 8px !important;
-
-  border: 0 !important;
-  border-radius: 6px !important;
-
-  background-color: color-mix(
-    in oklab,
-    rgb(var(--primary)) 10%,
-    transparent
-  ) !important;
-
-  color: rgb(var(--primary)) !important;
-
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  line-height: 16px !important;
-  text-transform: uppercase !important;
-}
-
-/* Dark mode */
-:is(html.dark, .dark, [data-theme="dark"])
-  .update-container
-  > div:has(> [data-component-part="update-label"])
-  > [data-component-part="update-label"]
-  + *,
-:is(html.dark, .dark, [data-theme="dark"])
-  .update-container
-  > div:has(> [data-component-part="update-label"])
-  > :last-child:not([data-component-part="update-label"]):not(.absolute) {
-  background-color: color-mix(
-    in oklab,
-    rgb(var(--primary)) 18%,
-    transparent
-  ) !important;
-
-  color: rgb(var(--primary-light)) !important;
-}
-.dark body [data-component-part="update-label"],
-[data-theme="dark"] body [data-component-part="update-label"] {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: #d1d5db !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================================
-   Custom Changelog Layout
-===================================================== */
-
-.tw-changelog-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 205px;
-  align-items: start;
-  gap: 52px;
-  width: 100%;
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-.tw-changelog-main {
-  min-width: 0;
-}
-
-.tw-changelog-year {
-  margin: 0;
-  padding: 0;
-}
-
-.tw-changelog-year + .tw-changelog-year {
-  margin-top: 64px;
-}
-
-.tw-changelog-year-title {
-  margin: 0 0 14px !important;
-  padding: 0 !important;
-  color: inherit;
-  font-size: 25px !important;
-  font-weight: 700 !important;
-  line-height: 1.25 !important;
-  scroll-margin-top: 110px;
-}
-
-.tw-changelog-entry {
-  display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: 34px;
-  margin: 0;
-  padding: 30px 0 42px;
-  border-bottom: 1px solid rgba(113, 113, 122, 0.2);
-  scroll-margin-top: 110px;
-}
-
-.tw-changelog-entry-meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 9px;
-  min-width: 0;
-}
-
-.tw-changelog-date {
-  color: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-}
-
-.tw-changelog-area {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  padding: 2px 8px;
-  border-radius: 6px;
-  background: rgba(37, 99, 235, 0.12);
-  color: #2563eb;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 17px;
-  text-transform: uppercase;
-}
-
-.tw-changelog-entry-content {
-  min-width: 0;
-}
-
-.tw-changelog-category {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin: 0 0 19px;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 17px;
-  text-transform: uppercase;
-}
-
-.tw-changelog-category-new-release {
-  background: rgba(22, 163, 74, 0.14);
-  color: #15803d;
-}
-
-.tw-changelog-category-improved {
-  background: rgba(37, 99, 235, 0.14);
-  color: #2563eb;
-}
-
-.tw-changelog-category-bug-fixed {
-  background: rgba(217, 119, 6, 0.15);
-  color: #b45309;
-}
-
-.tw-changelog-category-deprecated {
-  background: rgba(220, 38, 38, 0.14);
-  color: #dc2626;
-}
-
-.tw-changelog-entry-title {
-  margin: 0 0 9px !important;
-  padding: 0 !important;
-  color: inherit;
-  font-size: 19px !important;
-  font-weight: 700 !important;
-  line-height: 1.4 !important;
-}
-
-.tw-changelog-summary {
-  margin: 0 0 18px !important;
-  color: inherit;
-  opacity: 0.76;
-  font-size: 15px;
-  line-height: 1.65;
-}
-
-.tw-changelog-release-type {
-  margin: 0 0 16px !important;
-  color: inherit;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.tw-changelog-points {
-  margin: 0 !important;
-  padding-left: 22px !important;
-}
-
-.tw-changelog-points li {
-  margin: 0 0 9px !important;
-  padding-left: 3px;
-  color: inherit;
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-.tw-changelog-points li:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* =====================================================
-   Custom right navigation
-===================================================== */
-
-.tw-changelog-navigation {
-  position: sticky;
-  top: 98px;
-  width: 100%;
-  min-width: 0;
-}
-
-.tw-changelog-navigation-title {
-  margin-bottom: 15px;
-  color: inherit;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.tw-changelog-navigation-scroll {
-  max-height: calc(100vh - 145px);
-  padding: 0 3px 22px 17px;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
-}
-
-.tw-changelog-navigation-year {
-  margin-bottom: 17px;
-}
-
-.tw-changelog-navigation-year-label {
-  margin-bottom: 6px;
-  color: #2563eb;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.tw-changelog-navigation-item {
-  position: relative;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 9px;
-  margin: 0;
-  padding: 5px 0;
-  border: 0 !important;
-  background: transparent !important;
-  color: inherit;
-  opacity: 0.66;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 19px;
-  text-align: left;
-  cursor: pointer;
-  box-shadow: none !important;
-  outline-offset: 3px;
-  transition:
-    color 140ms ease,
-    opacity 140ms ease,
-    font-weight 140ms ease;
-}
-
-.tw-changelog-navigation-item:hover {
-  border: 0 !important;
-  background: transparent !important;
-  color: inherit;
-  opacity: 1;
-}
-
-.tw-changelog-navigation-dot {
-  position: absolute;
-  top: 50%;
-  left: -14px;
-  width: 6px;
-  height: 6px;
-  transform: translateY(-50%) scale(0.7);
-  border-radius: 999px;
-  background: #2563eb;
-  opacity: 0;
-  transition:
-    opacity 140ms ease,
-    transform 140ms ease;
-}
-
-.tw-changelog-navigation-item.is-active {
-  color: #2563eb;
-  opacity: 1;
-  font-weight: 600;
-}
-
-.tw-changelog-navigation-item.is-active
-  .tw-changelog-navigation-dot {
-  transform: translateY(-50%) scale(1);
-  opacity: 1;
-}
-
-/* =====================================================
-   Dark mode
-===================================================== */
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-entry {
-  border-bottom-color: rgba(161, 161, 170, 0.25);
-}
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-area {
-  background: rgba(96, 165, 250, 0.17);
-  color: #60a5fa;
-}
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-category-new-release {
-  background: rgba(74, 222, 128, 0.16);
-  color: #86efac;
-}
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-category-improved {
-  background: rgba(96, 165, 250, 0.17);
-  color: #93c5fd;
-}
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-category-bug-fixed {
-  background: rgba(251, 191, 36, 0.16);
-  color: #fcd34d;
-}
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-category-deprecated {
-  background: rgba(248, 113, 113, 0.17);
-  color: #fca5a5;
-}
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-navigation-item.is-active {
-  color: #60a5fa;
-}
-
-:is(html.dark, .dark, [data-theme="dark"])
-  .tw-changelog-navigation-dot {
-  background: #60a5fa;
-}
-
-/* =====================================================
-   Tablet
-===================================================== */
-
-@media (max-width: 1080px) {
-  .tw-changelog-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .tw-changelog-navigation {
-    display: none;
-  }
-}
-
-/* =====================================================
-   Mobile
-===================================================== */
-
-@media (max-width: 700px) {
-  .tw-changelog-year + .tw-changelog-year {
-    margin-top: 48px;
-  }
-
-  .tw-changelog-entry {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 17px;
-    padding: 24px 0 34px;
-  }
-
-  .tw-changelog-entry-meta {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .tw-changelog-category {
-    margin-bottom: 15px;
-  }
-
-  .tw-changelog-entry-title {
-    font-size: 18px !important;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================
-   Sidebar Bottom Theme Selector
-   System / Light / Dark
+   Twinalyze Sidebar Theme Footer
+   Uses Mintlify's original theme selector
 ========================================= */
 
 /*
-  Keep enough empty space at the bottom
-  so sidebar links do not go behind the selector.
+  Give the sidebar menu enough space so that
+  the last link does not hide behind the footer.
 */
 #sidebar-content {
-  padding-bottom: 88px !important;
+  padding-bottom: 90px !important;
 }
 
 /*
-  Bottom section inside the desktop sidebar.
+  Footer aligned with the sidebar using JavaScript.
 */
 #twinalyze-sidebar-theme-footer {
-  position: absolute;
-  right: 18px;
+  position: fixed;
   bottom: 12px;
-  left: 18px;
-  z-index: 50;
+  z-index: 9999;
 
-  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-  border-top: 1px solid #e5e7eb;
+  min-height: 51px;
+  padding-top: 11px;
 
-  background: #ffffff;
+  border-top: 1px solid #dfe3e8;
+
+  pointer-events: none;
 }
 
 /*
-  Rounded pill around the Mintlify theme buttons.
+  Mintlify's original System / Light / Dark control.
 */
-.twinalyze-sidebar-theme-control {
-  display: inline-flex;
-  align-items: center;
+#twinalyze-sidebar-theme-footer
+  [data-component-name="theme-toggle"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
 
-  min-height: 36px;
-  padding: 3px;
+  width: max-content !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 3px !important;
 
-  border: 1px solid #e5e7eb;
-  border-radius: 999px;
+  border: 1px solid #dfe3e8 !important;
+  border-radius: 999px !important;
 
-  background: #f8fafc;
+  background: #f8f9fb !important;
 
   box-shadow:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 1px 3px rgba(15, 23, 42, 0.06);
+    0 1px 2px rgba(15, 23, 42, 0.05) !important;
+
+  pointer-events: auto;
 }
 
 /*
-  Remove unnecessary outer spacing from
-  Mintlify's original theme component.
+  Keep all three buttons compact.
 */
-.twinalyze-sidebar-theme-control
-  [data-component-name="theme-toggle"] {
-  width: max-content !important;
-  margin: 0 !important;
-}
-
-/*
-  Keep individual theme buttons compact.
-*/
-.twinalyze-sidebar-theme-control
+#twinalyze-sidebar-theme-footer
   [data-component-name="theme-toggle"]
   button {
+  width: 28px !important;
   min-width: 28px !important;
+  height: 28px !important;
   min-height: 28px !important;
+
+  padding: 0 !important;
 
   border-radius: 999px !important;
 }
 
-/* Dark mode sidebar bottom section */
-.dark #twinalyze-sidebar-theme-footer,
-[data-theme="dark"] #twinalyze-sidebar-theme-footer {
-  border-top-color: #2a3441;
-
-  background: #0f172a;
+/*
+  Keep icon sizes similar to Rocket documentation.
+*/
+#twinalyze-sidebar-theme-footer
+  [data-component-name="theme-toggle"]
+  svg {
+  width: 14px !important;
+  height: 14px !important;
 }
 
-.dark .twinalyze-sidebar-theme-control,
-[data-theme="dark"]
-  .twinalyze-sidebar-theme-control {
-  border-color: #334155;
+/* Dark mode footer line */
+html.dark
+  #twinalyze-sidebar-theme-footer,
+html[data-theme="dark"]
+  #twinalyze-sidebar-theme-footer {
+  border-top-color: #303846;
+}
 
-  background: #172033;
+/* Dark mode pill */
+html.dark
+  #twinalyze-sidebar-theme-footer
+  [data-component-name="theme-toggle"],
+html[data-theme="dark"]
+  #twinalyze-sidebar-theme-footer
+  [data-component-name="theme-toggle"] {
+  border-color: #374151 !important;
 
-  box-shadow: none;
+  background: #18202d !important;
+
+  box-shadow: none !important;
 }
 
 /*
-  Hide this desktop footer on smaller screens.
-  Mintlify uses a different mobile navigation.
+  Mintlify uses different navigation on mobile,
+  so hide this desktop footer there.
 */
 @media (max-width: 1023px) {
   #twinalyze-sidebar-theme-footer {
@@ -3683,27 +2964,3 @@ body:has(.update-container)
     padding-bottom: 24px !important;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
