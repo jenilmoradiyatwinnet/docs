@@ -20,14 +20,12 @@
     "light": "favicon.png",
     "dark": "favicon.png"
   },
+  "appearance": {
+  "default": "system",
+  "strict": false
+},
   "navbar": {
-    "links": [                                                                                                                                                                        
-      {
-        "label": "System Status",
-        "href": "https://stats.uptimerobot.com/CtHHsPhHgi"
-      }
-      
-    ],
+ 
     "primary": {
       "type": "button",
       "label": "Get started",
